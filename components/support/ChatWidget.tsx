@@ -4,7 +4,6 @@ useEffect ( () => {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
@@ -19,16 +18,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -41,7 +44,9 @@ type ChatMessage = {;
   content: string,;
   timestamp?: number;
 };
+
 function generateSessionId(): any (): string {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
@@ -62,7 +67,6 @@ function generateSessionId(): any (): string {;
 
 
   useEffect(() => {
-<<<<<<< HEAD
     sessionIdRef.current = generateSessionId()
 
   }, []);
@@ -141,6 +145,7 @@ function generateSessionId(): any (): string {;
 
       setShowEscalation(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       setShowEscalation(true);    } catch {}
 
@@ -149,6 +154,8 @@ function generateSessionId(): any (): string {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     } catch {}
   }
 =======
@@ -409,6 +416,7 @@ function generateSessionId(): any (): string {;
 
             <div ref={messagesEndRef} />;
           </div>;
+
           {!showEscalation && (;
             <div className='px-3 pb-2'>;
               <div className='flex flex-wrap gap-2 mb-2'>;
@@ -420,10 +428,6 @@ function generateSessionId(): any (): string {;
 
 =======
             <div className="px-3 pb-2">
-=======
-<<<<<<< HEAD
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
                   <button
@@ -465,27 +469,13 @@ function generateSessionId(): any (): string {;
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <input
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
                   onKeyDown={e => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-            {!showEscalation ? (
-              <div className='flex gap-2'>
-                <input
-                  value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onSend();
                     }
                   }}
@@ -559,7 +549,10 @@ function generateSessionId(): any (): string {;
     </div>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -570,6 +563,12 @@ function generateSessionId(): any (): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 useEffect ( () => {
   // Check condition
 if ( {) {

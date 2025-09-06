@@ -1,9 +1,13 @@
 
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function ServicesPage() {;
 
 =======
@@ -51,11 +55,16 @@ export default function ServicesPage() {
 
   );
 }
+=======
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function ServicesPage() {
   return (
     <EnhancedLayout>

@@ -43,7 +43,7 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   // Format date for display;
   const format_date = (date_string: string, ) =>: any {
     try {
-      return format(new Date(dateString), 'PP')
+      return format (new Date (date_string), 'PP');
     } catch (e) {
       return dateString
     }

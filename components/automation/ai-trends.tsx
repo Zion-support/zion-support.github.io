@@ -21,7 +21,9 @@ export async function getServerSideProps() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div>) import fs from 'fs';
+=======
 import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 export type Trend = {
 
@@ -85,6 +87,10 @@ export type Trend = {;
   tags: string[];
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export async function getServerSideProps() {;
 <<<<<<< HEAD
 =======
@@ -95,6 +101,7 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -140,12 +147,15 @@ export async function getServerSideProps() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
-<<<<<<< HEAD
+
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
@@ -236,38 +246,5 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function AiTrendsPage({ items }: { items: Trend[] }) {
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>
-      <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>
-      <div className="grid grid-cols-1 gap-4">
-        {items.map((t) => (
-          <div key={t.id} className="border rounded p-4 space-y-2">
-            <div className="flex items-center justify-between">
-              <div className="font-medium">{t.title}</div>
-              <div className="text-xs text-gray-500">{new Date(t.date).toLocaleDateString()}</div>
-            </div>
-            <div className="text-sm text-gray-700">{t.summary}</div>
-            <ul className="list-disc pl-5 text-sm text-gray-700">
-              {t.highlights.map((h, i) => (<li key={i}>{h}</li>))}
-            </ul>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0.5 rounded bg-gray-100">{tag}</span>))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            </div>
-          </div>
-        ))}
-      </div>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

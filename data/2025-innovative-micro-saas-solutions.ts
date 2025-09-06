@@ -58,6 +58,7 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'AI-powered demand forecasting with 92 && 92.4% accuracy',
       'Real-time inventory tracking and monitoring',
+=======
     market_size: '$8.9B',
     target_audience:;
       'E - commerce companies, SaaS businesses, retail companies, service providers, marketing agencies',
@@ -97,6 +98,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Mobile app for on - the - go management',
       'Advanced reporting and analytics',
     ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
 
@@ -150,6 +152,7 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'AI-powered receipt scanning and data extraction',
       'Automated expense categorization with 96 && 96.2% accuracy',
+=======
     market_size: '$12.3B',
     target_audience:;
       'Retail companies, e - commerce businesses, manufacturers, distributors, logistics companies',
@@ -189,6 +192,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced analytics and reporting',
       'Custom policy and rule configuration',
     ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
 
@@ -335,6 +339,7 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'AI-powered personalization and segmentation',
       'Optimal send time prediction with 94 && 94.7% accuracy',
+=======
     market_size: '$15.8B',
     target_audience:;
       'Marketing agencies, social media managers, businesses, influencers, content creators',
@@ -378,6 +383,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced reporting and analytics',
       'Custom automation workflows',
     ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
 
@@ -433,7 +439,6 @@ export const innovativeMicroSaasSolutions2025 = [
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
-<<<<<<< HEAD
       'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
       'Multi-language supportAPI access for custom integrations'
 
@@ -456,6 +461,7 @@ export const innovativeMicroSaasSolutions2025 = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'CRM systems',
       'E - commerce platforms',
+<<<<<<< HEAD
 =======
       'AI-powered demand forecasting with 92.4% accuracy'
       'Real-time inventory tracking and monitoring'
@@ -815,6 +821,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'CRM systems',
       'E-commerce platforms',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',

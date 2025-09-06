@@ -96,6 +96,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+    context});
+
+  res.status(200).json({ conversation, message })
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  res.status (200).json ({ conversation, message });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string,

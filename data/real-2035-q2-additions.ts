@@ -111,6 +111,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
       'CSV/Sheets export',
+=======
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline:;
@@ -157,6 +158,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -205,10 +207,12 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'QR tickets + check-in',
       'Email/SMS reminders',
+=======
     id: 'event - management - dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, comms, and post - event analytics',
@@ -254,6 +258,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 11,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -301,6 +306,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -348,9 +354,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Email-to-ticket',
+=======
     id: 'it - helpdesk - portal',
     name: 'IT Helpdesk Portal',
     tagline: 'Tickets, knowledge base, SLAs, and client portal',
@@ -395,9 +403,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Self-serve returns portal',
+=======
     id: 'ecommerce - returns - manager',
     name: 'E‑commerce Returns Manager',
     tagline: 'Customer - friendly returns with labels and status tracking',
@@ -442,6 +452,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -489,6 +500,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -536,9 +548,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'On-page audits',
+=======
     id: 'ai - seo - content - optimizer',
     name: 'AI SEO Content Optimizer',
     tagline: 'Live on - page audits and SEO - aware rewrites',
@@ -583,6 +597,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -630,6 +645,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -677,6 +693,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -724,6 +741,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -771,6 +789,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -818,6 +837,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -865,6 +885,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -912,6 +933,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'feature-flag-auditor'
@@ -1231,6 +1253,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1278,6 +1301,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1325,6 +1349,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'api-breaking-change-watcher'
@@ -1585,6 +1610,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1633,6 +1659,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1680,6 +1707,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1727,6 +1755,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1774,6 +1803,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
 =======
@@ -1782,6 +1812,7 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
+
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder', name: 'AI Email Responder',
@@ -2864,6 +2895,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 	}
 ];
 
@@ -3866,6 +3900,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
+<<<<<<< HEAD
 =======
 
 =======
@@ -5884,3 +5919,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

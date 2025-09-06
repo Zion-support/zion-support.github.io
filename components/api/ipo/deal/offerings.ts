@@ -5,6 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', {
+=======
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -37,7 +38,6 @@ if ( {) {
     return res && res.status(200).json(offerings);
 
   }
-<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
@@ -101,8 +101,10 @@ if ( {) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 return res.status (405).json ({ error: 'Method not allowed' });
-
 }
 <<<<<<< HEAD
 =======

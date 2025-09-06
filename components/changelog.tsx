@@ -92,7 +92,10 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
+
   } catch {
+=======
+
 export async function getStaticProps() {;
   try {;
     const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
@@ -140,20 +143,6 @@ function getStaticProps() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-      {generatedAt && (
-        <p className=&quot;mt-2 text-sm text-gray-600&quot;>Generated: {generatedAt}</p>
-      )}
-      {content ? (
-        <pre className=&quot;mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm&quot;>
-{content}
-        </pre>
-      ) : (
-        <div className=&quot;mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600&quot;>
-          No changelog generated yet.
-        </div>
-      )}
-    </main>
-  )
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

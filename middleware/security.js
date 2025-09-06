@@ -5,7 +5,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -24,13 +23,8 @@ export function securityMiddleware(request) {;
   const response = NextResponse.next();
 =======
   const response = NextResponse && NextResponse.next();
-=======
-=======
-
-export function securityMiddleware(request) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const response = NextResponse.next();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
@@ -47,21 +41,7 @@ export function securityMiddleware(request) {;
   }
 
 =======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  return response;// Security headers middleware
+
 // Security headers middleware
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -179,4 +159,7 @@ function security_headers() {
   next ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

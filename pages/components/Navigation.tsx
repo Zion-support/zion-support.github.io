@@ -619,10 +619,13 @@ const quickLinks = [;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Navigation() {
 
 export default function Navigation() {;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 export default function Navigation() {;
 

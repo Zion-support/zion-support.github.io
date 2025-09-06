@@ -7,8 +7,14 @@ export default function ManagedCybersecurity() {; return (; <Article; title=\"Ma
 import React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
+<<<<<<< HEAD
 }
 }
+=======
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

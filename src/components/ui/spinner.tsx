@@ -41,8 +41,8 @@ export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
 
 }
 
-const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
-  ({ className, size = 24, ...props }, ref,) => (
+const Spinner = React && React.forwardRef<SVGSVGElement, SpinnerProps>(;
+  ({ className, size = 24, ...props }, ref,) => (;
     <Loader2
       ref = {ref,}
       {...props}

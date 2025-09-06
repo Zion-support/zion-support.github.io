@@ -74,6 +74,7 @@ export const extra_services: ExtraService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   id: string, name: string,
   tagline: string, price: string,
@@ -184,6 +185,7 @@ export const extraServices: ExtraService[] = [
 =======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -191,6 +193,7 @@ export const extraServices: ExtraService[] = [
 
 =======
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "cloud-migration-expert",
@@ -258,3 +261,6 @@ export const extraServices: ExtraService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -2,6 +2,7 @@ import React from \'react\'; import Head from \'next/head\'; export default func
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
@@ -9,3 +10,6 @@ import _React from 'react'; import Head from 'next/head'; export default functio
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -84,7 +84,10 @@ export default function Revolutionary2027ServicesShowcase() {
 
   const sortOptions = [
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Search,
   CheckCircle,
   ArrowRight,
@@ -93,9 +96,12 @@ export default function Revolutionary2027ServicesShowcase() {
   Phone,
   MapPin,
 <<<<<<< HEAD
+<<<<<<< HEAD
   MessageSquare,;
   Globe,;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   MessageSquare,
   Globe,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -656,6 +662,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 className='flex items-center gap-2 text-cyan-400'
 <<<<<<< HEAD
                 whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
                 transition={{ type: 'spring', stiffness: 300 }}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary AI, Quantum Computing, and Next-Generation IT services.
@@ -708,6 +715,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               </motion.div>
               <motion.div className="flex items-center gap-2 text-purple-400"
                 whileHover={{ scale: 1.05 }}
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Mail className="w-5 h-5" />
@@ -755,6 +764,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
       </section>
       {/* Search and Filters */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-8 px-4'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-black/40 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50'>
@@ -780,6 +790,10 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
@@ -788,11 +802,27 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
+<<<<<<< HEAD
+=======
+
+
+                onChange={e => setSearchTerm(e && e.target.value)}
+                className='w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'              />;
+            </div>;
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Filters */}
 
 =======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -805,11 +835,17 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
@@ -1714,12 +1750,16 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'
               >
                 <Rocket className='w-5 h-5 mr-2' />
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
@@ -1731,11 +1771,14 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Start Your Transformation
+<<<<<<< HEAD
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
                 <Globe className="w-5 h-5 mr-2" />
                 Explore All Services
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               </a>
             </div>
           </motion.div>

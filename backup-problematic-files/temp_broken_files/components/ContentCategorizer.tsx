@@ -626,6 +626,7 @@ onClick={clearAllFilters}
           </button>
         </div>
       </div>
+<<<<<<< HEAD
 :components/ContentCategorizer.tsx
       {/* Category Pills */}
       <div>
@@ -648,6 +649,9 @@ onClick={clearAllFilters}
           ))}
         </div>;
       </div>;
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       {_/* Category Pills */}
       <div>

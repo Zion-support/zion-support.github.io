@@ -5,9 +5,13 @@ interface Message {;
   role: 'user' | 'assistant';
   content: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
@@ -15,22 +19,31 @@ export default function Assistant() {;
       : new URLSearchParams();  const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+
 export default function Assistant() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
+<<<<<<< HEAD
 =======
   const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [messages, setMessages] = useState<Message[]>([;
     {;
       role: 'assistant',;
@@ -52,6 +65,7 @@ export default function Assistant() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ]);
   const [input, setInput] = useState('');
+
   const faqs: Record<string, string> = useMemo(;
     () => ({;
       'is this role remote':;
@@ -65,6 +79,7 @@ export default function Assistant() {;
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
+
   const faqs: Record<string, string> = useMemo(() => ({;
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(): any (question: string) {;
@@ -75,6 +90,7 @@ export default function Assistant() {;
         ...prev,;
         { role: 'user', content: question },;
         { role: 'assistant', content: faqs[faq] },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
       return;
     }
@@ -116,70 +132,21 @@ export default function Assistant() {;
 
 =======
 interface Message { role: 'user' | 'assistant', content: string }
+
 export default function Assistant() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
+
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
-=======
-<<<<<<< HEAD
-=======
-import {useEffect, useMemo, useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {useEffect, useMemo, useState} from 'react';
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
-<<<<<<< HEAD
-      ? new URLSearchParams(window.location.search)
-      : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
-  const brand = params.get('brand') |'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
-export default function Assistant() {
-=======
-      ? new URLSearchParams(window.location.search);
-      : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
-
-  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
-
-export default function Assistant() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-  const brand = params.get('brand') |'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: 'assistant'
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
-    }
-  ]);
-  const [input, setInput] = useState('');
-  const faqs: Record<string, string> = useMemo(
-    () => ({
-      'is this role remote':
-        'Many roles support remote or hybrid work. Check the job description for specifics.'
-      'how soon do you hire':
-        'Typical timelines range from 2-4 weeks depending on role and interview availability.'
-      'what is the interview process':
-        'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'
-    })
-    []
-  );
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
-  const [input, setInput] = useState('');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const faqs: Record<string, string> = useMemo(() => ({
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
+
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
-<<<<<<< HEAD
     const faq = Object.keys(faqs).find(key => lower.includes(key));
     if (faq) {
       setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
@@ -211,15 +178,6 @@ export default function Assistant() {;
 =======
         className="p-3 border-t flex gap-2"
         onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </div>
-        ))}
-      </div>
-      <form
-<<<<<<< HEAD
-        className="p-3 border-t flex gap-2"
-
       >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -418,12 +376,6 @@ if ( {) {
         <button type="submit" className="bg - gray - 900 text - white text - sm rounded px - 3 py - 2">Send</button>;
       </form>;
     </div>);
-        />
-        <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>
-      </form>
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

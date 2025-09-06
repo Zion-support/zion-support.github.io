@@ -67,11 +67,15 @@ function readJson(p: string) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 function writeJson(p: string, v: any) {
+<<<<<<< HEAD
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

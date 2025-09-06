@@ -74,14 +74,7 @@ export default function handler(req, res) {
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'};
   res.setHeader('Content-Typeapplication/json');
-  return res.status(200).json(fake);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  return res.status(200).json(fake)
 }
   } catch (error) {
     console.error("Error:", error);
@@ -89,6 +82,16 @@ export default function handler(req, res) {
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+
+
+=======
+    exported_at: new Date ().toISOString (),
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
+  res.set_header ('Content - Typeapplication / json'),
+  return res.status (200).json (fake);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 =======
 

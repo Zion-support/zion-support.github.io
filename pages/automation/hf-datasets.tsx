@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/hf-datasets.json';
@@ -13,6 +14,11 @@ import data from '../../data/hf-datasets.json',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function HfDatasetsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -21,6 +27,7 @@ export default function HfDatasetsPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Hugging Face Datasets</h1>
+<<<<<<< HEAD
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
@@ -41,6 +48,38 @@ export default function HfDatasetsPage() {
   );
 };
               <a className="font-medium underline" href={`https://huggingface.co/datasets/${it.id}`} target="_blank" rel="noreferrer">{it.id}</Link>
+=======
+
+=======
+}
+
+=======
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+// @ts - ignore;
+import data from '../../data / hf - datasets.json',
+export default /**
+ * HfDatasetsPage - Function description
+ */
+function HfDatasetsPage() {
+  const items: any[] = (data?.items || []).slice (0, 60),
+  return (
+    <EnhancedLayout>;
+      <div className="max - w-5xl mx - auto py - 10">;
+        <h1 className="text - 3xl font - bold">Hugging Face Datasets</h1>;
+        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || '—'}</p>;
+        <ul className="mt - 6 space - y-4">;
+          {items.map ((it, idx) => (
+            <li key={idx} className="p - 4 border border - gray - 200 dark:border - gray - 800 rounded - lg">;
+              <a className="font - medium underline" href={`https://huggingface.co / datasets/${it.id}`} target="_blank" rel="noreferrer">{it.id}</a>;
+              <div className="mt - 1 text - xs text - gray - 500 dark:text - gray - 400">Downloads {it.downloads} · Likes {it.likes}</div>;
+            </li>))}
+        </ul>;
+      </div>;
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

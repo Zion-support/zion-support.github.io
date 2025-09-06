@@ -20,11 +20,12 @@ import {
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 } from 'lucide-react';
+
 const navigationItems = [
   {
     name: 'All Services',
     href: '/2025-innovative-services-showcase',
-icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -42,7 +43,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'IT Infrastructure', href: '/2025-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
       { name: 'Micro SAAS Solutions', href: '/2025-innovative-micro-saas-solutions', description: 'Business solutions' }
     ]
-};
+  };
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -70,14 +71,14 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'AI Autonomous Sales', href: '/ai-autonomous-sales-platform', description: 'AI that closes deals' },
       { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', description: 'Autonomous support AI' },
       { name: 'AI Autonomous HR', href: '/ai-autonomous-hr-platform', description: 'Autonomous HR management' },
-{ name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
       { name: 'AI Quantum Financial Trading', href: '/ai-quantum-financial-trading', description: 'Quantum AI trading platform' },
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI diagnostics' },
       { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing-platform', description: 'Industrial AI automation' },
       { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-threat-intelligence', description: 'AI threat detection' },
       { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio', description: 'AI content generation' }
     ]
-};
+  };
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -96,7 +97,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-};
+  };
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -115,7 +116,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-};
+  };
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
@@ -139,7 +140,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
       { name: 'Quantum-Ready Database', href: '/quantum-ready-database-platform', description: 'Quantum-resistant data storage' }
     ]
-};
+  };
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -158,7 +159,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-};
+  };
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -177,7 +178,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-};
+  };
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -200,7 +201,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'IT Asset Management', href: '/it-asset-management', description: 'Comprehensive asset tracking' },
       { name: 'Infrastructure Monitoring', href: '/infrastructure-monitoring', description: 'Real-time system monitoring' }
     ]
-};
+  };
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
@@ -219,7 +220,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Token Economics', href: '/token-economics', description: 'Token design and modeling' },
       { name: 'Regulatory Compliance', href: '/web3-compliance', description: 'Compliance automation' }
     ]
-};
+  };
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
@@ -238,7 +239,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-};
+  };
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -257,7 +258,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-};
+  };
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -276,7 +277,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-};
+  };
   {
     name: 'Solutions',
     href: '/solutions',
@@ -290,7 +291,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
       { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
     ]
-};
+  };
   {
     name: 'Research & Development',
     href: '/research-development',
@@ -304,7 +305,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
       { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
     ]
-};
+  };
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
@@ -318,7 +319,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
       { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
     ]
-};
+  };
   {
     name: 'Pricing & Plans',
     href: '/pricing',
@@ -332,7 +333,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
     ]
-};
+  };
   {
     name: 'Resources',
     href: '/resources',
@@ -346,7 +347,7 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
     ]
-};
+  };
   {
     name: 'Support',
     href: '/support',
@@ -359,12 +360,9 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'Training Programs', href: '/training', description: 'Skill development' },
       { name: 'Community Forum', href: '/community', description: 'User community' },
       { name: 'Status Page', href: '/status', description: 'Service status' }
-]
-  }
-];
     ]
   }
-],
+];
 
 const contactInfo = {
   phone: '+1 302 464 0950',
@@ -413,6 +411,7 @@ export default function EnhancedNavigation2025() {
           </div>;
         </div>;
       </div>;
+
       {/* Main Navigation */}
       <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
@@ -509,30 +508,6 @@ export default function EnhancedNavigation2025() {
                                         <span
                                           key={service}
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
-=======
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
-                            >
-                              <div className="flex items-start space-x-3">
-                                {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
-                                  </div>
-                                )}
-                                <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                    {subitem.name}
-                                  </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
-                                    {subitem.description}
-                                  </p>
-                                  {subitem.services && (
-                                    <div className="mt-2 flex flex-wrap gap-1">
-                                      {subitem.services.slice(0, 2).map((service) => (
-                                        <span
-                                          key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
-                                        >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                           {service}
                                         </span>;
                                       ))}
@@ -856,6 +831,16 @@ function EnhancedNavigation2025() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {activeDropdown === item.name && (
                     <motion.div
+=======
+                    </div>;
+                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item && item.name ? 'rotate-180' : ''
+                    }`} />;
+                  </button>;
+
+                  {activeDropdown === item && item.name && (;
+                    <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -1044,6 +1029,7 @@ function EnhancedNavigation2025() {
                     <div className="flex items-start space-x-3 text-gray-400">;
                       <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;
                       <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1067,7 +1053,7 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-className="ml - 8 mt - 2 space - y-2";
+                      className="ml - 8 mt - 2 space - y-2";
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -1132,41 +1118,11 @@ className="ml - 8 mt - 2 space - y-2";
                       <AnimatePresence>;
                         {active_submenu === item.name && (
                           <motion.div;
-=======
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      <button
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>
-                        {activeSubmenu === item.name && (
-                          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-className="ml - 8 space - y-2";
+                            className="ml - 8 space - y-2";
                           >;
                             {item.submenu?.map ((subitem) => (
                               <Link;
@@ -1230,6 +1186,7 @@ className="ml - 8 space - y-2";
                     <div className="flex items - start space - x-3 text - gray - 400">;
                       <MapPin className="w - 4 h - 4 text - green - 400 mt - 0.5" />;
                       <span className="text - xs">{contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
@@ -1274,6 +1231,7 @@ className="ml - 8 space - y-2";
 
 
       </AnimatePresence>;
+
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
     </>;
@@ -1283,87 +1241,10 @@ className="ml - 8 space - y-2";
 =======
           </motion.div>)}
       </AnimatePresence>;
-=======
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
-                    View Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
 }
-<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -50,22 +50,15 @@ export interface EmergingTech2027Service {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
-<<<<<<< HEAD
     id: "2027-emerging-tech", name: "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027", price: "$349/month",
     description: "Advanced platform showcasing emerging technologies and innovations for 2027.",
-=======
-<<<<<<< HEAD
-    id: '2027-emerging-tech'
-    name: '2027 Emerging Tech Platform'
-    tagline: 'Emerging tech for 2027'
-    price: '$349/month'
-    description:
-      'Advanced platform showcasing emerging technologies and innovations for 2027.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Emerging technologies";
       "Innovation platform";
@@ -92,13 +85,15 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2027-emerging-tech",
@@ -144,3 +139,6 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -66,8 +66,11 @@ import {
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 export default function SMBSolutionsPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {;
   const smbServices = [;

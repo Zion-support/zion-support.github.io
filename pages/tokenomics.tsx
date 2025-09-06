@@ -6,21 +6,43 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+<<<<<<< HEAD
 =======
 type DistributionItem = { label: string; percent: number }
+=======
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 <<<<<<< HEAD
 export default function TokenomicsWhitepaperBuilder() {
 =======
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 export default function TokenomicsWhitepaperBuilder() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -188,6 +210,7 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [activeSection, setActiveSection] =;
     useState<string>('Executive Summary');
 <<<<<<< HEAD
+<<<<<<< HEAD
   const previewMarkdown = useMemo(() => {
     return (
       generatedMarkdown |
@@ -303,6 +326,9 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const previewMarkdown = useMemo(() => {;
     return (
       generatedMarkdown ||;
@@ -444,8 +470,10 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const item = { ...copy[index] };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
+<<<<<<< HEAD
       copy[index] = item;
       return copy;
     });
@@ -467,6 +495,29 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+
+  function updateDistribution(): any (;
+    index: number,;
+    key: keyof DistributionItem,;
+    value: string;
+  ) {;
+    setDistribution(prev => {      const copy = [...prev];
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      const item = { ...copy[index] };
+      if (key === 'percent') item && item.percent = Number(value);
+      if (key === 'label') item && item.label = value;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    { label: 'Advisors & Partnerships', percent: 5 },
+  ]);
+  const [governance, set_governance] = useState < string>(
+    'One - token - one - vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported');
+  const [jurisdiction, set_jurisdiction] = useState < string>('US');
+  const [operator_prompt, setOperatorPrompt] = useState < string>(
+    defaultOperatorPrompt);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ;
   function addDistributionItem() {;
     setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]);
@@ -647,6 +698,44 @@ if (item.label = value) {
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
 =======
 
+<<<<<<< HEAD
+=======
+  const sections = [;
+    'Executive Summary',;
+    'Market Context',;
+    'Utility & Usage',;
+    'Rewards System',;
+    'Distribution',;
+    'Governance Model',;
+    'Risks + Disclaimers',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  /**
+ * addDistributionItem - Function description
+ */
+function addDistributionItem() {
+    set_distribution (prev => [...prev, { label: 'New Allocation', percent: 0 }]);
+  }
+  /**
+ * removeDistributionItem - Function description
+ */
+function removeDistributionItem() {
+    set_distribution (prev => prev.filter ((_, i) => i !== index));  }
+  async /**
+ * handleShareableLink - Function description
+ */
+function handleShareableLink() {
+    const res = await fetch ('/api / whitepaper / share', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ markdown: preview_markdown, public_preview }),
+    });
+    // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
 =======
         <title > Tokenomics Whitepaper Generator</title>;
@@ -896,7 +985,10 @@ function jurisdictionalNote(): any (j: string) {;
   }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <>
       <Head>
@@ -917,11 +1009,15 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
@@ -1099,6 +1195,7 @@ function jurisdictionalNote(): any (j: string) {;
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -1128,6 +1225,9 @@ function jurisdictionalNote(): any (j: string) {;
                     {s}
                   </button>
                 ))}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
@@ -1286,6 +1386,7 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
+<<<<<<< HEAD
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
         <div key={idx} className="flex items-center gap-2">
@@ -1313,6 +1414,17 @@ function MarkdownPreview({
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
 =======
+=======
+
+
+
+function MarkdownPreview(): any ({;
+  markdown,;
+  activeSection,;
+}: {;
+  markdown: string;
+  activeSection: string;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -1322,7 +1434,10 @@ function MarkdownPreview({
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';

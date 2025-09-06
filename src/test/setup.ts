@@ -17,14 +17,14 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+global && global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}

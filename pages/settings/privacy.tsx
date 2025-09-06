@@ -37,7 +37,15 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
+<<<<<<< HEAD
   }
+=======
+  };
+
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   },
   const save = async () => {
     if (!userId) return
@@ -64,6 +72,11 @@ export default function PrivacySettingsPage() {
 
     load()
   }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   },
   return (
@@ -96,6 +109,7 @@ export default function PrivacySettingsPage() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -109,6 +123,8 @@ export default function PrivacySettingsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   )
 
 =======

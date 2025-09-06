@@ -217,6 +217,7 @@ Tone: professional, modern, trustworthy`,
 =======
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -293,6 +294,8 @@ Tone: professional, modern, trustworthy`,
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
   } catch (error) {

@@ -17,9 +17,17 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
+=======
+  if (req && req.method !== "POST") {
+    res && res.setHeader("Allow", "POST");
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';

@@ -50,22 +50,15 @@ export interface QuantumAiService2025 {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
-<<<<<<< HEAD
     id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",
     tagline: "Combining quantum computing with artificial intelligence", price: "$299/month",
     description: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-=======
-<<<<<<< HEAD
-    id: 'quantum-ai-hybrid'
-    name: 'Quantum AI Hybrid Platform'
-    tagline: 'Combining quantum computing with artificial intelligence'
-    price: '$299/month'
-    description:
-      'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Quantum AI algorithms";
       "Hybrid processing";
@@ -92,13 +85,15 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "quantum-ai-hybrid",
@@ -144,3 +139,6 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

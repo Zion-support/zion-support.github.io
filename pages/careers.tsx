@@ -872,6 +872,7 @@ function CareersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See Your Dream Job?
@@ -907,6 +908,8 @@ origin/automation-improvements-final
     </MainLayout>;
   );
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -935,5 +938,8 @@ origin/automation-improvements-final
       </div>;
     </MainLayout>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }

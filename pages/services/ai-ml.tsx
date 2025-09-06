@@ -128,6 +128,45 @@ function AIMLServicesPage() {
   Users,
   Clock,
   TrendingUp,
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * AIMLServicesPage - Function description
+ */
+function AIMLServicesPage() {
+  const services = [;
+    {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -189,6 +228,7 @@ export default function AIMLServicesPage() {
       color: 'from-orange-500 to-red-500',
     },;
   ];
+<<<<<<< HEAD
 
       color: "from-orange-500 to-red-500"
       } catch (error) {
@@ -225,6 +265,25 @@ export default function AIMLServicesPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/services/ai-ml' />      </Head>
       <EnhancedNavigation />
+=======
+;
+  const stats = [;
+    { number: '500+', label: 'AI Models Deployed', icon: Brain },
+    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle },
+    { number: '24 / 7', label: 'AI Monitoring', icon: Clock },
+    { number: '2500%', label: 'Average ROI', icon: TrendingUp },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ];
+;
+  return (
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services/ai-ml' />      </Head>;
+
+      <EnhancedNavigation />;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -378,6 +437,7 @@ export default function AIMLServicesPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
@@ -567,6 +627,8 @@ export default function AIMLServicesPage(req, res) {
 }
                 className="text-center"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -649,6 +711,7 @@ export default function AIMLServicesPage(req, res) {
               Comprehensive AI solutions designed to transform your business operations and drive innovation
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -657,6 +720,9 @@ export default function AIMLServicesPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -763,6 +829,7 @@ export default function AIMLServicesPage(req, res) {
                   </button>
                 </div>
               </motion.div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -774,6 +841,11 @@ export default function AIMLServicesPage(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -816,21 +888,38 @@ export default function AIMLServicesPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
               Let's discuss how our AI solutions can drive innovation
               efficiency, and growth for your organization.
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
+=======
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
+=======
+
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
@@ -903,6 +992,7 @@ export default function AIMLServicesPage(req, res) {
 }viewport= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
@@ -910,6 +1000,8 @@ export default function AIMLServicesPage(req, res) {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;

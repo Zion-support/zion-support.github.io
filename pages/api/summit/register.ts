@@ -48,6 +48,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
+<<<<<<< HEAD
+=======
+=======
+    const { name, email, role, country, source } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    const { data, error } = await supabase;
+      .from ("summit_registrations");
+      .insert ([;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {
 
           name

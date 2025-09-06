@@ -418,6 +418,7 @@ import React from 'react';
                 Experience the future of space technology with AI-powered operations and autonomous exploration
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -426,6 +427,9 @@ import React from 'react';
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='group relative'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -721,12 +725,16 @@ function SpaceTechnologyAIPlatform() {
                 Competitive pricing with superior features and AI-powered capabilities
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
 <<<<<<< HEAD
@@ -806,7 +814,10 @@ function SpaceTechnologyAIPlatform() {
 
               <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -862,6 +873,52 @@ function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+
+                className='space-y-6'>;
+                <h3 className='text-2xl font-bold text-white mb-6'>;
+                  Market Statistics;
+                </h3>;
+                <div className='grid grid-cols-2 gap-4'>;
+                  <div className='p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center'>;
+                    <div className='text-3xl font-bold text-blue-400 mb-2'>;
+                      $447 && 447.5B;
+                    </div>;
+                    <div className='text-blue-300 text-sm'>Market Size</div>;
+                  </div>;
+                  <div className='p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30 text-center'>;
+                    <div className='text-3xl font-bold text-purple-400 mb-2'>;
+                      350%;
+                    </div>;
+                    <div className='text-purple-300 text-sm'>Annual Growth</div>;
+                  </div>;
+                  <div className='p-6 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30 text-center'>;
+                    <div className='text-3xl font-bold text-green-400 mb-2'>;
+                      800%;
+                    </div>;
+                    <div className='text-green-300 text-sm'>Average ROI</div>;
+                  </div>;
+                  <div className='p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center'>;
+                    <div className='text-3xl font-bold text-yellow-400 mb-2'>;
+                      24;
+                    </div>;
+                    <div className='text-yellow-300 text-sm'>Months to ROI</div>                  </div>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Use Cases Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
+          <div className='max-w-7xl mx-auto'>            <motion&& motion.div
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div

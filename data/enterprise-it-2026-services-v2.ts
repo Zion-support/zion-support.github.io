@@ -11,12 +11,15 @@ export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   id: string;
   name: string;
   tagline: string;
@@ -47,6 +50,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
@@ -720,48 +724,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-import { ServiceVariant } from '../types/service-variants',;
-export interface EnterpriseIT2026ServiceV2 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   // Zero Trust Network Architecture;
@@ -1170,3 +1134,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

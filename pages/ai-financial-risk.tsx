@@ -233,6 +233,7 @@ export default function AIFinancialRiskPage() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -285,6 +286,8 @@ export default function AIFinancialRiskPage(req, res) {
                 <div>;
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 =======
@@ -300,7 +303,10 @@ export default function AIFinancialRiskPage(req, res) {
                 <div className='flex items - center space - x-2'>;
                   <Phone className='w - 4 h - 4 text - cyan - 400' />;
                   <span>{contact_info.mobile}</span>;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 </div>;
                 <div className='flex items - center space - x-2'>;
                   <Mail className='w - 4 h - 4 text - purple - 400' />;

@@ -89,6 +89,64 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const id = generateCaseId();
+<<<<<<< HEAD
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
+import { parseUserFromRequest  } from '../../../utils / auth';
+import { DisputeCase, DisputeReason  } from '../../../types / disputes';
+import { generateCaseId  } from '../../../utils / fsdb';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const user = parseUserFromRequest (req);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    const all = await readAllDisputes ();
+    let filtered = all;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = all.filter (
+        (d) => d.clientUserId === user.id || d.talentUserId === user.id,
+      );
+    }
+    return res.status (200).json ({ disputes: filtered });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const now = new Date ().toISOString ();
+    const {
+      project_id,
+      entity_type,
+      entity_id,
+      clientUserId,
+      talentUserId,
+      reason,
+      reason_details,
+
+      description,
+    } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    const id = generateCaseId ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     const dispute: DisputeCase = {
 <<<<<<< HEAD
       id

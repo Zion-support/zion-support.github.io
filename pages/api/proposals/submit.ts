@@ -163,6 +163,26 @@ function submitByEmail() {
     secure: port === 465,
     auth: { user, pass },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
+=======
+  });
+    const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
+    if (!id) return res && res.status($1).json({ $2 });
+=======
+<<<<<<< HEAD
+  const from = process.env.EMAIL_FROM |user;
+  if (!host |!user |!pass) throw new Error("Email not configured");
+=======
+  const from = process.env.EMAIL_FROM || user;
+<<<<<<< HEAD
+  if (!host || !user || !pass) throw new Error("Email not configured");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const transporter = nodemailer.createTransport({
+    host
+    port
+    secure: port === 465
+    auth: { user, pass }
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   });
 
   try {
@@ -219,6 +239,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,6 +250,23 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    const updated = updateProposalMeta (id, (m) => ({
+      ...m,
+      status: "Submitted",
+    }));
+    return res.status (200).json ({ meta: updated });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Submission failed" });
+  }
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 <<<<<<< HEAD
 =======

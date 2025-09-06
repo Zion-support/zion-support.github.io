@@ -74,6 +74,7 @@ export default function ClientDashboard() {;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -105,6 +106,8 @@ export default function ClientDashboard(req, res) {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;

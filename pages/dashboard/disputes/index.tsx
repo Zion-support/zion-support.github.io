@@ -20,7 +20,37 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } }
   }
+<<<<<<< HEAD
   return { props: {} };}
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
@@ -159,10 +189,36 @@ export default function AdminDisputesDashboard() {
                     </Link>                  </td>;
                 </tr>;
 
+<<<<<<< HEAD
+=======
+=======
+  return { props: {} }
+};
+
+export default function AdminDisputesDashboard() {
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open');
+
+  const disputes = useMemo(() => {
+    const list = data?.disputes || [];
+    if (statusFilter === 'All') return list;
+    return list.filter((d: any) => d.status === statusFilter)
+  }, [data, statusFilter]);
+=======
+
+
+  const disputes = useMemo(() => {
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">

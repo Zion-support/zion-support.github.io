@@ -26,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' })
   return res.status(405).json({ error: 'Method not allowed' });
 };
@@ -46,6 +47,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return res.status(405).json({ error: 'Method not allowed' })
 
 =======

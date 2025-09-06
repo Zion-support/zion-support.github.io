@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -87,6 +91,7 @@ interface HeroSkeletonProps {
 
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface HeroSkeletonProps {
   class_name?: string;
 }
@@ -134,6 +139,7 @@ interface StatsSkeletonProps {
 
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface StatsSkeletonProps {
   class_name?: string;
 }
@@ -151,9 +157,11 @@ interface StatsSkeletonProps {
     />;
   );
 };
+
 interface ServiceCardSkeletonProps {;
   className?: string;
 }
+
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
@@ -170,15 +178,21 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   )
 
 };
+
 interface HeroSkeletonProps {;
   className?: string;
 }
+
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>;
@@ -194,9 +208,11 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
     </div>;
   );
 };
+
 interface StatsSkeletonProps {;
   className?: string;
 }
+
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`py-20 px-6 ${className}`}>;
@@ -216,8 +232,11 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
     </div>;
   );
 };
+
 export default Skeleton;  );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
 
 

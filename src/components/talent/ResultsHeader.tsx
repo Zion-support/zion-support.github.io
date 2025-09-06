@@ -2,7 +2,6 @@ import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
   isLoading: boolean;
   resultCount: number;
-}
 
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">

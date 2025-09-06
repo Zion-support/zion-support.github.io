@@ -643,6 +643,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
                 />
               </div>
+<<<<<<< HEAD
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (                  <button
                     key={category.id}
@@ -652,6 +653,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
                     }`}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 {categories.map((category) => (
                   <button

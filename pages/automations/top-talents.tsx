@@ -73,6 +73,7 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
+<<<<<<< HEAD
   );
 }
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -81,6 +82,18 @@ export const getServerSideProps: GetServerSideProps = async () => {
     "public"
     "automations"
     "top-talents.json"
+=======
+
+
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const p = path && path.join(;
+    process && process.cwd(),;
+    "public",;
+    "automations",;
+    "top-talents && talents.json",;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   );
   let items: TalentItem[] = [];
   try {;

@@ -57,6 +57,7 @@ export default function JobsListPage() {
 ;
   return (
 
+<<<<<<< HEAD
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
 import InteractiveSearch from '../../components/ui/InteractiveSearch',
@@ -66,6 +67,20 @@ export default function JobsListPage() {
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+=======
+=======
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
+
+  const jobs = [
+    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
+    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+=======
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />

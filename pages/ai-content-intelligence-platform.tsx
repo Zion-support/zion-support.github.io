@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -7,6 +8,34 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
   ShoppingCart
  } from 'lucide-react';
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Layout from '../components/layout/Layout';
 
 const contactInfo = {
@@ -167,6 +196,7 @@ const useCases = [
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: 'from-blue-500 to-cyan-500'
   }
   {
@@ -275,6 +305,8 @@ const pricingPlans = [
       'Up to 100 content pieces/month',
     ],
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
     ];
@@ -1039,6 +1071,7 @@ export default function AIContentIntelligencePlatform() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Integrations Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1069,6 +1102,8 @@ export default function AIContentIntelligencePlatform() {
 }
             className="text-center mb-16"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Integrations Section */}
@@ -1421,6 +1456,19 @@ export default function AIContentIntelligencePlatform() {
               <Link
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+<<<<<<< HEAD
+=======
+              >
+                Start Your Free Trial
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <Link
+                href=&quot;/2025-innovative-new-services-showcase&quot;
+                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
@@ -1526,6 +1574,7 @@ export default function AIContentIntelligencePlatform() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
@@ -1534,6 +1583,8 @@ export default function AIContentIntelligencePlatform() {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </Layout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

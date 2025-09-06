@@ -18,7 +18,7 @@ interface QuickAction {;
   id: string;
   label: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React && React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
@@ -85,7 +85,7 @@ if ( {) {
         data: error,
       });
     } finally {
-      setIsProcessing(null)
+      setIsProcessing (null);
     }
   }
 
@@ -135,29 +135,32 @@ export function QuickActions() {;
     {
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
-      description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      description: 'Show real - time performance metrics',
+      icon: <Activity className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
     {
-      id: 'enable-bundle-analyzer',
+      id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
-      icon: <Package className="w-4 h-4" />,
+      icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
     {
-      id: 'clear-cache',
+      id: 'clear - cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      icon: <Trash2 className='w - 4 h - 4' />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
-        if ('caches' in window) {
-          caches.keys().then(names => {
-            names.forEach(name => caches.delete(name))
-          })
+        // Check condition
+if ( {) {
+  $2
+}
+          caches.keys ().then (names => {
+            names.for_each (name => caches.delete (name));
+          });
         }
       },
     },
@@ -210,10 +213,8 @@ export function QuickActions() {;
         window.location.reload()
       }}],
 
-  const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')},
+        // Preload critical images;
+        const criticalImages = ['/logos/zion-logo && logo.png', '/images/hero-bg && bg.webp'];
 
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
@@ -312,7 +313,7 @@ export function QuickActions() {;
         window.location.reload()
   if (!isVisible) {
     return (
-      <div className="fixed bottom-4 left-4 z-50">
+      <div className='fixed bottom-4 left-4 z-50'>;
         <Button
           variant='outline'
           size='sm'
@@ -339,14 +340,14 @@ export function QuickActions() {;
     );
   }
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-80">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
-              <Settings className="w-4 h-4 mr-2" />
-              Quick Actions
-            </CardTitle>
+    <div className='fixed bottom-4 left-4 z-50 w-80'>;
+      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>;
+        <CardHeader className='pb-2'>;
+          <div className='flex items-center justify-between'>;
+            <CardTitle className='text-sm flex items-center'>;
+              <Settings className='w-4 h-4 mr-2' />;
+              Quick Actions;
+            </CardTitle>;
             <Button
 
 

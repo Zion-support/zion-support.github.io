@@ -22,4 +22,8 @@ describe('AIChatbot'
   it('displays correct content'
   it('handles user interactions'
 import AIChatbot from './AIChatbot; ; describe('AIChatbot', () => {; it('renders without crashing', () => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbot />); }); ; it('handles user interactions'
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-2480
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

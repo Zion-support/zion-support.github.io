@@ -66,6 +66,7 @@ const Onboarding: NextPage = () => {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
       <div className="border rounded-md p-4 min-h-[200px]">
         {step === 0 && <div>Account setup fields…</div>}
         {step === 1 && <div>Profile details fields…</div>}
@@ -111,6 +112,8 @@ const Onboarding: NextPage = () => {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>

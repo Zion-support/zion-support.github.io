@@ -182,9 +182,39 @@ try {
     if () {) {
   $2
 }
+<<<<<<< HEAD
 }
 }
 }
 }
 }
 }
+=======
+    {
+      console.log ('🎉 All automation completed successfully!')}
+      console.log ('📋 Next "steps": ');
+      console.log ('1. Review the generated reports');
+      console.log ('2. Run: chmod +x git - workflow.sh');
+      console.log ('3. Execute: ./git - workflow.sh');
+      console.log ('4. Or manually run git commands')} else {
+      console.log ('⚠️ Automation completed with some issues');
+      console.log ('📋 Check the individual reports for details')}
+    process.exit (success ? 0 : 1)}).catch (error => {
+    console.error ('❌ Master automation "failed": ', error);
+    process.exit (1)})} catch (error) {
+  console.error ('❌ Failed to load master "automation": ', error);
+  process.exit (1)}
+#!/usr / bin / env node console.log ('🚀 Executing Master Automation...'); try { const MasterAutomation = require ('./master - automation.cjs'); const master = new MasterAutomation;(); master.run ().then (success => { if () { { console.log ('🎉 All automation completed successfully!')} console.log ('📋 Next steps: ')) {
+  $2
+} console.log ('1. Review the generated reports'); console.log ('2. Run: chmod +x git - workflow.sh'); console.log ('3. Execute: ./git - workflow.sh'); console.log ('4. Or manually run git commands')} else { console.log ('⚠️ Automation completed with some issues'); console.log ('📋 Check the individual reports for details')} process.exit (success ? 0 : 1)}).catch (error => { console.error ('❌ Master automation failed:', error); process.exit (1)})} catch (error) { console.error ('❌ Failed to load master automation:', error); process.exit (1)}
+#!/usr / bin / env node console.log ('🚀 Executing Master Automation...'); try { const MasterAutomation = require ('./master - automation.cjs'); const master = new MasterAutomation;(); master.run ().then (success => { if () { { console.log ('🎉 All automation completed successfully!')} console.log ('📋 Next steps: ')) {
+  $2
+} console.log ('1. Review the generated reports'); console.log ('2. Run: chmod +x git - workflow.sh'); console.log ('3. Execute: ./git - workflow.sh'); console.log ('4. Or manually run git commands')} else { console.log ('⚠️ Automation completed with some issues'); console.log ('📋 Check the individual reports for details')} process.exit (success ? 0 : 1)}).catch (error => { console.error ('❌ Master automation failed:', error); process.exit (1)})} catch (error) { console.error ('❌ Failed to load master automation:', error); process.exit (1)}
+#!/usr / bin / env node console.log ('🚀 Executing Master Automation...'); try { const MasterAutomation = require ('./master - automation.cjs'); const master = new MasterAutomation;(); master.run ().then (success => { if () { { console.log ('🎉 All automation completed successfully!')} console.log ('📋 Next steps: ')) {
+  $2
+} console.log ('1. Review the generated reports'); console.log ('2. Run: chmod +x git - workflow.sh'); console.log ('3. Execute: ./git - workflow.sh'); console.log ('4. Or manually run git commands')} else { console.log ('⚠️ Automation completed with some issues'); console.log ('📋 Check the individual reports for details')} process.exit (success ? 0 : 1)}).catch (error => { console.error ('❌ Master automation failed:', error); process.exit (1)})} catch (error) { console.error ('❌ Failed to load master automation:', error); process.exit (1)}
+#!/usr / bin / env node console.log ('🚀 Executing Master Automation...'); try { const MasterAutomation = require ('./master - automation.cjs'); const master = new MasterAutomation;(); master.run ().then (success => { if () { { console.log ('🎉 All automation completed successfully!')} console.log ('📋 Next steps: ')) {
+  $2
+} console.log ('1. Review the generated reports'); console.log ('2. Run: chmod +x git - workflow.sh'); console.log ('3. Execute: ./git - workflow.sh'); console.log ('4. Or manually run git commands')} else { console.log ('⚠️ Automation completed with some issues'); console.log ('📋 Check the individual reports for details')} process.exit (success ? 0 : 1)}).catch (error => { console.error ('❌ Master automation failed:', error); process.exit (1)})} catch (error) { console.error ('❌ Failed to load master automation:', error); process.exit (1)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

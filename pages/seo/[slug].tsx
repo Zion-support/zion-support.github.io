@@ -71,6 +71,9 @@ export default function SEOLandingPage(req, res) {
   const { slug } = router && router.query as { slug?: string };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
 
   React && React.useEffect(() => {;

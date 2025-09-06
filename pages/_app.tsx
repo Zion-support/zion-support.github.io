@@ -25,7 +25,10 @@ import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';

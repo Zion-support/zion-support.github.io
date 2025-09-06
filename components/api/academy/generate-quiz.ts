@@ -25,6 +25,7 @@ import OpenAI from 'openai';
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
@@ -54,10 +55,13 @@ import OpenAI from 'openai';
       return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});
+
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON && JSON.parse(text);
       return res && res.status(200).json(json);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
       const json = JSON.parse (text);
       return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
         { role: 'user', content: prompt }];
@@ -67,6 +71,7 @@ import OpenAI from 'openai';
     try {
       const json = JSON.parse (text);
       return res.status (200).json (json);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
       return fallback ();
     }
@@ -82,9 +87,12 @@ import OpenAI from 'openai';
 }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

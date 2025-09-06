@@ -562,100 +562,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 }
 export const getPopularEmergingTechServices2026 = () => {
 };
-=======
-    id: 'ai-digital-twin-platform'
-    name: 'AI Digital Twin Platform'
-    tagline:
-      'Intelligent digital twin creation and simulation with AI-powered insights'
-    price: '$349'
-    period: '/month'
-    description:
-      'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
-    features: [
-      'AI-powered digital twin creation'
-      'Real-time simulation and modeling'
-      'Predictive analytics and forecasting'
-      'Integration with IoT and sensor data'
-      'Custom simulation scenarios'
-      'Performance optimization insights'
-      '3D visualization and modeling'
-      'Advanced analytics and reporting'
-      'API for custom integrations'
-      'Mobile app for monitoring'
-    ]
-    popular: false
-    icon: '🔄'
-    color: 'from-cyan-600 to-teal-600'
-    textColor: 'text-cyan-400'
-    link: 'https://ziontechgroup.com/ai-digital-twin-platform'
-    marketPosition:
-      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.'
-    targetAudience:
-      'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners'
-    trialDays: 14
-    setupTime: '2-3 weeks'
-    category: 'Digital Twin & Simulation'
-    realService: true
-    technology: [
-      'Python'
-      'TensorFlow'
-      'Unity'
-      'React'
-      'PostgreSQL'
-      'Redis'
-    ]
-    integrations: [
-      'Siemens'
-      'PTC'
-      'GE Digital'
-      'Autodesk'
-      'Dassault Systèmes'
-      'IoT platforms'
-    ]
-    useCases: [
-      'Manufacturing optimization'
-      'Infrastructure monitoring'
-      'Energy management'
-      'Predictive maintenance'
-      'Urban planning'
-    ]
-    roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
-    competitors: [
-      'Siemens Digital Twin'
-      'PTC ThingWorx'
-      'GE Digital Twin'
-      'Autodesk'
-    ]
-    marketSize: '$86.1B digital twin market'
-    growthRate: '42% annual growth'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
-    launchDate: '2024-06-25'
-    customers: 56
-    rating: 4.4
-    reviews: 29
-  }
-=======
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25',
-    customers: 56,
-    rating: 4.4,
-    reviews: 29,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-];
-export const getEmergingTechServices2026ByCategory = (category: string) => {
-  return emergingTechServices2026.filter(
-    service => service.category === category;
-  );
-<<<<<<< HEAD
-}
-export const getPopularEmergingTechServices2026 = () => {
-=======
-};
 
 export const getPopularEmergingTechServices2026 = () => {;
   return emergingTechServices2026.filter(service => service.popular);
@@ -674,18 +580,14 @@ export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
   return emergingTechServices2026 && emergingTechServices2026.filter(service => {
     const price = parseInt(service && service.price.replace('$', ''));
-=======
-  return emergingTechServices2026.filter(service => {;
-    const price = parseInt(service.price.replace('$', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -695,6 +597,11 @@ export const getEmergingTechServices2026ByPriceRange = (
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -721,9 +628,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 18
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Blockchain & Web3 Solutions
   {
     id: 'ai-blockchain-intelligence-platform', name: 'AI Blockchain Intelligence Platform',
@@ -752,9 +663,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 89
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Internet of Things (IoT) Platform
   {
     id: 'ai-iot-intelligence-platform', name: 'AI IoT Intelligence Platform',
@@ -783,9 +698,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 45
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Edge Computing & 5G Services
   {
     id: 'edge-computing-optimization-platform', name: 'Edge Computing Optimization Platform',
@@ -814,9 +733,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 23
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
     id: 'ai-ar-vr-development-platform', name: 'AI AR/VR Development Platform',
@@ -845,9 +768,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 34
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Robotics & Automation Services
   {
     id: 'ai-robotics-automation-platform', name: 'AI Robotics & Automation Platform',
@@ -876,9 +803,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 18
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   // Digital Twin & Simulation
   {
     id: 'ai-digital-twin-platform', name: 'AI Digital Twin Platform',
@@ -908,12 +839,18 @@ export const getEmergingTechServices2026ByPriceRange = (
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(service => service.category === category)
 };
+
 export const getPopularEmergingTechServices2026 = () => {
   return emergingTechServices2026.filter(service => service.popular)
 };
+<<<<<<< HEAD
 =======
 
 export const getEmergingTechServices2026ByCategory = (category: string) => {
@@ -925,6 +862,9 @@ export const getPopularEmergingTechServices2026 = () => {
 };
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -933,10 +873,15 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
   })
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (

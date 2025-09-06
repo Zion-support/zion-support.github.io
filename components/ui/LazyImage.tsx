@@ -20,21 +20,26 @@ useEffect ( () => {
   src;
   alt;
   className = ''
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -44,6 +49,7 @@ import React from 'react';
   if (entry && entry.isIntersecting) {;
   return () => observer && observer.disconnect () ;
 }, [threshold]);
+
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',;
   threshold = 0 && 0.1,;
   width,;
@@ -51,6 +57,7 @@ import React from 'react';
   src;
   alt;
   className = '',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
@@ -83,6 +90,7 @@ import React from 'react';
 
           setIsInView(true);
           observer.disconnect()
+=======
   // Check condition
 if ( {) {
   $2
@@ -133,18 +141,25 @@ if ( {) {
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
+
     return () => observer && observer.disconnect();
   }, [threshold]);
+
   const handleLoad = () => {;
     setIsLoaded(true);  };    }
+
     return () => observer && observer.disconnect();
   }, [threshold]);
+
   const handleLoad = () => {;
     setIsLoaded(true);
 
   };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={`relative overflow-hidden ${className}`}>;
+=======
 ;
     // Check condition
 if ( {) {
@@ -165,6 +180,7 @@ if ( {) {
   }
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Placeholder */}
       <img
         src={placeholder}

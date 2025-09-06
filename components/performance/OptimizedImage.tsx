@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,6 +25,7 @@ import React from 'react';
 
 
 interface OptimizedImageProps {;
+
   src: string, alt: string,;
 
 =======
@@ -28,6 +33,7 @@ import Image from 'next / image';
 ;
 interface OptimizedImageProps {
   src: string, alt: string,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   width?: number;
   height?: number;
   class_name?: string;
@@ -58,7 +64,7 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
   alt,
   width,
   height,
-class_name = '',
+  class_name = '',
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -69,6 +75,7 @@ class_name = '',
 if ( {) {
   $2
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Image;
         src={src}
@@ -88,6 +95,7 @@ if ( {) {
       width={width |800}
       height={height |600}
       className={className}
+=======
       />);
   }
     <Image;
@@ -96,6 +104,7 @@ if ( {) {
       width={width || 800}
       height={height || 600}
       className={class_name}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
 <<<<<<< HEAD
@@ -125,19 +134,7 @@ export default OptimizedImage;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      quality={quality}
-      style={style}
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  );
-};
-
+;
 export default OptimizedImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

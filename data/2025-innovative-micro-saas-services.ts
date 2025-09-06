@@ -31,6 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
@@ -71,6 +72,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📝',
 
         'AI/ML',
+=======
       color: 'from - blue - 500 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - content - factory',
@@ -135,6 +137,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     },
 
         'AI-powered lead scoring',
+=======
     // CRM Intelligence Platform;
     {
       id: 'crm - intelligence - platform',
@@ -161,6 +164,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📊',
 
         'AI/ML',
+=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / crm - intelligence - platform',
@@ -223,6 +227,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
         'AI-powered analytics',
         'Automated decision-making',
+=======
     // Decision Engine Platform;
     {
       id: 'decision-engine-platform'
@@ -327,6 +332,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '🛒',
 
         'AI/ML',
+=======
       color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ecommerce - optimization - platform',
@@ -418,6 +424,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '👥',
 
         'AI/ML',
+=======
       color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / hr - automation - platform',
@@ -665,6 +672,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📢',
 
         'AI/ML',
+=======
       color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / marketing - automation - platform',
@@ -732,8 +740,11 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       id: 'project - management - intelligence',
       name: 'AI Project Management Intelligence Platform',
       tagline:;
@@ -760,9 +771,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
         'AI/ML',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       color: 'from - indigo - 500 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / project - management - intelligence',
@@ -847,15 +862,18 @@ export interface InnovativeMicroSaasService2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [
   // AI Content Factory
   {
@@ -867,6 +885,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     features: [
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
+<<<<<<< HEAD
 =======
       id: 'project-management-intelligence'
       name: 'AI Project Management Intelligence Platform'
@@ -966,6 +985,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management';
       'Integration capabilitiesCustom dashboards'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     ];
     popular: true, icon: '📝',
     color: 'from-blue-500 to-cyan-600', textColor: 'text-blue-400',
@@ -978,6 +999,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     competitors: ['Basic content generation toolsTraditional CMS platforms'], marketSize: '$50B+ market',
     growthRate: '250%+ annual growth', variant: 'saas-content',
     contactInfo: {
+      
+=======
   ];    features: [;
       'AI project planning_resource optimization_risk assessment_performance tracking_automated reporting_team collaboration_timeline optimization_budget management';
       'Integration capabilities_custom dashboards';
@@ -1010,9 +1033,11 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     competitors: ['Basic project management toolsTraditional planning platforms'], marketSize: '$45B+ market',
     growthRate: '250%+ annual growth', variant: 'saas-project',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
+    
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
@@ -1941,6 +1966,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1949,3 +1975,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

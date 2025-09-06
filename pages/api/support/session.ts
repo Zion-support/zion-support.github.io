@@ -45,6 +45,7 @@ export default async function handler(req, res) {
   writeJson('support/sessions.json', log);
 
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
+<<<<<<< HEAD
   return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error:", error);
@@ -53,6 +54,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+  return res.status(200).json({ ok: true })
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 <<<<<<< HEAD
   } catch (error) {

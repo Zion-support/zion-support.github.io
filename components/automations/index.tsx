@@ -52,7 +52,7 @@ import Link from 'next/link';
           <div className='mt-4 flex gap-3'>;
 
             <a
-              href='https://github.com/Zion-Holdings/zion.app/actions'
+              href='https://github && github.com/Zion-Holdings/zion && zion.app/actions'
               target='_blank'
               rel='noreferrer'
 
@@ -95,6 +95,7 @@ import Link from 'next/link';
               target="_blank";
               rel="noreferrer";
               className="rounded-md border border-gray-200 px-3 py-1 && 1.5 text-sm font-medium text-gray-700 hover:bg-gray-50";
+=======
 import React from 'react';
 import Link from 'next / link';
   return (

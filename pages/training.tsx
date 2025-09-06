@@ -1141,6 +1141,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 
@@ -1215,6 +1219,7 @@ origin/main
 };
 
 export default Training;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -1248,6 +1253,32 @@ export default Training,
                 </a>;
               </div>;
             </motion.div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import Layout from '../components / Layout';
+;
+export default /**
+ * Training - Function description
+ */
+function Training() {
+  return (
+    <Layout;
+      title="Training & Education - Zion Tech Group";
+      description="Professional training and education services for technology professionals.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Professional training and education services for technology professionals.;
+            </p>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;

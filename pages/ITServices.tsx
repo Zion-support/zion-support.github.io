@@ -1,9 +1,36 @@
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 import React from "react";
 import Layout from "../components/Layout";
@@ -39,6 +66,12 @@ origin/automation-improvements-final
   );
 }
 }
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -653,3 +686,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

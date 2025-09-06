@@ -57,21 +57,8 @@ function writeGrant(record: GrantApplication) {
 
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-=======
-  ensureDir()
-=======
-
-function writeGrant(record: GrantApplication) {
-  ensureDir(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const { id } = req && req.query as { id: string };
 
   if (!id) {
@@ -112,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req && req.method === 'PUT') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const existing = readGrant(id);
     if (!existing) {
 
@@ -171,7 +159,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.set_header ('Allow', 'GET, PUT');
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
-  res.setHeader('AllowGET, PUT'),
-  res.status(405).end('Method Not Allowed')
-
 }

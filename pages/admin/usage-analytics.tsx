@@ -279,6 +279,7 @@ export default function UsageAnalytics(req, res) {
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
+<<<<<<< HEAD
       setFunnel(json.funnel || []);
     } finally {;
       setLoading(false);
@@ -319,6 +320,39 @@ export default function UsageAnalytics(req, res) {
             </select>
           </div>
         </div>
+=======
+      setFunnel(json.funnel || [])
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export default /**
+ * UsageAnalytics - Function description
+ */
+function UsageAnalytics() {
+  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000)),
+  const [end, set_end] = useState < Date>(new Date ()),
+  const [user_type, setUserType] = useState < string>('all'),
+  const [loading, set_loading] = useState (false),
+  const [pagesMostUsed, setPagesMostUsed] = useState < Datum[]>([]),
+  const [events, set_events] = useState < Datum[]>([]),
+  const [line, set_line] = useState<{ date: string, value: number }[]>([]),
+  const [funnel, set_funnel] = useState < Datum[]>([]),
+  const refresh = useCallback (async () => {
+    set_loading (true),
+    try {
+      const params = new URLSearchParams ({ start: start.toISOString (), end: end.toISOString (), user_type }),
+      const res = await fetch (`/api / admin / analytics / summary?${params.to_string ()}`),
+      const json = await res.json (),
+      setPagesMostUsed (json.pagesMostUsed || []),
+      set_events (json.events || []),
+      set_line (json.line || []),
+      set_funnel (json.funnel || []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      set_loading (false);
+    }
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>

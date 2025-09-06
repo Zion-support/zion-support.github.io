@@ -100,6 +100,7 @@ export default function PricingEnhanced2026Page() {
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
     {
+<<<<<<< HEAD
       name: 'ArrowRight-Generation AI 2026'
       description: 'Revolutionary AI platforms with quantum integration'
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence']
@@ -171,6 +172,14 @@ export default function PricingEnhanced2026Page(req, res) {
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
     ...innovativeMicroSaasV2Services;
+=======
+      name: 'ArrowRight - Generation AI 2026',
+      description: 'Revolutionary AI platforms with quantum integration',
+      services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     ...innovative2026MicroSaasServicesV2,;
     ...emergingTech2026ServicesV2,;
     ...enterpriseIT2026ServicesV2,;
@@ -342,6 +351,13 @@ export default function PricingEnhanced2026Page(req, res) {
       color: 'from-blue-500 to-cyan-600'
     }
   ]
+<<<<<<< HEAD
+=======
+
+=======
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
+        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       ],
       icon: <Crown className="w-8 h-8" />,
@@ -423,6 +439,166 @@ export default function PricingEnhanced2026Page(req, res) {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+<<<<<<< HEAD
+=======
+
+      avg_price: '$2, 499 / month',
+      savings: 'Save 60 - 80% vs. competitors',
+      icon: Brain,
+      color: 'from - purple - 500 to - indigo - 600';
+    },
+    {
+      name: 'Quantum & Emerging Tech 2026',
+      description: 'Cutting - edge quantum and emerging technologies',
+      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
+      avg_price: '$4, 199 / month',
+      savings: 'Save 70 - 85% vs. competitors',
+      icon: Atom,
+      color: 'from - blue - 500 to - cyan - 600';
+    },
+    {
+      name: 'Enterprise IT Solutions 2026',
+      description: 'Advanced enterprise infrastructure and security',
+      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
+      avg_price: '$5, 199 / month',
+      savings: 'Save 50 - 75% vs. competitors',
+      icon: Shield,
+      color: 'from - red - 500 to - pink - 600';
+    },
+    {
+      name: 'Innovative Micro SaaS 2026',
+      description: 'Creative and practical SaaS tools',
+      services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
+      avg_price: '$299 / month',
+      savings: 'Save 40 - 60% vs. competitors',
+      icon: Rocket,
+      color: 'from - green - 500 to - emerald - 600';
+    },
+    {
+      name: 'Healthcare & Biotech 2026',
+      description: 'AI - powered healthcare and biotechnology solutions',
+      services: ['AI Healthcare DiagnosticsDNA Computing PlatformNeuromorphic Healthcare AIQuantum Medical Imaging'],
+      avg_price: '$3, 999 / month',
+      savings: 'Save 65 - 80% vs. competitors',
+      icon: FlaskConical,
+      color: 'from - blue - 500 to - teal - 600';
+    },
+    {
+      name: 'Financial Technology 2026',
+      description: 'Advanced financial and trading solutions',
+      services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
+      avg_price: '$4, 499 / month',
+      savings: 'Save 55 - 75% vs. competitors',
+      icon: DollarSign,
+      color: 'from - green - 500 to - emerald - 600';
+    }
+  ],
+  // Enhanced pricing tiers with more realistic and comprehensive offerings;
+  const pricing_tiers = [;
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billing_cycle === 'monthly' ? 99 : 79,
+      period: billing_cycle === 'monthly' ? '/month' : '/month',
+      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      features: [;
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24 / 7)30 - Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
+        'Mobile App AccessAPI Access (1000 calls / month)';
+      ],
+      icon: <Sparkles className="w - 8 h - 8" />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      color: 'from - blue - 500 to - indigo - 600';
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billing_cycle === 'monthly' ? 299 : 239,
+      period: billing_cycle === 'monthly' ? '/month' : '/month',
+      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      features: [;
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24 / 7)60 - Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
+        'Custom IntegrationsAPI Access (10, 000 calls / month)Users Collaboration ToolsAdvanced Workflow Automation';
+      ],
+      icon: <Star className="w - 8 h - 8" />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      color: 'from - purple - 500 to - pink - 600';
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billing_cycle === 'monthly' ? 999 : 799,
+      period: billing_cycle === 'monthly' ? '/month' : '/month',
+      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
+      features: [;
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90 - Day Free TrialEnterprise Analytics & BI24 / 7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite - label SolutionsCustom SLA AgreementsOn - site Implementation';
+      ],
+      icon: <Crown className="w - 8 h - 8" />,
+      variant: 'quantum - advanced' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      color: 'from - yellow - 500 to - orange - 600';
+    }
+  ],
+  // Featured services showcase;
+  const featured_services = [;
+    {
+      name: 'AI Quantum Financial Trading',
+      price: '$2, 999 / month',
+      description: 'Revolutionary AI - powered quantum trading with 99.9% accuracy',
+      features: ['Quantum - inspired AI algorithms_real - time market analysis_automated trading strategies'],
+      link: 'https://ziontechgroup.com / services / ai - quantum - financial - trading',
+      icon: '📈',
+      color: 'from - green - 500 to - emerald - 600';
+    },
+    {
+      name: 'Zero Trust Network Architecture 2026',
+      price: '$6, 999 / month',
+      description: 'ArrowRight - generation network security with continuous verification',
+      features: ['Continuous verification_micro - segmentation_real - time threat detection'],
+      link: 'https://ziontechgroup.com / services / zero - trust - network - architecture - 2026',
+      icon: '🛡️',
+      color: 'from - red - 500 to - pink - 600';
+    },
+    {
+      name: 'AI Healthcare Diagnostics Platform',
+      price: '$1, 499 / month',
+      description: 'AI - powered medical diagnostics with 95% accuracy rate',
+      features: ['Medical image analysis_diagnosis prediction_treatment recommendations'],
+      link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics',
+      icon: '🏥',
+      color: 'from - blue - 500 to - cyan - 600';
+    },
+    {
+      name: 'Quantum Internet Security Platform',
+      price: '$4, 999 / month',
+      description: 'Unbreakable quantum encryption for the future internet',
+      features: ['Quantum key distribution_post - quantum cryptography_real - time threat detection'],
+      link: 'https://ziontechgroup.com / services / quantum - internet - security - platform',
+      icon: '🔐',
+      color: 'from - blue - 500 to - cyan - 600';
+    }
+  ],
+  return (
+    <UltraFuturisticBackground variant="holographic" intensity="high">;
+      <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white relative overflow - hidden">;
+        <Head>;
+          <title > Enhanced 2026 Pricing - Zion Tech Group</title>;
+          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting - edge solutions." />;
+          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />;
+          <link rel="icon" href="/favicon.svg" />;
+          {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
+          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
+          <meta property="og:type" content="website" />;
+          <meta property="og:url" content="https://ziontechgroup.com / pricing - enhanced - 2026" />;
+          <meta property="og:image" content="https://ziontechgroup.com / og - image.svg" />;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           {/* Twitter */}
 <<<<<<< HEAD
           {/* Twitter */  } catch (error) {

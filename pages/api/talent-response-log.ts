@@ -20,11 +20,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Placeholder for persistence, echo the response for now
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   const payload = { talentId, action, at: new Date().toISOString() }
 

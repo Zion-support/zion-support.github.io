@@ -1,4 +1,31 @@
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React from 'react';
 <<<<<<< HEAD
 origin/automation-improvements-final
@@ -59,7 +86,10 @@ const securityStats = [
 export default function SecurityPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -1508,10 +1538,49 @@ origin/automation-improvements-final
 }
   )
 }
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-b76c
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
 )
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        {/* CTA Section */}
+        <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
+          <div className="container mx - auto px - 4 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+                Questions About Our Security?;
+              </h2>;
+              <p className="text - xl mb - 8 max - w-2xl mx - auto">;
+                Our security team is available to answer any questions about our security measures and compliance.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center";
+                >;
+                  Contact Security Team;
+                </Link>;
+                <Link;
+                  href="/compliance";
+                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
+                >;
+                  View Compliance Details;
+</Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>);
+}  );
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 origin/main
   )

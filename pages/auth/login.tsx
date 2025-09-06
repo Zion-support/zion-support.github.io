@@ -58,6 +58,7 @@ import {;
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
   Card
@@ -68,11 +69,25 @@ import {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+=======
+import {
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -80,6 +95,21 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components/ui/card';
 const LoginPage = () => {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from '@/components/ui/card';
+const LoginPage = () => {;
+
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import Head from 'next/head';
+import { signIn } from 'next-auth/react';
+import { supabase } from '@/utils/supabase/client';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -549,6 +579,7 @@ const LoginPage = () => {;
     }
   };
 
+<<<<<<< HEAD
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -582,6 +613,15 @@ const LoginPage = () => {;
         logInfo('LoginPage: onAuthStateChange event:', {;
           event,;
           userId: session?.user?.id;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+      const data = await response && response.json();
+      if (response && response.ok) {;
+        setProactiveResendMessage({;
+          type: 'success',;
+          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         });
       } else {;
         setProactiveResendMessage({;
@@ -597,6 +637,7 @@ const LoginPage = () => {;
 
       });
     } finally {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsResendingVerification(false);
       } catch (error) {
@@ -651,6 +692,8 @@ const LoginPage = () => {;
     setIsEmailUnverified(false),
     setVerificationEmailSent(false),
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       setIsProactivelyResending(false);    }
 
 
@@ -730,7 +773,10 @@ const LoginPage = () => {;
             name: signInError && signInError.name || 'AuthApiError',;
             message: displayMessage,;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({

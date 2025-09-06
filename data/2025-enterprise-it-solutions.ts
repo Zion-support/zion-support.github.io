@@ -63,10 +63,12 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.7,
     reviews: 32,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-factor authentication',
       'Single sign-on (SSO)',
+=======
     id: 'enterprise - identity - access - management - suite',
     name: 'Enterprise Identity & Access Management Suite',
     tagline:;
@@ -143,9 +145,11 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.8,
     reviews: 45,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered workflow optimization',
+=======
     id: 'enterprise - workflow - automation - platform',
     name: 'Enterprise Workflow Automation Platform',
     tagline:;
@@ -226,6 +230,7 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.7,
     reviews: 26,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -323,6 +328,7 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Enterprise platform with monitoring engine, observability tools, and alerting system.'
     launchDate: '2025-01-18'
     customers: 56
@@ -345,11 +351,14 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];	{
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
+
 export const enterpriseITSolutions: MicroSaasService[] = [
 	{
 		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',
@@ -567,6 +576,9 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		reviews: 38
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 	}
 ];
 
@@ -766,6 +778,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
+<<<<<<< HEAD
 =======
 
 =======
@@ -1178,3 +1191,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

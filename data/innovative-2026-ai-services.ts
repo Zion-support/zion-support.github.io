@@ -374,48 +374,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-import { ServiceVariant } from '../types/service-variants',;
-export interface Innovative2026AIService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const innovative2026AIServices: Innovative2026AIService[] = [;
   // AI-Powered Business Intelligence;
@@ -648,3 +608,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

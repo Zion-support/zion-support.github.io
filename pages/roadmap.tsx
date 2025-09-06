@@ -220,6 +220,7 @@ Validation:;
 
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
+<<<<<<< HEAD
       setTimeout(() => setCopied(false), 1500);
     } catch {;
       setCopied(false);
@@ -228,6 +229,32 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      setTimeout(() => setCopied(false), 1500)
+=======
+export default function RoadmapPage (): JSX.Element {
+  const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
+  const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
+  const [priorities, set_priorities] = useState ('governance, scale, regional expansion'),
+  const [copied, set_copied] = useState (false),
+  const stages = useMemo (
+    () => generate_stages ({ milestones, keywords, priorities }),
+    [milestones, keywords, priorities]),
+  const operator_prompt = useMemo (() => defaultOperatorPrompt (), []),
+  const copy_prompt = async () => {
+    try {
+      await navigator.clipboard.write_text (operator_prompt),
+      set_copied (true),
+      set_timeout (() => set_copied (false), 1500);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch {
+
+      set_copied (false);
+
+    }
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   },
   return (
     <>
@@ -394,6 +421,7 @@ Validation:;
                   </div>
                 </article>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </div>
           </section>
@@ -478,6 +506,15 @@ Validation:;
   }
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
+=======
+
+=======
+}
+
+=======
+                  on_change={(e) => set_priorities (e.target.value)}
+                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
@@ -538,6 +575,7 @@ Validation:;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -547,6 +585,8 @@ Validation:;
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

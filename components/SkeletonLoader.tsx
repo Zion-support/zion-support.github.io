@@ -10,6 +10,7 @@ interface SkeletonLoaderProps {
 interface SkeletonLoaderProps {;
   lines?: number, className?: string;
 }
+
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
     lines = 3,;
     className = '';
@@ -27,6 +28,7 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
     </div>;
   );
 }
+=======
 const SkeletonLoader: React.FC < SkeletonLoaderProps> = ({
     lines = 3,
     class_name = '';
@@ -42,4 +44,5 @@ const SkeletonLoader: React.FC < SkeletonLoaderProps> = ({
     </div>);
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default SkeletonLoader;

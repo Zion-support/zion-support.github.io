@@ -46,6 +46,7 @@ export interface CybersecurityQuantumService {;
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
+=======
     id: 'ai - powered - threat - hunting - platform',
     name: 'AI - Powered Threat Hunting Platform',
     tagline: 'Proactive threat detection with autonomous security intelligence',
@@ -123,6 +124,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.8,
     reviews: 950,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
@@ -149,6 +151,7 @@ export interface CybersecurityQuantumService {;
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
+=======
     id: 'zero - trust - network - access - platform',
     name: 'Zero - Trust Network Access Platform',
     tagline: 'Secure access with continuous verification and least privilege',
@@ -224,11 +227,13 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.7,
     reviews: 1400,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
+=======
     id: 'quantum - key - distribution - network',
     name: 'Quantum Key Distribution Network',
     tagline: 'Unhackable communication with quantum entanglement',
@@ -308,6 +313,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.9,
     reviews: 95,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
@@ -344,6 +350,7 @@ export interface CybersecurityQuantumService {;
   }
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
     icon: '🔍',
     color: 'from-green-500 to-emerald-600',
@@ -365,7 +372,10 @@ export interface CybersecurityQuantumService {;
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
+=======
     id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
     tagline: 'Intelligent security scanning with AI - driven risk analysis',
@@ -445,10 +455,12 @@ export interface CybersecurityQuantumService {;
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -485,8 +497,13 @@ export interface CybersecurityQuantumService {;
     reviews: 1900
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     rating: 4.8,
     reviews: 1900;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 =======
@@ -499,6 +516,7 @@ export interface CybersecurityQuantumService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -783,3 +801,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

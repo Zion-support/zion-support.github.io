@@ -76,6 +76,7 @@ export async function getStaticPaths() {;
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return {
     paths: Array.from(slugs).map(slug => ({ params: { slug } }))
     fallback: false
@@ -87,6 +88,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
@@ -428,7 +431,10 @@ import Card from '../../components/ui/Card';
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -579,7 +585,10 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </UltraFuturisticBackground>);

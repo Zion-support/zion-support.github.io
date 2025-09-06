@@ -30,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON.parse(raw)
     const existingIndex = courses.findIndex((c: any) => c.id === body.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -58,6 +59,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     if (existingIndex >= 0) {
 
 

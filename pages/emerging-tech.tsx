@@ -8,6 +8,7 @@
 
   return (
     <Layout>
+<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
@@ -39,6 +40,8 @@ export default function EmergingTechPage() {_const _features = [
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
 ursor/fix-lint-push-and-merge-to-main-ce13
   return (_<Layout>
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />

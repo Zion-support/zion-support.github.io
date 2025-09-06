@@ -162,7 +162,66 @@ origin/main
     github: "https://github.com/lisawang",
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
   },
+<<<<<<< HEAD
+=======
+  {
+    id: 3,
+    name: "Mike Chen",
+    position: "Head of Cybersecurity",
+    department: "Security",
+    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero - trust architecture and threat intelligence.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / mikechen",
+    twitter: "https://twitter.com / mikechen",
+    github: "https://github.com / mikechen",
+    expertise: [;
+      "Cybersecurity",
+      "Zero - Trust",
+      "Threat Intelligence",
+      "Compliance",
+    ],
+  },
+  {
+    id: 4,
+    name: "Emily Rodriguez",
+    position: "Head of AI / ML",
+    department: "AI & Machine Learning",
+    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / emilyrodriguez",
+    twitter: "https://twitter.com / emilyrodriguez",
+    github: "https://github.com / emilyrodriguez",
+    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],
+  },
+  {
+    id: 5,
+    name: "David Kim",
+    position: "Head of Data Analytics",
+    department: "Data & Analytics",
+    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / davidkim",
+    twitter: "https://twitter.com / davidkim",
+    github: "https://github.com / davidkim",
+    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  {
+
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / lisawang",
+    twitter: "https://twitter.com / lisawang",
+    github: "https://github.com / lisawang",
+    expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
+
+  },
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -191,7 +250,12 @@ origin/main
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -231,6 +295,7 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -1095,7 +1160,10 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ];
 
 export default function TeamPage() {;
@@ -1134,7 +1202,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   );
   return (
     <>;
@@ -1152,6 +1223,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
@@ -1174,11 +1246,16 @@ export default function TeamPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+=======
 import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -1190,8 +1267,11 @@ export default function TeamPage() {
 ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </Layout>);

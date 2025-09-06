@@ -98,6 +98,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.8,
     reviews: 74,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'mobile-survey-studio'
@@ -216,6 +217,7 @@ export const real2029Q4Additions: RealMarketService[] = [
       'Automated reminders and WhatsApp/SMS alerts',
       'Feedback/NPS post-event forms',
       'Budget tracker and P&L exports',
+=======
     id: 'event - ops - dashboard',
     name: 'EventOps Dashboard',
     tagline:;
@@ -264,6 +266,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.7,
     reviews: 29,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -316,6 +319,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.5,
     reviews: 19,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -370,6 +374,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.6,
     reviews: 54,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -424,9 +429,11 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.5,
     reviews: 21,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Company/person enrich via email or domain',
+=======
     id: 'sales - lead - enrichment',
     name: 'Sales Lead Enrichment',
     tagline:;
@@ -474,9 +481,11 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.4,
     reviews: 17,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'High-accuracy OCR and field mapping',
+=======
     id: 'invoice - ocr - processor',
     name: 'Invoice OCR Processor',
     tagline:;
@@ -525,6 +534,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.5,
     reviews: 14,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -575,6 +585,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.4,
     reviews: 18,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -624,6 +635,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4 && 4.3,
     reviews: 12,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'kpi-scorecards-studio'
@@ -729,39 +741,12 @@ export const real2029Q4Additions: RealMarketService[] = [
 ];	{
 
 =======
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
-    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
-    marketPosition: 'Simple executive dashboards without BI bloat.',
-    targetAudience: 'Founders, execs, ops',
-    trialDays: 7,
-    setupTime: 'Same day',
-    category: 'Business Intelligence',
-    realService: true,
-    technology: ['Next.js', 'Supabase', 'BigQuery'],
-    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
-    useCases: ['OKRs/scorecards', 'Exec reporting'],
-    roi: 'Improve visibility and accountability.',
-    competitors: ['Grid', 'Grow'],
-    marketSize: 'BI $30B+',
-    growthRate: '11% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Metrics ingestion and templated reporting.',
-    launchDate: '2029-10-20',
-    customers: 36,
-    rating: 4.4,
-    reviews: 16,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
+
 export const real2029Q4Additions: RealMarketService[] = [
 	{
 		id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot',
@@ -935,7 +920,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month'
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
-			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)';
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		];
 		popular: true;
 		icon: '🔎';
@@ -1215,6 +1200,9 @@ export const real2029Q4Additions: RealMarketService[] = [
 		reviews: 16
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 	}
 ];
 
@@ -1636,6 +1624,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
+<<<<<<< HEAD
 =======
 
 =======
@@ -2492,3 +2481,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

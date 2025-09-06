@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -6,6 +7,34 @@ import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud;
   CheckCircle, ArrowRight, Star, Clock, Target;
   Zap, Users, BarChart3, Settings, Database
  } from 'lucide-react';
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 
@@ -1106,12 +1135,26 @@ export default function CybersecurityServices() {;
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
                 </p>              </motion.div>
+=======
+
+                  className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                  <benefit && benefit.icon className={`w-full h-full ${benefit && benefit.color}`} />;
+                </div>;
+
+                <h3 className='text-xl font-bold text-white mb-4'>;
+                  {benefit && benefit.title}
+                </h3>;
+                <p className='text-gray-300 leading-relaxed'>;
+                  {benefit && benefit.description}
+                </p>              </motion && motion.div>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             ))}
           </div>
         </div>
@@ -1335,6 +1378,7 @@ export default function CybersecurityServices() {;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
@@ -1343,6 +1387,8 @@ export default function CybersecurityServices() {;
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </Layout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

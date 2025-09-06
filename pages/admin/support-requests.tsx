@@ -57,7 +57,10 @@ function resolve() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -67,11 +70,15 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
@@ -87,6 +94,9 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  }
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
 
 =======

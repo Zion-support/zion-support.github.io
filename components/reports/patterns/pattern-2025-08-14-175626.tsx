@@ -24,8 +24,11 @@ export default function Page() {
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             __html:
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
@@ -52,6 +55,7 @@ export default function Page() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Pattern — Cloud Intelligence</title>;
+=======
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -95,6 +99,7 @@ function Page() {
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Pattern — Cloud Intelligence</title>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta property="og:title" content="Pattern — Cloud Intelligence" />;
         <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;

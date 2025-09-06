@@ -22,7 +22,41 @@ import {
   BarChart3, 
   Settings, 
   Globe, 
+<<<<<<< HEAD
   ArrowRight ;
+=======
+  ArrowRight 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 } from 'lucide-react';
 origin/main
 
@@ -69,11 +103,20 @@ const sitemapData = [
     ]
   }
   {
+<<<<<<< HEAD
     category: 'Resources'
     pages: [
       { name: 'Documentation', url: '/docs', icon: Globe }
       { name: 'API Documentation', url: '/api-docs', icon: Settings }
       { name: 'Guides', url: '/guides', icon: Globe }
+=======
+    category: 'Resources',
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },
+      { name: 'API Documentation', url: '/api - docs', icon: Settings },
+      { name: 'Guides', url: '/guides', icon: Globe },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       { name: 'FAQ', url: '/faq', icon: Users }
     ]
   }
@@ -795,7 +838,10 @@ export default function SitemapPage() {;
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
   ];
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -1170,7 +1216,10 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategories.map((category, index) => (
 
@@ -1339,7 +1388,10 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
 
@@ -1504,7 +1556,10 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {resources.map((resource, index) => (
 
@@ -1671,7 +1726,10 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {externalLinks.map((link, index) => (
 
@@ -1842,7 +1900,10 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactInfo.map((contact, index) => (
 
@@ -2085,6 +2146,10 @@ origin/automation-improvements-final
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }animate= {
   {
   opacity: 1, y: 0
@@ -2155,6 +2220,39 @@ origin/automation-improvements-final
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      type: 'Address',
+      value: 'Middletown, DE',
+      action: 'https://maps.google.com/?q = Middletown, DE',
+    },
+  ];
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Sitemap | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.";
+        />;
+        <meta property='og:title' content='Sitemap | Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Complete website sitemap and navigation guide.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / sitemap' />      </Head>;
+      <SmartHeader />;
+      {/* Hero Section */}
+      <section className='pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >;
             <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
               Site Map;

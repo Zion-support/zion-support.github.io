@@ -87,6 +87,7 @@ if ( {) {
     return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
+<<<<<<< HEAD
     const { projectId, roomName, inviterName } = req.body || {};
     if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });
     if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
@@ -107,6 +108,36 @@ if ( {) {
     console.error (e);
     return res.status (500).json ({ ok: false, error: "Failed to send invite" });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    const { project_id, room_name, inviter_name } = req.body || {}
+    if (
+      return res.status (400).json ({ error: "Missing required fields" })) {
+  $2
+}
+    if (
+      return res.status (500).json ({ error: "Supabase not configured" })) {
+  $2
+}
+    const supabase = create_client (url, key);
+    await supabase.channel (`project_${project_id}_calls`).send ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      type: "broadcast",
+      event: "call_invite",
+      payload: { project_id, room_name, inviter_name },
+    });
+
+
+  }
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+    return res.status (200).json ({ ok: true });
+  } catch (e) {
+    console.error (e);
+    return res.status (500).json ({ ok: false, error: "Failed to send invite" });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
 

@@ -324,11 +324,76 @@ export default function CourseView(req, res) {
                     Mark Complete;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </button>;
+<<<<<<< HEAD
                 </li>;
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+                )}
+              </div>;
+            ) : (;
+              <div className='text-sm text-gray-500'>Select a lesson</div>;
+            )}
+
+
+            {course && course.finalQuiz?.questions?.length ? (;
+              <div className='border rounded p-4'>;
+                <div className='font-medium mb-2'>Final Certification Quiz</div>;
+
+                <Quiz
+                  questions={course && course.finalQuiz.questions}
+                  onComplete={onFinalQuizComplete}
+                />;
+                {finalPassed && (;
+                  <div className='mt-3 text-green-700'>;
+                    Passed! You can download your certificate below.;
+                  </div>                )}
+              </div>;
+            ) : null}
+
+
+            {finalPassed && <CertificatePreview courseId={courseId} />}          </section>;
+        </div>;
+      </div>;
+
+      <div className='space-y-4'>;
+        <CoachWidget />;
+        <div className='border rounded p-3'>;
+          <div className='font-medium'>Profile Boost</div>;
+          <div className='text-sm text-gray-600 mt-1'>;
+            Opt-in to boost your visibility in matches when certified skills;
+            apply.;
+          </div>;
+          <button
+            className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded'
+            onClick={() => alert('Preference saved (demo)')}
+=======
+import {useEffect, useMemo, useState} from 'react';
+import {use_router} from 'next / router';
+import ProgressBar from '../../components / learn / ProgressBar';
+import Quiz from '../../components / learn / Quiz';
+import CertificatePreview from '../../components / learn / CertificatePreview';
+import CoachWidget from '../../components / learn / CoachWidget';
+export default /**
+ * CourseView - Function description
+ */
+function CourseView() {
+  const router = use_router ();
+  const { course_id } = router.query as { course_id: string }
+  const [course, set_course] = useState < any>(null);
+  const [progress, set_progress] = useState < any>({
+    percent: 0,
+    completed_lessons: [],
+  });  const [currentLessonId, setCurrentLessonId] = useState < string | null>(null);
+  const [final_passed, setFinalPassed] = useState (false);
+;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
             </ul>
           </aside>

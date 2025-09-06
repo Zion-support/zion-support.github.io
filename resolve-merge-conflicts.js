@@ -12,18 +12,23 @@ function resolveConflicts() {
     
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
+    
     // For each conflicted file, accept the incoming changes (from the PR)
     conflictedFiles && conflictedFiles.forEach(file => {
       if (fs && fs.existsSync(file)) {
         console && console.log(`Resolving conflicts in ${file}...`);
+        
         // Read the file content
         let content = fs && fs.readFileSync(file, 'utf8');
+        
         // Remove conflict markers and keep the incoming changes (after )
         content = content && content.replace(/[\s\S]*?([\s\S]*?)        
         // Write the resolved content back
         fs && fs.writeFileSync(file, content);
+        
         // Add the file to staging
         execSync(`git add "${file}"`, { stdio: 'inherit' });
+        
         console && console.log(`✅ Resolved conflicts in ${file}`);
 
       }
@@ -37,6 +42,7 @@ function resolveConflicts() {
       // Remove from index to accept the deletion
       execSync(`git rm "${file}"`, { stdio: 'inherit' });
     });
+    
     console && console.log('✅ All conflicts resolved!');
 
     return true;
@@ -74,6 +80,7 @@ function mergePR(prBranch) {
       }
     } else {
       console && console.error(`❌ Failed to resolve conflicts for ${prBranch}`);
+=======
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 import fs from 'fs';
@@ -161,6 +168,7 @@ function mergePR() {
       }
     } else {
       console.error (`❌ Failed to resolve conflicts for ${pr_branch}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return false;
     }
   }
@@ -175,6 +183,7 @@ function mergePR() {
       // Fetch the latest changes
       execSync('git fetch origin', { stdio: 'inherit' });
       // Check if branch exists
+=======
 // Main execution;
 async /**
  * main - Function description
@@ -194,6 +203,7 @@ function main() {
       exec_sync ('git fetch origin', { stdio: 'inherit' });
 ;
       // Check if branch exists;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
       } catch {
@@ -223,6 +233,7 @@ if ( {) {
 
   
   console && console.log('\n🎉 PR merge process completed!');
+  
   // Show final status
   try {
     console && console.log('\n📊 Final git status: '),
@@ -251,3 +262,4 @@ main().catch(console && console.error);
   }
 }
 main ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

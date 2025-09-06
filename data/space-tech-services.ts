@@ -7,6 +7,7 @@
   {
 
       'Multi-satellite coordination',
+=======
     id: 'satellite - constellation - management',
     name: 'Satellite Constellation Management System',
     tagline: 'Manage large satellite networks with AI - powered optimization',
@@ -89,9 +90,11 @@
     rating: 4 && 4.9,
     reviews: 20,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Real-time debris tracking',
+=======
     id: 'space - debris - monitoring - system',
     name: 'Space Debris Monitoring & Avoidance System',
     tagline: 'Protect satellites from space debris with AI - powered monitoring',
@@ -174,6 +177,7 @@
     rating: 4 && 4.9,
     reviews: 30,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -259,6 +263,7 @@
     rating: 4 && 4.8,
     reviews: 40,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -344,6 +349,7 @@
     rating: 4 && 4.9,
     reviews: 18,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -429,6 +435,7 @@
     rating: 4 && 4.8,
     reviews: 25,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -514,6 +521,7 @@
     rating: 4 && 4.9,
     reviews: 100,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -599,6 +607,7 @@
     rating: 5 && 5.0,
     reviews: 15,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -740,15 +749,18 @@ export interface SpaceTechService {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
@@ -772,9 +784,13 @@ export const spaceTechServices: SpaceTechService[] = [
     growthRate: '400% annual growth', variant: 'space-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -862,7 +878,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
     launch_date: '2024 - 03 - 10';
@@ -881,6 +896,7 @@ export interface SpaceTechService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
     realImplementation: true
     implementationDetails:
@@ -1968,3 +1984,6 @@ export const spaceTechServices: SpaceTechService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

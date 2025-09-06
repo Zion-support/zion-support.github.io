@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -192,9 +196,11 @@ export default function ServicesShowcase2026V3() {;
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Services Showcase */}
         <div id='services'>          <Enhanced2026ServicesShowcaseV3 />;
         </div>;
+
         {/* Contact Section */}
 
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -218,7 +224,6 @@ export default function ServicesShowcase2026V3() {;
                 Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.a
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
@@ -235,7 +240,6 @@ export default function ServicesShowcase2026V3() {;
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
 
                 >
@@ -279,6 +283,7 @@ export default function ServicesShowcase2026V3() {;
                 </span>;
               </h2>;
               <p className='text-gray-300 text-xl mb-8 max-w-2xl mx-auto'>;
+=======
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components / layout / UltraAdvancedNavigation2026';
@@ -410,10 +415,19 @@ function ServicesShowcase2026V3() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}

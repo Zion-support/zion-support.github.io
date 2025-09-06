@@ -61,12 +61,6 @@ class CompleteAutomation {
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    for (const step of automationSteps) {
-      const result = await this.runScript(step.script, step.description);
-      results.push({ ...step, ...result })}
-=======
     )}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -116,10 +110,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

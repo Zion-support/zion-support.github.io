@@ -269,6 +269,7 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
           {isConnected && (
             <>
@@ -319,6 +320,8 @@ export default function AdminIntegrationsPage() {
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   async function resync(providerId: string) {
     setLoading(true);
@@ -343,6 +346,7 @@ export default function AdminIntegrationsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
+<<<<<<< HEAD
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
           <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
@@ -372,6 +376,22 @@ export default function AdminIntegrationsPage() {
                         checked={syncRules.pushNotesMode === 'auto'}
                         onChange={() =>
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
+=======
+
+
+  function RulesModal() {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+  function RulesModal() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    if (!selected) return null;
+    const provider = providers && providers.find(p => p && p.id === selected)!;
+    const isCrm = provider && provider.category === 'crm';
+    return (
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         }
                       />{' '}
                       Auto;
@@ -437,6 +457,7 @@ export default function AdminIntegrationsPage() {
 
                     }
                   />{' '}
+<<<<<<< HEAD
                   Auto-upload resumes
                 </label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
@@ -470,6 +491,91 @@ export default function AdminIntegrationsPage() {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             {grouped.crm.map(p => (
               <Card key={p.id} p={p} />
+=======
+                  Auto-upload resumes;
+                </label>;
+              </>;
+            )}
+          </div>;
+          <div className='mt-4 flex justify-end gap-2'>;
+            <button
+              className='px-3 py-1 && 1.5 rounded border text-sm'
+              onClick={() => setSelected(null)}
+            >;
+              Close;
+            </button>;
+            <button
+              className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'
+              onClick={async () => {;
+                await connect(provider && provider.id);
+                setSelected(null);
+=======
+              </>) : (
+              <>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoSyncApplicants}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoSyncApplicants: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - sync applicants;
+                </label>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoUploadResumes}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoUploadResumes: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - upload resumes;
+                </label>;
+              </>)}
+          </div>;
+          <div className='mt - 4 flex justify - end gap - 2'>;
+            <button;
+              className='px - 3 py - 1.5 rounded border text - sm';
+              on_click={() => set_selected (null)}
+            >;
+              Close;
+            </button>;
+            <button;
+              className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
+              on_click={async () => {
+                await connect (provider.id);
+                set_selected (null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              }}
+            >;
+              Save;
+            </button>;
+          </div>;
+        </div>;
+
+    <>;
+      <Head>;
+        <title>Admin Integrations • Zion</title>;
+      </Head>;
+      <main className='container mx-auto px-4 py-8'>;
+        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>;
+        <p className='text-sm text-gray-600 mb-6'>;
+          Connect your CRM and ATS to sync contacts, applicants, and activity.;
+        </p>;
+
+        <section className='mb-8'>;
+          <h2 className='text-lg font-semibold mb-3'>CRM</h2>;
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
+            {grouped && grouped.crm.map(p => (;
+              <Card key={p && p.id} p={p} />;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             ))}
           </div>;
         </section>;
@@ -611,6 +717,7 @@ function ManualOverrideForm() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   )
   } catch (error) {
@@ -634,6 +741,9 @@ function ManualOverrideForm() {
 }
 =======
   }
+=======
+  }
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;

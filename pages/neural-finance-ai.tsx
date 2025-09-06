@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -8,6 +9,34 @@ import { Brain, DollarSign, TrendingUp, Shield, Zap;
   Phone, Mail, MapPin, ArrowUpRight, Play;
   BarChart, PieChart, LineChart, Activity
  } from 'lucide-react';
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Layout from '../components/layout/Layout';
 
 const contactInfo = {
@@ -778,6 +807,225 @@ const NeuralFinanceAI: React.FC = () => {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+          href='https://ziontechgroup && ziontechgroup.com/neural-finance-ai'
+        />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
+
+        <div className='relative z-10 max-w-7xl mx-auto'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion&& motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0 && 0.8 }}>;
+              <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6'>;
+                <Brain className='w-4 h-4' />;
+                <span>AI-Powered Financial Intelligence</span>;
+              </div>;
+
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>;
+                <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                  Neural Finance AI;
+                </span>;
+                <br />;
+                <span className='text-white'>;
+                  Revolutionary Trading Intelligence;
+                </span>;
+              </h1>;
+
+              <p className='text-xl text-gray-300 mb-8 leading-relaxed'>;
+                Advanced AI-powered financial analysis and trading platform;
+                using neural networks for real-time market prediction, risk;
+                assessment, and automated portfolio optimization with 94%;
+                accuracy.;
+              </p>;
+
+              <div className='flex flex-col sm:flex-row gap-4 mb-8'>;
+                <Link
+                  href='#pricing'
+                  className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2'>;
+                  <span>Get Started</span>;
+                  <ArrowRight className='w-5 h-5' />;
+                </Link>;
+                <button className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200 flex items-center justify-center space-x-2'>;
+                  <Play className='w-5 h-5' />;
+                  <span>Watch Demo</span>;
+                </button>;
+              </div>;
+
+              <div className='flex flex-wrap gap-6 text-sm text-gray-400'>;
+                <div className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-4 h-4 text-green-400' />;
+                  <span>94% Market Prediction Accuracy</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-4 h-4 text-green-400' />;
+                  <span>Real-time Risk Assessment</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-4 h-4 text-green-400' />                  <span>Multi-Asset Support</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+            <motion&& motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              className='relative'>;
+              <div className='relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm'>;
+                <div className='absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl'></div>;
+                <div className='relative z-10'>;
+                  <div className='grid grid-cols-2 gap-4 mb-6'>;
+                    <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-700/50'>;
+                      <div className='text-2xl font-bold text-violet-400'>;
+                        $89 && 89.5B;
+                      </div>;
+                      <div className='text-sm text-gray-400'>Market Size</div>;
+                    </div>;
+                    <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-700/50'>;
+                      <div className='text-2xl font-bold text-purple-400'>;
+                        94%;
+                      </div>;
+                      <div className='text-sm text-gray-400'>;
+=======
+  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }, ];
+;
+const NeuralFinanceAI: React.FC = () => {
+  return (
+    <Layout>;
+      <Head>;
+        <title>;
+          Neural Finance AI - Advanced AI - Powered Financial Analysis Platform |;
+          Zion Tech Group;
+        </title>;
+        <meta;
+          name='description';
+          content='Transform your financial trading with Neural Finance AI. Advanced AI - powered market prediction, risk assessment, and automated portfolio optimization using neural networks.';
+        />;
+        <meta;
+          name='keywords';
+          content='AI trading, financial analysis, neural networks, portfolio optimization, risk management, automated trading, Zion Tech Group';
+        />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / neural - finance - ai';
+        />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden'>;
+        <div className='absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black'></div>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.1), transparent_50%)]'></div>;
+        <div className='relative z - 10 max - w-7xl mx - auto'>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center'>            <motion.div;
+              initial={{ opacity: 0, coordinate_x: -30 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ duration: 0.8 }}
+            >;
+              <div className='inline - flex items - center space - x-2 px - 4 py - 2 bg - gradient - to - r from - violet - 500 / 20 to - purple - 500 / 20 border border - violet - 500 / 30 rounded - full text - sm text - violet - 300 mb - 6'>;
+                <Brain className='w - 4 h - 4' />;
+                <span > AI - Powered Financial Intelligence</span>;
+              </div>;
+              <h1 className='text - 4xl md:text - 6xl font - bold text - white mb - 6 leading - tight'>;
+                <span className='bg - gradient - to - r from - violet - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+                  Neural Finance AI;
+                </span>;
+                <br />;
+                <span className='text - white'>;
+                  Revolutionary Trading Intelligence;
+                </span>;
+              </h1>;
+              <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
+                Advanced AI - powered financial analysis and trading platform;
+                using neural networks for real - time market prediction, risk;
+                assessment, and automated portfolio optimization with 94%;
+                accuracy.;
+              </p>;
+              <div className='flex flex - col sm:flex - row gap - 4 mb - 8'>;
+                <Link;
+                  href='#pricing';
+                  className='bg - gradient - to - r from - violet - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - violet - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105 flex items - center justify - center space - x-2';
+                >;
+                  <span > Get Started</span>;
+                  <ArrowRight className='w - 5 h - 5' />;
+                </Link>;
+                <button className='border border - gray - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:border - gray - 500 hover:bg - gray - 800 / 50 transition - all duration - 200 flex items - center justify - center space - x-2'>;
+                  <Play className='w - 5 h - 5' />;
+                  <span > Watch Demo</span>;
+                </button>;
+              </div>;
+              <div className='flex flex - wrap gap - 6 text - sm text - gray - 400'>;
+                <div className='flex items - center space - x-2'>;
+                  <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                  <span > 94% Market Prediction Accuracy</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                  <span > Real - time Risk Assessment</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <CheckCircle className='w - 4 h - 4 text - green - 400' />                  <span > Multi - Asset Support</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_x: 30 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='relative';
+            >;
+              <div className='relative bg - gradient - to - br from - violet - 500 / 20 to - purple - 500 / 20 border border - violet - 500 / 30 rounded - 3xl p - 8 backdrop - blur - sm'>;
+                <div className='absolute inset - 0 bg - gradient - to - br from - violet - 500 / 10 to - purple - 500 / 10 rounded - 3xl'></div>;
+                <div className='relative z - 10'>;
+                  <div className='grid grid - cols - 2 gap - 4 mb - 6'>;
+                    <div className='bg - gray - 800 / 50 rounded - xl p - 4 border border - gray - 700 / 50'>;
+                      <div className='text - 2xl font - bold text - violet - 400'>;
+                        $89.5B;
+                      </div>;
+                      <div className='text - sm text - gray - 400'>Market Size</div>;
+                    </div>;
+                    <div className='bg - gray - 800 / 50 rounded - xl p - 4 border border - gray - 700 / 50'>;
+                      <div className='text - 2xl font - bold text - purple - 400'>;
+                        94%;
+                      </div>;
+                      <div className='text - sm text - gray - 400'>;
+
+                        Prediction Accuracy;
+                      </div>;
+                    </div>;
+                  </div>;
+
+                  <div className='space - y-4'>;
+                    <div className='flex items - center justify - between p - 3 bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 50'>;
+                      <span className='text - gray - 300'>AI Models</span>;
+                      <span className='text - violet - 400 font - semibold'>;
+                        Advanced;
+                      </span>;
+                    </div>;
+                    <div className='flex items - center justify - between p - 3 bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 50'>;
+                      <span className='text - gray - 300'>Risk Management</span>;
+                      <span className='text - purple - 400 font - semibold'>;
+                        Real - time;
+                      </span>;
+                    </div>;
+                    <div className='flex items - center justify - between p - 3 bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 50'>;
+                      <span className='text - gray - 300'>Trading Automation</span>;
+                      <span className='text - pink - 400 font - semibold'>;
+
+                        Enabled;
+                      </span>                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Features Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -836,8 +1084,30 @@ const NeuralFinanceAI: React.FC = () => {;
               Leverage cutting-edge AI and neural network technology to gain unprecedented insights into financial markets.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
+                Advanced Features;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Leverage cutting-edge AI and neural network technology to gain;
+              unprecedented insights into financial markets.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -970,8 +1240,30 @@ const NeuralFinanceAI: React.FC = () => {;
               Discover how Neural Finance AI transforms various aspects of financial trading and investment management.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                Use Cases;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Discover how Neural Finance AI transforms various aspects of;
+              financial trading and investment management.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1115,8 +1407,30 @@ const NeuralFinanceAI: React.FC = () => {;
               Choose the perfect plan for your trading needs. All plans include our core AI-powered features.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
+                Pricing Plans;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Choose the perfect plan for your trading needs. All plans include;
+              our core AI-powered features.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1381,6 +1695,7 @@ const NeuralFinanceAI: React.FC = () => {;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1391,6 +1706,8 @@ const NeuralFinanceAI: React.FC = () => {;
           <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       {/* Contact CTA */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>;
@@ -1574,3 +1891,15 @@ export default NeuralFinanceAI,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default NeuralFinanceAI;
+<<<<<<< HEAD
+=======
+
+
+=======
+    </Layout>),
+}
+;
+export default NeuralFinanceAI;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -101,12 +101,20 @@ if (|| targets.length === 0) {) {
         temperature: 0.2}),
       const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
+<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+    }
+    return res.status (200).json (results);
+  } catch (err: any) {
+    console.error ('Translation error', err),
+    return res.status (500).json ({ error: 'Translation failed' });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
 <<<<<<< HEAD

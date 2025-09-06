@@ -91,6 +91,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       color: 'from-yellow-500 to-orange-500',;
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
@@ -103,6 +104,8 @@ import {
 } from 'lucide-react',
 import Link from 'next/link',
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 =======
 import Head from 'next / head';
@@ -523,6 +526,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
       </Head>
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
@@ -538,6 +542,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -778,8 +786,29 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
+                Advanced AI;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Our platform combines cutting-edge artificial intelligence with;
+              deep medical expertise to deliver unprecedented diagnostic;
+              accuracy and speed.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
+              <motion&& motion.div
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1035,8 +1064,31 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+
+
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
+                Practice;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              From radiology to pathology, our AI platform adapts to your;
+              specific medical specialty and workflow requirements.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1180,8 +1232,31 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+
+
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
+                Plan;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Flexible pricing options designed to scale with your healthcare;
+              practice. Start with our Starter plan and upgrade as you grow.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1265,6 +1340,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
+<<<<<<< HEAD
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -1293,6 +1369,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -1368,8 +1447,70 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index) => (
+
+
+              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+                Integrations;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+
+=======
+                    </span>;
+                    <span className='text - gray - 400'>{plan.period}</span>;
+                  </div>;
+                  <p className='text - gray - 300'>{plan.description}</p>;
+                </div>;
+                <ul className='space - y-4 mb - 8'>;
+                  {plan.features.map ((feature, feature_index) => (
+                    <li;
+                      key={feature_index}
+                      className='flex items - center space - x-3';
+                    >;
+                      <CheckCircle className='w - 5 h - 5 text - green - 400 flex - shrink - 0' />;
+                      <span className='text - gray - 300'>{feature}</span>                    </li>))}
+                </ul>;
+                <button;
+                  className={`w - full py - 3 px - 6 bg - gradient - to - r ${plan.color} text - white font - semibold rounded - xl hover:opacity - 90 transition - all duration - 300 transform hover:scale - 105`}
+                >                  Get Started;
+                </button>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */}
+      <section className='py - 20 bg - gray - 900 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (139, 92, 246, 0.08), transparent_50%)]'></div>;
+        <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Seamless{' '}
+              <span className='bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent'>;
+                Integrations;
+              </span>;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Connect with your existing healthcare systems and workflows. Our;
+              platform integrates with all major EHR, PACS, and medical device;
+              platforms.;
+            </p>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

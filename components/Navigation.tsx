@@ -96,6 +96,7 @@ origin/main
 export default function Navigation() {
 <<<<<<< HEAD
 export default function Navigation() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -103,6 +104,9 @@ export default function Navigation() {;
 export default function Navigation() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -314,6 +318,7 @@ function Navigation() {
       icon: Shield,;
     },;
   ];
+
   const solutions = [;
     {;
       name: "Enterprise Solutions",;
@@ -352,6 +357,7 @@ function Navigation() {
       icon: Users,;
     },;
   ];
+
   const industries = [;
     {;
       name: "Healthcare",;
@@ -389,6 +395,7 @@ function Navigation() {
       description: "Property technology",;
     },;
   ];
+
   const resources = [;
     { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
     {;
@@ -418,6 +425,7 @@ function Navigation() {
     },;
     { name: "News", href: "/news", description: "Industry news and updates" },;
   ];
+
   const quickLinks = [;
     { name: "About Us", href: "/about" },;
     { name: "Our Team", href: "/team" },;
@@ -466,6 +474,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
+=======
 ;
   const quick_links = [;
     { name: "About Us", href: "/about" },
@@ -530,6 +539,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text-xs text-gray-500">;
+=======
       {/* Main Navigation */}
       <nav className="bg - white shadow - lg sticky top - 0 z - 50">;
         <div className="container mx - auto px - 4">;
@@ -578,6 +588,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {services && services.map((service, index) => {;
                           const IconComponent = service && service.icon;
+=======
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
               <Link;
@@ -609,6 +620,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
@@ -640,6 +652,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {solutions && solutions.map((solution, index) => {;
                           const IconComponent = solution && solution.icon;
+=======
                               href={service.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -690,6 +703,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
@@ -814,12 +828,15 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -850,6 +867,7 @@ origin/automation-improvements-final
                 Call Now
               </a>
             </div>
+=======
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
               </Link>;
@@ -859,6 +877,8 @@ origin/automation-improvements-final
                 Call Now;
               </a>;
             </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -998,6 +1018,7 @@ origin/automation-improvements-final
                       href="tel:+13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
+=======
                               href={solution.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -1244,6 +1265,7 @@ origin/automation-improvements-final
                       href="tel:+13024640950";
                       className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";
                       on_click={() => setIsMenuOpen (false)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Call Now;
                     </a>;
@@ -1262,6 +1284,7 @@ origin/automation-improvements-final
       />;
     </>;
   );
+=======
               </motion.div>)}
           </AnimatePresence>;
         </div>;
@@ -1272,4 +1295,5 @@ origin/automation-improvements-final
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

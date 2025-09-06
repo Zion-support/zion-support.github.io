@@ -104,6 +104,32 @@ const contactInfo = {
 };
 
 const serviceCategories = [
+<<<<<<< HEAD
+=======
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
+  Building, Factory, Camera, Video, Music, Gamepad2;
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028',
+import { futuristic2028Services } from '../data / 2028 - futuristic - innovations',
+import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+const service_categories = [;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   {
     title: '🚀 2028 Futuristic Innovations'
     description: 'Beyond the future of technology'
@@ -140,6 +166,7 @@ const serviceCategories = [
     services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
   }
   {
+<<<<<<< HEAD
     title: '🚗 Autonomous & Mobility'
     description: 'Self-driving and mobility solutions'
     icon: Car
@@ -147,6 +174,13 @@ const serviceCategories = [
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
   }
 ]
+=======
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self - driving and mobility solutions',
+    icon: Car,
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

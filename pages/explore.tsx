@@ -536,6 +536,7 @@ import React, { useState } from 'react';
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Featured Services */}
       <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -543,6 +544,121 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='mb-12'
+=======
+
+                  onChange={e => setSortBy(e && e.target.value)}
+                  className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all';
+=======
+      price: '$2, 499 / month',
+      icon: Rocket,
+      color: 'from - indigo - 500 to - purple - 500',
+    },  ];
+;
+  // Filter categories based on search;
+  const filtered_categories = categories.filter (category => {
+    const matches_search =;
+      category.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      category.description.toLowerCase ().includes (search_term.toLowerCase ());
+    const matches_filter =;
+      selected_category === 'all' || category.id === selected_category;
+    return matches_search && matches_filter;  });
+;
+  // Sort categories;
+  const sorted_categories = [...filtered_categories].sort ((a, b) => {
+    switch (sort_by) {
+      case 'popularity':;
+        return b.service_count - a.service_count;
+      case 'name':;
+        return a.name.locale_compare (b.name);
+      case 'featured':;
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+      default:;
+        return 0;    }
+  });
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Explore Technology Categories | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.';
+        />;
+        <meta;
+          property='og:title';
+          content='Explore Technology Categories | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Comprehensive technology categories and innovative solutions.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / explore' />      </Head>;
+      <SmartHeader />;
+      {/* Hero Section */}
+      <section className='pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Explore Technology Categories;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
+              Discover our comprehensive range of cutting - edge technology;
+              solutions across AI, quantum computing, cybersecurity, space;
+              technology, and more;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105'>;
+                Start Exploring;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </button>;
+              <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View All Services;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Search and Filters */}
+      <section className='px - 6 pb - 12'>;
+        <div className='max - w-7xl mx - auto'>;
+          <div className='bg - white / 5 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6'>;
+            <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
+              {/* Search */}
+              <div className='flex - 1 max - w-md'>;
+                <div className='relative'>;
+                  <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 40 w - 5 h - 5' />;
+                  <input;
+                    type='text';
+                    placeholder='Search categories...';
+                    value={search_term}
+                    on_change={e => setSearchTerm (e.target.value)}
+                    className='w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - white / 40 focus:outline - none focus:border - cyan - 400 / 50 focus:bg - white / 15 transition - all'                  />;
+                </div>;
+              </div>;
+              {/* Sort Options */}
+              <div className='flex items - center gap - 4'>;
+                <select;
+                  value={sort_by}
+                  on_change={e => setSortBy (e.target.value)}
+                  className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50 focus:bg - white / 15 transition - all';
+
+                >;
+                  <option value='popularity'>Sort by Popularity</option>;
+                  <option value='name'>Sort by Name</option>;
+                  <option value='featured'>Sort by Featured</option>                </select>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Featured Services */}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Featured Services */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,6 +687,7 @@ import React, { useState } from 'react';
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -578,6 +695,9 @@ import React, { useState } from 'react';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -850,7 +970,11 @@ import React, { useState } from 'react';
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
+<<<<<<< HEAD
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
 <<<<<<< HEAD
@@ -1038,6 +1162,7 @@ import React, { useState } from 'react';
                 {sortedCategories.map((category, index) => (
                   <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -1075,6 +1200,9 @@ import React, { useState } from 'react';
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -1085,6 +1213,7 @@ import React, { useState } from 'react';
                             ⭐ Featured
                           </span>
                         </div>
+<<<<<<< HEAD
                       )}
                       {/* Category Icon */}
                       <div
@@ -1106,6 +1235,10 @@ import React, { useState } from 'react';
                             {category.serviceCount}
                           </div>
                           <div className='text-xs text-white/60'>Services</div>
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1557,6 +1690,7 @@ import React, { useState } from 'react';
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1586,6 +1720,8 @@ import React, { useState } from 'react';
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}

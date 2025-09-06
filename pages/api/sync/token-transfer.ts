@@ -122,6 +122,7 @@ export default async function handler(req, res) {
       .map(async (peer) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
@@ -132,6 +133,29 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
+import { sign_payload  } from '../../../utils / sync / signature';,
+import axios from './axios';,
+import { v4 as uuidv4  } from './uuid';,
+import { nextVersionFor  } from '../../../utils / sync / versioning';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+}
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
   } catch (error) {

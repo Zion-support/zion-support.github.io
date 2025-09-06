@@ -59,7 +59,11 @@ export default function EnhancedFooter() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   FileText,;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {

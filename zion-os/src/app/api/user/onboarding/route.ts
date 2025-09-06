@@ -29,10 +29,14 @@ if (!session?.user?.email) {
   } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
+=======
           id: updated_user.id,
           name: updated_user.name,
           email: updated_user.email,
@@ -105,6 +109,7 @@ export async function POST(request: NextRequest) {;
 export async function POST(request: NextRequest) { try {
     const body = await request.json();
     const { userId, preferences  } = body;
+
     // Mock user update - replace with actual database operation
     const updatedUser = {
       id: userId,
@@ -114,6 +119,7 @@ export async function POST(request: NextRequest) { try {
       onboardingCompleted: true,
       preferences
     };
+
     return NextResponse.json({
       message: "Onboarding completed successfully",
       user: {
@@ -132,4 +138,7 @@ export async function POST(request: NextRequest) { try {
     );
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

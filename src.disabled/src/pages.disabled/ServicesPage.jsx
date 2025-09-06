@@ -45,7 +45,10 @@ import _React,{ useState,useEffect } from 'react'; import { Link } from 'react-r
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import _React,{ useState,useEffect } from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import { ; Brain,; Zap,; Shield,; Rocket,; Cloud,; Globe,; Code,; Database,; Network,; Lock,; Cpu,; BarChart3,; Users,; Target,; ArrowRight,; CheckCircle,; Star,; TrendingUp,; Server,; Search,; Filter,; Grid,; List} from 'lucide-react'; export default function ServicesPage() {; const [activeCategory,setActiveCategory] = useState('all'); const [searchQuery,setSearchQuery] = useState(''); const [viewMode,setViewMode] = useState('grid'); const serviceCategories = [
     ; { "id": 'all',"name": 'All Services',"icon": 'Star' },; { "id": 'ai',"name": 'AI Solutions',"icon": 'Brain' },; { "id": 'quantum',"name": 'Quantum Tech',"icon": 'Zap' },; { "id": 'security',"name": 'Cybersecurity',"icon": 'Shield' },; { "id": 'cloud',"name": 'Cloud & DevOps',"icon": 'Cloud' },; { "id": 'data',"name": 'Data & Analytics',"icon": 'Database' },; { "id": 'iot',"name": 'IoT & Edge',"icon": 'Network' },,
     { "id": 'blockchain',"name": 'Blockchain',"icon": 'Lock' }

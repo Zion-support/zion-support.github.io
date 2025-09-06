@@ -1,7 +1,6 @@
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
@@ -328,6 +327,7 @@ const quickLinks = [
     icon: Target
     description: 'Ultimate service portfolio'
   }
+=======
     name: 'Contact',
     href: '/contact',
     icon: MessageCircle,
@@ -337,7 +337,7 @@ const quickLinks = [
   { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
   { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-{ name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
+  { name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 const service_categories = [;
@@ -494,6 +494,7 @@ const quick_links = [;
     icon: Target,
     description: 'Ultimate service portfolio',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'News & Updates'
     href: '/news'
@@ -503,7 +504,9 @@ const quick_links = [;
   {
 
 ];
+
 const companyInfo = [
+=======
     name: 'Support',
     href: '/support',
     icon: Users,
@@ -532,36 +535,19 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
+=======
       duration: 0.8,
       staggerChildren: 0.1
     }
-<<<<<<< HEAD
   }
-};
-=======
-  },}
-const itemVariants = {
-<<<<<<< HEAD
-  hidden: { opacity: 0, y: 20 }
-  visible: { opacity: 1, y: 0 },}
-export default function UltraFuturisticFooter2032() {
-  return (
-    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
-    }
-<<<<<<< HEAD
-  }
-}
-=======
-  };
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 
 };
+
 const mainNavigationRoutes = [;
   {;
     name: 'Home',;
@@ -618,6 +604,7 @@ const mainNavigationRoutes = [;
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },;
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },;
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+
 const serviceCategories = [;
   {;
     title: '🚀 2032 Revolutionary AI Services',;
@@ -734,6 +721,7 @@ const serviceCategories = [;
     ],;
   },;
 ];
+
 const quickLinks = [;
   {;
     name: '2032 Services',;
@@ -790,6 +778,7 @@ const quickLinks = [;
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },;
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },;
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
+
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -798,6 +787,7 @@ const companyInfo = [;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },;
 ];
+
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -817,6 +807,7 @@ const socialLinks = [;
   },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },];];
+
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
@@ -825,6 +816,7 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github }
 ];
+
 const footerVariants = {;
   hidden: { opacity: 0, y: 50 },;
   visible: {;
@@ -835,10 +827,13 @@ const footerVariants = {;
       staggerChildren: 0 && 0.1,;
     },;
   },};
+
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },};
+
 export default function UltraFuturisticFooter2032() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 <<<<<<< HEAD
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
@@ -864,6 +859,7 @@ const itemVariants = {
 export default function UltraFuturisticFooter2032() {
 =======
 };
+
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
@@ -876,6 +872,7 @@ export default function UltraFuturisticFooter2032() {;
         <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
       </div>;
+
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>;
         <motion&& motion.div
 
@@ -898,6 +895,7 @@ export default function UltraFuturisticFooter2032() {;
                     Zion Tech Group;
                   </h3>;
                   <p className='text-sm text-cyan-300 font-medium'>;
+=======
 ;
 const social_links = [;
   {
@@ -1007,14 +1005,17 @@ function UltraFuturisticFooter2032() {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <motion.div
+=======
                     className='hover:text-cyan-300 transition-colors'>                    {contactInfo && contactInfo.website}      {/* Animated Background Elements */}
       <div className="absolute inset-0">;
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>;
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
       </div>;
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">;
         <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variants={footerVariants}
           initial="hidden"
           whileInView="visible"
@@ -1146,12 +1147,13 @@ export default function UltraFuturisticFooter2032() {
                   <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>;
                 </div>;
               </div>;
+
               <p className="text-slate-300 mb-6 leading-relaxed">;
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. ;
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.;
               </p>;
+
               {/* Contact Information */}
-<<<<<<< HEAD
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
                   <Phone className="w-4 h-4 text-cyan-400" />;
@@ -1225,7 +1227,6 @@ export default function UltraFuturisticFooter2032() {
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Our Revolutionary Services
               </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {serviceCategories.map((category, index) => (
                   <div key={index} className="space-y-4">
@@ -1267,11 +1268,14 @@ export default function UltraFuturisticFooter2032() {
 =======
               </div>;
             </motion && motion.div>;
+
             {/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Quick Access;
               </h3>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Quick Links */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -1285,6 +1289,8 @@ export default function UltraFuturisticFooter2032() {
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        <span>{link.name}</span>                Quick Access
               </h3>
+              
+=======
               <p className='text - slate - 300 mb - 6 leading - relaxed'>;
                 Leading the future of technology with revolutionary AI, quantum;
                 computing, space technology, and autonomous systems. Empowering;
@@ -1421,27 +1427,6 @@ export default function UltraFuturisticFooter2032() {
               <h3 className='text - xl font - semibold text - white mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
                 Quick Access;
               </h3>;
-=======
-              </div>
-            </motion.div>
-<<<<<<< HEAD
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
-
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                Quick Access
-              </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Quick Links */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
@@ -1456,7 +1441,6 @@ export default function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
-<<<<<<< HEAD
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
                 <ul className="space - y-2">;
@@ -1536,27 +1520,6 @@ export default function UltraFuturisticFooter2032() {
 
                 </ul>;
               </div>;
-=======
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link
-                        href={link.href}
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
-                      >
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span>{link.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1680,52 +1643,15 @@ export default function UltraFuturisticFooter2032() {
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-=======
-=======
-
-                    </a>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {/* Newsletter Signup */}
-          <motion.div
-            variants={itemVariants}
-            className='border-t border-cyan-500/30 pt-12'
-          >
-            <div className='text-center'>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Stay Ahead with Future Technology
 
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+=======
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;
@@ -1835,12 +1761,16 @@ export default function UltraFuturisticFooter2032() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
           </motion.div>;
         </motion.div>;
       </div>;

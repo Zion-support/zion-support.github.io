@@ -1123,12 +1123,15 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 export default Innovative2025ServicesShowcase;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default Innovative2025ServicesShowcase,;
 ;
 export default Innovative2025ServicesShowcase,
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;

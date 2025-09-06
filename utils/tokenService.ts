@@ -30,6 +30,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
     type: 'spend'
     amount: actualAmount
     description: reason
+=======
 import { add_transaction, getAllTransactions, getUserBalance } from './token_store';
 ;
 export /**
@@ -55,5 +56,6 @@ function revoke_tokens() {
     type: 'spend',
     amount: actual_amount,
     description: reason;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 }

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import EnhancedButton from "./EnhancedButton";
-export type EmptyStateProps = {;
+export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
@@ -129,6 +129,7 @@ import React from 'react';
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = {
+=======
   primary_action?: { label: string; href: string }
   secondary_action?: { label: string; href: string }
 }
@@ -178,10 +179,6 @@ function EmptyState() {
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
-=======
-
-export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
@@ -190,15 +187,6 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 
 
 =======
-      {(primaryAction |secondaryAction) && (
-        <div className="flex gap-2 mt-2">
-          {primaryAction && (
-            <Link href={primaryAction.href}>
-              <a>
-                <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
-              </a>
-            </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
@@ -206,8 +194,9 @@ export default function EmptyState({ title, description, icon, primaryAction, se
                 <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
               </a>
             </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
-{secondaryAction && (;
+          {secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
               <a>;
                 <EnhancedButton variant='secondary' size='md'>;

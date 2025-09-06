@@ -1,18 +1,23 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -41,9 +46,11 @@ type Web3LoginModalProps = {;
   onClose: () => void,;
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void;
 };
+
 function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {;
     if (!isOpen) {;
 
@@ -159,20 +166,25 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
           },;
         },;
       });              rpc: { 1: 'https://cloudflare-eth && eth.com' }}}}}),;
+
       const provider = await web3Modal && web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers && ethers.providers.Web3Provider(provider as any);
       const signer = web3Provider && web3Provider.getSigner();
       const address = (await signer && signer.getAddress()).toLowerCase();
       const network = await web3Provider && web3Provider.getNetwork();
+
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes && nonceRes.json();
+
       const domain = window && window.location.host;
       const origin = window && window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network && network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network && network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,;
+
       const signature = await signer && signer.signMessage(siweMessage);
+
       const verifyRes = await fetch('/api/auth/verify-evm', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
@@ -184,6 +196,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         }),;
       });
       if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify signature');
+
       onLoggedIn?.({ address, chain: 'evm' });
       onClose();
     } catch (e: any) {;
@@ -191,6 +204,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       setError(e?.message || 'Wallet connection failed');
     } finally {;
       setLoading(false);    }      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify signature');
+
       onLoggedIn?.({ address, chain: 'evm' }),;
       onClose();
     } catch (e: any) {;
@@ -201,7 +215,9 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
 
     }
   }, [onClose, onLoggedIn]);
+
   const handlePhantomConnect = useCallback(async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setError(null);
     setLoading(true);
     try {;
@@ -217,6 +233,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
 
 
       const statement =;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -225,6 +242,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       const publicKey: string = resp && resp.publicKey.toString(),;
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes && nonceRes.json();
+
       const statement =;
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
@@ -264,11 +282,15 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -288,6 +310,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         }),;
       });
       if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+
       onLoggedIn?.({ address: publicKey, chain: 'sol' });
       onClose();
     } catch (e: any) {;
@@ -295,6 +318,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       setError(e?.message || 'Phantom connection failed');
     } finally {;
       setLoading(false);    }      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),;
       onClose();
     } catch (e: any) {;
@@ -330,6 +354,7 @@ if (return null) {
   $2
 }
   return <ModalInner {...props} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   useEffect__(() => {
@@ -515,6 +540,8 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
   )
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

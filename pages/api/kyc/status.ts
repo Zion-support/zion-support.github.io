@@ -105,8 +105,11 @@ function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, "utf8");
     return JSON.parse (raw);
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return {}
@@ -119,6 +122,43 @@ function load (): Record < string, KycProfile> {
   });
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role)})
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { user_id } = req.query as { user_id?: string }
+  if (return res.status (400).json ({ error: "Missing user_id" })) {
+  $2
+}
+  const db = load ();
+  const profile = db[user_id];
+  if (return res.status (404).json ({ error: "Profile not found" })) {
+  $2
+}
+  res.status (200).json ({
+    ok: true,
+    profile,
+    required_documents: getRequiredDocuments (profile.role),
+    optional_documents: getOptionalDocuments (profile.role),
+  });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

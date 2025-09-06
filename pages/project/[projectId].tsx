@@ -201,10 +201,33 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       {loading && <div>Loading…</div>}
       {error && <div className="text-red-600">{error}</div>}
+=======
+  async /**
+ * mark_completed - Function description
+ */
+function mark_completed() {
+    const res = await fetch (`/api / marketplace / projects`, {
+      method: "PATCH",
+      headers: { "Content - Type": "application / json", ...headers },
+      body: JSON.stringify ({ id: project_id, action: "mark_completed" })}),
+    const json = await res.json (),
+    // Check condition
+if ( {) {
+  $2
+}
+      set_project (json.project),
+      setShowFeedback (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }
+  }
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
     } catch (error) {
     console.error("Error:", error);
@@ -449,8 +472,8 @@ export default function ProjectPage(req, res) {
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.documents?.length ? (
-                project.documents.map((d: any) => (
-                  <li key={d.id}>
+                project.documents.map ((d: any) => (
+                  <li key={d.id}>;
                     {d.url ? (
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
                     ) : (
@@ -523,6 +546,7 @@ export default function ProjectPage(req, res) {
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
             )}
           </div>
         </div>
@@ -538,6 +562,8 @@ export default function ProjectPage(req, res) {
   );
 };
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 }

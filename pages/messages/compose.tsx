@@ -28,12 +28,40 @@ export default function ComposePage(req, res) {
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
+<<<<<<< HEAD
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
+=======
+
+
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+
+export default function ComposePage() {;
+  const router = useRouter();
+  const {;
+    type,;
+    recipientId,;
+    recipientName,;
+    jobId,;
+    jobTitle,;
+    talentId,;
+    talentName,;
+  } = router && router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+  const [message, setMessage] = React && React.useState('');
+  const [linkUrl, setLinkUrl] = React && React.useState('');
+  const [file, setFile] = React && React.useState<File | null>(null);
+  const [sending, setSending] = React && React.useState(false);
+
+  React && React.useEffect(() => {;
+    if (!loading && !user) router && router.replace('/auth');  }, [loading, user, router]);
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   if (!user) return null;
 
   const headerTitle =;

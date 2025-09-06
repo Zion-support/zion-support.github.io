@@ -346,7 +346,13 @@ export default function AdvancedServicesShowcase2025(req, res) {
     const categoryData = categories.find(cat => cat.id === category);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return categoryData?.icon || '🚀'
+<<<<<<< HEAD
   },
+=======
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -848,6 +854,15 @@ export default function AdvancedServicesShowcase2025(req, res) {
 
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
+<<<<<<< HEAD
+=======
+=======
+                  variants={item_variants}
+                  className={view_mode === 'grid';
+                    ? "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
+                    : "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 hover:shadow - 2xl";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   }
                 >
                   {/* Service Header */}
@@ -966,11 +981,53 @@ export default function AdvancedServicesShowcase2025(req, res) {
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="text-white/80 text-sm">{feature}</span>
                           </div>
+<<<<<<< HEAD
                         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                        ))}
+=======
+=======
+                        <span className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs font - medium px - 3 py - 1 rounded - full">;
+                          Popular;
+                        </span>)}
+                    </div>;
+                    {/* Description */}
+                    <p className="text - white / 80 mb - 4 leading - relaxed">{service.description}</p>;
+                    {/* Price and Details */}
+                    <div className="flex items - center justify - between mb - 4">;
+                      <div className="flex items - center gap - 4">;
+                        <div className="flex items - center gap - 2">;
+                          <DollarSign className="w - 4 h - 4 text - green - 400" />;
+                          <span className="text - 2xl font - bold text - green - 400">{service.price}</span>;
+                          <span className="text - white / 60">{service.period}</span>;
+                        </div>;
+                        <div className="flex items - center gap - 2">;
+                          <UsersIcon className="w - 4 h - 4 text - blue - 400" />;
+                          <span className="text - white / 70">{service.customers}+ customers</span>;
+                        </div>;
+                      </div>;
+                      <div className="flex items - center gap - 1">;
+                        <StarIcon className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                        <span className="text - white font - medium">{service.rating}</span>;
+                        <span className="text - white / 60">({service.reviews})</span>;
+                      </div>;
+                    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                    {/* Features */}
+                    <div className="mb - 6">;
+                      <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
+                      <div className="grid grid - cols - 1 gap - 2">;
+                        {service.features.slice (0, 3).map ((feature, idx) => (
+                          <div key={idx} className="flex items - center gap - 2">;
+                            <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
+                            <span className="text - white / 80 text - sm">{feature}</span>;
+                          </div>))}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         {service.features.length > 3 && (
                           <div className="text-white/60 text-sm">
                             +{service.features.length - 3} more features
@@ -1210,6 +1267,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1245,6 +1303,43 @@ export default function AdvancedServicesShowcase2025(req, res) {
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
               </a>
+=======
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+=======
+=======
+              className="text - center py - 20";
+            >;
+              <div className="text - 6xl mb - 4">🔍</div>;
+              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+              <p className="text - white / 70 mb - 6">Try adjusting your search criteria or filters</p>;
+              <button;
+                on_click={() => {
+                  setSearchTerm (''),
+                  setSelectedCategory ('all'),
+                  setPriceRange ([0, 10000]);
+                }}
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300";
+              >;
+                Clear Filters;
+              </button>;
+            </motion.div>)}
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {/* CTA Section */}
+      <section className="px - 6 py - 20">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               </Link>
 <<<<<<< HEAD
 =======
@@ -1302,12 +1397,16 @@ export default function AdvancedServicesShowcase2025(req, res) {
       </section>;
       <EnhancedFooter />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </div>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

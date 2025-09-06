@@ -122,7 +122,10 @@ export default function handler(req, res) {
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -140,10 +143,19 @@ export default function handler(req, res) {
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  res.status (200).json ({
+    ok: true,
+    connection: updated.connections.find ((c) => c.provider_id === provider_id),
+  });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 <<<<<<< HEAD
 =======

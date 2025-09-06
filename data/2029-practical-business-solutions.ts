@@ -52,9 +52,14 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Easy integration",
       "Affordable pricing"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     ];
     link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029"
     realImplementation: true
+
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -130,6 +135,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 
 =======
 ;
+<<<<<<< HEAD
 =======
 =======
 export interface PracticalBusinessSolution2029 {;
@@ -239,3 +245,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

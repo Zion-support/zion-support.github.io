@@ -667,8 +667,29 @@ function AdvancedITInfrastructureServices() {
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+              Why Choose Our IT Infrastructure Services?;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Our infrastructure services combine cutting-edge technology with;
+              intelligent automation to deliver unprecedented performance and;
+              reliability;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -930,6 +951,7 @@ function AdvancedITInfrastructureServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -938,6 +960,9 @@ function AdvancedITInfrastructureServices() {
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className='relative group'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -1092,6 +1117,7 @@ function AdvancedITInfrastructureServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1114,6 +1140,8 @@ function AdvancedITInfrastructureServices() {
 }
             className="text-center mb-16"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1121,7 +1149,10 @@ function AdvancedITInfrastructureServices() {
             viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1130,13 +1161,37 @@ function AdvancedITInfrastructureServices() {
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+              What Our Clients Say;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Real feedback from organizations that have transformed their;
+              infrastructure with our advanced services;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1172,6 +1227,10 @@ function AdvancedITInfrastructureServices() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1185,6 +1244,7 @@ function AdvancedITInfrastructureServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1247,6 +1307,12 @@ function AdvancedITInfrastructureServices() {
   }
 }
 =======
+=======
+
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
       {/* CTA Section */}
@@ -1272,7 +1338,10 @@ function AdvancedITInfrastructureServices() {
               <Link
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?

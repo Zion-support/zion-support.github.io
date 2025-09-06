@@ -48,14 +48,6 @@ return res.status(405).end();
 
       return res && res.status(400).json({ error: "Invalid id" });
 
-}
-
-  return res.status(405).end();
-  export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { id } = req.query;
-
-    if (typeof id !== "string")
-      return res && res.status(400).json({ error: "Invalid id" });
     if (req && req.method === "PUT") {
       if (!requireAdmin(req, res)) return;
       const posts = readPosts();
@@ -133,10 +125,6 @@ if ( {) {
     return res.status (200).json (updated);
   }
   return res.status (405).end ();
-  }
-
-  return res.status(405).end()
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

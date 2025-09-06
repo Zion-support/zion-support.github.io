@@ -25,4 +25,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   it('displays correct content', () => {;
   it('handles user interactions', () => {;
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-2480
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

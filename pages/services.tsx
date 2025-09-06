@@ -3009,7 +3009,10 @@ export default function Services(): any (): React && React.JSX.Element {;
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>;
       <divstyle={{ 
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         paddingBottom: 12, borderBottom: `2px solid ${color}20`
       }}>;
         <divstyle={{ 

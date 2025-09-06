@@ -301,6 +301,7 @@ const serviceCategories = [
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
+=======
 import {
   Phone,
   Mail,
@@ -547,46 +548,10 @@ const service_categories = [;
 ]
 
 const companyLinks = [
+=======
 ;
 const company_links = [;
-
-const _serviceCategories = [
-  {_title: 'AI & Automation', _services: [
-      { name: 'AI Autonomous Business Processor', _href: '/ai-autonomous-business-processor'},
-      {_name: 'AI Predictive Enterprise Analytics', _href: '/ai-predictive-enterprise-analytics'},
-      {_name: 'AI Autonomous Customer Success', _href: '/ai-autonomous-customer-success'},
-      {_name: 'AI Autonomous Marketing Orchestrator', _href: '/ai-autonomous-marketing-orchestrator'},
-      {_name: 'AI Autonomous Sales Intelligence', _href: '/ai-autonomous-sales-intelligence'}
-    ]
-  },
-  {_title: 'Cybersecurity & Quantum', _services: [
-      { name: 'Quantum Encryption Platform', _href: '/quantum-encryption-platform'},
-      {_name: 'AI Autonomous Threat Hunter', _href: '/ai-autonomous-threat-hunter'},
-      {_name: 'Quantum Zero Trust Security', _href: '/quantum-zero-trust-security'},
-      {_name: 'AI Autonomous Vulnerability Scanner', _href: '/ai-autonomous-vulnerability-scanner'},
-      {_name: 'Quantum Secure Communication', _href: '/quantum-secure-communication'}
-    ]
-  },
-  {_title: 'Fintech & Blockchain', _services: [
-      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
-      {_name: 'AI Autonomous Wealth Management', _href: '/ai-autonomous-wealth-management'},
-      {_name: 'Quantum Blockchain Finance', _href: '/quantum-blockchain-finance'},
-      {_name: 'AI Autonomous Insurance Platform', _href: '/ai-autonomous-insurance-platform'},
-      {_name: 'Quantum Payment Processing', _href: '/quantum-payment-processing'}
-    ]
-  },
-  {_title: 'Healthcare & Biotech', _services: [
-      { name: 'AI Autonomous Medical Diagnostics', _href: '/ai-autonomous-medical-diagnostics'},
-      {_name: 'Quantum Drug Discovery Platform', _href: '/quantum-drug-discovery-platform'},
-      {_name: 'AI Autonomous Patient Care', _href: '/ai-autonomous-patient-care'},
-      {_name: 'Quantum Genomic Analysis', _href: '/quantum-genomic-analysis'},
-      {_name: 'AI Autonomous Clinical Trials', _href: '/ai-autonomous-clinical-trials'}
-    ]
-  }
-],
-
-const companyLinks = [
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
   { name: 'Careers', href: '/careers' },
@@ -598,10 +563,12 @@ const companyLinks = [
 
 
 const resourceLinks = [
+=======
   { name: 'Locations', href: '/locations' }, ];  { name: 'Locations', href: '/locations' }
 ];
 ;
 const resource_links = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api - documentation' },
   { name: 'Case Studies', href: '/case - studies' },
@@ -613,11 +580,12 @@ const resource_links = [;
 
 
 const socialLinks = [
-<<<<<<< HEAD
+=======
   { name: 'Developer Resources', href: '/developer - resources' }, ];  { name: 'Developer Resources', href: '/developer - resources' }
 ];
 ;
 const social_links = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Facebook', href: '#', icon: Facebook },
   { name: 'Twitter', href: '#', icon: Twitter },
   { name: 'LinkedIn', href: '#', icon: Linkedin },
@@ -640,6 +608,7 @@ export default function UltraFuturisticFooter2026() {;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]'></div>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]'></div>;
       </div>;
+
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
 
         {/* Main Footer Content */}
@@ -652,7 +621,9 @@ export default function UltraFuturisticFooter2026() {;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
       </div>;
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
@@ -692,6 +663,7 @@ export default function UltraFuturisticFooter2026() {
   return (
 
             <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
@@ -867,14 +839,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>;
           </motion && motion.div>;
-=======
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 =======
@@ -909,14 +873,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>;
           </motion && motion.div>;
-=======
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 =======
@@ -1024,6 +980,7 @@ export default function UltraFuturisticFooter2026() {
               Be the first to know about breakthrough solutions and industry trends.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+=======
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >;
           <div className="text-center">;
@@ -1100,41 +1057,7 @@ export default function UltraFuturisticFooter2026() {
           <div className='flex flex-col md:flex-row justify-between items-center'>;
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
-=======
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Bottom Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className='border-t border-gray-800 pt-8'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        >
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-            <div className='text-gray-400 text-sm mb-4 md:mb-0'>
-              © 2026 Zion Tech Group. All rights reserved.
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
@@ -1226,7 +1149,10 @@ export default function UltraFuturisticFooter2026() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           className='border - t border - gray - 800 pt - 8';
         >;
           <div className='flex flex - col md:flex - row justify - between items - center'>;
@@ -1278,16 +1204,6 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>;
       </div>;
     </footer>);
-=======
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </footer>;
-);
 }
 }
     </footer>

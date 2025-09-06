@@ -118,6 +118,7 @@ export default function QuantumCybersecurityServices() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,6 +149,21 @@ export default function QuantumCybersecurityServices() {
                 Get Started
               </Link>
             </motion.div>
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>;
+              Unbreakable security powered by quantum computing and advanced AI;
+              algorithms. Protect your business from tomorrow's threats today.            </motion && motion.p>;
+
+            <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Key Benefits */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -206,6 +222,7 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -213,6 +230,10 @@ export default function QuantumCybersecurityServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Services Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -243,6 +264,7 @@ export default function QuantumCybersecurityServices() {
                 Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -250,6 +272,9 @@ export default function QuantumCybersecurityServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {quantumCybersecurityServices.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -346,6 +371,7 @@ export default function QuantumCybersecurityServices() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Why Quantum Security Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -369,6 +395,134 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Why Quantum Security Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>;
+          <div className='max-w-7xl mx-auto'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Why Quantum Security?;
+                </span>;
+              </h2>;
+            </motion && motion.div>;
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion&& motion.div
+
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                  Why Quantum Security?
+                </span>
+              </h2>
+            </motion.div>
+<<<<<<< HEAD
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+
+
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
+                <p className="text-gray-300 mb-4">
+                  Quantum computers will eventually break current encryption standards, making traditional security obsolete.
+                </p>
+                <ul className="text-gray-400 space-y-2">
+                  <li>• RSA encryption will be vulnerable</li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  <li>• Current SSL/TLS certificates at risk</li>
+                  <li>• Blockchain security compromised</li>
+                  <li>• Financial systems exposed</li>
+                </ul>
+              </motion.div>
+              <motion.div
+
+
+                className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'>;
+                <h3 className='text-2xl font-bold text-white mb-4'>;
+                  The Quantum Threat;
+                </h3>;
+                <p className='text-gray-300 mb-4'>;
+                  Quantum computers will eventually break current encryption;
+                  standards, making traditional security obsolete.;
+                </p>;
+                <ul className='text-gray-400 space-y-2'>                  <li>• RSA encryption will be vulnerable</li>;
+                  <li>• Current SSL/TLS certificates at risk</li>;
+                  <li>• Blockchain security compromised</li>;
+                  <li>• Financial systems exposed</li>;
+                </ul>;
+              </motion && motion.div>;
+
+              <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+                viewport={{ once: true }}
+
+
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
+                <p className="text-gray-300 mb-4">
+                  We provide quantum-resistant security that protects against both current and future threats.
+                </p>
+                <ul className="text-gray-400 space-y-2">
+                  <li>• Post-quantum cryptography</li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  <li>• Quantum key distribution</li>
+                  <li>• AI-enhanced threat detection</li>
+                  <li>• Future-proof security architecture</li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+
+                className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'>;
+                <h3 className='text-2xl font-bold text-white mb-4'>;
+                  Our Quantum Solution;
+                </h3>;
+                <p className='text-gray-300 mb-4'>;
+                  We provide quantum-resistant security that protects against;
+                  both current and future threats.;
+                </p>;
+                <ul className='text-gray-400 space-y-2'>                  <li>• Post-quantum cryptography</li>;
+                  <li>• Quantum key distribution</li>;
+                  <li>• AI-enhanced threat detection</li>;
+                  <li>• Future-proof security architecture</li>;
+                </ul>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Security Features Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
+          <div className='max-w-7xl mx-auto'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Advanced Security Features;
+                </span>;
+              </h2>;
+            </motion && motion.div>;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion&& motion.div
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className="text-center mb-16"
 =======
 
@@ -525,6 +679,7 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -573,6 +728,9 @@ export default function QuantumCybersecurityServices() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
                 className='text-center'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
 
@@ -637,11 +795,17 @@ export default function QuantumCybersecurityServices() {
 }
                 className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               >
                 <div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
@@ -692,6 +856,7 @@ export default function QuantumCybersecurityServices() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
+<<<<<<< HEAD
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Secure Your Future Today
@@ -706,6 +871,28 @@ export default function QuantumCybersecurityServices() {
                   <h3 className='text-xl font-semibold text-white mb-2'>
                     Phone
                   </h3>
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>;
+                  Secure Your Future Today;
+                </span>;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Don't wait for quantum computers to break your security. Contact;
+                us now to implement quantum-resistant protection.;
+              </p>;
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
+                <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>;
+                  <div className='text-3xl mb-4'>📱</div>;
+                  <h3 className='text-xl font-semibold text-white mb-2'>;
+                    Phone;
+                  </h3>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   <a
                     href='tel:+13024640950'
 <<<<<<< HEAD

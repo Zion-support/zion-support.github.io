@@ -17,6 +17,7 @@ import Link from 'next / link';
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
+<<<<<<< HEAD
       category: 'System Performance'
       metrics: [
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' }
@@ -66,11 +67,18 @@ const PerformancePage: React.FC = () => {
       summary: 'Stress testing results under high traffic conditions'
       status: 'completed'
     }
+=======
+
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       category: 'System Performance',
       metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
         { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%' }
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
@@ -82,6 +90,10 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       ]
 
     },
@@ -93,6 +105,7 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%' }
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
     console.error("Error:", error);
@@ -103,6 +116,10 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       ]
 
     },
@@ -113,6 +130,7 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
       ]
@@ -135,6 +153,10 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const recentReports = [
 
     {
@@ -159,6 +181,7 @@ const PerformancePage: React.FC = () => {
 
       status: 'completed'
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   ];
 
@@ -169,13 +192,18 @@ const PerformancePage: React.FC = () => {
 }
   ];
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
   ];
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-400';
@@ -184,6 +212,7 @@ const PerformancePage: React.FC = () => {
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   const getTrendColor = (trend: string) => {
@@ -192,12 +221,17 @@ const PerformancePage: React.FC = () => {
   };
 
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   };
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -208,12 +242,18 @@ const PerformancePage: React.FC = () => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -222,18 +262,29 @@ const PerformancePage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
         {/* Header */}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -245,18 +296,29 @@ const PerformancePage: React.FC = () => {
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
+<<<<<<< HEAD
         {/* Performance Overview */}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Performance Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -274,6 +336,7 @@ const PerformancePage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Performance Metrics */}
         {/* Performance Metrics */  } catch (error) {
     console.error("Error:", error);
@@ -297,6 +360,66 @@ const PerformancePage: React.FC = () => {
                       <span className="text-gray-300">{metric.name}</span>
                       <div className="flex items-center space-x-3">
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
+=======
+
+;
+  const getTrendColor = (trend: string) =>: any {
+    return trend.starts_with ('+') ? 'text - green - 400' : 'text - red - 400';
+  }
+;
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900 text - white">;
+      <Head>;
+        <title > Performance Reports - bolt.new.zion.app</title>;
+        <meta name="description" content="Comprehensive performance metrics and system analytics" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+      </Head>;
+      <div className="container mx - auto px - 4 py - 8">;
+        {/* Header */}
+        <div className="mb - 8">;
+          <Link href="/" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
+            ← Back to Home;
+          </Link>;
+          <h1 className="text - 4xl font - bold mt - 4 mb - 2 bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;
+            Performance Reports;
+          </h1>;
+          <p className="text - gray - 300 text - lg">;
+            Real - time system performance metrics and analytics dashboard;
+          </p>;
+        </div>;
+        {/* Performance Overview */}
+        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 8">;
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Overall Score</h3>;
+            <div className="text - 4xl font - bold text - green - 400">96.8</div>;
+            <p className="text - gray - 300 text - sm mt - 2">Performance Index</p>;
+          </div>;
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Status</h3>;
+            <div className="text - 2xl font - bold text - green - 400">Healthy</div>;
+            <p className="text - gray - 300 text - sm mt - 2">All systems operational</p>;
+          </div>;
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Last Updated</h3>;
+            <div className="text - 2xl font - bold text - blue - 400">2 min ago</div>;
+            <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
+          </div>;
+        </div>;
+
+        {/* Performance Metrics */}
+        <div className="mb - 8">;
+          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+            {performance_metrics.map ((section, section_index) => (
+              <div key={section_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
+                <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">{section.category}</h3>;
+                <div className="space - y-4">;
+                  {section.metrics.map ((metric, metric_index) => (
+                    <div key={metric_index} className="flex justify - between items - center">;
+                      <span className="text - gray - 300">{metric.name}</span>;
+                      <div className="flex items - center space - x-3">;
+                        <span className={`font - semibold ${getStatusColor (metric.status)}`}>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                           {metric.value}
                         </span>
                         <span className={`text-sm ${getTrendColor(metric.trend)}`}>

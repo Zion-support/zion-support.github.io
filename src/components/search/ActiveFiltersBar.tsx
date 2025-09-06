@@ -390,7 +390,6 @@ if ( {) {
 
 
 },
-
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;

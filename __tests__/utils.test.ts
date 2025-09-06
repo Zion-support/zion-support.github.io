@@ -9,7 +9,13 @@ describe('Utils', () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export {};
 ursor/automate-test-improve-and-merge-code-2480

@@ -1,12 +1,12 @@
 
 import type { Config } from 'tailwindcss';
 const config: Config = {
-<<<<<<< HEAD
   content: [;
 <<<<<<< HEAD
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   content: [;
@@ -35,6 +35,8 @@ const config: Config = {
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   theme: {
     extend: {
       colors: {

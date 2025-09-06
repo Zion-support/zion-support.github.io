@@ -52,11 +52,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'max-age=31536000; includeSubDomains; preload'
   );
   
+<<<<<<< HEAD
   // Permissions Policy
+=======
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  // CSP header
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   response.headers.set(
     'Permissions-Policy',
     'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   );
+<<<<<<< HEAD
   
   // Cache Control for static assets
   if (request.nextUrl.pathname.startsWith('/_next/static/')) {
@@ -82,6 +93,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   // Remove server information
   response.headers.delete('X-Powered-By');
   response.headers.delete('Server');
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   
   return response;
 }

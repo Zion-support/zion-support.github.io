@@ -7,7 +7,13 @@ export default function ReportsIndex() {
 
 export default function ReportsIndex() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function ReportsIndex() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="container mx-auto px-4 py-12 max-w-7xl">

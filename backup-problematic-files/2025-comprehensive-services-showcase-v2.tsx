@@ -726,6 +726,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className='text-center'>
@@ -738,6 +739,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 Email Us
               </h3>
               <p className='text-cyan-400 text-lg'>{contactInfo.email}</p>
+=======
+            transition={{ duration: 0.6 }}
+          >;
+            Ready to Transform Your Business?;
+          </motion.h2>;
+          <motion.div;
+            className='grid md:grid - cols - 3 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}          <motion.div;
+            className="grid md:grid - cols - 3 gap - 8";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            viewport={{ once: true }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 <<<<<<< HEAD
@@ -781,6 +795,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+<<<<<<< HEAD
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
           </motion.div>
         </div>
@@ -790,6 +805,120 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-7xl mx-auto'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
+=======
+
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+            <div className='text-center'>;
+              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.mobile}</p>;
+            <div className='text-center'>;
+              <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>;
+                Email Us;
+              </h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.email}</p>;
+            </div>;
+            <div className='text-center'>;
+              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>;
+                Visit Us;
+              </h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.address}</p>            </div>            <div className="text-center">;
+              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>;
+              <p className="text-cyan-400 text-lg">{contactInfo && contactInfo.address}</p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      {/* Services by Category */}
+      <section id='services' className='py-20 px-4'>;
+        <div className='max-w-7xl mx-auto'>;
+          <motion&& motion.h2
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.6 }}>;
+            Our Comprehensive Service Portfolio;
+          </motion && motion.h2>;
+          <motion&& motion.div
+
+            className='space-y-20'
+            variants={staggerContainer}
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}>;
+            {serviceCategories && serviceCategories.map(category => (;
+              <motion && motion.div key={category && category.id} variants={fadeInUp}>;
+                <div className='text-center mb-12'>;
+                  <div
+
+          >;
+            <div className='text - center'>;
+              <Phone className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>Call Us</h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.mobile}</p>;
+            <div className='text - center'>;
+              <Mail className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>;
+                Email Us;
+              </h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.email}</p>;
+            </div>;
+            <div className='text - center'>;
+              <MapPin className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>;
+                Visit Us;
+              </h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text - center">;
+              <MapPin className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
+              <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;
+              <p className="text - cyan - 400 text - lg">{contact_info.address}</p>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Services by Category */}
+      <section id='services' className='py - 20 px - 4'>;
+        <div className='max - w-7xl mx - auto'>;
+          <motion.h2;
+            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="py - 20 px - 4">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.h2;
+            className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >;
+            Our Comprehensive Service Portfolio;
+          </motion.h2>;
+          <motion.div;
+            className='space - y-20';
+            variants={stagger_container}
+            initial='initial';
+            whileInView='animate';
+            viewport={{ once: true }}
+          >;
+            {service_categories.map (category => (
+              <motion.div key={category.id} variants={fadeInUp}>;
+                <div className='text - center mb - 12'>;
+                  <div;
+                    className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}
+                  >;
+
+                    {category.icon}
+                  </div>;
+                  <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
+                    {category.name}
+                  </h3>;
+                  <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+                    {category.description}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -1184,7 +1313,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             transition={{ duration: 0.6, delay: 0.2 }}
+=======
+            transition={{ duration: 0.6 }}
+          >;
+            Market Impact & Growth;
+          </motion.h2>;
+          <motion.div;
+            className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}
+          <motion.div;
+            className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            viewport={{ once: true }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 <<<<<<< HEAD

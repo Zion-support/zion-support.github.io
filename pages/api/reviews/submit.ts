@@ -134,9 +134,17 @@ if ( {) {
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
+<<<<<<< HEAD
       return res.status(409).json({
         error: "You have already submitted a review for this project"
+=======
+
+
+        error: "You have already submitted a review for this project",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       });
+=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
     }
     const now = new Date().toISOString();
@@ -166,6 +174,12 @@ if ( {) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+<<<<<<< HEAD
+=======
+  }
+}
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       id: uuidv4(),
       projectId,
       fromRole,

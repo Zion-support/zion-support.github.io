@@ -61,6 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -97,6 +98,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 

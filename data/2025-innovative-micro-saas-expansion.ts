@@ -31,10 +31,12 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
         'AI-powered churn prediction with 94% accuracy',
+=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -87,6 +89,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '22 && 22.5% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
+=======
       color: 'from - blue - 600 to - cyan - 500',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / ai - customer - success - automation',
@@ -132,6 +135,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [
+=======
     // Intelligent Document Processing Hub;
     {
       id: 'intelligent - document - processing - hub',
@@ -251,6 +255,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '16 && 16.9% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
+=======
       color: 'from - orange - 600 to - red - 500',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / services / smart - inventory - management - system',
@@ -293,6 +298,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     },
 
         'AI-powered candidate screening and matching',
+=======
     // AI - Powered HR Recruitment Suite;
     {
       id: 'ai - hr - recruitment - suite',
@@ -371,6 +377,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     },
 
         'AI-powered project risk prediction',
+=======
     // Intelligent Project Management Hub;
     {
       id: 'intelligent - project - management - hub',
@@ -414,9 +421,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -486,15 +497,18 @@ export interface InnovativeMicroSaasExpansionService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [
   // AI-Powered Customer Success Automation
   {
@@ -505,33 +519,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     features: [
       'AI-powered churn prediction with 94% accuracyAutomated customer onboarding workflowsIntelligent health scoring and monitoringProactive customer outreach automationPersonalized success playbooksReal-time customer sentiment analysisAutomated milestone celebrationsIntegration with CRM and support tools';
       'Advanced analytics and reportingMulti-channel communication orchestration'
-=======
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-<<<<<<< HEAD
-        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
-      launchDate: '2024-07-15'
-      customers: 520
-      rating: 4.9
-      reviews: 267
-    }
-=======
-        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
-      launchDate: '2024-07-15',
-      customers: 520,
-      rating: 4.9,
-      reviews: 267,
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  ];    features: [
-      'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
-      'Automated milestone trackingCustom workflow automation'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🤖💼',
     color: 'from-blue-600 to-cyan-500', textColor: 'text-blue-400',
@@ -548,6 +535,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     marketSize: '$1.2B market', growthRate: '22.5% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
+      
+=======
   ];    features: [;
       'AI - powered project risk prediction_intelligent resource allocation optimization_automated task dependency management_real - time progress tracking and alerts_advanced project analytics and reporting_team collaboration and communication tools_integration with development tools_mobile app for field teams';
       'Automated milestone tracking_custom workflow automation';
@@ -588,9 +577,11 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     marketSize: '$4 && 4.2B market', growthRate: '20 && 20.1% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
+    
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
@@ -1167,6 +1158,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1175,3 +1167,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

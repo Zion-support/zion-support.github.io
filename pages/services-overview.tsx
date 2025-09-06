@@ -33,17 +33,23 @@ import {
   Award,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Globe,;
 } from "lucide-react";
 import Layout from "../components/Layout";
 const serviceCategories = [
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Globe,
 } from './lucide-react';
 import Layout from "../components / Layout";
 ;
 const service_categories = [;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   {
     title: "AI Services",
     description:;
@@ -130,6 +136,7 @@ const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
   { number: "50+", label: "Countries Served" },
+=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -199,6 +206,13 @@ origin/automation-improvements-final
   { number: "50+", label: "Countries Served" }
 ];
 const benefits = [
+<<<<<<< HEAD
+=======
+=======
+;
+const benefits = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   {
     title: "Expert Team",
     description: "Experienced professionals with deep industry knowledge",
@@ -249,8 +263,10 @@ origin/automation-improvements-final
     description: "Track record of successful implementations"
     icon: Award
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 export default function ServicesOverviewPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <Layout
@@ -270,6 +286,8 @@ export default function ServicesOverviewPage() {
           
 origin/automation-improvements-final
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 
 class ErrorBoundary extends React.Component {
@@ -696,7 +714,47 @@ origin/automation-improvements-final
                 all your business needs.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {serviceCategories && serviceCategories.map((category, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
+                  <div
+                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+                    <category && category.icon className="w-16 h-16 text-white" />;
+                  </div>;
+
+                  <div className="p-6">;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+                      {category && category.title}
+                    </h3>;
+
+                    <p className="text-gray-600 mb-4 leading-relaxed">;
+                      {category && category.description}
+                    </p>;
+
+                    <div className="space-y-2 mb-6">;
+                      <h4 className="font-semibold text-gray-900 text-sm">;
+                        Key Services:;
+                      </h4>;
+                      <ul className="space-y-1">;
+                        {category && category.services.map((service, idx) => (;
+                          <li
+                            key={idx}
+                            className="flex items-center text-sm text-gray-600">;
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                            {service}
+                          </li>;
+                        ))}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
                     
 <<<<<<< HEAD
@@ -744,8 +802,13 @@ origin/automation-improvements-final
                 We deliver exceptional results through innovation, expertise,
                 We deliver exceptional results through innovation, expertise
                 and unwavering commitment to your success.
+=======
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

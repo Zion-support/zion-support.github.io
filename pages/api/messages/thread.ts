@@ -32,7 +32,7 @@ import {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../utils/messaging/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method === "GET") {

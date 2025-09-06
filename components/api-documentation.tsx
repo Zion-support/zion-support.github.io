@@ -109,6 +109,7 @@ import {
   Brain,;
 <<<<<<< HEAD
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function APIDocumentation() {
 	return (
 =======
@@ -120,6 +121,8 @@ export default function APIDocumentation() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 export default function APIDocumentation() {
 	return (

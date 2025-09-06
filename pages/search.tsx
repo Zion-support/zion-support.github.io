@@ -342,7 +342,10 @@ const filters = [;
 
 export default function SearchPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -733,6 +736,7 @@ export default function SearchPage(req, res) {
 
               {/* Search Bar */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="max-w-2xl mx-auto">
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
@@ -785,6 +789,8 @@ export default function SearchPage(req, res) {
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
@@ -1275,6 +1281,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/automation-improvements-final
 ))}
                 </div>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </motion.div>
             )}
           </div>
@@ -1662,6 +1669,10 @@ origin/automation-improvements-final
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                       </Link>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -1670,8 +1681,315 @@ origin/automation-improvements-final
     category: 'all',
     status: 'all',
     priceRange: 'all',
+<<<<<<< HEAD
     technology: 'all',
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    technology: 'all'
+  });
+  const [sortBy, setSortBy] = useState('relevance');
+  const [showFilters, setShowFilters] = useState(false);
+
+  // Mock data for search
+  const allServices = [
+    {
+      id: 'ai-business-intelligence',
+      title: 'AI Business Intelligence',
+      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
+      category: 'AI & Machine Learning',
+      status: 'active',
+      price: '$499/month',
+      technology: 'AI/ML',
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
+      link: '/ai-business-intelligence',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      relevance: 95
+    };
+    {
+      id: 'quantum-cybersecurity',
+      title: 'Quantum Cybersecurity',
+      description: 'Future-proof security with quantum-resistant encryption and AI threat detection',
+      category: 'Cybersecurity',
+      status: 'active',
+      price: '$799/month',
+      technology: 'Quantum',
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
+      link: '/quantum-cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      relevance: 92
+    };
+    {
+      id: 'ai-customer-experience',
+      title: 'AI Customer Experience',
+      description: 'Deliver personalized customer experiences at scale with AI-driven insights',
+      category: 'AI & Machine Learning',
+      status: 'active',
+      price: '$399/month',
+      technology: 'AI/ML',
+      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
+      link: '/ai-customer-experience',
+      icon: Users,
+      color: 'from-green-500 to-teal-500',
+      relevance: 88
+    };
+    {
+      id: 'edge-computing-orchestration',
+      title: 'Edge Computing Orchestration',
+      description: 'Deploy and manage applications at the edge with intelligent orchestration',
+      category: 'Edge Computing',
+      status: 'active',
+      price: '$349/month',
+      technology: 'Edge',
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
+      link: '/edge-computing-orchestration',
+      icon: Network,
+      color: 'from-purple-500 to-pink-500',
+      relevance: 85
+    };
+    {
+      id: 'space-technology',
+      title: 'Space Technology Innovation',
+      description: 'Accelerate space exploration with cutting-edge technology solutions',
+      category: 'Space Technology',
+      status: 'beta',
+      price: '$2,499/month',
+    technology: 'Space',
+      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
+      link: '/space-technology',
+      icon: Rocket,
+      color: 'from-violet-500 to-purple-500',
+      relevance: 82
+    };
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Development',
+      description: 'Build the future of human-computer interaction with neural interfaces',
+      category: 'Biotechnology',
+      status: 'beta',
+      price: '$899/month',
+      technology: 'Biotech',
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
+      link: '/neural-interface',
+      icon: Brain,
+      color: 'from-pink-500 to-rose-500',
+      relevance: 78
+    };
+    {
+      id: 'quantum-neural-networks',
+      title: 'Quantum Neural Networks',
+      description: 'Quantum-powered AI with advanced consciousness capabilities',
+      category: 'Quantum Computing',
+      status: 'beta',
+      price: '$1,299/month',
+    technology: 'Quantum',
+      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
+      link: '/quantum-neural-networks',
+      icon: Atom,
+      color: 'from-blue-500 to-cyan-500',
+      relevance: 75
+    };
+    {
+      id: 'autonomous-devops',
+      title: 'Autonomous DevOps',
+      description: 'AI-powered DevOps optimization and automation platform',
+      category: 'Cloud & DevOps',
+      status: 'active',
+      price: '$599/month',
+      technology: 'DevOps',
+      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
+      link: '/autonomous-devops',
+      icon: Cpu,
+      color: 'from-emerald-500 to-teal-500',
+      relevance: 72
+    };
+    {
+      id: 'ai-autonomous-business',
+      title: 'AI Autonomous Business Manager',
+      description: 'Fully autonomous business operations powered by advanced AI',
+      category: 'AI & Machine Learning',
+      status: 'beta',
+      price: '$1,999/month',
+    technology: 'AI/ML',
+      features: ['Business automationDecision makingResource allocationPerformance optimization'],
+      link: '/ai-autonomous-business',
+      icon: Target,
+      color: 'from-indigo-500 to-purple-500',
+      relevance: 70
+    };
+    {
+      id: 'quantum-financial-trading',
+      title: 'Quantum Financial Trading',
+      description: 'Quantum computing powered financial analysis and trading strategies',
+      category: 'Financial Technology',
+      status: 'beta',
+      price: '$3,999/month',
+    technology: 'Quantum',
+      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
+      link: '/quantum-financial-trading',
+      icon: TrendingUp,
+      color: 'from-emerald-500 to-green-500',
+      relevance: 68
+    }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: '📂' },
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: '☁️' },
+    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },
+    { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
+    { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
+    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
+  ];
+
+  const statuses = [
+    { id: 'all', name: 'All Statuses', icon: '📊' },
+    { id: 'active', name: 'Active', icon: '✅' },
+    { id: 'beta', name: 'Beta', icon: '🧪' },
+    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', icon: '💰' },
+    { id: 'under-500', name: 'Under $500/month', icon: '💵' },
+    { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
+    { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
+    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
+  ];
+
+  const technologies = [
+    { id: 'all', name: 'All Technologies', icon: '🔧' },
+    { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },
+    { id: 'Quantum', name: 'Quantum', icon: '⚛️' },
+    { id: 'Edge', name: 'Edge', icon: '🌐' },
+    { id: 'Space', name: 'Space', icon: '🚀' },
+    { id: 'Biotech', name: 'Biotech', icon: '🧬' },
+    { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
+  ];
+
+  // Search function
+  const performSearch = () => {
+    if (!searchTerm.trim()) {
+      setSearchResults([]);
+      return
+    }
+
+    setIsSearching(true);
+    
+    // Simulate search delay
+    setTimeout(() => {
+      const results = allServices.filter(service => {
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+        
+        const matchesCategory = filters.category === 'all' || service.category === filters.category;
+        const matchesStatus = filters.status === 'all' || service.status === filters.status;
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        
+        let matchesPrice = true;
+        if (filters.priceRange !== 'all') {
+          const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+          switch (filters.priceRange) {
+            case 'under-500':
+              matchesPrice = price < 500;
+              break;
+            case '500-1000':
+              matchesPrice = price >= 500 && price < 1000;
+              break;
+            case '1000-2500':
+              matchesPrice = price >= 1000 && price < 2500;
+              break;
+            case 'over-2500':
+              matchesPrice = price >= 2500;
+              break
+          }
+        }
+        
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
+      });
+
+      // Sort results
+      const sortedResults = results.sort((a, b) => {
+        switch (sortBy) {
+          case 'relevance':
+            return b.relevance - a.relevance;
+          case 'price-low':
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          case 'price-high':
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
+          case 'name':
+            return a.title.localeCompare(b.title);
+          case 'status':
+            return a.status.localeCompare(b.status);
+          default: return 0
+        }
+      });
+
+      setSearchResults(sortedResults);
+      setIsSearching(false)
+    }, 500)
+  };
+
+  // Handle search on Enter key
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      performSearch()
+    }
+  };
+
+  // Update search when filters change
+  useEffect(() => {
+    if (searchTerm.trim()) {
+      performSearch()
+    }
+  }, [filters, sortBy]);
+
+  // Clear all filters
+  const clearFilters = () => {
+    setFilters({
+      category: 'all',
+      status: 'all',
+      priceRange: 'all',
+      technology: 'all'
+    });
+    setSortBy('relevance')
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>Search | Zion Tech Group</title>
+        <meta name="description" content="Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering." />
+        <meta property="og:title" content="Search | Zion Tech Group" />
+        <meta property="og:description" content="Advanced search across all services and solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com/search" />
+      </Head>
+
+      <SmartHeader />
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Search Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Find the perfect AI and technology solutions for your business needs. 
+              Search across our comprehensive service catalog with advanced filtering options.
+            </p>
+          </motion.div>
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         </div>
       </section>
 
@@ -1909,6 +2227,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                           <service.icon className="w-8 h-8 text-white" />
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <div className='flex flex-col items-end gap-2'>
                           <span
                             className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -1953,10 +2272,41 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
+=======
+                        <div className="flex flex-col items-end gap-2">
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                            service.status === 'active' ? 'bg-green-500/20 text-green-300' :
+                            service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
+                            'bg-blue-500/20 text-blue-300'
+                          }`}>
+                            {service.status}
+                          </span>
+                          <span className="text-xs text-white/40">{service.technology}</span>
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
+                      
+                      {/* Price */}
+                      <div className="mb-4">
+                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                      </div>
+                      
+                      {/* Features */}
+                      <div className="mb-6">
+                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
+                        <div className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                              <span>{feature}</span>
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                             </div>
                           ))}
                         </div>
                       </div>
+<<<<<<< HEAD
 
                       <div className='flex items-center justify-between'>
                         <a
@@ -2098,6 +2448,8 @@ origin/automation-improvements-final
                           ))}
                         </div>
                       </div>
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       
                       <div className="flex items-center justify-between">
                         <a
@@ -2363,7 +2715,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </AnimatePresence>
           )}
 

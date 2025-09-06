@@ -16,20 +16,18 @@ export default function UseTokensButton({
   serviceId,
   defaultType,
 }: {;
-export default function UseTokensButton({
-serviceId
-  defaultType
-}: {
-
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
+<<<<<<< HEAD
 =======
 
 }: {;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   return (
@@ -123,7 +121,4 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
         default_type={default_type}
       />;
     </>);
-    </>
-  )
-
 }

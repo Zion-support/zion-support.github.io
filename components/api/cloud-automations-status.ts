@@ -38,6 +38,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
           const fp = path && path.join(dir, f);
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -59,22 +60,30 @@ function handler() {
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 <<<<<<< HEAD
+<<<<<<< HEAD
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           );
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 
           );
 <<<<<<< HEAD
+<<<<<<< HEAD
 data[f && f.replace(".json", "")] = JSON && JSON.parse(
 =======
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          data[f && f.replace(".json", "")] = JSON && JSON.parse(
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             fs && fs.readFileSync(fp, "utf8"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
 <<<<<<< HEAD
 
@@ -94,7 +103,7 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
       }
     }
   } catch (e) {
-// ignore;
+    // ignore;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,7 +134,6 @@ res.status(200).json({ ok: true, data });
 =======
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

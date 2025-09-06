@@ -118,6 +118,34 @@ if ( {) {
       return res.status (405).json ({ error: "Method not allowed" });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
+<<<<<<< HEAD
+=======
+    const press_release = await buildPressRelease ({
+      type,
+      company_name,
+      date,
+      raise_amount,
+      description,
+      contact_email,
+    });
+;
+    return res.status (200).json ({
+      ok: true,
+      press_release,
+      download_url: `/api / media / download/${press_release.id}`,
+    });
+  } catch (error: any) {
+    console.error ("Press release generation error:", error);
+    return res.status (500).json ({
+
+      ok: false,
+      error: "Failed to generate press release",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    });
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
     res.status(200).json({ ok: true, text, fallback: true });

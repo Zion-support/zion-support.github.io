@@ -187,6 +187,7 @@ function CybersecurityPage() {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
@@ -196,6 +197,8 @@ function CybersecurityPage() {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </Layout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

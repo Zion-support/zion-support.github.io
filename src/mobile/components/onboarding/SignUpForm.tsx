@@ -10,7 +10,7 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {
+export function SignUpForm() {;
 
 
 ;
@@ -125,8 +125,8 @@ export function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-        const result = await signUp(formData.email, formData.password, {;
-          name: formData.name}),;
+        const result = await signUp(formData && formData.email, formData && formData.password, {;
+          name: formData && formData.name}),;
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
@@ -141,10 +141,11 @@ export function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
-          router.push("/mobile");
-        }
+          router && router.push("/mobile");
+        };
       } else {;
-        const { error } = await login(formData.email, formData.password),;
+        const { error } = await login(formData && formData.email, formData && formData.password);
+
         if (error) {;
           throw new Error(error);
         }
@@ -157,11 +158,12 @@ export function SignUpForm() {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
   };
+
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err.message);
+      setError(err && err.message);
     }
 
   },
@@ -301,11 +303,11 @@ export function SignUpForm() {
 
 
               placeholder="Enter your full name"
-            />
-            {fieldErrors.name && (
-              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
+            />;
+            {fieldErrors && fieldErrors.name && (;
+              <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.name}</p>;
             )}
-          </div>
+          </div>;
         )}
 
         <div className="space-y-2">

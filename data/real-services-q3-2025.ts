@@ -36,6 +36,7 @@ export interface Q3Service {
   competitors?: string[],
   marketSize?: string;
   growthRate?: string;
+=======
   text_color: string;
   link: string;  market_position?: string;
   target_audience?: string;
@@ -48,6 +49,7 @@ export interface Q3Service {
   competitors?: string[];
   market_size?: string;
   growth_rate?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
@@ -183,6 +185,7 @@ export const realServicesQ32025: Q3Service[] = [
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
+=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
@@ -199,6 +202,7 @@ export const realServicesQ32025: Q3Service[] = [
     target_audience: 'SaaS startups, PLG companies, finance and growth teams';
     trial_days: 14;
     setup_time: '1–2 weeks';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI & Data';
     real_service: true;
     technology: ['dbt_snowflake / BigQuerySegment / GA4Python'];
@@ -226,6 +230,7 @@ export const realServicesQ32025: Q3Service[] = [
 =======
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
 
@@ -247,6 +252,7 @@ export const realServicesQ32025: Q3Service[] = [
     targetAudience: 'Content sites, ecommerce, publishers on WordPress';
     trialDays: 7;
     setupTime: '2–4 days';
+=======
     color: 'from - purple - 600 to - pink - 600';
     text_color: 'text - purple - 200';
     link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation';
@@ -254,6 +260,7 @@ export const realServicesQ32025: Q3Service[] = [
     target_audience: 'Content sites, ecommerce, publishers on WordPress';
     trial_days: 7;
     setup_time: '2–4 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Growth & Marketing';
     real_service: true;
     technology: ['WordPressGA4Looker Studio'];
@@ -271,6 +278,7 @@ export const realServicesQ32025: Q3Service[] = [
 =======
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
 
@@ -365,7 +373,8 @@ export const realServicesQ32025: Q3Service[] = [
   },];    contactInfo: contact
   }
 ];
-<<<<<<< HEAD
+
+=======
     color: 'from - amber - 600 to - rose - 600',
     text_color: 'text - amber - 200',
     link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation',
@@ -611,6 +620,7 @@ export const realServicesQ32025: Q3Service[] = [
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 
 =======
@@ -1020,3 +1030,6 @@ export const realServicesQ32025: Q3Service[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

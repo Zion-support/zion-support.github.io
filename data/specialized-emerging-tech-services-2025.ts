@@ -31,6 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
@@ -579,6 +580,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
+=======
       benefits: [;
         'Energy efficiency',
         'Cognitive capabilities',
@@ -598,6 +600,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     features: [;
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications';
       'Advanced pattern recognition_custom neuromorphic algorithms';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
     popular: true, icon: '🧠'
     color: 'from-pink-600 to-rose-600', textColor: 'text-pink-400'
@@ -664,6 +667,7 @@ export interface SpecializedEmergingTechService {;
   marketAdvantage: string;
 }
 ;
+<<<<<<< HEAD
 =======
 
   mobile: '+1 302 464 0950',
@@ -1053,3 +1057,6 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

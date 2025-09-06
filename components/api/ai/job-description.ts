@@ -21,7 +21,7 @@ export default async function handler(
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
-<<<<<<< HEAD
+=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -39,7 +39,6 @@ export default async function handler(
     `- Responsibilities: ${(responsibilities || []).join()}\n` +
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
 
   return res.status(200).json({ jobDescription: text })
@@ -77,8 +76,6 @@ export default async function handler(
 ;
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status (200).json ({ job_description: text });
-
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

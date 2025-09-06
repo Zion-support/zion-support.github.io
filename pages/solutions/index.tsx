@@ -965,6 +965,7 @@ export default SolutionsPage;
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     whileHover={{ y: -5 }}
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -1035,11 +1036,16 @@ export default SolutionsPage;
 }
                       </span>;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     while_hover={{ coordinate_y: -5 }}
                   >;
                     <div className={`w - 16 h - 16 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform`}>;
                       <IconComponent className="w - 8 h - 8 text - white" />;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     </div>;
                     <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                       {solution.title}

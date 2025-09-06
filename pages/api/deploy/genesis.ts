@@ -247,6 +247,7 @@ if ( {) {
       access,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
+<<<<<<< HEAD
 
   } catch (err: any) {
 <<<<<<< HEAD
@@ -529,4 +530,38 @@ export default async function handler(req, res) {
 }
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+  } catch (err: any) {
+
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    return res.status (500).json ({ error: err.message || "Internal error" });
+  }
+}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

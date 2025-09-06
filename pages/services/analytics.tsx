@@ -126,6 +126,45 @@ function AnalyticsServicesPage() {
   Users,
   Clock,
   TrendingUp,
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * AnalyticsServicesPage - Function description
+ */
+function AnalyticsServicesPage() {
+  const services = [;
+    {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -186,6 +225,7 @@ export default function AnalyticsServicesPage() {
       color: 'from-emerald-500 to-teal-500',
     },;
   ];
+<<<<<<< HEAD
 
       color: "from-emerald-500 to-teal-500"
       } catch (error) {
@@ -225,6 +265,25 @@ export default function AnalyticsServicesPage() {
           href='https://ziontechgroup.com/services/analytics'
         />      </Head>
       <EnhancedNavigation />
+=======
+;
+  const stats = [;
+    { number: '1M+', label: 'Data Points Processed', icon: Database },
+    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
+    { number: '24 / 7', label: 'Real - time Analytics', icon: Clock },
+    { number: '300%', label: 'ROI Improvement', icon: TrendingUp },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ];
+;
+  return (
+
+          href='https://ziontechgroup && ziontechgroup.com/services/analytics'
+        />      </Head>;
+
+      <EnhancedNavigation />;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -381,6 +440,7 @@ export default function AnalyticsServicesPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
@@ -570,6 +630,8 @@ export default function AnalyticsServicesPage(req, res) {
 }
                 className="text-center"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -652,6 +714,7 @@ export default function AnalyticsServicesPage(req, res) {
               Comprehensive analytics solutions designed to unlock the value of your data
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -660,6 +723,9 @@ export default function AnalyticsServicesPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -903,6 +969,7 @@ export default function AnalyticsServicesPage(req, res) {
 }viewport= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
@@ -910,6 +977,8 @@ export default function AnalyticsServicesPage(req, res) {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;

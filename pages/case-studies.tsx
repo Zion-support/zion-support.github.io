@@ -42,6 +42,9 @@ import React from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+import MainLayout from '../src / components / layout / MainLayout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import {
@@ -785,7 +788,10 @@ import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function CaseStudiesPage() {
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

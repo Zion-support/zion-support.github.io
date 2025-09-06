@@ -165,6 +165,11 @@ export default function AboutPage() {
   }
 }
   ],
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const values = [
     {
       icon: Brain,
@@ -204,6 +209,11 @@ export default function AboutPage() {
   }
 }
   ],
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -239,6 +249,18 @@ origin/main
 origin/automation-improvements-final
 
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+
+=======
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -381,6 +403,7 @@ export default AboutPage,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import Layout from "../components/Layout";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
 =======
 export default function About() {;
@@ -424,7 +447,10 @@ origin/automation-improvements-final
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -594,6 +620,12 @@ origin/automation-improvements-final
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',

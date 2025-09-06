@@ -616,6 +616,27 @@ function InnovativeBusinessSolutions() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
+                <Phone className='mr-2 w-5 h-5' />                Get Started;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+
+      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -672,8 +693,28 @@ function InnovativeBusinessSolutions() {
               Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+              Why Choose Our Business Solutions?;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Our business solutions combine cutting-edge AI technology with;
+              proven business processes to deliver unprecedented results;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -799,8 +840,31 @@ function InnovativeBusinessSolutions() {
               Comprehensive business solutions covering every aspect of modern business operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
+=======
+
+          <div className="space-y-16">
+            {serviceCategories.map((category, categoryIndex) => (
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+              Business Solution Categories;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Comprehensive business solutions covering every aspect of modern;
+              business operations;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -850,6 +914,7 @@ function InnovativeBusinessSolutions() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
+<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -858,6 +923,9 @@ function InnovativeBusinessSolutions() {
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className='relative group'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -1012,6 +1080,7 @@ function InnovativeBusinessSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1034,6 +1103,8 @@ function InnovativeBusinessSolutions() {
 }
             className="text-center mb-16"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1041,7 +1112,10 @@ function InnovativeBusinessSolutions() {
             viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1050,13 +1124,37 @@ function InnovativeBusinessSolutions() {
               Real feedback from businesses that have transformed their operations with our innovative solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+              What Our Clients Say;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Real feedback from businesses that have transformed their;
+              operations with our innovative solutions;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (;
+              <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1092,6 +1190,10 @@ function InnovativeBusinessSolutions() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1105,6 +1207,7 @@ function InnovativeBusinessSolutions() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1167,6 +1270,12 @@ function InnovativeBusinessSolutions() {
   }
 }
 =======
+=======
+
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
       {/* CTA Section */}
@@ -1193,7 +1302,10 @@ function InnovativeBusinessSolutions() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -1309,12 +1421,15 @@ function InnovativeBusinessSolutions() {
 }viewport= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
     </Layout>
   )
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;

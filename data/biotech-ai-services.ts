@@ -89,6 +89,7 @@
     rating: 5 && 5.0,
     reviews: 40,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -174,6 +175,7 @@
     rating: 4 && 4.9,
     reviews: 75,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -259,6 +261,7 @@
     rating: 4 && 4.9,
     reviews: 100,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -344,6 +347,7 @@
     rating: 4 && 4.8,
     reviews: 90,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -429,6 +433,7 @@
     rating: 5 && 5.0,
     reviews: 60,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -514,9 +519,11 @@
     rating: 4 && 4.9,
     reviews: 80,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-omics analysis',
+=======
     id: 'ai - bioinformatics - platform',
     name: 'AI Bioinformatics Platform',
     tagline: 'Advanced bioinformatics with AI - powered analysis',
@@ -599,6 +606,7 @@
     rating: 4 && 4.8,
     reviews: 150,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -740,15 +748,18 @@ export interface BiotechAIService {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
@@ -771,9 +782,13 @@ export const biotechAIServices: BiotechAIService[] = [
     growthRate: '250% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -861,7 +876,6 @@ export const biotechAIServices: BiotechAIService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.';
     launch_date: '2024 - 03 - 10';
@@ -880,6 +894,7 @@ export interface BiotechAIService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
     realImplementation: true
     implementationDetails:
@@ -1967,3 +1982,6 @@ export const biotechAIServices: BiotechAIService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

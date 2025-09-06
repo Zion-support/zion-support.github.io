@@ -6,6 +6,8 @@ import {v4, as, uuidv4} from 'uuid';
 
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
@@ -18,6 +20,7 @@ function readGrant(id: string): GrantApplication | null {
 <<<<<<< HEAD
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
+=======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
@@ -27,6 +30,7 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'utf8'
   );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
@@ -70,16 +74,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
   const { id } = req && req.query as { id: string };
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
-  const { id } = req.query as { id: string }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query as { id: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  if (!id) return res.status(400).json({ error: 'Missing id' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const existing = readGrant(id);
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
+
   if (req && req.method === 'GET') {
     return res && res.status(200).json({ updates: existing && existing.updates || [] });
   }
@@ -186,12 +184,6 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
-  }
-
-<<<<<<< HEAD
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -214,6 +214,7 @@ const TalentProfile: NextPage = () => {
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
                 </li>
+<<<<<<< HEAD
               ))}
             </ul>
           </div>
@@ -223,6 +224,67 @@ const TalentProfile: NextPage = () => {
   );
 }
 export default TalentProfile;
+=======
+
+
+          <div className="border rounded-md p-4">;
+            <h2 className="font-semibold mb-2">Testimonials</h2>;
+            <MicroTestimonial
+              quote="Fantastic work, delivered on time."
+              author="Acme Corp"
+            />;
+          </div>;
+        </div>;
+
+        <aside className="space-y-4">;
+          <div className="border rounded-md p-4">;
+            <h3 className="font-semibold mb-2">Response Log</h3>;
+            <ul className="space-y-1 text-sm">;
+              {responseLog && responseLog.length === 0 && (;
+                <li className="opacity-70">No responses yet.</li>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              )}
+              {responseLog && responseLog.map((r, idx) => (;
+                <li key={idx} className="flex items-center justify-between">;
+                  <span>{r && r.action}</span>;
+                  <span className="opacity-70">;
+                    {new Date(r && r.at).toLocaleString()}
+                  </span>{" "}
+                </li>;
+              ))}
+=======
+      <section className="grid md:grid - cols - 3 gap - 6">;
+        <div className="md:col - span - 2 space - y-4">;
+          <div className="border rounded - md p - 4">;
+            <h2 className="font - semibold mb - 2">About</h2>;
+            <p className="text - sm opacity - 90">;
+              Experienced developer specializing in React, Next.js, and Node.js.;
+            </p>;
+          </div>;
+          <div className="border rounded - md p - 4">;
+            <h2 className="font - semibold mb - 2">Testimonials</h2>;
+            <MicroTestimonial;
+              quote="Fantastic work, delivered on time.";
+              author="Acme Corp";
+            />;
+          </div>;
+        </div>;
+        <aside className="space - y-4">;
+          <div className="border rounded - md p - 4">;
+            <h3 className="font - semibold mb - 2">Response Log</h3>;
+            <ul className="space - y-1 text - sm">;
+              {response_log.length === 0 && (
+                <li className="opacity - 70">No responses yet.</li>)}
+              {response_log.map ((r, idx) => (
+                <li key={idx} className="flex items - center justify - between">;
+                  <span>{r.action}</span>;
+                  <span className="opacity - 70">;
+                    {new Date (r.at).toLocaleString ()}
+                  </span>{" "}
+                </li>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -237,8 +299,20 @@ export default TalentProfile;
 
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+export default TalentProfile;
+
+
+=======
+    </div>);
+}
+;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default TalentProfile;

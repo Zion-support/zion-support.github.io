@@ -43,6 +43,7 @@ export interface BlockchainWeb3Service {;
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
+=======
     id: 'ai - powered - defi - yield - optimizer',
     name: 'AI - Powered DeFi Yield Optimizer',
     tagline: 'Intelligent yield farming with AI - driven strategy optimization',
@@ -122,6 +123,7 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.9,
     reviews: 6200,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
@@ -152,6 +154,7 @@ export interface BlockchainWeb3Service {;
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
+=======
     id: 'nft - marketplace - intelligence - platform',
     name: 'NFT Marketplace Intelligence Platform',
     tagline: 'AI - powered NFT analytics, valuation, and trading insights',
@@ -229,6 +232,7 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.7,
     reviews: 2100,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
@@ -261,6 +265,7 @@ export interface BlockchainWeb3Service {;
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-traceability',
+=======
     id: 'blockchain - supply - chain - traceability',
     name: 'Blockchain Supply Chain Traceability Platform',
     tagline: 'End - to - end transparency with immutable supply chain tracking',
@@ -338,6 +343,7 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.8,
     reviews: 680,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
@@ -374,6 +380,7 @@ export interface BlockchainWeb3Service {;
   }
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/web3-social-media-platform',
     icon: '🌐',
     color: 'from-purple-500 to-indigo-600',
@@ -395,7 +402,10 @@ export interface BlockchainWeb3Service {;
       'Community support, developer documentation, custom development services, and enterprise solutions.',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
+=======
     id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
     tagline: 'Decentralized social networking with content ownership',
@@ -475,10 +485,12 @@ export interface BlockchainWeb3Service {;
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -515,8 +527,13 @@ export interface BlockchainWeb3Service {;
     reviews: 18000
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     rating: 4.6,
     reviews: 18000;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 =======
@@ -529,6 +546,7 @@ export interface BlockchainWeb3Service {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -813,3 +831,6 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

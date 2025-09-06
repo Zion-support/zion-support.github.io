@@ -120,13 +120,20 @@ export default function Contact() {
 origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 origin/main
 
+=======
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React from "react";
 import Layout from "../components/Layout";
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 export default function Contact() {
   return (
     <>
@@ -149,6 +156,7 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -158,8 +166,13 @@ export default function Contact() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 }
+=======
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -244,6 +257,7 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+<<<<<<< HEAD
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -555,10 +569,19 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
+=======
+=======
+
+}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>;
     </>
   );
@@ -571,3 +594,69 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Contact Us;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+    </>
+
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * Contact - Function description
+ */
+function Contact() {
+  return (
+    <Layout;
+      title="Contact Us - Zion Tech Group";
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              Contact Us;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -141,6 +141,7 @@ export default function VerifyPage() {
     setBusy(true);
 
     const res = await fetch('/api/kyc/submit', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId })
@@ -150,6 +151,19 @@ export default function VerifyPage() {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId })}),
+    const data = await res.json();
+    if (data.ok) {
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.')
+    } else {
+      setMessage(data.error || 'Submit failed')
+    }
+    setBusy(false)
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -431,6 +445,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
+<<<<<<< HEAD
               <h2 className='font-semibold mb-2'>Required documents</h2>
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                 {requiredDocs.map(k => {
@@ -438,6 +453,66 @@ if ( {) {
                     d => d.kind === k
                   );
                     >
+=======
+
+        </div>;
+
+        <div className='mb-6'>;
+          <button
+            disabled={busy}
+            onClick={start}
+            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
+            Start/Update;
+          </button>;
+        </div>;
+
+        {profile && (;
+          <div className='space-y-6'>;
+            <div>;
+              <div className='flex items-center justify-between mb-2'>;
+                <span className='text-sm text-gray-600'>Progress</span>;
+                <span className='text-sm font-medium'>;
+                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
+                  {profile && profile.status === 'approved' && '→ Approved'}
+                </span>;
+              </div>;
+              <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
+                <div
+                  className='bg-blue-600 h-3'
+                  style={{ width: `${progress}%` }}
+                />              </div>;
+            </div>;
+
+            <section>;
+              <h2 className='font-semibold mb-2'>Required documents</h2>;
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
+                {requiredDocs && requiredDocs.map(k => {;
+                  const hasIt = (profile && profile.documents || []).some(;
+                    d => d && d.kind === k;
+                  );
+
+                    >;
+                      <div>;
+                        <div className='text-sm font-medium'>{k}</div>;
+                        <div className='text-xs text-gray-500'>;
+
+                          {hasIt ? 'Uploaded' : 'Missing'}
+                        </div>;
+                      </div>;
+                      <button
+                        disabled={busy}
+                        onClick={() => upload(k)}
+                        className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
+                      >;
+                        {hasIt ? 'Replace' : 'Upload'}
+                      </button>;
+                    </div>;
+                  );                })}
+
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
@@ -457,11 +532,26 @@ if ( {) {
             </section>
             {optionalDocs.length > 0 && (
               <section>
+<<<<<<< HEAD
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
                     const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
+=======
+
+
+              </div>;
+            </section>;
+
+            {optionalDocs && optionalDocs.length > 0 && (;
+              <section>;
+                <h2 className='font-semibold mb-2'>Optional documents</h2>;
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
+                  {optionalDocs && optionalDocs.map(k => {;
+                    const hasIt = (profile && profile.documents || []).some(;
+                      d => d && d.kind === k;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     );
 
                       >;

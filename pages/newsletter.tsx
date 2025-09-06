@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
@@ -51,8 +79,13 @@ import {;
   Award,;
   Clock,;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
+=======
+} from "lucide-react";
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Clock
 } from 'lucide-react';
 origin/automation-improvements-final
@@ -104,6 +137,7 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
+=======
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
     icon: Video
@@ -118,10 +152,20 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -153,6 +197,7 @@ const testimonials = [;
 ];
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
+=======
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -171,6 +216,7 @@ export default function NewsletterPage() {
     rating: 5
   }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function NewsletterPage() {
@@ -179,6 +225,8 @@ origin/automation-improvements-final
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 export default function NewsletterPage() {;
@@ -190,6 +238,69 @@ export default function NewsletterPage() {;
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+=======
+const benefits = [;
+  {;
+    title: "Exclusive Content",;
+    description:;
+      "Get access to exclusive white papers, case studies, and industry insights.",;
+    icon: FileText,;
+  },;
+  {;
+    title: "Webinar Invitations",;
+    description:;
+      "Receive invitations to our expert-led webinars and virtual events.",;
+    icon: Video,;
+  },;
+  {;
+    title: "Early Access",;
+    description:;
+      "Be the first to know about new features, products, and services.",;
+    icon: Zap,;
+  },;
+  {;
+    title: "Industry Insights",;
+    description:;
+      "Stay updated with the latest trends and developments in technology.",;
+    icon: TrendingUp,;
+  },;
+];
+
+const testimonials = [;
+  {;
+    name: "Sarah Johnson",;
+    role: "CTO, TechCorp",;
+    content:;
+      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",;
+    rating: 5,;
+  },;
+  {;
+    name: "Michael Chen",;
+    role: "Product Manager, InnovateLab",;
+    content:;
+      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",;
+    rating: 5,;
+  },;
+  {;
+    name: "Emily Rodriguez",;
+    role: "Developer, CodeCraft",;
+    content:;
+      "The technical deep-dives and case studies have been incredibly helpful for my projects.",;
+    rating: 5,;
+  },;
+];
+
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {;
+    e && e.preventDefault();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     setIsLoading(true);
 
 
@@ -200,6 +311,7 @@ export default function NewsletterPage() {;
 origin/automation-improvements-final
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -210,11 +322,19 @@ origin/automation-improvements-final
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
+<<<<<<< HEAD
         />
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 origin/automation-improvements-final
       </Head>
       <div className="min-h-screen bg-gray-50">
+=======
+        />;
+      </Head>;
+
+      <div className="min-h-screen bg-gray-50">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -744,10 +864,16 @@ origin/automation-improvements-final
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
+=======
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  <div className="flex items-center mb-4">;
+                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
@@ -859,6 +985,7 @@ origin/automation-improvements-final
                   </div>;
                 </form>;
               )}
+<<<<<<< HEAD
               <div className="mt-8 text-green-100 text-sm">
                 <p>✓ No spam, ever</p>
                 <p>✓ Unsubscribe anytime</p>
@@ -874,3 +1001,93 @@ origin/automation-improvements-final
 }
 origin/automation-improvements-final
 }
+=======
+
+
+              <div className="mt-8 text-green-100 text-sm">;
+=======
+                >;
+                  <div className="flex items - center mb - 4">;
+                    {[...Array (testimonial.rating)].map ((_, i) => (
+                      <Star;
+                        key={i}
+                        className="w - 4 h - 4 text - yellow - 400 fill - current";
+                      />))}
+                  </div>;
+                  <p className="text - gray - 600 mb - 4 italic">;
+                    "{testimonial.content}";
+                  </p>;
+                  <div>;
+                    <div className="font - semibold text - gray - 900">;
+                      {testimonial.name}
+                    </div>;
+                    <div className="text - sm text - gray - 500">;
+                      {testimonial.role}
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center max - w-4xl mx - auto";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+            >;
+              <h2 className="text - 4xl font - bold mb - 6">;
+                Ready to Join Our Community?;
+              </h2>;
+              <p className="text - xl mb - 8 text - green - 100">;
+                Subscribe now and start receiving valuable insights delivered to;
+                your inbox every week.;
+              </p>;
+              {!is_subscribed && (
+                <form on_submit={handle_submit} className="max - w-md mx - auto">;
+                  <div className="flex flex - col sm:flex - row gap - 4">;
+                    <input;
+                      type="email";
+                      placeholder="Enter your email address";
+                      value={email}
+                      on_change={(e) => set_email (e.target.value)}
+                      required;
+                      className="flex - 1 px - 4 py - 3 rounded - lg text - gray - 900 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - green - 300";
+                    />;
+                    <button;
+                      type="submit";
+                      disabled={is_loading}
+                      className="bg - white text - green - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - green - 50 transition - colors disabled:opacity - 50 disabled:cursor - not - allowed inline - flex items - center justify - center";
+                    >;
+                      {is_loading ? (
+                        <>;
+                          <Clock className="w - 4 h - 4 mr - 2 animate - spin" />;
+                          Subscribing...;
+                        </>) : (
+                        <>;
+                          Subscribe Now;
+                          <Send className="ml - 2 w - 4 h - 4" />;
+                        </>)}
+                    </button>;
+                  </div>;
+                </form>)}
+              <div className="mt - 8 text - green - 100 text - sm">;
+
+                <p>✓ No spam, ever</p>;
+                <p>✓ Unsubscribe anytime</p>;
+                <p>✓ Free forever</p>;
+              </div>;
+
+}
+
+=======
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

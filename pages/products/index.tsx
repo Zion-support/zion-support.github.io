@@ -142,6 +142,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+const Index: NextPage = () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final

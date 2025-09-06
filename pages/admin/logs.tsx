@@ -65,6 +65,7 @@ import {;
   Download,;
   RefreshCw,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import {
@@ -132,6 +133,31 @@ import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw 
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
 =======
+=======
+} from 'lucide-react';
+
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components / ui / select';
+import {
+  AlertTriangle,
+  Info,
+  AlertCircle,
+  XCircle,
+  Search,
+
+interface LogEntry {
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 interface LogEntry {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
@@ -170,6 +196,7 @@ interface LogEntry {;
 
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface LogsPageProps {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -213,6 +240,8 @@ interface LogEntry {
 ;
 interface LogsPageProps {;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 interface LogsPageProps {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -703,16 +732,20 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       parts.push(`FPS: ${performance.fps}`)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return parts.length > 0 ? parts.join(', ') : null;
   }
   const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     
     return parts.length > 0 ? parts.join() : null
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const formatTimestamp = (timestamp: string) => {;
@@ -731,6 +764,14 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   },
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+
+  };
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -806,6 +847,70 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+
+            />;
+            Refresh;
+          </Button>;
+          <Button onClick={exportLogs} variant='outline'>;
+            <Download className='h-4 w-4 mr-2' />;
+            Export;
+          </Button>;
+        </div>;
+
+      {/* Summary Cards */}
+
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
+        <Card>;
+          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
+            <CardTitle className='text-sm font-medium'>Total Logs</CardTitle>;
+            <Info className='h-4 w-4 text-muted-foreground' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text-2xl font-bold'>{totalCount}</div>;
+            <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>;
+        </Card>;
+
+        <Card>;
+          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
+            <CardTitle className='text-sm font-medium'>Errors</CardTitle>;
+            <XCircle className='h-4 w-4 text-red-500' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text-2xl font-bold text-red-600'>{errorCount}</div>;
+            <p className='text-xs text-muted-foreground'>;
+              Critical & error logs;
+            </p>          </CardContent>;
+        </Card>;
+
+        <Card>;
+          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
+            <CardTitle className='text-sm font-medium'>Warnings</CardTitle>;
+            <AlertTriangle className='h-4 w-4 text-yellow-500' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text-2xl font-bold text-yellow-600'>;
+              {warningCount}
+            </div>;
+            <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>;
+        </Card>;
+
+        <Card>;
+          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
+            <CardTitle className='text-sm font-medium'>Last Updated</CardTitle>;
+            <RefreshCw className='h-4 w-4 text-muted-foreground' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text-sm font-medium'>;
+              {formatTimestamp(lastUpdated)}
+            </div>;
+            <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>;
+        </Card>;
+      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Filters */}
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -899,7 +1004,274 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
+<<<<<<< HEAD
                   <SelectItem key={source} value={source}>
+=======
+
+  }
+  performance?: {
+    duration: number;
+    memory?: number;
+  }
+;
+interface LogsPageProps {
+  logs: LogEntry[];
+  error_count: number;
+  warning_count: number;
+  total_count: number;
+  last_updated: string;
+const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) =>: any {
+  switch (level) {
+    case 'debug':;
+      return <Info className='h - 4 w - 4 text - blue - 500' />;
+    case 'info':;
+      return <Info className='h - 4 w - 4 text - green - 500' />;
+    case 'warn':;
+      return <AlertTriangle className='h - 4 w - 4 text - yellow - 500' />;
+    case 'error':;
+      return <AlertCircle className='h - 4 w - 4 text - red - 500' />;
+    case 'critical':;
+      return <XCircle className='h - 4 w - 4 text - red - 700' />;
+    default:;
+      return <Info className='h - 4 w - 4 text - gray - 500' />;
+  }
+];
+const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) =>: any {
+  const colors = {
+    debug: 'bg - blue - 100 text - blue - 800',
+    info: 'bg - green - 100 text - green - 800',
+    warn: 'bg - yellow - 100 text - yellow - 800',
+    error: 'bg - red - 100 text - red - 800',
+    critical: 'bg - red - 200 text - red - 900',
+  }
+;
+  return <Badge className={colors[level]}>{level.toUpperCase ()}</Badge>;
+}
+;
+export default /**
+ * LogsPage - Function description
+ */
+function LogsPage() {  const [logs, set_logs] = useState < LogEntry[]>(initial_logs);
+  const [filtered_logs, setFilteredLogs] = useState < LogEntry[]>(initial_logs);
+  const [search_term, setSearchTerm] = useState ('');
+  const [level_filter, setLevelFilter] = useState < string>('all');
+  const [category_filter, setCategoryFilter] = useState < string>('all');
+  const [source_filter, setSourceFilter] = useState < string>('all');
+  const [is_loading, setIsLoading] = useState (false);
+;
+  const categories = Array.from (new Set (logs.map (log => log.category))).filter (
+    Boolean);
+  const sources = Array.from (new Set (logs.map (log => log.source))).filter (
+    Boolean);
+;
+  useEffect (() => {
+    // Simulate loading logs;
+    set_timeout (() => {
+      set_logs (mock_logs);
+      setFilteredLogs (mock_logs);
+      set_loading (false);
+    }, 1000);
+  }, []);
+;
+  useEffect (() => {
+    let filtered = [...logs];
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (
+        log =>;
+          log.message.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          log.category.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          (log.component &&;
+            log.component.toLowerCase ().includes (search_term.toLowerCase ())));
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (log => log.level === level_filter);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (log => log.category === category_filter);
+    }
+    setFilteredLogs (filtered);
+  }, [logs, search_term, level_filter, category_filter]);
+;
+  const getLevelColor = (level: string) =>: any {
+    switch (level) {
+      case 'debug': return 'bg - blue - 100 text - blue - 800';
+      case 'info': return 'bg - green - 100 text - green - 800';
+      case 'warn': return 'bg - yellow - 100 text - yellow - 800';
+      case 'error': return 'bg - red - 100 text - red - 800';
+      case 'critical': return 'bg - red - 200 text - red - 900';
+      default: return 'bg - gray - 100 text - gray - 800';    }
+  }
+;
+  const export_logs = () =>: any {
+    const data_str = JSON.stringify (filtered_logs, null, 2);
+    const data_uri =;
+      'data:application / json;charset = utf - 8, ' + encodeURIComponent (data_str);
+;
+    const exportFileDefaultName = `logs-${new Date ().toISOString ().slice (0, 10)}.json`;
+;
+    const link_element = document.create_element ('a');
+    link_element.set_attribute ('href', data_uri);
+    link_element.set_attribute ('download', exportFileDefaultName);
+    link_element.click ();
+  }
+;
+  const format_timestamp = (timestamp: string) =>: any {
+    return new Date (timestamp).toLocaleString ();  }
+;
+  const format_performance = (performance?: LogEntry['performance']) =>: any {
+    // Check condition
+if (return null) {
+  $2
+}
+    const parts = [];
+    // Check condition
+if ( {) {
+  $2
+}
+      parts.push (`Memory: ${(performance.memory / 1024 / 1024).to_fixed (1)}MB`);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      parts.push (`Timing: ${performance.timing}ms`);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      parts.push (`FPS: ${performance.fps}`);
+    }
+    return parts.length > 0 ? parts.join (', ') : null;
+  }
+;
+  const error_count = logs.filter (log => log.level === 'error' || log.level === 'critical').length;
+  const warning_count = logs.filter (log => log.level === 'warn').length;
+  const total_count = logs.length;
+;
+  return (
+    <div className='container mx - auto p - 6 space - y-6'>;
+      <div className='flex items - center justify - between'>;
+        <h1 className='text - 3xl font - bold'>System Logs & Error Monitoring</h1>;
+        <div className='flex items - center space - x-2'>;
+          <Button on_click={refresh_logs} disabled={is_loading} variant='outline'>;
+            <RefreshCw;
+              className={`h - 4 w - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
+            />;
+            Refresh;
+          </Button>;
+          <Button on_click={export_logs} variant='outline'>;
+            <Download className='h - 4 w - 4 mr - 2' />;
+            Export;
+          </Button>;
+        </div>;
+      {/* Summary Cards */}
+      <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4'>;
+        <Card>;
+          <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
+            <CardTitle className='text - sm font - medium'>Total Logs</CardTitle>;
+            <Info className='h - 4 w - 4 text - muted - foreground' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text - 2xl font - bold'>{total_count}</div>;
+            <p className='text - xs text - muted - foreground'>All log entries</p>          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
+            <CardTitle className='text - sm font - medium'>Errors</CardTitle>;
+            <XCircle className='h - 4 w - 4 text - red - 500' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text - 2xl font - bold text - red - 600'>{error_count}</div>;
+            <p className='text - xs text - muted - foreground'>;
+              Critical & error logs;
+            </p>          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
+            <CardTitle className='text - sm font - medium'>Warnings</CardTitle>;
+            <AlertTriangle className='h - 4 w - 4 text - yellow - 500' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text - 2xl font - bold text - yellow - 600'>;
+              {warning_count}
+            </div>;
+            <p className='text - xs text - muted - foreground'>Warning logs</p>          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
+            <CardTitle className='text - sm font - medium'>Last Updated</CardTitle>;
+            <RefreshCw className='h - 4 w - 4 text - muted - foreground' />;
+          </CardHeader>;
+          <CardContent>;
+            <div className='text - sm font - medium'>;
+              {format_timestamp (last_updated)}
+            </div>;
+            <p className='text - xs text - muted - foreground'>Data freshness</p>          </CardContent>;
+        </Card>;
+      </div>;
+      {/* Filters */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Filters</CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4'>;
+            <div className='relative'>;
+              <Search className='absolute left - 2 top - 2.5 h - 4 w - 4 text - muted - foreground' />;
+              <Input;
+                placeholder='Search logs...';
+                className='pl - 8';
+                value={search_term}
+                on_change={e => setSearchTerm (e.target.value)}
+              />;
+            </div>;
+            <Select value={level_filter} onValueChange={setLevelFilter}>;
+              <SelectTrigger>;
+                <SelectValue placeholder='All levels' />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value='all'>All Levels</SelectItem>;
+                <SelectItem value='debug'>Debug</SelectItem>;
+                <SelectItem value='info'>Info</SelectItem>;
+                <SelectItem value='warn'>Warning</SelectItem>;
+                <SelectItem value='error'>Error</SelectItem>;
+                <SelectItem value='critical'>Critical</SelectItem>              </SelectContent>;
+            </Select>;
+            <Select value={category_filter} onValueChange={setCategoryFilter}>;
+              <SelectTrigger>;
+                <SelectValue placeholder='All categories' />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value='all'>All Categories</SelectItem>;
+                {categories.map (category => (
+                  <SelectItem key={category} value={category}>;
+                    {category}
+                  </SelectItem>                ))}
+              </SelectContent>;
+            </Select>;
+            <Select value={source_filter} onValueChange={setSourceFilter}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              <SelectTrigger>;
+                <SelectValue placeholder='All sources' />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value='all'>All Sources</SelectItem>;
+
+                {sources.map (source => (
+                  <SelectItem key={source} value={source}>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     {source}
                   </SelectItem>                ))}
               </SelectContent>
@@ -1184,6 +1556,18 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  )}
+                </div>;
+              ));
+            ) : (;
+              <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
+              </div>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             )}
           </div>;
         </div>;
@@ -1279,11 +1663,14 @@ export const getServerSideProps: GetServerSideProps = async () => {
       props: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         logs: []
         errorCount: 0
         warningCount: 0
@@ -1411,6 +1798,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1418,6 +1806,8 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 };
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
         errorCount;

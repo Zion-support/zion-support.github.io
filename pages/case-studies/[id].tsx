@@ -24,11 +24,30 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 export default function CaseStudyPage() {
   const router = useRouter()
   const { id } = router.query
   // Case studies data - this should match the data in case-studies.tsx
   const caseStudies = [
+=======
+
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { use_router } from 'next / router',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  const router = use_router (),
+  const { id } = router.query,
+  // Case studies data - this should match the data in case - studies.tsx;
+  const case_studies = [;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     {
       id: 'ai - automation - manufacturing',
       title: 'AI - Powered Manufacturing Automation',
@@ -720,6 +739,7 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -729,6 +749,8 @@ if ( {) {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

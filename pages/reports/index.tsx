@@ -15,6 +15,7 @@ export default function Reports() {
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 export default function Reports() {;
 import { useEffect, useState } from 'react';
@@ -26,16 +27,24 @@ export default function Reports() {
   const [changelog, setChangelog] = useState<any>({});
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)

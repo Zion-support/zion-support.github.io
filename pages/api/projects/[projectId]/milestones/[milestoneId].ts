@@ -57,10 +57,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (req.method === "PATCH") {
 
+<<<<<<< HEAD
   if (req.method === 'PATCH') {
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
+=======
+
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  if (req && req.method === "PATCH") {
+    const body = req && req.body as any;
+    if (body && body.status && !isMilestoneStatus(body && body.status)) {
+      res && res.status(400).json({ error: "Invalid status" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       return;
     }
     // Enforce status transition rules

@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -47,6 +51,7 @@ import {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
+
 interface Testimonial {;
   id: string;
   name: string;
@@ -67,6 +72,7 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   rating: number
   avatar: string
   category: string
+=======
   category: string;  id: string,
   name: string,
   title: string,
@@ -74,15 +80,13 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   content: string,
   rating: number,
   avatar: string,
-category: string;
+  category: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [;
-
-const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testimonial[] = [
-
     {
       id: '1',
       name: 'Dr. Sarah Chen',
@@ -106,6 +110,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
       </div>;
+
       <div className="max-w-7xl mx-auto relative z-10">;
         {/* Header */}
         <div className="text-center mb-16">;
@@ -277,33 +282,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-=======
-                <div className="flex items-center gap-1 mb-4">
-                  {renderStars(testimonial.rating)}
-                </div>
-                {/* Testimonial Text */}
-                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
-=======
-
-                {/* Author Info */}
-
-                  {renderStars(testimonial.rating)}
-                </div>
-
-                {/* Testimonial Text */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  "{testimonial.content}"
-                </p>
-                {/* Author Info */}
-<<<<<<< HEAD
-                <div className='flex items-center gap-4'>
-                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -422,14 +400,16 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                   </span>
                 </div>
               </div>
-<<<<<<< HEAD
-<div className="flex items-center gap-1 mb-4">;
+=======
+                <div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
+
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">;
                   "{testimonial && testimonial.content}";
                 </p>;
+
                 {/* Author Info */}
                 <div className='flex items-center gap-4'>;
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>;
@@ -446,6 +426,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                       {testimonial && testimonial.company}
                     </div>                  </div>;
                 </div>;
+
                 {/* Category Badge */}
                 <div className='mt-4'>;
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial && testimonial.category}                  <div className="flex-1">;
@@ -453,6 +434,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                     <div className="text-sm text-white/70">{testimonial && testimonial.title}</div>;
                     <div className="text-xs text-blue-400">{testimonial && testimonial.company}</div>;
                 </div>;
+
                 {/* Category Badge */}
                 <div className='mt-4'>;
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">;
@@ -461,6 +443,8 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                   </span>;
                 </div>;
               </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Hover Effect */}
 
         </div>;
@@ -581,8 +565,9 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+=======
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+=======
                     </div>                  </div>;
                 </div>;
                 {/* Category Badge */}
@@ -641,6 +626,7 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Schedule a Call;
               </a>;
             </div>;
@@ -675,13 +661,19 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 
 
 };
+
 export default EnhancedTestimonialsSection;  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default EnhancedTestimonialsSection;
 
 

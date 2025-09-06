@@ -8,6 +8,41 @@ interface RevenueopsProps {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Revenueops({ }: RevenueopsProps) {
+<<<<<<< HEAD
+=======
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+import React from 'react';
+interface RevenueopsProps {;
+  // Add props here as needed;
+}
+export default function Revenueops(): any ({ }: RevenueopsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/services/ai/revenue-ops.tsx
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div>;
       <h1>Revenueops</h1>;

@@ -24,6 +24,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc && doc.moveDown();
   doc && doc.fontSize(11).fillColor('#222222').text(content, {
+=======
   getWhitepaperSections,
   OPERATOR_PROMPT,
 } from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
@@ -94,7 +95,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
@@ -106,7 +106,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-<<<<<<< HEAD
+=======
+
   res && res.setHeader('Content-Type', 'application/pdf');
   res && res.setHeader(
     'Content-Disposition',
@@ -116,12 +117,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+
   res && res.setHeader('Content-Typeapplication/pdf');
   res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
+
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc && doc.info.Author = 'Zion Protocol';
+
   doc && doc.pipe(res);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Cover page
   doc.addPage();
   doc
@@ -180,6 +186,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 export default async /**
  * handler - Function description
@@ -254,32 +264,6 @@ function handler() {
   doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 ;
   doc.end ();
-
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`,
-  doc.info.Author = 'Zion Protocol',
-
-  doc.pipe(res),
-
-  // Cover page
-  doc.addPage(),
-  doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' }),
-  doc.moveDown(),
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`),
-  doc.moveDown(),
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):'),
-  doc.moveDown(0.5),
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 }),
-
-  const sections = getWhitepaperSections(edition as any)
-  sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
-
-  // End
-  doc.addPage(),
-  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
-
-  doc.end()
-
 }
 <<<<<<< HEAD
 =======

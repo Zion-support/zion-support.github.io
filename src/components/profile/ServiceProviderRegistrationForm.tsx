@@ -18,9 +18,12 @@
     }
     setIsSubmitting (true);
     try {
-      // For actual implementation with Supabase
-      if (!user?.id) {
-        throw new Error('User not authenticated')
+      // For actual implementation with Supabase;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error ('User not authenticated');
       }
 
       // Enhance profile if not already done;
@@ -274,83 +277,87 @@ if ( {) {
   $2
 }
         try {
-          await supabase.functions.invoke('send-email', {
+          await supabase.functions.invoke ('send - email', {
             body: {
               to: userEmail
               subject: 'Your Zion Service Profile Is Ready'
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
               html: `
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                  <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
       // Get user email for notification;
-      const { data: userData } = await supabase.auth.getUser(),;
-      const userEmail = (userData as any).user?.email,;
+      const { data: userData } = await supabase && supabase.auth.getUser();
+      const userEmail = (userData as any).user?.email;
+
       // Create the service profile;
       const { data: profileData, error } = await supabase;
         .from('profiles');
         .update({;
-          display_name: values.name,;
+          display_name: values && values.name,;
           bio: finalSummary,;
-          user_type: "creator", // Set as service provider;
+          user_type: 'creator', // Set as service provider;
           profile_complete: true,;
           updated_at: new Date().toISOString(),;
-          headline: values.title,;
+          headline: values && values.title,;
           // Additional fields that might be in profiles table;
         });
-        .eq('id', user.id);
-        .select(),;
-      if (error) throw error,;
+        .eq('id', user && user.id);
+        .select();
+
+      if (error) throw error;
+
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
+
       /*;
       const { error: serviceError } = await supabase;
         .from('service_profiles');
         .insert({;
-          user_id: user.id,;
+          user_id: user && user.id,;
           services: finalServices,;
-          hourly_rate: Number(values.hourlyRate),;
-          availability_status: values.availability,;
-          location: values.location,;
-          website: values.website || null}),;
-      if (serviceError) throw serviceError,;
+          hourly_rate: Number(values && values.hourlyRate),;
+          availability_status: values && values.availability,;
+          location: values && values.location,;
+          website: values && values.website || null});
+
+      if (serviceError) throw serviceError;
       */;
+
       // Send notification email if available;
-      if (userEmail && values.enhancedProfile) {;
+      if (userEmail && values && values.enhancedProfile) {;
         try {;
-          await supabase.functions.invoke('send-email', {;
+          await supabase && supabase.functions.invoke('send-email', {;
             body: {;
               to: userEmail,;
-              subject: "Your Zion Service Profile Is Ready",;
+              subject: 'Your Zion Service Profile Is Ready',;
               html: `;
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>;
+              <divstyle="font-family: Arial, sans-serif max-width: 600px margin: 0 auto">;
+                <h2style="color: #6D28D9">Service Profile Created!</h2>;
                 <p>Your service provider profile has been successfully created and published.</p>;
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
                 <p>You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+                <divstyle="margin-top: 30px padding-top: 20px border-top: 1px solid #eee">;
+                  <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-              `;
-            }
+              `,;
+            },;
           });
         } catch (emailError) {;
-          logErrorToProduction('Failed to send notification email:', { data: emailError }),;
+          logErrorToProduction('Failed to send notification email:', {;
+            data: emailError,;
+          });
           // Continue with submission even if email fails;
         }
       }
-      
-      toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
 
       toast({;
         title: 'Profile Created Successfully',;
@@ -595,14 +602,16 @@ if ( {) {
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
+              <div className='space-y-4'>;
+                <h3 className='text-lg font-medium text-white'>;
+                  Basic Information;
+                </h3>;
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+                  <div className='col-span-1'>;
                     <FormField
                       control={form.control}
                   control={form.control}
-                  name="enhancedProfile"
+                  name='enhanced_profile';
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
                       <div className='space - y-0.5'>;
@@ -626,10 +635,10 @@ if ( {) {
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                       onClick={generateEnhancedProfile}
-                      disabled={isGenerating}                    >
-                      <Sparkles className='mr-2 h-4 w-4' />
-                      {isGenerating
-                        ? 'Generating...'
+                      disabled={isGenerating}>;
+                      <Sparkles className='mr-2 h-4 w-4' />;
+                      {isGenerating;
+                        ? 'Generating...';
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
@@ -664,13 +673,13 @@ if ( {) {
                   </div>
                 )}
                 {/* Generated Content Display */}
-                {generatedContent && (
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                        AI-Generated Content
-                      </h4>
+                {generatedContent && (;
+                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
+                    <div className='flex items-center justify-between mb-3'>;
+                      <h4 className='text-white font-medium flex items-center'>;
+                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
+                        AI-Generated Content;
+                      </h4>;
                       <Button
                         type='button'
                         size='sm'
@@ -693,8 +702,12 @@ if ( {) {
 
 
                       <div>
-                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
-                        <p className="text-zion-slate italic">{generatedContent.summary}</p>
+                        <h5 className='text-zion-slate-light text-sm mb-1'>
+                          Professional Summary
+                        </h5>
+                        <p className='text-zion-slate italic'>
+                          {generatedContent.summary}
+                        </p>
                       </div>
                       {generatedContent.services &&
                         generatedContent.services.length > 0 && (
@@ -707,13 +720,12 @@ if ( {) {
                                 (service, index) => (
                                   <Badge
                                     key={index}
-                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
-                                  >
+                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'>;
                                     {service}
-                                  </Badge>
-                                )
+                                  </Badge>;
+                                );
                               )}
-                            </div>                          </div>
+                            </div>                          </div>;
                         )}
 
                       
@@ -738,7 +750,7 @@ if ( {) {
 
               </div>;
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className='bg-zion-blue-light/50' />;
 
 
 
@@ -746,10 +758,12 @@ if ( {) {
 
 
               {/* Services and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Services Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Services Offered;
+                  </h3>;
                   <FormField
 
                     control={form.control}
@@ -766,12 +780,12 @@ if ( {) {
                         <div className="flex gap-2">
                           <FormControl>
                             <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a service..."
+                              className='flex-1 bg-zion-blue border-zion-blue-light text-white'
+                              placeholder='Add a service...'
                               {...field}
-                              onKeyDown={handleServiceKeyPress}
-                            />
-                          </FormControl>
+                              onKeyDown = {handleServiceKeyPress,}
+                            />;
+                          </FormControl>;
                           <Button
 
                   />;
@@ -803,10 +817,10 @@ if ( {) {
 
 
                 {/* Pricing and Availability Section */}
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-medium text-white'>
-                    Pricing & Availability
-                  </h3>
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Pricing & Availability;
+                  </h3>;
                   <FormField
                     control={form && form.control}
                     name='hourlyRate'
@@ -978,9 +992,11 @@ if ( {) {
                   </div>;
                 </div>;
                 {/* Pricing and Availability Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
-                  <FormField
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - medium text - white'>;
+                    Pricing & Availability;
+                  </h3>;
+                  <FormField;
                     control={form.control}
 
                     name="hourlyRate"
@@ -1011,22 +1027,22 @@ if ( {) {
                     )}
                   />
                   <FormField
-                    control={form.control}
+                    control={form && form.control}
                     name='availability'
-                    render={({ field }: { field: any }) => (
-                      <FormItem className='space-y-4'>
-                        <FormLabel className='text-zion-slate-light'>
-                          Current Status
-                        </FormLabel>                        <FormControl>
-                          <div className='space-y-2'>
-                            <div className='flex items-center space-x-2'>
+                    render={({ field }: { field: any }) => (;
+                      <FormItem className='space-y-4'>;
+                        <FormLabel className='text-zion-slate-light'>;
+                          Current Status;
+                        </FormLabel>                        <FormControl>;
+                          <div className='space-y-2'>;
+                            <div className='flex items-center space-x-2'>;
                               <input
                                 type='radio'
                                 id='available'
                                 value='available'
-                                checked={field.value === 'available'}
-                                onChange={() => field.onChange('available')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
+                                checked={field && field.value === 'available'}
+                                onChange={() => field && field.onChange('available')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
                                 htmlFor='available'
 
@@ -1042,9 +1058,9 @@ if ( {) {
                                 type='radio'
                                 id='limited'
                                 value='limited'
-                                checked={field.value === 'limited'}
-                                onChange={() => field.onChange('limited')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
+                                checked={field && field.value === 'limited'}
+                                onChange={() => field && field.onChange('limited')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
                                 htmlFor='limited'
 
@@ -1060,9 +1076,9 @@ if ( {) {
                                 type='radio'
                                 id='unavailable'
                                 value='unavailable'
-                                checked={field.value === 'unavailable'}
-                                onChange={() => field.onChange('unavailable')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
+                                checked={field && field.value === 'unavailable'}
+                                onChange={() => field && field.onChange('unavailable')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />;
                               <label
                                 htmlFor='unavailable'
                                 className='text-white flex items-center gap-2'>;
@@ -1076,7 +1092,7 @@ if ( {) {
                   />;
                   <FormField;
                     control={form.control}
-                    name="availability"
+                    name='availability';
                     render={({ field }: { field: any }) => (
 
                       <FormItem className="space-y-4">
@@ -1182,10 +1198,15 @@ if ( {) {
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0]
-if (file) {
-  const reader = new FileReader ()
+//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
+}
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  const file = e.target.files?.[0];
+// Check condition
+if ( {) {
+  $2
+}
+  const reader = new FileReader ();
 reader.onloadend = () => {
 
   setUploadedAvatar (reader.result as string);
@@ -1206,7 +1227,7 @@ reader.readAsDataURL (file);
   //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content');
 
 setGeneratedContent ({
-}catch (error: any) {'
+}catch (error: any) {';
   logErrorToProduction ('Error generating enhanced profile:', {
 
   data: error;
@@ -1216,24 +1237,36 @@ toast ({
   setIsGenerating (false);
 
 }
-//Apply generated content to form const applyGeneratedContent = () => {
-  if (generatedContent) {'
-  const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) )
-if (newServices.length > 0) {
+//Apply generated content to form const applyGeneratedContent = () =>: any {
+  // Check condition
+if ( {') {
+  $2
 }
-//Handle form submission const onSubmit = async (values: ServiceFormValues) => {
-  if (serviceTags.length === 0) {
+  const new_services = generated_content.services.filter (service => typeof service === 'string' && service && !service_tags.includes (service) );
+// Check condition
+if ( {) {
+  $2
+}
+}
+//Handle form submission const on_submit = async (values: ServiceFormValues) => {
+  // Check condition
+if ( {) {
+  $2
+}
   toast ({
   return;
-}setIsSubmitting (true)
+}setIsSubmitting (true);
 try {
-  //For actual implementation with Supabase if (!user?.id) {
-}//Enhance profile if not already done let finalSummary = values.bio
-let finalServices = serviceTags
+  //For actual implementation with Supabase // Check condition
+if ( {) {
+  $2
+}
+}//Enhance profile if not already done let final_summary = values.bio;
+let final_services = service_tags;
 try {
   const {
-  data: aiData '
-}= await supabase.functions.invoke ('service-profile-enhancer', {
+  data: ai_data ';
+}= await supabase.functions.invoke ('service - profile - enhancer', {
   body: {
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')

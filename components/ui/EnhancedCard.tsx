@@ -7,24 +7,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
@@ -36,6 +44,7 @@ export default function EnhancedCard(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className?: string;
 }) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
@@ -48,14 +57,11 @@ export default function EnhancedCard({ children, className = '' }: { children: R
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
-</div>
+    </div>
   );
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-    </div>
-  )
-
 }
 }

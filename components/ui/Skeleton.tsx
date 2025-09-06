@@ -21,7 +21,9 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
 export type SkeletonProps = {;
   className?: string;
 };
+
 export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
+
     >;
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />;
       <style jsx global>{`;
@@ -33,6 +35,7 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
       `}</style>;
     </div>;
   );
+=======
   class_name?: string;
 }
 ;
@@ -49,6 +52,7 @@ function Skeleton() {
           }        }
       `}</style>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export type SkeletonProps = {;
   className?: string;
@@ -58,7 +62,6 @@ export type SkeletonProps = {;
 export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
 
   return (
-<<<<<<< HEAD
     <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark: via-white/10 to-transparent" />;
       <style jsx global>{`;
@@ -78,6 +81,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   rounded = false}) => {;
   const style: React && React.CSSProperties = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
@@ -93,6 +97,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;

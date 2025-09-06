@@ -114,11 +114,9 @@ export default function MockCheckoutPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
   return (
+<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>
       <div className='container mx-auto max-w-2xl'>
         <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>
@@ -170,6 +168,8 @@ export default function MockCheckoutPage(req, res) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
       <div className="container mx-auto max-w-2xl">
         <div className="bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center">

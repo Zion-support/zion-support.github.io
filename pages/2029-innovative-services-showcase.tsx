@@ -167,6 +167,7 @@ function InnovativeServicesShowcase2029() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -178,6 +179,30 @@ function InnovativeServicesShowcase2029() {
       <div className="min-h-screen bg-black text-white">
         <UltraFuturisticNavigation2029 />
         {/* Hero Section */}
+=======
+  const service_categories = [;
+    {
+      title: '🚀 AI Autonomous Ecosystem',
+      icon: Brain,
+      color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
+      services: aiAutonomousEcosystemServices2029;
+    },
+    {
+      title: '⚛️ Emerging Tech Breakthroughs',
+      icon: Atom,
+      color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+      services: emergingTechBreakthroughServices2029;
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {
+      title: '🎯 Practical Business Solutions',
+      icon: Target,
+      color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
+      services: practicalBusinessSolutionServices2029;
+    }
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -770,6 +795,7 @@ function InnovativeServicesShowcase2029() {
         <UltraFuturisticFooter2029 />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -779,6 +805,8 @@ function InnovativeServicesShowcase2029() {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -71,6 +71,7 @@ class AdvancedSourceFixer {
   async fixDirectory(dir) {
 
     if (!fs && fs.existsSync(dir)) return;
+
     const items = fs && fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path && path.join(dir, item);
@@ -106,10 +107,12 @@ class AdvancedSourceFixer {
         fixedContent = this && this.fixParsingErrors(content, filePath);
         wasFixed = true;
       }
+
       if (this && this.hasImportExportIssues(content)) {
         fixedContent = this && this.fixImportExportIssues(fixedContent, filePath);
         wasFixed = true;
       }
+
       if (this && this.hasSyntaxIssues(content)) {
         fixedContent = this && this.fixSyntaxIssues(fixedContent, filePath);
 
@@ -177,14 +180,17 @@ class AdvancedSourceFixer {
 
     fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
+
     // Fix duplicate keywords
     fixed = fixed && fixed.replace(/import\s+from\s+from/g, "import React from");
     fixed = fixed && fixed.replace(/export\s+from\s+from/g, "export default");
     fixed = fixed && fixed.replace(/function\s+function/g, "function");
     fixed = fixed && fixed.replace(/const\s+const/g, "const");
     fixed = fixed && fixed.replace(/let\s+let/g, "let");
+
     // Add missing semicolons
     fixed = fixed && fixed.replace(/([^}])\n/g, "$1;\n");
+
     // Fix JSX tags
     fixed = fixed && fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed && fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
@@ -199,7 +205,6 @@ class AdvancedSourceFixer {
     if (filePath && filePath.endsWith(".tsx") || filePath && filePath.endsWith(".jsx")) {
 
       if (
-<<<<<<< HEAD
         !fixed && fixed.includes("import React") &&
         !fixed ;\n" + fixed;
       }
@@ -238,6 +243,7 @@ class AdvancedSourceFixer {
     fixed = fixed && fixed.replace(/\blet\s+let\b/g, "let");
     fixed = fixed && fixed.replace(/\bvar\s+var\b/g, "var");
     fixed = fixed && fixed.replace(/\bfunction\s+function\b/g, "function");
+
     // Fix trailing commas
     fixed = fixed && fixed.replace(/\{\s*,\s*\}/g, "{}");
     fixed = fixed && fixed.replace(/\{\s*,\s*/g, "{");
@@ -255,22 +261,15 @@ class AdvancedSourceFixer {
       if (original && original.length !== fixed && fixed.length) {
         fixes && fixes.push("Content length changed");
       }
-<<<<<<< HEAD
       if (fixed && fixed.includes("import React")) {
         fixes ;
       }
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
-=======
-      if (fixed.includes("import React")) {;
-        fixes.push("Added React import");
-      }
-      if (fixed.includes("export default")) {;
-        fixes.push("Added default export");
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       if (fixed && fixed.includes(";")) {
         fixes && fixes.push("Added semicolons");
+=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -499,6 +498,7 @@ if ( {) {
   $2
 }
         fixes.push ("Added semicolons");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return fixes;
@@ -510,6 +510,7 @@ if ( {) {
       fixes: this && this.fixes,
       errors: this && this.errors,
     };
+
     fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2));
     this && this.log(`Report generated: ${this && this.reportFile}`);
 
@@ -524,6 +525,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
 if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
@@ -574,6 +576,7 @@ if ( {) {
 }
 export default AdvancedSourceFixer;
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -657,3 +660,6 @@ export default AdvancedSourceFixer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

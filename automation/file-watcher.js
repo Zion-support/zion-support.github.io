@@ -124,13 +124,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {;
         issues.push('React used without import');
       }
-<<<<<<< HEAD
-=======
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

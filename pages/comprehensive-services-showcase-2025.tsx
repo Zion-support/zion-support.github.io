@@ -450,7 +450,61 @@ import Link from 'next/link';
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
+<<<<<<< HEAD
             </div>
+=======
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-blue-400 mb-2'>
+                  $2.5B+
+                </div>
+                <div className='text-gray-400'>Market Coverage</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-400 mb-2'>
+                  95%
+                </div>
+                <div className='text-gray-400'>AI Accuracy</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-green-400 mb-2'>
+                  400%
+                </div>
+                <div className='text-gray-400'>Average ROI</div>
+              </div>
+
+              that delivers measurable results.;
+            </p>;
+
+            {/* Stats */}
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>;
+              <div className='text-center'>;
+                <div className='text-3xl font-bold text-cyan-400 mb-2'>;
+                  {comprehensiveRealServices2025 && comprehensiveRealServices2025.length}+;
+                </div>;
+                <div className='text-gray-400'>Real Services</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl font-bold text-blue-400 mb-2'>;
+                  $2 && 2.5B+;
+                </div>;
+                <div className='text-gray-400'>Market Coverage</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl font-bold text-purple-400 mb-2'>;
+                  95%;
+                </div>;
+                <div className='text-gray-400'>AI Accuracy</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl font-bold text-green-400 mb-2'>;
+                  400%;
+                </div>;
+                <div className='text-gray-400'>Average ROI</div>;
+              </div>;
+            </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <Link
@@ -1091,6 +1145,7 @@ if (return '$500 - $800') {
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                           <span className='text - white font - semibold'>;
                             {service.rating}
+<<<<<<< HEAD
                           </span>
                           <span className='text-gray-400'>
                             ({service.reviews})
@@ -1135,6 +1190,63 @@ if (return '$500 - $800') {
                         </div>
                       </div>
                     </div>
+=======
+
+                          </div>;
+                          <p className='text-gray-300 mb-3'>;
+                            {service && service.description}
+                          </p>;
+                          <div className='flex items-center gap-4 text-sm text-gray-400'>;
+                            <span>Category: {service && service.category}</span>;
+                            <span>Setup: {service && service.setupTime}</span>;
+                            <span>Trial: {service && service.trialDays} days</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+=======
+    <>
+      <Head>
+        <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence" />
+        <meta property="og:title" content="Comprehensive Services Showcase 2025 | Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms." />
+        <meta property="og:url" content="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+      </Head>
+
+
+                      {/* Price and Rating */}
+                      <div className='text-right'>;
+                        <div className='text-3xl font-bold text-cyan-400 mb-2'>;
+                          {service && service.price}
+                          <span className='text-lg text-gray-400'>;
+                            {service && service.period}
+                          </span>;
+                        </div>;
+                        <div className='flex items-center justify-end gap-1 mb-2'>;
+                          <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                          <span className='text-white font-semibold'>;
+                            {service && service.rating}
+                          </span>;
+                          <span className='text-gray-400'>;
+                            ({service && service.reviews});
+                          </span>;
+                        </div>;
+                        <span className='text-sm text-gray-400'>;
+                          {getPriceRange(service && service.price)}
+                        </span>;
+                      </div>;
+                    </div>;
+
+
+                        </div>;
+                      </div>;
+                    </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     {/* CTA and Additional Info */}
                     <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>
                       <div className='flex items-center gap-4 text-sm text-gray-400'>
@@ -1839,6 +1951,7 @@ if (return '$500 - $800') {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
     </>
 );
 export default ComprehensiveServicesShowcase2025;
@@ -1849,6 +1962,9 @@ export default ComprehensiveServicesShowcase2025;
 },
 export default ComprehensiveServicesShowcase2025,
 =======
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Filters and Search Section */}
         <section className="py-12 bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4">

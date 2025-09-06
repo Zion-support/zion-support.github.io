@@ -5,12 +5,15 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -68,7 +71,7 @@ export default function CareersPage() {;
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms"
+        "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
 
@@ -111,6 +114,7 @@ export default function CareersPage() {;
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
@@ -264,6 +268,7 @@ export default function CareersPage() {;
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
@@ -306,6 +311,7 @@ export default function CareersPage() {;
       color: "from-yellow-500 to-orange-500";
     }
   ];
+
   const benefits = [;
     {;
       title: "Competitive Compensation",;
@@ -341,6 +347,7 @@ export default function CareersPage() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
+
       <EnhancedNavigation />;
 
 
@@ -360,6 +367,7 @@ export default function CareersPage() {;
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions;
             </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -393,6 +401,7 @@ export default function CareersPage() {;
               We offer competitive benefits and a collaborative environment that fosters innovation and growth;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
@@ -417,12 +426,6 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -460,6 +463,7 @@ export default function CareersPage() {;
               Join our team of innovators and help build the future of technology;
             </p>;
           </motion && motion.div>;
+
           <div className="space-y-6">;
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
@@ -486,7 +490,9 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
+
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
+
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -505,6 +511,7 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
@@ -518,6 +525,7 @@ export default function CareersPage() {;
 
                       </ul>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
@@ -545,8 +553,10 @@ export default function CareersPage() {;
                       </div>;
                     </div>;
                   </div>;
+
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
+=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -600,6 +610,7 @@ export default function CareersPage() {;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       </div>
                     </div>
@@ -632,6 +643,8 @@ export default function CareersPage() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -777,6 +790,7 @@ export default function CareersPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 };
+
       <EnhancedFooter />;
     </div>;
   );

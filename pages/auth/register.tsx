@@ -45,6 +45,7 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 const RegisterPage = () => {
   const router = useRouter()
   useEffect(() => {
@@ -60,6 +61,26 @@ const RegisterPage = () => {
       router.push('/auth/login?registrationSuccess=true')
     }
   }
+=======
+
+import React, { useEffect } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import SignupForm from '@/components / auth / SignupForm',
+import { AuthButtons } from '@/components / AuthButtons',
+import { fire_event } from '@/lib / analytics',
+import { log_info } from '@/utils / production_logger',
+import { use_router } from 'next / router',
+const RegisterPage = () =>: any {
+  const router = use_router (),
+  useEffect (() => {
+    fire_event ('signup_page_view');
+  }, []),
+  const handle_success = ({ email, emailVerificationRequired }: {
+    email: string,
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -219,6 +240,7 @@ if ( {) {
 export default RegisterPage;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default RegisterPage,;
@@ -280,6 +302,8 @@ export default RegisterPage,
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

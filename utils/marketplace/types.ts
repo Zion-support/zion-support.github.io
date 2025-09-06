@@ -19,8 +19,8 @@ export interface Offer {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
 
   scopeSummary: string;
@@ -63,8 +63,8 @@ export interface Project {;
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
 <<<<<<< HEAD
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';

@@ -221,7 +221,10 @@ export default function HelpArticlePage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>

@@ -31,6 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
@@ -425,6 +426,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.8,
       reviews: 98,
     },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
 =======
@@ -494,9 +496,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.9,
       reviews: 23,
     },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
         'Real-time tracking',
+=======
       id: 'iot - fleet - management - platform',
       name: 'IoT Fleet Management Platform',
       tagline: 'Comprehensive IoT - based fleet monitoring and management',
@@ -563,9 +567,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.7,
       reviews: 145,
     },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
         'End-to-end traceability',
+=======
       id: 'blockchain - supply - chain - transparency',
       name: 'Blockchain Supply Chain Transparency Platform',
       tagline: 'End - to - end supply chain transparency with blockchain',
@@ -632,6 +638,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.6,
       reviews: 56,
     },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 <<<<<<< HEAD
       id: 'ai-powered-warehouse-automation'
@@ -795,15 +802,18 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
   {
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
@@ -817,6 +827,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
@@ -827,6 +838,13 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Custom algorithms_compliance tools';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+  ];    features: [;
+      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
+      'Custom algorithms_compliance tools';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     ];
 
     popular: true, icon: '📦',
@@ -891,6 +909,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
   reviews: number;
 }
 ;
+<<<<<<< HEAD
 =======
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
@@ -1179,3 +1198,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

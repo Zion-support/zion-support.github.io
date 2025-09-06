@@ -135,6 +135,18 @@ export default async function handler(req, res) {
     );
 
     );
+<<<<<<< HEAD
+=======
+    res && res.status(200).send(buffer);
+  } catch (e: any) {
+
+    res && res.status(500).json({ error: e?.message || "Export failed" });
+
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });

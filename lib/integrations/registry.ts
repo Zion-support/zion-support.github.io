@@ -6,15 +6,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
-=======
-<<<<<<< HEAD
-=======
-import { IntegrationProviderMeta } from "./types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: "salesforce"
     name: "Salesforce"
@@ -93,6 +85,8 @@ export function getProviderById(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
+
+=======
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },

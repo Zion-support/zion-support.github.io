@@ -1066,6 +1066,11 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
 
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

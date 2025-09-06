@@ -174,6 +174,11 @@ export default function ComprehensivePricingPage(req, res) {
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <>
       <Head>
@@ -198,6 +203,7 @@ export default function ComprehensivePricingPage(req, res) {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -221,6 +227,49 @@ export default function ComprehensivePricingPage(req, res) {
                 Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
               </p>
               {/* Billing Toggle */}
+=======
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+=======
+=======
+    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍' },
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
+  ],
+  const filtered_services = selected_category === 'all';
+    ? all_services;
+    : all_services.filter (service => service.category === selected_category),
+  const getCategoryIcon = (category: string) =>: any {
+    const category_data = categories.find (cat => cat.id === category),
+    return category_data?.icon || '🚀';
+  },
+  const calculateYearlyPrice = (monthly_price: string) =>: any {
+    const price = parse_float (monthly_price.replace ('$', '').replace (, '')),
+    return `$${(price * 12 * 0.8).to_fixed (0)}`, // 20% discount for yearly;
+  },
+  const toggleServiceExpansion = (service_id: string) =>: any {
+    setExpandedService (expanded_service === service_id ? null : service_id);
+  },
+  return (
+    <>;
+      <Head>;
+        <title > Comprehensive Pricing 2025 - Zion Tech Group</title>;
+        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />;
+        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />;
+        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - pricing - 2025" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Header */}
+        <section className="py - 20 px - 6">;
+          <div className="max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -235,6 +284,7 @@ export default function ComprehensivePricingPage(req, res) {
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
+<<<<<<< HEAD
                   onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -260,6 +310,32 @@ export default function ComprehensivePricingPage(req, res) {
                 )}
               </div>
               {/* Stats */}
+=======
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
+                  }`}
+=======
+=======
+            >;
+              <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
+                Comprehensive Pricing 2025;
+              </h1>;
+              <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
+                Revolutionary micro SAAS services that transform businesses with cutting - edge AI, quantum computing, and emerging technologies;
+              </p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              {/* Billing Toggle */}
+              <div className="flex items - center justify - center gap - 4 mb - 12">;
+                <span className="text - white / 60">Monthly</span>;
+                <button;
+                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
+                  className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
+                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';
+                  }`}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -939,12 +1015,16 @@ export default function ComprehensivePricingPage(req, res) {
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

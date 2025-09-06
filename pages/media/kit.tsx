@@ -71,6 +71,7 @@ const KitPage = () => {
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
+<<<<<<< HEAD
   const assets: MediaAsset[] = useMemo(
     () => getDefaultAssets(bundle)
     [bundle]
@@ -115,9 +116,16 @@ const KitPage = () => {
   const onGenerateTimeline = useCallback(() => {;
     setTimeline(buildTimeline(startDate));
   }, [startDate]),;
+=======
+
+  const onGenerateTimeline = useCallback(() => {;
+    setTimeline(buildTimeline(startDate));  }, [startDate]);
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const onDownloadZip = useCallback(async () => {;
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
+
     // Add static/dynamic assets;
     for (const asset of assets) {;
       if (asset.type === 'text' && asset.content != null) {;
@@ -213,6 +221,7 @@ const KitPage = () => {
     let y = 760;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -221,6 +230,8 @@ const KitPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     drawText('Zion Media Kit', 50, y, 18);
 =======
 import {useCallback, useMemo, useState} from 'react';
@@ -382,6 +393,7 @@ if ( {) {
 
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
     const onCopy = () => navigator.clipboard.writeText(text);
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
@@ -416,6 +428,8 @@ if ( {) {
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     const onCopy = () => navigator && navigator.clipboard.writeText(text);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
@@ -577,6 +591,7 @@ if ( {) {
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
+<<<<<<< HEAD
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -592,16 +607,53 @@ if ( {) {
           <ul className="grid md:grid-cols-2 gap-3">
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            )}
+
+          </div>;
+        </section>;
+
+        <section className='p-4 border rounded-lg'>;
+          <h3 className='font-semibold mb-3'>Assets Included</h3>;
+          <ul className='grid md:grid-cols-2 gap-3'>;
+            {assets && assets.map(a => (;
+
+              <li
+                key={a && a.filename}
+                className='flex items-center justify-between border rounded p-2'>;
+                <span className='text-sm'>{a && a.filename}</span>;
+                {a && a.path ? (;
+                  <a href={a && a.path} download className='text-blue-600 text-sm'>;
+                    Download;
+                  </a>;
+                ) : (;
+                  <span className='text-gray-400 text-xs'>generated</span>;
+                )}              </li>;
+
+=======
+=======
+
+
+        <section className="p-4 border rounded-lg">
+          <h3 className="font-semibold mb-3">Assets Included</h3>
+          <ul className="grid md:grid-cols-2 gap-3">
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
@@ -625,6 +677,8 @@ if ( {) {
 }
 export default KitPage;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -634,9 +688,17 @@ export default KitPage;
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
+=======
+};
+
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">

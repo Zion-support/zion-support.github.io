@@ -26,6 +26,7 @@ import React, { useMemo, useState } from 'react';
 export default function ServiceDescriptionGeneratorPage() {
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
+<<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -42,6 +43,13 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 export default function ServiceDescriptionGeneratorPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+=======
+
+export default function ServiceDescriptionGeneratorPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -124,6 +132,7 @@ export default function ServiceDescriptionGeneratorPage() {;
     navigator.clipboard.writeText(generated).catch(() => {});
 
   }
+<<<<<<< HEAD
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -201,6 +210,8 @@ export default function ServiceDescriptionGeneratorPage() {;
 
   }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
@@ -352,6 +363,7 @@ export default function ServiceDescriptionGeneratorPage() {;
             </div>
           </div>
           <textarea
+<<<<<<< HEAD
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated  } catch (error) {
     console.error("Error:", error);
@@ -367,6 +379,27 @@ export default function ServiceDescriptionGeneratorPage() {;
           {accepted && (
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
+=======
+
+
+                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'>;
+                Accept;
+              </button>;
+            </div>;
+          </div>;
+
+          <textarea
+            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            value={generated}
+            onChange={e => setGenerated(e && e.target.value)}
+          />;
+
+          {accepted && (;
+            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>;
+              Accepted. You can copy and paste this into your CMS.;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </div>          )}
         </div>;
       )}

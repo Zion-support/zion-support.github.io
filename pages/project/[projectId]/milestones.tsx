@@ -104,6 +104,7 @@ export default function ProjectMilestonesPage(req, res) {
   }, []),;
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
+<<<<<<< HEAD
     if (!role) return,;
     try {
       const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
@@ -115,6 +116,15 @@ export default function ProjectMilestonesPage(req, res) {
   }
 }
   }, [role]),;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    if (!role) return;
+
+
+  }, [role]);
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   useEffect(() => {;
 <<<<<<< HEAD
     if (!projectId) return,;
@@ -307,18 +317,61 @@ if (return) {
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
       in_progress: 'In Progress'
       submitted: 'Submitted'
       approved: 'Approved'
       paid: 'Paid'
     }
+=======
+
+    setMilestones(prev => [res && res.milestone, ...prev]);  };
+
+  const handleAction = async (;
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
+    milestoneId: string;
+  ) => {;
+    if (!projectId) return,;
+    const map: Record<string, string> = {;
+      in_progress: 'In Progress',;
+      submitted: 'Submitted',;
+      approved: 'Approved',;
+      paid: 'Paid',;
+    };
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {
       status
     });
+<<<<<<< HEAD
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
     );  }
+=======
+    setMilestones(prev =>;
+      prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
+    );  };
+
+
+  return (
+    <div>;
+      <Head>;
+        <title>Project Milestones</title>;
+        <meta
+          name='description'
+          content='Track project deliverables and milestone payments'
+
+          </p>
+        </div>
+        {role !== 'talent' && (
+          <div className='mb-8 p-4 rounded bg-gray-50 border'>
+            <div className='flex items-center justify-between mb-3'>
+              <h2 className='text-lg font-semibold'>Add Milestone</h2>
+              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
+=======
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       in_progress: 'In Progress',
       submitted: 'Submitted',
@@ -363,6 +416,31 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+<<<<<<< HEAD
+=======
+
+        />;
+      </Head>;
+
+      <div className='max-w-5xl mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <h1 className='text-2xl font-bold'>Milestones</h1>;
+          <p className='text-sm text-gray-600'>;
+            Project: {projectId as string}
+
+          </p>;
+        </div>;
+
+        {role !== 'talent' && (;
+          <div className='mb-8 p-4 rounded bg-gray-50 border'>;
+            <div className='flex items-center justify-between mb-3'>;
+              <h2 className='text-lg font-semibold'>Add Milestone</h2>;
+              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>;
+            <MilestoneForm onSubmit={handleCreate} />;
+          </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         )}
         {loading && <div>Loading milestones...</div>}
 <<<<<<< HEAD
@@ -468,7 +546,10 @@ if (return, ) {
 =======
         {error && <div className="text-red-600">{error}</div>}
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -482,6 +563,7 @@ if (return, ) {
             ))}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='mt-12 text-xs text-gray-500'>
           Integration hooks ready: on Approved &rarr; trigger payout intent; on
@@ -515,6 +597,9 @@ if (return, ) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>

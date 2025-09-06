@@ -902,6 +902,7 @@ export const real2036ITServices = [;
   }
 ];
 ;
+<<<<<<< HEAD
 =======
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
@@ -1156,3 +1157,6 @@ export const real2036ITServices = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

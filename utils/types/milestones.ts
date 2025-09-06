@@ -11,6 +11,8 @@ export type ProjectParticipants = {;
   clientUserId: string;
   talentUserId: string;
 }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Project = {  id: string;
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
@@ -59,7 +61,6 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   uploaded_at: string,
 
 }
-<<<<<<< HEAD
 export interface CreateMilestoneRequest {
 <<<<<<< HEAD
 
@@ -102,8 +103,8 @@ export interface UpdateMilestoneRequest {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title?: string;
   description?: string;
-  dueDate?: string;
-  amountUsd?: number;
+  due_date?: string;
+  amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 

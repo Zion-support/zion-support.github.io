@@ -90,6 +90,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -110,6 +111,11 @@ import path from 'path';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Service = typeof enhancedRealMicroSaasServices[number];
+=======
+type Service = typeof enhancedRealMicroSaasServices[number];
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -622,6 +628,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 								{(service.integrations |[]).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 								))}
@@ -643,6 +650,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
   }
 }
 =======
+=======
+
+
+								{(service.integrations || []).slice(0, 12).map((i: string) => (
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

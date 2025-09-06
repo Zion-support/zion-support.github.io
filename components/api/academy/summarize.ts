@@ -8,6 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { moduleTitle, moduleContent } = req && req.body || {};
   const apiKey = process && process.env.OPENAI_API_KEY;
+
   const fallback = () =>
     res && res.status(200).json({
       summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
@@ -16,9 +17,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const fallback = () => res && res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+=======
   const fallback = () => res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -109,6 +113,7 @@ function handler() {
     return fallback ();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!apiKey) return fallback(),
 
@@ -123,6 +128,8 @@ function handler() {
         { role: 'user', content: prompt }],
       temperature: 0.3}),
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
   }
   }

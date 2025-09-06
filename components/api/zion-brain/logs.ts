@@ -25,11 +25,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
+
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
 
 
   }
+
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
 
@@ -95,8 +97,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}
 ;
@@ -105,6 +110,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     by_module,
     by_type,
     total: entries.length,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -125,14 +131,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   });  for (const e of entries) {
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
-<<<<<<< HEAD
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 
 

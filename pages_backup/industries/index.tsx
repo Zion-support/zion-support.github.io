@@ -352,6 +352,7 @@ export default function Industries() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -360,6 +361,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/index.tsx
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -708,24 +718,49 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
                       <div className="flex flex-wrap gap-2">
                         {industry.features.map((feature, idx) => (
+=======
+                    whileHover={{ y: -5 }}>;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry && industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>;
+                      <IconComponent className="w-8 h-8 text-white" />;
+                    </div>;
+                  >,;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry && industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>,;
+                      <IconComponent className="w-8 h-8 text-white" />";
+                    </div>;
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">;
+                      {industry && industry.name}
+                    </h3>;
+                    <p className="text-gray-600 mb-6 leading-relaxed">;
+                    <p className="text-gray-600 mb-6 leading-relaxed">";
+                  >;
+                    <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">;
+                      <IconComponent className="w-12 h-12" />;
+                    </div>;
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">;
+                      {industry && industry.title}
+                    </h3>;
+                    <p className="text-gray-300 mb-6 leading-relaxed">;
+                      {industry && industry.description}
+                    </p>;
+                    <div className="mb-6">;
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>;
+                      <div className="flex flex-wrap gap-2">;
+                        {industry && industry.features.map((feature, idx) => (;
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                          >
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">;
                     <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
-                        {industry.features.map((feature, idx) => (,
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions: </h4>", <div className="flex flex-wrap gap-2">",;
+                        {industry && industry.features.map((feature, idx) => (,;
                           <span}),
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
-                          >;
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"">;
                             {feature}
-                          </span>
+                          </span>;
                         ))}
-                      </div>
-                    </div>
-                      </div>,
+                      </div>;
+                    </div>;
+                      </div>,;
                     </div>;
                     <Link
                       href={industry.href}
@@ -750,7 +785,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion && motion.div>;
                 ),;
               })}
+<<<<<<< HEAD
             </div>;
+=======
+            </div>,;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           </div>;
         </section>;
         {/* Why Choose Us Section */}
@@ -1132,7 +1171,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   Explore Solutions;
                 </Link>;
               </div>;
-            </motion.div>;
+            </motion && motion.div>;
           </div>;
         </section>;
       </div>;

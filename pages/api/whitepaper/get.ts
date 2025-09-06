@@ -31,6 +31,7 @@ export default function handler(req, res) {
   const { id } = req.query;
   if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
   const entry = getShared(id);
+<<<<<<< HEAD
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt });
   } catch (error) {
@@ -40,6 +41,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  if (!entry) return res.status(404).json({ error: 'Not found' });
+  res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
   } catch (error) {
     console.error("Error:", error);

@@ -228,6 +228,11 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -293,7 +298,21 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 origin/main
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  const socialLinks = [;
+    { name: "Facebook", href: "#", icon: Facebook },;
+    { name: "Twitter", href: "#", icon: Twitter },;
+    { name: "LinkedIn", href: "#", icon: Linkedin },;
+    { name: "Instagram", href: "#", icon: Instagram },;
+    { name: "GitHub", href: "#", icon: Github },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  ];
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -468,7 +487,10 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -516,7 +538,12 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+<<<<<<< HEAD
             </motion.div>
+=======
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -628,7 +655,11 @@ origin/main
                 Cookie Policy
               </Link>
             </div>
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           </div>
         </div>
       </div>

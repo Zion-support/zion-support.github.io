@@ -45,20 +45,11 @@ reporter: [ ['list'], ['json', {
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI
-=======
-  ...devices['Desktop Safari']
-}, //
-}
-// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
-  // Configure the web server to be started by Playwright
-  webServer: {
-    command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     timeout: 120 * 1000, // 2 minutes timeout for server to start
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers
   // projects: [
-<<<<<<< HEAD
+=======
 trace: on - first - retry';
 }
 reporter: [ ['list'], ['json', {
@@ -92,8 +83,7 @@ reporter: [ ['list'], ['json', {
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers;
   // projects: [;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   //   {
   //     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
   //   {

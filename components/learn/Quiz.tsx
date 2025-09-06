@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -157,6 +161,7 @@ export default function Quiz({ questions, onComplete }: Props) {
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 />
 <<<<<<< HEAD
                 <span>{_opt}</span>
@@ -198,6 +203,8 @@ export default function Quiz({ questions, onComplete }: Props) {
     </div>
   )
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
   );
 }

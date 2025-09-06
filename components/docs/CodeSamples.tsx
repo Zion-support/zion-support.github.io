@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -59,18 +63,27 @@ interface Props {
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+
 const tabs: Array<{;
   key: Props['samples'][number]['language'];
   label: string;
@@ -79,13 +92,18 @@ const tabs: Array<{;
   { key: 'javascript', label: 'JavaScript' },;
   { key: 'python', label: 'Python' },;
 ];
+
 export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
 
 
@@ -152,7 +170,10 @@ export default function CodeSamples(): any ({ samples }: Props) {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ;
 const tabs: Array<{
   key: Props['samples'][number]['language'];
@@ -204,20 +225,6 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
-            key={t.key}
-            className={_`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
-            onClick={_() => setActive(t.key)}
-          >
-            {_t.label}
-          </button>
-        ))}
-      </div>
-      <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
-        <code>{sampleMap[active] || ''}</code>
-      </pre>
-    </div>
-  )
-
 }
 <<<<<<< HEAD
 }

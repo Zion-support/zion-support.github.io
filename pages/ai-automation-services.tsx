@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -6,6 +7,34 @@ import { Zap, Brain, Code, Shield, Users, TrendingUp;
   CheckCircle, ArrowRight, Star, Clock, Target;
   Cpu, Rocket, Globe, BarChart3, Settings
  } from 'lucide-react';
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Layout from '../components/layout/Layout';
 
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
@@ -63,6 +92,7 @@ const serviceHighlights = [
 
 const benefits = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     title: '80% Reduction in Manual Work'
     description: 'Automate repetitive tasks and focus on high-value activities'
@@ -94,6 +124,11 @@ import Link from 'next/link';
 import Head from 'next / head';
 import Link from 'next / link';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import {motion} from 'framer-motion';
 import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -300,6 +335,7 @@ export default function AIAutomationServices() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>
@@ -316,6 +352,14 @@ export default function AIAutomationServices() {;
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
+=======
+
+        />;
+        <meta name='author' content='Zion Tech Group' />;
+        <meta name='robots' content='index, follow' />;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -517,12 +561,16 @@ export default function AIAutomationServices() {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
               <span className="text-emerald-400 font-medium">AI Automation Services</span>
             </div>
+<<<<<<< HEAD
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
@@ -538,11 +586,17 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
+              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 AI Automation
               </span>
               <br />
               <span className="text-white">Revolution</span>
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Transform your business operations with cutting-edge AI
@@ -557,6 +611,9 @@ export default function AIAutomationServices() {;
 =======
             
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
@@ -1344,12 +1401,26 @@ function AIAutomationServices() {
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
                 </p>              </motion.div>
+=======
+
+                  className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                  <benefit && benefit.icon className={`w-full h-full ${benefit && benefit.color}`} />;
+                </div>;
+
+                <h3 className='text-xl font-bold text-white mb-4'>;
+                  {benefit && benefit.title}
+                </h3>;
+                <p className='text-gray-300 leading-relaxed'>;
+                  {benefit && benefit.description}
+                </p>              </motion && motion.div>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             ))}
           </div>
         </div>
@@ -1580,6 +1651,7 @@ function AIAutomationServices() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
@@ -1588,6 +1660,8 @@ function AIAutomationServices() {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </Layout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

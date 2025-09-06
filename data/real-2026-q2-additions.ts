@@ -29,14 +29,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const real2026Q2Additions = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -398,6 +391,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -433,6 +427,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -476,6 +471,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -511,6 +507,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -545,6 +542,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -580,9 +578,11 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / status - slo - plus',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Third-party risk programs',
+=======
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
@@ -615,6 +615,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -649,6 +650,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'msp-remote-device-ops'
@@ -964,6 +966,7 @@ export const real2026Q2Additions = [;
   }
 ];
 ;
+<<<<<<< HEAD
 =======
     period: '/device/month';
     trialDays: 14;
@@ -1227,3 +1230,6 @@ export const real2026Q2Additions = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

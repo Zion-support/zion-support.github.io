@@ -8,8 +8,14 @@ module.exports = default function CloudFinOps() {; return (; <Article; title="Cl
 import React from 'react';
 interface CloudfinopsProps {
   // Add props here as needed
+<<<<<<< HEAD
 }
 }
+=======
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

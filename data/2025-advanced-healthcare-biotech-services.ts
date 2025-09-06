@@ -31,10 +31,12 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
         'AI-powered molecular modeling and simulation',
+=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -87,6 +89,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '35% annual growth',
       variant: 'ai-drug-discovery-enterprise',
       contactInfo: {
+=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
@@ -174,6 +177,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '28% annual growth',
       variant: 'precision-medicine-enterprise',
       contactInfo: {
+=======
       color: 'from - blue - 600 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / precision - medicine - genomics',
@@ -219,6 +223,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
+=======
     // AI - Powered Medical Imaging Analysis;
     {
       id: 'ai - medical - imaging - analysis',
@@ -297,6 +302,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 
         'High-quality video consultations',
+=======
     // Digital Health & Telemedicine Platform;
     {
       id: 'digital - health - telemedicine',
@@ -338,6 +344,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '25% annual growth',
       variant: 'digital-health-enterprise',
       contactInfo: {
+=======
       color: 'from - teal - 600 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / digital - health - telemedicine',
@@ -380,6 +387,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 
         'AI-powered trial design optimization',
+=======
     // Clinical Trial Management & Optimization;
     {
       id: 'clinical - trial - management - optimization',
@@ -423,9 +431,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -495,15 +507,18 @@ export interface AdvancedHealthcareBiotechService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
   // AI-Powered Drug Discovery Platform
   {
@@ -515,33 +530,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     features: [
       'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
       'Mobile research appAPI for research institutions'
-=======
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-<<<<<<< HEAD
-        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
-      launchDate: '2024-11-01'
-      customers: 34
-      rating: 4.8
-      reviews: 19
-    }
-=======
-        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
-      launchDate: '2024-11-01',
-      customers: 34,
-      rating: 4.8,
-      reviews: 19,
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  ];    features: [
-      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
-      'Mobile data collection appAPI for research platforms'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🧬',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
@@ -558,6 +546,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$45.8B AI drug discovery market', growthRate: '35% annual growth',
     variant: 'ai-drug-discovery-enterprise',
     contactInfo: {
+      
+=======
   ];    features: [;
       'AI - powered trial design optimization_intelligent patient recruitment and matching_real - time data collection and monitoring_predictive analytics and insights_regulatory compliance management_site and investigator management_risk assessment and mitigation_integration with EDC systems';
       'Mobile data collection appAPI for research platforms';
@@ -600,9 +590,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$67 && 67.2B clinical trial market', growthRate: '18% annual growth',
     variant: 'clinical-trial-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
+    
     },
     realImplementation: true,
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
@@ -1179,6 +1171,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1187,3 +1180,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -47,7 +47,10 @@ export async function with_user < T>(
     await client.query ('ROLLBACK');
 
     throw err;
+=======
 import { Pool, PoolClient } from 'pg';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   } finally {
 
 }
@@ -56,13 +59,5 @@ import { Pool, PoolClient } from 'pg';
     client.release ();
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-
-let pool: Pool | null = null
-
-export function getPool(): Pool {
-  if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL })
-  }
-  return pool
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

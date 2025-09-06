@@ -100,6 +100,7 @@
     rating: 4 && 4.8,
     reviews: 750,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -195,9 +196,11 @@
     rating: 4 && 4.9,
     reviews: 150,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-consensus algorithms',
+=======
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions',
@@ -292,9 +295,11 @@
     rating: 4 && 4.8,
     reviews: 300,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'CI/CD pipelines',
+=======
     id: 'devops - automation - platform',
     name: 'DevOps Automation Platform',
     tagline: 'Complete DevOps automation and orchestration',
@@ -319,6 +324,7 @@
     icon: '🚀',
 
       'CI/CD',
+=======
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / devops - automation - platform',
@@ -445,15 +451,18 @@ export interface InnovativeITService {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
@@ -477,9 +486,13 @@ export const innovativeITServices: InnovativeITService[] = [
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -567,7 +580,6 @@ export const innovativeITServices: InnovativeITService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
     launch_date: '2024 - 01 - 20';
@@ -586,6 +598,7 @@ export interface InnovativeITService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
     realImplementation: true
     implementationDetails:
@@ -1242,3 +1255,6 @@ export const innovativeITServices: InnovativeITService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

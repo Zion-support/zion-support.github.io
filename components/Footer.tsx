@@ -9,16 +9,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -201,9 +205,8 @@ function Footer() {
     ]
 
 export default function Footer() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const currentYear = new Date().getFullYear();
+
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -242,6 +245,8 @@ export default function Footer() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
+
+=======
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -250,6 +255,7 @@ export default function Footer() {;
       { name: "Support", href: "/support" }
     ]
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   return (
     <footer className="bg-gray-900 text-white">;
       {/* Main Footer Content */}
@@ -316,9 +322,8 @@ origin/automation-improvements-final
 
 
 =======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const services = {
@@ -347,6 +352,7 @@ const Footer: React.FC = () => {
       { name: 'Automation Tools', href: /micro-saas#automation-tools' }
     ]
   };
+
   const company = [
     { name: 'About Us, href: '/about' },
     { name: Our Team', href: '/team },
@@ -355,6 +361,7 @@ const Footer: React.FC = () => {
     { name: Blog', href: '/blog },
     { name: 'Press', href: /press' }
   ];
+
   const resources = [
     { name: 'Documentation, href: '/docs' },
     { name: API Reference', href: '/api-docs },
@@ -363,6 +370,7 @@ const Footer: React.FC = () => {
     { name: FAQ', href: '/faq },
     { name: 'Contact', href: /contact' }
   ];
+
   const socialLinks = [
     { name: 'LinkedIn, href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: Twitter', href: 'https://twitter.com/ziontechgroup, icon: Twitter },
@@ -370,6 +378,7 @@ const Footer: React.FC = () => {
     { name: 'Facebook, href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
+
   return (
     <footer className="bg-gray-900 text-white>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -416,8 +425,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </div>
           </div>
@@ -457,7 +464,6 @@ origin/automation-improvements-final
 
 
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
@@ -509,6 +515,7 @@ origin/automation-improvements-final
               </div>;
             </div>;
           </div>;
+
           {/* Services */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Services</h3>;
@@ -525,40 +532,24 @@ origin/automation-improvements-final
             </ul>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
             <ul className="space-y-2">;
               {footerLinks && footerLinks.solutions.map((link) => (;
                 <li key={link && link.name}>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
@@ -599,22 +590,11 @@ origin/automation-improvements-final
               ))}
             </ul>;
           </div>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -622,6 +602,8 @@ origin/automation-improvements-final
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -662,6 +644,7 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -672,10 +655,13 @@ origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
+=======
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
                     {link && link.name}
@@ -683,10 +669,12 @@ origin/automation-improvements-final
                 </li>;
               ))}
             </ul>;
+
             <h3 className="text-lg font-semibold mb-4">Resources</h3>;
             <ul className="space-y-2">;
               {footerLinks && footerLinks.resources.map((link) => (;
                 <li key={link && link.name}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
@@ -804,6 +792,7 @@ origin/automation-improvements-final
           </div>;
         </div>;
       </div>;
+
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -856,8 +845,6 @@ origin/automation-improvements-final
 
 
 =======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
@@ -896,14 +883,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Privacy Policy
               </Link>
+=======
                 className="text-gray-400 hover:text-white transition-colors">;
                 <Instagram className="w-5 h-5" />;
               </a>;
             </div>;
+
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">;
               <Link
@@ -911,6 +898,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 className="text-gray-400 hover:text-white transition-colors">;
                 Privacy Policy;
               </Link>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/terms"
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -918,8 +906,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               </Link>;
               <Link
                 href="/cookies"
-<<<<<<< HEAD
                 className="text-gray-400 hover:text-white transition-colors">;
+=======
       {/* Newsletter Signup */}
       <div className="border - t border - gray - 800">;
         <div className="container mx - auto px - 4 py - 8">;
@@ -1003,6 +991,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 href="/cookies";
                 className="text - gray - 400 hover:text - white transition - colors";
               >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Cookie Policy;
               </Link>;
             </div>;

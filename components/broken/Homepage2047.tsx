@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -202,7 +206,6 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
@@ -210,8 +213,6 @@ import {
 
 
 
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
@@ -220,8 +221,9 @@ import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-in
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-<<<<<<< HEAD
+
 const Homepage2047: React.FC = () => {
+=======
 // Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4';
@@ -239,17 +241,21 @@ import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-inf
 
   useEffect(() => {;
     setIsVisible(true);
+
     // Auto-rotate featured services;
     const interval = setInterval(() => {;
       setCurrentServiceIndex(prev => (prev + 1) % 6);
     }, 8000);
+
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) => {;
       setMousePosition({ x: e && e.clientX, y: e && e.clientY });
     };
+
     // Animate consciousness level;
     const consciousnessInterval = setInterval(() => {;
       setConsciousnessLevel(prev => Math && Math.sin(Date && Date.now() * 0 && 0.001) * 0 && 0.3 + 0 && 0.7);    }, 100);
+
     // Track scroll position;
     const handleScroll = () => {;
       setScrollY(window && window.scrollY);
@@ -262,14 +268,10 @@ import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-inf
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
@@ -285,6 +287,38 @@ const Homepage2047: React.FC = () => {
     
 
     return () => {
+=======
+
+  useEffect(() => {;
+    setIsVisible(true);
+
+    // Auto-rotate featured services;
+    const interval = setInterval(() => {;
+      setCurrentServiceIndex((prev) => (prev + 1) % 6);
+    }, 8000);
+
+    // Track mouse movement for parallax effects;
+    const handleMouseMove = (e: MouseEvent) => {;
+      setMousePosition({ x: e && e.clientX, y: e && e.clientY });
+    };
+
+    // Animate consciousness level;
+    const consciousnessInterval = setInterval(() => {;
+      setConsciousnessLevel(prev => Math && Math.sin(Date && Date.now() * 0 && 0.001) * 0 && 0.3 + 0 && 0.7);
+    }, 100);
+
+    // Track scroll position;
+    const handleScroll = () => {;
+      setScrollY(window && window.scrollY);    };
+
+    window && window.addEventListener('mousemove', handleMouseMove);
+    window && window.addEventListener('scroll', handleScroll);
+
+    window && window.addEventListener('mousemove', handleMouseMove);
+    window && window.addEventListener('scroll', handleScroll);
+
+    return () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       clearInterval(interval);
       clearInterval(consciousnessInterval);
 
@@ -297,6 +331,7 @@ const Homepage2047: React.FC = () => {
   // Combine all innovative services
   const allInnovativeServices = [
     ...innovative2025AIAutonomousEcosystemV2;
+=======
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon;
 // Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2 } from '../data / 2025 - innovative - ai - autonomous - ecosystem - v2';
@@ -395,13 +430,15 @@ const Homepage2047: React.FC = () => {
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     )
-};
+  };
+
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
     { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
     { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
     { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-500 to-teal-500', count: innovative2025ITInfrastructureV2.length }
-];
+  ];
+
   const features = [
     { icon: Brain, title: "AI Autonomous Ecosystem 2025", description: "Revolutionary autonomous AI solutions", href: "/2025-innovative-services-showcase-v2", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum AI Neural Networks 2025", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-2025", color: "from-blue-500 to-cyan-500" },
@@ -409,9 +446,11 @@ const Homepage2047: React.FC = () => {
     { icon: Rocket, title: "Space Resource Intelligence 2025", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-2025", color: "from-indigo-500 to-purple-500" },
     { icon: Cpu, title: "Autonomous DevOps Intelligence 2025", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2025", color: "from-emerald-500 to-teal-500" },
     { icon: Database, title: "Edge Computing Orchestration 2025", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-2025", color: "from-yellow-500 to-orange-500" }
-];
+  ];
+
   const stats = [
     { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+=======
 ;
   // Get featured services for rotation;
   const featured_services = allInnovativeServices.slice (0, 6);
@@ -453,6 +492,7 @@ if (return allInnovativeServices) {
     { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp },
     { number: '24 / 7', label: 'AI Intelligence Available', icon: Brain },
     { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24 / 7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
@@ -509,20 +549,9 @@ if (return allInnovativeServices) {
 
   // Get featured services for rotation;
   const featuredServices = allInnovativeServices && allInnovativeServices.slice(0, 6);
+
   // Filter services by category;
   const getFilteredServices = () => {;
-=======
-    ...innovative2025AIAutonomousEcosystemV2
-    ...emergingTechBreakthroughs2025V4
-    ...innovative2025ITInfrastructureV2,    ...innovative2025AIAutonomousEcosystemV2;
-    ...emergingTechBreakthroughs2025V4;
-    ...innovative2025ITInfrastructureV2
-  ];
-  // Get featured services for rotation
-  const featuredServices = allInnovativeServices.slice(0, 6);
-  // Filter services by category
-  const getFilteredServices = () => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (selectedCategory === 'all') return allInnovativeServices;
     return allInnovativeServices && allInnovativeServices.filter(;
       service =>;
@@ -531,6 +560,7 @@ if (return allInnovativeServices) {
           .includes(selectedCategory && selectedCategory.toLowerCase()) ||;
         service && service.type.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase());
     );
+
   const categories = [;
     {;
       id: 'all',;
@@ -561,6 +591,7 @@ if (return allInnovativeServices) {
       count: innovative2025ITInfrastructureV2 && innovative2025ITInfrastructureV2.length,;
     },;
   ];
+
   const features = [;
     {;
       icon: Brain,;
@@ -605,7 +636,7 @@ if (return allInnovativeServices) {
       color: 'from-yellow-500 to-orange-500',;
     },;
   ];
-<<<<<<< HEAD
+
   const stats = [;
     {;
       number: `${allInnovativeServices && allInnovativeServices.length}+`,;
@@ -617,26 +648,14 @@ if (return allInnovativeServices) {
     { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices && allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },;
     { number: "99 && 99.99%", label: "Uptime Guarantee", icon: TrendingUp },;
     { number: "24/7", label: "AI Intelligence Available", icon: Brain },;
-=======
-  const stats = [
-    {
-<<<<<<< HEAD
-      number: `${allInnovativeServices.length}+`
-      label: 'Innovative Services'
-      icon: Star
-    }
-    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp }
-    { number: '24/7', label: 'AI Intelligence Available', icon: Brain }
-    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star }
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp }
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     { number: "300+", label: "Countries Served", icon: Globe }
+
   const fadeInUp = {;
     initial: { opacity: 0, y: 60 },;
     animate: { opacity: 1, y: 0 },;
     transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 }
   };
+
   const staggerContainer = {;
     animate: {;
       transition: {;
@@ -644,6 +663,8 @@ if (return allInnovativeServices) {
       },;
     },;
   };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>;
       {/* Futuristic Background */}
@@ -741,7 +762,6 @@ if (return allInnovativeServices) {
     animate: { opacity: 1, coordinate_y: 0 },
     transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
   }
-<<<<<<< HEAD
 ;
   const stagger_container = {
     animate: {
@@ -976,7 +996,9 @@ if (return allInnovativeServices) {
                         </div>;
                       </div>;
                     </div>;
+
                     <h3 className='text-2xl font-bold text-white mb-3'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>;
                     <p className='text-gray-300 mb-6 leading-relaxed'>;
@@ -1013,10 +1035,11 @@ if (return allInnovativeServices) {
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">
-<<<<<<< HEAD
+=======
                         </span>;
                       </div>;
                     </div>;
+
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug || '#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'>                >;
@@ -1030,7 +1053,9 @@ if (return allInnovativeServices) {
                         <div className="text-xs text-gray-400">Auto-rotating</div>;
                       </div>;
                     </div>;
+
                     <h3 className="text-2xl font-bold text-white mb-3">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>;
                     <p className="text-gray-300 mb-6 leading-relaxed">;
@@ -1055,27 +1080,8 @@ if (return allInnovativeServices) {
 
 
 =======
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">Starting at:</span>
-                        <span className="text-cyan-400 font-semibold">
-                          {featuredServices[currentServiceIndex]?.pricing.starter}
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">Market Size:</span>
-                        <span className="text-blue-400 font-medium">
-                          {featuredServices[currentServiceIndex]?.marketSize}
-                        </span>
-                      </div>
-                    </div>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
@@ -1126,6 +1132,7 @@ if (return allInnovativeServices) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
                   className='relative';
                 >;
                   <div className='bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 3xl p - 8 border border - cyan - 500 / 20 backdrop - blur - sm'>;
@@ -1212,26 +1219,6 @@ if (return allInnovativeServices) {
           </div>;
         </div>;
       </section>;
-=======
-=======
-
-                    >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      Learn More
-                    </Link>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
-          </div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Overview */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -1239,6 +1226,7 @@ if (return allInnovativeServices) {
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
@@ -1258,7 +1246,19 @@ if (return allInnovativeServices) {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+      {/* Services Overview */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
@@ -1282,9 +1282,6 @@ if (return allInnovativeServices) {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies;
             </p>;
           </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1384,6 +1381,7 @@ if (return allInnovativeServices) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
                     category.id === 'all';
                       ? '/2025 - innovative - services - showcase - v2';
                       : `/2025 - innovative - services - showcase - v2?category=${category.id}`;
@@ -1421,16 +1419,6 @@ if (return allInnovativeServices) {
           </motion.div>;
         </div>;
       </section>;
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -1438,6 +1426,7 @@ if (return allInnovativeServices) {
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
@@ -1457,7 +1446,19 @@ if (return allInnovativeServices) {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Discover our most revolutionary and cutting-edge technology
               solutions            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+      {/* Featured Services Grid */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
             </h2>
@@ -1481,9 +1482,6 @@ if (return allInnovativeServices) {
               Discover our most revolutionary and cutting-edge technology solutions;
             </p>;
           </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1558,18 +1556,6 @@ if (return allInnovativeServices) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* View All Services CTA */}
           <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {/* View All Services CTA */}
-          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1659,6 +1645,7 @@ if (return allInnovativeServices) {
               </Link>
               <Link
                 href="/2025-innovative-services-showcase-v2"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
                 Explore Services
@@ -1687,8 +1674,11 @@ if (return allInnovativeServices) {
 
 
 };
+
 export default Homepage2047;  );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2047;
 
 

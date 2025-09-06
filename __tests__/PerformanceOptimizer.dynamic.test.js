@@ -46,9 +46,43 @@ import '@testing-library/jest-dom'
 import PerformanceOptimizerdynamic from '../components/PerformanceOptimizer && PerformanceOptimizer.dynamic'
 describe('PerformanceOptimizerdynamic'
   test('renders without crashing'
+<<<<<<< HEAD
       screen.getByTestId('performanceoptimizer.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceOptimizerdynamic from "./components/PerformanceOptimizer.dynamic"; describe('PerformanceOptimizerdynamic', () => { test("renders without crashing",() => { render(<PerformanceOptimizerdynamic />); expect( screen.getByTestId("performanceoptimizer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceOptimizerdynamic />)}); test("handles user interactions",() => { render(<PerformanceOptimizerdynamic />)}); test("applies correct styling"
 origin/automation-improvements-final
+=======
+
+      screen && screen.getByTestId('performanceoptimizer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceOptimizerdynamic from "./components/PerformanceOptimizer ; describe('PerformanceOptimizerdynamic', () => { test("renders without crashing",() => { render(<PerformanceOptimizerdynamic />); expect( screen && screen.getByTestId("performanceoptimizer && performanceoptimizer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceOptimizerdynamic />)}); test("handles user interactions",() => { render(<PerformanceOptimizerdynamic />)}); test("applies correct styling"
+
+=======
+
+describe('PerformanceOptimizer', () => {
+  test('renders without crashing', () => {
+    render(<PerformanceOptimizer />);
+    expect(screen.getByTestId('performanceoptimizer.dynamic')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<PerformanceOptimizer />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+
+  test('handles user interactions', () => {
+    render(<PerformanceOptimizer />);
+    // Add interaction tests here
+  });
+
+  test('applies correct styling', () => {
+    render(<PerformanceOptimizer />);
+    // Add styling tests here
+  });
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

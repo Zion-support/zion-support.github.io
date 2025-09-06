@@ -1371,7 +1371,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -2114,6 +2113,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       trialDays: 14
       setupTime: '15 minutes'
     }
+
     features: [
       'Inbox labeling and prioritization'
       'On-brand response templates'
@@ -2123,6 +2123,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Metrics: FRT/ART, deflection rate'
     ]
     benefits: [
+
       'Cut response time by 60%'
       'Deflect 30–50% routine tickets'
       'Improve CSAT and NPS'
@@ -2709,10 +2710,6 @@ export const getServicesByCategory = (category: string) => {
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
-=======
-export const getServicesByCategory = (category: string) => {;
-  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -2747,18 +2744,14 @@ export const getServicesByCategory = (category: string) => {;
   }
 ];
 // Helper functions
-<<<<<<< HEAD
 export const getServicesByCategory = (category: string) => {
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
-=======
-export const getServicesByCategory = (category: string) => {;
-  return realMicroSaasServices.filter(service => service.category === category);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
+=======
     rating: 4.6,
     reviews: 6;
   }
@@ -2772,6 +2765,7 @@ competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
 implementation_details: 'Template gallery, response store, analytics, export jobs.';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Improves feedback volume 20–50%.';
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
@@ -2795,6 +2789,7 @@ competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
+=======
 reviews: 22;
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
@@ -2802,6 +2797,7 @@ competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Deliverables throughput +15–25%.';
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
@@ -2824,8 +2820,11 @@ reviews: 14
 export const serviceCategories = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -2856,35 +2855,9 @@ export const serviceCategories = [
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 =======
-  'Legal Technology',
-  'Customer Service & Support',
-  'Digital Marketing & SEO',
-  'Creative & Media',
-  'Data & Analytics',
-  'Human Resources',
-  'Sales & CRM',
-  'Market Research',
-  'Blockchain & Cryptocurrency',
-  'Cloud & DevOps',
-  'Database & Performance',
-  'Design & UI/UX',
-  'Development & DevOps',
-  'Business Intelligence',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Metaverse & Virtual Reality',
-  'Web3 & DeFi',
-  'IoT & Edge Computing',
-  'Autonomous Vehicles & Robotics',
-  'Climate & Environmental',
-  'Biotechnology & Healthcare',
-  'Financial Technology',
-  'Education Technology',
-  'Enterprise IT',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
+<<<<<<< HEAD
 =======
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
@@ -2893,6 +2866,9 @@ export const serviceCategories = [
 };
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
@@ -2900,6 +2876,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   })
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
@@ -2910,12 +2887,23 @@ export const getPopularServices = () => {
 };
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+export const getPopularServices = () => {
+  return realMicroSaasServices.filter(service => service.popular)
+};
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 reviews: 14;
 }
 ;
@@ -2947,6 +2935,7 @@ export const service_categories = [;
   'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];

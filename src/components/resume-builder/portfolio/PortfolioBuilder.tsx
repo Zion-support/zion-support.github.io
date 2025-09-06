@@ -65,9 +65,9 @@
                 setEditingProject(null);
 
               }}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
       {/* Projects List */}
 
@@ -145,19 +145,20 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>;
-            <ProjectForm;
+            </h2>
+            
+            <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
+              onCancel={() => {
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-            />;
-          </CardContent>;
-        </Card>;
+            />
+          </CardContent>
+        </Card>
       )}
 
       

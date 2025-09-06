@@ -31,21 +31,12 @@ export interface Ultimate2026Service {;
     address: string;
   }
 }
+
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
-<<<<<<< HEAD
     id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
     tagline: "The ultimate platform for 2026", price: "$699/month",
     description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.";
-=======
-<<<<<<< HEAD
-    id: '2026-ultimate-service'
-    name: '2026 Ultimate Service Platform'
-    tagline: 'The ultimate platform for 2026'
-    price: '$699/month'
-    description:
-      'The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       'Ultimate platform'
       'All technologies'
@@ -123,13 +114,15 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2026-ultimate-service",
@@ -175,3 +168,6 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

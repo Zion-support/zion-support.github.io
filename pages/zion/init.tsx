@@ -72,6 +72,7 @@ const InitPage: NextPage = () => {
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(state)
@@ -94,6 +95,49 @@ type DeployFormState = {
   modules: Record<string, boolean>,;
   bonusModules: Record<string, boolean>;
 },;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(state)}),
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.error || 'Deployment failed');
+      setResult(json)
+    } catch (err: any) {
+      setError(err.message || 'Unexpected error')
+    } finally {
+      setSubmitting(false)
+
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+ const InitPage: NextPage = () => {;
+  const [state, setState] = useState<DeployFormState> ({;
+  instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {;
+  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
@@ -375,11 +419,15 @@ const InitPage: NextPage = () => {
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
       </div>
+<<<<<<< HEAD
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'
       >
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <<<<<<< HEAD
@@ -470,7 +518,10 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Logo URL</label>;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -570,6 +621,7 @@ const InitPage: NextPage = () => {
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
+<<<<<<< HEAD
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
@@ -581,6 +633,9 @@ const InitPage: NextPage = () => {
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>

@@ -20,6 +20,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ leaderboard: top })
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
   };
@@ -33,6 +34,8 @@ import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',

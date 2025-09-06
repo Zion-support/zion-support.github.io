@@ -254,10 +254,118 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion } from 'framer-motion',
+import {
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
+  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
+  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette;
+} from 'lucide-react',
+import Layout from '../components / layout / Layout',
+import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services',
+import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+const stats = [;
+  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text - cyan - 400' },
+  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text - purple - 400' },
+  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text - green - 400' },
+  { number: '24 / 7', label: 'Support', icon: Zap, color: 'text - pink - 400' }
+],
+const categories = [;
+  { name: 'All Services', value: 'all', icon: Globe, color: 'from - blue - 500 to - cyan - 600' },
+  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from - purple - 500 to - pink - 600' },
+  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from - indigo - 500 to - blue - 600' },
+  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from - green - 500 to - emerald - 600' },
+  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from - orange - 500 to - red - 600' },
+  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from - pink - 500 to - rose - 600' },
+  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from - teal - 500 to - cyan - 600' },
+  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from - yellow - 500 to - orange - 600' }
+],
+export default /**
+ * InnovativeMicroSaasShowcase - Function description
+ */
+function InnovativeMicroSaasShowcase() {
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [search_term, setSearchTerm] = useState (''),
+  const [view_mode, setViewMode] = useState ('grid'),
+  const [sort_by, setSortBy] = useState ('popularity'),
+  // Combine all services;
+  const all_services = [;
+    ...innovativeRealMicroSaasServices2025,
+    ...emergingTechServicesEnhanced2025;
+  ],
+  // Filter services based on category and search;
+  const filtered_services = all_services.filter (service => {
+    const matches_category = selected_category === 'all' ||;
+      service.category.toLowerCase ().includes (selected_category) ||;
+      service.name.toLowerCase ().includes (selected_category),
+    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
+    return matches_category && matches_search;
+  }),
+  // Sort services;
+  const sorted_services = [...filtered_services].sort ((a, b) => {
+    switch (sort_by) {
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      case 'price - low':;
+        return parse_float (a.price.replace ('$', '')) - parse_float (b.price.replace ('$', '')),
+      case 'price - high':;
+        return parse_float (b.price.replace ('$', '')) - parse_float (a.price.replace ('$', '')),
+      case 'rating':;
+        return b.rating - a.rating,
+      case 'newest':;
+        return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
+      default: return 0;
+    }
+  }),
+  return (
+    <Layout>;
+      <Head>;
+        <title > Innovative Micro SAAS Services Showcase 2025 | Zion Tech Group</title>;
+        <meta name="description" content="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, quantum computing platforms, and emerging technology solutions. Transform your business with cutting - edge technology." />;
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />;
+        <link rel="canonical" href="https://ziontechgroup.com / innovative - micro - saas - showcase" />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className="relative py - 20 lg:py - 32 overflow - hidden">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
+        <div className="relative z - 10 container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
+              Innovative Micro SAAS Services;
+            </h1>;
+            <p className="text - xl lg:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+              Discover our comprehensive portfolio of cutting - edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.;
+            </p>;
+            <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
+              {stats.map ((stat, index) => (
+                <motion.div;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   key={stat.label  } catch (error) {
     console.error("Error:", error);
@@ -284,6 +392,11 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -292,6 +405,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </motion.div>
         </div>
@@ -307,12 +421,17 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -320,11 +439,52 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Filters and Search */}
       <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
+=======
+
+=======
+                  className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm rounded - full px - 6 py - 3 border border - white / 20";
+                >;
+                  <stat.icon className={`w - 5 h - 5 ${stat.color}`} />;
+                  <span className="text - white font - semibold">{stat.number}</span>;
+                  <span className="text - gray - 300 text - sm">{stat.label}</span>;
+                </motion.div>))}
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Contact Bar */}
+      <section className="bg - gradient - to - r from - purple - 600 via - pink - 600 to - red - 600 py - 4">;
+        <div className="container mx - auto px - 4">;
+          <div className="flex flex - col lg:flex - row items - center justify - between text - center lg:text - left">;
+            <div className="flex items - center space - x-4 mb - 4 lg:mb - 0">;
+              <Phone className="w - 5 h - 5 text - white" />;
+              <span className="text - white font - semibold">{contact_info.mobile}</span>;
+              <Mail className="w - 5 h - 5 text - white" />;
+              <span className="text - white font - semibold">{contact_info.email}</span>;
+            </div>;
+            <div className="flex items - center space - x-4">;
+              <MapPin className="w - 5 h - 5 text - white" />;
+              <span className="text - white text - sm">{contact_info.address}</span>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Filters and Search */}
+      <section className="py - 8 bg - black / 50 backdrop - blur - sm border - b border - white / 10">;
+        <div className="container mx - auto px - 4">;
+          <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            {/* Search */}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Filters and Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -339,22 +499,46 @@ export default function InnovativeMicroSaasShowcase(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
+<<<<<<< HEAD
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             {/* Category Filter */}
+=======
+
+            <div className="relative flex - 1 max - w-md">;
+              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+              <input;
+                type="text";
+                placeholder="Search services...";
+                value={search_term}
+                on_change={(e) => setSearchTerm (e.target.value)}
+                className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
+              />;
+            </div>;
+
+            {/* Category Filter */}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,6 +557,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -415,6 +600,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -435,7 +622,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   }`}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
@@ -452,8 +642,13 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                 </button>
               </div>
               <select
+<<<<<<< HEAD
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -465,11 +660,17 @@ export default function InnovativeMicroSaasShowcase(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Most Popular</option>
@@ -482,34 +683,56 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Services Grid */}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
-              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">
+<<<<<<< HEAD
+              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
@@ -519,6 +742,90 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+
+
+                  key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
+                >
+=======
+=======
+                >;
+                  <category.icon className="w - 4 h - 4" />;
+                  <span className="text - sm font - medium">{category.name}</span>;
+                </button>))}
+            </div>;
+            {/* View Mode and Sort */}
+            <div className="flex items - center space - x-4">;
+              <div className="flex bg - white / 10 rounded - lg p - 1">;
+                <button;
+                  on_click={() => setViewMode ('grid')}
+                  className={`p - 2 rounded ${view_mode === 'grid' ? 'bg - purple - 600 text - white' : 'text - gray - 400 hover:text - white'}`}
+                >;
+                  <Grid className="w - 5 h - 5" />;
+                </button>;
+                <button;
+                  on_click={() => setViewMode ('list')}
+                  className={`p - 2 rounded ${view_mode === 'list' ? 'bg - purple - 600 text - white' : 'text - gray - 400 hover:text - white'}`}
+                >;
+                  <List className="w - 5 h - 5" />;
+                </button>;
+              </div>;
+              <select;
+                value={sort_by}
+                on_change={(e) => setSortBy (e.target.value)}
+                className="bg - white / 10 border border - white / 20 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - purple - 500";
+              >;
+                <option value="popularity">Most Popular</option>;
+                <option value="rating">Highest Rated</option>;
+                <option value="price - low">Price: Low to High</option>;
+                <option value="price - high">Price: High to Low</option>;
+                <option value="newest">Newest First</option>;
+              </select>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section className="py - 16">;
+        <div className="container mx - auto px - 4">;
+          <div className="mb - 8">;
+            <h2 className="text - 3xl font - bold text - white mb - 2">;
+              {selected_category === 'all' ? 'All Services' : `${categories.find (c => c.value === selected_category)?.name}`}
+            </h2>;
+            <p className="text - gray - 400">;
+              {filtered_services.length} services found;
+            </p>;
+          </div>;
+          {view_mode === 'grid' ? (
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
+              {sorted_services.map ((service, index) => (
+                <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1038,12 +1345,16 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </Layout>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

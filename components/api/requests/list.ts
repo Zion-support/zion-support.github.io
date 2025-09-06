@@ -14,11 +14,13 @@ export default async function handler(
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(200).json({ items })
+=======
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {
-res && res.status(200).json({ items: [] });
+    res && res.status(200).json({ items: [] });
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';

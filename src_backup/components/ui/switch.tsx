@@ -25,6 +25,7 @@ import {
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
+
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -51,6 +52,7 @@ export function ServicesPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
+
   const filteredServices = ALL_SERVICES.filter(service => {
 
 
@@ -155,9 +157,11 @@ import {;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS;
 import { ServiceCategory, ServiceSolution } from '@/types/services';
+
 export function ServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
+
   const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {;
     const matchesCategory =;
       selectedCategory === 'all' || service && service.category === selectedCategory;
@@ -168,15 +172,18 @@ export function ServicesPage() {;
         tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );
     return matchesCategory && matchesSearch;  });
+
   const getServicesByCategory = (categoryId: string) => {;
     switch (categoryId) {    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
+
   const getServicesByCategory = (categoryId: string) => {;
     switch (categoryId) {;
       case 'ai-services':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return AI_SERVICES;
       case 'it-services':;
         return IT_SERVICES;
@@ -199,6 +206,7 @@ export function ServicesPage() {;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch
   });
+
   const getServicesByCategory = (categoryId: string) => {
     switch (categoryId) {
       case 'ai-services': return AI_SERVICES;
@@ -211,9 +219,11 @@ export function ServicesPage() {;
     }
 
   };
+
   const selectedServices =;
     selectedCategory === 'all';
       ? filteredServices;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       : getServicesByCategory(selectedCategory);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -279,6 +289,7 @@ export function ServicesPage() {;
               <a
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">;
+=======
   SERVICE_CATEGORIES,
   ALL_SERVICES,
   AI_SERVICES,
@@ -368,20 +379,12 @@ function ServicesPage() {
                 href='mailto:kleber@ziontechgroup.com';
                 className='bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors'              >    }
   }
-<<<<<<< HEAD
 ;
   const selected_services = selected_category === 'all' ? filtered_services : getServicesByCategory (selected_category);
 ;
-=======
-  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="bg - gradient - to - r from - blue - 600 via - purple - 600 to - indigo - 600 text - white">;
         <div className="container mx - auto px - 4 py - 20">;
           <div className="text - center max - w-4xl mx - auto">;
@@ -431,6 +434,7 @@ function ServicesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📱</span>
@@ -479,7 +483,7 @@ function ServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+=======
                 href='https://ziontechgroup && ziontechgroup.com'
                 className='text-blue-600 hover:underline'>                ziontechgroup && ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
             </div>;
@@ -495,6 +499,7 @@ function ServicesPage() {
               <span className="text-blue-600">🌐</span>;
               <a href="https://ziontechgroup && ziontechgroup.com" className="text-blue-600 hover:underline">;
                 ziontechgroup && ziontechgroup.com;
+=======
       {/* Contact Info Banner */}
       <div className='bg - white border - b'>;
         <div className='container mx - auto px - 4 py - 4'>;
@@ -530,6 +535,7 @@ function ServicesPage() {
               <span className="text - blue - 600">🌐</span>;
               <a href="https://ziontechgroup.com" className="text - blue - 600 hover:underline">;
                 ziontechgroup.com;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>;
@@ -643,16 +649,9 @@ function ServicesPage() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Why Choose Zion Tech Group?
             </h2>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver innovative, reliable, and cost-effective solutions that drive real business results
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              We deliver innovative, reliable, and cost-effective solutions that
+              drive real business results
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -671,8 +670,10 @@ function ServicesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
-              <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
-              <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
+              <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
+              <p className='text-gray-600'>
+                Cutting-edge AI and technology solutions
+              </p>
             </div>
             <div className='text-center'>
               <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -688,8 +689,12 @@ function ServicesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
-              <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
-              <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
+              <h3 className='text-xl font-semibold mb-2'>
+                Enterprise Security
+              </h3>
+              <p className='text-gray-600'>
+                SOC 2, HIPAA, GDPR compliant solutions
+              </p>
             </div>
             <div className='text-center'>
               <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -705,8 +710,8 @@ function ServicesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
-              <p className="text-gray-600">Quick setup and implementation</p>
+              <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
+              <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
             <div className='text-center'>
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -715,7 +720,6 @@ function ServicesPage() {
               <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
               <p className='text-gray-600'>Trusted by businesses nationwide</p>            </div>              Why Choose Zion Tech Group?
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -767,6 +771,7 @@ function ServicesPage() {
       </div>
 
         </div>;
+
         {selectedServices && selectedServices.length === 0 && (;
           <div className='text-center py-12'>;
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>;
@@ -778,6 +783,7 @@ function ServicesPage() {
           </div>;
         )}
       </div>;
+
       {/* Why Choose Zion Tech Group */}
       <div className='bg-white py-16'>;
         <div className='container mx-auto px-4'>;
@@ -881,6 +887,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               drive real business results;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             <div className='text-center'>;
               <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
@@ -891,6 +898,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 Cutting-edge AI and technology solutions;
               </p>;
             </div>;
+
             <div className='text-center'>;
               <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>🛡️</span>;
@@ -902,6 +910,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 SOC 2, HIPAA, GDPR compliant solutions;
               </p>;
             </div>;
+
             <div className='text-center'>;
               <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>⚡</span>;
@@ -909,6 +918,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>;
               <p className='text-gray-600'>Quick setup and implementation</p>;
             </div>;
+
             <div className='text-center'>;
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>🎯</span>;
@@ -920,6 +930,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               We deliver innovative, reliable, and cost-effective solutions that drive real business results;
             </p>;
           </div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -928,6 +939,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>;
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>;
             </div>;
+
             <div className="text-center">;
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">🛡️</span>;
@@ -935,6 +947,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>;
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>;
             </div>;
+
             <div className="text-center">;
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">⚡</span>;
@@ -942,12 +955,14 @@ function ServiceCard({ service }: ServiceCardProps) {
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>;
               <p className="text-gray-600">Quick setup and implementation</p>;
             </div>;
+
             <div className="text-center">;
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">🎯</span>;
               </div>;
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>;
               <p className="text-gray-600">Trusted by businesses nationwide</p>;
+=======
       {/* Search and Filter Section */}
       <div className='container mx - auto px - 4 py - 8'>;
         <div className='bg - white rounded - xl shadow - lg p - 6 mb - 8'>;
@@ -1081,6 +1096,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               </div>;
               <h3 className="text - xl font - semibold mb - 2">Proven Results</h3>;
               <p className="text - gray - 600">Trusted by businesses nationwide</p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -1101,44 +1117,6 @@ function ServiceCard({ service }: ServiceCardProps) {
             Ready to Transform Your Business?
 
           </h2>
-=======
-<<<<<<< HEAD
-      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
-        <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-4xl font-bold mb-6'>
-=======
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="tel: +13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-            >
-              📞 Call +1 302 464 0950
-            </Link>
-            <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
-            >
-              ✉️ Get Free Consultation
-<<<<<<< HEAD
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
-          </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
           </p>
@@ -1155,6 +1133,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             >
               ✉️ Get Free Consultation
             </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <a
@@ -1170,11 +1149,14 @@ function ServiceCard({ service }: ServiceCardProps) {
 =======
             <a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            <a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               🌐 Visit Website
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -1190,6 +1172,10 @@ function ServiceCard({ service }: ServiceCardProps) {
 interface ServiceCardProps {
   service: ServiceSolution
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               href="tel: +13024640950"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">;
 =======
@@ -1297,9 +1283,11 @@ function ServiceCard({ service }: ServiceCardProps) {
       </div>;
     </div>;
   );
+
 interface ServiceCardProps {;
   service: ServiceSolution;  );
 }
+
 interface ServiceCardProps {;
   service: ServiceSolution;
 <<<<<<< HEAD
@@ -1395,6 +1383,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           className="w-full h-full object-cover"
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1403,36 +1392,22 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
           </span>
         </div>
         {service.aiScore && (
-<<<<<<< HEAD
           <div className="absolute bottom-4 left-4">
-=======
-<<<<<<< HEAD
-          <div className='absolute bottom-4 left-4'>
-            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>          <div className="absolute bottom-4 left-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               AI Score: {service.aiScore}
             </span>
           </div>
-=======
-          <div className="absolute bottom-4 left-4">
-            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              AI Score: {service.aiScore}
-            </span>;
-          </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
+
       {/* Service Content */}
 =======
 
@@ -1552,16 +1527,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             {popularPlan.popular && (
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
             <p className="font-medium text-gray-900">{service.provider.name}</p>
-=======
-<<<<<<< HEAD
-            <p className='font-medium text-gray-900'>{service.provider.name}</p>
-            <p className='text-sm text-gray-500'>{service.provider.location}</p>
-          </div>
-          {service.provider.verified && (
-            <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
-        </div>
-        {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
           {service.provider.verified && (
@@ -1570,7 +1536,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           )}
 
         </div>
+=======
         </div>;
+
         {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;
             <p className="text-sm text-gray-500">{service && service.provider.location}</p>;
           </div>;
@@ -1590,6 +1558,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           )}
         </div>;
         {/* Pricing */}
+
+=======
         <div className="bg-gray-50 rounded-lg p-4 mb-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">
@@ -1669,6 +1639,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 key={index}
                 className='bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs'              >            {service.features.slice (0, 3).map ((feature, index) => (
               <span;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 className="bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs";
               >;
@@ -1692,9 +1663,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
         {/* Action Buttons */}
-<<<<<<< HEAD
-        <div className='flex gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <div className='flex gap-2'>;
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
@@ -1705,7 +1674,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-<<<<<<< HEAD
           >
 <<<<<<< HEAD
 =======
@@ -1728,11 +1696,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             Call Now
-          </Link>
+          </a>
         </div>
 
 
             className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'>            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors";
+=======
               <span className='text - gray - 500 text - xs'>                +{service.features.length - 3} more              <span className="text - gray - 500 text - xs">;
                 +{service.features.length - 3} more;
               </span>)}
@@ -1751,6 +1720,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           <a;
             href={`tel:+13024640950`}
             className='bg - green - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - green - 700 transition - colors'          >            className="bg - green - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - green - 700 transition - colors";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Call Now;
           </a>;
@@ -1761,8 +1731,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Detailed Information */}
         {showDetails && (
           <div className="mt-6 pt-6 border-t border-gray-200">
-<<<<<<< HEAD
-=======
             <div className="space-y-4">
               {/* Benefits */}
               <div>
@@ -1871,11 +1839,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 <div>
 
               <div className="grid grid-cols-2 gap-4 text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
 
                   <span className="font-medium text-gray-900">Deployment:</span>
@@ -1894,8 +1857,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
               </div>
+=======
                 </div>;
               </div>;
+
               {/* Deployment & Support */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div>;
@@ -1915,6 +1880,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service && service.support.slice(0, 2).join(', ')}</p>;
                 </div>;
               </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* All Pricing Plans */}
 
 =======
@@ -1981,7 +1948,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
-                  </Link>
+                  </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
@@ -1994,11 +1961,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     ✉️ Email Inquiry
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
 <<<<<<< HEAD
       </div>

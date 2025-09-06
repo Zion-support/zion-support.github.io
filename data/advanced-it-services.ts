@@ -80,6 +80,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.7,
     reviews: 89,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'quantum-cloud-platform'
@@ -856,9 +857,11 @@ export interface AdvancedITService {;
     reviews: 45,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered automation',
+=======
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation and optimization',
@@ -940,6 +943,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.6,
     reviews: 123,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1022,6 +1026,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.7,
     reviews: 34,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1104,6 +1109,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.9,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1186,6 +1192,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.7,
     reviews: 89,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1268,6 +1275,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.6,
     reviews: 123,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1350,6 +1358,7 @@ export interface AdvancedITService {;
     rating: 4 && 4.8,
     reviews: 45,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     id: 'ai-powered-cloud-migration'
@@ -1439,6 +1448,8 @@ export interface AdvancedITService {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1451,12 +1462,17 @@ export interface AdvancedITService {;
 
 
     rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 45
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1465,6 +1481,7 @@ export interface AdvancedITService {;
     customers: 89;
     rating: 4.8,
     reviews: 45;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -1898,6 +1915,8 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4.8,;
     reviews: 45;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 

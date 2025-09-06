@@ -50,22 +50,15 @@ export interface EnterpriseItService {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const enterpriseITServices: EnterpriseItService[] = [
   {
-<<<<<<< HEAD
     id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
     tagline: "Strategic IT architecture for large organizations", price: "$150/hour",
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
-=======
-<<<<<<< HEAD
-    id: 'enterprise-architecture'
-    name: 'Enterprise Architecture Consulting'
-    tagline: 'Strategic IT architecture for large organizations'
-    price: '$150/hour'
-    description:
-      'Comprehensive enterprise architecture consulting services for digital transformation.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Architecture assessment";
       "Technology roadmap";
@@ -92,13 +85,15 @@ export const enterpriseITServices: EnterpriseItService[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "enterprise-architecture",
@@ -144,3 +139,6 @@ export const enterpriseITServices: EnterpriseItService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -30,6 +30,7 @@ describe('SecurityHeaders', () => {
     render(<SecurityHeaders />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 
 =======
@@ -58,6 +59,8 @@ describe('SecurityHeadersdynamic', () => {
   test('applies correct styling', () => {
     render(<SecurityHeadersdynamic />);
   });
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe("SecurityHeadersdynamic",() => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling",() => { render(<SecurityHeadersdynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});

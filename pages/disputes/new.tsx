@@ -92,9 +92,15 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
+<<<<<<< HEAD
 type ReasonType = typeof REASONS[number];
 export default function NewDisputePage(req, res) {
   try {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+export default function NewDisputePage() {;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const router = useRouter();
 
 =======
@@ -104,6 +110,7 @@ export default function NewDisputePage(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const [projectId, setProjectId] = useState(qProjectId || '');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
@@ -113,6 +120,7 @@ export default function NewDisputePage(req, res) {
     clientId |(user.role === 'client' ? user.id : '')
   );
   const [submitting, setSubmitting] = useState(false);
+<<<<<<< HEAD
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
   async function handleSubmit(e: React.FormEvent) {
@@ -157,6 +165,9 @@ export default function NewDisputePage(req, res) {
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   useEffect(() => {;
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
 
@@ -185,7 +196,10 @@ export default function NewDisputePage(req, res) {
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
@@ -201,6 +215,7 @@ export default function NewDisputePage(req, res) {
         });
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
     } catch (e: any) {
@@ -301,6 +316,8 @@ function toBase64(file: File): Promise<string> {
 const reader = new FileReader();
   )
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;
       alert(e && e.message || 'Error');

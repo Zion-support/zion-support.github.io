@@ -24,6 +24,7 @@ function isAuthorized(req: NextApiRequest): boolean {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
 <<<<<<< HEAD
@@ -45,6 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const started = Date && Date.now();
     try {
       const metrics = req && req.body || {};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const triggers = evaluateReflexes(metrics);
       const state = readState<any>();
       state && state.metrics = metrics;
@@ -72,6 +74,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
+
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
@@ -105,8 +108,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   append_log,
   evaluate_reflexes,
   read_state,
@@ -189,7 +197,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

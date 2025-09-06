@@ -412,6 +412,7 @@ if (return b.customers - a.customers, ) {
     popularServices: all2026Services.filter(s => s.popular).length
   }
   },
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
@@ -457,6 +458,13 @@ if (return b.customers - a.customers, ) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+  return (
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     >
       <div className="min-h-screen">
         <Head>
@@ -470,9 +478,82 @@ if (return b.customers - a.customers, ) {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
+<<<<<<< HEAD
+=======
+
+
+        {/* Enhanced Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <EnhancedNavigation2026 />;
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+
+=======
+  ],
+  const sort_options = [;
+    { id: 'price - low', name: 'Price Low to High' },
+    { id: 'price - high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Highest Rated' },
+    { id: 'popularity', name: 'Most Popular' },
+    { id: 'name', name: 'Name A - Z' }
+  ],
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  },
+  // Calculate pricing statistics;
+  const pricing_stats = {
+    total_services: all2026Services.length,
+    average_price: all2026Services.reduce ((acc, service) => {
+      const price = parse_float (service.price.replace (/[^0 - 9.]/g, '')) || 0,
+      return acc + price;
+    }, 0) / all2026Services.length,
+    lowest_price: Math.min (...all2026Services.map (string => parse_float (s.price.replace (/[^0 - 9.]/g, '')) || 0)),
+    highest_price: Math.max (...all2026Services.map (string => parse_float (s.price.replace (/[^0 - 9.]/g, '')) || 0)),
+    popular_services: all2026Services.filter (string => s.popular).length;
+  },
+  return (
+    <UltraAdvancedFuturisticBackground;
+      intensity="extreme";
+      color_scheme="neural - network";
+      particle_count={500}
+      animation_speed={2.5}
+      enable_holographic={true}
+      enableQuantumEffects={true}
+      enableNeuralNetwork={true}
+    >;
+      <div className="min - h-screen">;
+        <Head>;
+          <title > Revolutionary 2026 Pricing - Zion Tech Group | Competitive AI, Quantum & Emerging Tech Pricing</title>;
+          <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2026 services: AI, quantum computing, emerging technologies, and enterprise solutions. Contact: +1 302 464 0950" />;
+          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technologies pricing, enterprise solutions pricing, Zion Tech Group" />;
+          <meta name="author" content="Zion Tech Group" />;
+          <meta property="og:title" content="Revolutionary 2026 Pricing - Zion Tech Group" />;
+          <meta property="og:description" content="Competitive pricing for cutting - edge AI, quantum computing, and emerging technology services" />;
+          <meta property="og:url" content="https://ziontechgroup.com / revolutionary - 2026 - pricing" />;
+          <meta property="og:type" content="website" />;
+          <link rel="canonical" href="https://ziontechgroup.com / revolutionary - 2026 - pricing" />;
+        </Head>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
         {/* Hero Section */}
+<<<<<<< HEAD
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -498,6 +579,18 @@ if (return b.customers - a.customers, ) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+=======
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 20 via - transparent to - cyan - 900 / 20"></div>;
+          <div className="max - w-7xl mx - auto relative z - 10">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -519,11 +612,17 @@ if (return b.customers - a.customers, ) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -532,6 +631,7 @@ if (return b.customers - a.customers, ) {
                 </span>
               </h1>
               <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. 
                 Get maximum ROI with our revolutionary services.
@@ -547,12 +647,17 @@ if (return b.customers - a.customers, ) {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -572,12 +677,49 @@ if (return b.customers - a.customers, ) {
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+              className="text - center mb - 16";
+            >;
+              <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
+                <span className="bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent">;
+                  Revolutionary 2026 Pricing;
+                </span>;
+              </h1>;
+              <p className="text - gray - 300 text - xl max - w-4xl mx - auto leading - relaxed mb - 8">;
+                Transparent, competitive pricing for our cutting - edge AI, quantum computing, and emerging technology solutions.;
+                Get maximum ROI with our revolutionary services.;
+              </p>;
+              {/* Pricing Statistics */}
+              <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - purple - 400">{pricing_stats.total_services}+</div>;
+                  <div className="text - gray - 400 text - sm">Total Services</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - green - 400">${Math.round (pricing_stats.average_price).toLocaleString ()}</div>;
+                  <div className="text - gray - 400 text - sm">Average Price</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - blue - 400">${pricing_stats.lowest_price}</div>;
+                  <div className="text - gray - 400 text - sm">Starting Price</div>;
+                </div>;
+                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
+                  <div className="text - 2xl font - bold text - yellow - 400">{pricing_stats.popular_services}</div>;
+                  <div className="text - gray - 400 text - sm">Popular Services</div>;
+                </div>;
+              </div>;
+            </motion.div>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
@@ -610,6 +752,11 @@ if (return b.customers - a.customers, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -630,22 +777,34 @@ if (return b.customers - a.customers, ) {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Filters */}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
+<<<<<<< HEAD
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
@@ -662,6 +821,55 @@ if (return b.customers - a.customers, ) {
                     </button>
                   ))}
                 </div>
+=======
+
+=======
+              className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6 max - w-2xl mx - auto";
+            >;
+              <h3 className="text - xl font - bold text - white mb - 4 text - center">Need Custom Pricing?</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - center">;
+                <div className="flex flex - col items - center space - y-2">;
+                  <Phone className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex flex - col items - center space - y-2">;
+                  <Mail className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.email}</span>;
+                </div>;
+                <div className="flex flex - col items - center space - y-2">;
+                  <MapPin className="w - 5 h - 5 text - purple - 400" />;
+                  <span className="text - sm text - gray - 300">{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+
+        {/* Filters */}
+        <section className="py - 8 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6">;
+              <div className="flex flex - col lg:flex - row gap - 6">;
+                {/* Category Filter */}
+                <div className="flex flex - wrap gap - 2">;
+                  {categories.map ((category) => (
+                    <button;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                      key={category.id}
+                      on_click={() => setSelectedCategory (category.id)}
+                      className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
+                        selected_category === category.id;
+                          ? 'bg - purple - 600 text - white';
+                          : 'bg - black / 40 text - gray - 300 hover:bg - black / 60 hover:text - white';
+                      }`}
+
+=======
+                    >;
+                      {category.icon} {category.name} ({category.count});
+                    </button>))}
+                </div>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 {/* Price Range Filter */}
                 <div className="flex flex-wrap gap-2">
                   {priceRanges.map((range) => (
@@ -837,6 +1045,32 @@ if (return b.customers - a.customers, ) {
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
+<<<<<<< HEAD
+=======
+
+                      </option>))}
+                  </select>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Services Pricing Grid */}
+        <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="mb - 8">;
+              <h2 className="text - 3xl font - bold text - white mb - 2">;
+                {filtered_services.length} Services Available;
+              </h2>;
+              <p className="text - gray - 400">;
+                Compare pricing and features to find the perfect solution for your business;
+              </p>;
+            </div>;
+            <AnimatePresence mode="wait">;
+              {filtered_services.length === 0 ? (
+                <motion.div;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -1151,6 +1385,28 @@ if (return b.customers - a.customers, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
+<<<<<<< HEAD
+=======
+=======
+=======
+                            className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 200 flex items - center justify - center group - hover:scale - 105";
+                          >;
+                            Learn More;
+                            <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
+                          </Link>;
+                          <a;
+                            href={`tel:${contact_info.mobile}`}
+                            className="bg - black / 40 hover:bg - black / 60 text - white font - semibold py - 3 px - 6 rounded - xl border border - purple - 500 / 30 hover:border - purple - 500 / 60 transition - all duration - 200 flex items - center justify - center";
+                          >;
+                            <Phone className="w - 4 h - 4 mr - 2" />;
+                            Contact Sales;
+                          </a>;
+                        </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        {/* Badges */}
+                        <div className="absolute top - 4 right - 4 flex flex - col gap - 2">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR

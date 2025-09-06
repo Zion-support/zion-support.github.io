@@ -814,6 +814,7 @@ export interface InnovativeAIAutomationService {;
   reviews: number;
 }
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -1097,3 +1098,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

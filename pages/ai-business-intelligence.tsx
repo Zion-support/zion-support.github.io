@@ -988,6 +988,7 @@ const AIBusinessIntelligence: React.FC = () => {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>
       {/* Features */  } catch (error) {
     console.error("Error:", error);
@@ -1325,6 +1326,8 @@ const AIBusinessIntelligence: React.FC = () => {;
 }
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 </ul>
 
                 <a

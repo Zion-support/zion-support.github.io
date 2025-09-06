@@ -5,21 +5,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
+
 import { useWallet } from '../../hooks/useWallet';
 <<<<<<< HEAD
 import {
@@ -129,9 +134,11 @@ export default function TokenIntegrationsPage() {;
           Omnichain transfers via LayerZero and DePIN rewards.;
         </p>;
       </section>;
+
       <section className='space-y-4'>;
         <ClientOnlyBridge />;
       </section>;
+
       <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>;
         <h2 className='text-lg font-semibold'>DePIN Hook</h2>;
         <p className='text-sm text-gray-600 dark:text-gray-300'>;
@@ -160,6 +167,7 @@ export default function TokenIntegrationsPage() {;
 
 
     setSuggestion(data)
+=======
         </div>;
         {rewards && (;
           <div className='mt-3 space-y-2 text-sm'>;
@@ -181,9 +189,11 @@ export default function TokenIntegrationsPage() {;
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>;
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
       </section>;
+
       <section className="space-y-4">;
         <ClientOnlyBridge />;
       </section>;
+
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">;
         <h2 className="text-lg font-semibold">DePIN Hook</h2>;
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
@@ -210,6 +220,7 @@ export default function TokenIntegrationsPage() {;
         )}
 
       </section>;
+
       <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>;
         <h2 className='text-lg font-semibold'>Operator AI Actions</h2>;
         <p className='text-sm text-gray-600 dark:text-gray-300'>;
@@ -302,6 +313,7 @@ export default function TokenIntegrationsPage() {;
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               </div>
 
@@ -312,6 +324,8 @@ export default function TokenIntegrationsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             ))}
           </div>
         )}
@@ -377,6 +391,7 @@ export default function TokenIntegrationsPage() {;
         )}
 
       </section>;
+
       <section className='space-y-2 text-xs text-gray-500'>;
         <div>Security</div>;
         <ul className='list-disc ml-5 space-y-1'>;
@@ -401,7 +416,9 @@ export default function TokenIntegrationsPage() {;
 
   );
 }
+=======
       </section>
+
       <section className="space-y-2 text-xs text-gray-500">
         <div>Security</div>
         <ul className="list-disc ml-5 space-y-1">

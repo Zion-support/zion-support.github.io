@@ -20,12 +20,19 @@ describe('AccessibilityManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AccessibilityManager />);,
   });
+<<<<<<< HEAD
 });
 });
 });
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

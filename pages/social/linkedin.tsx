@@ -87,6 +87,15 @@ export default function LinkedInRedirect(req, res) {
   }
 =======
 =======
+<<<<<<< HEAD
+=======
+export default function LinkedInRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
+		}
+	}, []);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

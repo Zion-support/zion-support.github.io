@@ -30,6 +30,7 @@ describe('SecurityDashboard', () => {
     render(<SecurityDashboard />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 
 =======
@@ -58,6 +59,8 @@ describe('SecurityDashboarddynamic', () => {
   test('applies correct styling', () => {
     render(<SecurityDashboarddynamic />);
   });
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe("SecurityDashboarddynamic",() => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling",() => { render(<SecurityDashboarddynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});

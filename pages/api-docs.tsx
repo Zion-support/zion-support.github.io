@@ -336,6 +336,7 @@ function APIDocsPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -350,6 +351,13 @@ function APIDocsPage() {
         </div>
       </section>
     </div>
+=======
+
+
+
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -361,18 +369,26 @@ function APIDocsPage() {
         </p>
       </div>
     </Layout>
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head',
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 
@@ -412,6 +428,7 @@ export default function ApiDocsPage() {
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+<<<<<<< HEAD
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -422,6 +439,8 @@ export default function ApiDocsPage() {
           for the full reference.
         </p>
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       </div>
 <<<<<<< HEAD
     </Layout>
@@ -444,6 +463,21 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </div>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
+<<<<<<< HEAD
+=======
+}
+import Layout from '../components/Layout';
+
+export default function APIDocsPage() {;
+export default function ApiDocsPage() {;
+  return (
+=======
+
+
+
+  );
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>

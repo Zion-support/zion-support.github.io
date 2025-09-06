@@ -600,6 +600,7 @@ export default function GetStarted() {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -620,6 +621,8 @@ export default function GetStarted() {;
   }
 }
   };
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const handlePreviousStep = () => {;
     if (currentStep > 1) {;
       setCurrentStep(currentStep - 1);
@@ -1190,6 +1193,7 @@ export default function GetStarted() {;
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {path.timeline  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1198,6 +1202,9 @@ export default function GetStarted() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -1474,11 +1481,15 @@ export default function GetStarted() {;
                     />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='flex justify-between pt-6'>
                   <div className="flex justify-between pt-6">
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     <button
                       onClick={handlePreviousStep}
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
@@ -1497,6 +1508,7 @@ export default function GetStarted() {;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       )}
       {/* Quick Start Options */}
       <section className='py-20'>
@@ -1505,6 +1517,11 @@ export default function GetStarted() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+=======
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1890,6 +1907,7 @@ export default function GetStarted() {;
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
   duration: 0.8
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
   )
@@ -1911,6 +1929,36 @@ export default function GetStarted() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+  duration: 0 && 0.8 
+
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion && motion.div> </div> </section> </div>) ;
+
+=======
+                  </p>;
+                  <div className='text - center mb - 4'>;
+                    <span className='inline - flex items - center gap - 1 px - 3 py - 1 bg - gray - 800 / 50 text - gray - 300 rounded - full text - sm'>;
+                      <Clock className='w - 4 h - 4' />;
+                      {option.duration}
+                    </span>;
+                  </div>;
+                  <button;
+                    className={`w - full py - 3 px - 4 bg - gradient - to - r ${option.color} text - white rounded - xl font - semibold hover:shadow - 2xl transition - all duration - 300`}
+                  >                    {option.action}
+                  </button>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact CTA */}
+      <section className='py - 20 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20'>;
+        <div className='container mx - auto px - 4 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >;
             <h2 className='text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
               Ready to Begin Your Journey?;

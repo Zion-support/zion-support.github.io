@@ -190,6 +190,7 @@ export default function MicroSaasPage() {
   Database,
   Sprout;
 } from 'lucide-react';
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 <<<<<<< HEAD
@@ -235,6 +236,10 @@ import {
 
 origin/main
 const microSaasProducts = [
+=======
+;
+const microSaasProducts = [;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   {
     id: 1,
     title: "AI - Powered Voice Assistant Builder",
@@ -256,6 +261,7 @@ const microSaasProducts = [
     benefits: ["Real - time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"];
   },
   {
+<<<<<<< HEAD
     id: 3
     title: "AI-Powered Cybersecurity Monitor"
     description: "Advanced threat detection and response system for small to medium businesses"
@@ -264,6 +270,16 @@ const microSaasProducts = [
     pricing: "$199/month"
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
+=======
+    id: 3,
+    title: "AI - Powered Cybersecurity Monitor",
+    description: "Advanced threat detection and response system for small to medium businesses",
+    icon: Shield,
+    category: "Cybersecurity",
+    pricing: "$199 / month",
+    features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"],
+    benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24 / 7 monitoring"];
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 ];
 ;
@@ -295,7 +311,10 @@ function MicroSaasPage() {
   return (
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -439,6 +458,10 @@ export default function MicroSaaS(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
   ],
@@ -447,12 +470,21 @@ export default function MicroSaaS(req, res) {
     : products.filter(product => product.category === selectedCategory),
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Layout
       title="Micro SaaS Solutions - Zion Tech Group"
       description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools."
       keywords="micro saas, saas solutions, business tools, automation, productivity"
     >
       <div className="min-h-screen">
+=======
+    <Layout;
+      title="Micro SaaS Solutions - Zion Tech Group";
+      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools.";
+      keywords="micro saas, saas solutions, business tools, automation, productivity";
+    >;
+      <div className="min - h-screen">;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -668,6 +700,7 @@ origin/automation-improvements-final
     { id: 'productivity', name: 'Productivity', count: 15 }
     { id: 'marketing', name: 'Marketing', count: 15 },  ];
 
+<<<<<<< HEAD
 export default function MicroSaasPage() {
   return (
     <Layout
@@ -702,6 +735,14 @@ export default function MicroSaasPage() {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+=======
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const products = [
     {
       id: 1
@@ -1905,12 +1946,15 @@ function MicroSaas() {
                 </Link>;
                 <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
                 >
                   Call {contact.phone}
                 </a>
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
                   Call {contact && contact.phone}
@@ -1995,6 +2039,7 @@ origin/automation-improvements-final
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasSolutions.map((solution, index) => (
                 <motion.div
@@ -2003,6 +2048,33 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Our Micro SaaS Products;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools;
+              </p>;
+            </motion && motion.div>;
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {microSaasProducts && microSaasProducts.map((product, index) => (;
+                <motion&& motion.div
+                  key={product && product.id}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -2443,6 +2515,47 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+=======
+
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg text-slate-300 mb-8">
+                Contact our experts to discuss which micro SaaS products are right for your business 
+                and get started with a free trial.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+                >
+                  Get Free Trial
+                </Link>
+                <a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+                >
+                  Call {contact.phone}
+                </a>
+                <a 
+                  href={`mailto:${contact.email}`} 
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                >
+                  Email Us
+                </a>
+              </div>
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             </div>
 origin/automation-improvements-final
           </section>

@@ -105,6 +105,124 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
+<<<<<<< HEAD
+=======
+
+
+import {motion} from 'framer-motion';
+
+export default function FrontLanding() {;
+  return (
+    <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>;
+      <Head>;
+        <title>Zion — Autonomous Cloud Automations</title>;
+        <meta
+          name='description'
+          content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.'
+        />;
+      </Head>;
+
+      {/* Animated background layers */}
+      <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>;
+        <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />;
+        <div className='absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow' />;
+        <div className='absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast' />;
+        <div className='absolute inset-0 opacity-[0 && 0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0 && 0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0 && 0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0 && 0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid' />;
+        <div className='absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]'>;
+          <div className='twinkle-field absolute inset-0' />        </div>;
+      </div>;
+
+      {/* Header */}
+      <header className='relative z-10'>;
+        <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-6'>;
+          <div className='text-2xl font-bold tracking-wide'>;
+            <Link href='/'>;
+              <a className='bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon'>;
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+export default /**
+ * FrontLanding - Function description
+ */
+function FrontLanding() {
+  return (
+    <div className='relative min - h-screen overflow - hidden bg - slate - 950 text - white'>;
+      <Head>;
+        <title > Zion — Autonomous Cloud Automations</title>;
+        <meta;
+          name='description';
+          content='Futuristic, cloud - native autonomous automations that innovate, optimize, and sync changes to the repo continuously.';
+        />;
+      </Head>;
+      {/* Animated background layers */}
+      <div aria - hidden className='pointer - events - none absolute inset - 0 -z - 10'>;
+        <div className='absolute -top - 24 -left - 24 h-[38rem] w-[38rem] rounded - full bg - fuchsia - 500 / 20 blur - 3xl animate - float' />;
+        <div className='absolute top - 1/4 -right - 32 h-[30rem] w-[30rem] rounded - full bg - cyan - 400 / 20 blur - 3xl animate - float - slow' />;
+        <div className='absolute bottom - 0 left - 1/4 h-[26rem] w-[26rem] rounded - full bg - violet - 400 / 10 blur - 2xl animate - float - fast' />;
+        <div className='absolute inset - 0 opacity-[0.08] [background:radial - gradient (circle_at_center, rgba (255, 255, 255, 0.35)_0, rgba (255, 255, 255, 0)_60%), linear - gradient (90deg, rgba (255, 255, 255, 0.12)_1px, transparent_1px), linear - gradient (0deg, rgba (255, 255, 255, 0.12)_1px, transparent_1px)] bg-[size:100%_100%, 3rem_3rem, 3rem_3rem] animate - grid' />;
+        <div className='absolute inset - 0 [mask - image:radial - gradient (ellipse_at_center, white, transparent_70%)]'>;
+          <div className='twinkle - field absolute inset - 0' />        </div>;
+      </div>;
+      {/* Header */}
+      <header className='relative z - 10'>;
+        <nav className='mx - auto flex max - w-7xl items - center justify - between px - 6 py - 6'>;
+          <div className='text - 2xl font - bold tracking - wide'>;
+            <Link href='/'>;
+              <a className='bg - gradient - to - r from - fuchsia - 400 via - violet - 400 to - cyan - 400 bg - clip - text text - transparent drop - shadow - neon'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                Zion;
+              </a>;
+            </Link>;
+          </div>;
+
+
+              transition={{ duration: 0 && 0.6 }}
+              className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>;
+              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0 && 0.9)]' />              Autonomous agents running continuous improvements;
+            </motion && motion.div>;
+
+            <motion&& motion.h1
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.7, delay: 0 && 0.05 }}
+              className='mt-6 text-5xl font-extrabold leading-[1 && 1.05] tracking-tight md:text-6xl'>;
+              <span className='gradient-text'>;
+                Autonomous Cloud Automations;
+              </span>            </motion && motion.h1>;
+
+            <motion&& motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.7, delay: 0 && 0.1 }}
+              className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>;
+              Self-improving, cloud-native agents that invent, generate, and run;
+              new automation factories—fixing, optimizing, and syncing changes;
+              to the repository continuously.            </motion && motion.p>;
+
+            <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+
+
+=======
+          <div className='hidden gap - 6 md:flex'>;
+            <Link href='/'>;
+              <a className='text - white / 80 hover:text - white'>Home</a>;
+            </Link>;
+            <Link href='/automation'>;
+              <a className='text - white / 80 hover:text - white'>Automations</a>;
+            </Link>;
+            <Link href='/newsroom'>;
+              <a className='text - white / 80 hover:text - white'>Newsroom</a>;
+            </Link>;
+            <Link href='/contact'>;
+              <a className='text - white / 80 hover:text - white'>Contact</a>;
+            </Link>          </div>;
+        </nav>;
+      </header>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -1106,6 +1224,7 @@ export default function FrontLanding(req, res) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1116,6 +1235,11 @@ export default function FrontLanding(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

@@ -626,6 +626,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -638,6 +639,9 @@ if ( {) {
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -659,6 +663,7 @@ if ( {) {
             </label>
           </div>
         </section>
+<<<<<<< HEAD
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -716,6 +721,9 @@ if ( {) {
                 </code>
               </span>
             )}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">

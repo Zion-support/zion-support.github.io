@@ -70,7 +70,10 @@ import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
+<<<<<<< HEAD
 origin/main
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -82,6 +85,7 @@ export default function AIServices() {
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
             ))}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </div>
       </div>
@@ -597,6 +601,10 @@ export default function AIServices() {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
           {/* CTA Section */}
           {/* CTA Section */  } catch (error) {
@@ -701,7 +709,9 @@ export default function AIServicesPage() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
+=======
 }
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 }
@@ -711,6 +721,11 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    </Layout>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 
           <section className="py-16 px-4 bg-slate-900/40">;

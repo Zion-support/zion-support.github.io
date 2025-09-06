@@ -50,22 +50,15 @@ export interface EnterpriseItService2029 {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
-<<<<<<< HEAD
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029", price: "$599/month",
     description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-=======
-<<<<<<< HEAD
-    id: '2029-enterprise-it'
-    name: '2029 Enterprise IT Service Platform'
-    tagline: 'Enterprise IT services for 2029'
-    price: '$599/month'
-    description:
-      'Advanced enterprise IT service platform designed for large organizations in 2029.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Enterprise IT services";
       "Scalable solutions";
@@ -92,13 +85,15 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2029-enterprise-it",
@@ -144,3 +139,6 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

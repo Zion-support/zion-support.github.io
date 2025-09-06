@@ -18,6 +18,7 @@ supportFile: cypress/support/e2e.ts',;
 import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
 import { defineConfig } from 'cypress';
 
+<<<<<<< HEAD
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:5000',
@@ -34,6 +35,21 @@ origin/automation-improvements-final
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+=======
+
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+=======
+    supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     viewportWidth: 1280,
     viewportHeight: 720,
 =======
@@ -65,6 +81,7 @@ origin/automation-improvements-final
     }
   }
 }),
+<<<<<<< HEAD
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
   },
 });
@@ -76,6 +93,13 @@ import { defineConfig } from 'cypress;
 ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
@@ -77,6 +78,8 @@ interface NavigationItem {
   MapPin,;
 } from 'lucide-react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 <<<<<<< HEAD
@@ -321,7 +324,6 @@ interface NavigationItem {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -943,15 +945,15 @@ const navigation_items: NavigationItem[] = [;
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center h-16'>
+    <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-16'>;
           {/* Logo */}
-          <div className='flex-shrink-0'>
-            <Link href='/' className='flex items-center space-x-2'>
-              <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center'>
-                <Rocket className='w-5 h-5 text-white' />
-              </div>
+          <div className='flex-shrink-0'>;
+            <Link href='/' className='flex items-center space-x-2'>;
+              <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center'>;
+                <Rocket className='w-5 h-5 text-white' />;
+              </div>;
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
 
   return (
@@ -1031,11 +1033,11 @@ const navigation_items: NavigationItem[] = [;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-                  onClick={() => handleDropdownToggle(item.name)}
-                  className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200'
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
+                  onClick={() => handleDropdownToggle(item && item.name)}
+                  className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200';
+                >;
+                  {item && item.icon}
+                  <span>{item && item.name}</span>;
                   <ChevronDown className='w-4 h-4' />                </button>                <button
 
 
@@ -1061,11 +1063,10 @@ const navigation_items: NavigationItem[] = [;
                         {item.children?.map(child => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <Link
-                            key={child.name}
-                            href={child.href}
+                            key={child && child.name}
+                            href={child && child.href}
                             className='flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200'
-                            onClick={closeMenu}
-                          >
+                            onClick={closeMenu}>;
                             <div
 
           {/* Desktop Navigation */}
@@ -1108,12 +1109,12 @@ const navigation_items: NavigationItem[] = [;
                             >;
 
                               {child.icon}
-                            </div>
-                            <div className='flex-1'>
-                              <div className='flex items-center space-x-2'>
-                                <span className='font-medium text-white'>
+                            </div>;
+                            <div className='flex - 1'>;
+                              <div className='flex items - center space - x-2'>;
+                                <span className='font - medium text - white'>;
                                   {child.name}
-                                </span>
+                                </span>;
                                 {child.featured && (
 
                               className={`p-2 rounded-lg bg-gradient-to-r ${child && child.color || 'from-gray-500 to-slate-500'}`}>;
@@ -1157,10 +1158,10 @@ const navigation_items: NavigationItem[] = [;
                             <div className={`p - 2 rounded - lg bg - gradient - to - r ${child.color || 'from - gray - 500 to - slate - 500'}`}>;
 
                               {child.icon}
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-center space-x-2">
-                                <span className="font-medium text-white">{child.name}</span>
+                            </div>;
+                            <div className="flex - 1">;
+                              <div className="flex items - center space - x-2">;
+                                <span className="font - medium text - white">{child.name}</span>;
                                 {child.featured && (
 
                             onClick={closeMenu}>;
@@ -1274,10 +1275,12 @@ const navigation_items: NavigationItem[] = [;
             </Link>
 
           </div>
+=======
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>;
               Get Started;
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>;
           </div>;
+
           {/* Mobile menu button */}
 
 =======
@@ -1432,6 +1435,7 @@ const navigation_items: NavigationItem[] = [;
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <div key={item.name}>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <button
 
                   
@@ -1439,6 +1443,7 @@ const navigation_items: NavigationItem[] = [;
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
+=======
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
                   >;
@@ -1448,46 +1453,21 @@ const navigation_items: NavigationItem[] = [;
                     </div>;
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`} />;
                   </button>;
+
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
                       <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-=======
-=======
-
-              )}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            </button>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
+            className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
           >;
             <div className='px - 2 pt - 2 pb - 3 space - y-1'>;
               {navigation_items.map (item => (
@@ -1520,49 +1500,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   <AnimatePresence>;
                     {active_dropdown === item.name && (
                       <motion.div;
-=======
-            className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          >
-            <div className='px-2 pt-2 pb-3 space-y-1'>
-              {navigationItems.map(item => (
-                <div key={item.name}>
-                  <button
-                    onClick={() => handleDropdownToggle(item.name)}
-                    className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
-                  >
-                    <div className='flex items-center space-x-2'>
-                      {item.icon}
-                      <span>{item.name}</span>
-                    </div>
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
-                    />
-                  </button>          >
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <button
-                    onClick={() => handleDropdownToggle(item.name)}
-                    className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
-                  >
-                    <div className="flex items-center space-x-2">
-                      {item.icon}
-                      <span>{item.name}</span>
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
-                  </button>
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
@@ -1683,7 +1621,9 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                     <span>{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
+
                 <div className="px-3 pt-2">;
+<<<<<<< HEAD
 =======
                         className='ml-4 mt-2 space-y-1'
 <<<<<<< HEAD
@@ -1786,6 +1726,9 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                 </div>
                 <div className="px-3 pt-2">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   <Link
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1880,13 +1823,19 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 
 
 };
+
 export default UltraFuturisticNavigation2047;  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default UltraFuturisticNavigation2047;
 
 

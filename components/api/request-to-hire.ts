@@ -13,6 +13,7 @@ export default async function handler(
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
+
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
   if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
@@ -40,6 +41,7 @@ export default async function handler(
   }
 
   try {
+
     const timestamp = new Date().toISOString();
 
 
@@ -47,6 +49,7 @@ export default async function handler(
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
+=======
 ;
 export default async /**
  * handler - Function description
@@ -94,6 +97,7 @@ if ( {) {
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const payload = {
 
       timestamp,
@@ -106,11 +110,13 @@ if ( {) {
 
 
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
+
     return res && res.status(200).json({ ok: true });
   } catch (err) {
 
 
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 <<<<<<< HEAD
@@ -142,21 +148,6 @@ if ( {) {
 console.error ('Request - to - hire failed', err);
     return res.status (500).json ({ error: 'Internal error' });
   }    return res.status (500).json ({ error: 'Internal error' });
-
-    // Persist to data/requests as a simple CMS-like log
-    const dir = path.join(process.cwd(), 'datarequests'),
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-    const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo },
-    const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`),
-    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8'),
-
-    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
-
-    return res.status(200).json({ ok: true })
-  } catch (err) {
-    console.error('Request-to-hire failed', err),
-    return res.status(500).json({ error: 'Internal error' })
-
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

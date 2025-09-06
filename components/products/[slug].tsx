@@ -56,6 +56,7 @@ const EquipmentDetail: NextPage = () => {;
   const { slug } = router && router.query as { slug?: string };
   const items = equipment as any[];
   const item = items && items.find(e => e && e.slug === slug);  const item = items && items.find((e) => e && e.slug === slug);
+
   if (!item) {;
     return (
       <EnhancedLayout>;
@@ -75,6 +76,8 @@ const EquipmentDetail: NextPage = () => {;
         </div>;
       </EnhancedLayout>;
     );
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <Head>;

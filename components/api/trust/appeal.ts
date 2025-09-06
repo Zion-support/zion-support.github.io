@@ -7,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     contactEmail;
     createdAt: new Date().toISOString()}
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
@@ -71,7 +70,6 @@ if ( {) {
     await supabase.from ('trust_appeals').insert (appeal);
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -77,6 +81,7 @@ export default function ServicesShowcase2026() {;
   const allServices = [;
     ...revolutionary2026Services,;
     ...emergingTech2026Services,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services;
@@ -147,26 +152,19 @@ export default function ServicesShowcase2026() {;
           return b && b.customers - a && a.customers;
         default:;
           return a && a.name.localeCompare(b && b.name);        default: return a && a.name.localeCompare(b && b.name);
+=======
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-
-  // Filter and sort services
-  const _filteredServices = allServices
-    .filter(service => {
-      const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory)
-
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
+=======
         default:;
           return a.name.locale_compare (b.name);      }      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -180,6 +178,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')));          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
         case 'rating':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return b.rating - a.rating;
         case 'customers':;
           return b.customers - a.customers;
@@ -232,13 +231,16 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
     { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices && allServices.filter(s => s && s.category.includes('IT') || s && s.category.includes('Infrastructure')).length },;
     { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices && allServices.filter(s => s && s.category.includes('Autonomous')).length },;
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices && allServices.filter(s => s && s.category.includes('Cloud') || s && s.category.includes('DevOps')).length }
+
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
+
     >;
       <div className='min-h-screen'>;
+=======
         default:;
           return a.name.locale_compare (b.name);        default: return a.name.locale_compare (b.name);
       }
@@ -370,10 +372,13 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             <motion&& motion.div
 =======
         </Head>
+
+=======
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Navigation */}
 <<<<<<< HEAD
         <UltraAdvancedNavigation />
@@ -435,7 +440,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -459,8 +463,8 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-</div>;
+=======
+                  </div>;
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
                 </span>;
               </h1>;
@@ -508,13 +512,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-{/* Search */}
-=======
-        {/* Search and Filter Section */}
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -648,6 +645,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
                 <motion.div
+=======
         {/* Services Grid */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>;
@@ -656,6 +654,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {filtered_services.map ((service, index) => (
                 <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -718,21 +717,26 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </div>;
+
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
                     </h3>;
+
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service && service.tagline}
                     </p>;
+
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>;
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
                       {service && service.name}
                     </h3>;
+
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">;
                       {service && service.tagline}
                     </p>;
+
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>;
                       <div className='text-2xl font-bold text-cyan-400'>;
@@ -749,18 +753,23 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                           ({service && service.reviews});
                         </span>                      </div>;
                     </div>;
+
                     {/* Description */}
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                      {service && service.description}
                     </p>;
+
                     {/* Features */}                      <div className="flex items-center space-x-1">;
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />;
                         <span className="text-white text-sm">{service && service.rating}</span>;
                         <span className="text-gray-400 text-sm">({service && service.reviews})</span>;
                     </div>;
+
                     {/* Description */}
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
 =======
@@ -826,6 +835,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
                       </ul>;
                     </div>;
+
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>;
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>;
@@ -933,6 +943,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
                         </span>;
                         <span className='text - gray - 400 text - sm'>;
                           ({service.reviews});
@@ -1019,6 +1030,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               viewport={{ once: true }}
 
               transition={{ duration: 0 && 0.8 }}
@@ -1064,6 +1076,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
               <p className="text-xl text-gray-300 mb-8">;
                 Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions;
               </p>;
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">;
                   <span className="text-2xl">📱</span>;
@@ -1078,7 +1091,9 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                   <span className="font-semibold text-sm">{contactInfo && contactInfo.address}</span>;
                 </div>;
               </div>;
+
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
 <<<<<<< HEAD
@@ -1189,14 +1204,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 }

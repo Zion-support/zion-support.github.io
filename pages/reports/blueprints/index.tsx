@@ -598,6 +598,7 @@ const BlueprintsIndexPage: React.FC = () => {
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <Link
                           href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
     console.error("Error:", error);
@@ -619,6 +620,8 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         </span>;
                       </div>;
                       <p className="text - gray - 300 text - sm mb - 2">{blueprint.description}</p>;

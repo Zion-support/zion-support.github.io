@@ -26,6 +26,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function LaunchRedirect() {;
   return null;
 }
+=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {

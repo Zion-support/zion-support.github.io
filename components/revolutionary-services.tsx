@@ -1,18 +1,23 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -228,6 +233,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: '1001-2500', label: '$1,001 - $2,500' };
     { value: '2501-5000', label: '$2,501 - $5,000' };
     { value: '5001+', label: '$5,001+' }
+
   const sortOptions = [;
     { value: 'name', label: 'Name A-Z' },;
     { value: 'price', label: 'Price Low-High' },;
@@ -235,30 +241,39 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: 'category', label: 'Category' },;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
+
   // Filter and sort services;
   let filteredServices = revolutionaryMicroSaasServices;
+
   // Category filter;
   if (selectedCategory !== 'All') {;
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
       .split('-');
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
+
   // Search filter;
   if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
+=======
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
+
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
       .split('-');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
@@ -301,6 +316,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
+
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -334,6 +350,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default: return a.name.localeCompare(b.name)
+=======
 ;
   // Filter and sort services;
   let filtered_services = revolutionaryMicroSaasServices;
@@ -401,6 +418,7 @@ if ( {) {
         return b_roi - a_roi;
       default:;
         return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   });
 ;
@@ -522,6 +540,7 @@ if ( {) {
 
   const containerVariants = {
     hidden: { opacity: 0 }
+=======
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
@@ -622,6 +641,7 @@ if ( {) {
     }
   const container_variants = {
     hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -680,7 +700,9 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   const popularServices = getPopularRevolutionaryServices();
+
   // Enhanced service categories with better descriptions;
   const enhancedCategories = [;
     {;
@@ -784,6 +806,7 @@ if ( {) {
       count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(s => s && s.category === 'Smart Energy & Renewable Energy').length,;
       color: 'from-yellow-500 to-orange-600';
     }
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -799,6 +822,7 @@ if ( {) {
       }
     }
   };
+
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -808,6 +832,7 @@ if ( {) {
         duration: 0 && 0.5,;
       },;
     },;
+
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
       <div className='min-h-screen'>;
@@ -816,6 +841,7 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,;
             Autonomous Systems, Space Technology;
           </title>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <meta
             name='description'
             content='Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.'
@@ -945,32 +971,8 @@ if ( {) {
                   </div>;
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
-=======
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                    {revolutionaryMicroSaasServices.length}+
-                  </div>
-                  <div className='text-gray-400'>Revolutionary Services</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>
-                    99.99%
-                  </div>
-                  <div className='text-gray-400'>Accuracy Rate</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-green-400 mb-2'>
-                    21
-                  </div>
-                  <div className='text-gray-400'>Day Free Trial</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>
-                    2000%+
-                  </div>
-                  <div className='text-gray-400'>Average ROI</div>                </div>
-              </motion.div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -997,6 +999,7 @@ if ( {) {
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
+=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
@@ -1065,7 +1068,8 @@ if ( {) {
             </div>
           </div>
         </section>
->;
+=======
+                >;
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
                 </Button>;
@@ -1073,6 +1077,7 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
         {/* Contact Information Banner */}
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
           <div className='container mx-auto px-4'>;
@@ -1095,15 +1100,19 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Category Navigation */}
 
         <section className="py-12">
 
           <div className="container mx-auto px-4">
             <motion.div
+=======
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
@@ -1196,6 +1205,7 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Popular Services Showcase */}
         <section className='py-16'>;
           <div className='container mx-auto px-4'>;
@@ -1280,7 +1290,6 @@ if ( {) {
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
-<<<<<<< HEAD
                     size='large';
                     className='h - full cursor - pointer';
                     on_click={() => setSelectedService (service)}
@@ -1312,6 +1321,7 @@ if ( {) {
                         {service && service.period}
                       </div>;
                     </div>;
+
                     <div className='space-y-3 mb-6'>;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <div key={idx} className='flex items-center gap-2'>;
@@ -1323,6 +1333,7 @@ if ( {) {
 
                       ))}
                     </div>;
+=======
                     variant={service.variant as any}
                     size="large"
                     className="h-full cursor-pointer"
@@ -1337,6 +1348,7 @@ if ( {) {
                       <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
                       <div className="text-sm text-gray-400">{service && service.period}</div>;
                     </div>;
+
                     <div className="space-y-3 mb-6">;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <div key={idx} className="flex items-center gap-2">;
@@ -1344,14 +1356,9 @@ if ( {) {
                           <span className="text-sm text-gray-300">{feature}</span>;
                         </div>;
                       ))}
-<<<<<<< HEAD
                     </div>;
+
                     <div className='text-center'>;
-=======
-                    </div>
-<<<<<<< HEAD
-                    <div className='text-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <Button
                         variant='primary'
                         size='md'
@@ -1362,10 +1369,13 @@ if ( {) {
                         <ExternalLink className='ml-2 w-4 h-4' />;
                       </Button>                    </div>                    <div className="text-center">;
                                                  <Button
+=======
+
                     <div className="text-center">
                                                  <Button 
 
                              variant="primary" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                              size="md"
 
 =======
@@ -1391,16 +1401,11 @@ if ( {) {
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
 =======
-                  </UltraFuturisticCard>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
@@ -1474,6 +1479,7 @@ if ( {) {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
                   </div>;
+
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1588,23 +1594,20 @@ if ( {) {
                              </Button>;
                              <Button
                                variant="futuristic" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                size="sm"
                                onClick={() => setSelectedService(service)}
 
 
                     )}
-</UltraFuturisticCard>;
+                  </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
 
             </motion && motion.div>;
+
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-=======
-            </motion.div>
-            {filteredServices.length === 0 && (
-              <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
@@ -1612,7 +1615,6 @@ if ( {) {
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
                 transition={{ duration: 0 && 0.6 }}>;
                 <div className='text-6xl mb-4'>🔍</div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -1686,7 +1688,6 @@ if ( {) {
 
 
                             ))}
-<<<<<<< HEAD
                           </div>;
                         </div>;
                         <div>;
@@ -1701,6 +1702,7 @@ if ( {) {
 
                           </div>;
                         </div>;
+
                         <div>;
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>;
                             Benefits;
@@ -1713,6 +1715,8 @@ if ( {) {
                                 className='flex items-center gap-2 text-sm'>;
                                 <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{benefit}</span>                              </div>;
+=======
+                        
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
                           <div className="space-y-2">
@@ -1721,8 +1725,8 @@ if ( {) {
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             ))}
-<<<<<<< HEAD
                           </div>;
                         </div>                        <div>;
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
@@ -1736,6 +1740,7 @@ if ( {) {
 
                           </div>;
                         </div>;
+
                         <div>;
                           <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
                             Capabilities;
@@ -1925,6 +1930,7 @@ if ( {) {
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
+=======
                           onClick={() =>;
                             window && window.open(;
                               'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -1943,6 +1949,7 @@ if ( {) {
                            Visit Service;
                            <ExternalLink className="ml-2 w-4 h-4" />;
                          </Button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                          <Button
                            variant="futuristic"
                            onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
@@ -2075,6 +2082,7 @@ if ( {) {
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;
               </div>;
+
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -2100,6 +2108,7 @@ if ( {) {
               <p className="text-xl text-gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
               </p>;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                                  <Button
                    variant="primary" 
@@ -2118,6 +2127,7 @@ if ( {) {
                    <Calendar className="ml-2 w-5 h-5" />;
                  </Button>;
               </div>;
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>;
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
@@ -2146,6 +2156,8 @@ if ( {) {
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;

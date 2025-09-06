@@ -410,6 +410,7 @@ export default function UNBridge(req, res) {
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -458,6 +459,11 @@ export default function UNBridge(req, res) {
             >
               Submit (Email)
             </button>
+=======
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -514,6 +520,7 @@ export default function UNBridge(req, res) {
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
               {result.meta.artifacts?.markdownPath && (
+<<<<<<< HEAD
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -533,6 +540,9 @@ export default function UNBridge(req, res) {
                 </div>              )}
               {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
+=======
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               )}
 <<<<<<< HEAD
               {result.meta.artifacts?.signature && (

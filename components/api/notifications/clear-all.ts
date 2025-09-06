@@ -76,9 +76,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(200).json({ ok: true });
 
     return res.status(200).json({ ok: true })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
+=======
+
     if (error) return res && res.status(200).json({ ok: true });
+
     return res && res.status(200).json({ ok: true });
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' });
@@ -86,23 +90,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }
-
-    const { error} = await supabase
-      .from('notifications')
-      .delete()
-      .eq('user_id', userId),
-
-    if (error) return res.status(200).json({ ok: true }),
-
-    return res.status(200).json({ ok: true })
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
-
-  }
-
 }
 <<<<<<< HEAD
 =======

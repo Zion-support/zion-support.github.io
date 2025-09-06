@@ -32,6 +32,7 @@ const TALENTS_FILE = path && path.join(
   'data',
   'talents',
   'talents && talents.json'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
@@ -98,17 +99,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 
 }
+
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
@@ -191,6 +198,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -257,6 +265,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({_verified});
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 =======
 =======

@@ -35,6 +35,7 @@ export default function CommunityPage() {
               <a
                 className='text-purple-400'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href='mailto: kleber@ziontechgroup.com'
               >
                 kleber@ziontechgroup.com
@@ -96,6 +97,8 @@ export default function CommunityPage() {
 import React from 'react',
 import Head from 'next/head',
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 =======
@@ -210,7 +213,10 @@ function CommunityPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

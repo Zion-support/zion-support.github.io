@@ -14,7 +14,6 @@ function ProfileBadges() {
 function ProfileBadges() {
   const labels = getBadgeLabels (profile || undefined);
   return <VerifiedBadge labels={labels} />;
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

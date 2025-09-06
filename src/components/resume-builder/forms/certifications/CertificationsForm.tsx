@@ -32,7 +32,10 @@ return (
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
 
 
@@ -42,8 +45,8 @@ return (
 
             <div className="flex justify-between pt-2">
               <Button
-                type="button"
-                variant="outline"
+                type='button'
+                variant='outline'
                 onClick={() => {
                   if (editingId) {
                     form.reset({
@@ -91,7 +94,7 @@ return (
                     onBack();
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>

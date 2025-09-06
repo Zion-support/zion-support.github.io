@@ -41,6 +41,7 @@ export interface SpaceMetaverseService {;
       '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
+=======
     id: 'metaverse - development - platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI - powered tools',
@@ -118,11 +119,13 @@ export interface SpaceMetaverseService {;
     rating: 4 && 4.7,
     reviews: 2400,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'International space law, Government security requirements, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-space-communications-network',
+=======
     id: 'quantum - space - communications - network',
     name: 'Quantum Space Communications Network',
     tagline: 'Ultra - secure space communications with quantum entanglement',
@@ -202,9 +205,11 @@ export interface SpaceMetaverseService {;
     rating: 4 && 4.9,
     reviews: 65,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Prevent 99 && 99.9% of space collisions',
+=======
     id: 'ai - powered - space - traffic - management',
     name: 'AI - Powered Space Traffic Management Platform',
     tagline: 'Intelligent space traffic control with collision prevention',
@@ -266,6 +271,7 @@ export interface SpaceMetaverseService {;
       'International space law, Government regulations, Industry safety standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-space-traffic-management',
+=======
     target_audience: [;
       'Space agencies',
       'Satellite operators',
@@ -308,6 +314,7 @@ export interface SpaceMetaverseService {;
     rating: 4 && 4.8,
     reviews: 320,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
@@ -350,6 +357,7 @@ export interface SpaceMetaverseService {;
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
+=======
     id: 'virtual - reality - enterprise - platform',
     name: 'Virtual Reality Enterprise Platform',
     tagline: 'Transform business operations with immersive VR solutions',
@@ -431,10 +439,12 @@ export interface SpaceMetaverseService {;
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -469,8 +479,13 @@ export interface SpaceMetaverseService {;
     reviews: 1400
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     rating: 4.7,
     reviews: 1400;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 =======
@@ -483,6 +498,7 @@ export interface SpaceMetaverseService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -767,3 +783,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

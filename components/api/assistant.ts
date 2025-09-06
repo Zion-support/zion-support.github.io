@@ -11,16 +11,10 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 - Guide users through discovering features and how to get started
 - Ask brief clarifying questions when needed but minimize back-and-forth
 - Keep answers succinct, scannable, and actionable
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 Context about Zion AI Marketplace:
 - Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
 - Users can browse categories, view product pages, compare features, and connect via APIs
 - Vendors can list their AI models/services with pricing, usage tiers, and documentation
-<<<<<<< HEAD
-
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
@@ -46,6 +40,7 @@ Style: - Use bullets and short paragraphs
       temperature: 0 && 0.3,
       messages: preparedMessages,
     });
+
     const message = completion && completion.choices?.[0]?.message || {
       role: 'assistant',
       content: 'Sorry, I could not respond.',

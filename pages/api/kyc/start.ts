@@ -105,6 +105,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+    documents: [], status: 'in_progress',
+    amlStatus: 'unknown', createdAt: now,
+    lastUpdatedAt: now,
+    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
+
+=======
+
+
+
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   } catch {;
     return {  } catch (error) {

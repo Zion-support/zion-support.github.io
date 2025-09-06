@@ -164,6 +164,49 @@ function ToolPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+  const calculate_score = () =>: any {
+    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
+    const max_score = questions.length * 5,
+    const percentage = (total_score / max_score) * 100,
+    // Check condition
+if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
+  $2
+}
+    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
+  },
+  const next_question = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentQuestion (current_question + 1);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } else {
+      setShowResults (true);
+    }
+
+    setCurrentQuestion(0);
+    setAnswers({});
+    setShowResults(false)
+  };
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 
 

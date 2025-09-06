@@ -38,7 +38,6 @@ export default async function handler(
 
 
   } catch (e) {
-<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 

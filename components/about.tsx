@@ -22,16 +22,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -91,6 +95,7 @@ export default function AboutPage() {
 =======
 import Button from '../components/ui/Button',;
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
+
 export default function AboutPage() {;
 	const contactInfo = {;
 		mobile: '+1 302 464 0950',;
@@ -98,11 +103,13 @@ export default function AboutPage() {;
 		address: '364 E Main St STE 1008 Middletown DE 19709',;
 		website: 'https://ziontechgroup && ziontechgroup.com';
 	};
+
 	const pillars = [;
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' };
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' };
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },;
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99 && 99.99% uptime.' }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 	];
 	return (
 
@@ -121,6 +128,7 @@ export default function AboutPage() {;
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.;
 						</p>;
 					</div>;
+
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">;
 						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">;
 							<div className="flex items-center gap-3 mb-4">;
@@ -144,6 +152,7 @@ export default function AboutPage() {;
 							</ul>;
 						</Card>;
 					</div>;
+
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">;
 						{pillars && pillars.map((p) => (;
 							<Card key={p && p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">;
@@ -152,6 +161,7 @@ export default function AboutPage() {;
 							</Card>;
 						))}
 					</div>;
+
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">;
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
 							<div className="flex items-center gap-3 text-cyan-400">;
@@ -182,6 +192,7 @@ export default function AboutPage() {;
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 
 <<<<<<< HEAD
@@ -451,6 +462,7 @@ export default function AboutPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   return (
       {/* Mission & Vision */}
     <>;
@@ -462,6 +474,7 @@ export default function AboutPage() {;
         <meta name="twitter:card" content="summary_large_image" />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/about" />;
       </Head>;
+
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]" />;
@@ -479,6 +492,7 @@ export default function AboutPage() {;
           </p>;
         </div>;
       </section>;
+
       <section className="section-padding bg-gradient-cursor-accent">;
         <div className="container-cursor">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">;
@@ -503,6 +517,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </section>;
+
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
           <div className="text-center mb-20">;
@@ -526,6 +541,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </section>;
+
       <section className="section-padding bg-gradient-cursor-blue">;
         <div className="container-cursor">;
           <div className="text-center mb-20">;
@@ -553,6 +569,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </section>;
+
       <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
@@ -565,6 +582,7 @@ export default function AboutPage() {;
           </div>;
         </div>;
       </section>;
+
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">;
         <div className="absolute inset-0 bg-dots opacity-10" />;
         <div className="container-cursor text-center relative z-10">;
@@ -577,6 +595,7 @@ export default function AboutPage() {;
             <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>;
           </div>;
         </div>;
+
         {/* Contact Section */}
         <section className="section-padding bg-gradient-cursor-accent">;
           <div className="container-cursor">;
@@ -586,6 +605,7 @@ export default function AboutPage() {;
                 Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth;
               </p>;
             </div>;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">;
                 <div className="text-4xl mb-4">📞</div>;
@@ -593,12 +613,14 @@ export default function AboutPage() {;
                 <p className="text-blue-400 font-semibold text-lg">{contactInfo && contactInfo.mobile}</p>;
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>;
               </Card>;
+
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">;
                 <div className="text-4xl mb-4">✉️</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>;
                 <p className="text-green-400 font-semibold text-lg">{contactInfo && contactInfo.email}</p>;
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>;
               </Card>;
+
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">;
                 <div className="text-4xl mb-4">📍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>;
@@ -606,12 +628,14 @@ export default function AboutPage() {;
                 <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>;
               </Card>;
             </div>;
+
             <div className="text-center">;
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">;
                 🌐 Visit our website: {contactInfo && contactInfo.website}
               </div>;
               <p className="text-gray-400 text-lg">;
                 Start your 21-day free trial today and experience the future of technology;
+=======
 ];}</div> </a> </div> </div> <div className="mt - 6 flex justify - center" > <Button href="/contact" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>);
 }return ({
   /* Mission & Vision */;
@@ -645,209 +669,23 @@ export default /**
  */
 function AboutPage() {
   const values = [;
-
-	return (
-		<UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
-			<Head>
-				<title>About Us - Zion Tech Group</title>
-				<meta name=&quot;description&quot; content=&quot;Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.&quot; />
-			</Head>
-			<section className=&quot;relative py-24 px-4&quot;>
-				<div className=&quot;max-w-6xl mx-auto&quot;>
-					<div className=&quot;text-center mb-14&quot;>
-						<h1 className=&quot;text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent&quot;>
-							We build practical AI and platform solutions
-						</h1>
-						<p className=&quot;mt-4 text-gray-300 max-w-3xl mx-auto&quot;>
-							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
-						</p>
-					</div>
-
-					<div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 mb-12&quot;>
-						<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
-							<div className=&quot;flex items-center gap-3 mb-4&quot;>
-								<Rocket className=&quot;w-6 h-6 text-cyan-400&quot; />
-								<h2 className=&quot;text-2xl font-bold text-white&quot;>Our Mission</h2>
-							</div>
-							<p className=&quot;text-gray-300&quot;>
-								Deliver future-grade capabilities with present-day ROI. We productize repeatable outcomes so you start fast and scale predictably.
-							</p>
-						</Card>
-						<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
-							<div className=&quot;flex items-center gap-3 mb-4&quot;>
-								<Sparkles className=&quot;w-6 h-6 text-purple-400&quot; />
-								<h2 className=&quot;text-2xl font-bold text-white&quot;>How We Work</h2>
-							</div>
-							<ul className=&quot;list-disc list-inside text-gray-300 space-y-2&quot;>
-								<li>Productized service tiers with clear SLAs</li>
-								<li>Security, _compliance, _and FinOps baked in</li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Button from '../components/ui/Button'
-=======
-import Button from '../components/ui/Button',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
-export default function AboutPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950'
-		email: 'kleber@ziontechgroup.com'
-		address: '364 E Main St STE 1008 Middletown DE 19709'
-		website: 'https://ziontechgroup.com'
-	}
-=======
-import Button from '../components/ui/Button',;
-=======
-import Button from '../components/ui/Button',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
-export default function AboutPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com';
-	};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-	const pillars = [
-		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' }
-		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' }
-		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' }
-		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-	];
-	return (
-		<UltraFuturisticBackground variant="holographic" intensity="high">
-			<Head>
-				<title>About Us - Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support." />
-			</Head>
-			<section className="relative py-24 px-4">
-				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-14">
-						<h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">
-							We build practical AI and platform solutions
-						</h1>
-						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
-							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
-						</p>
-					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-							<div className="flex items-center gap-3 mb-4">
-								<Rocket className="w-6 h-6 text-cyan-400" />
-								<h2 className="text-2xl font-bold text-white">Our Mission</h2>
-							</div>
-							<p className="text-gray-300">
-								Deliver future-grade capabilities with present-day ROI. We productize repeatable outcomes so you start fast and scale predictably.
-							</p>
-						</Card>
-						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-							<div className="flex items-center gap-3 mb-4">
-								<Sparkles className="w-6 h-6 text-purple-400" />
-								<h2 className="text-2xl font-bold text-white">How We Work</h2>
-							</div>
-							<ul className="list-disc list-inside text-gray-300 space-y-2">
-								<li>Productized service tiers with clear SLAs</li>
-								<li>Security, compliance, and FinOps baked in</li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-								<li>Build-operate-transfer options for in-house teams</li>
-								<li>Transparent pricing and usage-based add-ons</li>
-							</ul>
-						</Card>
-					</div>
-<<<<<<< HEAD
-
-					<div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-6 mb-16&quot;>
-						{pillars.map((p) => (
-							<Card key={p.title} className=&quot;bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6&quot;>
-								<div className=&quot;flex items-center gap-3 mb-3 text-white&quot;>{p.icon}<span className=&quot;font-semibold&quot;>{p.title}</span></div>
-								<p className=&quot;text-gray-300 text-sm&quot;>{p.desc}</p>
-							</Card>
-						))}
-					</div>
-
-					<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
-						<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-							<div className=&quot;flex items-center gap-3 text-cyan-400&quot;>
-								<Phone className=&quot;w-5 h-5&quot; />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className=&quot;hover:text-white&quot;>{contactInfo.mobile}</a>
-							</div>
-							<div className=&quot;flex items-center gap-3 text-purple-400&quot;>
-								<Mail className=&quot;w-5 h-5&quot; />
-								<a href={`mailto:${contactInfo.email}`} className=&quot;hover:text-white&quot;>{contactInfo.email}</a>
-							</div>
-							<div className=&quot;flex items-center gap-3 text-green-400&quot;>
-								<MapPin className=&quot;w-5 h-5&quot; />
-								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-white&quot;>
-=======
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-						{pillars.map((p) => (
-							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
-								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>
-								<p className="text-gray-300 text-sm">{p.desc}</p>
-							</Card>
-						))}
-					</div>
-					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="flex items-center gap-3 text-cyan-400">
-								<Phone className="w-5 h-5" />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover: text-white">{contactInfo.mobile}</a>
-							</div>
-							<div className="flex items-center gap-3 text-purple-400">
-								<Mail className="w-5 h-5" />
-								<a href={`mailto:${contactInfo.email}`} className="hover:text-white">{contactInfo.email}</a>
-							</div>
-							<div className="flex items-center gap-3 text-green-400">
-								<MapPin className="w-5 h-5" />
-								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-									{contactInfo.address}
-								</a>
-							</div>
-						</div>
-<<<<<<< HEAD
-						<div className=&quot;mt-6 flex justify-center&quot;>
-							<Button href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white&quot;>Contact Us</Button>
-=======
-						<div className="mt-6 flex justify-center">
-							<Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Us</Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-						</div>
-					</Card>
-				</div>
-			</section>
-		</UltraFuturisticBackground>
-<<<<<<< HEAD
-	)
-}
-
-import React from 'react'
-import Head from 'next/head'
-import Card from '../components/ui/Card'
-import Button from '../components/ui/Button'
-export default function AboutPage() {
-  const values = [
-
     {
       icon: '🚀',
       title: 'Innovation',
       description: 'Constantly pushing boundaries and exploring new frontiers in technology',
-color: 'text - cyan - 400',
+      color: 'text - cyan - 400',
       gradient: 'from - cyan - 400 to - blue - 500'},
     {
       icon: '🤖',
       title: 'Autonomy',
       description: 'Building systems that can operate independently and make intelligent decisions',
-color: 'text - fuchsia - 400',
+      color: 'text - fuchsia - 400',
       gradient: 'from - fuchsia - 400 to - purple - 500'},
     {
       icon: '🌍',
       title: 'Impact',
       description: 'Creating technology that makes a positive difference in the world',
-color: 'text - green - 400',
+      color: 'text - green - 400',
       gradient: 'from - green - 400 to - emerald - 500'}],
   const services = [;
     {
@@ -866,66 +704,10 @@ color: 'text - green - 400',
     { number: '24 / 7', label: 'Support', color: 'text - green - 400' },
     { number: '99.9%', label: 'SLA', color: 'text - blue - 400' }],
   const contact_info = {
-=======
-	);
-}
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-
-import Button from '../components/ui/Button';
-import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
-export default function AboutPage() {
-
-  const values = [
-    {
-      icon: '🚀'
-      title: 'Innovation'
-      description: 'Constantly pushing boundaries and exploring new frontiers in technology'
-      color: 'text-cyan-400'
-      gradient: 'from-cyan-400 to-blue-500'}
-    {
-      icon: '🤖'
-      title: 'Autonomy'
-      description: 'Building systems that can operate independently and make intelligent decisions'
-      color: 'text-fuchsia-400'
-      gradient: 'from-fuchsia-400 to-purple-500'}
-    {
-      icon: '🌍'
-      title: 'Impact'
-      description: 'Creating technology that makes a positive difference in the world'
-      color: 'text-green-400'
-      gradient: 'from-green-400 to-emerald-500'}]
-  const services = [
-    {
-      title: 'AI Development'
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.'
-    icon: '🧠',      color: 'text-cyan-400'
-      gradient: 'from-cyan-400 to-blue-500'}
-    {
-      title: 'Automation Systems'
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.'
-    icon: '⚙️',      color: 'text-fuchsia-400'
-      gradient: 'from-fuchsia-400 to-purple-500'}]
-  const achievements = [
-    { number: '600+', label: 'Services', color: 'text-cyan-400' }
-    { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' }
-    { number: '24/7', label: 'Support', color: 'text-green-400' }
-    { number: '99.9%', label: 'SLA', color: 'text-blue-400' }]
-  const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
   }
 ;
   return (
@@ -1086,6 +868,7 @@ export default function AboutPage() {
               </div>;
               <p className="text - gray - 400 text - lg">;
                 Start your 21 - day free trial today and experience the future of technology;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
             </div>;
           </div>;

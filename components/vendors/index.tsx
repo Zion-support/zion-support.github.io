@@ -8,6 +8,7 @@ import type { GetServerSideProps } from 'next';
         <h1 className='text-2xl font-semibold'>Vendors</h1>;
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
+=======
 import type { Vendor } from '../../utils / vendor - types';
 ;
 type Props = { vendors: Vendor[] }
@@ -22,6 +23,7 @@ function VendorsPage() {
         <h1 className='text - 2xl font - semibold'>Vendors</h1>;
         <Link href='/vendors / register'>;
           <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Apply as Vendor;
           </a>;
         </Link>;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -16,6 +17,8 @@ import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 import Button from '../components/ui/Button';
@@ -31,13 +34,17 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -55,15 +62,30 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Target, BarChart, PieChart, Activity, Eye, Lock
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 } from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
 
@@ -73,7 +95,10 @@ export default function AIBusinessIntelligenceSuite() {
 
     website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
   },
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const features = [
     'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards'
     'Role-based access control and securityAPI access for custom integrations'
@@ -102,10 +127,13 @@ export default function AIBusinessIntelligenceSuite() {
     <UltraAdvancedFuturisticBackground
       intensity="high"
 <<<<<<< HEAD
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="high" 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       colorScheme="quantum-fusion"
       particleCount={500}
       animationSpeed={2.0}

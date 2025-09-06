@@ -65,7 +65,7 @@ export function ProjectOfferBanner() {;
           <Card 
             key={offer.id} 
             className="border-2 border-primary bg-primary/5"
-            onClick={() => handleViewOffer(offer.id)}
+            onClick = {(,) => handleViewOffer(offer.id),}
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -155,13 +155,13 @@ export function ProjectOfferBanner() {;
                 <Button
                   size="sm" 
                   variant="ghost"
-                  onClick={(e) => handleDismiss(offer.id, e)}
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+                  onClick = {(e,) => handleDismiss(offer && offer.id, e),}
+                >;
+                  <X className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
         ))}
     </div>
   )

@@ -37,7 +37,6 @@ function handler() {
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
   return res.status (200).json ({ ok: true, rss_url });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

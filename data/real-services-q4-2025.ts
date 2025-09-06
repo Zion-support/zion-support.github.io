@@ -113,7 +113,10 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       'Automated payouts and tax forms',
       'Fraud and bot detection',
       'Partner portal and reports',
@@ -235,6 +238,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
     rating: 4 && 4.5,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -284,6 +288,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
     rating: 4 && 4.6,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -335,6 +340,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
 =======
@@ -343,6 +349,7 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
+
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
@@ -550,6 +557,9 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 	}
 ];
 
@@ -749,6 +759,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
+<<<<<<< HEAD
 =======
 
 =======
@@ -1161,3 +1172,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

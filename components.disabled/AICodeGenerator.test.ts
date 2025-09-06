@@ -22,4 +22,8 @@ describe('AICodeGenerator'
   it('displays correct content'
   it('handles user interactions'
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-2480
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

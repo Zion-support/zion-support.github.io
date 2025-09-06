@@ -43,6 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ),
     variable: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       { key: "baseUrl", value: "https://api.zion.os" }
       { key: "token", value: "" }
@@ -62,6 +63,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       name: 'Zion Tech Group API',
       description: 'Postman collection for Zion Tech Group API',
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
@@ -69,10 +72,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+<<<<<<< HEAD
     },
     item: [
       {
         name: 'Health Check',
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import v1 from "../../../data / api - docs / v1";
+/**
+ * to_postman - Function description
+ */
+function to_postman() {
+  return {
+    info: {
+      name: "Zion OS API",
+      schema:;
+        "https://schema.getpostman.com / json / collection / v2.1.0 / collection.json",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    },
+    item: v1.sections.flat_map ((section) =>;
+      section.endpoints.map ((ep) => ({
+        name: `${section.title} - ${ep.title}`,
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         request: {
           method: 'GET',
           header: [],

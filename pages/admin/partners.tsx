@@ -314,6 +314,7 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
+<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -365,6 +366,55 @@ export default function AdminPartners() {
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </tbody>;
+        </table>;
+      </div>;
+
+      {selected && (;
+        <div className='p-4 rounded border'>;
+          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
+          <ul className='list-disc pl-6'>;
+            {flags && flags.map((f, idx) => (;
+              <li key={idx}>;
+                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
+                {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
+              </li>;
+
+            ))}
+            {flags && flags.length === 0 && (;
+              <li className='text-gray-500 list-none'>No flags</li>;
+            )}
+
+          </ul>;
+        </div>;
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;
+            <p className="text-2xl font-bold">{totalPartners}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;
+            <p className="text-2xl font-bold text-green-600">{activePartners}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;
+            <p className="text-2xl font-bold">{totalReferrals}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;
+            <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
+          </div>;
+        </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -634,6 +684,7 @@ export default function AdminPartners() {
                               Activate;
                             </button>;
                           )}
+<<<<<<< HEAD
                           <button className="text-blue-600 hover:text-blue-900">
                             Edit
                           </button>
@@ -648,6 +699,48 @@ export default function AdminPartners() {
         </div>
       </main>
     </>
+=======
+                          <button className="text-blue-600 hover:text-blue-900">;
+=======
+                            <>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'active')}
+                                className="text - green - 600 hover:text - green - 900";
+                              >;
+                                Approve;
+                              </button>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'inactive')}
+                                className="text - red - 600 hover:text - red - 900";
+                              >;
+                                Reject;
+                              </button>;
+                            </>)}
+                          {partner.status === 'active' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'inactive')}
+                              className="text - red - 600 hover:text - red - 900";
+                            >;
+                              Deactivate;
+                            </button>)}
+                          {partner.status === 'inactive' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'active')}
+                              className="text - green - 600 hover:text - green - 900";
+                            >;
+                              Activate;
+                            </button>)}
+                          <button className="text - blue - 600 hover:text - blue - 900">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                            Edit;
+                          </button>;
+                        </div>;
+                      </td>;
+
+        </div>;
+      </main>;
+    </>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   );
 <<<<<<< HEAD
 =======

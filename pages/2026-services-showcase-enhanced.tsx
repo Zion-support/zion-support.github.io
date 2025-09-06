@@ -189,6 +189,7 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+<<<<<<< HEAD
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -226,6 +227,38 @@ export default function Services2026ShowcaseEnhancedPage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced'
     if (serviceVariant.includes('integration')) return 'quantum-advanced'
     if (serviceVariant.includes('analytics')) return 'neural'
+=======
+
+    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
+    if (serviceVariant.includes('quantum')) return 'quantum';
+    if (serviceVariant.includes('ai')) return 'ai-futuristic';
+    if (serviceVariant.includes('holographic')) return 'holographic';
+    if (serviceVariant.includes('neural')) return 'neural';
+    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk';
+    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic';
+    if (serviceVariant.includes('cloud')) return 'quantum-advanced';
+    if (serviceVariant.includes('security')) return 'cyberpunk';
+    if (serviceVariant.includes('data')) return 'neural';
+    if (serviceVariant.includes('mobility')) return 'holographic';
+    if (serviceVariant.includes('network')) return 'quantum-advanced';
+    if (serviceVariant.includes('backup')) return 'quantum-advanced';
+    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic';
+    if (serviceVariant.includes('monitoring')) return 'neural';
+    if (serviceVariant.includes('blockchain')) return 'quantum-advanced';
+    if (serviceVariant.includes('metaverse')) return 'holographic';
+    if (serviceVariant.includes('iot')) return 'quantum-iot';
+    if (serviceVariant.includes('edge')) return 'quantum-advanced';
+    if (serviceVariant.includes('ar')) return 'holographic';
+    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced';
+    if (serviceVariant.includes('5g')) return 'quantum-advanced';
+    if (serviceVariant.includes('biometric')) return 'cyberpunk';
+    if (serviceVariant.includes('autonomous')) return 'ai-futuristic';
+    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced';
+    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic';
+    if (serviceVariant.includes('api')) return 'quantum-advanced';
+    if (serviceVariant.includes('integration')) return 'quantum-advanced';
+    if (serviceVariant.includes('analytics')) return 'neural';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     return 'default'
   };
 
@@ -477,7 +510,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -572,6 +611,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Enhanced 2026 Services Showcase
@@ -579,6 +619,134 @@ if ( {) {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.
               </p>
+=======
+        filtered = filtered.filter (service => service.category.includes ('AI'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('Quantum') || service.category.includes ('Emerging'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('Enterprise') || service.category.includes ('IT'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('SaaS'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('Healthcare') || service.category.includes ('Biotech'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('Financial') || service.category.includes ('Trading'));
+      } else // Check condition
+if ( {) {
+  $2
+}
+        filtered = filtered.filter (service => service.category.includes ('Manufacturing') || service.category.includes ('IoT'));
+      }
+    }
+    // Price filter;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (service => {
+        const price = parse_int (service.price.replace (/[^0 - 9]/g, '')),
+        // Check condition
+if (return price < 1000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 1000 && price < 5000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 5000 && price < 20000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 20000, ) {
+  $2
+}
+        return true;
+      });
+    }
+    // Sort services;
+    filtered.sort ((a, b) => {
+      switch (sort_by) {
+        case 'price - low':;
+          return parse_int (a.price.replace (/[^0 - 9]/g, '')) - parse_int (b.price.replace (/[^0 - 9]/g, '')),
+        case 'price - high':;
+          return parse_int (b.price.replace (/[^0 - 9]/g, '')) - parse_int (a.price.replace (/[^0 - 9]/g, '')),
+        case 'popularity':;
+          return (b.rating * b.reviews) - (a.rating * a.reviews),
+        case 'newest':;
+          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
+        case 'rating':;
+          return b.rating - a.rating,
+        default: return a.name.locale_compare (b.name);
+      }
+    }),
+    return filtered;
+  }, [all2026Services, search_term, selected_category, selectedPriceRange, sort_by]),
+  // Service statistics;
+  const service_stats = {
+    total_services: all2026Services.length,
+    ai_services: all2026Services.filter (string => s.category.includes ('AI')).length,
+    quantum_services: all2026Services.filter (string => s.category.includes ('Quantum')).length,
+    enterprise_services: all2026Services.filter (string => s.category.includes ('Enterprise') || s.category.includes ('IT')).length,
+    microSaasServices: all2026Services.filter (string => s.category.includes ('SaaS')).length,
+    healthcare_services: all2026Services.filter (string => s.category.includes ('Healthcare') || s.category.includes ('Biotech')).length,
+    financial_services: all2026Services.filter (string => s.category.includes ('Financial') || s.category.includes ('Trading')).length,
+    manufacturing_services: all2026Services.filter (string => s.category.includes ('Manufacturing') || s.category.includes ('IoT')).length;
+  },
+  return (
+    <UltraFuturisticBackground variant="holographic" intensity="high">;
+      <div className="min - h-screen">;
+        <Head>;
+          <title > Enhanced 2026 Services Showcase - Zion Tech Group</title>;
+          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting - edge technology." />;
+          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />;
+          <link rel="icon" href="/favicon.svg" />;
+          {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />;
+          <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />;
+          <meta property="og:type" content="website" />;
+          <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase - enhanced" />;
+          <meta property="og:image" content="https://ziontechgroup.com / og - image.svg" />;
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />;
+          <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />;
+          <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />;
+          <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
+        </Head>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Enhanced Header Section */}
+        <section className="relative py - 32 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 30 via - transparent to - cyan - 900 / 30"></div>;
+          <div className="max - w-7xl mx - auto relative z - 10 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+            >;
+              <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
+                Enhanced 2026 Services Showcase;
+              </h1>;
+              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+                Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.;
+              </p>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               {/* Service Statistics */}
 
               <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4 mb - 12">;
@@ -803,6 +971,20 @@ if ( {) {
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
+<<<<<<< HEAD
+=======
+
+                <div>;
+                  <label className="block text - sm font - medium text - gray - 300 mb - 2">Price Range</label>;
+                  <select;
+                    value={selectedPriceRange}
+                    on_change={(e) => setSelectedPriceRange (e.target.value)}
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg px - 3 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500";
+                  >;
+                    {price_ranges.map ((range) => (
+                      <option key={range.id} value={range.id}>;
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         {range.name}
 
                       </option>))}
@@ -899,6 +1081,7 @@ if ( {) {
                       <Grid className="w-4 h-4 mx-auto" />
                     </button>
                     <button
+<<<<<<< HEAD
                       onClick={() => setViewMode('list')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -921,6 +1104,31 @@ if ( {) {
               <div className="text-center">
                 <p className="text-gray-400">
                   Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
+=======
+                      onClick={() => setViewMode('list')}
+                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
+                      }`}
+=======
+                <div>;
+                  <label className="block text - sm font - medium text - gray - 300 mb - 2">View Mode</label>;
+                  <div className="flex bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg p - 1">;
+                    <button;
+                      on_click={() => setViewMode ('grid')}
+                      className={`flex - 1 py - 2 px - 3 rounded - md text - sm font - medium transition - colors ${
+                        view_mode === 'grid' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
+                      }`}
+                    >;
+                      <Grid className="w - 4 h - 4 mx - auto" />;
+                    </button>;
+                    <button;
+                      on_click={() => setViewMode ('list')}
+                      className={`flex - 1 py - 2 px - 3 rounded - md text - sm font - medium transition - colors ${
+                        view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
+                      }`}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               {/* Results Count */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -934,37 +1142,59 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Enhanced Services Grid */}
-        {/* Enhanced Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        {/* Enhanced Services Grid */}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+        {/* Enhanced Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
+<<<<<<< HEAD
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -981,11 +1211,17 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -996,10 +1232,55 @@ if ( {) {
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
+=======
+
+=======
+                    >;
+                      <List className="w - 4 h - 4 mx - auto" />;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+              {/* Results Count */}
+              <div className="text - center">;
+                <p className="text - gray - 400">;
+                  Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
+                  <span className="text - cyan - 400 font - semibold">{all2026Services.length}</span> services;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Enhanced Services Grid */}
+        <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <AnimatePresence mode="wait">;
+              {filtered_services.length === 0 ? (
+                <motion.div;
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text - center py - 20";
+                >;
+                  <div className="text - 6xl mb - 4">🔍</div>;
+                  <h3 className="text - 2xl font - semibold text - gray - 300 mb - 2">No services found</h3>;
+                  <p className="text - gray - 400">Try adjusting your search criteria or filters</p>;
+                </motion.div>) : (
+                <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
+                  {filtered_services.map ((service, index) => (
+                    <motion.div;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                      key={service.id}
+                      initial={{ opacity: 0, coordinate_y: 20 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: -20 }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
                     >
@@ -1063,6 +1344,7 @@ if ( {) {
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
+<<<<<<< HEAD
                               <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                                 Popular
                               </div>
@@ -1071,6 +1353,24 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+                      className={view_mode === 'grid' ? '' : 'bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 600 / 30'}
+                    >;
+                      <UltraFuturisticCard;
+                        variant={mapServiceVariantToCardVariant (service.variant)}
+                        className="h - full";
+                      >;
+                        <div className="p - 6">;
+                          {/* Service Header */}
+                          <div className="flex items - start justify - between mb - 4">;
+                            <div className="text - 4xl">{service.icon}</div>;
+                            {service.popular && (
+
+                              <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full font - medium">;
+                                Popular;
+                              </div>)}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                           </div>;
                           {/* Service Title and Tagline */  } catch (error) {
     console.error("Error:", error);

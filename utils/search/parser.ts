@@ -54,11 +54,11 @@ export const parseSearchQuery = (query: string) => {
     skills: [],
     location: null,
     type: null;
-  };
-};
-
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
+  }
+}
+;
+export const search_all = (parsed: any, access: any) =>: any {
+  // Add search functionality here;
   return {
     all: [],
     talent: [],

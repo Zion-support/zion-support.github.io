@@ -236,6 +236,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
+
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
 

@@ -21,7 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const result = validateCredentials(email, password, code);
 
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
@@ -55,8 +54,6 @@ if ( {) {
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
-
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

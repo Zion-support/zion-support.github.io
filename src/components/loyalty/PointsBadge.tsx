@@ -9,54 +9,65 @@ if ( {) {
       setLoginOpen (true);
     }
   }
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
-    e.preventDefault();
-    e.stopPropagation();
-    if (!isAuthenticated) return;
-    setIsRefreshing(true);    try {
-      await fetchLedger()
+  const handle_refresh = async (e: React.MouseEvent < HTMLButtonElement>) => {
+    e.prevent_default ();
+    e.stop_propagation ();
+    // Check condition
+if (return) {
+  $2
+}
+    setIsRefreshing (true);    try {
+      await fetch_ledger ();
     } catch (error) {
-      logErrorToProduction('Failed to refresh points:', { data: error })
+      logErrorToProduction ('Failed to refresh points:', { data: error });
     } finally {
       setIsRefreshing(false)
     }
   }
 import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',;
-import { useAuth } from '@/hooks/useAuth',;
-import Link from 'next/link',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import { usePoints } from '@/hooks/usePoints';
+import { useAuth } from '@/hooks/useAuth';
+import Link from 'next/link';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
 export function PointsBadge() {;
-  const { isAuthenticated } = useAuth(),;
-  const { ledger, balance, loading, fetchLedger } = usePoints(),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const [isRefreshing, setIsRefreshing] = useState(false),;
-  const points = balance,;
-  const breakdown = ledger.reduce(;
+  const { isAuthenticated } = useAuth();
+  const { ledger, balance, loading, fetchLedger } = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const points = balance;
+
+  const breakdown = ledger && ledger.reduce(;
     (acc, e) => {;
-      if (e.reason === 'purchase') acc.purchase += e.delta,;
-      if (e.reason === 'post') acc.post += e.delta,;
-      if (e.reason === 'referral') acc.referral += e.delta,;
-      return acc;
-    },;
+      if (e && e.reason === 'purchase') acc && acc.purchase += e && e.delta;
+      if (e && e.reason === 'post') acc && acc.post += e && e.delta;
+      if (e && e.reason === 'referral') acc && acc.referral += e && e.delta;
+      return acc;    },;
     { purchase: 0, post: 0, referral: 0 }
-  ),;
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
+  );
+
+  const handleClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
     if (!isAuthenticated) {;
-      e.preventDefault(),;
+      e && e.preventDefault();
       setLoginOpen(true);
     }
-  },;
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (!isAuthenticated) return,;
-    setIsRefreshing(true);
-    try {;
+  };
+
+  const handleRefresh = async (e: React && React.MouseEvent<HTMLButtonElement>) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation();
+    if (!isAuthenticated) return;
+
+    setIsRefreshing(true);    try {;
       await fetchLedger();
     } catch (error) {;
       logErrorToProduction('Failed to refresh points:', { data: error });
@@ -64,8 +75,7 @@ export function PointsBadge() {;
       setIsRefreshing(false);
 
     }
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
 
   return (
     <TooltipProvider>;
@@ -78,7 +88,7 @@ export function PointsBadge() {;
               on_click={handle_click}
 
               title={
-                isAuthenticated ? 'View points' : 'Earn points by participating'
+                is_authenticated ? 'View points' : 'Earn points by participating';
               }
 
               className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
@@ -230,6 +240,7 @@ export function PointsBadge() {;
 ;
 
       </div>;
+
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}

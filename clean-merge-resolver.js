@@ -9,6 +9,7 @@ const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🚀 Starting comprehensive merge conflict resolution and PR merging...'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR mergin
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 // Function to fix merge conflicts in a file;
 /**
  * fixMergeConflicts - Function description
@@ -80,6 +83,7 @@ function fixMergeConflicts(filePath) {;
     return false;
   } catch (error) {
     console.log (`❌ Error fixing ${file_path}: ${error.message}`),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return false;
   }
 }
@@ -127,6 +131,7 @@ function getAllFiles() {
   $2
 }
         files.push (full_path);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 function getAllFiles(dir, extensions) {let files = [];
@@ -207,6 +212,8 @@ function getAllFiles(dir, extensions) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       }
     }
   } catch (error) {
@@ -251,7 +258,6 @@ function main() {
     } catch (error) {
       console.log ('⚠️  Merge conflicts detected. Resolving...'),
       // Find files with merge conflicts;
-<<<<<<< HEAD
       const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
       if () {) {
   $2

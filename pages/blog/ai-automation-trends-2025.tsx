@@ -22,7 +22,15 @@ import Link from 'next / link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
+<<<<<<< HEAD
 export default function AIAutomationTrends2025() {
+=======
+export default /**
+ * AIAutomationTrends2025 - Function description
+ */
+function AIAutomationTrends2025() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <>;
       <Head>;

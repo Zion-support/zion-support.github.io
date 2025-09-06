@@ -164,7 +164,6 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, X, Search, ChevronDown, ChevronRight;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
@@ -239,6 +238,7 @@ const serviceCategories = [
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Cutting-edge micro solutions',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -314,6 +314,7 @@ export default function UltraFuturisticNavigation2029V2() {;
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
       {/* Main Navigation Bar */}
@@ -354,7 +355,19 @@ export default function UltraFuturisticNavigation2029V2() {;
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -523,38 +536,22 @@ function UltraFuturisticNavigation2029V2() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-=======
-                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {mainNavigation.map((item) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-className="relative group"
+                className="relative group"
               >
                 <Link
                   href={item.href}
                   className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
                 >
                   <item.icon className="w-4 h-4" />
-=======
-<<<<<<< HEAD
-                transition={{
-                  duration: 0.5
-                  delay: mainNavigation.indexOf(item) * 0.1
-                }}
-                className='relative group'
-                <Link
-                  href={item.href}
-                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10'
-                >
-                  <item.icon className='w-4 h-4' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span>{item.name}</span>
                 </Link>
+                
                 {/* Hover effect */}
                 <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
               </motion.div>
@@ -562,18 +559,6 @@ className="relative group"
           </div>
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
-
-              </motion.div>
-
-            ))}
-          </div>
-          {/* Right side - Contact & Search */}
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Search */}
-=======
-          <div className='hidden lg:flex items-center space-x-4'>
-=======
 
               </motion.div>
 
@@ -587,16 +572,6 @@ className="relative group"
           <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Search */}
-            <div className='relative'>
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
-              <input
-                type='text'
-                placeholder='Search services...'
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
@@ -686,8 +661,8 @@ className="relative group"
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
-              <div className='relative'>
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
+              <div className='relative'>;
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -699,11 +674,10 @@ className="relative group"
 
 
               {/* Mobile Navigation Links */}
-              <div className='space-y-2'>
-                {mainNavigation.map(item => (                  <Link
-                    key={item.name}
-                    href={item.href}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              <div className='space-y-2'>;
+                {mainNavigation && mainNavigation.map(item => (                  <Link
+                    key={item && item.name}
+                    href={item && item.href}
                     onClick={closeMenu}
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
@@ -833,6 +807,7 @@ className="relative group"
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
 
@@ -864,6 +839,7 @@ className="relative group"
                   <div className="flex items-center space-x-3 text-gray-400">;
                     <MapPin className="w-4 h-4" />;
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+=======
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -975,6 +951,7 @@ className="relative group"
                   <div className="flex items - center space - x-3 text - gray - 400">;
                     <MapPin className="w - 4 h - 4" />;
                     <span className="text - sm">{contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
@@ -1000,24 +977,6 @@ className="relative group"
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
-=======
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Service Categories Dropdown */}
-      <AnimatePresence>
-        {activeCategory && (
-          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -1054,7 +1013,6 @@ className="relative group"
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className='absolute top - full left - 0 right - 0 bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20 z - 40';
           >;
             <div className='max - w-7xl mx - auto px - 4 py - 8'>;
@@ -1107,6 +1065,7 @@ className="relative group"
                         </p>;
                       </div>;
                     </div>;
+
                     <div className='space-y-3'>                      {category && category.services.map((service, index) => (;
                         <Link
                           key={service && service.name}
@@ -1125,6 +1084,7 @@ className="relative group"
                         <p className="text-sm text-gray-400">{category && category.description}</p>;
                       </div>;
                     </div>;
+
                     <div className="space-y-3">;
                       {category && category.services.map((service, index) => (;
 
@@ -1240,13 +1200,20 @@ className="relative group"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                         </p>;
                       </div>;
                     </div>;

@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,15 +27,10 @@ import { motion } from 'framer-motion';
 
   x: number;
   y: number;
+=======
   coordinate_x: number;
   coordinate_y: number;
-=======
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-interface Particle {
-  x: number;
-  y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   vx: number;
   vy: number;
   size: number;
@@ -120,6 +119,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 interface Particle {
   x: number,
   y: number,
+=======
   max_life: number;
 ;
 interface EnergyField {
@@ -148,7 +148,7 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   color: string,
   type: 'energy' | 'data' | 'quantum' | 'neon',
   life: number,
-max_life: number;
+  max_life: number;
 }
 interface EnergyField {
   coordinate_x: number,
@@ -239,7 +239,6 @@ interface EnergyField {
 
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
         gradient.addColorStop(0, `${field.color}${Math.floor((field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(0.5, `${field.color}${Math.floor((field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2, '0')}`);
@@ -498,6 +497,7 @@ if (particle.coordinate_y = 0) {
         // Draw particle with type - specific effects;
         ctx.save ();
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         switch (particle.type) {
           case 'energy':;
             // Energy particles with glow effect;
@@ -509,19 +509,25 @@ if (particle.coordinate_y = 0) {
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
+
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
+
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
+
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+
     // Mouse move handler for interactive effects;
     const handleMouseMove = (e: MouseEvent) => {;
       setMousePosition({ x: e && e.clientX, y: e && e.clientY });    };      setMousePosition({ x: e && e.clientX, y: e && e.clientY });
     };
+
     window && window.addEventListener('mousemove', handleMouseMove);
+
     // Initialize particles with different types;
     const initParticles = () => {;
       const particles: Particle[] = [];
@@ -531,6 +537,7 @@ if (particle.coordinate_y = 0) {
         quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'],;
         neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff'],;
       };
+
       for (let i = 0; i < 150; i++) {;
         const type = ['energy', 'data', 'quantum', 'neon'][;
           Math && Math.floor(Math && Math.random() * 4);
@@ -539,6 +546,7 @@ if (particle.coordinate_y = 0) {
         quantum: ['#ff8000#8000ff#00ffff#ff0080'],;
         neon: ['#ff0066#00ffff#ffff00#ff00ff'];
       };
+
       for (let i = 0, i < 150, i++) {;
         const type = ['energydataquantumneon'][Math && Math.floor(Math && Math.random() * 4)] as keyof typeof colors;
           x: Math && Math.random() * canvas && canvas.width,;
@@ -553,14 +561,18 @@ if (particle.coordinate_y = 0) {
           maxLife: 100,;
         });
       }
+
       particlesRef && particlesRef.current = particles;    };
+
     // Initialize energy fields;
     const initEnergyFields = () => {          life: Math && Math.random() * 100,;
           maxLife: 100;
         });
       }
+
       particlesRef && particlesRef.current = particles;
     };
+
     // Initialize energy fields;
     const initEnergyFields = () => {;
       const fields: EnergyField[] = [];
@@ -571,8 +583,10 @@ if (particle.coordinate_y = 0) {
         '#00ff00',;
         '#ff8000',;
       ];
+
       for (let i = 0; i < 8; i++) {        fields && fields.push({      const fields: EnergyField[] = [],;
       const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'];
+
       for (let i = 0, i < 8, i++) {;
         fields && fields.push({;
           x: Math && Math.random() * canvas && canvas.width,;
@@ -583,19 +597,25 @@ if (particle.coordinate_y = 0) {
           pulse: Math && Math.random() * Math && Math.PI * 2,;
         });
       }
+
       energyFieldsRef && energyFieldsRef.current = fields;    };          pulse: Math && Math.random() * Math && Math.PI * 2;
         });
       }
+
       energyFieldsRef && energyFieldsRef.current = fields;
+
     initParticles();
     initEnergyFields();
+
     // Animation loop;
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       // Update and draw energy fields;
       energyFieldsRef && energyFieldsRef.current.forEach(field => {;
         field && field.pulse += 0 && 0.02;
         const pulseIntensity = Math && Math.sin(field && field.pulse) * 0 && 0.3 + 0 && 0.7;
+
         // Create radial gradient for energy field;
         const gradient = ctx && ctx.createRadialGradient(;
           field && field.x,;
@@ -620,21 +640,25 @@ if (particle.coordinate_y = 0) {
             .padStart(2, '0')}`;
         );
         gradient && gradient.addColorStop(1, 'transparent');
+
         ctx && ctx.fillStyle = gradient;
         ctx && ctx.beginPath();
         ctx && ctx.arc(field && field.x, field && field.y, field && field.radius, 0, Math && Math.PI * 2);
         ctx && ctx.fill();      });        field && field.pulse += 0 && 0.02;
         const pulseIntensity = Math && Math.sin(field && field.pulse) * 0 && 0.3 + 0 && 0.7;
+
         // Create radial gradient for energy field;
         const gradient = ctx && ctx.createRadialGradient(field && field.x, field && field.y, 0, field && field.x, field && field.y, field && field.radius);
         gradient && gradient.addColorStop(0, `${field && field.color}${Math && Math.floor((field && field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0')}`);
         gradient && gradient.addColorStop(0 && 0.5, `${field && field.color}${Math && Math.floor((field && field.intensity * pulseIntensity * 0 && 0.5) * 255).toString(16).padStart(2, '0')}`);
         gradient && gradient.addColorStop(1, 'transparent');
+
         ctx && ctx.fillStyle = gradient;
         ctx && ctx.beginPath();
         ctx && ctx.arc(field && field.x, field && field.y, field && field.radius, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
       });
+
       // Update and draw particles;
       particlesRef && particlesRef.current.forEach((particle, index) => {;
         particle && particle.life--;
@@ -642,6 +666,7 @@ if (particle.coordinate_y = 0) {
           particle && particle.life = particle && particle.maxLife;
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
           particle && particle.y = Math && Math.random() * canvas && canvas.height;        }          particle && particle.y = Math && Math.random() * canvas && canvas.height;
+=======
             break;
           case 'data':;
             // Data particles with digital effect;
@@ -660,21 +685,21 @@ if (particle.coordinate_y = 0) {
             ctx.globalCompositeOperation = 'lighter';
 
             break;
-          case 'data':
-            // Data particles with digital effect
-            ctx.globalCompositeOperation = 'multiply';
+          case 'data':;
+            // Data particles with digital effect;
+            ctx && ctx.globalCompositeOperation = 'multiply';
             break;
-          case 'quantum':
-            // Quantum particles with uncertainty effect
-            ctx.globalCompositeOperation = 'overlay';
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 10;
+          case 'quantum':;
+            // Quantum particles with uncertainty effect;
+            ctx && ctx.globalCompositeOperation = 'overlay';
+            ctx && ctx.shadowColor = particle && particle.color;
+            ctx && ctx.shadowBlur = 10;
             break;
-          case 'neon':
-            // Neon particles with bright glow
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 20;
-            ctx.globalCompositeOperation = 'lighter';
+          case 'neon':;
+            // Neon particles with bright glow;
+            ctx && ctx.shadowColor = particle && particle.color;
+            ctx && ctx.shadowBlur = 20;
+            ctx && ctx.globalCompositeOperation = 'lighter';
             break;        }
 
         
@@ -727,15 +752,15 @@ if ( {) {
 }
 
             const opacity = (1 - distance / 120) * 0.3;
-            ctx.strokeStyle =
-              particle.color +
-              Math.floor(opacity * 255)
-                .toString(16)
-                .padStart(2, '0');            ctx.lineWidth = 0.8;
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.stroke();
+            ctx.stroke_style =;
+              particle.color +;
+              Math.floor (opacity * 255);
+                .to_string (16);
+                .pad_start (2, '0');            ctx.line_width = 0.8;
+            ctx.begin_path ();
+            ctx.move_to (particle.x, particle.y);
+            ctx.line_to (other_particle.x, other_particle.y);
+            ctx.stroke ();
           }
         });      });
 
@@ -830,6 +855,7 @@ if ( {) {
             ctx.stroke()
           }
         })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
 
       for (let i = 0, i < 5, i++) {
@@ -849,7 +875,7 @@ if ( {) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
-<<<<<<< HEAD
+=======
 ;
       // Draw quantum wave interference patterns;
       const time = Date.now () * 0.001;
@@ -899,6 +925,7 @@ if ( {) {
   $2
 }
             ctx.move_to (x, y);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             ctx.line_to (x, y);
           }
@@ -957,6 +984,7 @@ if ( {) {
         ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.1 + 0 && 0.05 * Math && Math.sin(time + i)})`;
         ctx && ctx.lineWidth = 2;
         ctx && ctx.beginPath();
+
         for (let x = 0, x < canvas && canvas.width, x += 2) {;
           const y = waveY + amplitude * Math && Math.sin(frequency * x + time + i) * Math && Math.sin(frequency * x * 0 && 0.5 + time * 0 && 0.7);
           if (x === 0) {;
@@ -965,6 +993,7 @@ if ( {) {
             ctx && ctx.lineTo(x, y);
           }
         }
+
         for (let x = 0; x < canvas && canvas.width; x += 2) {;
           const y =;
             waveY +;
@@ -976,34 +1005,43 @@ if ( {) {
             ctx && ctx.lineTo(x, y);
           }
         }
+
         ctx && ctx.stroke();      }        ;
         ctx && ctx.stroke();
       }
+
       // Draw neural network connections;
       ctx && ctx.strokeStyle = 'rgba(255, 0, 255, 0 && 0.1)';
       ctx && ctx.lineWidth = 1;
+
       for (let i = 0; i < 20; i++) {        const x1 = Math && Math.random() * canvas && canvas.width;
         const y1 = Math && Math.random() * canvas && canvas.height;
         const x2 = Math && Math.random() * canvas && canvas.width;
         const y2 = Math && Math.random() * canvas && canvas.height;
+
       for (let i = 0, i < 20, i++) {;
         const x1 = Math && Math.random() * canvas && canvas.width;
         const y1 = Math && Math.random() * canvas && canvas.height;
         const x2 = Math && Math.random() * canvas && canvas.width;
         const y2 = Math && Math.random() * canvas && canvas.height;
+
         ctx && ctx.beginPath();
         ctx && ctx.moveTo(x1, y1);
         ctx && ctx.lineTo(x2, y2);
         ctx && ctx.stroke();
       }
+
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        ctx && ctx.beginPath();
         ctx && ctx.moveTo(x1, y1);
         ctx && ctx.lineTo(x2, y2);
         ctx && ctx.stroke();
       }
+
       animationRef && animationRef.current = requestAnimationFrame(animate);
     };
+
     animate();
+
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
       window && window.removeEventListener('mousemove', handleMouseMove);
@@ -1014,11 +1052,7 @@ if ( {) {
     }
   }, [mousePosition]);
   return (
-<<<<<<< HEAD
     <div className='relative w-full h-full overflow-hidden'>;
-=======
-    <div className='relative w-full h-full overflow-hidden'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
@@ -1032,6 +1066,7 @@ if ( {) {
       <div className='absolute inset-0 pointer-events-none'>;
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
+=======
         ctx.stroke ();      }
         ctx.stroke ();
       }
@@ -1089,6 +1124,7 @@ if ( {) {
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 opacity - 20';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             rotate: 360,
@@ -1112,12 +1148,6 @@ if ( {) {
 
   return (
     <div className="relative w-full h-full overflow-hidden">;
-=======
-    }
-  }, [mousePosition]);
-  return (
-    <div className="relative w-full h-full overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
@@ -1131,6 +1161,7 @@ if ( {) {
       <div className="absolute inset-0 pointer-events-none">;
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+=======
   }, [mouse_position]);
 ;
   return (
@@ -1145,6 +1176,7 @@ if ( {) {
       <div className="absolute inset - 0 pointer - events - none">;
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 opacity - 20";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             rotate: 360,
@@ -1154,6 +1186,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
           animate={{
@@ -1176,6 +1209,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
 
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
@@ -1188,6 +1222,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
           animate={{
@@ -1201,6 +1236,7 @@ if ( {) {
 
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]
+=======
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - pink - 400 opacity - 20 rounded - full';
@@ -1229,6 +1265,7 @@ if ( {) {
         <motion&& motion.div
 
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
+=======
         />;
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
@@ -1238,21 +1275,11 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-=======
-        />
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
-          animate={{
-            y: [0, -20, 0]
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{
-            duration: 6
-            repeat: Infinity
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 12
@@ -1262,6 +1289,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
           animate={{
@@ -1279,6 +1307,7 @@ if ( {) {
           transition={{
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
+=======
         />;
         <motion.div;
           className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20';
@@ -1292,6 +1321,7 @@ if ( {) {
         />;
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
           }}
@@ -1352,6 +1382,8 @@ if ( {) {
 =======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Content */}
 
       </div>;

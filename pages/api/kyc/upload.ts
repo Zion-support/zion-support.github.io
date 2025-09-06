@@ -76,6 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+<<<<<<< HEAD
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -118,6 +119,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 ;
 function save(db: Record<string, KycProfile>) {;
+=======
+function save(db: Record<string, KycProfile>) {
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }

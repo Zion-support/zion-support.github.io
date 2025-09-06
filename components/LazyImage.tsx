@@ -5,7 +5,10 @@ import LoadingSpinner from "./LoadingSpinner";
 ;
 
 interface LazyImageProps {
+=======
+
 interface LazyImageProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -69,6 +72,7 @@ export default function LazyImage({
 
   useEffect(() => {;
     if (priority) return;
+
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
@@ -83,15 +87,19 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
+
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
+
     return () => observer && observer.disconnect();
   }, [priority]);
+
   const handleLoad = () => {;
     setIsLoaded(true);
     onLoad?.();
   };
+
   const handleError = () => {;
     setHasError(true);
     onError?.();
@@ -122,6 +130,7 @@ export default function LazyImage({
       {isInView && (;
 
         <Image
+=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -199,6 +208,7 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}

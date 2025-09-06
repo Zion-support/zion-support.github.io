@@ -134,10 +134,16 @@ if ( {) {
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -145,6 +151,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 }
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });

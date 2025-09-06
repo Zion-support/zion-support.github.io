@@ -87,7 +87,10 @@ import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
 import { createServerClient } from '../../utils/supabase/server';
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
@@ -105,7 +108,12 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData
+<<<<<<< HEAD
   }, [selectedVersionId, initialData, versions]),
+=======
+  }, [selectedVersionId, initialData, versions]);
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
@@ -195,6 +203,23 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         location: 'Remote'
         bullets: [
 
+<<<<<<< HEAD
+=======
+        </div>;
+      </div>;
+
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData && activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />;
+
+      <div className='mx-auto'>;
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
+      </div>;
+    </div>;
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -411,9 +436,25 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
+=======
+
+=======
+          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
+    education: [
+      { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
+    certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],
+    portfolio: [
+      { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },
+      { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},
+  const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
+  return { props: { initialData, versions } }
+
+};
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );

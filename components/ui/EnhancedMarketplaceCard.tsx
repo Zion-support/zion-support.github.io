@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -44,10 +48,13 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
+=======
+
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
   price?: string;
   href: string, image?: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   category?: string;
   rating?: number;
   reviews?: number;
@@ -68,6 +75,8 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   class_name = '';
 
 }) => {
+=======
+
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
   description,;
@@ -80,6 +89,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   featured = false,;
   className = '';
 }) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         <div className="flex items-start space-x-3 mb-4">;
@@ -107,6 +117,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 
           </div>;
         </div>;
+
         {/* Description */}
         <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>;
 
@@ -210,6 +221,7 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+=======
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
             Learn more →;
           </div>;
@@ -239,9 +251,11 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
           <Heart className="w-4 h-4 text-gray-600" />;
         </button>;
       </div>;
+
       <div className="p-4">;
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>;
         <p className="text-gray-600 text-sm mb-3">{description}</p>;
+
         <div className="flex items-center justify-between mb-3">;
           <div className="flex items-center">;
             <Star className="w-4 h-4 text-yellow-400 fill-current" />;
@@ -249,6 +263,7 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
           </div>;
           <span className="text-lg font-bold text-blue-600">$ + {price}</span>;
         </div>;
+
         <button
           onClick={onAddToCart}
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center">;
@@ -260,6 +275,7 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 
 
   );
+
 }
 export default EnhancedMarketplaceCard;
 =======

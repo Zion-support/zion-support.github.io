@@ -75,11 +75,17 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+=======
+  const key = `${payload.address}`,
+  store[key] = { payload, message, signature, updated_at: Date.now () },
+  return res.status (200).json ({ ok: true });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

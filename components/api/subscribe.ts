@@ -134,7 +134,12 @@ if ( {) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

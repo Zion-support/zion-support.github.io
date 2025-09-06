@@ -131,6 +131,81 @@ export default function ComprehensivePricing2029() {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
       return `$${numericPrice.toLocaleString()}/month`
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,
+  Atom, Rocket, Target, Microscope, DollarSign, Phone,
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase;
+} from 'lucide-react',
+import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components / layout / UltraFuturisticFooter2029',
+import FuturisticAnimatedBackground2029 from '../components / ui / FuturisticAnimatedBackground2029',
+import { aiAutonomousEcosystemServices2029 } from '../data / 2029 - ai - autonomous - ecosystem',
+import { emergingTechBreakthroughServices2029 } from '../data / 2029 - emerging - tech - breakthroughs',
+import { practicalBusinessSolutionServices2029 } from '../data / 2029 - practical - business - solutions',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+export default /**
+ * ComprehensivePricing2029 - Function description
+ */
+function ComprehensivePricing2029() {
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [billing_cycle, setBillingCycle] = useState ('monthly'),
+  const all_services = [;
+    ...aiAutonomousEcosystemServices2029,
+    ...emergingTechBreakthroughServices2029,
+    ...practicalBusinessSolutionServices2029;
+  ],
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Briefcase, count: all_services.length },
+    { id: 'ai - autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
+    { id: 'emerging - tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
+    { id: 'business - solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+  ],
+  const filtered_services = selected_category === 'all';
+    ? all_services;
+    : all_services.filter (service => {
+        // Check condition
+if ( {) {
+  $2
+}
+          return service.category.some (cat => cat.includes ('AI') && cat.includes ('Autonomous'));
+        } else // Check condition
+if ( {) {
+  $2
+}
+          return service.category.some (cat => cat.includes ('Quantum') || cat.includes ('Biotech') || cat.includes ('Space'));
+        } else // Check condition
+if ( {) {
+  $2
+}
+          return service.category.some (cat => cat.includes ('Business') || cat.includes ('Marketing') || cat.includes ('Education'));
+        }
+        return true;
+      }),
+  const get_price = (price: string) =>: any {
+    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
+    return billing_cycle === 'monthly' ? numeric_price : Math.round (numeric_price * 0.8);
+  },
+  const getBillingText = (price: string) =>: any {
+    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
+    // Check condition
+if ( {) {
+  $2
+}
+      return `$${numeric_price.toLocaleString ()}/month`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     } else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
@@ -1070,6 +1145,7 @@ export default function ComprehensivePricing2029(req, res) {
       </section>;
       <UltraFuturisticFooter2029 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
   } catch (error) {
@@ -1079,6 +1155,8 @@ export default function ComprehensivePricing2029(req, res) {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

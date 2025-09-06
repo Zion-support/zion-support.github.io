@@ -76,10 +76,17 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   website: 'https://ziontechgroup.com'
 };
 
@@ -113,6 +120,15 @@ const service_categories = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     borderColor: 'border-violet-500/30'
   }
+<<<<<<< HEAD
+=======
+=======
+    color: 'from - violet - 500 to - purple - 600',
+    bg_color: 'from - violet - 900 / 20 to - purple - 900 / 20',
+    border_color: 'border - violet - 500 / 30';
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   {
     title: 'Quantum & Emerging Tech'
     description: 'Breakthrough quantum computing and space technology solutions'
@@ -984,12 +1000,16 @@ export default function CuttingEdgeServices2025() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </Layout>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

@@ -21,8 +21,8 @@ import { Input } from '@/components/ui/input'
   FormMessage
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -87,7 +87,7 @@ import api from '@/services / api_client';
   publisher_email?: string;
   product_id?: string;
 type FormValues = {
-  subject: string
+  subject: string;
   message: string }
 
   subject: string,
@@ -142,9 +142,9 @@ if ( {) {
       return;
 
     }
-    const values = form.getValues()
-    setIsSubmitting(true)
-    setError(null)
+    const values = form.get_values ();
+    setIsSubmitting (true);
+    set_error (null);
     try {
 
       await api.post ('/api / messages', {
@@ -157,7 +157,7 @@ if ( {) {
       on_close () } finally {      on_close ();
 
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
   }
   const handleKeyDown = (e: React.KeyboardEvent,) => {
@@ -280,9 +280,10 @@ import { LoginModal } from '@/components/auth/LoginModal';
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
-      onClose();
+      onClose()
     }
-  },
+  };
+
 
   return (
     <>
@@ -303,10 +304,10 @@ import { LoginModal } from '@/components/auth/LoginModal';
             </DialogTitle>
           </DialogHeader>
           {error && <p className="text-red-500 mb-2">{error}</p>}
-          {publisherEmail && (
-            <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
+          {publisherEmail && (;
+            <div className="mb-4 text-zion-slate-light">;
+            <span className="block">Email:</span>;
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
               {publisherEmail}
             </a>
           </div>
@@ -333,10 +334,10 @@ import { LoginModal } from '@/components/auth/LoginModal';
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text-red-500" />;
+                </FormItem>;
               )}
             />
             <FormField
@@ -345,7 +346,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
               render={({ field }: { field: any },) => (                <FormItem>
             />;
             <FormField
-              control = {form.control,}
+              control = {form && form.control,}
               name="message"
 
               render={({ field }: { field: any }) => (
@@ -356,10 +357,10 @@ import { LoginModal } from '@/components/auth/LoginModal';
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text-red-500" />;
+                </FormItem>;
               )}
             />
             <Button

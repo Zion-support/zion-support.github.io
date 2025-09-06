@@ -18,7 +18,7 @@ export function getSupabaseClient(): ZionSupabase {try {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
-      return browserClient;
+      return browser_client;
     }
 <<<<<<< HEAD
     // Server-side: create a new client per call to avoid cross-request state;
@@ -81,14 +81,6 @@ export function getSupabaseClient(): ZionSupabase {;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {
     return undefined;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD

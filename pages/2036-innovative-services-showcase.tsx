@@ -607,6 +607,7 @@ export default function InnovativeServicesShowcase2036() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Services Section */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -654,6 +655,10 @@ export default function InnovativeServicesShowcase2036() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >
 
 
@@ -674,6 +679,7 @@ export default function InnovativeServicesShowcase2036() {
               Revolutionary Services
             </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive portfolio of innovative micro SAAS
               services, AI platforms, and cutting-edge technology solutions
@@ -685,6 +691,16 @@ export default function InnovativeServicesShowcase2036() {
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
+=======
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+          </motion.div>
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           {/* Filters and Controls */}
           <motion.div
             className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
@@ -693,6 +709,7 @@ export default function InnovativeServicesShowcase2036() {
             viewport={{ once: true }}
           >
             {/* Search and View Controls */}
+<<<<<<< HEAD
             <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
               <div className='relative flex-1 max-w-md'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -778,6 +795,10 @@ export default function InnovativeServicesShowcase2036() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
@@ -1096,11 +1117,15 @@ export default function InnovativeServicesShowcase2036() {
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <div className="flex items-center gap-2">
                         <span className="text-cyan-400 font-semibold">{service.price}</span>
+<<<<<<< HEAD
                         {service.period && <span className="text-gray-400 text-sm">{service.period}</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                        {service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       </div>
                     </div>
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>

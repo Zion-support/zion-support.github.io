@@ -31,12 +31,15 @@ if (updates.commission_rate = commission_rate, ) {
 
   } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message });
     return res.status(500).json({ error: e?.message })
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     return res.status (500).json ({ error: e?.message });
   }
 

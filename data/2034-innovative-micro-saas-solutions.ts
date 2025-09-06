@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {;
@@ -62,6 +65,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     real_service: true,
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -85,6 +89,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     real_service: true,
 
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
     id: 'smart-invoice-reconciliation'
@@ -177,7 +182,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	launchDate?: string
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{;
+	{
 		id: 'podcast-transcription-seo-suite';
 		name: 'Podcast Transcription & SEO Suite';
 		tagline: 'Turn episodes into SEO-optimized blogs in minutes'
@@ -237,8 +242,11 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 	}
 ];
 
@@ -325,92 +333,4 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
-
-=======
-export type InnovativeMicroSaas = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-	id: string,;
-	name: string,;
-	description: string,;
-	tagline?: string,;
-	category:;
-		| 'Content Marketing';
-		| 'Business Operations';
-		| 'Marketing Automation';
-		| 'Customer Success';
-		| 'Sales Automation';
-		| 'Financial Technology';
-		| 'Human Resources';
-		| 'Supply Chain Management';
-		| 'Customer Support',;
-	pricing: { starter: string, professional?: string, enterprise?: string },;
-	features: string[],;
-	integrations?: string[],;
-	useCases?: string[],;
-	link: string,;
-	realService?: boolean,;
-	rating?: number,;
-	launchDate?: string;
-},;
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-	{;
-		id: 'podcast-transcription-seo-suite',;
-		name: 'Podcast Transcription & SEO Suite',;
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',;
-		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
-		category: 'Content Marketing',;
-		pricing: { starter: '$39/mo' },;
-		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;
-		integrations: ['YouTubeSpotifyWordPress'],;
-		useCases: ['Content repurposingSEO growth'],;
-		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite',;
-		realService: true,;
-		rating: 4.7,;
-		launchDate: '2025-12-01';
-	},;
-	{;
-		id: 'local-seo-reviews-booster',;
-		name: 'Local SEO Reviews Booster',;
-		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
-		category: 'Marketing Automation',;
-		pricing: { starter: '$29/mo' },;
-		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;
-		integrations: ['Google Business ProfileYelp'],;
-		useCases: ['Local rankingReputation management'],;
-		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster',;
-		realService: true;
-	},;
-	{;
-		id: 'smart-invoice-reconciliation',;
-		name: 'Smart Invoice Reconciliation',;
-		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
-		category: 'Financial Technology',;
-		pricing: { starter: '$59/mo' },;
-		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;
-		integrations: ['QuickBooksXeroStripe'],;
-		useCases: ['Accounting automationFinance ops'],;
-		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation',;
-		realService: true;
-	},;
-	{;
-		id: 'candidate-screening-copilot',;
-		name: 'Candidate Screening Copilot',;
-		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
-		category: 'Human Resources',;
-		pricing: { starter: '$69/mo' },;
-		features: ['Resume parsingJD matchingQuestion setsATS sync'],;
-		integrations: ['GreenhouseLever'],;
-		useCases: ['Faster hiringBias reduction'],;
-		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
-		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-	}
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

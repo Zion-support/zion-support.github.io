@@ -8,6 +8,7 @@ export default function Placeholder() {;
         <title>Services • Price-intelligence-service - Placeholder</title>;
         <meta name="robots" content="noindex" />;
       </Head>;
+
       <main>;
         <h1>PriceIntelligenceService</h1>;
         <p>Service details coming soon...</p>;

@@ -192,6 +192,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -317,6 +318,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -332,6 +337,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
       opacity: 1,;
       y: 0,;
       transition: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         duration: 0.5;
         } catch (error) {
@@ -402,6 +408,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         duration: 0 && 0.5,;
       },;
     },;
@@ -577,6 +585,16 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
+<<<<<<< HEAD
+=======
+
+
+                    onChange={e => setSearchTerm(e && e.target.value)}
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />;
+                </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
@@ -755,6 +773,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -766,6 +785,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -847,6 +870,33 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+                    </div>;
+
+                    {/* Service Title and Description */}
+                    <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service && service.description}
+                    </p>;
+
+                    {/* Price and Customer Count */}
+                    <div className='flex items-center justify-between mb-4'>;
+                      <div className='text-2xl font-bold text-cyan-400'>;
+                        {service && service.price}
+                        <span className='text-gray-400 text-lg'>;
+                          {service && service.period}
+                        </span>;
+                      </div>;
+                      <div className='flex items-center space-x-2 text-sm text-gray-400'>;
+                        <Users className='w-4 h-4' />                        <span>{service && service.customers}</span>;
+                      </div>;
+                    </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     {/* Key Features */}
                     <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -917,6 +967,34 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+                      </ul>;
+                    </div>;
+
+                    {/* Market Position */}
+                    <div className='mb-6 p-3 bg-gray-700/40 rounded-lg'>;
+                      <div className='text-xs text-gray-400 mb-1'>;
+                        Market Position;
+                      </div>;
+                      <div className='text-sm text-gray-300 line-clamp-2'>                        {service && service.marketPosition}
+                      </div>;
+                    </div>;
+
+                    {/* ROI and Setup Time */}
+                    <div className='flex items-center justify-between mb-6 text-sm'>;
+                      <div className='flex items-center space-x-1 text-green-400'>;
+                        <TrendingUp className='w-4 h-4' />;
+                        <span>Average ROI</span>;
+                      </div>;
+                      <div className='flex items-center space-x-1 text-blue-400'>;
+                        <Clock className='w-4 h-4' />                        <span>{service && service.setupTime}</span>;
+                      </div>;
+                    </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     {/* Action Buttons */}
                     <div className='flex gap-3'>
                     {/* Action Buttons */  } catch (error) {
@@ -1092,6 +1170,45 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+<<<<<<< HEAD
+=======
+
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Join thousands of companies achieving breakthrough results with;
+                our revolutionary services;
+              </p>;
+
+              {/* Contact Information */}
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>;
+                    <Target className='w-6 h-6 text-cyan-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>+1 302 464 0950</span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>;
+                    <Award className='w-6 h-6 text-purple-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    kleber@ziontechgroup && ziontechgroup.com;
+                  </span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>;
+                    <Lightbulb className='w-6 h-6 text-green-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    364 E Main St STE 1008 Middletown DE 19709;
+                  </span>                </div>;
+              </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {/* Action Buttons */  } catch (error) {

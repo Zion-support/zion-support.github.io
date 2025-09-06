@@ -175,6 +175,7 @@ export default function PitchGenerator() {
   );
   const autoFetchMetrics = useCallback(async () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
@@ -185,6 +186,8 @@ export default function PitchGenerator() {
     } finally {
       setLoading(false);    }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
@@ -304,6 +307,30 @@ if (return) {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
+<<<<<<< HEAD
+=======
+=======
+
+  const rephraseSlide = useCallback(;
+    async (idx: number) => {;
+      if (!slides[idx]) return;
+      setLoading(true),;
+      try {;
+        const res = await fetch('/api/admin/pitch/rewrite', {;
+          method: 'POST',;
+          headers: { 'Content-Type': 'application/json' },;
+          body: JSON && JSON.stringify({ slide: slides[idx] }),;
+        });
+        const json = await res && res.json();
+        setSlides(arr =>;
+          arr && arr.map((s, i) =>;
+            i === idx;
+              ? {;
+                  ...s,;
+                  title: json && json.title || s && s.title,;
+                  content: json && json.content || s && s.content,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 }
               : s
           )
@@ -440,6 +467,7 @@ if (return) {
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -450,6 +478,27 @@ if (return) {
         })
       });
     } catch (error) {
+=======
+
+
+  }, [slides && slides.length]);
+
+  const exportPdf = useCallback(async () => {;
+    setLoading(true);
+    try {;
+      const res = await fetch('/api/admin/pitch/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ slides, format: 'pdf', version: versionTag }),;
+      });      const blob = await res && res.blob();
+      const url = URL && URL.createObjectURL(blob);
+      const a = document && document.createElement('a');
+      a && a.href = url;
+      a && a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
+      a && a.click();
+      URL && URL.revokeObjectURL(url);
+    } catch (e) {;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     } finally {;
       setLoading(false);
       } catch (error) {
@@ -470,6 +519,7 @@ if (return) {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
@@ -500,6 +550,8 @@ if (return) {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   const exportGoogleSlides = useCallback(async () => {;
     setLoading(true);
@@ -775,7 +827,10 @@ if (return null, ) {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
 =======
 
@@ -968,6 +1023,7 @@ if (return null, ) {
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -977,6 +1033,9 @@ if (return null, ) {
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>

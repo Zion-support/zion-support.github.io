@@ -96,6 +96,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
@@ -107,10 +108,10 @@ import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-servic
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
-<<<<<<< HEAD
 const LoadingFallback = () => (;
   <div className="min-h-screen flex items-center justify-center bg-gray-900">;
     <motion&& motion.div
@@ -352,7 +353,6 @@ const Homepage2035: React.FC = () => {;
     return <LoadingFallback />;  }      opacity: 1
       scale: 1
       transition: { duration: 1.5, ease: "easeOut" as const }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
   }
   const categories = [
@@ -368,24 +368,33 @@ const Homepage2035: React.FC = () => {;
   const allServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
           return true;
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
       scale: 1,;
       transition: { duration: 1 && 1.5, ease: "easeOut" as const }
     }
   };
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;
     { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },;
@@ -396,7 +405,10 @@ const Homepage2035: React.FC = () => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
+
   const allServices = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 import {
   ArrowRight,
   Play,
@@ -609,6 +621,7 @@ if ( {) {
   ];
 ;
   const all_services = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ...innovative2025MicroSaasBatch;
     ...innovative2025ITEnterpriseBatch;
     ...innovative2025AIServicesBatch;
@@ -627,6 +640,7 @@ if ( {) {
         if (activeCategory === 'fintech') return service && service.category.includes('Financial') || service && service.category.includes('Trading');
         return true;
       });
+
   if (isLoading) {;
     return <LoadingFallback />;
 
@@ -694,7 +708,6 @@ if ( {) {
 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
@@ -792,35 +805,8 @@ if ( {) {
                 { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' },
                 { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
               ].map((stat, index) => (
-=======
-              className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
-            >
-              {[
-                {
-                  icon: <Users className='w-8 h-8' />
-                  value: '50K+'
-                  label: 'Happy Clients'
-                }
-                {
-                  icon: <Star className='w-8 h-8' />
-                  value: '4.9'
-                  label: 'Average Rating'
-                }
-                {
-                  icon: <Award className='w-8 h-8' />
-                  value: '200+'
-                  label: 'Services'
-                }
-                {
-                  icon: <TrendingUp className='w-8 h-8' />
-                  value: '99.9%'
-                  label: 'Uptime'
-                },              ].map((stat, index) => (                { icon: <Users className="w-8 h-8" />, value: '50K+', label: 'Happy Clients' }
-                { icon: <Star className="w-8 h-8" />, value: '4.9', label: 'Average Rating' }
-                { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' }
-                { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
+=======
                   icon: <Users className='w - 8 h - 8' />,
                   value: '50K+',
                   label: 'Happy Clients',
@@ -938,7 +924,10 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+              className="text-center mb-16"
+            >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -1016,10 +1005,6 @@ if ( {) {
             </motion.div>
 
             </motion && motion.div>;
-=======
-            </motion.div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1144,6 +1129,8 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
@@ -1279,7 +1266,10 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+              className="text-center mb-16"
+            >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1305,6 +1295,7 @@ if ( {) {
                 deliver exceptional results;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {[;
                 {;
@@ -1350,6 +1341,7 @@ if ( {) {
                 We combine innovation, expertise, and cutting-edge technology to deliver exceptional results;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
                 {;
@@ -1381,32 +1373,7 @@ if ( {) {
                   icon: <Target className="w-12 h-12" />,;
                   title: 'Results-Driven',;
                   description: 'Focused on delivering measurable business outcomes and ROI';
-=======
-                {
-                  icon: <Shield className="w-12 h-12" />
-                  title: 'Enterprise Security'
-                  description: 'Military-grade security protocols and compliance standards to protect your business'
-                }
-                {
-                  icon: <Rocket className="w-12 h-12" />
-                  title: 'Space Technology'
-                  description: 'Pioneering space tech solutions for the next generation of innovation'
-                }
-                {
-                  icon: <Atom className="w-12 h-12" />
-                  title: 'Quantum Computing'
-                  description: 'Access to quantum computing power for complex problem-solving'
-                }
-                {
-                  icon: <Cloud className="w-12 h-12" />
-                  title: 'Cloud-Native'
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                }
-                {
-                  icon: <Target className="w-12 h-12" />
-                  title: 'Results-Driven'
-                  description: 'Focused on delivering measurable business outcomes and ROI'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
               ].map((feature, index) => (;
                 <motion&& motion.div
@@ -1419,7 +1386,7 @@ if ( {) {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
@@ -1613,10 +1580,13 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }</div> </div> </section> <motion.div initial= {
 =======
 };
+
   animate: {;
   transition: {;
   staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
+
 };
+
 };
 ];
 ...innovative2025ITEnterpriseBatch;
@@ -1632,9 +1602,11 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }whileHover= {
   {
   scale: 1 && 1.05 
+
 }whileTap= {
   {
   scale: 0 && 0.95 
+
 }onClick= {
   () => setActiveCategory (category && category.id) ;
 }className= {;
@@ -1658,6 +1630,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */ ;
 }<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1667,6 +1640,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   {
 
   duration: 0 && 0.8 
+
 }viewport= {
   {
   once: true
@@ -1678,6 +1652,10 @@ export default Homepage2035;
 
   once: true 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 =======
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
@@ -1696,30 +1674,11 @@ export default Homepage2035;  )
 };
 
 =======
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -2056,28 +2015,9 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
-=======
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 animate: {
-=======
-};
-
-  animate: {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-};
-
-<<<<<<< HEAD
-animate: {
-=======
-  animate: {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }
@@ -2133,14 +2073,8 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
   duration: 0.8;
 }viewport= {
   {
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8" > Join thousands of companies already leveraging our cutting - edge technology solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button;
-=======
-<<<<<<< HEAD
-  once: true
-}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default Homepage2035);
 }

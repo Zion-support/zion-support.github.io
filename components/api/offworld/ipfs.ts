@@ -37,8 +37,7 @@ export default async function handler(
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 =======
@@ -85,6 +84,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
 }
-  }
-
 }

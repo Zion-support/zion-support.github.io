@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
@@ -11,6 +12,8 @@ import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -48,8 +51,12 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
+<<<<<<< HEAD
 :components/docs/ApiDocsPage.tsx
         {activeEndpoint ? (
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
         {_activeEndpoint ? (
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx

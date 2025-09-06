@@ -67,12 +67,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
 =======
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}

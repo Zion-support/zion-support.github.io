@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,9 +27,13 @@ class ErrorBoundary extends React.Component {
 
 
 'use client';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 'use client';
+=======
 'use client';
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
@@ -42,6 +50,7 @@ import {;
   CheckCircle,;
   AlertCircle,;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,10 +71,13 @@ import {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Mail,
   Phone,
   MapPin,
   Send,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   CheckCircle,
@@ -75,6 +87,11 @@ import {
   AlertCircle,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  CheckCircle,
+  AlertCircle,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -94,6 +111,7 @@ const ContactForm: React.FC = () => {;
 
 =======
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
 const ContactForm: React.FC = () => {
   const [form_data, setFormData] = useState ({
     name: '',
@@ -168,45 +186,15 @@ const ContactForm: React.FC = () => {
 
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     setFormData({;
-=======
-  CheckCircle,;
-  AlertCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: ''
-    email: ''
-    company: ''
-    phone: ''
-    service: ''
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    'idle' | 'success' | 'error'
-  >('idle');
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData
-      [e.target.name]: e.target.value
-    });  };  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ...formData;
       [e && e.target.name]: e && e.target.value;
     });
   };
+
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
+
     // Simulate API call;
     try {;
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -233,11 +221,7 @@ const ContactForm: React.FC = () => {
       setIsSubmitting (false);    }
   }
   const services = [    } catch (error) {
-<<<<<<< HEAD
       setSubmitStatus ('error');
-=======
-      setSubmitStatus('error')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } finally {
       setIsSubmitting(false)
     }
@@ -357,7 +341,6 @@ const ContactForm: React.FC = () => {
             Let&apos,s Start a
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Conversation
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -375,7 +358,9 @@ const ContactForm: React.FC = () => {
               Conversation;
             </span>;
           </h2>;
+
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
+=======
       href: 'mailto:contact@ziontechgroup.com',
     },    {
       icon: Phone,
@@ -416,6 +401,7 @@ const ContactForm: React.FC = () => {
             </span>;
           </h2>;
           <p className='text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Ready to transform your business? Get in touch with our team of;
             experts to discuss how we can help you achieve your technology;
             goals.;
@@ -504,7 +490,7 @@ const ContactForm: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
+                  transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
 
@@ -631,18 +617,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-12"
               >
-                <CheckCircle className='w-20 h-20 text-green-400 mx-auto mb-6' />
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  Message Sent Successfully!
-                </h3>
-                <p className='text-gray-300 mb-6'>
-                  Thank you for reaching out. Our team will get back to you
-                  within 24 hours.
-                </p>
-                <button
-                  onClick={() => setSubmitStatus('idle')}
-                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
                 <p className="text-gray-300 mb-6">
@@ -674,43 +648,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder="Enter your full name"
                     />
-=======
-              <form onSubmit={handleSubmit} className='space-y-6'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  <div>
-                    <label
-                      htmlFor='name'
-                      className='block text-white font-medium mb-2'
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type='text'
-                      id='name'
-                      name='name'
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your full name'                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor='email'
-                      className='block text-white font-medium mb-2'
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type='email'
-                      id='email'
-                      name='email'
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your email'                    />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
@@ -723,6 +661,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                       placeholder='Enter your email'                    />;
                   </div>;
                 </div>;
+
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors";
 
 =======
@@ -1017,8 +956,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   />;
                 </div>;
+
                 {submitStatus === 'error' && (;
                   <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
 
@@ -1044,19 +985,25 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
-</button>;
+                </button>;
               </form>;
             )}
 
 
 };
+
 export default ContactForm;  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default ContactForm;
 
 

@@ -274,13 +274,13 @@ interface BrowseFiltersProps {
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
+                      <SelectValue placeholder='Select location' />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
+                      <SelectItem value='remote'>Remote</SelectItem>
+                      <SelectItem value='us'>United States</SelectItem>
+                      <SelectItem value='europe'>Europe</SelectItem>
+                      <SelectItem value='asia'>Asia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -290,10 +290,10 @@ interface BrowseFiltersProps {
 
 
                   <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
+                  <div className='flex gap-4 items-center'>
+                    <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
+                    <Input placeholder='Max' type='number' className='w-full' />
                   </div>
                 </div>
                 <div className='space-y-2'>
@@ -348,8 +348,15 @@ interface BrowseFiltersProps {
 
 
               <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+                <Button variant='outline' className='w-full'>
+                  Reset
+                </Button>
+                <Button
+                  className='w-full'
+                  onClick={() => addFilter('Experience: 3+ years')}
+                >
+                  Apply Filters
+                </Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -357,13 +364,13 @@ interface BrowseFiltersProps {
 
 
           <Select>
-            <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
+            <SelectTrigger className='w-[120px] h-8'>
+              <SelectValue placeholder='Sort By' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
+              <SelectItem value='newest'>Newest</SelectItem>
+              <SelectItem value='relevance'>Best Match</SelectItem>
+              <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
 

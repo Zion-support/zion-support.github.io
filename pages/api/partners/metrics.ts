@@ -34,6 +34,7 @@ export default async function handler(
       "placeholder-key";
   try {
     if (usingPlaceholder) {
+<<<<<<< HEAD
       return res.status(200).json({
         total_signups: 12
         total_visits: 180
@@ -49,6 +50,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({$2});
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+=======
+      return res && res.status(200).json({
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const code = (req.query.code as string)?.toLowerCase ();
+  if (return res.status ($1).json ({ $2 })) {
+  $2
+}
+  const using_placeholder =;
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+      "placeholder - key";
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   try {
     // Check condition
 if ( {) {

@@ -131,10 +131,14 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';
 =======
 import { Search, Filter, Grid, List } from 'lucide-react'
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { Search, Filter, Grid, List } from 'lucide-react'
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -192,12 +196,15 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SearchResultsPageProps {;
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 interface SearchResultsPageProps {
   initialResults: SearchResult[],
@@ -206,7 +213,10 @@ interface SearchResultsPageProps {
   totalCount: number
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 interface OfflineFilters {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -556,8 +566,32 @@ export default function SearchResultsPage(req, res) {
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+<<<<<<< HEAD
       if (!response.ok) {
         throw new Error(`Search API error: ${response.status}`);
+=======
+
+
+  // Fetch search results;
+  const fetchResults = async (searchTerm: string, page = 1) => {;
+    try {;
+      setLoading(true);
+      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
+      const params = new URLSearchParams({;
+        query: searchTerm,;
+        page: String(page),;
+        limit: '12',;
+        sort: sortBy,;
+      });      if (categoryFilter !== 'all') params && params.append('category', categoryFilter);
+      if (minPrice) params && params.append('minPrice', minPrice);
+      if (maxPrice) params && params.append('maxPrice', maxPrice);
+      if (minRating) params && params.append('minRating', minRating);
+
+      const response = await fetch(`/api/search?${params && params.toString()}`);
+
+      if (!response && response.ok) {;
+        throw new Error(`Search API error: ${response && response.status}`);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       }
 
       const data = await response && response.json();
@@ -658,6 +692,7 @@ export default function SearchResultsPage(req, res) {
       setCurrentPage(1);    }
   };
 
+<<<<<<< HEAD
   useEffect(() => {;
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
@@ -671,6 +706,11 @@ export default function SearchResultsPage(req, res) {
     setCurrentPage(nextPage);
     fetchResults(searchQuery, nextPage);
   }
+=======
+    fetchResults(searchQuery, nextPage)
+  };
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
@@ -737,8 +777,125 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
     if (minPrice && r.type === 'product') {;
       if ((r.price ?? 0) < Number(minPrice)) {;
+=======
+      if (params.append ('min_price', min_price)) {
+  $2
+}
+      if (params.append ('max_price', max_price)) {
+  $2
+}
+      if (params.append ('min_rating', min_rating)) {
+  $2
+}
+      const response = await fetch (`/api / search?${params.to_string ()}`);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`Search API error: ${response.status}`);
+      }
+      const data = await response.json ();
+      log_info ('Search results received:', { data: data });
+      setTotalResults (data.total_count || data.results?.length || 0);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_results (data.results || []);
+      } else {
+        set_results (prev => [...prev, ...(data.results || [])]);
+      }
+    } catch (error) {
+      logErrorToProduction ('Error fetching search results:', { data: error });
+      const offline = offline_search (search_term, page, 12, {
+        sort_by,
+        category: category_filter !== 'all' ? category_filter : undefined,
+        min_price: min_price ? Number (min_price) : undefined,
+        max_price: max_price ? Number (max_price) : undefined,
+        min_rating: min_rating ? Number (min_rating) : undefined,
+      });
+      setTotalResults (offline.total_count);
+      // Check condition
+if ( {) {
+  $2
+}
+        set_results (offline.results);
+      } else {
+        set_results (prev => [...prev, ...offline.results]);
+      }
+    } finally {
+      set_loading (false);    }
+  }
+;
+  // Handle search input change;
+  const handle_search = (new_query: string) =>: any {
+    setSearchQuery (new_query),
+    if () {) {
+  $2
+}
+      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
+        shallow: true,
+      });
+      setCurrentPage (1);    }
+  }
+;
+  useEffect (() => {
+    if () {) {
+  $2
+}
+      fetch_results (debounced_query, 1);
+    } else {
+      set_results ([]);
+      setTotalResults (0);    }
+  }, [debounced_query]);
+;
+  // Load more results;
+  const load_more = () =>: any {
+    const next_page = current_page + 1;
+    setCurrentPage (next_page);
+    fetch_results (search_query, next_page);
+  }
+;
+  const categories = Array.from (
+    new Set (results.map (r => r.category).filter (Boolean)));
+;
+  const filtered_results = results.filter (r => {    // Check condition
+if ( {) {
+  $2
+}
+      return false;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      if (< Number (min_price)) {) {
+  $2
+}
+        return false;      }
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      if (> Number (max_price)) {) {
+  $2
+}
+        return false;      }
+    }
+    if () {) {
+  $2
+}
+      if (< Number (min_rating)) {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         return false;
 =======
       } catch (error) {
@@ -842,6 +999,7 @@ export default function SearchResultsPage(req, res) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               product={{
+<<<<<<< HEAD
                 id: result.id
                 name: result.title
                 title: result.title
@@ -857,6 +1015,43 @@ export default function SearchResultsPage(req, res) {
                 updated_at: new Date().toISOString()
                 stock: (result as any).stock
                 in_stock: ((result as any).stock |0) > 0,              }}
+=======
+
+                id: result && result.id,
+                name: result && result.title,
+                title: result && result.title,
+                description: result && result.description || '',
+                price: result && result.price || 0,
+                images: result && result.image ? [result && result.image] : [],
+                rating: result && result.rating || 0,
+                reviewCount: 0,
+                tags: result && result.tags || [],
+                category: result && result.category || '',
+=======
+;
+  // Group results by type for better display;
+  const grouped_results = filtered_results.reduce (
+    (acc, result) => {
+      // Check condition
+if (acc[result.type] = []) {
+  $2
+}
+      acc[result.type]!.push (result);
+      return acc;
+    },
+    {} as Record < string, SearchResult[]>  );
+;
+  const renderResultCard = (result: SearchResult) =>: any {
+    switch (result.type) {
+      case 'product':;
+      case 'equipment':;
+        return (
+          <div key={result.id} data - testid='result - card'>            <ProductCard;
+              product={{
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -1057,6 +1252,7 @@ export default function SearchResultsPage(req, res) {
   return (
     <>;
       <SEO
+<<<<<<< HEAD
         title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1083,12 +1279,44 @@ export default function SearchResultsPage(req, res) {
 <<<<<<< HEAD
 =======
 =======
+        title={`Search Results for "${query}" - Zion Marketplace`}
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
+        keywords={`${query}, search, marketplace, products, talent, services`}
+
+        canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
+      />;
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+
+        <div
+          className='container mx-auto px-4 py-8'
+          data-testid='search-results'>;
+          {/* Search Header */}
+          <div className='mb-8'>;
+            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>;
+              <div className='flex-1'>;
+                <h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>;
+                  Search Results;
+                </h1>;
+                <p
+                  className='text-gray-600 dark:text-gray-200'
+                  data-testid='results-count'>;
+                  {filteredResults && filteredResults.length > 0;
+                    ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
+
+=======
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
+=======
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -1106,6 +1334,7 @@ export default function SearchResultsPage(req, res) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
+<<<<<<< HEAD
                     : `No results found for "${query}"`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1128,6 +1357,19 @@ export default function SearchResultsPage(req, res) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    : `No results found for "${query}"`}
+
+                </p>;
+              </div>;
+
+
+              {/* Search Input */}
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <Input
                   type="text"
                   value={searchQuery}
@@ -1196,7 +1438,10 @@ export default function SearchResultsPage(req, res) {
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1316,6 +1561,7 @@ export default function SearchResultsPage(req, res) {
                     </option>
                   ))}
                 </select>
+<<<<<<< HEAD
                 <div className='flex items-center gap-1'>
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
@@ -1339,6 +1585,12 @@ export default function SearchResultsPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                <div className="flex items-center gap-1">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1647,7 +1899,10 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
       results = data.results || [];
       totalCount = data.totalCount || results.length;

@@ -18,6 +18,8 @@ function grantPath(id: string) {
 
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
+=======
+
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const p = grantPath(id);
@@ -28,6 +30,7 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -102,7 +105,6 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
@@ -127,6 +129,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const payload = req.body as VotePayload;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 =======
 <<<<<<< HEAD
@@ -140,6 +143,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -150,6 +156,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
+
   res.status(200).json({ record: g })
 }
 <<<<<<< HEAD
@@ -246,7 +253,6 @@ if ( {) {
   g.updated_at = new Date ().toISOString ();
   write_grant (g);
   res.status (200).json ({ record: g });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

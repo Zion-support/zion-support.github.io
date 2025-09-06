@@ -50,22 +50,15 @@ export interface EnterpriseIt2026Service {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {
-<<<<<<< HEAD
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT", price: "$399/month",
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
-=======
-<<<<<<< HEAD
-    id: '2026-enterprise-it'
-    name: '2026 Enterprise IT Solutions'
-    tagline: 'Future-ready enterprise IT'
-    price: '$399/month'
-    description:
-      'Comprehensive enterprise IT solutions designed for 2026 and beyond.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Enterprise architecture";
       "Future-ready solutions";
@@ -92,13 +85,15 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2026-enterprise-it",
@@ -144,3 +139,6 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

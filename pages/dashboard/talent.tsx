@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 
@@ -12,6 +13,10 @@ const STEPS = [
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -24,6 +29,7 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
     profile: false
@@ -38,6 +44,9 @@ export default function TalentDashboard() {
 =======
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -80,6 +89,7 @@ export default function TalentDashboard() {;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -112,6 +122,8 @@ export default function TalentDashboard(req, res) {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;

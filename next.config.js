@@ -119,3 +119,7 @@ const nextConfig = {
   }
 }
 
+<<<<<<< HEAD
+=======
+export default nextConfig
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

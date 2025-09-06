@@ -50,22 +50,15 @@ export interface QuantumSpaceService {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
-<<<<<<< HEAD
     id: "quantum-computing-platform", name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions", price: "$199/month",
     description: "Advanced quantum computing platform for complex calculations and simulations.",
-=======
-<<<<<<< HEAD
-    id: 'quantum-computing-platform'
-    name: 'Quantum Computing Platform'
-    tagline: 'Next-generation quantum computing solutions'
-    price: '$199/month'
-    description:
-      'Advanced quantum computing platform for complex calculations and simulations.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Quantum algorithms";
       "Simulation tools";
@@ -92,13 +85,15 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "quantum-computing-platform",
@@ -144,3 +139,6 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

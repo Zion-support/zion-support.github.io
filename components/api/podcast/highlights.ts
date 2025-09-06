@@ -26,13 +26,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     label: `Highlight ${i + 1}`;
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
+
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return res.status(200).json({ episode })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -115,15 +120,6 @@ function handler() {
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8');
 ;
 return res.status (200).json ({ episode });  return res.status (200).json ({ episode });
-    start: t,
-    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
-
-  episode.highlights = highlights,
-  episodes[idx] = episode,
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
-
-  return res.status(200).json({ episode })
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

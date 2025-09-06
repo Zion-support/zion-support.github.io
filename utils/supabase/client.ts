@@ -47,11 +47,6 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-})
-=======
 >>>>>>> origin/automation-improvements-final
 =======
 

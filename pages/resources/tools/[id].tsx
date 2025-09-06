@@ -928,6 +928,7 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -937,6 +938,8 @@ if ( {) {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -30,6 +30,7 @@ describe('SEOOptimizer', () => {
     render(<SEOOptimizer />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 
 =======
@@ -58,6 +59,8 @@ describe('SEOOptimizerdynamic', () => {
   test('applies correct styling', () => {
     render(<SEOOptimizerdynamic />);
   });
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe("SEOOptimizerdynamic",() => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling",() => { render(<SEOOptimizerdynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});

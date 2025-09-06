@@ -70,6 +70,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
@@ -80,6 +81,16 @@ const whitepapers = {
     pages: '45'
     author: 'Zion Tech Group Research Team'
     publishDate: 'January 2025'
+=======
+
+
+    title: 'The Complete Guide to Autonomous Systems',
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
+    category: 'Technology',
+    pages: '45',
+    author: 'Zion Tech Group Research Team',
+    publish_date: 'January 2025',
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     content: {
 
 
@@ -185,7 +196,10 @@ const whitepapers = {;
       ],
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 },
 export default /**
@@ -711,12 +725,16 @@ export default function WhitepaperPage(req, res) {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+    </>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
 }
 =======

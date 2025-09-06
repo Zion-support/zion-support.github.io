@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -16,6 +17,8 @@ import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 import Button from '../components/ui/Button';
@@ -31,13 +34,17 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -55,15 +62,30 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Target, BarChart, PieChart, Activity, Eye, Key
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 } from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function QuantumSecureCommunication() {
   const contactInfo = {
 
@@ -73,7 +95,10 @@ export default function QuantumSecureCommunication() {
 
     website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
   },
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
@@ -102,10 +127,13 @@ export default function QuantumSecureCommunication() {
     <UltraAdvancedFuturisticBackground
       intensity="high"
 <<<<<<< HEAD
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="high" 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       colorScheme="quantum-fusion"
       particleCount={500}
       animationSpeed={2.0}
@@ -750,6 +778,7 @@ export default function QuantumSecureCommunication() {
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+<<<<<<< HEAD
                       {useCase}
                     </h3>
                   </div>
@@ -768,6 +797,21 @@ export default function QuantumSecureCommunication() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+=======
+
+=======
+                  while_hover={{ scale: 1.02, coordinate_y: -5 }}
+                  className="group bg - gradient - to - br from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 30 rounded - 2xl p - 6 hover:border - green - 400 / 60 hover:shadow - 2xl hover:shadow - green - 500 / 20 transition - all duration - 300";
+                >;
+                  <div className="flex items - center space - x-3 mb - 4">;
+                    <div className="w - 10 h - 10 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - xl flex items - center justify - center">;
+                      <Shield className="w - 5 h - 5 text - white" />;
+                    </div>;
+                    <h3 className="text - lg font - semibold text - white group - hover:text - green - 300 transition - colors">;
+                      {use_case}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                       {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

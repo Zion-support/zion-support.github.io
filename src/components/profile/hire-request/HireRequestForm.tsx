@@ -68,8 +68,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <PersonalInfoFields form={form} />
         </div>
         <ProjectDetailsField form={form} />
@@ -82,10 +82,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             type='button'
             variant='outline'
             onClick={onClose}
-            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
-          >
-            Cancel
-          </Button>
+            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}>;
+            Cancel;
+          </Button>;
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
@@ -163,10 +162,9 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}
-          >
-            Cancel
-          </Button>
+            disabled = {isSubmitting,}>;
+            Cancel;
+          </Button>;
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button

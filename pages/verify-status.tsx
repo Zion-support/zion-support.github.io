@@ -375,6 +375,7 @@ if ( {) {
         set_error (''), // Clear previous errors;
       } else {
         // This case means there's no active user session found by Supabase client.;
+<<<<<<< HEAD
         // This is expected if they haven't clicked the link from a different browser/device context yet.;
         setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
         setError('');
@@ -400,6 +401,21 @@ if ( {) {
   const handleGoBack = () => {
     router.back()
   },
+=======
+        // This is expected if they haven't clicked the link from a different browser / device context yet.;
+        set_message ('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'),
+        set_error ('');
+      }
+    } catch (err: any) {
+      logErrorToProduction ('Error checking verification status:', { data: err }),
+      set_error ('An unexpected error occurred while checking status. Please try again.');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsCheckingStatus (false);
+    }
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">

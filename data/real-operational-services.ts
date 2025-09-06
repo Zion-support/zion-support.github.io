@@ -50,22 +50,15 @@ export interface RealOperationalService {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export const realOperationalServices: RealOperationalService[] = [
   {
-<<<<<<< HEAD
     id: "operational-intelligence", name: "Operational Intelligence Platform",
     tagline: "Real-time operational insights and optimization", price: "$99/month",
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-=======
-<<<<<<< HEAD
-    id: 'operational-intelligence'
-    name: 'Operational Intelligence Platform'
-    tagline: 'Real-time operational insights and optimization'
-    price: '$99/month'
-    description:
-      'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Real-time monitoring";
       "Performance analytics";
@@ -92,13 +85,15 @@ export const realOperationalServices: RealOperationalService[] = [
     }
   }
 ];
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "operational-intelligence",
@@ -144,3 +139,6 @@ export const realOperationalServices: RealOperationalService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9

@@ -286,10 +286,14 @@ export default function DisputeDetailPage(req, res) {
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
           </div>
+<<<<<<< HEAD
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>
               <div className='font-medium text-gray-500'>Project</div>
               <div className='mt-1'>{dispute.projectId}</div>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
@@ -311,6 +315,7 @@ export default function DisputeDetailPage(req, res) {
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -322,6 +327,9 @@ export default function DisputeDetailPage(req, res) {
               >
                 {t}
               </button>            ))}
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="border-b mb-4 flex gap-4 text-sm">
             {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
               <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
@@ -536,6 +544,7 @@ export default function DisputeDetailPage(req, res) {
             </div>
           )}
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                       <li key={m.id} className='text-sm'>
@@ -544,11 +553,24 @@ export default function DisputeDetailPage(req, res) {
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
                         <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
+=======
+
+
+
+=======
+
+                      <li key={m.id} className="text-sm">
+                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
+                        <div className="whitespace-pre-wrap">{m.body}</div>
+                      </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     ))}
                   </ul>
                 )}
               </div>
               {user.role !== 'guest' && (
+<<<<<<< HEAD
                 <div className='flex gap-2'>
                   <input
                     value={message}
@@ -589,6 +611,8 @@ export default function DisputeDetailPage(req, res) {
 =======
               </div>
               {user.role !== 'guest' && (
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <div className="flex gap-2">
                   <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
                   <button onClick={sendMessage} className="px-3 py-2 rounded bg-blue-600 text-white">Send</button>

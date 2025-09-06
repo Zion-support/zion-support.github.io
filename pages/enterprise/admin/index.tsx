@@ -76,6 +76,7 @@ export default function CompanyAdmin() {;
       .then(r => r.json())
       .then(setInvoices);  }, []);
   const seatsUsed = members.length;
+
   return (
 <<<<<<< HEAD
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -120,7 +121,82 @@ export default function CompanyAdmin() {
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+<<<<<<< HEAD
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
+=======
+
+  status: string,
+}
+const COMPANY_ID = 'cmp_acme';
+;
+export default /**
+ * CompanyAdmin - Function description
+ */
+function CompanyAdmin() {
+  const [tab, set_tab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members');  const [members, set_members] = useState < Member[]>([]);
+  const [usage, set_usage] = useState < Usage | null>(null);
+  const [activity, set_activity] = useState < any[]>([]);
+  const [invoices, set_invoices] = useState < Invoice[]>([]);
+;
+  useEffect (() => {
+    fetch (`/api / enterprise / companies/${COMPANY_ID}/members`);
+      .then (r => r.json ());
+      .then (set_members);
+    fetch (`/api / enterprise / companies/${COMPANY_ID}/usage`);
+      .then (r => r.json ());
+      .then (set_usage);
+    fetch (`/api / enterprise / companies/${COMPANY_ID}/activity`);
+      .then (r => r.json ());
+      .then (set_activity);
+    fetch (`/api / enterprise / companies/${COMPANY_ID}/billing / invoices`);
+      .then (r => r.json ());
+      .then (set_invoices);  }, []);
+;
+  const seats_used = members.length;
+;
+  return (
+    <main style={{ padding: '2rem', max_width: 1100, margin: '0 auto' }}>;
+      <header;
+
+        style={{
+          margin_bottom: 16,
+          display: 'flex',
+          align_items: 'center',
+          gap: 12,
+        }}
+      >;
+        <h1 style={{ margin: 0 }}>Company Admin</h1>;
+        <div style={{ margin_left: 'auto' }}>;
+          <Link href='/workspace / acme'>Go to Workspace</Link>        </div>;
+      </header>;
+      <nav style={{ display: 'flex', gap: 8, margin_bottom: 16 }}>;
+        {(['members', 'usage', 'activity', 'billing'] as const).map (t => (
+          <button;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            key={t}
+            on_click={() => set_tab (t)}
+            style={{
+
+          marginBottom: 16,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+        }}>;
+        <h1 style={{ margin: 0 }}>Company Admin</h1>;
+        <div style={{ marginLeft: 'auto' }}>;
+          <Link href='/workspace/acme'>Go to Workspace</Link>        </div>;
+      </header>;
+=======
+        {(['membersusageactivitybilling'] as const).map(t => (
+          <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
+        ))}
+      </nav>
+
+
+      <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>;
+        {(['members', 'usage', 'activity', 'billing'] as const).map(t => (;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <button
             key={t}
             onClick={() => setTab(t)}

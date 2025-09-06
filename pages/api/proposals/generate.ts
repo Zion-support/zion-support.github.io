@@ -48,6 +48,7 @@
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 import { createProposal } from '../../../utils/data/proposals';
@@ -71,6 +72,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       title = 'Zion DAO Proposal',
       promptAssist,
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 }
 =======

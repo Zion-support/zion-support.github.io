@@ -269,15 +269,6 @@ export /**
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
-=======
-export function useWalkthroughTarget(id: string) {return {;
-=======
-;
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    "data-walkthrough-target": id;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     id}
 }

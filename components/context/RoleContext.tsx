@@ -40,7 +40,9 @@ import React, {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'react';
 export type UserRole = 'client' | 'talent';
+
 type RoleContextValue = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   role: UserRole;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
@@ -60,6 +62,8 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 =======
 =======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+=======
   create_context,
   useContext,
   useEffect,
@@ -85,6 +89,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect (() => {
     try {import React, { create_context, useContext, useEffect, useMemo, useState } from 'react';
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type UserRole = 'client' | 'talent';
 ;
 type RoleContextValue = {
@@ -138,11 +143,14 @@ type RoleContextValue = {;
   setRole: (role: UserRole) => void;  role: UserRole,;
   setRole: (role: UserRole) => void;
 };
+
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+
 export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => {export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({ children }) => {;
   const [role, setRole] = useState<UserRole>('client');
+
   useEffect(() => {;
     try {;
       const saved =;
@@ -186,12 +194,17 @@ export function useRole(): RoleContextValue {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+
 export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
 }
@@ -204,6 +217,8 @@ export function useRole(): any (): RoleContextValue {;
   return ctx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   const [role, set_role] = useState < UserRole>('client');
 ;
   useEffect (() => {

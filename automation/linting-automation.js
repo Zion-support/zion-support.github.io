@@ -468,13 +468,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
     const recentFiles = [];
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    const recentFiles = [];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {
@@ -601,7 +595,6 @@ if (stat.isDirectory()) {
     
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return fileList) {
     ) {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {

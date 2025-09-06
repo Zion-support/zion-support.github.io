@@ -51,10 +51,16 @@ type Props = {;
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
+<<<<<<< HEAD
 :components/reviews/ReviewCard.tsx
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
+=======
+    <div className='enhanced-card hover:shadow-lg transition-shadow'>;
+      <div className='flex items-center justify-between mb-2'>;
+        <div className='flex items-center gap-2'>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <StarRating
             value={review && review.rating}
             onChange={() => {}}
@@ -139,6 +145,18 @@ main:components/reviews/ReviewCard.tsx
   );
 }
 };
+<<<<<<< HEAD
+=======
+export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
+          <span className="pill pill-success">Would work again</span>;
+        )}
+      </div>;
+      <p className="text-sm leading-6">{review && review.text}</p>;
+
+      <div className="flex flex-wrap gap-2 mt-3">;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className="pill">Communication: {review && review.categories.communication}★</span>;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 :components/reviews/ReviewCard.tsx
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (

@@ -66,6 +66,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036InnovativeServices;
     ...real2036ITServices;
     ...real2036AIServices
+<<<<<<< HEAD
   ],
   const categories = [...new Set(allServices.map(service => service.category))],
   return (
@@ -110,6 +111,24 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+const ComprehensiveServicesShowcase2036: React.FC = () => {;
+  const allServices = [;
+    ...real2036InnovativeServices,;
+    ...real2036ITServices,;
+    ...real2036AIServices,  ];
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+  const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               2036 Services Showcase
@@ -259,6 +278,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                   <p className="text-gray-300 mb-4">
                     {allServices.filter(service => service.category === category).length} innovative services
                   </p>
+<<<<<<< HEAD
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-gray-400'>Starting from</span>
                     <span className='text-lg font-bold text-green-400'>
@@ -316,6 +336,14 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+            <motion.div 
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
               className="text-center mb-16"
 <<<<<<< HEAD
 =======
@@ -463,6 +491,22 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               </p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
+<<<<<<< HEAD
+=======
+
+
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+                Complete Service Portfolio;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Explore our entire collection of {allServices && allServices.length} innovative;
+                services across all technology domains.              </p>;
+            </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             {/* Services by Category */}
             {categories && categories.map((category, categoryIndex) => (;
               <motion&& motion.div
@@ -975,10 +1019,13 @@ export default ComprehensiveServicesShowcase2036;
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
   );
 },;
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </Layout>),
 }
 ;

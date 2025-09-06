@@ -17,12 +17,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
 
+<<<<<<< HEAD
     const filtered = courses.filter((c: any) => {
       if (category && c.category !== category) return false;
       if (level && c.level !== level) return false;
+=======
+    const { category, level, isFree } = req && req.query;
+
+    const filtered = courses && courses.filter((c: any) => {
+      if (category && c && c.category !== category) return false;
+      if (level && c && c.level !== level) return false;
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' |isFree === true;
         const freeVal = isFree === 'true' || isFree === true;
+<<<<<<< HEAD
         if (c.isFree !== freeVal) return false;
       }
       return true;
@@ -31,6 +40,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     res.status(200).json({ courses: filtered });
+=======
+        if (c && c.isFree !== freeVal) return false;
+=======
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c.isFree !== freeVal) return false
+
+      }
+      return true;
+    });
+
+    res && res.status(200).json({ courses: filtered });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   } catch (e: any) {
 <<<<<<< HEAD
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });

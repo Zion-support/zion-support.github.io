@@ -417,14 +417,14 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 .futuristic-button {
-
-<<<<<<< HEAD
-  position: relative;
-.futuristic-button {  position: relative;
-
-  position: relative;
-
 =======
+.text-gradient-rainbow {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-yellow), var(--neon-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Enhanced Futuristic Glow Effects */
 .futuristic-glow {
   text-shadow: 
@@ -652,6 +652,132 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 @keyframes quantumSpin {
+=======
+/* Enhanced Card Animations */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* Enhanced Loading Animations */
+@keyframes quantumPulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.quantum-pulse {
+  animation: quantumPulse 2s ease-in-out infinite;
+}
+
+@keyframes holographicFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-10px) rotate(2deg);
+  }
+  66% { 
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+.holographic-float {
+  animation: holographicFloat 4s ease-in-out infinite;
+}
+
+/* Enhanced Particle Effects */
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  animation: particleFloat 6s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Grid Animations */
+.grid-animate {
+  animation: gridPulse 3s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+  0%, 100% { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced Text Animations */
+.text-reveal {
+  overflow: hidden;
+  animation: textReveal 1.5s ease-out forwards;
+}
+
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Enhanced Border Animations */
+.border-animate {
+  position: relative;
+}
+
+.border-animate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30f9
   0% { transform: rotate(0deg); }
 <<<<<<< HEAD
 =======
@@ -661,28 +787,55 @@ body::after {
 @keyframes quantumSpin {  0% { transform: rotate(0deg); }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   100% { transform: rotate(360deg); }
 }
 
+<<<<<<< HEAD
 @keyframes holographicSpin {
   0% { transform: rotate(0deg) scale(1); }
   50% { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
+=======
+/* Enhanced Focus States */
+.focus-futuristic:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2);
+  transform: scale(1.02);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30f9
 }
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+=======
+  0% { transform: rotate(0deg); }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @keyframes quantumSpin {  0% { transform: rotate(0deg); }
 >>>>>>> main
   100% { transform: rotate(360deg); }
 }
 
+<<<<<<< HEAD
 @keyframes holographicSpin {
   0% { transform: rotate(0deg) scale(1); }
   50% { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
+=======
+/* Enhanced Focus States */
+.focus-futuristic:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2);
+  transform: scale(1.02);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30f9
 }
 
 /* Enhanced Responsive Design */
@@ -733,7 +886,7 @@ body::after {
     box-shadow: 
       0 0 10px rgba(0, 255, 255, 0.2),
       0 0 20px rgba(0, 255, 255, 0.1);
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30f9
   }
 =======
 =======
@@ -1010,9 +1163,6 @@ body::after {
     display: none;
   }
 }
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30f9
 <<<<<<< HEAD
 =======

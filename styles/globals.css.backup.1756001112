@@ -246,7 +246,7 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 }
 =======
 =======
@@ -556,7 +556,7 @@ input, textarea, select {
     background-size: 200% 200%;
     box-shadow: var(--cyberpunk-resonance);
   }
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 }
 =======
 =======
@@ -778,14 +778,14 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced Background Animations */
-/* Enhanced Background Animations */
-
 /* Enhanced Background Animations */
 <<<<<<< HEAD
-
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 =======
+=======
+/* Enhanced Background Animations */
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
@@ -824,10 +824,6 @@ body::after {
 <<<<<<< HEAD
     transform: translateY(-15px) rotate(0.5deg);
 =======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    transform: translateY(-15px) rotate(0.5deg);
-
     transform: translate(-10px, -10px) rotate(1deg);
   }
   50% {
@@ -835,7 +831,7 @@ body::after {
   }
   75% {
     transform: translate(-5px, 10px) rotate(0.5deg);
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   }
 =======
 <<<<<<< HEAD
@@ -1019,7 +1015,7 @@ a:hover {
 
 /* Enhanced Buttons */
 .btn-futuristic {
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   position: relative;
 =======
 =======
@@ -1321,9 +1317,13 @@ a:hover {
 <<<<<<< HEAD
 >>>>>>> main
   letter-spacing: 0.05em;
-
-<<<<<<< HEAD
 =======
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
 .card-futuristic:hover::before {
   transform: scaleX(1);
 }
@@ -1769,7 +1769,6 @@ pre code {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced Responsive Design */
@@ -1836,7 +1835,7 @@ pre code {
   .btn-futuristic {
     padding: 8px 16px;
     font-size: 13px;
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   }
 =======
 =======
@@ -2461,10 +2460,6 @@ pre code {
 <<<<<<< HEAD
     background-size: 25px 25px;
 =======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    background-size: 25px 25px;
-
   }
 }
 
@@ -2482,7 +2477,7 @@ pre code {
   
   .btn-futuristic {
     border: 2px solid currentColor;
-
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   }
 =======
 <<<<<<< HEAD

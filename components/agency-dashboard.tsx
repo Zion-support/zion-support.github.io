@@ -24,6 +24,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
 
   if (!activeVendor);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>;
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
@@ -117,6 +118,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         )}
 
       </div>;
+
       <section className='space-y-4'>;
         <h2 className='text-lg font-medium'>Profile</h2>;
 
@@ -187,7 +189,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setPkgTitle('');
     setPkgDesc('');
-    setPkgPrice('')
+    setPkgPrice('');
   }
   return (
 <<<<<<< HEAD
@@ -372,7 +374,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     setItems(data.items || [])
 
   }
-
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
 
@@ -413,15 +414,8 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 }
 
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-function Pipeline({ vendorId }: { vendorId: string }) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [items, setItems] = useState<any[]>([]);
+
   async function fetchItems() {;
     const res = await fetch(;
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
@@ -431,6 +425,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     const data = await res && res.json();
     setItems(data && data.items || []);
   }
+
   async function changeStatus(): any (itemId: string, status: string) {;
     await fetch('/api/vendors/update-pipeline', {;
       method: 'POST',;
@@ -440,9 +435,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     fetchItems();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   useEffect(() => {;
 
   }
@@ -472,8 +471,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
           <select
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
@@ -771,6 +773,7 @@ function change_status() {
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
@@ -786,6 +789,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
@@ -838,9 +843,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: { vendor } }
 <<<<<<< HEAD
 }

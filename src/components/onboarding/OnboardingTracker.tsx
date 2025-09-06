@@ -31,7 +31,7 @@
               </Button>;
 
             )}
-          </div>
+          </div>;
         ))}
 
   title = "Complete Your Profile",
@@ -132,8 +132,8 @@ export function OnboardingTracker({
     </div>
   )
 }></div> </div> {
-  /* Steps list */ "
-}<div className="space-y-3" > {
+  /* Steps list */ ";
+}<div className="space - y-3" > {
   steps.map ( (step) => (<div key= {
   step.link 
 }> </Link> </Button>) 

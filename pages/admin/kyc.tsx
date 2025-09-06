@@ -19,6 +19,7 @@ import type { KycProfile } from '../../utils/kyc';
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
@@ -32,6 +33,9 @@ import type { KycProfile } from '../../utils/kyc';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+export default function AdminKycPage() {
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 
@@ -154,6 +158,7 @@ export default function AdminKycPage() {
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
   ),
@@ -164,6 +169,8 @@ export default function AdminKycPage() {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 =======
 }

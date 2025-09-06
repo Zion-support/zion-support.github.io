@@ -137,11 +137,13 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     writeEpisodes(episodes);
+
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
     const episode = {
@@ -151,8 +153,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
-  }
-
 }
 <<<<<<< HEAD
     const episode = {

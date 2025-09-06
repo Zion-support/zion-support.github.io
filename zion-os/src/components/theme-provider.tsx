@@ -27,15 +27,6 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
-=======
-<<<<<<< HEAD
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-type Theme = "dark" | "light" | "system";
-type ThemeProviderProps = {children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition

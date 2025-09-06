@@ -10,12 +10,18 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+<<<<<<< HEAD
 =======
   
   static getDerivedStateFromError(error) {
@@ -27,14 +33,21 @@ class ErrorBoundary extends React.Component {
   }
   
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     return this.props.children;
   }
 }
@@ -248,6 +261,7 @@ export default function ComprehensivePricingPage() {;
     })
 
   }
+
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -277,6 +291,7 @@ export default function ComprehensivePricingPage() {;
     ...revolutionaryMicroSaasServices,;
     ...enhancedMicroSaasServices,;
   ];  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
+
   const priceRanges = [;
     { value: 'All', label: 'All Prices' },;
     { value: '0-100', label: '$0 - $100' },;
@@ -288,6 +303,7 @@ export default function ComprehensivePricingPage() {;
     { value: '1001-2500', label: '$1,001 - $2,500' };
     { value: '2501-5000', label: '$2,501 - $5,000' };
     { value: '5001+', label: '$5,001+' }
+
   const sortOptions = [;
     { value: 'price', label: 'Price Low-High' },;
     { value: 'name', label: 'Name A-Z' },;
@@ -295,16 +311,20 @@ export default function ComprehensivePricingPage() {;
     { value: 'category', label: 'Category' },;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
+
   // Filter and sort services;
   let filteredServices = allServices;
+
   // Category filter;
   if (selectedCategory !== 'All') {;
     filteredServices = filteredServices && filteredServices.filter(;
       service => service && service.category === selectedCategory;
     );  }
+
   // Price range filter;
   if (priceRange !== 'All') {    filteredServices = filteredServices && filteredServices.filter(service => service && service.category === selectedCategory);
   }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
@@ -314,12 +334,14 @@ export default function ComprehensivePricingPage() {;
       const price = parseFloat(service && service.price.replace('$', '').replace(',', ''));
       return price >= min && (max === Infinity || price <= max);
     });  }
+
   // Search filter;
   if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = filteredServices && filteredServices.filter(service => {;
       const price = parseFloat(service && service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity || price <= max);
     });
+
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices && filteredServices.filter(;
@@ -333,6 +355,7 @@ export default function ComprehensivePricingPage() {;
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
   }
+
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -348,6 +371,7 @@ export default function ComprehensivePricingPage() {;
       case 'roi':;
         const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
@@ -370,9 +394,13 @@ export default function ComprehensivePricingPage() {;
         return bRoi - aRoi;
       default: return a.name.localeCompare(b.name)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ;
   // Filter and sort services;
   let filtered_services = all_services;
@@ -443,9 +471,13 @@ if ( {) {
       default:;
         return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     }
   });
 ;
@@ -809,6 +841,7 @@ if ( {) {
               </motion.p>
               {/* Market Stats */}
               <motion.div
+=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
@@ -826,11 +859,14 @@ if ( {) {
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
               </motion && motion.p>;
+
               {/* Market Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+
               {/* Market Stats */}
               <motion&& motion.div 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
 <<<<<<< HEAD
@@ -906,28 +942,6 @@ if ( {) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-=======
-                transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              >              <motion.div
-=======
-              >              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
-              >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Button
                   variant='primary'
                   size='lg'
@@ -958,6 +972,7 @@ if ( {) {
                   </div>
                 ))}
               </motion.div>
+
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -1053,6 +1068,7 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
         {/* Contact Information Banner */}
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>;
           <div className='container mx-auto px-4'>;
@@ -1075,6 +1091,7 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
         {/* Pricing Tiers */}
         <section id='pricing-tiers' className='py-20'>;
           <div className='container mx-auto px-4'>;
@@ -1141,6 +1158,7 @@ if ( {) {
                       <div className="text-4xl font-bold text-cyan-400 mb-2">{tier && tier.price}</div>;
                       <div className="text-sm text-gray-400">{tier && tier.period}</div>;
                     </div>;
+
                     <div className="space-y-3 mb-8">;
                       {tier && tier.features.map((feature, idx) => (;
                         <div key={idx} className="flex items-center gap-2">;
@@ -1149,6 +1167,7 @@ if ( {) {
                         </div>;
                       ))}
                     </div>;
+
                     <div className='text-center'>;
 
                       <Button
@@ -1207,14 +1226,19 @@ if ( {) {
           <div className='container mx-auto px-4'>;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
@@ -1314,6 +1338,7 @@ if ( {) {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
                   </div>;
+
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1394,6 +1419,7 @@ if ( {) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1487,8 +1513,10 @@ if ( {) {
                         <div className='text-sm text-gray-400 mb-4'>;
                           {service && service.period}
                         </div>;
+
                         <div className='space-y-2 mb-6'>;
                           {service && service.features.slice(0, 3).map((feature, idx) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -1663,6 +1691,7 @@ if ( {) {
               ))}
 
             </motion && motion.div>;
+
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
@@ -1733,6 +1762,7 @@ if ( {) {
 
           </div>;
         </section>;
+
         {/* Contact Section */}
         <section className='py-20'>;
           <div className='container mx-auto px-4 text-center'>;
@@ -1841,6 +1871,7 @@ if ( {) {
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;
               </div>;
+
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -1866,6 +1897,7 @@ if ( {) {
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our sales team to discuss pricing, custom plans, and implementation options.;
               </p>;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                 <Button
                   variant="primary" 
@@ -1884,6 +1916,7 @@ if ( {) {
                   <Calendar className="ml-2 w-5 h-5" />;
                 </Button>;
               </div>;
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>;
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
@@ -1912,6 +1945,8 @@ if ( {) {
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';

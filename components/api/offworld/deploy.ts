@@ -36,7 +36,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -44,6 +47,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -114,8 +118,11 @@ function handler() {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }

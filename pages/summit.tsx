@@ -214,8 +214,14 @@ export default function SummitPage() {
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+<<<<<<< HEAD
   const [submitting, setSubmitting] = React.useState(false),
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null),
+=======
+  const [submitting, setSubmitting] = React.useState(false);
+  const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
@@ -451,6 +457,110 @@ function SummitPage() {
 
         </section>
       </div>
+<<<<<<< HEAD
+=======
+
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
+=======
+      twitter: 'https://twitter.com',
+    },
+  ];
+;
+  const partners: Partner[] = [;
+    { name: 'Gov Partner' },
+    { name: 'Venture Partner' },
+    { name: 'University Partner' },
+  ];
+  const on_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    set_submitting (true);
+    set_result (null),
+    try {
+      const res = await fetch ('/api / summit / register', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ ...form, source: 'summit - page' }),
+      });
+      const data = await res.json ();
+      if (throw new Error (data?.error || 'Failed')) {
+  $2
+}
+      set_result ({ ok: true });
+      set_form ({ name: '', email: '', role: '', country: '' });
+    } catch (err: any) {
+      set_result ({ error: err?.message || 'Unexpected error' });
+    } finally {
+      set_submitting (false);    }
+  }
+;
+  const livestream_embed = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+        />);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+        />);
+    }
+      />);  }
+;
+  return (
+    <>;
+      <Head>;
+        <title > Zion Global Summit 2025 — AI, Talent, Trust</title>;
+        <meta;
+          name='description';
+          content='Zion Global Summit: AI, Talent, Trust — Globalized';
+        />;
+      </Head>;
+      <section className='relative overflow - hidden rounded - xl bg - gradient - to - br from - cyber - dark to - cyber - blue text - white p - 8 md:p - 12 shadow - neon - blue'>;
+        <div className='max - w-4xl'>;
+          <p className='uppercase tracking - widest text - neon - blue'>;
+            Zion Global Summit 2025;
+          </p>;
+          <h1 className='mt - 2 text - 3xl md:text - 5xl font - extrabold'>;
+            AI, Talent, Trust — Globalized;
+          </h1>;
+          <p className='mt - 4 text - white / 80'>;
+            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +;
+            In‑Person);
+          </p>;
+          <div className='mt - 6 flex flex - wrap gap - 3'>;
+            <a;
+              href='#register';
+              className='inline - flex items - center px - 4 py - 2 rounded - md bg - neon - blue text - black font - semibold shadow - neon - blue';
+            >;
+              Register;
+            </a>;
+            <a;
+              href='#livestream';
+              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
+            >;
+              Livestream;
+            </a>;
+            <a;
+              href='#agenda';
+              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
+            >;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Agenda;
+            </a>          </div>;
+        </div>;
+      </section>;
+
+
+              Globalized;
+            </li>          </ul>;
+        </section>;
+      </div>;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -775,12 +885,16 @@ function SummitPage() {
           {livestreamEmbed()}
         </div>
       </section>
+<<<<<<< HEAD
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
       >
         <h2 className='text-2xl font-bold mb-4'>Register</h2>
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
@@ -846,6 +960,7 @@ function SummitPage() {
         </form>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -863,6 +978,9 @@ function SummitPage() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>

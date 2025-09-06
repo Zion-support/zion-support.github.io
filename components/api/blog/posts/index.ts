@@ -19,8 +19,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { status, topic, tag, author, limit, offset } = req.query;
+=======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
 
 

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -10,11 +38,14 @@ origin/automation-improvements-final
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   Search
   HelpCircle
   BookOpen
@@ -80,6 +111,7 @@ const helpArticles = [
         readTime: "8 min read"
         type: "Technical"
       }
+<<<<<<< HEAD
       {
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
@@ -87,6 +119,35 @@ const helpArticles = [
         type: "Best Practice",
       },
     ],
+=======
+
+import React, { useState } from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion, AnimatePresence  } from './framer-motion';
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,
+} from './lucide-react';
+;
+const help_articles = [;
+  {
+    id: "overview",
+    title: "Understanding Our Services",
+    description: "Overview of all available services and solutions",
+    read_time: "7 min read",
+    type: "Overview",
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   },
   {
     id: "cloud-services",
@@ -129,10 +190,17 @@ origin/automation-improvements-final
 
     articles: [;
       {
+<<<<<<< HEAD
         title: "Cloud Security",
         description: "Best practices for securing your cloud infrastructure",
         readTime: "9 min read",
         type: "Security",
+=======
+        title: "Cloud Migration Guide",
+        description: "Step - by - step guide to migrating to the cloud",
+        read_time: "12 min read",
+        type: "Guide",
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       },
     ],
   },
@@ -151,6 +219,7 @@ origin/automation-improvements-final
       }
     ]
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -300,6 +369,7 @@ origin/automation-improvements-final
   };
 
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -319,6 +389,29 @@ origin/automation-improvements-final
   })).filter(category => category.articles.length > 0);
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+=======
+  const filteredCategories = helpCategories;
+    .map((category) => ({;
+      ...category,;
+      articles: category && category.articles.filter(;
+        (article) =>;
+          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()),;
+      ),;
+    }));
+    .filter((category) => category && category.articles.length > 0);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <>;
       <Head>;

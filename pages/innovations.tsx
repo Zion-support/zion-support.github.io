@@ -70,7 +70,13 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 },
+=======
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -416,11 +422,27 @@ export default function InnovationsPage() {
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
                 {
+<<<<<<< HEAD
                   icon: Cpu
                   title: 'Enterprise IT'
                   description: 'AI-powered enterprise solutions and intelligent business optimization'
                   color: 'from-blue-600 via-cyan-600 to-teal-600'
                   features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity']
+=======
+                  icon: Rocket,
+                  title: 'Space Technology',
+                  description: 'Next - generation space exploration and metaverse digital reality',
+                  color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+                  features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events'];
+                },
+                {
+                  icon: Cpu,
+                  title: 'Enterprise IT',
+                  description: 'AI - powered enterprise solutions and intelligent business optimization',
+                  color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+                  features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity'];
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 }
 
               ].map ((category, index) => (

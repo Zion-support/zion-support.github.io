@@ -15,9 +15,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string }
   ensureStorage(),;
   const { id } = req.query as { id?: string };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const episode = episodes.find((e) => e.id === id);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   ensureStorage();
   const { id } = req.query as { id?: string };
@@ -27,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
+
   return res.status(200).json({ episode })
 }
 <<<<<<< HEAD
@@ -76,7 +81,6 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

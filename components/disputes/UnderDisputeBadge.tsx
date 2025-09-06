@@ -23,6 +23,7 @@ export function useProjectDisputeStatus(projectId: string): {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { hasActiveDispute, isLoading: !data && !error };
+
 export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
@@ -139,12 +140,6 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
       Under Dispute;
     </span>);
-  return (
-    <span className=&quot;inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs&quot;>
-      Under Dispute
-    </span>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

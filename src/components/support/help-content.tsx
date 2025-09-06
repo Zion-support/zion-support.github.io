@@ -3,26 +3,26 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
+    icon: <HelpCircle className = "h-6 w-6 text-zion-purple" />,
     articles: [
       {
         id: "create-account",
         title: "Creating your account",
-        content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.",
+        content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.";
         lastUpdated: "2023-11-15",
         tags: ["account", "registration", "setup"]
-      },
+      };
       {
         id: "complete-profile",
         title: "Completing your profile",
         content: "A complete profile helps you get the most out of Zion AI Marketplace. Follow these steps to set up your profile:\n\n1. Navigate to the Profile section from your dashboard\n2. Upload a professional profile picture\n3. Add your basic information including location and contact details\n4. Write a compelling bio that highlights your expertise or requirements\n5. For talent users: Add your skills, experience, and portfolio items\n6. For client users: Add information about your company or projects\n\nA complete profile increases your visibility on the platform and helps our AI matching system connect you with the right opportunities or talent.",
         lastUpdated: "2023-11-18",
         tags: ["profile", "setup"]
-      },
+      };
       {
         id: "platform-navigation",
         title: "Navigating the platform",
-        content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",
+        content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.";
         lastUpdated: "2023-12-01",
         tags: ["navigation", "interface"]
 
@@ -207,24 +207,26 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   },;
   {;
-    id: "payments",;
-    name: "Payments",;
-    description: "Everything about payments and billing",;
-    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
+    id: 'hiring',;
+    name: 'Hiring Process',;
+    description: 'How to find and hire talent on the platform',;
+    icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,;
     articles: [;
       {;
-        id: "payment-methods",;
-        title: "Accepted payment methods",;
-        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",;
-        lastUpdated: "2023-11-01",;
-        tags: ["payment", "billing", "finance"];
+        id: 'post-job',;
+        title: 'Posting a job',;
+        content:;
+          "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",;
+        lastUpdated: '2023-10-25',;
+        tags: ['job', 'hiring', 'recruitment'],;
       },;
       {;
-        id: "escrow-system",;
-        title: "How our escrow system works",;
-        content: "Zion's escrow system protects both clients and talent by ensuring secure and fair payments. Here's how it works:\n\n1. Client makes a payment into escrow when beginning a project\n2. Funds are held securely by Zion, not released to either party\n3. Talent begins work knowing that funds are secured\n4. Upon milestone or project completion, talent submits deliverables\n5. Client reviews and approves the work\n6. Funds are released from escrow to the talent\n\nIf any disputes arise, our resolution team will review the situation and determine the appropriate distribution of escrowed funds based on contract terms and delivered work.",;
-        lastUpdated: "2023-11-15",;
-        tags: ["escrow", "payment", "security"];
+        id: 'ai-matching',;
+        title: 'Using AI matching',;
+        content:;
+          "Zion's AI matching system is designed to connect you with the perfect talent for your needs. Here's how to make the most of this feature:\n\n1. Ensure your job posting is detailed and specific\n2. Navigate to the 'AI Matcher' section from your dashboard\n3. Review the automatically generated list of compatible talent\n4. Use filters to refine your search based on skills, experience, or availability\n5. Click on profiles to view detailed information about each candidate\n6. Save promising matches for future reference or reach out directly\n\nOur AI system considers not just skills and experience, but also work style compatibility, communication preferences, and past project success to suggest optimal matches.",;
+        lastUpdated: '2023-11-05',;
+        tags: ['ai', 'matching', 'recruitment'],;
       },;
       {;
 

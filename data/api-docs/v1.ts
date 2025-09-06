@@ -1,18 +1,15 @@
 import { ApiDocsSpec } from './types';
 
 const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
 
 
 const v1: ApiDocsSpec = {
-<<<<<<< HEAD
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
   lastUpdatedIso: new Date().toISOString()
   sections: [
+=======
 const base_url = 'https://api.zion.os';
 ;
 const v1: ApiDocsSpec = {
@@ -21,6 +18,7 @@ const v1: ApiDocsSpec = {
   default_version: 'v1',
   lastUpdatedIso: new Date ().toISOString (),
   sections: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
 
       id: 'auth',
@@ -28,30 +26,7 @@ const v1: ApiDocsSpec = {
 
           ],
           versions: ['v1']
-=======
-  openapi: '3.0.0',
-  info: {
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
-  },
-  servers: [{ url: baseUrl }],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
-        summary: 'Get Nation Stats',
-        responses: {
-          '200': {
-            description: 'Success',
-            content: {
-              'application/json': {
-                schema: { type: 'object' }
-              }
-            }
-          }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
-<<<<<<< HEAD
       ]
     },
 
@@ -260,7 +235,10 @@ export default v1;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+
 export default v1;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   ];
 }
 ;

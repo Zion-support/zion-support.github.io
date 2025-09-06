@@ -62,7 +62,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message })
+=======
+    return res && res.status(500).json({ error: e?.message });
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
 <<<<<<< HEAD
 =======

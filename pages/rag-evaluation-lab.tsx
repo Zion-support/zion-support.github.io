@@ -188,6 +188,7 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 						].map((f) => (;
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
@@ -216,6 +217,60 @@ export default function RAGEvaluationLabPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+=======
+                title: 'Golden Datasets',
+                desc: 'Curate and run task - specific datasets for repeatable evaluation.',
+              },
+              {
+                title: 'Scenario Evals',
+                desc: 'Synthetic and real - world tests across intents, domains, and edge cases.',
+              },
+              {
+                title: 'CI / CD Quality Gates',
+                desc: 'Fail builds on regressions, compare models and versions.',
+              },
+              {
+                title: 'Offline & Canary',
+                desc: 'Pre - release offline runs and live traffic canaries with alerts.',
+              },
+              {
+                title: 'Dashboards & Reports',
+                desc: 'Team dashboards, API access, and exportable reports.',
+              },
+            ].map (function => (
+              <div;
+                key={f.title}
+                className='rounded - xl border border - white / 10 bg - white / 5 p - 6 backdrop - blur';
+              >;
+                <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
+                <p className='mt - 2 text - sm text - gray - 300'>{f.desc}</p>;
+              </div>))}
+          </div>;
+          const use_cases = [ 'Enterprise Knowledge Management', 'Customer;
+          Support Systems', 'Research & Development', 'Content Generation;
+          Platforms', 'Educational Applications', 'Legal & Compliance Systems';
+          ];
+          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
+            >;
+              Start Evaluating;
+            </Link>;
+            <a;
+              href='mailto: kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </>);
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 ;
 <<<<<<< HEAD
 =======

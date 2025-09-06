@@ -16,7 +16,7 @@ type CarouselPlugin = any
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
+  orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
   setApi?: (api: CarouselApi) => void
 }
 type CarouselContextProps = {
@@ -107,7 +107,7 @@ const Carousel = React.forwardRef<
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return;
+        return
       }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
@@ -120,10 +120,10 @@ const Carousel = React.forwardRef<
     }, [api])
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === "ArrowLeft") {
+        if (event.key === &quot;ArrowLeft&quot;) {
           event.preventDefault()
           scrollPrev()
-        } else if (event.key === "ArrowRight") {
+        } else if (event.key === &quot;ArrowRight&quot;) {
           event.preventDefault()
           scrollNext()
         }
@@ -195,8 +195,7 @@ on_select (api);
         >;
           {children}
         </div>;
-      </CarouselContext.Provider>;
-    );
+      </CarouselContext.Provider>);
   }
 
 )
@@ -217,8 +216,8 @@ const CarouselContent = React.forward_ref<;
 >(({ class_name, ...props }, ref) => {
   const { carousel_ref, orientation } = use_carousel ();
   return (
-    <div ref={carouselRef} className="overflow-hidden">
-      <div
+    <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
+      <div;
         ref={ref}
         className={cn(
           &quot;flex&quot;
@@ -264,7 +263,7 @@ const CarouselItem = React.forward_ref<;
 >(({ class_name, ...props }, ref) => {
   const { orientation } = use_carousel ();
   return (
-    <div
+    <div;
       ref={ref}
 
       role="group"
@@ -308,7 +307,7 @@ const CarouselPrevious = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
   return (
-    <Button
+    <Button;
       ref={ref}
       variant={variant}
       size={size}
@@ -333,7 +332,7 @@ const CarouselPrevious = React.forward_ref<;
           : &quot;top - 1 sm:top - 2 md:-top - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
       disabled={!canScrollPrev}
-      onClick={scrollPrev}
+      on_click={scroll_prev}
       {...props}
 
 
@@ -366,7 +365,7 @@ const CarouselNext = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_next, canScrollNext } = use_carousel ();
   return (
-    <Button
+    <Button;
       ref={ref}
       variant={variant}
       size={size}
@@ -391,7 +390,7 @@ const CarouselNext = React.forward_ref<;
           : &quot;bottom - 1 sm:bottom - 2 md:-bottom - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
       disabled={!canScrollNext}
-      onClick={scrollNext}
+      on_click={scroll_next}
       {...props}
 
 >;

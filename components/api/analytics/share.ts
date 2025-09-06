@@ -10,8 +10,11 @@ function ensure() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -58,6 +61,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req && req.method !== 'POST') return res && res.status(405).end();
   ensure(),
   const { url, title, network, utm } = req && req.body || {};
+=======
 ;
 const DATA_DIR = path.resolve (process.cwd (), 'data', 'analytics');const FILE_PATH = path.resolve (DATA_DIR, 'shares.json');
 ;
@@ -128,7 +132,6 @@ function handler() {
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-<<<<<<< HEAD
   res.status(200).json({ ok: true })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -145,7 +148,6 @@ function handler() {
   list.push (entry);
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

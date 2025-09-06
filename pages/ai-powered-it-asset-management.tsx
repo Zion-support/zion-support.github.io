@@ -202,6 +202,7 @@ const AIPoweredITAssetManagement = () => {
       value: "200%",
       description: "Increased operational efficiency"
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
       } catch (error) {
     console.error("Error:", error);
@@ -220,6 +221,10 @@ const AIPoweredITAssetManagement = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   ],
   const capabilities = [
     "Automated asset discovery and inventory",
@@ -230,6 +235,7 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization",
     "Cost allocation and tracking",
     "Integration with existing IT tools"
+<<<<<<< HEAD
 <<<<<<< HEAD
   ],
 
@@ -270,6 +276,11 @@ export default AIPoweredITAssetManagement;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   return (
     <>
       <Head>
@@ -1469,6 +1480,7 @@ const AIPoweredITAssetManagement = () => {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1555,6 +1567,38 @@ export default AIPoweredITAssetManagement,
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+=======
+=======
+                  className="flex items - center space - x-3";
+                >;
+                  <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
+                  <span className="text - gray - 300">{capability}</span>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* CTA Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+};
+
+
+export default AIPoweredITAssetManagement;
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;

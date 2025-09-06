@@ -1,10 +1,10 @@
 interface MilestoneSuggestionsProps {
-  projectName: string;
-  scopeSummary: string;
-  startDate: Date; import React, { useState } from 'react'
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
-import { Loader2, Sparkles, Check } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
+  project_name: string;
+  scope_summary: string;
+  start_date: Date; import React, { useState } from 'react';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks / useMilestoneGenerator';
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge } from '@/components / ui / badge';
 interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string;
@@ -92,8 +92,7 @@ export function MilestoneSuggestions(): any ({;
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
     }
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
 
   return (
 
@@ -247,7 +246,7 @@ export function MilestoneSuggestions({;
 
 
           )}
-        </Button>
+        </Button>;
       )}
 
 
@@ -276,7 +275,7 @@ export function MilestoneSuggestions({;
                         AI Suggested
                       </Badge>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className='text-sm text-muted-foreground'>
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>

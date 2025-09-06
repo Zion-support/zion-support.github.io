@@ -10,6 +10,7 @@ type Props = { vendor: Vendor | null };
 
 export default function VendorProfilePage({ vendor }: Props) {
 =======
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
 =======
@@ -22,6 +23,11 @@ type Props = { vendor: Vendor | null };
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
+export default function VendorProfilePage(): any ({ vendor }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -52,6 +58,7 @@ export default function VendorProfilePage({ vendor }: Props) {
       if (!res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
       form.reset()
+=======
 import {FormEvent, useState} from 'react';
 import type { Vendor } from '../../utils / vendor - types';
 ;
@@ -294,11 +301,12 @@ function submit_lead() {
 
         </form>;
       </div>;
+
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   );
 }
-<<<<<<< HEAD
+
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx && ctx.params?.slug || '');
 
@@ -445,7 +453,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
       <div className="text - center text - xs text - gray - 500">Powered by Zion</div>;
     </div>);
 }
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
   const slug = String (ctx.params?.slug || '');
   const { getVendorBySlug } = await import ('../../utils / vendor - store');

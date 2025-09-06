@@ -44,6 +44,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
+<<<<<<< HEAD
           {
             code: "aihub"
             name: "AI Hub"
@@ -76,6 +77,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../../utils / supabase / server';
@@ -164,8 +167,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       )
       .order("created_at", { ascending: false });
 
+<<<<<<< HEAD
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ partners: data });
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
 <<<<<<< HEAD

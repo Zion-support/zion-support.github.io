@@ -12,10 +12,10 @@ interface 5gsolutionsProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function 5gsolutions({ }: 5gsolutionsProps) {
   return (
-    <div>
-      <h1>5gsolutions</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>5gsolutions</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

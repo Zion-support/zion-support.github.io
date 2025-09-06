@@ -129,10 +129,6 @@ function fixNextLinks(filePath) {
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (content.includes("href="/") && !content.includes("import Link")) {
-=======
     if (content.includes("href="/") && !content.includes("import Link")) {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -160,10 +156,6 @@ import Link from "next/link";";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

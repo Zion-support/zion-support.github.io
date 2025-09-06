@@ -320,16 +320,11 @@ import {
         'Dedicated support',
         'Unlimited API access',
         'Advanced analytics',
-<<<<<<< HEAD
         'White - label solution',
-=======
-        'White-label solution',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         'Custom integrations',
         'SLA guarantee',
       ],
       popular: false,
-<<<<<<< HEAD
       color: 'border - purple - 600',
       button_color: 'bg - purple - 600 hover:bg - purple - 700',
     },  ];        'Unlimited words_all templates + custom_full SEO suite_dedicated support_unlimited API access_advanced analytics_white - label solution_custom integrations';
@@ -407,6 +402,7 @@ import {
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
 <<<<<<< HEAD
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
@@ -472,12 +468,14 @@ import {
 
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
         <div className="absolute inset-0">;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]" />;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0 && 0.08),transparent_50%)]" />;
         </div>;
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <div className="mb-8">;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">;
@@ -485,13 +483,16 @@ import {
               AI-Powered Content Generation;
             </div>;
           </div>;
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">;
             AI Content Generator;
           </h1>;
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">;
             Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant;
           </p>;
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               href="#pricing"
               size="lg"
@@ -638,9 +639,11 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
+=======
           AI Content Generator | Zion Tech Group - Advanced AI - Powered Content;
           Creation;
         </title>;
@@ -858,6 +861,7 @@ import {
           </div>;
         </div>;
       </section>;
+
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -868,6 +872,7 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -877,6 +882,7 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
 
@@ -919,6 +925,7 @@ import {
               Versatile content creation for every industry and purpose
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <Card
@@ -941,7 +948,6 @@ import {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {example}
-<<<<<<< HEAD
                         </div>;
 =======
 
@@ -990,9 +996,11 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {pricingPlans.map((plan, index) => (
+=======
           </div>;
         </div>;
       </section>;
+
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -1005,6 +1013,7 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your content creation needs;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -1014,8 +1023,10 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
 
@@ -1172,6 +1183,10 @@ import {
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -1180,6 +1195,7 @@ import {
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
                   <p className="text-gray-400">{plan && plan.description}</p>;
                 </div>;
+
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -1297,6 +1313,7 @@ import {
           </div>;
         </div>;
       </section>;
+
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1307,6 +1324,7 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms;
             </p>;
           </div>;
+
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -1316,6 +1334,7 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
 
@@ -1345,6 +1364,7 @@ import {
               Connect with your favorite tools and platforms
             </p>
           </div>
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <Card
@@ -1425,11 +1445,10 @@ import {
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'
-            >
-              Start Free Trial
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Button>
+              className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
+              Start Free Trial;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
             <Button
               href='#demo'
               variant='outline'
@@ -1449,7 +1468,6 @@ import {
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
           </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of content creators who are already saving hours every day with AI-powered content generation.
           </p>

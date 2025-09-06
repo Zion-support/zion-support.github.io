@@ -192,6 +192,45 @@ function PartnersPage() {
   Users,
   Clock,
   TrendingUp,
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * PartnersPage - Function description
+ */
+function PartnersPage() {
+  const partners = [;
+    {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -405,6 +444,7 @@ export default function PartnersPage() {
         'Support collaboration',
       ],
       icon: Users,
+<<<<<<< HEAD
       color: "from-orange-500 to-red-500"
       } catch (error) {
     console.error("Error:", error);
@@ -437,6 +477,28 @@ export default function PartnersPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/partners' />      </Head>
       <EnhancedNavigation />
+=======
+      color: 'from - orange - 500 to - red - 500',
+    },
+  ];
+;
+  const stats = [;
+    { number: '50+', label: 'Strategic Partners', icon: Handshake },
+    { number: '100+', label: 'Joint Projects', icon: Rocket },
+    { number: '25+', label: 'Countries', icon: Globe },
+    { number: '300%', label: 'Growth Rate', icon: TrendingUp },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ];
+;
+  return (
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />      </Head>;
+
+      <EnhancedNavigation />;
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -587,6 +649,7 @@ export default function PartnersPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
@@ -844,6 +907,8 @@ export default function PartnersPage(req, res) {
 }
                 className="text-center"
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -926,6 +991,7 @@ export default function PartnersPage(req, res) {
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
@@ -934,6 +1000,9 @@ export default function PartnersPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1089,6 +1158,7 @@ export default function PartnersPage(req, res) {
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
@@ -1097,6 +1167,9 @@ export default function PartnersPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1167,6 +1240,7 @@ export default function PartnersPage(req, res) {
                       </span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {partner.name}
                   </h3>
@@ -1189,6 +1263,11 @@ export default function PartnersPage(req, res) {
                     </ul>
                   </div>
                   <div className='flex items-center justify-between'>
+=======
+
+
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                   <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
                   <p className="text-white/70 text-sm mb-4">{partner.description}</p>
                   
@@ -1198,6 +1277,7 @@ export default function PartnersPage(req, res) {
                       {partner.benefits.map((benefit) => (
                         <li key={benefit} className="text-xs text-white/80 flex items-center">
                           <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2" />
+<<<<<<< HEAD
                           {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1218,6 +1298,26 @@ export default function PartnersPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                          {benefit}
+                        </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      ))}
+
+
+                    </ul>;
+                  </div>;
+
+                  <div className='flex items-center justify-between'>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                  <div className="flex items-center justify-between">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
                     <a
                       href={partner && partner.website}
                       target='_blank'
@@ -1393,9 +1493,57 @@ export default function PartnersPage(req, res) {
 
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
   )
+=======
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+=======
+                  </p>;
+                  <div className='mb - 4'>;
+                    <h4 className='text - sm font - semibold text - white / 60 mb - 2 uppercase tracking - wider'>;
+                      Benefits;
+                    </h4>;
+                    <ul className='space - y-1'>;
+                      {partner.benefits.map (benefit => (
+                        <li;
+                          key={benefit}
+                          className='text - xs text - white / 80 flex items - center';
+                        >;
+                          <div className='w - 1 h - 1 bg - cyan - 400 rounded - full mr - 2' />                          {benefit}
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  <div className='flex items - center justify - between'>;
+                    <a;
+                      href={partner.website}
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 flex items - center gap - 1';
+                    >;
+                      Visit Website;
+                      <ExternalLink className='w - 3 h - 3' />;
+                    </a>;
+                    <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - lg font - semibold text - white text - sm transition - all duration - 300 transform hover:scale - 105'>                      Learn More;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Become a Partner CTA */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Partner with Us?;

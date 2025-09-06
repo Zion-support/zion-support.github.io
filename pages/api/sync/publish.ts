@@ -85,9 +85,26 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
   const signature = req.headers["x-zion-signature"];
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
+=======
+
+  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+
+  const signature = req && req.headers["x-zion-signature"];
+  const payload = req && req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
+
+=======
+
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 }
   } catch (error) {
     console.error("Error:", error);
@@ -100,9 +117,50 @@ export default async function handler(req, res) {
   if (!signatureValid) {
     return res && res.status(401).json({ error: "Invalid signature" })
   }
+<<<<<<< HEAD
   const event = payload as SyncEvent & { propagate?: boolean }
   if (!event |!event.type |!event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
+=======
+
+
+  const signature = req.headers["x-zion-signature"];
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import axios from './axios';
+import { read_state, write_state, upsert_event, getEntityId } from '../../../utils / sync / storage';
+import { verify_signature } from '../../../utils / sync / signature';
+import { computeMerkleRootFromVotes } from '../../../utils / sync / merkle';
+import { SyncEvent } from '../../../utils / sync / types';
+function isAllowedByScope (state_type: string, scope: string): boolean {
+  // Check condition
+if (return true) {
+  $2
+}
+  // Check condition
+if (return state_type === "proposal" || state_type === "dao_endorsement") {
+  $2
+}
+  // Check condition
+if (return state_type === "token_transfer" || state_type === "talent_mobility" || state_type === "leaderboard_entry", ) {
+  $2
+}
+  return true;
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const state = read_state ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
   }
   if (!isAllowedByScope(event.type, state.config.scope)) {
     return res.status(403).json({ error: "Event type not allowed by current scope" })

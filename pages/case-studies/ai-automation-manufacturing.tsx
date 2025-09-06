@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -18,6 +19,29 @@ export default function CaseStudyPage() {
     teamSize: '8 engineers'
     featured: true
   }
+=======
+    id: 'ai-automation-manufacturing',
+    title: 'AI-Powered Manufacturing Automation',
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  const case_study = {
+    id: 'ai - automation - manufacturing',
+    title: 'AI - Powered Manufacturing Automation',
+
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    challenge: 'Inefficient production processes, high downtime, and quality control issues',
+    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
+
+
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
   },
   return (
@@ -359,6 +383,7 @@ export default function CaseStudyPage() {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -368,6 +393,8 @@ export default function CaseStudyPage() {
 }
 }
 =======
+=======
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

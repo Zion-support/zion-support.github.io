@@ -20,6 +20,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   for (const p of PROVIDERS) {
     const conn = state.connections.find(c => c.providerId === p.id)
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
+<<<<<<< HEAD
+=======
+
+  }
+  res.status(200).json({ connections })
+>>>>>>> 7c8bc30d7f67e73b4eaa80d227738ae796deedb9
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
