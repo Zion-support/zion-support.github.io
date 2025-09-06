@@ -1,34 +1,23 @@
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  proposalId, title, votes 
-}= req.body as {
-  proposalId: string, title: string, votes: {
-  voterId: string, weight: number, choice: string 
-}[] 
-};
-if (!proposalId || !title || !Array.isArray (votes) ) {
-  
-}const merkleRoot = computeMerkleRootFromVotes (votes);
-const version = (state.latestVersionByEntityId[proposalId] || 0) + 1;
-const event = {
-  eventId: uuidv4 ();
-type: "proposal" as const;
-payload: {
-  id: proposalId, proposalId, title, votes 
-};
-version;
-timestamp: Date.now ();
-merkleRoot 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  // ignore 
-}
-}) );
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    // Mock response
+    const data = {
+      success: true,
+      message: 'API endpoint working',
+      timestamp: new Date().toISOString()
+    };
+
+    res.status(200).json(data);
+  } catch (error: any) {
+    res.status(500).json({
+      error: error?.message || 'Internal server error'
+    });
+  }
 }

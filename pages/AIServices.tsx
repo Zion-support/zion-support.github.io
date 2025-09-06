@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -11,7 +8,6 @@ import {
   Eye, 
   MessageSquare, 
   BarChart3, 
-<<<<<<< HEAD
   CheckCircle, 
   ArrowRight, 
   Clock, 
@@ -25,22 +21,6 @@ import {
   FileText,
   Cog,
   Shield
-=======
-  Zap, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Clock,
-  Users,
-  Award,
-  TrendingUp,
-  Database,
-  Cpu,
-  Network,
-  Target,
-  Rocket
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 } from 'lucide-react';
 
 const aiServices = [
@@ -58,146 +38,11 @@ const aiServices = [
     title: "AI Security",
     description: "Advanced threat detection and security solutions powered by artificial intelligence",
     icon: Shield,
-<<<<<<< HEAD
     category: "Security",
     features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Security Monitoring"],
     pricing: "Starting at $3,200/month",
     setupTime: "2-4 weeks",
     targetUsers: "Enterprises, Security Teams, IT Departments"
-=======
-    features: [
-      'Threat detection and analysis',
-      'Automated incident response',
-      'Behavioral analytics',
-      'Vulnerability assessment',
-      'Security monitoring'
-    ],
-    price: '$4,000 - $15,000/month',
-    benefits: [
-      'Enhanced security posture',
-      'Reduced false positives',
-      'Faster threat response',
-      'Compliance automation'
-    ],
-    marketPrice: '$7,000 - $25,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'Financial Services, Healthcare, Government, Enterprise'
-  },
-  {
-    id: 6,
-    name: 'Conversational AI & Chatbots',
-    description: 'Intelligent virtual assistants and customer service automation',
-    icon: MessageSquare,
-    features: [
-      'Natural language understanding',
-      'Multi-channel deployment',
-      'Context-aware conversations',
-      'Integration with CRM systems',
-      'Analytics and reporting'
-    ],
-    price: '$1,500 - $5,000/month',
-    benefits: [
-      '24/7 customer support',
-      'Reduced support costs',
-      'Improved customer satisfaction',
-      'Scalable customer service'
-    ],
-    marketPrice: '$2,500 - $8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
-  },
-  {
-    id: 7,
-    name: 'Quantum AI & Machine Learning',
-    description: 'Next-generation AI powered by quantum computing principles',
-    icon: Cpu,
-    features: [
-      'Quantum machine learning algorithms',
-      'Quantum neural networks',
-      'Optimization problems solving',
-      'Quantum data processing',
-      'Hybrid classical-quantum systems'
-    ],
-    price: '$5,500 - $15,000/month',
-    benefits: [
-      'Exponential processing power',
-      'Complex problem solving',
-      'Advanced optimization',
-      'Future-proof technology'
-    ],
-    marketPrice: '$8,000 - $25,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Research Institutions, Pharmaceutical, Financial Services'
-  },
-  {
-    id: 8,
-    name: 'AI Drug Discovery & Development',
-    description: 'Accelerated pharmaceutical research using AI and machine learning',
-    icon: Brain,
-    features: [
-      'Molecular property prediction',
-      'Drug-target interaction modeling',
-      'Clinical trial optimization',
-      'Side effect prediction',
-      'Drug repurposing analysis'
-    ],
-    price: '$4,500 - $20,000/month',
-    benefits: [
-      'Faster drug development',
-      'Reduced R&D costs',
-      'Improved success rates',
-      'Personalized medicine'
-    ],
-    marketPrice: '$7,000 - $35,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Pharmaceutical Companies, Research Labs, Biotech'
-  },
-  {
-    id: 9,
-    name: 'AI Climate & Environmental Solutions',
-    description: 'Environmental monitoring and climate change mitigation using AI',
-    icon: TrendingUp,
-    features: [
-      'Climate data analysis',
-      'Environmental monitoring',
-      'Carbon footprint optimization',
-      'Renewable energy forecasting',
-      'Sustainability reporting'
-    ],
-    price: '$2,200 - $7,000/month',
-    benefits: [
-      'Environmental compliance',
-      'Cost savings on energy',
-      'Sustainability goals achievement',
-      'Risk mitigation'
-    ],
-    marketPrice: '$3,500 - $12,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Energy Companies, Government, Environmental Organizations'
-  },
-  {
-    id: 10,
-    name: 'AI Space Technology & Research',
-    description: 'Space exploration and satellite data analysis using advanced AI',
-    icon: Rocket,
-    features: [
-      'Satellite data processing',
-      'Space mission optimization',
-      'Astronomical data analysis',
-      'Space weather prediction',
-      'Autonomous space systems'
-    ],
-    price: '$3,500 - $12,000/month',
-    benefits: [
-      'Enhanced space missions',
-      'Improved data accuracy',
-      'Cost-effective operations',
-      'Scientific breakthroughs'
-    ],
-    marketPrice: '$5,500 - $20,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   }
 ];
 
@@ -210,11 +55,7 @@ export default function AIServices() {
   return (
     <Layout 
       title="AI Services - Zion Tech Group"
-<<<<<<< HEAD
       description="Comprehensive AI solutions for modern businesses"
-=======
-      description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -226,7 +67,6 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-<<<<<<< HEAD
                 AI Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
@@ -239,31 +79,13 @@ export default function AIServices() {
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
-=======
-                AI Services That Transform Businesses
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Harness the power of artificial intelligence to drive innovation and growth
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Get AI Consultation
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
-=======
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  View AI Portfolio
+                  View Portfolio
                 </motion.button>
               </div>
             </motion.div>
@@ -390,7 +212,6 @@ export default function AIServices() {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
                   Schedule Demo
                 </motion.button>
               </div>

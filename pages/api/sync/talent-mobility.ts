@@ -1,35 +1,23 @@
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  personId, fromNation, toNation, role, startDate, endDate 
-}= req.body as {
-  personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string 
-};
-if (!personId || !fromNation || !toNation || !role || !startDate) {
-  
-}const entityKey = `$ {
-  personId 
-}:$ {
-  startDate 
-}`;
-const version = nextVersionFor (state, entityKey);
-const event = {
-  eventId: uuidv4 ();
-type: "talent mobility" as const;
-payload: {
-  id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
-};
-version;
-timestamp: Date.now () 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  
-}
-}) );
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    // Mock response
+    const data = {
+      success: true,
+      message: 'API endpoint working',
+      timestamp: new Date().toISOString()
+    };
+
+    res.status(200).json(data);
+  } catch (error: any) {
+    res.status(500).json({
+      error: error?.message || 'Internal server error'
+    });
+  }
 }
