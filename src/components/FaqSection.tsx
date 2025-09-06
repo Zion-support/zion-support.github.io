@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 const FaqSection = () => {
@@ -6,29 +8,29 @@ const FaqSection = () => {
 
   const faqs = [
     {
-      question: "What services does Zion Tech offer?",
-      answer: "We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow."
+      question: 'What services does Zion Tech offer?',
+      answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.',
     },
     {
-      question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation."
+      question: 'How long does implementation take?',
+      answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation.',
     },
     {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance."
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance.',
     },
     {
-      question: "What makes Zion Tech different?",
-      answer: "We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries."
+      question: 'What makes Zion Tech different?',
+      answer: 'We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries.',
     },
     {
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement."
+      question: 'Do you work with small businesses?',
+      answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement.',
     },
     {
-      question: "How do you ensure data security?",
-      answer: "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data."
-    }
+      question: 'How do you ensure data security?',
+      answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data.',
+    },
   ];
 
   const toggleFaq = (index: number) => {
@@ -75,7 +77,10 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -489,4 +494,8 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

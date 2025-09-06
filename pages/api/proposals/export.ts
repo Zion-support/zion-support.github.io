@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -22,16 +21,12 @@ function buildIpfsClient() {
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 }
 
 
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -39,31 +34,18 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
-=======
-  const pdfDoc = await PDFDocument && PDFDocument.create();
-  const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
-  const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           current = word;
         } else {
           current = test;
         }
       }
-<<<<<<< HEAD
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -82,9 +64,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     });
   let y = page && page.getHeight() - margin;
@@ -110,7 +89,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-<<<<<<< HEAD
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -121,8 +99,8 @@ export default async function handler(
   }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   } catch (error) {
@@ -130,9 +108,6 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
 
     const { id } = req && req.body || {};
@@ -140,16 +115,15 @@ export default async function handler(
     const meta = getProposal(id);
     if (!meta) return res && res.status($1).json({ $2 });
     const markdownPath = path && path.join(
-      process && process.cwd(),
-      "public",
-      meta && meta.artifacts.markdownPath || "",
+      process && process.cwd()
+      "public"
+      meta && meta.artifacts.markdownPath || ""
 
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
 
-<<<<<<< HEAD
   return pdfDoc.save()
 }
 
@@ -169,15 +143,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
-<<<<<<< HEAD
         const { cid } = await ipfs.add(markdown);
     // Check condition
 if ( {) {
@@ -208,9 +178,9 @@ function handler() {
   $2
 }
     const markdown_path = path.join (
-      process.cwd (),
-      "public",
-      meta.artifacts.markdown_path || "",
+      process.cwd ()
+      "public"
+      meta.artifacts.markdown_path || ""
     );
     const markdown = fs.exists_sync (markdown_path);
       ? fs.readFileSync (markdown_path, "utf8");
@@ -240,94 +210,6 @@ if ( {) {
         ipfs_cid = cid.to_string ();
       } catch {}
     }
-=======
-
-
-  }
-
-
-
-}
-
-async function generatePdfFromMarkdown(markdown: string, title: string) {
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]); // A4
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-  const fontSize = 11;
-  const margin = 40;
-  const maxWidth = page.getWidth() - margin * 2;
-  const lines = markdown
-    .replace(/\r\n/g, '\n')
-    .split('\n')
-    .flatMap((line) => {
-      const words = line.split(' ');
-      const wrapped: string[] = [];
-      let current = '';
-      for (const word of words) {
-        const test = current.length ? current + ' ' + word : word;
-        const width = font.widthOfTextAtSize(test, fontSize);
-        if (width > maxWidth) {
-          if (current) wrapped.push(current);
-          current = word
-        } else {
-          current = test
-        }
-      }
-      if (current) wrapped.push(current);
-      return wrapped.length ? wrapped : [' ']
-    });
-  let y = page.getHeight() - margin;
-  page.drawText(title, { x: margin, y, size: 16, font });
-  y -= 24;
-  for (const line of lines) {
-    if (y < margin + 12) {
-      y = page.getHeight() - margin;
-      pdfDoc.addPage()
-    }
-    page.drawText(line, { x: margin, y, size: fontSize, font });
-    y -= 14
-  }
-
-
-  try {
-    const { id } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd()
-      "public"
-      meta.artifacts.markdownPath |""
-    );
-    const markdown = fs.existsSync(markdownPath)
-      ? fs.readFileSync(markdownPath, "utf8")
-      : "# Proposal";
-
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
-    const pdfUrl = savePdf(id, pdfBytes);
-    const hasher = crypto.createHash('sha256');
-    hasher.update(markdown);
-    const digest = '0x' + hasher.digest('hex');
-    let signature: string | undefined;
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
-    if (privateKey) {
-      const wallet = new ethers.Wallet(privateKey);
-      signature = await wallet.signMessage(ethers.getBytes(digest))
-    }
-    let ipfsCid: string | undefined;
-    const ipfs = buildIpfsClient();
-    if (ipfs) {
-      try {
-        const { cid } = await ipfs.add(markdown);
-
-        ipfsCid = cid.toString()
-
-      } catch {}
-    }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
@@ -335,7 +217,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
     });
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
-<<<<<<< HEAD
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
@@ -367,28 +248,14 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   }
 }
 ;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
   }
 }
 
-=======
-
-}
-
-  }
-}
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -400,16 +267,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
   }
 }
 
-=======
-
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

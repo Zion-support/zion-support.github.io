@@ -426,12 +426,16 @@ if (require.main === module) {}
 module.exports = GitAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 module.exports = GitAutomation;
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = GitAutomation;
 module.exports = GitAutomation;
 <<<<<<< HEAD
@@ -440,8 +444,12 @@ module.exports = GitAutomation;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = GitAutomation;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

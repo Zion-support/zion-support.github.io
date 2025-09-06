@@ -2,6 +2,11 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+#!/usr/bin/env node;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +121,9 @@ fixer.run().catch(console.error)
 <<<<<<< HEAD
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -123,6 +131,7 @@ fixer.run().catch(console.error)
 =======
 #!/usr/bin/env node;
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require("fs")
 const path = require("path")
   log(message, type = "INFO")
@@ -160,12 +169,16 @@ export const sanitizeHtml = ("html")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 <<<<<<< HEAD
@@ -174,8 +187,12 @@ export const sanitizeHtml = ("html")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

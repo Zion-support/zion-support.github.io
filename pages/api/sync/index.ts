@@ -1,13 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
+import { filterEventsByScope } from "../../../utils/sync/storage",;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  const state = readState(),
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
+  const state = readState()
+>>>>>>> main
 
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -41,10 +43,10 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    status: "ok",
-    instanceId: "sync-instance",
-    config: {},
-    lastSyncedAt: Date.now(),
+    status: "ok"
+    instanceId: "sync-instance"
+    config: {}
+    lastSyncedAt: Date.now()
     counts: {
       totalEvents: 0
       } catch (error) {
@@ -61,61 +63,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
   });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState } from "../../../utils/sync/storage",
-import { filterEventsByScope } from "../../../utils/sync/storage",
+import type { NextApiRequest, NextApiResponse } from "next"
+import { readState } from "../../../utils/sync/storage"
+import { filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState(),
+  const state = readState()
   if (req.method === "GET") {
-<<<<<<< HEAD
-  if (req.method === "GET") {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    const scope = state.config.scope,
-    const scoped_events = filterEventsByScope (state.events, scope),
+    const scope = state.config.scope
+    const scoped_events = filterEventsByScope (state.events, scope)
     return res.status (200).json ({
+<<<<<<< HEAD
       status: "ok",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      instance_id: state.config.instance_id,
-      config: state.config,
-      lastSyncedAt: state.lastSyncedAt,
-      counts: {
-
-        totalEvents: scopedEvents.length,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
       instanceId: state.config.instanceId,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
+
         totalEvents: scopedEvents.length,
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
-proposals: scopedEvents.filter((e) => e.type === "proposal").length,
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-proposals: scopedEvents.filter((e) => e.type === "proposal").length,
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length,
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
@@ -124,90 +91,19 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-
-=======
-  }
-
-  return res.status(405).json({ error: "Method not allowed" });
+  return res.status(405).json({ error: "Method not allowed" })
 };
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return res.status(405).json({ error: "Method not allowed" })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
-import { filterEventsByScope } from "../../../utils/sync/storage";
-export default function handler(req, res) {
-  try {
-  const state = readState();
-  if (req.method === "GET") {;
-    const scope = state.config.scope;
-    const scopedEvents = filterEventsByScope(state.events, scope);
-    return res.status(200).json({;
-      status: "ok",;
-      instanceId: state.config.instanceId,;
-      config: state.config,;
-      lastSyncedAt: state.lastSyncedAt,;
-      counts: {;
-        totalEvents: scopedEvents.length,;
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length,;
-        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,;
-        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length;
-        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length;
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}});
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return res.status(405).json({ error: "Method not allowed" });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-}
+      status: "ok"
+      instanceId: state.config.instanceId
+      config: state.config
+      lastSyncedAt: state.lastSyncedAt
+      counts: {
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        totalEvents: scopedEvents.length
+        proposals: scopedEvents.filter((e) => e.type === "proposal").length
+        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length
+        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
+        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+>>>>>>> main

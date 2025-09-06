@@ -1,8 +1,90 @@
 <<<<<<< HEAD
-
-
-
+import React from 'react';
 <<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Services - Zion Tech Group"
+      description="Our services and solutions"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+import Head from 'next/head';
+
+export default function Services() {
+  const services = [
+    {
+      title: "AI Development",
+      description: "Custom AI solutions tailored to your business needs",
+      features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions",
+      features: ["AWS/Azure/GCP Migration", "Container Orchestration", "Serverless Architecture", "DevOps Automation"]
+    },
+    {
+      title: "Web Development",
+      description: "Modern web applications with cutting-edge technology",
+      features: ["React/Next.js Applications", "Progressive Web Apps", "API Development", "Performance Optimization"]
+    },
+    {
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights",
+      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Pipeline Development"]
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI-powered IT services and solutions" />
+      </Head>
+      <main className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h1>
+            <p className="text-xl text-gray-600">Comprehensive AI-powered solutions for your business</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-700">
+                      <span className="text-emerald-500 mr-2">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+=======
+
+
+
 
 
 
@@ -15,31 +97,6 @@ import Link from 'next/link';
 import React from 'react';
 
 import Link from 'next/link';
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
-import React from 'react';
-
-=======
-
-
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import Link from 'next/link';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next / link';
 ;
 type Service = {
@@ -49,546 +106,6 @@ type Service = {;
   pricing: string;
   link: string;
 }
-<<<<<<< HEAD
-=======
-
-const microSaaS: Service[] = [;
-  {;
-    name: 'Cloud Cost Guard (FinOps Assistant)',;
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'LLM Evaluation & Safety Suite',;
-    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',;
-    pricing: 'Typical: $799–$3,500/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-services'},;
-  {;
-    name: 'Customer Feedback & NPS Micro-App',;
-    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',;
-    pricing: 'Typical: $149–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'API Rate Limiter & Analytics',;
-    summary: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Document Processing',;
-    summary: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Social Media Scheduler Pro',;
-    summary: 'Multi-platform scheduling, content optimization, and engagement analytics.',;
-    pricing: 'Typical: $99–$499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Email Deliverability Monitor',;
-    summary: 'Real-time email reputation tracking, bounce analysis, and deliverability optimization.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Website Performance Optimizer',;
-    summary: 'Automated Core Web Vitals monitoring, optimization suggestions, and performance alerts.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Lead Scoring & Qualification',;
-    summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Inventory Management AI',;
-    summary: 'Predictive inventory optimization, demand forecasting, and automated reordering.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Employee Productivity Tracker',;
-    summary: 'Non-invasive productivity analytics, time tracking, and performance insights.',;
-    pricing: 'Typical: $99–$399/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Competitor Price Monitor',;
-    summary: 'Real-time competitor pricing tracking, alerts, and dynamic pricing recommendations.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'SEO Content Optimizer',;
-    summary: 'AI-powered content optimization, keyword research, and SERP tracking.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Customer Churn Predictor',;
-    summary: 'Machine learning models to predict and prevent customer churn with actionable insights.',;
-    pricing: 'Typical: $399–$1,599/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Automated A/B Testing Platform',;
-    summary: 'Statistical significance testing, multivariate experiments, and conversion optimization.',;
-    pricing: 'Typical: $299–$1,199/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Invoice Processing & AP Automation',;
-    summary: 'AI-powered invoice extraction, approval workflows, and automated payment processing.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Real-time Collaboration Workspace',;
-    summary: 'Virtual whiteboards, document collaboration, and team productivity analytics.',;
-    pricing: 'Typical: $99–$499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Code Review Assistant',;
-    summary: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Dynamic Pricing Optimization Engine',;
-    summary: 'Real-time pricing adjustments based on demand, competition, and market conditions.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Contract Management System',;
-    summary: 'Contract lifecycle management, renewal tracking, and compliance monitoring.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered HR Analytics Platform',;
-    summary: 'Employee performance insights, retention prediction, and workforce optimization.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Supply Chain Monitor',;
-    summary: 'Real-time supply chain visibility, risk assessment, and disruption alerts.',;
-    pricing: 'Typical: $499–$2,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Energy Management System',;
-    summary: 'IoT-based energy monitoring, optimization, and cost reduction for facilities.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Legal Document Analyzer',;
-    summary: 'Contract analysis, risk assessment, and compliance checking for legal teams.',;
-    pricing: 'Typical: $399–$1,599/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Dynamic Content Personalization Engine',;
-    summary: 'Real-time content customization based on user behavior and preferences.',;
-    pricing: 'Typical: $299–$1,199/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Facility Management Platform',;
-    summary: 'IoT sensors, predictive maintenance, and automated facility operations.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Market Research Assistant',;
-    summary: 'Competitive intelligence, trend analysis, and market opportunity identification.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Onboarding Platform',;
-    summary: 'Automated onboarding workflows, progress tracking, and success optimization.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Compliance Monitoring System',;
-    summary: 'Automated compliance checking, audit preparation, and regulatory reporting.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Financial Planning Tool',;
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',;
-    pricing: 'Typical: $99–$499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Dynamic Workforce Scheduling System',;
-    summary: 'AI-optimized scheduling, shift management, and labor cost optimization.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Quality Assurance Platform',;
-    summary: 'Automated testing, quality metrics, and continuous improvement recommendations.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Vendor Management System',;
-    summary: 'Vendor performance tracking, risk assessment, and relationship optimization.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Knowledge Management Platform',;
-    summary: 'AI-powered search, content organization, and knowledge sharing optimization.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Email Marketing Automation',;
-    summary: 'Intelligent email campaigns, personalization, and automated follow-up sequences.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Appointment Scheduling System',;
-    summary: 'AI-optimized scheduling, calendar integration, and automated reminders.',;
-    pricing: 'Typical: $99–$499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Real-Time Customer Feedback Analytics',;
-    summary: 'Sentiment analysis, feedback categorization, and actionable insights dashboard.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Social Media Manager',;
-    summary: 'Content scheduling, engagement optimization, and performance analytics.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Expense Management & Receipt OCR',;
-    summary: 'Automated expense tracking, receipt processing, and compliance reporting.',;
-    pricing: 'Typical: $99–$399/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Talent Acquisition Platform',;
-    summary: 'Resume screening, candidate matching, and interview scheduling automation.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Project Management Assistant',;
-    summary: 'Task automation, resource allocation, and deadline prediction.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Onboarding Automation',;
-    summary: 'Personalized onboarding flows, progress tracking, and success optimization.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Content Moderation System',;
-    summary: 'Automated content filtering, toxicity detection, and community management.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Dynamic Pricing Intelligence Platform',;
-    summary: 'Real-time market analysis, competitor tracking, and pricing optimization.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Inventory Forecasting Engine',;
-    summary: 'Demand prediction, stock optimization, and automated reorder management.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Success Platform',;
-    summary: 'Health scoring, churn prediction, and automated intervention workflows.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Document Workflow Automation',;
-    summary: 'Document routing, approval processes, and compliance tracking.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Analytics Dashboard Builder',;
-    summary: 'No-code dashboard creation, data visualization, and KPI tracking.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Lead Generation Engine',;
-    summary: 'Prospect identification, contact enrichment, and outreach automation.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent A/B Testing Platform',;
-    summary: 'Statistical significance testing, multivariate experiments, and optimization.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Compliance Monitoring System',;
-    summary: 'Regulatory tracking, audit preparation, and compliance reporting automation.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Video Content Analyzer',;
-    summary: 'Video transcription, sentiment analysis, and engagement metrics.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Workflow Orchestration Platform',;
-    summary: 'Process automation, task routing, and business logic management.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Segmentation Engine',;
-    summary: 'Behavioral analysis, persona creation, and targeted marketing automation.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Voice Analytics Platform',;
-    summary: 'Call transcription, sentiment analysis, and conversation insights.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Resource Planning System',;
-    summary: 'Capacity planning, resource optimization, and utilization tracking.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Contract Lifecycle Manager',;
-    summary: 'Contract analysis, renewal tracking, and compliance monitoring.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Market Intelligence Platform',;
-    summary: 'Competitive analysis, trend monitoring, and opportunity identification.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Journey Mapping',;
-    summary: 'Touchpoint analysis, conversion optimization, and experience enhancement.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Data Quality Management',;
-    summary: 'Data validation, cleansing, and quality monitoring automation.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Personalization Engine',;
-    summary: 'Real-time content customization, product recommendations, and user experience optimization.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Incident Response System',;
-    summary: 'Automated incident detection, escalation, and resolution workflows.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Vendor Performance Tracker',;
-    summary: 'Vendor analytics, performance scoring, and relationship management.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Content Creation Suite',;
-    summary: 'Automated content generation, optimization, and multi-channel distribution.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Business Intelligence Platform',;
-    summary: 'Advanced analytics, predictive insights, and executive reporting automation.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Support Ticket Router',;
-    summary: 'Intelligent ticket classification, priority assignment, and agent matching.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Financial Planning Assistant',;
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Supply Chain Risk Monitor',;
-    summary: 'Risk assessment, disruption prediction, and mitigation strategy recommendations.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Employee Engagement Platform',;
-    summary: 'Sentiment analysis, engagement tracking, and retention optimization.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Quality Assurance System',;
-    summary: 'Automated testing, defect detection, and quality metrics tracking.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Document Security Platform',;
-    summary: 'Document encryption, access control, and security monitoring.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Energy Consumption Optimizer',;
-    summary: 'Energy usage analysis, cost optimization, and sustainability reporting.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Lifetime Value Predictor',;
-    summary: 'CLV modeling, segmentation, and retention strategy optimization.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Workflow Analytics Platform',;
-    summary: 'Process mining, bottleneck identification, and efficiency optimization.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Feedback Loop Manager',;
-    summary: 'Feedback collection, analysis, and action item tracking automation.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Sales Forecasting Engine',;
-    summary: 'Revenue prediction, pipeline analysis, and quota optimization.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Asset Management System',;
-    summary: 'Asset tracking, maintenance scheduling, and lifecycle optimization.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Communication Platform',;
-    summary: 'Multi-channel communication, response optimization, and engagement tracking.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Business Process Optimizer',;
-    summary: 'Process analysis, automation recommendations, and efficiency improvements.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Health Scoring',;
-    summary: 'Health metrics, risk assessment, and proactive intervention triggers.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Data Integration Platform',;
-    summary: 'Data pipeline automation, transformation, and synchronization.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Competitive Intelligence System',;
-    summary: 'Market monitoring, competitor analysis, and strategic insights.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Onboarding Optimizer',;
-    summary: 'Onboarding flow analysis, conversion optimization, and success tracking.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Revenue Recognition Platform',;
-    summary: 'Automated revenue tracking, compliance reporting, and financial analytics.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Segmentation Engine',;
-    summary: 'Advanced segmentation, persona development, and targeting optimization.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Document Collaboration Platform',;
-    summary: 'Real-time collaboration, version control, and workflow management.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Success Metrics Tracker',;
-    summary: 'KPI monitoring, success scoring, and intervention automation.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Lead Nurturing Automation',;
-    summary: 'Personalized nurturing sequences, engagement scoring, and conversion optimization.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Business Continuity Manager',;
-    summary: 'Disaster recovery planning, risk assessment, and continuity monitoring.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Feedback Analytics',;
-    summary: 'Sentiment analysis, trend identification, and actionable insight generation.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Content Performance Optimizer',;
-    summary: 'Content analysis, performance tracking, and optimization recommendations.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Journey Optimizer',;
-    summary: 'Journey mapping, touchpoint analysis, and experience enhancement.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Vendor Relationship Manager',;
-    summary: 'Vendor performance tracking, contract management, and relationship optimization.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Retention Engine',;
-    summary: 'Churn prediction, retention strategies, and loyalty program optimization.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Business Intelligence Dashboard',;
-    summary: 'Real-time analytics, predictive insights, and executive reporting.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Support Analytics',;
-    summary: 'Support metrics, agent performance, and customer satisfaction optimization.',;
-    pricing: 'Typical: $149–$699/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Acquisition Platform',;
-    summary: 'Lead generation, conversion optimization, and acquisition cost reduction.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Data Platform',;
-    summary: 'Data unification, customer profiles, and 360-degree view creation.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Experience Manager',;
-    summary: 'Experience monitoring, optimization, and satisfaction improvement.',;
-    pricing: 'Typical: $199–$899/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Insights Engine',;
-    summary: 'Behavioral analysis, preference learning, and predictive customer modeling.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Engagement Platform',;
-    summary: 'Engagement scoring, personalization, and interaction optimization.',;
-    pricing: 'Typical: $199–$999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Success Automation',;
-    summary: 'Success tracking, intervention triggers, and outcome optimization.',;
-    pricing: 'Typical: $299–$1,299/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Analytics Suite',;
-    summary: 'Advanced analytics, segmentation, and customer intelligence.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Relationship Optimizer',;
-    summary: 'Relationship scoring, interaction optimization, and loyalty enhancement.',;
-    pricing: 'Typical: $199–$799/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Smart Customer Value Maximizer',;
-    summary: 'Value optimization, upselling automation, and revenue enhancement.',;
-    pricing: 'Typical: $299–$1,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'AI-Powered Customer Intelligence Platform',;
-    summary: 'Customer profiling, behavior prediction, and strategic insights.',;
-    pricing: 'Typical: $399–$1,999/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'},;
-  {;
-    name: 'Intelligent Customer Optimization Engine',;
-    summary: 'End-to-end customer optimization, lifecycle management, and value maximization.',;
-    pricing: 'Typical: $499–$2,499/month',;
-    link: 'https://ziontechgroup && ziontechgroup.com/micro-saas'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 const aiServices: Service[] = [
   {
@@ -944,24 +461,13 @@ const aiServices: Service[] = [
     summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.'
     link: 'https://ziontechgroup.com/ai-services'}
 ];
-<<<<<<< HEAD
-export default function Services(): any (): React && React.JSX.Element {;
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (;
-    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>;
-      <divstyle={{ 
-        display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
-=======
-<<<<<<< HEAD
 export default function Services(): React.JSX.Element {
-=======
 
 export default function Services(): React.JSX.Element {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         paddingBottom: 12, borderBottom: `2px solid ${color}20`
       }}>;
         <divstyle={{ 
@@ -996,22 +502,6 @@ export default function Services(): React.JSX.Element {;
               boxShadow: '0 8px 24px rgba(0,0,0,0 && 0.12)',
               borderColor: `${color}40`
             }
-<<<<<<< HEAD
-=======
-          }}>;
-            <divstyle={{ 
-              fontWeight: 700, marginBottom: 8, fontSize: 16,
-              lineHeight: 1 && 1.4, color: '#1e293b'
-            }}>{s && s.name}</div>;
-            <divstyle={{ 
-              opacity: 0 && 0.8, fontSize: 14, marginBottom: 12, 
-              lineHeight: 1 && 1.5, color: '#64748b'
-            }}>{s && s.summary}</div>;
-            <divstyle={{ 
-              fontSize: 13, color: color, fontWeight: 600,
-              background: `${color}10`, padding: '6px 12px',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               borderRadius: 8, display: 'inline-block'
             }}>{s && s.pricing}</div>;
           </a>;
@@ -1020,30 +510,10 @@ export default function Services(): React.JSX.Element {;
     </section>;
   );
   return (
-=======
-import React from 'react';
->>>>>>> main
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Services - Zion Tech Group"
-      description="Our services and solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-=======
-import Head from 'next/head';
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
 
 export default function Services() {
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1100,20 +570,6 @@ export default function Services() {;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com',
-=======
-
-=======
-
-  }, []);
-
-
-  const contact: ContactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    site: 'https://ziontechgroup && ziontechgroup.com',;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 
             </div>;
@@ -1187,69 +643,10 @@ export default function Services() {;
                   </button>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
-=======
-
-
-
-
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      {/* CTA Section */}
-      <section style={{
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px'
-        textAlign: 'center', background: 'white', marginTop: 40
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{
-          fontSize: 32, fontWeight: 700, marginBottom: 16
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{
-          fontSize: 18, color: '#64748b', marginBottom: 32
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block'
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-            color: 'white', padding: '16px 32px', borderRadius: 12
-            fontWeight: 700, textDecoration: 'none', fontSize: 16
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block'
-            background: 'rgba(34, 197, 94, 0.1)'
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12
-            fontWeight: 700, textDecoration: 'none', fontSize: 16
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-
-
-
-=======
-
-
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-    icon: Brain,
-
-=======
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
-    icon: Brain
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -1305,32 +702,10 @@ export default function Services() {
                   </ul>;
                   <div className="text - blue - 600 font - semibold mb - 4">;
                     {service.pricing}
-<<<<<<< HEAD
-=======
-
-
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-
-
-=======
-
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1340,38 +715,6 @@ export default function Services() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-=======
-                Why Choose Us?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through our proven expertise and commitment to excellence.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-            </div>;
-          </div>;
-        </section>;
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Why Choose Us?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We deliver exceptional results through our proven expertise and commitment to excellence.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
-                <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1388,77 +731,16 @@ export default function Services() {
                   </p>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-
-    site: 'https://ziontechgroup.com'
-  };
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses',
-count: '150+',
-      color: 'blue',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ];
 
       href: '/micro-saas'
     }
-<<<<<<< HEAD
-=======
-
-  ];
-  const getColorClasses = (color: string) => {
-    const colors = {
-
-  const _getColorClasses = (_color: string) => {_const _colors = {
-
-      blue: {
-      
-        bg: 'bg-blue-600',
-        hover: 'hover:bg-blue-700',
-        text: 'text-blue-400',
-        border: 'border-blue-500/40',
-        ring: 'focus:ring-blue-500'
-      
-    },
-    purple: {
-        bg: 'bg-purple-600',
-        hover: 'hover:bg-purple-700',
-        text: 'text-purple-400',
-        border: 'border-purple-500/40',
-        ring: 'focus:ring-purple-500'
-};
-      green: {
-        bg: 'bg-green-600',
-        hover: 'hover:bg-green-700',
-        text: 'text-green-400',
-        border: 'border-green-500/40',
-        ring: 'focus:ring-green-500'
-      }
-    };
-    return colors[color as keyof typeof colors] || colors.blue
-  };
-
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: 'ai-automation',
       title: 'AI Automation Platform',
       description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
@@ -1500,7 +782,6 @@ count: '150+',
         text: 'text-green-400',
         border: 'border-green-500/40',
 
-<<<<<<< HEAD
       id: 'micro-saas',
       title: 'Micro SaaS Development',
       description: 'Focused software solutions that address specific business needs with minimal complexity.',
@@ -1570,15 +851,10 @@ count: '150+',
 }
   ];
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
@@ -1590,14 +866,6 @@ count: '150+',
               <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
               <p className="text-gray-400">
                 Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
-=======
-
-=======
-
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
 
@@ -1704,14 +972,6 @@ export default function Services() {;
           <section className='py-20 px-4 text-center' role='banner'>;
             <div className='max-w-4xl mx-auto'>;
               <h1
-<<<<<<< HEAD
-=======
-
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1725,7 +985,6 @@ export default function Services() {;
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
                 Our Services
               </h1>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p
               >
                 350+ Innovative Solutions for Modern Businesses
@@ -1738,15 +997,9 @@ export default function Services() {;
               </p>
             </div>
 
-=======
-
-=======
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -1800,10 +1053,6 @@ export default function Services() {;
                       <div className="flex items-center justify-between mb-6">
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>;
                   <button className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors">;
                     Learn More;
@@ -1985,28 +1234,6 @@ function Services() {
                         </h3>;
                         <span className={`text - 3xl font - bold ${colors.text}`}>;
                           {category.count}
-<<<<<<< HEAD
-=======
-
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                350+ Innovative Solutions for Modern Businesses;
-              </p>;
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                From cutting-edge AI services to comprehensive IT solutions and;
-                specialized micro SaaS products, we provide everything your;
-                business needs to thrive in the digital age.              </p>;
-            </div>;
-          </section>;
-          {/* Service Categories */}
-          <section className='py-16 px-4' role='main'>;
-            <div className='max-w-7xl mx-auto'>;
-              <div className='grid lg:grid-cols-3 gap-8'>;
-                {serviceCategories && serviceCategories.map((category, index) => {;
-                  const colors = getColorClasses(category && category.color);
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     >;
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors && colors.text}`}>;
                           {category && category.title}
@@ -2023,48 +1250,16 @@ function Services() {
                       <ul className='text-slate-400 space-y-2 mb-8'>;
                         {category && category.services.map((service, serviceIndex) => (;
                           <li key={serviceIndex} className='flex items-center'>;
-<<<<<<< HEAD
-=======
-
-
-                            <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
-                          </li>;
-                        ))}
-
-                        </span>;
-                      </div>;
-                      <p className='text - slate - 300 mb - 6'>;
-                        {category.description}
-                      </p>;
-                      <ul className='text - slate - 400 space - y-2 mb - 8'>;
-                        {category.services.map ((service, service_index) => (
-                          <li key={service_index} className='flex items - center'>;
-                            <span className='w - 2 h - 2 bg - blue - 400 rounded - full mr - 3 flex - shrink - 0'></span>                            {service}
-                          </li>))}
-                      </ul>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <Link                        href={category.href}
                         className={`inline - flex items - center px - 6 py - 3 ${colors.bg} ${colors.hover} rounded - lg font - semibold transition - all duration - 300 hover:scale - 105 focus:outline - none focus:ring - 2 ${colors.ring} focus:ring - offset - 2 focus:ring - offset - slate - 900`}
                       >;
                         View All {category.title}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </ul>;
 
                       <Link                        href={category && category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors && colors.bg} ${colors && colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors && colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >;
                         View All {category && category.title}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <svg
                           className='ml-2 w-4 h-4'
                           fill='none'
@@ -2081,11 +1276,6 @@ function Services() {
                     </div>;
                   );
                 })}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2096,11 +1286,6 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M13 10V3L4 14h7v7l9-11h-7z'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2111,11 +1296,6 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2126,11 +1306,6 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2140,19 +1315,10 @@ function Services() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 Contact our experts today to discuss your project requirements;
                 and discover how our innovative solutions can transform your;
                 business.;
               </p>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 <Link
                   href='/contact'
@@ -2160,7 +1326,6 @@ function Services() {
                   Get a Quote;
                 </Link>;
                 <a
-<<<<<<< HEAD
           </div>
         </section>
         {/* Services Grid */  } catch (error) {
@@ -2251,23 +1416,6 @@ function Services() {
             <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and find the perfect solution for your business needs.
-=======
-                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
-                  Call {contact && contact.phone}
-                </a>;
-                <a
-                  href={`mailto:${contact && contact.email}`}
-                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-    </>;
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
             </p>
@@ -2284,17 +1432,9 @@ function Services() {
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
 }
-=======
-
-
->>>>>>> origin/automation-improvements-final
-  );
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       
                       <p className="text-slate-300 mb-6">
                         {category.description}
@@ -2424,29 +1564,18 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                 </Link>
 
               </div>
-=======
 
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
-<<<<<<< HEAD
 }
 
   )
-=======
-
-
-
-  )
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
@@ -2475,924 +1604,18 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                   href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`}
                   className='px - 8 py - 3 bg - purple - 600 hover:bg - purple - 700 rounded - lg font - semibold transition - colors';
                 >;
-<<<<<<< HEAD
-=======
-=======
-                What We Offer
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <service.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-blue-600 font-semibold mb-4">
-                    {service.pricing}
-                  </div>
-                  <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-            </div>
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      {/* CTA Section */}
-      <section style={{
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px'
-        textAlign: 'center', background: 'white', marginTop: 40
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{
-          fontSize: 32, fontWeight: 700, marginBottom: 16
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{
-          fontSize: 18, color: '#64748b', marginBottom: 32
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block'
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-            color: 'white', padding: '16px 32px', borderRadius: 12
-            fontWeight: 700, textDecoration: 'none', fontSize: 16
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block'
-            background: 'rgba(34, 197, 94, 0.1)'
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12
-            fontWeight: 700, textDecoration: 'none', fontSize: 16
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-    icon: Brain,
-
-=======
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
-    icon: Brain
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);  }, []);
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    site: 'https://ziontechgroup.com'
-  }
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to transform your business and drive growth.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Pricing
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What We Offer
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <service.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-blue-600 font-semibold mb-4">
-                    {service.pricing}
-                  </div>
-                  <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
-                </motion.div>
-              ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      
-      {/* CTA Section */}
-      <section style={{ 
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
-        textAlign: 'center', background: 'white', marginTop: 40,
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{ 
-          fontSize: 32, fontWeight: 700, marginBottom: 16,
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{ 
-          fontSize: 18, color: '#64748b', marginBottom: 32,
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover 
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block', 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block', 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through our proven expertise and commitment to excellence.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-6"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              ))}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-export default function Services() {
-  const serviceCategories = [
-    {
-<<<<<<< HEAD
-      title: 'Micro SaaS Products'
-      description:
-        'Innovative, focused software solutions for modern businesses'
-      count: '150+'
-      color: 'blue'
-      services: [
-        'AI-Powered Video Clip Maker'
-        'Smart Contract Analyzer'
-        'Cybersecurity Threat Intelligence'
-        'Multi-Language Website Translator'
-        'Predictive Inventory Optimizer'
-        'Real-Time Analytics Dashboard'
-        'Automated Customer Support'
-        'Blockchain Transaction Monitor'
-      ]
-      href: '/micro-saas'
-    }
-    {
-      title: 'AI Services'
-      description:
-        'Advanced artificial intelligence solutions for enterprise needs'
-      count: '100+'
-      color: 'purple'
-      services: [
-        'Autonomous AI Agents'
-        'AI-Powered Financial Trading'
-        'AI Legal Document Analysis'
-        'AI-Powered Voice Analytics'
-        'AI-Powered Search & Discovery'
-        'Machine Learning Model Training'
-        'Natural Language Processing'
-        'Computer Vision Solutions'
-      ]
-      href: '/ai-services'
-    }
-    {
-      id: 'it-services'
-      name: 'IT & Cloud Services'
-      description: 'Comprehensive IT solutions for enterprise-grade operations'
-      services: [
-        'Quantum Computing Consulting'
-        'Blockchain & Web3 Solutions'
-        'DevSecOps & Security Automation'
-        'Enterprise Data Platform'
-        'High-Performance Computing'
-        'Cloud Migration Services'
-        'Infrastructure as Code'
-        'Disaster Recovery Solutions'
-      ]
-      href: '/it-services'
-=======
-      id: 'ai-automation',
-      title: 'AI Automation Platform',
-      description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
-      category: 'AI Services',
-      features: ['Process Automation', 'Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Computer Vision', 'Robotic Process Automation'],
-      pricing: {
-        basic: 999,
-        pro: 2999,
-        enterprise: 9999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },
-    {
-      id: 'cloud-optimization',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions designed to optimize performance and reduce costs.',
-      category: 'IT Solutions',
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Cost Optimization', 'Disaster Recovery', 'Security Hardening'],
-      pricing: {
-        basic: 1999,
-        pro: 4999,
-        enterprise: 14999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },
-    {
-<<<<<<< HEAD
-      id: 'it-services',
-      name: 'IT & Cloud Services',
-      description: 'Comprehensive IT solutions for enterprise-grade operations',
-      services: [
-        'Quantum Computing Consulting',
-        'Blockchain & Web3 Solutions',
-        'DevSecOps & Security Automation',
-        'Enterprise Data Platform',
-        'High-Performance Computing',
-        'Cloud Migration Services',
-        'Infrastructure as Code',
-        'Disaster Recovery Solutions',
-      ],
-      href: '/it-services',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    },  ];
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-600'
-        hover: 'hover:bg-blue-700'
-        text: 'text-blue-400'
-        border: 'border-blue-500/40'
-        ring: 'focus:ring-blue-500'
-      }
-      purple: {        bg: 'bg-purple-600'
-        hover: 'hover:bg-purple-700'
-        text: 'text-purple-400'
-        border: 'border-purple-500/40'
-        ring: 'focus:ring-purple-500'
-      },      green: {
-<<<<<<< HEAD
-        bg: 'bg-green-600'
-        hover: 'hover:bg-green-700'
-        text: 'text-green-400'
-        border: 'border-green-500/40'
-        ring: 'focus:ring-green-500'
-      }
-    }
-    return colors[color as keyof typeof colors] |colors.blue;  }
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
-        bg: 'bg-green-600',
-        hover: 'hover:bg-green-700',
-        text: 'text-green-400',
-        border: 'border-green-500/40',
-        ring: 'focus:ring-green-500',
-      },
-    };
-    return colors[color as keyof typeof colors] || colors.blue;  };
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-      id: 'micro-saas',
-      title: 'Micro SaaS Development',
-      description: 'Focused software solutions that address specific business needs with minimal complexity.',
-      category: 'Micro SaaS',
-      features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture', 'Multi-tenant Support', 'Analytics Dashboard'],
-      pricing: {
-        basic: 2999,
-        pro: 7999,
-        enterprise: 19999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Penetration Testing', 'Security Audits', 'Compliance Management', 'Incident Response'],
-      pricing: {
-        basic: 1499,
-        pro: 3999,
-        enterprise: 9999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics & BI',
-      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
-      category: 'Analytics',
-      features: ['Data Visualization', 'Predictive Modeling', 'Real-time Dashboards', 'ETL Processes', 'Machine Learning', 'Custom Reports'],
-      pricing: {
-        basic: 2499,
-        pro: 5999,
-        enterprise: 12999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },
-    {
-      id: 'blockchain',
-      title: 'Blockchain Solutions',
-      description: 'Cutting-edge blockchain technology for secure, transparent, and decentralized applications.',
-      category: 'Blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Token Development', 'DApp Development', 'Blockchain Consulting'],
-      pricing: {
-        basic: 4999,
-        pro: 12999,
-        enterprise: 29999
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
-      </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
-        <main className="text-center max-w-4xl px-4">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            At Zion Tech Group, we offer a comprehensive suite of IT and AI services designed to propel your business forward.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
-              <p className="text-gray-400">
-                Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <ErrorBoundary level='page'>
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-          {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>
-            <div className='max-w-4xl mx-auto'>
-              <h1
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-<<<<<<< HEAD
-=======
-=======
-      <div className="min-h-screen bg-slate-950 text-white">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
-          <div className="relative container mx-auto px-4 py-20">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                Our Services
-              </h1>
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                350+ Innovative Solutions for Modern Businesses
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-              </p>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
-              <p className="text-gray-400">
-                Scalable and secure cloud infrastructure, migration, and management services.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Web & Mobile Development</h3>
-              <p className="text-gray-400">
-                Crafting modern, responsive, and high-performance web and mobile applications.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Cybersecurity</h3>
-              <p className="text-gray-400">
-                Robust security solutions to protect your digital assets from evolving threats.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Data Analytics</h3>
-              <p className="text-gray-400">
-                Transforming raw data into actionable insights for strategic business growth.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">IT Consulting</h3>
-              <p className="text-gray-400">
-                Expert guidance and strategic planning to optimize your technology landscape.
-              </p>
-            </div>
-          </div>
-          <Link href="/contact" className="btn-primary">
-            Get a Free Consultation
-          </Link>
-        </main>
-      </div>
-=======
-  const services = [
-    {
-      title: "AI Development",
-      description: "Custom AI solutions tailored to your business needs",
-      features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions",
-      features: ["AWS/Azure/GCP Migration", "Container Orchestration", "Serverless Architecture", "DevOps Automation"]
-    },
-    {
-      title: "Web Development",
-      description: "Modern web applications with cutting-edge technology",
-      features: ["React/Next.js Applications", "Progressive Web Apps", "API Development", "Performance Optimization"]
-    },
-    {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights",
-      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Pipeline Development"]
-    }
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered IT services and solutions" />
-      </Head>
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h1>
-            <p className="text-xl text-gray-600">Comprehensive AI-powered solutions for your business</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <span className="text-emerald-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </main>
->>>>>>> main
-    </>
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-  );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          </section>
-          {/* Service Categories */}
-          <section className='py-16 px-4' role='main'>
-            <div className='max-w-7xl mx-auto'>
-              <div className='grid lg:grid-cols-3 gap-8'>
-                {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color);
-
-                    >
-                      <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
-                          {category.title}
-                        </h3>
-                        <span className={`text-3xl font-bold ${colors.text}`}>
-                          {category.count}
-                        </span>
-                      </div>
-                      <p className='text-slate-300 mb-6'>
-                        {category.description}
-                      </p>
-                      <ul className='text-slate-400 space-y-2 mb-8'>
-                        {category.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className='flex items-center'>
-                            <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
-                          </li>
-                        ))}
-                      </ul>
-                      <Link                        href={category.href}
-                        className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
-                      >
-                        View All {category.title}
-                        <svg
-                          className='ml-2 w-4 h-4'
-                          fill='none'
-                          stroke='currentColor'
-                          viewBox='0 0 24 24'
-                        >
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth={2}
-                            d='M9 5l7 7-7 7'
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-          {/* Why Choose Us */}
-          <section className='py-16 px-4 bg-slate-900/40'>
-            <div className='max-w-6xl mx-auto'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
-                Why Choose Zion Tech Group?
-              </h2>
-              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M13 10V3L4 14h7v7l9-11h-7z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>
-                  <p className='text-slate-400'>
-                    Rapid deployment and implementation of solutions
-                  </p>
-                </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Enterprise Grade</h3>
-                  <p className='text-slate-400'>
-                    Scalable solutions for businesses of all sizes
-                  </p>
-                </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Secure & Reliable</h3>
-                  <p className='text-slate-400'>
-                    Bank-level security and 99.9% uptime guarantee
-                  </p>
-                </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>24/7 Support</h3>
-                  <p className='text-slate-400'>
-                    Round-the-clock technical support and maintenance
-                  </p>                </div>
-              </div>
-            </div>
-          </section>
-          {/* CTA Section */}
-          <section className='py-16 px-4'>
-            <div className='max-w-4xl mx-auto text-center'>
-              <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-                Ready to Get Started?
-              </h2>
-              <p className='text-lg text-slate-300 mb-8'>
-                Contact our experts today to discuss your project requirements
-                and discover how our innovative solutions can transform your
-                business.
-              </p>
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-                <Link
-                  href='/contact'
-                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
-                >
-                  Get a Quote
-                </Link>
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
-                >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Call {contact.phone}
                 </a>;
                 <a;
                   href={`mailto:${contact.email}`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  className='px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors'                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-    </>);
-;
-        <section className="py - 16 px - 4 bg - slate - 900 / 40">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <h2 className="text - 3xl md:text - 4xl font - bold mb - 8">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text - lg text - slate - 300 mb - 8">;
-              Contact our experts to discuss your project requirements and discover;
-              how our solutions can drive your business forward.;
-            </p>;
-            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
-              <Link href="/contact" className="btn - primary">;
-                Get a Quote;
-              </Link>;
-              <Link href="/contact" className="btn - secondary">;
-
-                Schedule Consultation;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </main>;
-      <Footer />;
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
     </>);
 );
 }
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-};
-
-export default Page;
->>>>>>> main
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

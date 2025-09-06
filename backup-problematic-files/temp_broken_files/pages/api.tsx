@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/api.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -22,6 +25,8 @@ export default function APIPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 =======
 import MainLayout from '../components/layout/MainLayout';
 
@@ -37,9 +42,8 @@ const Page = () => {
           <p className="text-xl text-gray-600">This is a placeholder for the API documentation.</p>
         </div>
 >>>>>>> main:pages/docs/api.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       </div>
-    </MainLayout>
+    </Layout>
   );
-};
-
-export default Page;
+}

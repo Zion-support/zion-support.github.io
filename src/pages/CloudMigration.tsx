@@ -4,90 +4,90 @@ import { Link } from 'react-router-dom';
 const CloudMigration: React.FC = () => {
   const services = [
     {
-      title: "AWS Migration",
-      description: "Complete migration to Amazon Web Services with zero downtime",
+      title: 'AWS Migration',
+      description: 'Complete migration to Amazon Web Services with zero downtime',
       features: [
-        "Lift and shift migration",
-        "Application modernization",
-        "Database migration",
-        "Cost optimization",
-        "Security hardening"
+        'Lift and shift migration',
+        'Application modernization',
+        'Database migration',
+        'Cost optimization',
+        'Security hardening',
       ],
-      price: "$5,000 - $50,000",
-      duration: "2-12 weeks"
+      price: '$5,000 - $50,000',
+      duration: '2-12 weeks',
     },
     {
-      title: "Azure Migration",
-      description: "Seamless migration to Microsoft Azure cloud platform",
+      title: 'Azure Migration',
+      description: 'Seamless migration to Microsoft Azure cloud platform',
       features: [
-        "Hybrid cloud setup",
-        "Active Directory integration",
-        "DevOps integration",
-        "Monitoring setup",
-        "Backup & disaster recovery"
+        'Hybrid cloud setup',
+        'Active Directory integration',
+        'DevOps integration',
+        'Monitoring setup',
+        'Backup & disaster recovery',
       ],
-      price: "$4,500 - $45,000",
-      duration: "2-10 weeks"
+      price: '$4,500 - $45,000',
+      duration: '2-10 weeks',
     },
     {
-      title: "Google Cloud Migration",
-      description: "Migration to Google Cloud Platform with advanced analytics",
+      title: 'Google Cloud Migration',
+      description: 'Migration to Google Cloud Platform with advanced analytics',
       features: [
-        "BigQuery integration",
-        "AI/ML services",
-        "Kubernetes migration",
-        "Data analytics setup",
-        "Performance optimization"
+        'BigQuery integration',
+        'AI/ML services',
+        'Kubernetes migration',
+        'Data analytics setup',
+        'Performance optimization',
       ],
-      price: "$4,000 - $40,000",
-      duration: "2-8 weeks"
+      price: '$4,000 - $40,000',
+      duration: '2-8 weeks',
     },
     {
-      title: "Multi-Cloud Strategy",
-      description: "Distributed cloud architecture across multiple providers",
+      title: 'Multi-Cloud Strategy',
+      description: 'Distributed cloud architecture across multiple providers',
       features: [
-        "Multi-cloud architecture",
-        "Cloud governance",
-        "Cost management",
-        "Disaster recovery",
-        "Vendor management"
+        'Multi-cloud architecture',
+        'Cloud governance',
+        'Cost management',
+        'Disaster recovery',
+        'Vendor management',
       ],
-      price: "$8,000 - $80,000",
-      duration: "4-16 weeks"
-    }
+      price: '$8,000 - $80,000',
+      duration: '4-16 weeks',
+    },
   ];
 
   const benefits = [
     {
-      title: "Cost Reduction",
-      description: "Reduce infrastructure costs by up to 40%",
-      icon: "💰"
+      title: 'Cost Reduction',
+      description: 'Reduce infrastructure costs by up to 40%',
+      icon: '💰',
     },
     {
-      title: "Scalability",
-      description: "Scale resources based on demand",
-      icon: "📈"
+      title: 'Scalability',
+      description: 'Scale resources based on demand',
+      icon: '📈',
     },
     {
-      title: "Security",
-      description: "Enterprise-grade security and compliance",
-      icon: "🔒"
+      title: 'Security',
+      description: 'Enterprise-grade security and compliance',
+      icon: '🔒',
     },
     {
-      title: "Performance",
-      description: "Improved application performance and reliability",
-      icon: "⚡"
+      title: 'Performance',
+      description: 'Improved application performance and reliability',
+      icon: '⚡',
     },
     {
-      title: "Flexibility",
-      description: "Access to latest cloud technologies and services",
-      icon: "🔄"
+      title: 'Flexibility',
+      description: 'Access to latest cloud technologies and services',
+      icon: '🔄',
     },
     {
-      title: "Disaster Recovery",
-      description: "Automated backup and disaster recovery",
-      icon: "🛡️"
-    }
+      title: 'Disaster Recovery',
+      description: 'Automated backup and disaster recovery',
+      icon: '🛡️',
+    },
   ];
 
   return (
@@ -97,7 +97,7 @@ const CloudMigration: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">Cloud Migration Services</h1>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
-            Seamlessly migrate your applications and infrastructure to the cloud. 
+            Seamlessly migrate your applications and infrastructure to the cloud.
             Our expert team ensures zero downtime and maximum performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 =======
 
@@ -16,13 +18,24 @@
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         fix: (content) => {
 =======
 =======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -66,6 +79,8 @@ class IntelligentErrorFixer {
       mergeConflicts: {
         pattern: /||        fix: (content) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -108,6 +123,7 @@ class IntelligentErrorFixer {
         }
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> main
 =======
@@ -115,6 +131,24 @@ class IntelligentErrorFixer {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           // Remove merge conflict markers
           return content
+<<<<<<< HEAD
+=======
+=======
+        fix: (content) => {
+          // Remove merge conflict markers
+          return content
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+========
+            .replace(/\n?/g, '')
+            .replace(/\n?/g, '')
+            .replace(/        }
+        fix: (content) => {
+          // Remove merge conflict markers
+          return content
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         }
 >>>>>>> main
       },
@@ -127,6 +161,11 @@ class IntelligentErrorFixer {
         fix: (content) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+          if (!content.includes("import React")) {
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -138,6 +177,7 @@ class IntelligentErrorFixer {
 =======
           if (!content.includes("import React")) {
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -251,6 +291,11 @@ class IntelligentErrorFixer {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -262,15 +307,23 @@ class IntelligentErrorFixer {
 ========
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   extractErrorInfo(buildOutput) {
     const errors = [];
     const lines = buildOutput.split('\n');
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     lines.forEach((line, index) => {
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
@@ -306,6 +359,11 @@ class IntelligentErrorFixer {
       }
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -317,14 +375,22 @@ class IntelligentErrorFixer {
 ========
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     
     return errors;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   async fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
@@ -456,6 +522,11 @@ class IntelligentErrorFixer {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+========
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -465,11 +536,16 @@ class IntelligentErrorFixer {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {;
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
+<<<<<<< HEAD
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -483,6 +559,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       if (modified) {
         // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
@@ -563,7 +640,14 @@ class IntelligentErrorFixer {
 
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+========
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 <<<<<<< HEAD
 =======
@@ -588,6 +672,11 @@ class IntelligentErrorFixer {
 
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
+<<<<<<< HEAD
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -672,6 +761,8 @@ class IntelligentErrorFixer {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 <<<<<<< HEAD
@@ -704,6 +795,7 @@ class IntelligentErrorFixer {
 =======
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -716,7 +808,24 @@ class IntelligentErrorFixer {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+=======
+========
+
+    scanDirectory(pagesDir);
+
+    // Remove duplicate .js files if .tsx exists
+    `);
+          fs.unlinkSync(duplicate);
+        }
+      }
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 const {
@@ -762,6 +871,8 @@ const {
         "mergeConflicts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 =======
 
@@ -788,6 +899,7 @@ const {
 =======
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -801,7 +913,22 @@ const {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+=======
+=======
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -827,6 +954,18 @@ const {
       try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 =======
 
@@ -846,11 +985,14 @@ const {
 <<<<<<< HEAD
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -873,6 +1015,7 @@ const {
 =======
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -880,7 +1023,17 @@ const {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+=======
+=======
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -908,6 +1061,18 @@ const {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+<<<<<<< HEAD
+<<<<<<< HEAD
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 =======
 
@@ -927,6 +1092,7 @@ const {
 <<<<<<< HEAD
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -968,6 +1134,11 @@ const {
             });
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        );
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
         );
 =======
 
@@ -983,6 +1154,7 @@ const {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           }
         }
         // Run build again after fixes
@@ -1009,6 +1181,9 @@ const {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -1037,6 +1212,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -1044,7 +1220,20 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+=======
+=======
+========
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     }
     async runTypeCheck() {
       try {
@@ -1258,6 +1447,11 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
 }
 module.exports = IntelligentErrorFixer;
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
@@ -1290,10 +1484,15 @@ module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 module.exports = IntelligentErrorFixer;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 =======
@@ -1308,4 +1507,17 @@ module.exports = IntelligentErrorFixer;
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+module.exports = IntelligentErrorFixer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

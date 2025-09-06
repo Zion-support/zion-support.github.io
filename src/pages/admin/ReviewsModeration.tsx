@@ -76,7 +76,6 @@ function ReviewsModerationContent() {;
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)

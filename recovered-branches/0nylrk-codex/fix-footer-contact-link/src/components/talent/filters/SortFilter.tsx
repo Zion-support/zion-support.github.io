@@ -1,36 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-=======
-=======
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-import { SortFilterProps } from "@/types/filters",
   SelectValue,
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -50,45 +25,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
-  return (
-=======
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { SortFilterProps } from "@/types/filters";
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
-  return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="mb-6">;
-      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
-        Sort by;
-      </label>;
-      <Select value={sortOption} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
-          <SelectValue placeholder="Sort by" />;
-        </SelectTrigger>;
-        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
-          <SelectItem value="relevance">Relevance</SelectItem>;
-          <SelectItem value="rating">Highest Rating</SelectItem>;
-          <SelectItem value="experience">Most Experienced</SelectItem>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

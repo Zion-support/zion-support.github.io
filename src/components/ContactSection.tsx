@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -7,13 +9,13 @@ const ContactSection: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -24,6 +26,7 @@ const ContactSection: React.FC = () => {
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
 =======
+>>>>>>> main
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -67,7 +70,6 @@ fetch("/api/contact", {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -75,7 +77,7 @@ fetch("/api/contact", {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
@@ -158,20 +160,6 @@ fetch("/api/contact", {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
-<<<<<<< HEAD
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
-=======
                   <Textarea
                     id="message"
                     name="message"
@@ -444,7 +432,6 @@ if ( {) {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -461,6 +448,8 @@ if ( {) {
                 />
               </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -494,7 +483,10 @@ if ( {) {
 };
 
 export default ContactSection;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -535,4 +527,8 @@ description: err.message;
 }'"}
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

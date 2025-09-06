@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-declare module 'url' {
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  export function fileURLToPath (url: string | URL): string;
-
+declare module "url" {
+  export function fileURLToPath(url: string | URL): string;
 }
 
 }

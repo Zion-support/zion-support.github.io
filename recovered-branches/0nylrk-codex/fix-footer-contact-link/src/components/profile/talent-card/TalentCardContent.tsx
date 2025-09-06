@@ -1,54 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState } from './react';
-import { MapPin  } from './lucide-react';
-import { TalentCardSkills  } from './TalentCardSkills';
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface TalentCardContentProps {
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
-<<<<<<< HEAD
-  skills: string[] | undefined
-
-import React, { useState } from "react";
-import {MapPin} from "lucide-react";
-import {TalentCardSkills} from "./TalentCardSkills";
-=======
-
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
-=======
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-<<<<<<< HEAD
-  skills: string[] | undefined
-
-import React, { useState } from "react";
-import {MapPin} from "lucide-react";
-import {TalentCardSkills} from "./TalentCardSkills";
-=======
-=======
   skills: string[] | undefined;
 }
 
@@ -58,9 +14,6 @@ export function TalentCardContent({
   timezone,
   skills,
 }: TalentCardContentProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isHovering, setIsHovering] = useState(false);
 
 
@@ -166,10 +119,8 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-<<<<<<< HEAD
-        <p className="text-zion-slate mb-4">
-          {summary || bio}
-
+        <p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
 
 =======
         <p className="text-zion-slate mb-4">{summary || bio}</p>

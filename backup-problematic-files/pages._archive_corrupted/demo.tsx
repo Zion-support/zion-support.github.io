@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/demo.tsx
 =======
 <<<<<<< HEAD
@@ -5,6 +7,7 @@
 =======
 <<<<<<< HEAD
 >>>>>>> main:corrupted_backup/demo.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -278,6 +281,9 @@ const "DemoPage": React.FC = () => {
     </>
   )
 }
+<<<<<<< HEAD
+export default DemoPage
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/demo.tsx
 export default DemoPage
 =======
@@ -289,3 +295,4 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
 =======
 =======
 >>>>>>> main:corrupted_backup/demo.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

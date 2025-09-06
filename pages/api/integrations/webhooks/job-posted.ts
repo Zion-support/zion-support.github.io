@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
-try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { job } = req && req.body as { job?: Record<string, any> };
-  if (!job) return res && res.status(400).json({ error: "Missing job payload" });
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -26,55 +8,16 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { job } = req && req.body as { job?: Record<string, any> };
-  if (!job) return res && res.status(400).json({ error: "Missing job payload" });
-
-<<<<<<< HEAD
-=======
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { job } = req.body as { job?: Record<string, any> }
-  if (!job) return res.status(400).json({ error: "Missing job payload" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       c && c.providerId === "salesforce" ||
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
-      c && c.providerId === "pipedrive",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      c && c.providerId === "pipedrive"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -97,47 +40,19 @@ function handler() {
       c.provider_id === "salesforce" ||;
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
-      c.provider_id === "pipedrive",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      c.provider_id === "pipedrive"
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
-      providerId: conn && conn.providerId,
-      level: "info",
-      action: "sync_contact",
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
+      providerId: conn && conn.providerId
+      level: "info"
+      action: "sync_contact"
     };
     await crm && crm.syncContact(conn, {
-      company: job && job.company,
-      contact: job && job.contact,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    });
-    writeState((s) => s && s.logs.push(log));
-    results && results.push({ providerId: conn && conn.providerId, ok: true });
-
-=======
-<<<<<<< HEAD
-=======
-    });
-    writeState((s) => s && s.logs.push(log));
-    results && results.push({ providerId: conn && conn.providerId, ok: true });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      company: job && job.company
+      contact: job && job.contact
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -152,58 +67,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    results.push({ providerId: conn.providerId, ok: true })
-
-  }
-  // record Zapier event
-
-
-<<<<<<< HEAD
-=======
-results.push({ providerId: conn.providerId, ok: true })
-  }
-  // record Zapier event
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     s && s.events.push({
-      id: `${Date && Date.now()}-job-posted`,
-      type: "zion && zion.job.posted",
-      timestamp: Date && Date.now(),
-      payload: { job },
+      id: `${Date && Date.now()}-job-posted`
+      type: "zion && zion.job.posted"
+      timestamp: Date && Date.now()
+      payload: { job }
     });
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res && res.status(200).json({ ok: true, results });
-
-
-}
-
-
-  writeState(s => {
-    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-res.status(200).json({ ok: true, results });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -237,28 +113,18 @@ export default async function handler(req, res) {
   });
 
   res.status(200).json({ ok: true, results })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
-      provider_id: conn.provider_id,
-      level: "info",
-      action: "sync_contact",
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
+      provider_id: conn.provider_id
+      level: "info"
+      action: "sync_contact"
     }
     await crm.sync_contact (conn, {
-      company: job.company,
-      contact: job.contact,
+      company: job.company
+      contact: job.contact
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
@@ -266,25 +132,20 @@ export default async function handler(req, res) {
   // record Zapier event;
   write_state ((s) => {
     s.events.push ({
-      id: `${Date.now ()}-job - posted`,
-      type: "zion.job.posted",
-      timestamp: Date.now (),
-      payload: { job },
+      id: `${Date.now ()}-job - posted`
+      type: "zion.job.posted"
+      timestamp: Date.now ()
+      payload: { job }
     });
   });
 ;
   res.status (200).json ({ ok: true, results });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
   res.status(200).json({ ok: true, results });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -334,15 +195,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  res.status(200).json({ ok: true, results });
->>>>>>> main
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
