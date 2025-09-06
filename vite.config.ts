@@ -33,6 +33,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'ui': ['lucide-react', 'clsx', 'tailwind-merge'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
