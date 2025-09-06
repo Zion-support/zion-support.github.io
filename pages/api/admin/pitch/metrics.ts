@@ -17,8 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { stage: 'Conversions', value: 1650 }
     ],
     clients: [
-      { name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' };
-      { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }]};
+      { name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' },
+      { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }
+    ]
+  };
 
   res.status(200).json(data)
 }
