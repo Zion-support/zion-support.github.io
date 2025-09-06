@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 console.log('🔍 Debugging Next.js project structure...');
 
 // Check if we're in a valid Next.js project
@@ -32,7 +29,6 @@ const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
 for (const file of allFiles) {
   try {
     const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
     if (content.includes('') |content.includes('
 const fs = require('fs'),;
 const path = require('path'),;
@@ -76,36 +72,17 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [],;
 const problematicFiles = [];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     if (content.includes('') || content.includes('
 }
 }
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
-      problematicFiles.push(file);
+    if (content.includes('      problematicFiles.push(file);
     }
   } catch (error) {
     // Skip files that can't be read
@@ -136,10 +113,6 @@ function getAllFiles(dir, extensions) {
   }
   return files;
 }
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+;
+console.log('✅ Debug completed'),;
 console.log('✅ Debug completed');
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80

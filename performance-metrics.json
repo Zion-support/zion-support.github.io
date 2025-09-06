@@ -1,5 +1,9 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   "timestamp": "2025-09-05T00:20:16.317Z",
   "memory": {
     "rss": 48967680,
@@ -15,20 +19,13 @@
     ".next": {
       "size": 28534499,
       "sizeMB": "27.21"
-    },
-    "node_modules": {
-      "size": 0,
-      "sizeMB": "0.00"
-    }
-  },
-  "fileCounts": {
-    ".tsx": 25,
 =======
-  "timestamp": "2025-09-05T20:55:04.458Z",
+  "timestamp": "2025-09-03T22:43:35.522Z",
   "bundleSize": {
     ".next": {
-      "size": 183864,
-      "sizeMB": "0.18"
+      "size": 29182248,
+      "sizeMB": "27.83"
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     },
     "node_modules": {
       "size": 820676108,
@@ -36,17 +33,11 @@
     }
   },
   "fileCounts": {
-    ".tsx": 26,
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+    ".tsx": 25,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
     ".css": 2,
     ".json": 0
-<<<<<<< HEAD
   }
-=======
-  },
-  "recommendations": []
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }
