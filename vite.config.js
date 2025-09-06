@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
     open: true,
-    host: true
+    host: true,
+    hmr: {
+      overlay: true
+    }
   },
   build: {
     outDir: 'dist',
@@ -23,27 +20,32 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
+          router: ['react-router-dom'],
+          utils: ['clsx', 'tailwind-merge']
         }
       }
     },
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info']
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-<<<<<<< HEAD
+    include: [
+      'react',
+      'react-dom',
+      'framer-motion',
+      'lucide-react',
+      'react-router-dom',
+      'clsx',
+      'tailwind-merge'
+    ]
+  },
+  css: {
+    devSourcemap: true
   }
 });
-=======
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-})
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
