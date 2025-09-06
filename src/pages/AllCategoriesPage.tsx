@@ -1,15 +1,7 @@
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
-import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import ErrorBoundary from '@/components/GlobalErrorBoundary';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -63,11 +55,16 @@ export default function AllCategoriesPage() {
 
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (              <CategoryCard          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-            Explore our extensive range of AI services and products.
-            Find exactly what you're looking for to enhance your business or personal projects.
-          </p>
-        </div>
+            {categories.map(category => (
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />
+            ))}
+          </div>
 
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>

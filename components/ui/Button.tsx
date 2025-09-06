@@ -1,40 +1,14 @@
 import React from 'react';
+
 interface ButtonProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '../../src/lib/utils';
-
-const buttonVariants = cva(;
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-  {;
-    variants: {;
-      variant: {;
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:;
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:;
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:;
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",,
-},
-      size: {;
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",,
-},,
-},
-    defaultVariants: {;
-      variant: "default",
-      size: "default",,
+  asChild?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -44,55 +18,48 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   onClick,
   disabled = false,
-  type = 'button'
+  type = 'button',
+  asChild = false,
+  ...props
 }) => {
-  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+  const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
+  
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white focus:ring-cyan-500',
-    secondary: 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white focus:ring-purple-500',
-    outline: 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black focus:ring-cyan-400',
-    ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
+    primary: 'bg-blue-600 text-white hover:bg-blue-700',
+    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
+    outline: 'border border-gray-300 bg-transparent hover:bg-gray-50',
+    ghost: 'hover:bg-gray-100'
   };
   
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'h-8 px-3 text-xs',
+    md: 'h-10 px-4 py-2',
+    lg: 'h-12 px-8 text-lg'
   };
   
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95';
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-export interface ButtonProps;
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {;
-  asChild?: boolean;
-}
-
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(;
-  ({ className, variant, size, asChild = false, ...props }, ref) => {;
-    const Comp = asChild ? 'span' : 'button';
-    return (;
-      <Comp;
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />;
-    );
-}
-);
-Button.displayName = "Button";
-
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  
+  if (asChild) {
+    return React.cloneElement(children as React.ReactElement, {
+      className: classes,
+      onClick,
+      disabled,
+      type,
+      ...props
+    });
+  }
+  
   return (
-    <motion.button
-      type={type}
+    <button
       className={classes}
       onClick={onClick}
       disabled={disabled}
-      whileHover={!disabled ? { scale: 1.05 } : {}}
-      whileTap={!disabled ? { scale: 0.95 } : {}}
+      type={type}
+      {...props}
     >
       {children}
-    </motion.button>
+    </button>
   );
 };
 
-export default Button;
+export { Button };
