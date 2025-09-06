@@ -1,86 +1,44 @@
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
 
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
 
+export interface UIKit {;
+  components: Record<string, any>;
   tokens: TokenSet;
 }
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
     }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
-    components: [],
-    pages: [],
-    styles: []
-  };
-
-export type TokenSet = {
-  colors: Record<string, string>;
-  typography: {
-    fontSizes: Record<string, string>;
-  };
-};
-
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind && tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
-  const colors: Record<string, string> = {};
-
-  function flattenColors(prefix: string, obj: any) {
-    Object && Object.entries(obj || {}).forEach(([key, value]) => {
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {
-        flattenColors(newKey, value);
-      }
-    });
-  }
-
-  flattenColors('', extendedColors);
-
-  const typography = {
-    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {},
-  };
-
-  return { colors, typography };
-
-export type UIKitKind = 'tailwind' | 'chakra' | 'react';
-
-export function buildUIKit(kind: UIKitKind): Record<string, string> {
-  if (kind === 'tailwind') {
-    return {
-      'README && README.md':
-        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
-      'components/Button && Button.tsx':
-        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
-      'components/Card && Card.tsx':
-        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
     };
   }
   if (kind === 'chakra') {
@@ -175,38 +133,15 @@ export interface FigmaNode {
 
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
-
   const tokens = await buildTokenSet(fileId);
 =======
-export async function buildTokenSet (file_id: string): Promise < TokenSet> {
-  // Placeholder implementation;
-  return {
-    colors: {
-      primary: '#007AFF',
-      secondary: '#5856D6',
-      success: '#34C759',
-      warning: '#FF9500',
-      error: '#FF3B30';
-    },
-    typography: {
-      heading1: { font_size: 32, font_weight: 'bold' },
-      heading2: { font_size: 24, font_weight: 'bold' },
-      body: { font_size: 16, font_weight: 'normal' }
-    },
-    spacing: {
-      xs: 4,
-      sm: 8,
-      md: 16,
-      lg: 24,
-      xl: 32;
-    }
-  }
+    };
+  };
 }
-export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
-  const tokens = await buildTokenSet (file_id);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const tokens = await buildTokenSet(fileId);
   return {
 
     id,
@@ -223,18 +158,16 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
   };
 }
 
-export function generateDesignId(): string {
-  return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
+    }
+    tokens
   }
+
+  };
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

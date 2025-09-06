@@ -1,4 +1,5 @@
 
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -11,13 +12,7 @@ export type JobCategory =;
   | 'other';
 ;
 export interface JobBudget {
-  min: number;
-  max: number,
-  currency: string;
-
-}
-export interface Job {
-=======
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
 export type JobCategory = 
   | 'development' 
@@ -29,16 +24,13 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;
-
   min: number;
   max: number
   currency: string
 }
-
+export interface Job {
 
 export interface Job {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   client_id: string;
   title: string;
@@ -48,19 +40,21 @@ export interface Job {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 
   created_at: string,
   updated_at: string;
 
 }
-export interface JobFormData {
 =======
+  created_at: string
+  updated_at: string
 }
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export interface JobFormData {
 
 export interface JobFormData {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description: string;
   category: JobCategory;
@@ -100,12 +94,9 @@ export interface JobMatch {
 
   }
 }
-
-
+export interface ResumeAttachment {
 
 export interface ResumeAttachment {;
-
-
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -116,15 +107,10 @@ export interface ResumeAttachment {;
   skills?: string[];
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-;
-
 export interface JobApplication {
-=======
 
 
 export interface JobApplication {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   job_id: string;
   talent_id: string;
@@ -154,11 +140,8 @@ export interface JobApplication {;
     skills_match?: {
       score: number;
 
-      matching: string[],
-=======
-
-
-=======
+  notes?: string,  // New field for client notes
+}
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -280,11 +263,5 @@ export interface JobApplication {;
   match_suggestion?: string;
   scored_at?: string;
   notes?: string,  // New field for client notes;
-
-
-
-
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

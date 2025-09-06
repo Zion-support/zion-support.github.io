@@ -1,9 +1,7 @@
-
-
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
 
 export interface ModerationAction {;
-
-
   id: string;
   flagId: string;
   action: ModerationStatus;
@@ -11,6 +9,7 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
+<<<<<<< HEAD
 
 ;
 export interface ModerationAction {
@@ -23,14 +22,13 @@ export interface ModerationAction {
   created_at: string,
 
 }
-export interface ModerationFlag {
 =======
 }
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export interface ModerationFlag {
 
 export interface ModerationFlag {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
@@ -38,6 +36,9 @@ export interface ModerationFlag {;
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string
+ursor/fix-syntax-push-and-merge-to-main-7db5
+}
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

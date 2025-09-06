@@ -39,6 +39,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   AlertTriangle,
   CheckCircle,
@@ -216,6 +224,7 @@ const HealthDashboard: React.FC = () => {;
     return `${bytes.toFixed(1)} MB`
   },
 
+<<<<<<< HEAD
 
 
 
@@ -247,6 +256,7 @@ const HealthDashboard: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   }
+<<<<<<< HEAD
 
 
 
@@ -274,8 +284,20 @@ const HealthDashboard: React.FC = () => {;
 
   if (!healthData) return null,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+  if (!healthData) return null
+  if (!healthData) return null,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -286,11 +308,14 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
-
+            variant='outline'
+            size='sm'
+            onClick={() => setAutoRefresh(!autoRefresh)}          >
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
+<<<<<<< HEAD
 
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
@@ -354,10 +379,12 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
-
+        <TabsContent value='overview' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<<<<<<< HEAD
 
             <Card>
               <CardHeader>
@@ -393,7 +420,13 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-
+                  <ul className='space-y-2'>
+                    {healthData.health.issues.map((issue, index) => (
+                      <li
+                        key={index}
+                        className='text-sm text-red-600 flex items-start'
+                      >
+                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
@@ -597,18 +630,28 @@ const HealthDashboard: React.FC = () => {;
                 </CardTitle>;
               </CardHeader>;
               <CardContent>;
-
+                {healthData.health.issues.length > 0 ? (;
+                  <ul className="space-y-2">;
+                    {healthData.health.issues.map((issue, index) => (;
+                      <li key={index} className="text-sm text-red-600 flex items-start">;
+                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
+                        {issue}
                       </li>
                     ))}
                   </ul>;
                 ) : (;
                   <p className='text-green-600 text-sm'>No issues detected</p>;
                 )}
-
-
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<<<<<<< HEAD
 
 
             <Card>
@@ -650,59 +693,10 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-
-              </CardContent>;
-            </Card>;
-          </div>;
-        </TabsContent>;
-
-        <TabsContent value='errors' className='space-y-4'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Error Summary</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className='grid grid-cols-2 gap-4'>;
-                  <div className='text-center'>;
-                    <p className='text-2xl font-bold text-red-600'>;
-                      {healthData && healthData.errors.summary && summary.critical}
-                    </p>;
-                    <p className='text-sm text-gray-600'>Critical</p>;
-                  </div>;
-                  <div className='text-center'>;
-                    <p className='text-2xl font-bold text-orange-600'>;
-                      {healthData && healthData.errors.summary && summary.high}
-                    </p>;
-                    <p className='text-sm text-gray-600'>High</p>;
-                  </div>;
-                  <div className='text-center'>;
-                    <p className='text-2xl font-bold text-yellow-600'>;
-                      {healthData && healthData.errors.summary && summary.medium}
-                    </p>;
-                    <p className='text-sm text-gray-600'>Medium</p>;
-                  </div>;
-                  <div className='text-center'>;
-                    <p className='text-2xl font-bold text-gray-600'>;
-                      {healthData && healthData.errors.summary && summary.low}
-                    </p>;
-                    <p className='text-sm text-gray-600'>Low</p>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Top Errors</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                {healthData && healthData.errors.topErrors && topErrors.length > 0 ? (;
-                  <div className='space-y-2'>;
-                    {healthData && healthData.errors.topErrors;
-                      .slice(0, 5);
-                      .map((error, index) => (;
-
+                  <div className='space-y-2'>
+                    {healthData.errors.topErrors
+                      .slice(0, 5)
+                      .map((error, index) => (
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -727,15 +721,21 @@ const HealthDashboard: React.FC = () => {;
                       </div>;
                     ))}
                   </div>
+<<<<<<< HEAD
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
-
-
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='metrics' className='space-y-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<<<<<<< HEAD
 
 
             <Card>
@@ -784,10 +784,10 @@ const HealthDashboard: React.FC = () => {;
             </Card>
           </div>
         </TabsContent>
-
-
+        <TabsContent value='recommendations' className='space-y-4'>
 
         <TabsContent value="recommendations" className="space-y-4">
+<<<<<<< HEAD
 
 
           <Card>
@@ -796,77 +796,11 @@ const HealthDashboard: React.FC = () => {;
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-
-              </CardContent>;
-            </Card>;
-          </div>;
-        </TabsContent>;
-
-        <TabsContent value='metrics' className='space-y-4'>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
-            <Card>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-sm'>Error Rate</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.errorRate && errorRate.toFixed(2)}%;
-                </p>;
-                <p className='text-xs text-gray-600'>Errors per request</p>;
-              </CardContent>;
-            </Card>;
-
-            <Card>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-sm'>Critical Errors</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className='text-2xl font-bold text-red-600'>;
-                  {healthData && healthData.metrics.criticalErrors}
-                </p>;
-                <p className='text-xs text-gray-600'>In last hour</p>;
-              </CardContent>;
-            </Card>;
-
-            <Card>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-sm'>Avg Response</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
-                </p>;
-                <p className='text-xs text-gray-600'>API response time</p>;
-              </CardContent>;
-            </Card>;
-
-            <Card>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-sm'>Memory Usage</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className='text-2xl font-bold'>;
-                  {formatBytes(healthData && healthData.metrics.memoryUsage)}
-                </p>;
-                <p className='text-xs text-gray-600'>JavaScript heap</p>;
-              </CardContent>;
-            </Card>;
-          </div>;
-        </TabsContent>;
-
-        <TabsContent value='recommendations' className='space-y-4'>;
-          <Card>;
-            <CardHeader>;
-              <CardTitle>Improvement Recommendations</CardTitle>;
-            </CardHeader>;
-            <CardContent>;
-              {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;
-                <ul className='space-y-3'>;
-                  {healthData && healthData.health.recommendations && recommendations.map((rec, index) => (;
-                    <li key={index} className='flex items-start'>;
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-0 && 0.5 mr-2 flex-shrink-0' />;
-                      <span className='text-sm'>{rec}</span>                    </li>;
-
+                <ul className='space-y-3'>
+                  {healthData.health.recommendations.map((rec, index) => (
+                    <li key={index} className='flex items-start'>
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
+                      <span className='text-sm'>{rec}</span>                    </li>
                   ))}
                 </ul>;
               ) : (;
@@ -874,18 +808,33 @@ const HealthDashboard: React.FC = () => {;
                   No specific recommendations at this time;
                 </p>;
               )}
+<<<<<<< HEAD
 
 
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
 
+=======
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+export default HealthDashboard
+<<<<<<< HEAD
+export default HealthDashboard
+export default HealthDashboard
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1242,6 +1191,7 @@ if (return null) {
           </Card>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
 
 
     </div>);

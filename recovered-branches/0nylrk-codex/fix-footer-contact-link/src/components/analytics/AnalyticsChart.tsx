@@ -1,53 +1,41 @@
 
-=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+interface AnalyticsChartProps {
 
+  title: string
+  description?: string;
+  data: any[]
+  type?: 'line' | 'bar';
+  dataKeys: string[]
 
+  timeRange?: string;
+  onTimeRangeChange?: (range: string) => void
+}
+export function AnalyticsChart({
+  title;
 
+  description
+  data
+  type = 'line';
+  dataKeys
+  timeRange = '7d';
+  onTimeRangeChange
+}: AnalyticsChartProps) {
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
+  const colors = [
+    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
+  ];
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { useState } from './react';
-interface AnalyticsChartProps {
-  title: string,
-
-  description?: string;
-  data: any[],;
-  type?: 'line' | 'bar';
-
-
-export function AnalyticsChart(): any ({ ;
-  title;
-  description, ;
-  data, ;
-  type = 'line';
-  dataKeys, ;
-
-  timeRange = '7d';
-  onTimeRangeChange;
-}: AnalyticsChartProps) {;
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-
-
-  const colors = [;
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
-  ];
-
-
-=======
-
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -58,10 +46,10 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
-
+export function AnalyticsChart({ ;
+  title;
 export function AnalyticsChart({ 
   title,
-
   description, 
   data, 
   type = 'line',
@@ -75,8 +63,6 @@ export function AnalyticsChart({
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ],
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -134,7 +120,6 @@ function AnalyticsChart() {
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -208,9 +193,6 @@ export function AnalyticsChart({;
       </CardHeader>;
 
                   textAnchor="end";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   height={50}
 
                 />;
@@ -303,8 +285,16 @@ export function AnalyticsChart({;
                     data_key={key}
                     fill={colors[index % colors.length]}
                     radius={[4, 4, 0, 0]}
-                  />))}
-              </BarChart>)}
+                  />
+                ))}
+              </BarChart>
+            )}
+          </ResponsiveContainer>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
           </ResponsiveContainer>;
         </div>;
       </CardContent>;
@@ -313,5 +303,3 @@ export function AnalyticsChart({;
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

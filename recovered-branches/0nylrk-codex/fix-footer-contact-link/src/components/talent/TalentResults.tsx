@@ -1,8 +1,16 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import {TalentProfile} from "@/types/talent";
+import {ActiveFilters} from "@/components/talent/ActiveFilters";
+import {ResultsHeader} from "@/components/talent/ResultsHeader";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
+import { ResultsHeader } from "@/components/talent/ResultsHeader",
+import { TalentGrid } from "@/components/talent/TalentGrid",
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -13,14 +21,17 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
+    selectedSkills: string[]
+    toggleSkill: (skill: string) => void
+    selectedAvailability: string[]
+    toggleAvailability: (availability: string) => void
+    selectedRegions: string[]
+    toggleRegion: (region: string) => void
+    priceRange: [number, number];
 
-import React from "react";
-import {TalentProfile} from "@/types/talent";
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-=======
-
+    setPriceRange: (range: [number, number]) => void;
+    experienceRange: [number, number],
+    setExperienceRange: (range: [number, number]) => void;
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -31,18 +42,31 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
-
     clearFilters: () => void
   }
 }
+<<<<<<< HEAD
 
-
-
+export function TalentResults({;
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+export function TalentResults({
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
   activeFiltersProps
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
-
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
@@ -88,10 +112,6 @@ export function TalentResults(): any ({;
 }: TalentResultsProps) {;
   return (
     <div className="flex-1">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Active filters */}
 
       <ActiveFilters {...activeFiltersProps} />;
@@ -165,25 +185,13 @@ function TalentResults() {
 =======
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
-
-
+      />
+    </div>
+  )
+}
       />;
     </div>;
   );
 }
-
-        is_authenticated={is_authenticated}
-        clear_filters={activeFiltersProps.clear_filters}
-      />;
-    </div>);
-}
-
-=======
 ;
-
-=======
-
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

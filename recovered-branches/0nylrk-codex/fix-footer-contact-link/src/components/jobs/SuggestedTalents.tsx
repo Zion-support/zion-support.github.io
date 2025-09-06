@@ -1,18 +1,41 @@
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmptyMatchesCard } from "./EmptyMatchesCard";
+import { JobMatchCard } from "./JobMatchCard";
 
+import { useEffect, useState } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { EmptyMatchesCard } from "./EmptyMatchesCard";
+import { JobMatchCard } from "./JobMatchCard";
+interface SuggestedTalentsProps {
+  jobId: string;
+import { EmptyMatchesCard } from "./EmptyMatchesCard",
+import { JobMatchCard } from "./JobMatchCard",
+interface SuggestedTalentsProps {
+  jobId: string,
+  jobTitle?: string
+}
 
-export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
-
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
+  const [talents, setTalents] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isProcessing, setIsProcessing] = useState(false),
 
-  const fetchSuggestedTalents = async () => {;
-    setIsLoading(true);
-    try {;
-      const { data, error } = await supabase;
-        .from("suggested_talents");
-        .select(;
-          `;
+  const fetchSuggestedTalents = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("suggested_talents")
+        .select(
+          `
           *;
           talent_profile: talent_id(;
 =======
@@ -64,38 +87,7 @@ function SuggestedTalents() {
 
         .eq("job_id", jobId);
       if (error) throw error;
-
-      setTalents(data || []);
-    } catch (error) {;
-      console && console.error("Error fetching suggested talents:", error);
-      toast({;
-        title: "Error",;
-        description:;
-          "Failed to load suggested talents. Please try again later.",;
-        variant: "destructive",;
-
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-
-
-
-interface SuggestedTalentsProps {
-  jobId: string,
-
-  jobTitle?: string
-}
-
-
-
-
-  const fetchSuggestedTalents = async () => {
-    setIsLoading(true),
-    try {
-      const { data, error } = await supabase
-        .from("suggested_talents")
-
+      setTalents(data |[]);
         .select(`
           *,
           talent_profile:talent_id(
@@ -118,64 +110,50 @@ interface SuggestedTalentsProps {
 
       if (error) throw error,
       setTalents(data || [])
-
     } catch (error) {
       console.error("Error fetching suggested talents:", error),
       toast({
-
+        title: "Error"
+        description:
+          "Failed to load suggested talents. Please try again later."
+        variant: "destructive"
+      });
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
-
     } finally {
       setIsLoading(false)
     }
-
+  }
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
     toast({
-
-
+      title: "View Profile"
+      description: `Navigating to talent profile: ${talentId}`
+    });
+  }
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`})
   },
-
-
 
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
     console.log("Invite talent:", talentId);
     toast({
-
-  };
-
-  const handleViewProfile = (talentId: string) => {;
-    // Implement logic to view talent profile;
-    console && console.log("View talent profile:", talentId);
-    toast({;
-      title: "View Profile",;
-      description: `Navigating to talent profile: ${talentId}`,;
+      title: "Invite Talent"
+      description: `Inviting talent: ${talentId}`
     });
-  };
+  }
+      title: "Invite Talent",
+      description: `Inviting talent: ${talentId}`})
+  },
 
-  const handleInvite = (talentId: string) => {;
-    // Implement logic to invite talent;
-    console && console.log("Invite talent:", talentId);
-    toast({;
-      title: "Invite Talent",;
-      description: `Inviting talent: ${talentId}`,;
-    });
-  };
-
-  const handleRefresh = () => {;
-
-    setIsProcessing(true);
-    fetchSuggestedTalents().finally(() => {;
+  const handleRefresh = () => {
+    setIsProcessing(true),
+    fetchSuggestedTalents().finally(() => {
       setIsProcessing(false);
     });
 
@@ -258,10 +236,33 @@ if ( {) {
 }
       fetchSuggestedTalents ();
     }
-  }, [job_id]);
-;
-  // Transform data to match JobMatchCard component props;
-  const transformed_talents = talents.map ((talent) => {
+  }, [jobId]);
+  // Transform data to match JobMatchCard component props
+  const transformedTalents = talents.map((talent) => {
+    return {
+      id: talent.talent_profile?.id |""
+      name: talent.talent_profile?.full_name |"Talent"
+      title: talent.talent_profile?.professional_title |"Talent"
+      company: talent.talent_profile?.company_name |""
+      avatar: talent.talent_profile?.profile_picture_url |""
+      location: talent.talent_profile?.location |"Remote"
+      category: talent.talent_profile?.category |"Technology"
+      matchPercent: talent.match_score |85
+      skills: talent.talent_profile?.skills |[]
+    }
+  });
+      setIsProcessing(false)
+    })
+  },
+
+  useEffect(() => {
+    if (jobId) {
+      fetchSuggestedTalents();
+    }
+  }, [jobId]);
+
+  // Transform data to match JobMatchCard component props
+  const transformedTalents = talents.map((talent) => {
     return {
       id: talent.talent_profile?.id || "",
       name: talent.talent_profile?.full_name || "Talent",
@@ -275,8 +276,96 @@ if ( {) {
     }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
+      fetchSuggestedTalents()
+import { useEffect, useState } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { EmptyMatchesCard } from "./EmptyMatchesCard",;
+import { JobMatchCard } from "./JobMatchCard",;
+interface SuggestedTalentsProps {;
+  jobId: string,;
+  jobTitle?: string;
+}
 ;
-=======
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
+  const [talents, setTalents] = useState([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [isProcessing, setIsProcessing] = useState(false),;
+  const fetchSuggestedTalents = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from("suggested_talents");
+        .select(`;
+          *,;
+          talent_profile:talent_id(;
+            id,;
+            user_id,;
+            full_name,;
+            professional_title,;
+            profile_picture_url,;
+            hourly_rate,;
+            bio,;
+            years_experience,;
+            key_projects,;
+            skills,;
+            location,;
+            category,;
+            company_name;
+          );
+        `);
+        .eq("job_id", jobId),;
+      if (error) throw error,;
+      setTalents(data || []);
+    } catch (error) {;
+      console.error("Error fetching suggested talents:", error),;
+      toast({;
+        title: "Error",;
+        description: "Failed to load suggested talents. Please try again later.",;
+        variant: "destructive"});
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const handleViewProfile = (talentId: string) => {;
+    // Implement logic to view talent profile;
+    // // // console.log("View talent profile:", talentId),;
+    toast({;
+      title: "View Profile",;
+      description: `Navigating to talent profile: ${talentId}`});
+  },;
+  const handleInvite = (talentId: string) => {;
+    // Implement logic to invite talent;
+    // // // console.log("Invite talent:", talentId),;
+    toast({;
+      title: "Invite Talent",;
+      description: `Inviting talent: ${talentId}`});
+  },;
+  const handleRefresh = () => {;
+    setIsProcessing(true),;
+    fetchSuggestedTalents().finally(() => {;
+      setIsProcessing(false);
+    });
+  },;
+  useEffect(() => {;
+    if (jobId) {;
+      fetchSuggestedTalents();
+    }
+  }, [jobId]),;
+  // Transform data to match JobMatchCard component props;
+  const transformedTalents = talents.map(talent => {;
+    return {;
+      id: talent.talent_profile?.id || '',;
+      name: talent.talent_profile?.full_name || 'Talent',;
+      title: talent.talent_profile?.professional_title || 'Talent',;
+      company: talent.talent_profile?.company_name || '',;
+      avatar: talent.talent_profile?.profile_picture_url || '',;
+      location: talent.talent_profile?.location || 'Remote',;
+      category: talent.talent_profile?.category || 'Technology',;
+      matchPercent: talent.match_score || 85;
+      skills: talent.talent_profile?.skills || []}
+  }),
 
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
@@ -297,12 +386,11 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
+    <Card className="border-zion-blue-light bg-zion-blue">
+      <CardHeader>
+        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
+      </CardHeader>
       
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -381,12 +469,12 @@ if ( {) {
             ))}
           </div>
         )}
-
+      </CardContent>
+    </Card>
+  );
+}
       </CardContent>;
     </Card>;
   );
 }
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

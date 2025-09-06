@@ -1,9 +1,24 @@
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 
 export default function ContractBuilderRedirect() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/automation/contract-builder');
@@ -11,13 +26,7 @@ export default function ContractBuilderRedirect() {;
   }, [router]);
   return null;
 
-=======
-
-
 }
-
-
-=======
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
@@ -46,7 +55,3 @@ router.replace ('/automation / contract - builder');
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

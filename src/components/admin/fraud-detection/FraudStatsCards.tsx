@@ -7,9 +7,8 @@ return (
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-
-
       
+<<<<<<< HEAD
 
 
       <Card>
@@ -21,9 +20,8 @@ return (
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-
-
       
+<<<<<<< HEAD
 
 
       <Card>
@@ -35,9 +33,8 @@ return (
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-
-
       
+<<<<<<< HEAD
 
 
       <Card>
@@ -49,9 +46,8 @@ return (
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-
-
       
+<<<<<<< HEAD
 
 
       <Card>
@@ -60,9 +56,8 @@ return (
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-
-
       
+<<<<<<< HEAD
 
 
       <Card>
@@ -72,8 +67,18 @@ return (
         </CardHeader>
       </Card>
     </div>
+  );
+};
+";
+  )
+}
+"
 
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+import { FraudStats } from "@/types/fraud",;
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
@@ -134,6 +139,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
     </div>;
   );
 };
+<<<<<<< HEAD
 
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (

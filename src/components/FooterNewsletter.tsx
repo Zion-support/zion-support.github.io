@@ -14,8 +14,6 @@
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
-
-
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
@@ -43,6 +41,7 @@
   );
 
 } ;
+<<<<<<< HEAD
 } ;
 
 import React, { useState, useRef } from 'react';

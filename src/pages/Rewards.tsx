@@ -4,6 +4,7 @@ return (
       <ul className='space-y-4'>;
         {REWARDS && REWARDS.map(r => (;
           <li
+<<<<<<< HEAD
             key={r && r.id}
             className='flex justify-between items-center border rounded-md p-4'>            <div>;
               <p className='font-medium'>{r && r.title}</p>;
@@ -15,10 +16,10 @@ return (
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }];
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
 
 export default function RewardsPage() {
   return (
@@ -40,6 +41,7 @@ export default function RewardsPage() {
     </div>;
   );
 }
+<<<<<<< HEAD
 
   );
 }

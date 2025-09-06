@@ -3,11 +3,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
-
-
+      title: 'Processing your request'
       title: 'Processing your request',
-
-
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })
@@ -67,8 +64,8 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         <MapPin className='mr - 2 h - 5 w - 5 text - zion - purple' />;
         {selected_country.country}
       </h4>;
-      <p className='text - 2xl font - bold text - zion - cyan mb - 6'>;
-        ${selected_country.pricePerIncident.to_fixed (2)}
+      <p className="text-2xl font-bold text-zion-cyan mb-6">;
+        ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>;
       <PaymentButton;
 

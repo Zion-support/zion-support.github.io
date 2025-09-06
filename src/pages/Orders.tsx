@@ -1,9 +1,7 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-
-import Link from 'next / link'; // Changed from react-router-dom;
-import { use_auth } from '@/hooks / use_auth';
-import { useGetOrdersQuery } from '@/hooks / use_orders';
-
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
 
   Table
@@ -14,6 +12,24 @@ import {
 
 
 
+=======
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import {
+  Table,
+  TableBody,
+  TableCell,
+<<<<<<< HEAD
+  TableHead,;
+  TableHeader;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function OrdersPage() {;
 
@@ -51,6 +67,7 @@ export default function OrdersPage() {;
       default:;
         return status;
     }
+<<<<<<< HEAD
   }
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
@@ -61,8 +78,18 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from '@/components/ui/table',
+import { Badge } from '@/components/ui/badge',
+import Skeleton from '@/components/ui/skeleton',
+import { EmptyState } from '@/components/ui/empty-state',
+export default function OrdersPage() {
+  const { user } = useAuth(),
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
 
+  const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
         return (
@@ -86,7 +113,7 @@ import {
       default:
         return status
     }
-
+  }
   },
 
 
@@ -126,15 +153,16 @@ import {
               </TableRow>;
 
             ))}
-          </TableBody>;
-        </Table>;
-      ) : orders && orders.length === 0 ? (;
+          </TableBody>
+        </Table>
+      ) : orders.length === 0 ? (
         <EmptyState
-
-
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+<<<<<<< HEAD
 
 
         />
@@ -150,11 +178,12 @@ import {
             </TableRow>
           </TableHeader>
           <TableBody>
-
-
+            {orders.map(order => (              <TableRow key={order.orderId}>
+                <TableCell className='font-medium'>{order.orderId}</TableCell>
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+<<<<<<< HEAD
 
 
                 <TableCell>{formatDate(order.date)}</TableCell>
@@ -197,8 +226,12 @@ import {
                 </TableCell>;
               </TableRow>;
             ))}
-
-
+          </TableBody>
+        </Table>
+      )}
+    </div>
+  );
+}
 ;
 
 
@@ -208,6 +241,7 @@ import {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 ;

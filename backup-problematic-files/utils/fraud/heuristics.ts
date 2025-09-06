@@ -1,5 +1,62 @@
-
-
+:utils/fraud/heuristics.ts
+import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
+const suspiciousLinkHosts = [
+  'paypal.me'
+  'cash.app'
+  'venmo.com'
+  'wa.me'
+  't.me'
+  'telegram.me'
+  'whatsapp.com'
+  'westernunion.com'
+  'moneygram.com'
+];
+const suspiciousPhrases = [
+  'whatsapp me'
+  'telegram me'
+  'contact me on whatsapp'
+  'cashapp only'
+  'crypto only'
+  'send crypto'
+  'wire transfer'
+  'gift card'
+  'western union'
+  'off-platform payment'
+  'outside payment'
+  'pay outside'
+  'pay me directly'
+  'dm me on'
+  'reach me on whatsapp'
+  'skype me'
+  'email me at'
+];
+const vagueScammyJobPhrases = [
+  'easy work'
+  'quick money'
+  'no experience needed'
+  'work from home and earn fast'
+  'daily payouts'
+  'earn $\\d+ per day'
+];
+function containsSuspiciousHost(text: string): boolean {
+  const lower = text.toLowerCase();
+  return suspiciousLinkHosts.some(host => lower.includes(host));
+:backup-problematic-files/utils/fraud/heuristics.ts
+import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',;
+const suspiciousLinkHosts = [;
+  'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',;
+  'moneygram.com'],;
+const suspiciousPhrases = [;
+  'whatsapp metelegram mecontact me on whatsappcashapp onlycrypto onlysend cryptowire transfergift card',;
+  'western unionoff-platform paymentoutside paymentpay outsidepay me directlydm me onreach me on whatsappskype me',;
+  'email me at'],;
+const vagueScammyJobPhrases = [;
+  'easy workquick moneyno experience neededwork from home and earn fastdaily payoutsearn $\\d+ per day'],;
+function containsSuspiciousHost(text: string): boolean {;
+  const lower = text.toLowerCase(),;
+  return suspiciousLinkHosts.some((host) => lower.includes(host));
+:backup-problematic-files/utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
 }
 
   const lower = text && text.toLowerCase();
@@ -94,13 +151,14 @@ function containsVagueJobClaims (text: string): string[] {
   });
   return reasons;
 }
-
-
+export interface HeuristicDeps {
+  countEventsByIp: (
+    ip: string
+    source: MonitoredSource
+    withinMinutes: number
     ip: string,
     source: MonitoredSource,
     withinMinutes: number;
-
-
   ) => Promise<number>;
 
 
@@ -150,6 +208,7 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
+:utils/fraud/heuristics.ts
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -279,34 +338,17 @@ export function runHeuristics(data: any): HeuristicResult {
   }
 
 }
-=======
-}
-
-export function isHighRiskEvent(result: HeuristicResult): boolean {
-  return result.severity === 'high' || result.severity === 'critical';
-}
-
-export function shouldBlockEvent(result: HeuristicResult): boolean {
-  return result.severity === 'critical' && result.confidence > 80;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
+:utils/fraud/heuristics.ts
 
-=======
-
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts

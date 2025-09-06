@@ -5,7 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', {
-=======
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -38,6 +37,7 @@ if ( {) {
     return res && res.status(200).json(offerings);
 
   }
+<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
@@ -99,16 +99,15 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings);
     return res.status (200).json (offerings);
   }
+<<<<<<< HEAD
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

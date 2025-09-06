@@ -1,5 +1,16 @@
-
-
+// Common skills for filtering
+export const COMMON_SKILLS = [
+  'Machine Learning',
+  'Python',
+  'JavaScript',
+  'React',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+  'DevOps',
+  'Cloud Architecture',;
+  'TensorFlow',];
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -55,14 +66,6 @@ export const REGIONS = [  "Machine Learning";
   "South America";
   "Middle East";
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  'Cloud Architecture',;
-  'TensorFlow',];
-
-
-
 // Common skills for filtering
 export const COMMON_SKILLS = [
   "Machine Learning",
@@ -76,5 +79,53 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
+<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Regions
+export const REGIONS = [
+  'North America',
+  'Europe',
+  'Asia Pacific',
+  'South America',
+  'Middle East',;
+  'Africa',];  "North America";
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+  "Africa"
+
+],
+
+// Regions
+export const REGIONS = [
+  "North America",
+  "Europe",
+  "Asia Pacific",
+  "South America",
+  "Middle East",
+  "Africa"
+],
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+  "Machine Learning",;
+  "Python",;
+  "JavaScript",;
+  "React",;
+  "Data Science",;
+  "AWS",;
+  "Docker",;
+  "Kubernetes",;
+  "DevOps",;
+  "Cloud Architecture",;
+  "TensorFlow";
+],;
+// Regions;
+export const REGIONS = [;
+  "North America",;
+  "Europe",;
+  "Asia Pacific",;
+  "South America",;
+  "Middle East",;
+  "Africa";
+];

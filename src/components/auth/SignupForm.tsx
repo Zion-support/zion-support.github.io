@@ -39,6 +39,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             {errors.password.message}
           </p>
         )}
+      </div>
 
 
   path: ["confirmPassword"]}),;

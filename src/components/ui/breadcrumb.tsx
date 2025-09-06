@@ -13,9 +13,10 @@ const Breadcrumb = React.forward_ref<;
 >(({ class_name, separator, ...props }, ref, ) => (
   <nav;
     ref={ref}
-    aria - label='breadcrumb';
-    className={cn (
-      'inline - flex items - center gap - 1 text - sm text - zion - slate - light',      class_name)}
+    aria-label='breadcrumb'
+    className={cn(
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
+    )}
     {...props}
 
 
@@ -37,12 +38,9 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
-
-
-
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
-    ),}
+    )}
     {...props}
   />
 ))
@@ -82,7 +80,7 @@ BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<'a'> & {
-    as_child?: boolean;
+    asChild?: boolean
   }
 
 >(({ className, asChild = false, ...props }, ref) => {
@@ -98,6 +96,7 @@ const BreadcrumbLink = React.forward_ref<;
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
+<<<<<<< HEAD
 
 
 const BreadcrumbSeparator = ({
@@ -109,22 +108,19 @@ const BreadcrumbSeparator = ({
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
+<<<<<<< HEAD
 
 
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
-
-  />;
-));
-Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
-    ref = {ref,}
-    aria-label="breadcrumb";
-    className = {cn(;
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
-      className;
-    ),}
+BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
+}: React.ComponentProps<"li">) => (
+  <li
+    role="presentation"
+    aria-hidden="true"
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
   />;
 ));
@@ -138,69 +134,10 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
  
-import { cn } from "@/lib/utils"
-import { ChevronRight } from 'lucide-react';
- 
-const Breadcrumb = React.forwardRef<
-  HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {
-    separator?: React.ReactNode
-  }
->(({ className, separator, ...props }, ref) => (
-  <nav
-    ref = {ref}
-    aria-label="breadcrumb"
-    className={cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
-      className
-    )}
-    {...props}
-  />
-))
-Breadcrumb.displayName = "Breadcrumb"
- 
-const BreadcrumbList = React.forwardRef<
-  HTMLOListElement;
-  React.ComponentPropsWithoutRef<"ol">
->(({ className, ...props }, ref) => (
-
-  <ol
-    ref={ref}
-    className={cn('flex items-center gap-1 && 1.5', className)}    {...props}
-  />;
-));
-BreadcrumbList && BreadcrumbList.displayName = 'BreadcrumbList';
-
-const BreadcrumbItem = React && React.forwardRef<;
-  HTMLLIElement,;
-  React && React.ComponentPropsWithoutRef<'li'>;
->(({ className, ...props }, ref) => (;
-  <li
-    ref={ref}
-    className={cn('inline-flex items-center gap-1 && 1.5', className)}    {...props}
-  />;
-));
-BreadcrumbItem && BreadcrumbItem.displayName = 'BreadcrumbItem';
-
-const BreadcrumbLink = React && React.forwardRef<;
-  HTMLAnchorElement,;
-  React && React.ComponentPropsWithoutRef<'a'> & {;
-    asChild?: boolean;
-  }
->(({ className, asChild = false, ...props }, ref) => {;
-  const Comp = asChild ? Slot : 'a';
-
-      />;
-  );
-});
-BreadcrumbLink && BreadcrumbLink.displayName = 'BreadcrumbLink';
-
-const BreadcrumbSeparator = ({;
-  children,;
-  className,;
-  ...props;
-}: React && React.ComponentProps<'li'>) => (;
-  <li
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+}: React.ComponentProps<'span'>) => (  <span
     role='presentation'
     aria-hidden='true'
     className={cn('[&>svg]:size-3 && 3.5 text-zion-slate-light/70', className)}    {...props}
@@ -225,7 +162,7 @@ const BreadcrumbEllipsis = ({;
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:size-3 && 3.5 text-zion-slate-light/70", className)}
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
 
   >;
@@ -246,6 +183,7 @@ const BreadcrumbEllipsis = ({;
 
 
 export {
+<<<<<<< HEAD
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -267,9 +205,32 @@ export {;
   BreadcrumbEllipsis,;
 };);
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
+=======
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis;
+};)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+ 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+<<<<<<< HEAD
+  BreadcrumbSeparator
+  BreadcrumbEllipsis}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export {;
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -277,7 +238,6 @@ BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 const BreadcrumbEllipsis = ({
   className,
   ...props
-
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"
@@ -296,23 +256,12 @@ const BreadcrumbEllipsis = ({
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-  >;
-    {children || <ChevronRight className="h - 4 w - 4" />}
-  </li>);
-BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
-const BreadcrumbEllipsis = ({
-  class_name;
-  ...props;
-}: React.ComponentProps<"span">) =>: any (
-  <span;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
-    {...props}
-  >;
+  >
     &#8230,
-  </span>);
-BreadcrumbEllipsis.display_name = 'BreadcrumbElipssis';
+  </span>
+)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+ 
 export {
   Breadcrumb,
   BreadcrumbList,

@@ -7,32 +7,36 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
+<<<<<<< HEAD
 
-
+  project: PortfolioProject
+  onEdit: (project: PortfolioProject) => void
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-
-
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+}
 
 }
 
-interface ProjectCardProps {;
-  project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;import Image from 'next/image';
-import { PortfolioProject } from '@/types/resume';
-interface ProjectCardProps {;
-  project: PortfolioProject,;
-  onEdit: (project: PortfolioProject,) => void,;
-  onDelete: (projectId: string,) => void;
 }
 
 export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+=======
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+}
+<<<<<<< HEAD
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {;
@@ -146,19 +150,39 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-
-  const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),
-
-  
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = null;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
     }
     setDeleteDialogOpen(false)
+<<<<<<< HEAD
   };
 
 
 
+=======
+  }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false)
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -166,11 +190,19 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <Image
             src={project.image_url}
             alt={project.title}
-
-
+            className='object-cover'
+            loading='lazy'    <Card className="h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+        {project.image_url ? (
+          <Image
+            src={project.image_url}
+            alt={project.title}
+            className='object-cover'
+            loading='lazy'
             className="object-cover"
             loading="lazy"
           />
+<<<<<<< HEAD
 
 
         ) : (
@@ -244,51 +276,28 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           {project.github_url && (
             <a
               href={project.github_url}
+<<<<<<< HEAD
 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              title="GitHub">;
-              <Button variant='ghost' size='icon' aria-label='GitHub link'>;
-                <Github className='h-4 w-4' />;
-              </Button>;
-            </a>;
+              title="GitHub"
+            >
+              <Button variant="ghost" size="icon" aria-label="GitHub link">
+                <Github className="h-4 w-4" />
+              </Button>
+            </Link>
           )}
-
-
-            <a
-              href={project && project.demo_url}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Live demo'
-              title='Live demo'>;
-              <Button variant='ghost' size='icon' aria-label='Live demo link'>;
-                <Link className='h-4 w-4' />              </Button>;
-            </a>;
-          )}
-        </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">;
-                <Link className="h-4 w-4" />;
-              </Button>;
-            </a>;
-          )}
-
-        </div>;
-
-        <div className='flex gap-2'>;
-
-          <Button
-            variant='ghost'
-            size='icon'
-            onClick={() => onEdit(project)}
-            aria-label='Edit project';
-          >;
-            <Edit className='h-4 w-4' />;
-          <Button
-            variant='ghost'
-            size='icon'
-            onClick={() => setDeleteDialogOpen(true)}
-
-
+;
+          {project.demo_url && (;
+            <a;
+              href={project.demo_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live demo"
+              title="Live demo"
+            >
+              <Button variant="ghost" size="icon" aria-label="Live demo link">
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
@@ -306,6 +315,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
 
 
 
@@ -418,31 +428,31 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
             <AlertDialogAction
               onClick={handleDelete}
-              className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
-            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction
-              onClick={handleDelete}
-
-
+              className='bg-destructive text-destructive-foreground'
+            >              Delete              Are you sure you want to delete this project? This action cannot be undone.
+              Are you sure you want to delete this project? This action cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-
-
+            <AlertDialogAction
+              onClick={handleDelete}
+              className='bg-destructive text-destructive-foreground'
+            >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+<<<<<<< HEAD
 
 
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-
-
-
+      </AlertDialog>;
+    </Card>;
+  );
+};
+}
+}
       </AlertDialog>
     </Card>
 
@@ -469,6 +479,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
   );
+};
+}
 }
     </Card>);
 }

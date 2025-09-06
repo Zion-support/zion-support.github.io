@@ -32,17 +32,14 @@ import {ApplicationStatus} from "@/types/jobs";
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
-
+      {applications.map((application,) => (
       {applications.map((application) => (
-
-
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
-
+                {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
-
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -54,7 +51,6 @@ import {ApplicationStatus} from "@/types/jobs";
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
-
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -131,12 +127,13 @@ export function MyApplications() {;
             <div className="space-y-3">;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-
-
                   {application.cover_letter}
                 </p>
               )}
-
+              <div className="flex justify-between items-center">
+                <Button
+                  variant="outline"
+                  size="sm"
               
               <div className="flex justify-between items-center">
                 <Button 
@@ -150,32 +147,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-
-
-  return (
-    <div className="grid gap-4 md:grid-cols-2">;
-      {applications && applications.map((application,) => (;
-        <Card key={application && application.id}>;
-          <CardHeader className="pb-2">;
-            <div className="flex justify-between items-start">;
-              <CardTitle className="text-lg">;
-                {application && application.job?.title || "Unknown Job"}
-              </CardTitle>;
-              {getStatusBadge(application && application.status)}
-            </div>;
-            <p className="text-sm text-muted-foreground">;
-              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
-            </p>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-3">;
-              {application && application.cover_letter && (;
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-                  {application && application.cover_letter}
-                </p>;
-              )}
-
-              <div className="flex justify-between items-center">;
                 <Button
                   variant="outline" 
                   size="sm" 
@@ -186,10 +157,17 @@ export function MyApplications() {;
                   </Link>;
                 </Button>;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Button
 
                 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Button 
 
                   variant="default" 
@@ -205,9 +183,8 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
-
-    </div>;
-  );
+    </div>
+  )
 }
 
   },
@@ -298,9 +275,10 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 
     </div>;
   );
-
+};
 }
 ;

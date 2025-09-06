@@ -12,6 +12,7 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 
 
 interface QuotesFilterProps {
@@ -23,6 +24,8 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+  onReset: () => void
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -321,7 +324,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-    </Card>);
+    </Card>;
+  );
+};  )
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
             on_click={on_reset}

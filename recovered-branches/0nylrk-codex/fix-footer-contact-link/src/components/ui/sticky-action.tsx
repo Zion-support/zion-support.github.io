@@ -1,23 +1,50 @@
 
-
-
-
-
+import React, { useEffect, useState } from "react",
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
+interface StickyActionProps {
+  className?: string;
 
 interface StickyActionProps {;
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react",
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface StickyActionProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   className?: string;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
-  position?: "bottom" | "top";
+  position?: "bottom" | "top"
 }
 
+export function StickyAction({;
+  className;
+  children;
+  showAfterScroll = 300;
+import React, { useEffect, useState } from "react",
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
 
-export function StickyAction(): any ({;
-
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+  position?: "bottom" | "top"
+}
+export function StickyAction({
   className;
   children;
 
@@ -25,7 +52,12 @@ export function StickyAction(): any ({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
-
+  className,
+  children,
+  showAfterScroll = 300,
+  position = "bottom"
+}: StickyActionProps) {
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,18 +90,12 @@ if ( {) {
       } else {
         setIsVisible (false);
       }
-
-;
-    window.addEventListener ("scroll", handle_scroll);
-
+    }
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
-
-
-=======
-
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -78,21 +104,24 @@ if ( {) {
     }
   }, [showAfterScroll]),
 
-
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
-
+  }
   },
-
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
+            positionClasses[position];
 
-
-=======
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -138,15 +167,6 @@ export function StickyAction({;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
-            positionClasses[position]
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

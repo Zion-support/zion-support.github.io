@@ -1,13 +1,14 @@
-
-
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 "use client",;
 import { useState, useEffect, useRef } from "react",;
 import Link from "next/link",;
 export function Navigation() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
-
-
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -24,7 +25,25 @@ function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+=======
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -200,14 +219,9 @@ function Navigation() {
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
-
-          </div>)}
-
-=======
-
+          </div>;
+        )}
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -287,7 +301,5 @@ function Navigation() {
 
     </nav>;
   );
-
-
 }
-
+}

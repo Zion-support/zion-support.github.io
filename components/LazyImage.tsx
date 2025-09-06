@@ -5,10 +5,7 @@ import LoadingSpinner from "./LoadingSpinner";
 ;
 
 interface LazyImageProps {
-=======
-
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -20,28 +17,26 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
-
-export default function LazyImage(): any ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = "",;
-  priority = false,;
-  placeholder = "empty",;
-  blurDataURL,;
-  sizes,;
-  quality = 75,;
-  fill = false,;
-  style,;
-  onLoad,;
-  onError,;
-}: LazyImageProps) {;
-
-=======
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
 export default function LazyImage({
-
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
   src,
   alt,
   width,
@@ -57,8 +52,6 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -67,7 +60,6 @@ export default function LazyImage({
 
   useEffect(() => {;
     if (priority) return;
-
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
@@ -82,24 +74,19 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
-
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
-
     return () => observer && observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {;
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {;
     setHasError(true);
     onError?.();
   };
-
   if (hasError) {;
 
     return (
@@ -126,7 +113,6 @@ export default function LazyImage({
       {isInView && (;
 
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -204,7 +190,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}

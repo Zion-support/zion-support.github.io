@@ -1,27 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -30,19 +7,31 @@ import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
-
   const { user, isLoading, logout } = useAuth();
-=======
+  const navigate = useNavigate();
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth();
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!isLoading && !user) {
+      toast.error("Please log in to view your profile"),
+      navigate("/login?redirect=/profile")
+    }
+  }, [user, isLoading, navigate]);
   }, [user, isLoading, navigate]),
-
-
 
   if (isLoading) {
 =======
@@ -107,15 +96,10 @@ export default function Profile() {;
                 <p className="text-zion-slate-light mb-4">{user && user.email}</p>;
 
                 <Button
-                  onClick={() => {;
+                  onClick={() => {
                     logout();
 
-                <Button
-                  onClick={() => {
-
                     logout(),
-
-
                     navigate("/")
                   }}
                   variant="outline"
@@ -131,35 +115,7 @@ export default function Profile() {;
       <Footer />
     </>
   )
-
-                    navigate("/");
-                  }}
-                  variant="outline";
-                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-=======
-import React, { useEffect } from 'react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { use_navigate } from './react-router-dom';
-import { toast } from './sonner';
-export default /**
- * Profile - Function description
- */
-function Profile() {
-  const { user, is_loading, logout } = use_auth ();
-  const navigate = use_navigate ();
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
 }
-      toast.error ("Please log in to view your profile");
-      navigate ("/login?redirect=/profile");
-=======
-
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -249,9 +205,4 @@ if ( {) {
 
     </>);
 }
-
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

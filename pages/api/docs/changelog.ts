@@ -1,5 +1,17 @@
 
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        : { content: "" }
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |"Failed to read changelog" });
+    }
+    return;
   }
 
   if (req.method === 'POST') {
@@ -18,6 +30,7 @@
     }
     return;
   }
+<<<<<<< HEAD
 
 
   res && res.setHeader("Allow", "GET, POST");
@@ -26,20 +39,9 @@
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -93,7 +95,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

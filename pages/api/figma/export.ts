@@ -1,32 +1,26 @@
-
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import JSZip from './jszip';
-import {
-  getZionDesignMap,
-  buildTokenSet,
-  buildUIKit,
-  UIKitKind,
-} from '../../../utils / design - map';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
-
-
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -65,8 +59,6 @@ function handler() {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -87,8 +79,6 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -112,17 +102,9 @@ export default async function handler(req, res) {
     );
 
     );
-    res && res.status(200).send(buffer);
-  } catch (e: any) {
-
-    res && res.status(500).json({ error: e?.message || "Export failed" });
-
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     res.status(200).send(buffer);
-
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message |"Export failed" });
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -149,6 +131,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+  }
+}

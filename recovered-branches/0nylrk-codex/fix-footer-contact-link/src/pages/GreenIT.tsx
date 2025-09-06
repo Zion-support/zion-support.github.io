@@ -1,19 +1,33 @@
 
-
-
-
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Leaf, Server, Cloud} from "lucide-react";
+import {Link} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+export default function GreenIT() {
+  const greenITSolutions = [
+    {
+      title: "Energy-Efficient Hardware",;
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Leaf, Server, Cloud } from "lucide-react",
+import { Link } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-
-
+      title: "Energy-Efficient Hardware"
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+      icon: Server}
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-
       icon: Server},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -21,63 +35,17 @@ export default function GreenIT() {
     {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
-=======
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Leaf, Server, Cloud} from "lucide-react";
-import {Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: "Energy-Efficient Hardware",;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},;
-    {;
-      title: "Optimized Cooling Systems",;
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",;
-      icon: Cloud},;
-    {;
-      title: "Renewable Energy Integration",;
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Leaf, Server, Cloud } from './lucide-react';
-import { Link } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-export default /**
- * GreenIT - Function description
- */
-function GreenIT() {
-  const greenITSolutions = [;
-    {
-      title: "Energy - Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       icon: Leaf}
-  ];
-;
+  ],
+
   return (
-
     <AppLayout>
-
+      <SEO
+        title="Green IT Solutions - Sustainable Technology"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
-
-
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -169,11 +137,7 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-
-=======
-
-
-=======
+}
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -331,14 +295,7 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </AppLayout>;
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

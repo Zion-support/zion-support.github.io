@@ -68,6 +68,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
+<<<<<<< HEAD
 
 export function EnterpriseCTA() {
   return (
@@ -127,14 +128,15 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-
-
-
+    </section>;
+  );
+};
+}
     </section>
-
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
+  )
+}
+import React from "react",;
+import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (
@@ -384,6 +386,7 @@ function EnterpriseCTA() {
 
   );
 }
+<<<<<<< HEAD
 
     </section>);
 }

@@ -1,9 +1,8 @@
 
-
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
-
-
 /**
  * Creates an onboarding notification for a user
  */
@@ -95,11 +94,9 @@ if ( {) {
     action_text;
   });
 
+    actionText
+  })
 }
-=======
-
-
-=======
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -167,10 +164,5 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

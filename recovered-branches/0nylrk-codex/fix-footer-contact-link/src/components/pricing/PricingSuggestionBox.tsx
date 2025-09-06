@@ -1,8 +1,20 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Info, ThumbsUp} from "lucide-react";
+import {PricingSuggestion} from "@/services/pricingSuggestionService";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, Info, ThumbsUp } from "lucide-react";
+import { PricingSuggestion } from "@/services/pricingSuggestionService";
+import { Loader2, Info, ThumbsUp } from "lucide-react",
+import { PricingSuggestion } from "@/services/pricingSuggestionService",
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -11,18 +23,23 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
-
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
+  suggestion;
+  isLoading;
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
+  suggestion;
+  isLoading;
 
-
+  onApplySuggestion
+  suggestion,
+  isLoading,
+  onApplySuggestion,
   rateType}) => {
   if (isLoading) {
     return (
@@ -37,7 +54,6 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
         </CardContent>
       </Card>
     )
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
@@ -100,15 +116,12 @@ if ( {) {
             </p>;
           </div>;
         </CardContent>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </Card>;
+    );
   }
-
-
-
-
+  if (!suggestion) {
+    return null
+  }
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
@@ -159,17 +172,9 @@ if ( {) {
       </CardContent>
     </Card>
   )
-
-
-  if (!suggestion) {;
-    return null;
-  }
-
-=======
+}
 
 };
-
-=======
 },
 ;
 
@@ -280,7 +285,3 @@ if ( {) {
 =======
 
 export default PricingSuggestionBox;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
@@ -101,14 +101,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-
-  writeState(s => {
-    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-=======
-
 res.status(200).json({ ok: true, results });
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -157,25 +150,4 @@ export default async function handler(req, res) {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
-  // record Zapier event;
-  write_state ((s) => {
-    s.events.push ({
-      id: `${Date.now ()}-job - posted`,
-      type: "zion.job.posted",
-      timestamp: Date.now (),
-      payload: { job },
-    });
-  });
-;
-  res.status (200).json ({ ok: true, results });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

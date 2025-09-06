@@ -27,14 +27,16 @@ export function BottomNavigation() {;
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground';
                 ),;
               })}
-            </div>;
-            <span className='text-xs mt-1'>{item && item.label}</span>;
-          </Link>;
-        );
+            </div>
+            <span className="text-xs mt-1">{item.label}</span>
+          </Link>
+        )
+<<<<<<< HEAD
       })}
-    </div>;
-  );
+    </div>
+  )
 }
+<<<<<<< HEAD
 
 
               {React.cloneElement(item.icon as React.ReactElement, { 

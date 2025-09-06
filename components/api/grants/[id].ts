@@ -1,11 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import type {
+  GrantApplication
+  UpdateGrantPayload;
+  GrantApplication,;
+  UpdateGrantPayload,;
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
 
 
 function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
@@ -24,25 +47,28 @@ function grantPath(id: string) {
     'utf8'
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
-
-
-
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
-  const file = grantPath(id);
-
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
-}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+function writeGrant(record: GrantApplication) {
+  ensureDir()
 
 function writeGrant(record: GrantApplication) {
 
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+=======
+  ensureDir()
+=======
+
+function writeGrant(record: GrantApplication) {
+  ensureDir(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const { id } = req && req.query as { id: string };
 
   if (!id) {
@@ -58,10 +84,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
+  const { id } = req.query as { id: string }
+  const { id } = req.query as { id: string };
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
@@ -78,7 +104,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req && req.method === 'PUT') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const existing = readGrant(id);
     if (!existing) {
 
@@ -114,10 +139,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-
-  res && res.setHeader('Allow', 'GET, PUT');
-  res && res.status(405).end('Method Not Allowed');  res && res.setHeader('AllowGET, PUT');
-  res && res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed')
 }
 
 =======
@@ -141,10 +163,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.set_header ('Allow', 'GET, PUT');
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+  res.setHeader('AllowGET, PUT'),
+  res.status(405).end('Method Not Allowed')
 
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,18 +1,26 @@
 const options: RequestInit = {
       method
       headers: {
-
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)},
 
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
-
-    set_loading (true);
-    set_response (null);
-
+        options.body = body
+      }
+    }
+    setLoading(true)
+    setResponse(null)
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -164,26 +172,23 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
   },
 
+<<<<<<< HEAD
 
 
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-
-
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-
-
       />
       {params.map(p => (
         <Input
-
-
+          key={p.name}
+          value={paramValues[p.name] |''}
           value={paramValues[p.name] || ''}
-
-
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
@@ -262,6 +267,10 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
+  p.name
+}</div>)
+}export default ApiPlayground
+'"
 
 
     </div>;
@@ -304,6 +313,7 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
+<<<<<<< HEAD
 
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}

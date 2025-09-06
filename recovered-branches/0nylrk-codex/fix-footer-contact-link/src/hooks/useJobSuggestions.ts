@@ -1,17 +1,34 @@
 
-
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { JobMatch } from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import { JobMatch } from "@/types/jobs",
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
-
+      if (!talentId) return;
+      try {
+        setIsLoading(true);
       if (!talentId) return,
       
       try {
         setIsLoading(true),
         
-
-
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
@@ -20,87 +37,44 @@
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
-
-
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setJobMatches(data |[])
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
         
         setJobMatches(data || [])
-
-
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
-
-
+          title: "Error";
+          description: "Failed to load job suggestions"
           title: "Error",
           description: "Failed to load job suggestions",
-
-
           variant: "destructive"})
-=======
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { JobMatch } from '@/types / jobs';
-export /**
- * useJobSuggestions - Function description
- */
-function useJobSuggestions() {
-  const [job_matches, setJobMatches] = useState < JobMatch[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
-    const fetchSuggestedJobs = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      try {
-        setIsLoading (true);
-;
-        // Get job matches with job details;
-        const { data, error } = await supabase;
-          .from ("job_talent_matches");
-          .select (`;
-            *;
-            job:job_id (*);
-          `);
-          .eq ("talent_id", talent_id);
-          .order ("created_at", { ascending: false });
-;
-        // Check condition
-if (throw error) {
-  $2
-}
-        setJobMatches (data || []);
-      } catch (error) {
-        console.error ("Error fetching job matches:", error);
-        toast ({
-          title: "Error";
-          description: "Failed to load job suggestions",
-          variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
-        setIsLoading (false);
+        setIsLoading(false)
       }
-
-
+    }
+    fetchSuggestedJobs()
+  }, [talentId]);
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
-
-
 
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
-
-
+      }
+      const { error } = await supabase
+        .from("job_talent_matches")
+        .update(updates)
+        .eq("id", matchId);
+      if (error) throw error;
       },
       
       const { error } = await supabase
@@ -110,8 +84,6 @@ if (throw error) {
         
       if (error) throw error,
       
-
-
       // Update local state
 
       setJobMatches(matches => 
@@ -121,12 +93,9 @@ if (throw error) {
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
-
-
+      );
       ),
       
-
-
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -142,13 +111,16 @@ if (throw error) {
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
-
-  const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
-  const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
-  const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
-  const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
-
-
+        title: "Error";
+        description: "Failed to update job status"
+        variant: "destructive"})
+    }
+  }
+  // Filter matches by status
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
   return {
     jobMatches;
     isLoading;
@@ -159,18 +131,40 @@ if (throw error) {
       appliedMatches
 
       declinedMatches
-    }
-  }
-=======
-;
-    fetchSuggestedJobs ();
-  }, [talent_id]);
-;
-  const updateJobMatchStatus = async (match_id: string, status: 'viewed' | 'applied' | 'declined') => {
-    try {
-      const updates = {
-        status,
-        ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
       }
 ;
       const { error } = await supabase;
@@ -217,24 +211,19 @@ if ( {) {
   }
 ;
   // Filter matches by status;
-  const new_matches = job_matches.filter (match => match.status === 'new');
-  const viewed_matches = job_matches.filter (match => match.status === 'viewed');
-  const applied_matches = job_matches.filter (match => match.status === 'applied');
-  const declined_matches = job_matches.filter (match => match.status === 'declined');
-;
-  return {
-    job_matches;
-    is_loading;
-    updateJobMatchStatus;
-    categorized_matches: {
-      new_matches;
-      viewed_matches;
-      applied_matches,
-      declined_matches;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const newMatches = jobMatches.filter(match => match.status === 'new'),;
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined'),;
+  return {;
+    jobMatches,;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches;
+      appliedMatches;
+      declinedMatches;
     }
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

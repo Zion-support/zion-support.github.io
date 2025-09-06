@@ -12,9 +12,6 @@ className
             </span>;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-
-
-
                 {reply.authorRole}
               </Badge>
             )}
@@ -27,9 +24,14 @@ className
           </div>;
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
-
-
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div>{reply.content}</div>
+      </CardContent>
       
+<<<<<<< HEAD
 
 
       <CardFooter className="flex justify-between">
@@ -49,6 +51,16 @@ className
             Mark as Answer
           </Button>
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </CardFooter>
+    </Card>
+  )
+}
+export default ReplyCard
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           </div>;
         </div>;
@@ -77,6 +89,7 @@ className
           </Button>;
         )}
       </CardFooter>;
+<<<<<<< HEAD
     </Card>;
   );
 };
@@ -86,7 +99,13 @@ className
 
       </CardFooter>;
       </CardFooter>
+    </Card>
+  )
+}
+export default ReplyCard
 
+      </CardFooter>;
+      </CardFooter>
     </Card>;
   );
 };

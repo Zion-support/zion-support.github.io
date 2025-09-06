@@ -1,19 +1,14 @@
 
-// Signup checking functionality;
-import {supabase} from '@/integrations / supabase / client';
-import {analyze_email} from './analyze_email';
-import {SignupCheckResult} from './types';
-/**;
-* Check for suspicious signup patterns;
-*/;
+// Signup checking functionality
+import { supabase  } from '@/integrations/supabase/client';
+import { analyzeEmail  } from './analyzeEmail';
+import { SignupCheckResult } from './types';
+/**
+ * Check for suspicious signup patterns
+ */
 
 export const checkSignupPatterns = async (
-=======
-
-
 export const checkSignupPatterns = async (;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
@@ -35,7 +30,6 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-=======
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;
@@ -65,10 +59,6 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false }),;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
@@ -80,13 +70,6 @@ export const checkSignupPatterns = async (;
 
     reasons
   }
-
-;
-  // Check email against suspicious patterns;
-  const email_check = analyze_email (email),
-  // Check condition
-if ( {) {
-  $2
 }
     reasons.push (...email_check.reasons);
   }
@@ -120,8 +103,4 @@ if ( {) {
 }
 ;
 
-=======
-
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

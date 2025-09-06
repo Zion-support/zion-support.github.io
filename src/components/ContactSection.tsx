@@ -3,7 +3,13 @@ fetch("/api/contact", {
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
-
+        setIsSubmitting(false)
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
+        }
+        toast({
+          title: "Message Sent"
+          description: "We've received your message and will get back to you soon."})
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
@@ -14,7 +20,25 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        setSubmitted(true)
+        setTimeout(() => setSubmitted(false), 2000)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false);        toast({
+<<<<<<< HEAD
+          title: "Submission Error"
+          description: err.message
+          variant: "destructive"})
+      })
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -24,6 +48,9 @@ fetch("/api/contact", {
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -31,13 +58,26 @@ fetch("/api/contact", {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
+<<<<<<< HEAD
 
 
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+  }
+  },
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -129,7 +169,9 @@ fetch("/api/contact", {
                   <Textarea
                     id="message"
                     name="message"
-
+                    rows = {4,}
+                    value = {formData.message,}
+                    onChange = {handleChange,}
 import { useState } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -386,7 +428,9 @@ if ( {) {
                   <Textarea;
                     id="message";
                     name="message";
-
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -398,9 +442,11 @@ if ( {) {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-
+                    disabled = {isSubmitting,}
+                  >
                     disabled={isSubmitting}
                   >;
+<<<<<<< HEAD
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

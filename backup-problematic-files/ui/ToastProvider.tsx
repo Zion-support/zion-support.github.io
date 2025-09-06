@@ -12,41 +12,31 @@ export type Toast = {
   on_action?: () => void;
   duration_ms?: number;
 }
-
-
+:components/ui/ToastProvider.tsx
+export type ToastContextValue = {toasts: Toast[];
 
 export type ToastContextValue = {
-=======
 ;
 export type ToastContextValue = {;
-=======
 
 export type ToastContextValue = {
-
-
+:backup-problematic-files/ui/ToastProvider.tsx
   toasts: Toast[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:backup-problematic-files/ui/ToastProvider.tsx
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
 }
-
-
+:components/ui/ToastProvider.tsx
 ;
-
-
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
   const removeToast = useCallback((id: string) => {;
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
-
-
+  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
-
-=======
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 
@@ -59,10 +49,8 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:backup-problematic-files/ui/ToastProvider.tsx
+:backup-problematic-files/ui/ToastProvider.tsx
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
@@ -100,11 +88,11 @@ if ( {) {
   return (
     <ToastContext.Provider value={value}>;
       {children}
-
-
+:components/ui/ToastProvider.tsx
+<div className=&quot;fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm&quot;>
       <div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">
-
-
+:backup-problematic-files/ui/ToastProvider.tsx
+:backup-problematic-files/ui/ToastProvider.tsx
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
@@ -119,12 +107,13 @@ if ( {) {
                 t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
 
               }`}
-
-
+:components/ui/ToastProvider.tsx
+>
+              <div className=&quot;flex items-start gap-3&quot;>
             >
               <div className="flex items-start gap-3">
-
-
+:backup-problematic-files/ui/ToastProvider.tsx
+:backup-problematic-files/ui/ToastProvider.tsx
                 <div className={`mt-1 h-2 w-2 rounded-full ${
                   t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
                 }`} />
@@ -136,11 +125,13 @@ if ( {) {
                       {t.actionLabel}
                     </button>;
                   )}
-
+:components/ui/ToastProvider.tsx
+</div>
+                <button onClick={() => removeToast(t.id)} className=&quot;text-xs opacity-60 hover:opacity-100&quot;>×</button>
                 </div>
                 <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/ui/ToastProvider.tsx
+:backup-problematic-files/ui/ToastProvider.tsx
               </div>
             </motion.div>
           ))}

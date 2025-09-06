@@ -53,6 +53,7 @@
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -365,7 +366,7 @@ body::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+
 }
 =======
 =======
@@ -599,14 +600,9 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
   overflow: hidden;
-=======
-.text-gradient-rainbow {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-yellow), var(--neon-green));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
+<<<<<<< HEAD
+=======
 /* Quantum Glow Effects */
 .quantum-glow {
   box-shadow: var(--quantum-glow);
@@ -750,7 +746,7 @@ body::after {
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+
   transition: all 0.3s ease;
 =======
 =======
@@ -1020,7 +1016,7 @@ body::after {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: holographicShift 3s ease-in-out infinite;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+
 }
 =======
 =======
@@ -1196,7 +1192,7 @@ body::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+
   }
 =======
 =======

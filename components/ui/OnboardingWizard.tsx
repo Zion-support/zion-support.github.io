@@ -5,25 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useState } from 'react';
-
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 
@@ -53,32 +48,30 @@ import { useRole } from '../context/RoleContext';
       }
     } catch {}
   }, []);
-
-
-  function completeOnboarding() {;
-    try {;
-      if (typeof window !== 'undefined') {;
-        window && window.localStorage.setItem('zion_has_onboarded', '1');
-
-=======
-        window.localStorage.setItem('zion_has_onboarded1')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  function completeOnboarding() {
+    try {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
-    setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
+    setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
-
-
-=======
-
+    setOpen(false)
     setOpen(false);  }
 
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!open) return null;
 
   return (
@@ -86,9 +79,13 @@ import { useRole } from '../context/RoleContext';
 
 =======
   );
+}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
+          <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
+        </div>
+      </div>
+    </div>
+);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
 export default /**
@@ -251,6 +248,3 @@ if (return null) {
 =======
 
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

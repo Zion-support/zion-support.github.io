@@ -1,23 +1,15 @@
-
-
-=======
-
  export default function AIServices () {
-=======
 export default function AIServices () {
-=======
  export default function AIServices () {
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  opacity: 0, y: 20 
+  opacity: 0, y: 20
+  opacity: 0, y: 20 
 
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
@@ -41,7 +33,7 @@ const aiServices = [
   {
     title: 'AI Consciousness Evolution',
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
-    icon: <Brain className="w-8 h-8 text-cyan-400" />,
+icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-consciousness-evolution-2029',
     features: ['Emotional IntelligenceConsciousness DevelopmentEthical AI Framework']
   };
@@ -81,7 +73,6 @@ const aiServices = [
     features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
 ];
-
 export default function AIServices() {
 
   return (
@@ -133,14 +124,12 @@ export default function AIServices() {
         <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/ai-services" />;
       </Head>;
-
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
         <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />;
         <div className="text-center max-w-4xl mx-auto mb-12">;
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>;
           <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">;
           {tracks && tracks.map((t) => (;
             <div key={t && t.title} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">;
@@ -150,7 +139,6 @@ export default function AIServices() {
             </div>;
           ))}
         </div>;
-
         <div className="max-w-6xl mx-auto mb-20">;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
             {packages && packages.map((p) => (;
@@ -170,10 +158,18 @@ export default function AIServices() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -190,7 +186,6 @@ export default function AIServices() {
                 Comprehensive AI solutions designed to transform your business and accelerate innovation;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {aiServices && aiServices.map((service, index) => (;
                 <motion&& motion.div
@@ -225,18 +220,10 @@ export default function AIServices() {
                   </motion && motion.a>;
                 </motion && motion.div>;
               ))}
+            </div>
+          </div>
+        </section>
 
-            </div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -390,6 +377,7 @@ function AIServices() {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business with AI?;
@@ -419,10 +407,7 @@ function AIServices() {
       </div>;
     </>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   ),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+;
+}

@@ -12,9 +12,9 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
-
-
+    }
     },
+<<<<<<< HEAD
 
 
     {
@@ -25,9 +25,9 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
-
-
+    }
     },
+<<<<<<< HEAD
 
 
     {
@@ -38,9 +38,9 @@ export function PartnerLeaderboard() {
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
-
-
+    }
     },
+<<<<<<< HEAD
 
 
     {
@@ -51,17 +51,75 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
+    }
+    {
+      id: "5"
+      rank: 5
+      name: "Deep Learning Daily"
+      avatar: ""
+      referrals: 87
+      earnings: 2175
 
+      badges: ["newcomer"]
+    }
+  ]
+  // Function to render rank badge
+
+  const renderRankBadge = (rank: number,) => {
+    switch(rank) {
+      case 1:
+        return <Trophy className="h-5 w-5 text-yellow-500" />
+      case 2:
+        return <Medal className="h-5 w-5 text-gray-400" />
+      case 3:
+        return <Medal className="h-5 w-5 text-amber-700" />
+      default:
+        return <span className="text-sm font-semibold">{rank}</span>
+}
+
+  )
+}
+    },
+    },
+    {
+      id: "5",
+      rank: 5,
+      name: "Deep Learning Daily",
+      avatar: "",
+      referrals: 87,
+      earnings: 2175,
+      badges: ["newcomer"]
+    }
+  ]
+  // Function to render rank badge
+  const renderRankBadge = (rank: number,) => {
+    switch(rank) {
+      case 1:
+        return <Trophy className="h-5 w-5 text-yellow-500" />
+      case 2:
+        return <Medal className="h-5 w-5 text-gray-400" />
+      case 3:
+        return <Medal className="h-5 w-5 text-amber-700" />,
+      default:
+        return <span className="text-sm font-semibold">{rank}</span>;
+};
+  );
+};
+}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Crown, Medal, Trophy } from 'lucide-react';
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
   name: string,;
-  avatar?: string;
+  avatar?: string,;
   referrals: number,;
   earnings: number,;
   badges: string[];
 }
-
+;
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -73,7 +131,7 @@ export function PartnerLeaderboard() {;
       referrals: 178,;
       earnings: 4500,;
       badges: ["gold", "trending"];
-    };
+    },;
     {;
       id: "2",;
       rank: 2,;
@@ -82,7 +140,7 @@ export function PartnerLeaderboard() {;
       referrals: 145,;
       earnings: 3625,;
       badges: ["silver"];
-    };
+    },;
     {;
       id: "3",;
       rank: 3,;
@@ -91,7 +149,7 @@ export function PartnerLeaderboard() {;
       referrals: 124,;
       earnings: 3100,;
       badges: ["bronze"];
-    };
+    },;
     {;
       id: "4",;
       rank: 4,;
@@ -100,7 +158,7 @@ export function PartnerLeaderboard() {;
       referrals: 98,;
       earnings: 2450,;
       badges: [];
-    };
+    },;
     {;
       id: "5",;
       rank: 5,;
@@ -110,17 +168,16 @@ export function PartnerLeaderboard() {;
       earnings: 2175,;
       badges: ["newcomer"];
     }
-  ];
-
+  ],;
   // Function to render rank badge;
-  const renderRankBadge = (rank: number,) => {;
+  const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
-        return <Trophy className="h-5 w-5 text-yellow-500" />;
+        return <Trophy className="h-5 w-5 text-yellow-500" />,;
       case 2:;
-        return <Medal className="h-5 w-5 text-gray-400" />;
+        return <Medal className="h-5 w-5 text-gray-400" />,;
       case 3:;
-        return <Medal className="h-5 w-5 text-amber-700" />,;
+        return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
         return <span className="text-sm font-semibold">{rank}</span>;
 

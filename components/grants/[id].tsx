@@ -1,16 +1,12 @@
-
-
-=======
-
+import { useEffect, useState  } from 'react';
+import { useRouter  } from 'next/router';
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
-
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
+export default function GrantDetailPage() {
 
 export default function GrantDetailPage() {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -20,14 +16,20 @@ export default function GrantDetailPage() {;
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
-
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!id) return;
     setLoading(true);
+    fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));  }, [id]);
+  const addUpdate = async () => {
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
 
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -49,7 +51,6 @@ export default function GrantDetailPage() {;
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r && r.json()).then((d) => setItem(d && d.record)).finally(() => setLoading(false));
   }, [id]);
-
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;
     const resp = await fetch(`/api/grants/${id}/updates`, {;
@@ -64,9 +65,7 @@ export default function GrantDetailPage() {;
       setUpdateContent('');
     }
   };
-
   if (loading);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <EnhancedLayout>;
         <div>Loading...</div>;
@@ -78,7 +77,6 @@ export default function GrantDetailPage() {;
         <div>Not found</div>;
       </EnhancedLayout>;
     );
-
   return (
 
 import {useEffect, useState} from 'react';
@@ -191,7 +189,6 @@ if (
           </span>;
         </div>;
       </div>;
-
       <div className='grid md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
@@ -216,6 +213,7 @@ if (
                         className='text-blue-600'
                         href={l}
                         target='_blank'
+<<<<<<< HEAD
                         rel='noreferrer'>;
                         {l}
                       </a>;
@@ -254,8 +252,7 @@ if (
             </div>
           </section>
         </div>
-
-        <aside className="space-y-4">
+<aside className="space-y-4">
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Milestones</h3>
             <ul className="space-y-2">
@@ -282,14 +279,12 @@ if (
         </aside>
       </div>
     </EnhancedLayout>
-
-
+);
     </EnhancedLayout>
   );
-
-
 }
 =======
+<<<<<<< HEAD
               {(!item && item.milestones || item && item.milestones.length === 0) && (;
                 <div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
@@ -300,7 +295,6 @@ if (
               Funds Released: {item && item.fundsReleased || 0}
             </div>;
           </section>;
-
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
             <h3 className='font-medium mb-2'>Team</h3>;
             <div className='text-sm whitespace-pre-wrap'>{item && item.teamInfo}</div>          </section>                  <div>;
@@ -315,7 +309,6 @@ if (
             </ul>;
             <div className="mt-3 text-sm">Funds Released: {item && item.fundsReleased || 0}</div>;
           </section>;
-
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">;
             <h3 className="font-medium mb-2">Team</h3>;
             <div className="text-sm whitespace-pre-wrap">{item && item.teamInfo}</div>;
@@ -325,12 +318,8 @@ if (
     </EnhancedLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
               Incubated by Zion;
             </span>)}
@@ -473,3 +462,12 @@ if (
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,22 +1,32 @@
 
-import { MapPin  } from './lucide-react';
-import { PaymentButton  } from '@/components / transactions / PaymentButton';
-import { CountryPricing  } from '@/data / onsiteServicePricing';
-import { toast  } from '@/hooks / use - toast';
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {MapPin} from "lucide-react";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+import { MapPin } from "lucide-react",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
 
+  const handlePaymentInitiated = () => {
+    toast({
+      title: "Processing your request"
+      description:
+        "You'll be redirected to our secure payment portal momentarily."
+    });
+  }
 
       title: "Processing your request",
-
-
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
+  
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -25,8 +35,6 @@ interface PaymentSectionProps {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
-
-
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -50,9 +58,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
@@ -93,15 +98,14 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}
-
-      />;
-      <p className="text-xs text-zion-slate-light mt-2">;
-        Price includes transportation and first hour onsite. Additional hours billed separately.;
-      </p>;
-    </div>;
+      />
+      <p className="text-xs text-zion-slate-light mt-2">
+        Price includes transportation and first hour onsite. Additional hours
+        billed separately.
+      </p>
+    </div>
   );
-=======
-
+}
   )
 
 }
@@ -120,6 +124,3 @@ function PaymentSection() {
     });
   }
 ;
-
-
-

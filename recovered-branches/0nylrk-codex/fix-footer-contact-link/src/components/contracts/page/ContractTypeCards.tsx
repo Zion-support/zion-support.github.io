@@ -1,55 +1,39 @@
 
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-} from "@/components/ui/card";
-
-
-import { Button  } from '@/components / ui / button';
-import {
-=======
-
 import { Button } from "@/components/ui/button";
 import {
-
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+  CardTitle,;
+} from "@/components/ui/card";
+import { FileText, ShieldCheck } from "lucide-react";
 
-interface ContractTypeCardsProps {;
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, ShieldCheck } from "lucide-react",
 
+import { FileText, ShieldCheck } from "lucide-react";
+interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void
 }
-
-  CardTitle,;
-
-} from "@/components/ui/card";
-
-import { FileText, ShieldCheck } from "lucide-react";
-
-
-
-
-
-interface ContractTypeCardsProps {
-
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {
   onStandardClick: () => void,
   onSmartClick: () => void
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -76,12 +60,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
-
-
       
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -107,17 +86,17 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
-
-
-export function ContractTypeCards(): any ({;
-  onStandardClick,;
-  onSmartClick,;
-}: ContractTypeCardsProps) {;
-  return (
-=======
-
-
-=======
+          <Button
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+            onClick={onSmartClick}
+          >
+            Create Smart Contract
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  );
+}
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -207,12 +186,7 @@ function ContractTypeCards() {
           </Button>;
         </CardFooter>;
       </Card>;
-
-    </div>);
-
+    </div>;
+  );
 }
-=======
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

@@ -1,17 +1,19 @@
 
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 
-
+import { HelpCategory } from "./types";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
-
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -36,16 +38,8 @@ export function HelpCategoryList({
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HelpCategory} from "./types";
-interface HelpCategoryListProps {;
-  categories: HelpCategory[],;
-  onCategorySelect: (categoryId: string) => void,;
-  searchQuery: string;
-}
-=======
-
+      );
+    : categories;
       )
     : categories,
 
@@ -94,7 +88,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
-
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -174,9 +167,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>
           </CardContent>
         </Card>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
 
     </div>;

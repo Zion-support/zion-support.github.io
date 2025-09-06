@@ -526,7 +526,13 @@ body::after {
 <<<<<<< HEAD
 /* Advanced Card Hover Effects */
 .futuristic-card {
-=======
+  position: relative;
+/* Advanced Card Hover Effects */
+.futuristic-card {  position: relative;
+
+/* Advanced Card Hover Effects */
+.futuristic-card {
+
 @keyframes holographicWave {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
   50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
@@ -671,7 +677,7 @@ body::after {
 
 /* Enhanced Button Effects */
 .quantum-button {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+
   position: relative;
 =======
 <<<<<<< HEAD
@@ -862,12 +868,14 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 .futuristic-card::before {
-=======
-/* Advanced Futuristic Effect Classes */
-.quantum-pulse {
-  animation: quantumPulse 4s ease-in-out infinite;
-}
 
+<<<<<<< HEAD
+  content: '';
+.futuristic-card::before {  content: '';
+
+  content: '';
+
+=======
 .holographic-flow {
   animation: holographicFlow 6s ease-in-out infinite;
 }

@@ -1,13 +1,13 @@
-
-
+:jest.setup.ts
+// Jest setup file for testing environment
+import '@testing-library/jest-dom';
 // Jest.setup utility
 export const Jest.setup = () => {
   // Implementation here
   return null;
 };
 
-
-
+:backup-problematic-files/jest.setup.ts
 // Mock global objects that might not be available in test environment
 
 

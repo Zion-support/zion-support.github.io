@@ -1,4 +1,4 @@
-// SEO Meta Tags Configuration;
+// SEO Meta Tags Configuration
 export const defaultSEO = {
 
     type: 'website',
@@ -50,7 +50,12 @@ export const defaultSEO = {
     },
   ],
 }
+<<<<<<< HEAD
 export default defaultSEO;
+=======
+<<<<<<< HEAD
+export default defaultSEO
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 export default defaultSEO;

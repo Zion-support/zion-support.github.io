@@ -1,17 +1,33 @@
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import CommunityPage from "../pages/CommunityPage",
+import ForumCategoryPage from "../pages/ForumCategoryPage",
+import ForumPostPage from "../pages/ForumPostPage",
+import CreatePostPage from "../pages/CreatePostPage",
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import EditPostPage from "../pages/EditPostPage",
+import CommunityProfilePage from "../pages/CommunityProfilePage",
 const CommunityRoutes = () => {
-=======
-const CommunityRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <Routes>;
+    <Routes>
       {/* Public routes */}
-
-=======
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -27,9 +43,13 @@ const CommunityRoutes = () => {;
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default CommunityRoutes;
 
-
-=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -97,7 +117,3 @@ const CommunityRoutes = () =>: any {
 =======
 },;
 export default CommunityRoutes;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

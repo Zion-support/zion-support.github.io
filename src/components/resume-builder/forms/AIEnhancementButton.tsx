@@ -6,9 +6,30 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+      return;
+    }
 
-
-
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent,
+      enhancementType,
+      context
+    )
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
       return
     }
     setError(null)
@@ -87,6 +108,7 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
   }
 
 
@@ -95,26 +117,41 @@ if ( {) {
 
   },
   
+<<<<<<< HEAD
 
   return (
-
-
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
       onClick={handleEnhance}
       disabled={isEnhancing}
-
-
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-
-
         <Sparkles className="h-3 w-3" />
       )}
-
-      <span className="text-xs">{buttonText}</span>;
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
     </Button>;
-  );
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
 
     <Button;

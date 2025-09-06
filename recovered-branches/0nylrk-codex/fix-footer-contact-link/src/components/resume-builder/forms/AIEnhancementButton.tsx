@@ -1,12 +1,12 @@
 
-
-
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-
-
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -14,20 +14,20 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import {useState} from 'react';
-import {Button} from '@/components / ui / button';
-import {Sparkles, Loader2} from 'lucide-react';
+  buttonText?: string;
+  className?: string
+}
+export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
-
-
   currentContent;
   enhancementType;
   context;
   onEnhanced;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   buttonText = "Enhance with AI";
 
@@ -48,6 +48,7 @@ export function AIEnhancementButton({;
       context;
     );
 
+<<<<<<< HEAD
 
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
@@ -55,9 +56,7 @@ export function AIEnhancementButton({;
   };
 
 
-=======
-
-=======
+  buttonText = "Enhance with AI";
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -77,7 +76,6 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -88,11 +86,30 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-
-
+    
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context
+    );
+    
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  };
+;
+    setError(null),;
+    const enhancedContent = await enhanceContent(;
+      currentContent,;
+      enhancementType,;
+      context;
+    );
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Button
       type="button"
@@ -106,13 +123,10 @@ export function AIEnhancementButton({
       ) : (;
         <Sparkles className="h-3 w-3" />;
       )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
-=======
-
-
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
+}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -132,6 +146,3 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
-
-
-

@@ -1,8 +1,5 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -16,7 +13,6 @@ import path from 'path';
 
 
     res.status(200).json({ ok: true })
-=======
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),
@@ -28,9 +24,7 @@ import path from 'path';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
-
 }
-
 }
 
 =======
@@ -76,6 +70,7 @@ function handler() {
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
     res.status (200).json ({ ok: true });
   });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

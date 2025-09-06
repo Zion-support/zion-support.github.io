@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -21,6 +21,7 @@ export default async function handler(
   if (!conn) return res && res.status(404).json({ error: "Connection not found" });
   const now = Date && Date.now();
   writeState((s) => {
+<<<<<<< HEAD
 
     s && s.logs.push({
       id: `${now}-${providerId}-resync`,
@@ -42,11 +43,6 @@ function handler() {
 
 }
 
-=======
-=======
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -79,17 +75,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if (target.lastSyncAt = now) {
   $2
 }
-  });
-  res.status (200).json ({ ok: true });
-}
-
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

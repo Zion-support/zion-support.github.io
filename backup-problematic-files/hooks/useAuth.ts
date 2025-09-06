@@ -7,10 +7,9 @@ interface User {
   email: string;
   name: string;
 }
-
+export const useAuth = () => {
 
 export const useAuth = () => {;
-
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

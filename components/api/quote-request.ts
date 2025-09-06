@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
@@ -28,7 +27,6 @@ const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabase
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const openaiApiKey = process.env.OPENAI_API_KEY;
-=======
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase =
@@ -40,8 +38,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== "POST");
+    return res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
@@ -80,18 +78,16 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
-
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';
 import OpenAI from './openai';
@@ -162,6 +158,13 @@ if ( {) {
               .filter (Boolean);
           : [];
       }
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       let saved: any = null;
       // Check condition
 if ( {) {
@@ -196,12 +199,17 @@ if (throw error) {
       return res.status (500).json ({ message: "Server error" });
     }
     return res.status (500).json ({ message: "Server error" });
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return res
+      .status(200)
+      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+  } catch (e: any) {
+    console.error('quote-request error', e);
+    return res.status(500).json({ message: 'Server error' });
+  }

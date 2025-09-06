@@ -1,90 +1,77 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
-interface MainNavigationProps {;
-
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-}
-
-export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation();
-
-
-
-
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
 }
 
-
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const location = useLocation(),
+  
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
-
-
+    }
     },
-
-
     {
       name: "Marketplace"
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
-
-
+    }
     },
-
-
     {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
-
-
+    }
     },
-
-
     {
       name: "Talent"
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
-
-
+    }
     },
-
-
     {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
-
-
+    }
     },
-
-
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
-
-
+  ];
   ],
   
-
-
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -116,7 +103,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -197,8 +183,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-
-
               )}
             >
               {link.name}
@@ -215,16 +199,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
+                location.pathname === "/messages" |location.pathname === "/inbox"
 
-
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
-                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
-
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -233,17 +212,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
-
-
-
+                </span>
+              )}
+            </Link>
+          </li>
                 </span>;
               )}
             </Link>;
           </li>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       </ul>;

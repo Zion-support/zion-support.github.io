@@ -44,34 +44,42 @@ docsSearchSuggestions;
 
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { cn } from "@/lib/utils",
-
 import {
  getDocsSearchPath,
  docsSearchSuggestions
-
+} from "@/data/docsSearchData"
 } from "@/data/docsSearchData",
 
+<<<<<<< HEAD
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
+<<<<<<< HEAD
 
 
+=======
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
+<<<<<<< HEAD
 
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
+<<<<<<< HEAD
 
 
   const navigationItems = [
-
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -111,8 +119,22 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     { title: "Sample Code", path: "/docs/sample-code" },;
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
-
-
+    const path = getDocsSearchPath(suggestion.text);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const path = getDocsSearchPath(searchValue);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+  }
+  return (
+    <div className="flex min-h-screen bg-zinc-950">
+     {/* Sidebar */}
+     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
     const path = getDocsSearchPath(suggestion.text),;
     if (path) {;
       router.push(path),;
@@ -131,6 +153,7 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+<<<<<<< HEAD
 
 
       <Link href="/developers/docs" className="flex items-center mb-8">
@@ -154,12 +177,15 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
        <form onSubmit={handleSubmit} className="relative">;
         <Search className="absolute left-2 top-2 && 2.5 h-4 w-4 text-zinc-500" />;
         <EnhancedSearchInput
-
-
+         value = {searchValue,}
+         onChange = {setSearchValue,}
+         onSelectSuggestion = {handleSelectSuggestion,}
+         searchSuggestions = {docsSearchSuggestions,}
          value={searchValue}
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
+<<<<<<< HEAD
 
 
          placeholder="Search documentation"
@@ -175,9 +201,8 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          key={item && item.path}
          href={item && item.path}
          className={cn(
-
-          currentPath === item && item.path
-
+          "block px-3 py-2 rounded-md text-sm"
+          currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
@@ -190,6 +215,7 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
+<<<<<<< HEAD
 
          {item.title}
         </Link>
@@ -202,11 +228,9 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
      {/* Main content */}
      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
       {children}
-
-     </div>;
-    </div>;
-  );
-
+     </div>
+    </div>
+  )
 }
 }
 /* Sidebar */ "
@@ -217,11 +241,16 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }</nav> </div> {
   /* Main content */ "
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   children
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
 
+<<<<<<< HEAD
 
 };
 /* Sidebar */ ";
@@ -329,6 +358,7 @@ if ( {) {
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
+<<<<<<< HEAD
 
      </div>;
     </div>;

@@ -1,36 +1,53 @@
-
-
+import React, {
+  createContext
+  useContext
+  useEffect
+  useMemo
+  useState;} from 'react';} from 'react';
+export type UserRole = 'client' | 'talent';
+export type User = {
+  createContext,
+  useContext,
+  useEffect,
   useMemo,;
   useState,;} from 'react';} from 'react';
 
 export type UserRole = 'client' | 'talent';
 
-
-
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
-
 export type User = {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
   onboardingCompleted: boolean;
-
+}
+export type UserContextValue = {
+  user: User | null;
+  setUser: (user: User | null) => void;
+  logout: () => void;
+  completeOnboarding: () => void;};}
 };
 
+}
+;
 export type UserContextValue = {;
+  user: User | null;
+  setUser: (user: User | null) => void;
+  logout: () => void;
+  completeOnboarding: () => void;};};
 
-=======
-  create_context,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,} from 'react';} from 'react';
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {
+  id: 'u_001'
+  name: 'Jordan Lee'
+  role: 'client'
+  onboardingCompleted: false
+}
+export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    try {
 ;
 export type UserRole = 'client' | 'talent';
 ;
@@ -47,11 +64,20 @@ export type UserContextValue = {
   user: User | null;
   set_user: (user: User | null) => void;
   logout: () => void;
-
-
-=======
-
-
+  completeOnboarding: () => void;
+}
+;
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {;
+  id: 'u_001',;
+  name: 'Jordan Lee',;
+  role: 'client',;
+  onboardingCompleted: false}
+;
+export function UserProvider({ children }: { children: React.ReactNode }) {;
+  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {;
+    try {;
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
@@ -63,10 +89,7 @@ export type UserContextValue = {
       setUser(DEFAULT_USER);
     }
   }, []);
-
-
-
-
+<<<<<<< HEAD
 
   useEffect(() => {
     try {
@@ -88,6 +111,7 @@ export type UserContextValue = {
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
+<<<<<<< HEAD
 
 
   useEffect(() => {;
@@ -105,13 +129,12 @@ export type UserContextValue = {
         setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    }),;
     [user];
   );
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
 
-  return <UserContext && UserContext.Provider value={value}>{children}</UserContext && UserContext.Provider>;
-=======
-
-
-
-=======
   useEffect(() => {;
     try {;
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -123,9 +146,6 @@ export type UserContextValue = {
     setUser;
     logout: () => setUser(null);
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
-
-
-
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -134,75 +154,5 @@ export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
-
-=======
-        setUser(prev =>
-          prev
-            ? {
-                ...prev,
-                onboardingCompleted: true
-              }
-            : prev
-        )
-    }),
-    [user]
-  );
-
-  return (
-    <UserContext.Provider value={value}>
-      {children}
-    </UserContext.Provider>
-  );
 }
-
-export function useUser() {
-  const ctx = useContext(UserContext);
-  if (!ctx) {
-    throw new Error('useUser must be used within UserProvider');
-  }
-  return ctx;
 }
-
-=======
-        set_user (DEFAULT_USER);
-      }
-    } catch {
-      set_user (DEFAULT_USER);
-    }
-  }, []);
-;
-  useEffect (() => {
-    try {
-      if (local_storage.set_item ('zion.user', JSON.stringify (user))) {
-  $2
-}
-      else local_storage.remove_item ('zion.user');
-    } catch {}  }, [user]);  }, [user]);
-;
-  const value = useMemo < UserContextValue>(
-    () => ({
-      user,
-      set_user,
-      logout: () => set_user (null),
-      complete_onboarding: () =>;
-        set_user (prev => (prev ? { ...prev, onboarding_completed: true } : prev)),    }),    }),
-    [user]);
-;
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
-;
-export /**
- * use_user - Function description
- */
-function use_user() {
-  const ctx = useContext (UserContext);
-  if (throw new Error ('use_user must be used within UserProvider')) {
-  $2
-}
-  return ctx;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

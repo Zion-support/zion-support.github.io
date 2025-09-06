@@ -5,12 +5,8 @@ return (
           variant='ghost'
           size='sm'
           className='mr-2'
-          onClick={() => router && router.back()} // Changed to router && router.back()        >;
-          <ArrowLeft className='h-4 w-4 mr-1' />;
-          Back;
-        </Button>;
-        <h1 className='text-2xl md:text-3xl font-bold truncate max-w-xl'>;
-          {title}
+          onClick={() => router.back()} // Changed to router.back()        >
+          <ArrowLeft className='h-4 w-4 mr-1' />
 
         </h1>;
       </div>;
@@ -19,5 +15,11 @@ return (
 
   )
 
+import React from 'react',;
+import { useRouter } from 'next/router',;
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+interface ProjectHeaderProps {;
+  title: string;
 }
 ;

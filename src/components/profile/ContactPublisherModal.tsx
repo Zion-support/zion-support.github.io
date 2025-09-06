@@ -1,13 +1,17 @@
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
-
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
-
-
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -24,8 +28,8 @@ import { Input } from '@/components/ui/input'
   FormMessage
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -90,7 +94,7 @@ import api from '@/services / api_client';
   publisher_email?: string;
   product_id?: string;
 type FormValues = {
-  subject: string;
+  subject: string
   message: string }
 
   subject: string,
@@ -145,9 +149,9 @@ if ( {) {
       return;
 
     }
-    const values = form.get_values ();
-    setIsSubmitting (true);
-    set_error (null);
+    const values = form.getValues()
+    setIsSubmitting(true)
+    setError(null)
     try {
 
       await api.post ('/api / messages', {
@@ -160,16 +164,13 @@ if ( {) {
       on_close () } finally {      on_close ();
 
     } finally {
-      setIsSubmitting (false);
+      setIsSubmitting(false)
     }
   }
-  const handleKeyDown = (e: React.KeyboardEvent, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.stop_propagation ();
-      on_close ();
+  const handleKeyDown = (e: React.KeyboardEvent,) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation()
+      onClose()
   }
 import React from 'react';
 import FocusLock from 'react-focus-lock';
@@ -286,10 +287,9 @@ import { LoginModal } from '@/components/auth/LoginModal';
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
-      onClose()
+      onClose();
     }
-  };
-
+  },
 
   return (
     <>
@@ -301,9 +301,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
-
-
-
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -313,13 +310,20 @@ import { LoginModal } from '@/components/auth/LoginModal';
             </DialogTitle>
           </DialogHeader>
           {error && <p className="text-red-500 mb-2">{error}</p>}
-          {publisherEmail && (;
-            <div className="mb-4 text-zion-slate-light">;
-            <span className="block">Email:</span>;
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
+          {publisherEmail && (
+            <div className="mb-4 text-zion-slate-light">
+            <span className="block">Email:</span>
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
-
-
+            </a>
+          </div>
+        )}
+        <Form {...form}>
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
+            <FormField
+              control = {form.control,}
+              name="subject"
+              render={({ field }: { field: any },) => (                <FormItem>
             </Link>
           </div>
         )}
@@ -330,51 +334,68 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
-
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage className="text-red-500" />;
-                </FormItem>;
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-500" />
+                </FormItem>
               )}
-
-
-
+            />
+            <FormField
+              control = {form.control,}
+              name="message"
+              render={({ field }: { field: any },) => (                <FormItem>
             />;
             <FormField
-              control = {form && form.control,}
+              control = {form.control,}
               name="message"
 
               render={({ field }: { field: any }) => (
                 <FormItem>
-
-
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage className="text-red-500" />;
-                </FormItem>;
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-500" />
+                </FormItem>
               )}
-
-              disabled = {!form && form.formState.isValid || isSubmitting,}>;
-              <SendIcon className="mr-2" />;
+            />
+            <Button
+              onClick = {handleSend,}
+              className="w-full"
+              disabled = {!form.formState.isValid |isSubmitting,}            >
+              <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
+=======
+            </Button>
+          </form>
+        </Form>
+        </DialogContent>
+      </FocusLock>
+    </Dialog>
+    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+<<<<<<< HEAD
+    </>
+  ) </>
+  )
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </>;
   ) </>;
   );
 };
+<<<<<<< HEAD
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
@@ -442,6 +463,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
+<<<<<<< HEAD
 
 
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;

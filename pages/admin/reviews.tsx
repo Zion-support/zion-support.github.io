@@ -1,11 +1,77 @@
+import React, { useEffect, useState } from 'react',;
+import type { NextPage } from 'next',;
+import type { Review } from '../../types/reviews',;
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
 
-    if (res.ok) refresh()
-=======
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews'),
+    const data = await res.json(),
+    if (res.ok) {
+      setAll(data.reviews),
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
+const AdminReviewsPage: NextPage = () => {
+  const [pending, setPending] = useState<Review[]>([])
+  const [all, setAll] = useState<Review[]>([])
+  const [adminKey, setAdminKey] = useState('')
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews')
+    const data = await res.json()
+    if (res.ok) {
+      setAll(data.reviews)
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
   }
+  useEffect(() => { refresh() }, [])
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {
+    const res = await fetch('/api/reviews/moderate', {
+      method: 'POST'
+      headers: {
+        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
+      body: JSON.stringify({ action, reviewId })})
+    if (res.ok) refresh()
+  }
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
+const AdminReviewsPage: NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
+  async function refresh() {;
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
+    if (res.ok) {;
+      setAll(data.reviews);
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -37,18 +103,26 @@
       </section>
     </main>
   )
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}
+export default AdminReviewsPage;
 
 },
 export default AdminReviewsPage,
+},
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default AdminReviewsPage;
 
 =======
 },
-
 export default AdminReviewsPage,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AdminReviewsPage,;
+export default AdminReviewsPage,

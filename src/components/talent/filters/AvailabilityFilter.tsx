@@ -2,12 +2,9 @@ return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
-
-
+        className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
-
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -40,6 +37,7 @@ function AvailabilityFilter() {
 
 
       
+<<<<<<< HEAD
 
       {expanded && (
         <div className='mt - 4 space - y-2'>;
@@ -70,11 +68,11 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-]
+],
 
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
@@ -104,6 +102,8 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -111,7 +111,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;
@@ -192,6 +192,7 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
+<<<<<<< HEAD
 
 
   { id: "project", label: "Project-based" }
@@ -222,12 +223,35 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
-
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {option.label}
+              ">
+              </label>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+  toggleSection
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
+}</button> {
+  AVAILABILITY OPTIONS.map (option => (<div key= {
+  option.id "
+}className="flex items-center" > <Checkbox > {
+  option.label
+}</label> </div>) )
+}</div>)
+}</div>)
+}"}
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
+<<<<<<< HEAD
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;

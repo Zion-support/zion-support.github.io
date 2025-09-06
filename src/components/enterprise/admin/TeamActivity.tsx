@@ -105,7 +105,19 @@ export function TeamActivity() {;
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
+  }
+  },
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -292,6 +304,7 @@ const getCategoryBadge = (category: string) =>: any {
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
+<<<<<<< HEAD
 
   activity.id;
 }> </TableCell> </TableRow>) ) ";
@@ -305,8 +318,8 @@ const getCategoryBadge = (category: string) =>: any {
           </TableBody>
         </Table>
       </div>
-
       
+<<<<<<< HEAD
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">

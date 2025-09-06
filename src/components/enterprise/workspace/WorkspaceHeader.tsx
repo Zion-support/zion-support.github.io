@@ -3,6 +3,24 @@ import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+=======
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { type Company } from './CompanyDashboard'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Bell, Users, Settings } from 'lucide-react'
+interface WorkspaceHeaderProps {
+  company: Company
+=======
+interface WorkspaceHeaderProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   company: Company;
 
 
@@ -15,9 +33,6 @@ interface WorkspaceHeaderProps {
   company: Company
 }
 
-
-
-
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>;
@@ -25,11 +40,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className='flex items-center gap-4'>;
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>;
             <img
-
-
+              src={company.logoUrl |'/placeholder.svg'}
               src={company.logoUrl || '/placeholder.svg'}
-
-
               alt={company.name}
               className='max-h-10 max-w-10'
               loading='lazy'            />
@@ -121,6 +133,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             />
           </div>
           <div>
+<<<<<<< HEAD
 
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
@@ -129,6 +142,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             />
           </div>
           <div>
+<<<<<<< HEAD
 
 
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
@@ -137,6 +151,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 
@@ -146,10 +161,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
           </Button>
-
-
-
-
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
@@ -158,11 +169,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </Button>
         </div>
       </div>
-
-
       
-
-
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -178,8 +185,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
     </div>
-
-
+  )
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
@@ -206,8 +212,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 };
-
-
 }
               src={company && company.logoUrl || "/placeholder && placeholder.svg"}
               alt={company && company.name}
@@ -284,6 +288,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
   );
 }

@@ -1,6 +1,7 @@
 // Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import { Button  } from '@/components / ui / button';
@@ -33,9 +34,9 @@ function ResumeSelector() {
       setIsLoading(true),
 
       try {
-        await fetch_resume ();
+        await fetchResume()
       } catch (error) {
-        logErrorToProduction ('Error loading resumes:', { data: error });
+        logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
 
 import { ResumePreviewCard } from './ResumePreviewCard';
@@ -54,11 +55,19 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   const { resume, fetchResume } = useResume();
 
         setIsLoading(false)
+      }
+    }
+            return;
+      }
+}
 
+  )
+}
   ;
 };
   );
 };
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -82,9 +91,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const { resume, fetchResume } = useResume(),;
 
   // Fetch resume data when component mounts;
-  useEffect((,) => {;
+  useEffect(() => {;
     const loadResumes = async () => {;
-      setIsLoading(true);
+      setIsLoading(true),;
       try {;
         await fetchResume();
       } catch (error) {;
@@ -92,9 +101,23 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       } finally {;
         setIsLoading(false);
       }
-    };
-
-            return;
+    },;
+    loadResumes();
+  }, [fetchResume]),;
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;
+      const options: ResumeOption[] = [{;
+        id: resume.id || 'current',;
+        title: resume.basic_info.title,;
+        type: 'ai_resume',;
+        resume: resume;
+      }],;
+      setResumeOptions(options),;
+      // Pre-select the most recent resume;
+      if (options.length > 0 && selectedOption === 'recent' && options[0]) {;
+        setSelectedResume(options[0]),;
+        onResumeSelected(options[0]);
       }
 
 }
@@ -104,5 +127,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
   )
 }
+<<<<<<< HEAD
 
 ;

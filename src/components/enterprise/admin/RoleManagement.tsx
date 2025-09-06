@@ -2,12 +2,25 @@ export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
+=======
+=======
+import React from 'react'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -17,6 +30,7 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
+<<<<<<< HEAD
 } from '@/components / ui / tooltip';
 export /**
  * RoleManagement - Function description
@@ -25,16 +39,19 @@ function RoleManagement() {
   // Mock team members data;
   const team_members = [;
     {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true,
-      },
-    },
-
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true
+      }
+    }
     {
       id: 2
       name: 'Jamie Smith'
@@ -246,15 +263,56 @@ export function RoleManagement() {;
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
+        manageBilling: false,
+      },
+    },
+  ]
+  const handlePermissionChange = (
+    _memberId: number,
+    permission: string,
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated',
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings',
+    Recruiter: 'Can manage candidates and job postings',
+    Manager: 'Can view candidates and create jobs',
+    Viewer: 'Read-only access to candidates',
+  }
+        manageBilling: false}}],
 
 
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
 
-
-
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="space-y-6">
       <div>
-
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -263,13 +321,16 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
 
             </div>
           ))}
-
-
+        </div>
+      </div>
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
+<<<<<<< HEAD
 
 
         <Table>
@@ -355,10 +416,10 @@ export function RoleManagement() {;
             </TableRow>
           </TableHeader>
           <TableBody>
-
-
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
 
 
                 <TableCell>
@@ -378,13 +439,11 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-
-
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-
+                    aria-label='View candidates'
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -737,6 +796,7 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+<<<<<<< HEAD
 
 
                     checked={member.permissions.viewCandidates}
@@ -801,13 +861,26 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View billing'
+<<<<<<< HEAD
 
                     checked={member.permissions.viewBilling}
-
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'viewBilling', checked)
+                    }                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
@@ -824,6 +897,7 @@ export function RoleManagement() {;
   );
 
 }
+<<<<<<< HEAD
 
 
 

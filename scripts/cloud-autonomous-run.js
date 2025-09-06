@@ -129,66 +129,34 @@ async function main() {
       // non-fatal
     }
   } catch {}
+<<<<<<< HEAD
 
-async /**
- * generateIdeasIfPossible - Function description
- */
-function generateIdeasIfPossible() {
-  // Check condition
-if (return null, ) {
-  $2
-}
-  const client = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
-  const prompt = `Invent 5 new, practical, cloud - autonomous automations for a Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
-  const resp = await client.chat.completions.create ({
-    model: process.env.OPENAI_MODEL || 'gpt - 4o - mini',
-    messages: [;
-      { role: 'system', content: 'You design pragmatic engineering automations.' },
-      { role: 'user', content: prompt }],
-    temperature: 0.3}),
-  const text = resp.choices?.[0]?.message?.content || '[]',
-  const ideas_path = path.join (IDEAS_DIR, `ideas-${new Date ().toISOString ().slice (0, 10)}.json`),
-  fs.writeFileSync (ideas_path, text.trim ()),
-  return ideas_path;
-}
-async /**
- * main - Function description
- */
-function main() {
-  ensure_dirs (),
-  const automations = list_automations (),
-  // Minimal status update;
-  const status = write_status (automations, { note: 'Cloud autonomous run executed' }),
-  // Feedback analysis;
+  // Generate automation ideas if key present
   try {
-    // Prefer spawning: node scripts / analyze - feedback.js;
-    const { spawn_sync } = require ('child_process'),
-    const r = spawn_sync (process.exec_path, ['scripts / analyze - feedback.js'], { stdio: 'inherit' }),
-    // Check condition
-if ( {) {
-  $2
-}
-      // non - fatal;
-    }
+    await generateIdeasIfPossible()
   } catch {}
+  console.log('Cloud autonomous run complete:', status.updatedAt)
+}
+
+main().catch((e) => { console.error(e), process.exit(1) });
+
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
   // Generate automation ideas if key present;
+  try {;
+    await generateIdeasIfPossible();
+  } catch {}
 
   try {
     await generateIdeasIfPossible ();
   } catch {}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
 }
-
-main().catch((e) => { console && console.error(e), process && process.exit(1) }),
-
-=======
-  console.log ('Cloud autonomous run complete:', status.updated_at);
-}
-main ().catch ((e) => { console.error (e), process.exit (1) }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+main().catch((e) => { console.error(e), process.exit(1) }),;

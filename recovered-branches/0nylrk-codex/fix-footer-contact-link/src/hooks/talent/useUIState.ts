@@ -1,10 +1,10 @@
 
-
+import { useState  } from 'react';
+import { TalentProfile } from '@/types/talent';
+export function useUIState() {
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
-
-
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
@@ -52,8 +52,6 @@ function useUIState() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
-
-=======
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -86,10 +84,6 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expandedSections;
     toggleSection;
 

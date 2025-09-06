@@ -1,10 +1,12 @@
 
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
-import {Textarea} from '@/components/ui/textarea';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
+import { Textarea  } from '@/components/ui/textarea';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementPanelProps {
 
 interface AIEnhancementPanelProps {;
   title: string,;
@@ -15,17 +17,11 @@ interface AIEnhancementPanelProps {;
   showInstructions?: boolean;
   initialContent?: string;
 }
-
-
-export function AIEnhancementPanel(): any ({;
-
-=======
+export function AIEnhancementPanel({
 
 
 
 export function AIEnhancementPanel({;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title;
   defaultOptions;
   onApply;
@@ -47,10 +43,8 @@ export function AIEnhancementPanel({;
     if (result) {
       setGeneratedContent(result)
     }
-
+  }
   };
-
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -90,12 +84,8 @@ export function AIEnhancementPanel({;
     }
 
   },
+<<<<<<< HEAD
 
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -103,53 +93,21 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-
-
+  }
   },
-
-
 
   const handleApply = () => {
     onApply(generatedContent);
     if (onClose) onClose()
-
-
+  }
   },
-
-
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-
-  };
-
-  const handleInputChange = (;
-    e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
-    field: keyof AIEnhancementOptions;
-  ) => {;
-    setOptions({;
-      ...options,;
-      [field]: e && e.target.value});
-  };
-
-  const handleApply = () => {;
-    onApply(generatedContent);
-    if (onClose) onClose();
-  };
-
-  const handleCopy = () => {;
-    navigator && navigator.clipboard.writeText(generatedContent);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-=======
-
+  }
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full max-w-2xl mx-auto">;
@@ -197,16 +155,17 @@ export function AIEnhancementPanel({;
             />;
           </div>;
         )}
-
-
+        {/* Generate button */}
+        <Button
+          onClick={handleGenerate}
+          className="w-full"
+          disabled={isEnhancing |!options.content && !options.context}
 
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
-
-
         >
           {isEnhancing ? (
             <>

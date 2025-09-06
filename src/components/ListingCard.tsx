@@ -84,17 +84,17 @@ export function ListingCard(): any ({;
         className
       )}
     >
-
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
-
-
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'          />
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
+<<<<<<< HEAD
 
 
         </div>
@@ -105,13 +105,23 @@ export function ListingCard(): any ({;
             {category}
           </Badge>
         </div>
-
-
-
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
+          {title}
+        </h3>
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
+        {tags && tags.length > 0 && (
+          <div className='flex flex-wrap gap-2 mb-4'>
+            {tags.map((tag, i) => (
+              <Badge
+                key={i}
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'
+              >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
         {tags && tags.length > 0 && (
+<<<<<<< HEAD
 
 
 
@@ -119,14 +129,15 @@ export function ListingCard(): any ({;
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-
-
+              </Badge>
               </Badge>;
+<<<<<<< HEAD
 
 
             ))}
           </div>;
         )}
+<<<<<<< HEAD
 
 
               <Image
@@ -156,6 +167,13 @@ export function ListingCard(): any ({;
 
 
         
+=======
+
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -163,6 +181,7 @@ export function ListingCard(): any ({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 
 
 
@@ -174,6 +193,7 @@ export function ListingCard(): any ({;
     </Link>;
   );
 }
+<<<<<<< HEAD
 
 ;"}) })"
   );

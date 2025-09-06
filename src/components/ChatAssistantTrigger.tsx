@@ -4,8 +4,13 @@
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-
-
+          "Content-Type": "application/json"}
+        body: JSON.stringify({
+          messages: [{ role: "user", content: message }]
+        })})
+            avatarUrl: 'https://placehold.co/64x64?text=AI'
+            role: 'Virtual Assistant';      if (!response.ok) {
+        throw new Error("Failed to get response from AI assistant")
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -13,6 +18,7 @@
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
+<<<<<<< HEAD
 
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
@@ -40,6 +46,7 @@ export function ChatAssistantTrigger() {;
         })}),;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
+<<<<<<< HEAD
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -65,15 +72,11 @@ export function ChatAssistantTrigger() {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise && Promise.resolve();
     }
-
-
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
-
-
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -81,8 +84,6 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-
-
       
       return Promise.resolve()
     } catch (error) {
@@ -96,20 +97,19 @@ export function ChatAssistantTrigger() {;
     <>;
       <Button
         onClick = {(,) => setIsOpen(true),}
-
-        size="icon";
-        variant="outline";
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
-        aria-label="Open chat assistant";
-      >;
-        <MessageSquare className="h-5 w-5" />;
-      </Button>;
-
-      {isOpen && (;
+        size="icon"
+        variant="outline"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        aria-label="Open chat assistant"
+      >
+        <MessageSquare className="h-5 w-5" />
+      </Button>
+      {isOpen && (
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
 
+            role: 'Virtual Assistant'
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
 
@@ -118,6 +118,7 @@ export function ChatAssistantTrigger() {;
             name: 'AI Assistant',;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
+<<<<<<< HEAD
 
 
 
@@ -125,10 +126,10 @@ export function ChatAssistantTrigger() {;
           onSendMessage = {handleSendMessage,}
         />;
       )}
-
-    </>;
-  );
+    </>
+  )
 }
+<<<<<<< HEAD
 
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
@@ -188,10 +189,15 @@ if ( {) {
     </>);
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 
 
 ;

@@ -1,5 +1,4 @@
-
-
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
@@ -11,25 +10,21 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-import React, { useCallback, useEffect, useMemo, useState } from "react";
 
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
 
 
@@ -40,13 +35,15 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-
-};
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
+}
+export default function AIAssistant({
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -54,8 +51,6 @@ export type AIAssistantProps = {;
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -65,8 +60,7 @@ export type AIAssistantProps = {;
 
 
     } catch {}
-  }, [output]);
-
+}, [output]);
   const onOpen = useCallback(() => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -98,16 +92,13 @@ export type AIAssistantProps = {;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-=======
       </button>;
-
       {isOpen && (;
         <div className="fixed inset-0 z-50 flex items-center justify-center">;
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
               <h3 className="text-base font-semibold">{title}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={onClose}
                 className="text-sm opacity-70 hover:opacity-100">;
@@ -115,7 +106,6 @@ export type AIAssistantProps = {;
               </button>{" "}
 
             </div>;
-
             <div className="p-4 space-y-3">;
               <div>;
 
@@ -132,7 +122,6 @@ export type AIAssistantProps = {;
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                 />;
               </div>;
-
               <div className="flex items-center gap-2">;
 
                 <button
@@ -292,7 +281,6 @@ export type AIAssistantProps = {;
     </>;
   );
 }
-=======
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
@@ -302,34 +290,5 @@ export type AIAssistantProps = {;
       )}
     </>
   );
-
-              {error && <div className="text - red - 600 text - sm">{error}</div>}
-              <div>;
-                <label;
-                  className="block text - xs font - medium mb - 1";
-                  html_for="input - Output (markdown)";
-                >;
-                  Output (markdown);
-                </label>;
-                {is_editing ? (
-                  <textarea;
-                    value={output}
-                    on_change={(e) => set_output (e.target.value)}
-                    rows={12}
-                    className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 p - 2 text - sm";
-                  />) : (
-                  <pre className="w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 p - 3 text - sm whitespace - pre - wrap">;
-                    {output || "No content yet. Click Generate."}
-                  </pre>)}
-              </div>;
-            </div>;
-          </div>;
-        </div>)}
-    </>);
 }
-
-=======
-
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

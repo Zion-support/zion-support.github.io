@@ -20,17 +20,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return !superToken || token === superToken
 
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
-
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
 
 
   }
-
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
 
@@ -71,10 +70,27 @@ if ( {) {
     return res.status (200).json ({
       entries: entries.filter (
         e => e.status === 'stuck' || e.status === 'laggy'),
+=======
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+  const { entries } = readLogs();
+  const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
+  if (stuckOnly) {
+    return res.status(200).json({
+      entries: entries.filter(
+        e => e.status === 'stuck' |e.status === 'laggy'
+      )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     });  }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
   }
+<<<<<<< HEAD
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}
 ;
@@ -83,17 +99,35 @@ if ( {) {
     by_module,
     by_type,
     total: entries.length,
+=======
+<<<<<<< HEAD
+  const byModule: Record<string, number> = {}
+  const byType: Record<string, number> = {}
+=======
+
+  const byModule: Record<string, number> = {};
+<<<<<<< HEAD
+  const byType: Record<string, number> = {};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return res.status(200).json({
+    entries: entries.slice(-200)
+    byModule
+    byType
+    total: entries.length
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   });  for (const e of entries) {
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
+<<<<<<< HEAD
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+  const byType: Record<string, number> = {};

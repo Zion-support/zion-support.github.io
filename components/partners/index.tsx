@@ -1,6 +1,26 @@
+import { useState } from "react";
+import Head from "next/head";
+import { useState } from 'react';
+import Head from 'next/head';
 
+export default function Partners() {
+  const [form, setForm] = useState({
 
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: ''
     entityType: ''
     pocName: ''
@@ -11,7 +31,6 @@
     pocName: ""
     pocEmail: ""
     useCaseType: "Education Partnership"})
-
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,27 +44,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import { useState } from 'react';
 import Head from 'next/head';
-
 export default function Partners() {;
   const [form, setForm] = useState({;
     name: '',;
@@ -59,7 +73,6 @@ export default function Partners() {;
     pocEmail: "",;
     useCaseType: "Education Partnership"}),;
   const [loading, setLoading] = useState(false);
-
   async function submit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setLoading(true);
@@ -145,6 +158,7 @@ export default function Partners() {;
 
   }
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
         <title>Zion Partners</title>;
@@ -177,7 +191,6 @@ export default function Partners() {;
               {loading ? 'Submitting...' : 'Register'}
 
     const res = await fetch("/api/partners/register", {
-=======
 import { useState } from 'react';
 import Head from 'next / head';
 export default /**
@@ -296,12 +309,10 @@ function submit() {
 
             </button>;
           </form>;
-
           <div className='bg-white p-6 rounded-lg shadow'>;
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>;
             <ul className='list-disc ml-6 space-y-1 text-sm'>              <li>POST /talents</li>            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>;
           </form>;
-
           <div className="bg-white p-6 rounded-lg shadow">;
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>;
             <ul className="list-disc ml-6 space-y-1 text-sm">;
@@ -358,7 +369,6 @@ function submit() {
             </div>;
           </div>;
         </div>;
-
         {result && (;
           <div className='mt-8 bg-white p-6 rounded-lg shadow'>;
             <h3 className='text-lg font-medium mb-2'>;
@@ -385,6 +395,13 @@ function submit() {
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+        )}
+      </div>
+    </div>
+);
+}
+
+          </div>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
@@ -392,13 +409,13 @@ function submit() {
       </div>;
     </div>;
   );
-}
-
+<<<<<<< HEAD
 =======
-  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;
         <title > Zion Partners</title>;
@@ -505,4 +522,7 @@ function submit() {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

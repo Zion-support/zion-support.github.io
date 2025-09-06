@@ -1,56 +1,37 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useMemo, useState } from 'react';
+import Link from 'next/link';
 
+import {
+  getWhitepaperSections
+  OPERATOR_PROMPT;
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {;
-=======
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-import React, { useMemo, useState } from 'react';
-
-import Link from 'next/link';
-
-import {
-
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-
-} from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
-
-export default function WhitepaperBuilderPage() {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 
@@ -69,7 +50,6 @@ export default function WhitepaperBuilderPage() {
           Investor and Developer editions. Toggle, review, and download as PDF.;
         </p>;
       </div>;
-
       <div className='flex flex-wrap gap-3 items-center'>;
         <label className='font-medium'>Edition</label>;
 
@@ -112,14 +92,12 @@ export default function WhitepaperBuilderPage() {
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>;
         <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>;
       </div>;
-
       <div className="flex flex-wrap gap-3 items-center">;
         <label className="font-medium" htmlFor="input-Edition">Edition</label>;
         <select
           value={edition}
           onChange={(e) => setEdition(e && e.target.value as WhitepaperEdition)}
           className="border rounded px-3 py-2 bg-white dark:bg-black";
-=======
 import Link from 'next / link';
 import {
   getWhitepaperSections,
@@ -195,36 +173,5 @@ if (return '/docs / zion - protocol.pdf') {
         ))}
       </div>
     </div>
-  );
+);
 }
-
-=======
-      <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
-        <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
-        <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
-          {OPERATOR_PROMPT}
-        </pre>;
-      </div>;
-      <div className='space - y-10'>;
-        {sections.map (string => (
-          <section key={s.id} className='space - y-2'>;
-            <h2 className='text - 2xl font - bold'>{s.title}</h2>;
-            {s.subtitle ? <p className='text - gray - 500'>{s.subtitle}</p> : null}
-            <article className='prose dark:prose - invert max - w-none whitespace - pre - wrap'>;
-              {s.content_md}
-            </article>          </section>      <div className="space - y-10">;
-        {sections.map ((s) => (
-          <section key={s.id} className="space - y-2">;
-            <h2 className="text - 2xl font - bold">{s.title}</h2>;
-            {s.subtitle ? <p className="text - gray - 500">{s.subtitle}</p> : null}
-            <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>))}
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

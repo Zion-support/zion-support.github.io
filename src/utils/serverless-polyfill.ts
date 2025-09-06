@@ -1,4 +1,5 @@
 declare global {
+<<<<<<< HEAD
 
 
   var webpackChunk_N_E: any[]
@@ -9,11 +10,10 @@ declare global {
   var __assign: any
   var __rest: any
   var __decorate: any
-
-
   var __awaiter: any
-// CRITICAL: Self polyfill - must be first
+}
 
+// CRITICAL: Self polyfill - must be first
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
@@ -36,19 +36,13 @@ if ( {) {
 }
       (global_this as any).self = global;
     }
-  } else // Check condition
-if ( {) {
-  $2
-}
-    (global_this as any).self = global_this;
-  } else // Check condition
-if ( {) {
-  $2
-}
-    (window as any).self = window;
+  } else if (typeof globalThis !== 'undefined') {
+    (globalThis as any).self = globalThis
+  } else if (typeof window !== 'undefined') {
+    (window as any).self = window
   } else {
-    // Last resort - create minimal self object;
-    (global_this as any).self = {}
+    // Last resort - create minimal self object
+    (globalThis as any).self = {}
   }
 
 
@@ -63,6 +57,7 @@ const selfRef: any =
         : typeof window !== 'undefined'
           ? window
           : {}
+
 // CRITICAL: Webpack chunk array polyfill
 
 if (!selfRef && selfRef.webpackChunk_N_E) {
@@ -74,13 +69,15 @@ if (typeof webpackChunk_N_E === 'undefined') {
 
 
   selfRef.webpackChunk_N_E = []
+}
+
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
-    if (typeof b !== 'function' && b !== null)
+    if (true) {}
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       )
@@ -89,7 +86,7 @@ const tsHelpers = {
       this && this.constructor = d;
 
     }
-    d && d.prototype =
+    d.prototype =
       b === null
 
         ? Object && Object.create(b)
@@ -161,7 +158,7 @@ function __extends_helper() {
   $2
 }
         }
-        return t;
+        return t
       }
 
       if (Object && Object.prototype.hasOwnProperty && hasOwnProperty.call(s, p) && e && e.indexOf(p) < 0)
@@ -173,8 +170,8 @@ function __extends_helper() {
 
         if (
           symbol &&
-          e && e.indexOf(symbol as any) < 0 &&
-          Object && Object.prototype.propertyIsEnumerable && propertyIsEnumerable.call(s, symbol)
+          e.indexOf(symbol as any) < 0 &&
+          Object.prototype.propertyIsEnumerable.call(s, symbol)
         )
 
   var webpackChunk_N_E: any[],
@@ -247,39 +244,37 @@ if (typeof webpackChunk_N_E === 'undefined') {;
 
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
-  __extends: function(d: any, b: any) {
+  __extends: function (d: any, b: any) {
     if (typeof b !== "function" && b !== null)
-      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
+      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null")
     
-;
-// TypeScript helper polyfills for runtime;
-const tsHelpers = {;
-  __extends: function(d: any, b: any) {;
-    if (typeof b !== "function" && b !== null);
-      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),;
-    function __extends_helper(this: any) { this.constructor = d }
-    d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)());
-  },;
-  __assign: function() {;
-    return Object.assign || function (t: any) {;
-      for (var s, i = 1, n = arguments.length, i < n, i++) {;
-        s = arguments[i],;
-        for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p));
-          t[p] = s[p];
+    function __extends_helper(this: any) {
+      this.constructor = d
+    }
+    d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
+  },
+  
+  __assign: function() {
+    return Object.assign || function (t: any) {
+      for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i]
+        for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+          t[p] = s[p]
       }
-      return t;
+      return t
     }
   }(),
   
   __rest: function (s: any, e: string[]) {
-    let t: any = {},
+    let t: any = {}
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t[p] = s[p],
+      t[p] = s[p]
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {
-      const symbols = Object.getOwnPropertySymbols(s),
-      for (let i = 0, i < symbols.length, i++) {
-        const symbol = symbols[i],
+      const symbols = Object.getOwnPropertySymbols(s)
+      for (let i = 0; i < symbols.length; i++) {
+        const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
+<<<<<<< HEAD
 
 
 
@@ -287,15 +282,22 @@ const tsHelpers = {;
       }
     }
     return t
+  }
+  },
 
-    let c = arguments && arguments.length,
-
+  __decorate: function (
+    decorators: any[]
+    target: any
+    key?: string | symbol
+    desc?: any
+  ) {
+    let c = arguments.length
       r =
         c < 3
           ? target
           : desc === null
             ? (desc = key
-                ? Object && Object.getOwnPropertyDescriptor(target, key)
+                ? Object.getOwnPropertyDescriptor(target, key)
                 : undefined)
             : desc
       d
@@ -305,14 +307,30 @@ const tsHelpers = {;
     )
       r = (Reflect as any).decorate(decorators, target, key, desc)
     else
-      for (let i = decorators && decorators.length - 1; i >= 0; i--)
+      for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
-
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
+    return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
+  }
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
   },
 
 
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+  },
+  
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) {
       return value instanceof P
@@ -335,19 +353,59 @@ const tsHelpers = {;
       if (&& e.index_of (p) < 0)) {
   $2
 }
-        t[p] = s[p];
-    // Check condition
-if ( {) {
-  $2
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
+}return t
 }
-      const symbols = Object.getOwnPropertySymbols (s);
-      for (let index = 0; i < symbols.length; i++) {
-        const symbol = symbols[i];
-        // Check condition
-if (< 0 &&) {
-  $2
 }
-          Object.prototype.propertyIsEnumerable.call (s, symbol));
+awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {
+  function adopt (value: any) {
+  return value instanceof P ? value : new P (function (resolve: any) {
+  resolve (value)
+})
+}return new (P |(P = Promise) ) (function (resolve: any, reject: any) {
+  step ( (generator = generator.apply (thisArg, arguments |[]) ) .next () )
+})
+// Error prevention for common webpack issues
+try {
+  // Prevent webpack chunk loading errors
+  if (
+    selfRef.webpackChunk_N_E &&
+    typeof selfRef.webpackChunk_N_E.push === 'function'
+  ) {
+    const originalPush = selfRef.webpackChunk_N_E.push
+    selfRef.webpackChunk_N_E.push = function (chunk: any) {
+      try {
+        return originalPush.call(this, chunk)
+      } catch (error) {
+        console.warn('Webpack chunk loading error prevented:', error)
+        return 0
+  },
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+  },
+  
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {
+      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
+      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
+      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
+      step((generator = generator.apply(thisArg, _arguments || [])).next())
+    })
+  }(),;
+  __rest: function (s: any, e: string[]) {;
+    let t: any = {},;
+    for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0);
+      t[p] = s[p],;
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {;
+      const symbols = Object.getOwnPropertySymbols(s),;
+      for (let i = 0, i < symbols.length, i++) {;
+        const symbol = symbols[i],;
+        if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
           t[symbol] = s[symbol];
       }
     }
@@ -372,6 +430,7 @@ if (< 0 &&) {
 if (.decorate === 'function') {
   $2
 }
+<<<<<<< HEAD
     );
       r = (Reflect as any).decorate (decorators, target, key, desc);
     else;
@@ -401,17 +460,14 @@ function fulfilled() {
         try {
           step (generator.next (value));
         } catch (e) {
-          reject (e);
+          reject(e)
         }
       }
-      /**
- * rejected - Function description
- */
-function rejected() {
+      function rejected(value: any) {
         try {
-          step (generator['throw'](value));
+          step(generator['throw'](value))
         } catch (e) {
-          reject (e);
+          reject(e)
         }
       }
 
@@ -452,17 +508,12 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
     })
   }
 }
-//CRITICAL: Webpack chunk array polyfill if (throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")) {
-  $2
-}
-}return t;
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
+}return t
 }
 }
-awaiter: function (this_arg: any, arguments: any, P: any, generator: any) {
-  /**
- * adopt - Function description
- */
-function adopt() {
+awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {
+  function adopt (value: any) {
   return value instanceof P ? value : new P (function (resolve: any) {
 
   resolve (value);
@@ -481,7 +532,7 @@ if ( {) {
     self_ref.webpackChunk_N_E.push = function (chunk: any) {
 
       try {
-        return original_push.call (this, chunk);
+        return originalPush.call(this, chunk)
       } catch (error) {
 
     const originalPush = selfRef && selfRef.webpackChunk_N_E.push;
@@ -509,7 +560,7 @@ if (typeof window !== 'undefined') {
     // Suppress specific known errors that don't affect functionality
     if (typeof message === 'string') {
       if (
-        message && message.includes(
+        message.includes(
           "Cannot read properties of undefined (reading 'env')"
 
         ) ||
@@ -519,7 +570,7 @@ if (typeof window !== 'undefined') {
         message && message.includes('getInitialProps')
 
       ) {
-        return true; // Suppress error
+        return true // Suppress error
       }
     }
     // Call original error handler for other errors
@@ -560,7 +611,8 @@ if ( {) {
     }
     return false;
   }
-  const originalOnUnhandledRejection = window.onunhandledrejection;
+
+  const originalOnUnhandledRejection = window.onunhandledrejection
   window.onunhandledrejection = function (event) {
 
       return originalOnError && originalOnError.call(this, message, source, lineno, colno, error);
@@ -572,9 +624,9 @@ if ( {) {
   window && window.onunhandledrejection = function (event) {
 
     // Suppress specific promise rejection errors
-    if (event && event.reason && typeof event && event.reason.message === 'string') {
+    if (event.reason && typeof event.reason.message === 'string') {
       if (
-        event && event.reason.message && message.includes(
+        event.reason.message.includes(
           "Cannot read properties of undefined (reading 'env')"
 
         ) ||
@@ -622,7 +674,6 @@ if ( {) {
     }
 
   })
-
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -680,8 +731,8 @@ export const verify_polyfills = () =>: any {
       typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   }
-  console.log ('Serverless polyfill verification:', checks);
-  return Object.values (checks).every (Boolean);
+  console.log('Serverless polyfill verification:', checks)
+  return Object.values(checks).every(Boolean)
 }
 
 
@@ -697,19 +748,61 @@ if (process && process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
+}
+;
+// Node.js environment polyfills (for SSR/build time);
+if (typeof global !== 'undefined' && typeof window === 'undefined') {;
+  // Ensure Node.js global has necessary polyfills;
+  if (typeof global.self === 'undefined') {;
+    global.self = global;
+  }
+;
+  if (typeof global.webpackChunk_N_E === 'undefined') {;
+    global.webpackChunk_N_E = [];
+  }
+;
+  // TypeScript helpers for Node.js;
+  Object.keys(tsHelpers).forEach(helper => {;
+    if (typeof (global as any)[helper] === 'undefined') {;
+      (global as any)[helper] = (tsHelpers as any)[helper];
+    }
+  });
+}
 
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors // Check condition
-if ( {) {
-  $2
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+export default {}; // Ensure this can be imported as a module
+  
+}, // Ensure this can be imported as a module'"
+// Auto-verify in development
+if (process.env.NODE_ENV === 'development') {
+  setTimeout((,) => verifyPolyfills(), 100)
+    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
+    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
+  }
+  
+  console.log('Serverless polyfill verification:', checks)
+  return Object.values(checks).every(Boolean)
 }
-export default {} // Ensure this can be imported as a module;
-}, // Ensure this can be imported as a module'";
-// Auto - verify in development;
-// Check condition
-if ( {) {
-  $2
-}
-  set_timeout ((, ) => verify_polyfills (), 100);
+
+// Auto-verify in development
+if (process.env.NODE_ENV === 'development') {
+  setTimeout(() => verifyPolyfills(), 100)
+;
+// Export a verification function for testing;
+export const verifyPolyfills = () => {;
+  const checks = {;
+    selfDefined: typeof self !== 'undefined',;
+    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
+    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
+  },;
+  // // // console.log('Serverless polyfill verification:', checks),;
+  return Object.values(checks).every(Boolean);
+};
+// Auto-verify in development;
+if (process.env.NODE_ENV === 'development') {;
+  setTimeout(() => verifyPolyfills(), 100);
 }
 export default {}, // Ensure this can be imported as a module;

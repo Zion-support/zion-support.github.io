@@ -14,28 +14,35 @@ function TalentOnboardingSteps() {
   const steps: OnboardingStep[] = [;
 
 
+=======
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const steps: OnboardingStep[] = [
     {
-      id: 'profile',
-      label: 'Complete your profile',
-      completed: onboarding_status.profile_completed,
-      link: '/profile',
-      action: 'Update',
-    },
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+      action: "Update"},
     {
-      id: 'skills',
-      label: 'Add your top skills',
-      completed: onboarding_status.skills_added,
-      link: '/profile / skills',
-      action: 'Add Skills',
-    },
+      id: "skills",
+      label: "Add your top skills",
+      completed: onboardingStatus.skillsAdded,
+      link: "/profile/skills",
+      action: "Add Skills"},
     {
-      id: 'availability',
-      label: 'Set your availability',
-      completed: onboarding_status.availability_set,
-      link: '/profile / availability',
-      action: 'Set',
-    },
+      id: "availability",
+      label: "Set your availability",
+      completed: onboardingStatus.availabilitySet,
+      link: "/profile/availability",
+      action: "Set"},
     {
 
       id: "match",

@@ -1,8 +1,6 @@
 
+<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -39,15 +37,13 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+    updateMilestone;
+    deleteMilestone;
+    uploadDeliverable: handleUploadDeliverable
+    refetch
+  }
+}
 
-    update_milestone;
-    delete_milestone;
-    upload_deliverable: handleUploadDeliverable,
-    refetch;
-=======
-
-
-=======
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -80,11 +76,5 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};

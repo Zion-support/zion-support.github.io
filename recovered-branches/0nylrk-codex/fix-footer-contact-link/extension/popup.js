@@ -9,27 +9,24 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 }
-=======
-}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
 document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
 
-  document && document.getElementById('post-job')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'post-job' })
-  }),
-  document && document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'resume-search' })
-  }),
-  document && document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome && chrome.runtime.sendMessage({ type: 'view-notifications' })
+  document.getElementById('post-job')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'post-job' })
+  })
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+  })
 
   })
+<<<<<<< HEAD
 
 
 async /**
@@ -60,12 +57,20 @@ document.addEventListener ('DOMContentLoaded', () => {
   });
 }),
 ;
-
 =======
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+  })
+<<<<<<< HEAD
+
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 }),
 ;
-
-=======
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -80,7 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

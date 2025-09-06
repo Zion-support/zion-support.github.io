@@ -1,58 +1,35 @@
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface EmergingTech2026ServiceV4 {
-
-  {
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.',
-    launch_date: '2026 - 05 - 15',
-    customers: 30,
-    rating: 4 && 4.8,
-    reviews: 25,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.';
-    launch_date: '2026 - 05 - 15';
-
-    customers: 30;
-
-    rating: 4 && 4.8,
-
-    reviews: 25
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
+import { ServiceVariant } from '../types/service-variants';
+export interface EmergingTech2026ServiceV4 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -60,7 +37,6 @@ export interface EmergingTech2026ServiceV4 {
   reviews: number
 
 }
-
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
   {
@@ -87,19 +63,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['Intel LoihiIBM TrueNorthBrainChip'], marketSize: '$8B neuromorphic computing market by 2030',
     growthRate: '150% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
     launchDate: '2026-04-01', customers: 15,
     rating: 4.9,
     reviews: 12
   };
-
   // Quantum Internet Security Gateway
   {
     id: 'quantum-internet-security-gateway', name: 'Quantum Internet Security Gateway',
@@ -123,18 +96,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['CiscoPalo Alto NetworksFortinet'], marketSize: '$45B cybersecurity market',
     growthRate: '60% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
     launchDate: '2026-03-15', customers: 45,
     rating: 4.8,
     reviews: 38
   };
-
   // Synthetic Biology AI Platform
   {
     id: 'synthetic-biology-ai-platform', name: 'Synthetic Biology AI Platform',
@@ -159,18 +129,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['Ginkgo BioworksTwist BioscienceBenchling'], marketSize: '$15B synthetic biology market',
     growthRate: '80% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
     launchDate: '2026-04-15', customers: 25,
     rating: 4.9,
     reviews: 20
   };
-
   // Autonomous Drone Fleet Management
   {
     id: 'autonomous-drone-fleet-management', name: 'Autonomous Drone Fleet Management',
@@ -194,18 +161,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['DroneDeployPrecisionHawkAirMap'], marketSize: '$50B drone services market',
     growthRate: '70% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.',
     launchDate: '2026-03-01', customers: 80,
     rating: 4.7,
     reviews: 65
   };
-
   // Brain-Computer Interface Development Kit
   {
     id: 'brain-computer-interface-devkit', name: 'Brain-Computer Interface Development Kit',
@@ -230,18 +194,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['NeuralinkKernelCTRL-labs'], marketSize: '$3B BCI market by 2030',
     growthRate: '200% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Comprehensive brain-computer interface development kit with neural processing and device control.',
     launchDate: '2026-05-01', customers: 20,
     rating: 4.9,
     reviews: 15
   };
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform', name: 'Quantum Machine Learning Platform',
@@ -266,18 +227,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['IBM QiskitGoogle CirqRigetti'], marketSize: '$20B quantum computing market',
     growthRate: '120% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
     launchDate: '2026-04-01', customers: 35,
     rating: 4.8,
     reviews: 28
   };
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform-2026', name: 'Autonomous Vehicle AI Platform 2026',
@@ -302,18 +260,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['WaymoTeslaCruise'], marketSize: '$2T autonomous vehicle market by 2030',
     growthRate: '150% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.',
     launchDate: '2026-06-01', customers: 15,
     rating: 4.9,
     reviews: 12
   };
-
   // Digital Twin Platform for Smart Cities
   {
     id: 'digital-twin-smart-cities', name: 'Digital Twin Platform for Smart Cities',
@@ -338,20 +293,32 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
+<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
-    reviews: 25;
-=======
+    reviews: 25,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
 
+    realImplementation: true;
+    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
+    launchDate: '2026-05-15';
+    customers: 30;
 
-=======
+    rating: 4.8
+
+    reviews: 25
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -746,12 +713,5 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     customers: 30,;
     rating: 4.8;
     reviews: 25;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-
-;
-

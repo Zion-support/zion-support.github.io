@@ -1,15 +1,14 @@
 
-
+import { useAuth  } from './useAuth';
+import { getAccessibleRoutes  } from '@/config/sitemap';
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
-
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
-
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
 export function useSitemap() {;
-
-
   const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
@@ -48,10 +47,9 @@ export function useSitemap() {;
     findRouteByPath;
 
     canAccessRoute
-=======
-import {use_auth} from './use_auth';
-import {getAccessibleRoutes} from '@/config / sitemap';
-import type { SitemapItem } from '@/config / sitemap';
+import { useAuth } from './useAuth',;
+import { getAccessibleRoutes } from '@/config/sitemap',;
+import type { SitemapItem } from '@/config/sitemap',;
 // Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
@@ -107,10 +105,5 @@ if (return false) {
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

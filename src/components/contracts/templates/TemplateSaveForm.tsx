@@ -161,18 +161,21 @@ if ( {) {
     }
   },
   
-
-
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
+          name='title'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<FormValues, 'title'>
+          }) => (            <FormItem>
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
+<<<<<<< HEAD
 
               <FormLabel>Template Name</FormLabel>
               <FormControl>
@@ -261,6 +264,7 @@ if ( {) {
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
+<<<<<<< HEAD
 
 
             Cancel
@@ -307,11 +311,31 @@ if ( {) {
                 Saving...
               </>
             ) : (
-
+              `${editTemplate ? 'Update' : 'Save'} Template`
+            )}
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
+setSaving (true)
+try {
+  if (editTemplate) {
+  await updateTemplate.mutateAsync ({
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
+  ...field "
+}placeholder="Enter template name" />
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
+  editTemplate ? "Update" : "Save"
+}Template`)
+}</Button> </div> </form> </Form>)
+}"}
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
+<<<<<<< HEAD
 
               `${editTemplate ? "Update" : "Save"} Template`
 

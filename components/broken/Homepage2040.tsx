@@ -1,10 +1,12 @@
+<<<<<<< HEAD
 
-
-
-
+//Enhanced animation variants for better performance const containerVariants = {
+  hidden: {
+  opacity: 0
+}
+//Enhanced animation variants for better performance const containerVariants = {
+  hidden: {
   opacity: 0 
-
-=======
 import React from 'react';
 
 interface Homepage2040Props {
@@ -18,12 +20,7 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-
-
-
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -79,51 +76,37 @@ animationDelay: `$ {
 }</motion.div> </div> </section> > Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion.div> </motion.div> </div> </section> </main> </Layout>)
 }
 export default Homepage2040;
-=======
-import React, { Suspense, lazy, useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe;
-  Rocket, Target, Users, Cpu, Eye, Network;
-  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
-  FileText, BarChart3, Heart, Truck, ShieldCheck;
-  Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-=======
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -135,11 +118,8 @@ import React from 'react';
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
-
 };
-
 };
-
 };
 <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {;
   Math && Math.random () * 100 ;
@@ -150,15 +130,12 @@ top: `$ {;
 animationDelay: `$ {;
   Math && Math.random () * 3 ;
 }s` ;
-
 }animate= {;
   {;
   scale: [0, 1, 0], opacity: [0, 1, 0] ;
-
 }transition= {;
   {;
   duration: 3, repeat: Infinity, delay: Math && Math.random () * 3 ;
-
 }/>) ) ;
 }</div> </div> <div className="text-center max-w-6xl mx-auto relative z-10" > <motion && motion.div > {;
   /* Enhanced Company Badge */ ;
@@ -198,13 +175,10 @@ import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance;
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
-
 const Homepage2040: React.FC = () => {;
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsVisible(true);
     const interval = setInterval(() => {;
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2 && innovativeMicroSaasServices2025V2.length);
@@ -298,11 +272,12 @@ const Homepage2040: React.FC = () => {
     visible: {
       opacity: 1
       transition: {
-
-
+        staggerChildren: 0.1
+        delayChildren: 0.2
+      }
+    }
+  }
   };
-
-
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -336,7 +311,6 @@ const Homepage2040: React.FC = () => {
   }
 ;
   const floating_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     float: {
       coordinate_y: [-10, 10, -10];
       transition: {
@@ -345,8 +319,6 @@ const Homepage2040: React.FC = () => {
       name: "Cybersecurity",
       icon: Shield,
       count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
-
-
       color: "from-green-500 to-emerald-600"
 =======
 
@@ -361,7 +333,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -373,7 +344,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const floatingVariants = {;
     float: {;
       y: [-10, 10, -10];
@@ -384,7 +354,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const statsData = [;
     {;
       number: "100+",;
@@ -419,11 +388,9 @@ const Homepage2040: React.FC = () => {
       hoverColor: "group-hover:text-green-300";
     }
   ];
-
   // Combine all services for showcase;
   const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
   const featuredServices = allServices && allServices.filter(service => service && service.popular).slice(0, 6);
-
   const serviceCategories = [;
     {;
       name: "AI & Machine Learning",;
@@ -448,7 +415,6 @@ const Homepage2040: React.FC = () => {
       icon: Shield,;
       count: allServices && allServices.filter(s => s && s.category.includes('Security') || s && s.category.includes('Cyber')).length,;
       color: "from-green-500 to-emerald-600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   ];
   return (
@@ -462,11 +428,8 @@ const Homepage2040: React.FC = () => {
           {/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 pointer-events-none">;
             {/* Animated geometric shapes */}
-
-
+            <motion.div
             <motion.div 
-
-
               variants={floatingVariants}
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -498,13 +461,10 @@ const Homepage2040: React.FC = () => {
               animate="float"
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"></motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Quantum particle effects */}
             <div className="absolute inset-0">;
               {[...Array(20)].map((_, i) => (;
                 <motion&& motion.div
-=======
         duration: 3,
         repeat: -1,
         ease: "easeInOut" as const;
@@ -611,36 +571,31 @@ const Homepage2040: React.FC = () => {
             <div className="absolute inset - 0">;
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
-                  className="absolute w - 1 h - 1 bg - cyan - 400 / 30 rounded - full";
+                  className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
                   style={{
-
-
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-
-
                     animationDelay: `${Math.random() * 3}s`;
 =======
                     left: `${Math && Math.random() * 100}%`,
                     top: `${Math && Math.random() * 100}%`,
                     animationDelay: `${Math && Math.random() * 3}s`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
                     animation_delay: `${Math.random () * 3}s`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   animate={{
                     scale: [0, 1, 0]
                     opacity: [0, 1, 0]}}
                   transition={{
-
+                    duration: 3
+                    repeat: Infinity
                     duration: 3,
                     repeat: Infinity,
-
+                    delay: Math.random() * 3
                   }}
                 />;
               ))}
@@ -660,37 +615,32 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
-
-
+                aria-label="Company recognition"
+              >
+                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
+                <span>Innovation Leader 2040</span>
+                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
+              </motion.div>
+              <motion.h1
               <motion.h1 
-
-
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
-
-
+              <motion.p
               <motion.p 
-
-
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-
-
-
-=======
+              {/* Enhanced CTA Section */}
+              <motion.div
               
-
               {/* Enhanced CTA Section */}
               <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -713,19 +663,7 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
-                aria-label="Company recognition">;
-                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />;
-                <span>Innovation Leader 2040</span>;
-                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />;
-              </motion && motion.div>;
-
-              <motion&& motion.h1 
-=======
-
               
-
-
               {/* Enhanced Trust Indicators */}
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -820,18 +758,10 @@ const Homepage2040: React.FC = () => {
                   <div className="text-gray-400">{stat && stat.description}</div>;
                 </motion && motion.div>;
               ))}
+            </motion.div>
+          </div>
+        </section>
 
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -877,18 +807,10 @@ const Homepage2040: React.FC = () => {
                   </div>;
                 </motion && motion.div>;
               ))}
+            </motion.div>
+          </div>
+        </section>
 
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -1160,16 +1082,13 @@ const Homepage2040: React.FC = () => {
                       <div className="mb - 6">;
                         <span className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
-
-
-
-=======
-
+                        </span>
+                      </div>
+                      {/* CTA Button */}
+                      <Link
 
                       {/* CTA Button */}
                       <Link 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -1180,53 +1099,6 @@ const Homepage2040: React.FC = () => {
                   ))}
                 </motion.div>
 
-                  </div>;
-
-                  <h3 className="text-2xl font-bold text-white mb-3">{service && service.name}</h3>;
-                  <p className="text-gray-400 mb-4">{service && service.tagline}</p>;
-
-                  <div className="flex items-center justify-between mb-6">;
-                    <div className="text-3xl font-bold text-cyan-400">;
-                      ${service && service.price.monthly}
-                      <span className="text-lg text-gray-400">/month</span>;
-                    </div>;
-                    <div className="text-sm text-gray-400">;
-                      {service && service.rating} ⭐ ({service && service.reviews});
-                    </div>;
-                  </div>;
-
-                  <div className="space-y-3 mb-6">;
-                    {service && service.features.slice(0, 3).map((feature, idx) => (;
-                      <div key={idx} className="flex items-center gap-3 text-gray-300">;
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>;
-                        <span className="text-sm">{feature}</span>;
-                      </div>;
-
-                      {/* Service Price */}
-                      <div className="mb-6">;
-                        <span className="text-2xl font-bold text-cyan-400">;
-                          {service && service.price}
-                        </span>;
-                      </div>;
-
-                      {/* CTA Button */}
-                      <Link
-                        href={service && service.link}
-                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25">;
-                        Learn More;
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
-                      </Link>;
-                    </motion && motion.div>;
-                  ))}
-                </motion && motion.div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -1248,7 +1120,6 @@ const Homepage2040: React.FC = () => {
                 <motion.div;
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   viewport={{ once: true }}
 
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -1262,18 +1133,10 @@ const Homepage2040: React.FC = () => {
                   </Link>;
                 </motion && motion.div>;
               ))}
+            </motion.div>
+          </div>
+        </section>
 
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1282,11 +1145,22 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-
-
+              className="space-y-8"
+            >
+              <motion.h2
+                variants={itemVariants}
+                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
+              >
+                Ready to Transform Your Business?
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="text-xl text-gray-300 max-w-2xl mx-auto"
+              >
+                Join thousands of companies already leveraging our revolutionary technology solutions
+              </motion.p>
+              <motion.div
               <motion.div 
-
-
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >
@@ -1337,7 +1211,6 @@ const Homepage2040: React.FC = () => {
                 className="text-xl text-gray-300 max-w-2xl mx-auto">;
                 Join thousands of companies already leveraging our revolutionary technology solutions;
               </motion && motion.p>;
-
               <motion&& motion.div 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center">;
@@ -1352,7 +1225,6 @@ const Homepage2040: React.FC = () => {
                   </button>;
                 </Link>;
               </motion && motion.div>;
-
               <motion&& motion.div
                 variants={itemVariants}
                 className="flex items-center justify-center gap-8 text-sm text-gray-400">;
@@ -1380,89 +1252,4 @@ const Homepage2040: React.FC = () => {
 
 export default Homepage2040;
 
-
-=======
-                  className="text - center mt - 12";
-                >;
-                  <Link;
-                    href="/innovative - 2040 - futuristic - services - showcase";
-                    className="inline - flex items - center justify - center px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - 2xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 text - lg";
-                  >;
-                    View All 2040 Services;
-                    <ArrowRight className="w - 6 h - 6 ml - 3" />;
-                  </Link>;
-                </motion.div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Enhanced CTA Section */}
-        <section className="py - 20 px - 4 relative">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
-              viewport={{ once: true }}
-              className="space - y-8";
-            >;
-              <motion.h2;
-                variants={item_variants}
-                className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent";
-              >;
-                Ready to Transform Your Business?;
-              </motion.h2>;
-              <motion.p;
-                variants={item_variants}
-                className="text - xl text - gray - 300 max - w-2xl mx - auto";
-              >;
-                Join thousands of companies already leveraging our revolutionary technology solutions;
-              </motion.p>;
-              <motion.div;
-                variants={item_variants}
-                className="flex flex - col sm:flex - row gap - 6 justify - center";
-              >;
-                <Link href="/contact" aria - label="Contact us">;
-                  <button className="px - 12 py - 5 bg - gradient - to - r from - cyan - 500 via - blue - 600 to - purple - 600 text - white font - bold text - lg rounded - xl hover:from - cyan - 600 hover:via - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25">;
-                    Contact Us Today;
-                  </button>;
-                </Link>;
-                <Link href="/demo" aria - label="Request a demo">;
-                  <button className="px - 12 py - 5 border - 3 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105">;
-                    Request Demo;
-                  </button>;
-                </Link>;
-              </motion.div>;
-              <motion.div;
-                variants={item_variants}
-                className="flex items - center justify - center gap - 8 text - sm text - gray - 400";
-              >;
-                <div className="flex items - center gap - 2">;
-                  <Shield className="w - 5 h - 5 text - green - 400" />;
-                  <span > Enterprise Security</span>;
-                </div>;
-                <div className="flex items - center gap - 2">;
-                  <Zap className="w - 5 h - 5 text - yellow - 400" />;
-                  <span > 24 / 7 Support</span>;
-                </div>;
-                <div className="flex items - center gap - 2">;
-                  <TrendingUp className="w - 5 h - 5 text - blue - 400" />;
-                  <span > Proven Results</span>;
-                </div>;
-              </motion.div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </main>;
-    </Layout>);
-}
-;
 export default Homepage2040;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export default Homepage2040;
-
-
-export default Homepage2040;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

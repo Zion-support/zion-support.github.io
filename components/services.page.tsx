@@ -1,6 +1,5 @@
 
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-
 export default function ServicesPage() {;
 
 =======
@@ -48,9 +47,7 @@ export default function ServicesPage() {
 
   );
 }
-=======
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -137,8 +134,6 @@ function ServicesPage() {
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
       </div>
     </EnhancedLayout>
-
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+  );

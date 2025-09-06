@@ -4,21 +4,47 @@ job: Job
 
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
+  const { createConversation } = useMessaging(),
+  const { applyToJob } = useJobApplications(),
+  const { createConversation } = useMessaging()
+  const { applyToJob } = useJobApplications()
+  const [message, setMessage] = useState(
+    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
 
-
-
-
+  )
+  const [proposalLink, setProposalLink] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  const handleResumeSelected = (resume: ResumeOption) => {;
+    setSelectedResume(resume);    setSelectedResumeId(resume.id)
+  }
+  const { createConversation } = useMessaging(),
+  const { applyToJob } = useJobApplications(),
+  const [message, setMessage] = useState(
+    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+  ),
+  const [proposalLink, setProposalLink] = useState(''),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [activeTab, setActiveTab] = useState<string>("message"),
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
+  
+  const handleResumeSelected = (resume: ResumeOption) => {
+    setSelectedResume(resume),
+    setSelectedResumeId(resume.id)
+  },
+  
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
-
-
+      })
+      return
       return;
-
-
     }
     try {
       setIsSubmitting(true)
@@ -116,13 +142,17 @@ if ( {) {
 }
         throw new Error ("Failed to submit application");
       }
-      // Format message with proposal link if provided;
-      let full_message = message;
-      // Check condition
-if ( {) {
-  $2
-}
-        full_message += `\n\n_here's a link to my proposal: ${proposal_link}`;
+      // Create conversation with the job client
+      await createConversation(
+        job.client_id
+        fullMessage
+        'job'
+        job.id
+        contextData
+      )
+      // Call onApplySuccess to update job status in the UI
+      if (onApplySuccess) {
+        await onApplySuccess(job.id)
       }
       // Add info about attached resume if available;
       // Check condition
@@ -158,6 +188,7 @@ if ( {) {
 
 
       
+<<<<<<< HEAD
 
       }),
       return
@@ -274,9 +305,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         await onApplySuccess(job.id);
       }
       
-
-
-
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
@@ -292,6 +320,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     } finally {
       setIsSubmitting(false)
 
+<<<<<<< HEAD
 
       let fullMessage = message;
 
@@ -421,7 +450,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
     } finally {
       setIsSubmitting (false),
     }
-  }
+  },
 
     }
 
@@ -434,13 +463,13 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
 
           <MessageTab 
-
             message = {message,}
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
             setProposalLink = {setProposalLink,}
           />
         </TabsContent>
+<<<<<<< HEAD
 
 
         
@@ -474,7 +503,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
             Resume;
           </TabsTrigger>;
         </TabsList>;
-
         <TabsContent value="message">;
           <MessageTab
             message = {message,}
@@ -484,6 +512,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
 
       
+<<<<<<< HEAD
 
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
@@ -502,17 +531,18 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         <Button
           type="button"
           variant="outline"
-          onClick = {onClose,}
-          className="border-zion-purple/30 text-white">;
-          Cancel;
-        </Button>;
+          onClick={onClose}
+          className="border-zion-purple/30 text-white"
+        >
+          Cancel
+        </Button>
         <Button
-
-
+          type="button"
+          onClick = {handleApply,}
+          disabled = {isSubmitting,}
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
-
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -523,11 +553,16 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
           ) : (
             'Submit Application'
           )}
-
+        </Button>
+      </div>
+    </>
+  )
+  if (!message.trim () ) {
+  toast ({
+  return
+}//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
   return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
-
-
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'

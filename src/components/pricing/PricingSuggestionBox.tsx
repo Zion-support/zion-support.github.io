@@ -14,6 +14,17 @@ interface PricingSuggestionBoxProps {;
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, Info, ThumbsUp } from 'lucide-react'
+import { PricingSuggestion } from "@/services/pricingSuggestionService",
+interface PricingSuggestionBoxProps {
+  suggestion: PricingSuggestion | null,
+  isLoading: boolean,
+  onApplySuggestion: () => void,
   rateType: "hourly" | "fixed"
 }
 
@@ -38,6 +49,13 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -49,9 +67,15 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
+  suggestion
+  isLoading
+  onApplySuggestion
+  rateType
+}) => {  if (isLoading) {
   suggestion,
   isLoading,
   onApplySuggestion,
+<<<<<<< HEAD
 
     return (
       <Card className="border border-dashed border-muted">
@@ -59,8 +83,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <div className="text-center">
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
-
               Generating optimal pricing suggestion...
+<<<<<<< HEAD
 
 
 
@@ -68,9 +92,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           </div>
         </CardContent>
       </Card>
-
-    )
-
+    ) }    )
   }
   if (!suggestion) {
     return null
@@ -122,8 +144,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
+
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
+<<<<<<< HEAD
 
 
 
@@ -214,11 +238,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
+<<<<<<< HEAD
 
 
 
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
+          </span>
+        </div>
 
 
 
@@ -228,29 +255,26 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
-
-          </span>;
-        </div>;
-
-        <div className="flex items-start space-x-2 text-sm text-muted-foreground">;
-          <Info className="h-4 w-4 flex-shrink-0 mt-1" />;
-          <p>{suggestion && suggestion.explanation}</p>;
-        </div>;
-
-        <div className="flex items-center justify-between">;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
-
+        <div className="flex items-center justify-between">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
                 <Button
 
                   variant="default"
 
                   onClick={onApplySuggestion}
-
-
+                  className='w-full'                >
+                  <ThumbsUp className='h-4 w-4 mr-2' /> Apply Suggestion                </Button>
+                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
+                  onClick={onApplySuggestion}
+                  className="w-full"
+                >
+                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
+                </Button>
 
         <div className="flex items-center justify-between">
+<<<<<<< HEAD
 
 
               </TooltipTrigger>
@@ -260,11 +284,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </Tooltip>
           </TooltipProvider>
         </div>
-
-
+        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
+<<<<<<< HEAD
 
 
         </p>
@@ -279,6 +303,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
 
 
@@ -286,6 +314,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 };
 "  );
 };
+<<<<<<< HEAD
 
 },
 ;
@@ -333,14 +362,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
-
-        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
-        </p>;
-      </CardContent>;
-    </Card>;
-  );
-};
-"        ;
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
@@ -348,6 +369,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
 
 
 

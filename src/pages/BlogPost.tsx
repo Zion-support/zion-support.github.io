@@ -2,16 +2,15 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-
-import {logErrorToProduction} from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-
+import { logErrorToProduction } from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
 
 import { BLOG_POSTS } from "@/data/blog-posts"
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -29,6 +28,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
+<<<<<<< HEAD
 
 
 export default function BlogPost() {
@@ -66,38 +66,16 @@ export default /**
 function BlogPost() {
   const router = use_router ();
   const { slug } = router.query as { slug: string }
-  const [post, set_post] = useState < BlogPostType | null>(null);
-  const [related_posts, setRelatedPosts] = useState < BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState (false);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-  const timed_out = useSkeletonTimeout (20000);
-  useEffect (() => {import { use_router } from 'next / router';
-import { SEO  } from '@/components / SEO';
-import JsonLd from "@/components / JsonLd";
-import { Button  } from '@/components / ui / button';
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import type { BlogPost as BlogPostType } from "@/types / blog";
-import { Separator  } from '@/components / ui / separator';
-import {logErrorToProduction} from '@/utils / production_logger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import { BLOG_POSTS  } from '@/data / blog - posts';
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {
-  const router = use_router (),
-  const { slug } = router.query as { slug: string },
-  const [post, set_post] = useState < BlogPostType | null>(null),
-  const [related_posts, setRelatedPosts] = useState < BlogPostType[]>([]),
-  const [showShareMenu, setShowShareMenu] = useState (false),
-  const [is_loading, setIsLoading] = useState (true),
-  const [error, set_error] = useState < string | null>(null),
-  const timed_out = useSkeletonTimeout (20000),
-  useEffect ((, ) => {
-    const fetch_post = async () => {
-      setIsLoading (true);
-      set_error (null);
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect((,) => {
+    const fetchPost = async () => {
+      setIsLoading(true)
+      setError(null)
       try {
         const data = await fetchWithRetry (`/api / blog/${slug}`);
         set_post (data);
@@ -110,16 +88,12 @@ function BlogPost() {
         setIsLoading (false);
 
         return } catch (err) {
-        logErrorToProduction ('Failed to fetch blog post', { data: err });
-        set_error ('Failed to load article');
+        logErrorToProduction('Failed to fetch blog post', { data: err })
+        setError('Failed to load article')
       }
-
-
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
-
-
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -143,7 +117,7 @@ if ( {) {
         setRelatedPosts (related) } else {
         router.replace ('/blog');
       }
-      setIsLoading (false);
+      setIsLoading(false)
     }
 
     fetchPost()
@@ -232,9 +206,6 @@ export default function BlogPost() {;
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
-
-
-
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -247,28 +218,21 @@ export default function BlogPost() {;
   $2
 }
     return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
-        <p > Failed to load article.</p>;
-        <Button on_click={(, ) => router.reload ()}>Retry</Button>;
-      </div>);
+      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
+        <p>Failed to load article.</p>
+        <Button onClick={() => router.reload()}>Retry</Button>
+      </div>
+    )
   }
-
-  // If post is still null after loading, show not found;
-  // Check condition
-if ( {) {
-  $2
-}
-
+  // If post is still null after loading, show not found
+  if (!post) {
     return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
-        <p > Article not found.</p>;
-        <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
-      </div>);
+      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
+        <p>Article not found.</p>
+        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
+      </div>
+    )
   }
-
-
-
-
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -284,7 +248,7 @@ if (return '') {
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
     switch (platform) {
-      case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
 
       case 'facebook':;
@@ -296,14 +260,13 @@ if (return '') {
       default:;
         return '#';
   }
-  const article_ld = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featured_image,
-    date_published: post.published_date,
-
+  const articleLd = {
+    '@context': 'https://schema.org'
+    '@type': 'BlogPosting'
+    headline: post.title
+    description: post.excerpt
+    image: post.featuredImage
+    datePublished: post.publishedDate
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -398,10 +361,6 @@ if (return '') {
     switch (platform) {;
       case 'facebook':;
 
-
-
-
-
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -410,8 +369,42 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-
-
+      '@type': 'Person',
+      name: post.author.name,
+    },
+  }
+  return (
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join(', ')}
+        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+      "@type": "Person",
+      name: post.author.name}},
+  
+  return (
+    <>
+      <SEO
+  },;
+  const articleLd = {;
+    "@context": "https://schema.org",;
+    "@type": "BlogPosting",;
+    headline: post.title,;
+    description: post.excerpt,;
+    image: post.featuredImage,;
+    datePublished: post.publishedDate,;
+    author: {;
+      "@type": "Person";
+      name: post.author.name}};
+  return (;
+    <>;
+      <SEO;
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join(", ")}
+        ogImage={post.featuredImage}
+        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -447,34 +440,17 @@ if (return '') {
 
 
           
+<<<<<<< HEAD
 
           {/* Article header */}
-          <div className='mb - 8 max - w-4xl mx - auto'>;
-            <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
+          <div className="mb-8 max-w-4xl mx-auto">
+            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
-            </span>;
-            <h1 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
-
-              asChild>;
-              <Link href='/blog'>;
-                <ArrowLeft className='mr-2 h-4 w-4' />;
-                Back to all articles;
-              </Link>;
-            </Button>;
-          </div>;
-
-          {/* Article header */}
-          <div className='mb-8 max-w-4xl mx-auto'>;
-            <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4'>;
-              {post && post.category}
-            </span>;
-            <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              {post && post.title}
-            </h1>;
-            <p className='text-xl text-zion-slate-light mb-8'>{post && post.excerpt}</p>;
-
-
+            </h1>
+            <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>;
               <div className='flex items-center mb-4 sm:mb-0'>;
@@ -522,31 +498,31 @@ if (return '') {
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Facebook'
-                        title='Share on Facebook'>;
-                        <Facebook className='h-4 w-4 mr-2' />;
-                        <span>Facebook</span>;
-                      </a>;
+                        title='Share on Facebook'                      >
+                        <Facebook className='h-4 w-4 mr-2' />
+                        <span>Facebook</span>
+                      </a>
                       <a
                         href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Twitter'
-                        title='Share on Twitter'>;
-                        <Twitter className='h-4 w-4 mr-2' />;
-                        <span>Twitter</span>;
-                      </a>;
+                        title='Share on Twitter'                      >
+                        <Twitter className='h-4 w-4 mr-2' />
+                        <span>Twitter</span>
+                      </a>
                       <a
                         href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on LinkedIn'
-                        title='Share on LinkedIn'>;
-                        <Linkedin className='h-4 w-4 mr-2' />;
-                        <span>LinkedIn</span>;
-                      </a>;
-                    </div>;
+                        title='Share on LinkedIn'                      >
+                        <Linkedin className='h-4 w-4 mr-2' />
+                        <span>LinkedIn</span>
+                      </a>
+                    </div>
                   )}
 
             </h1>;
@@ -724,6 +700,7 @@ if (return '') {
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
+<<<<<<< HEAD
 
 
                   #{tag}
@@ -767,10 +744,11 @@ if (return '') {
                       </div>;
                     </Link>;
             </div>
-
+            <Separator className='my-12 bg-zion-blue-light' />
             
             <Separator className="my-12 bg-zion-blue-light" />
             
+<<<<<<< HEAD
 
             {/* Related articles */}
             {relatedPosts.length > 0 && (
@@ -778,7 +756,26 @@ if (return '') {
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-
+                    <Link
+                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
+                      className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
+                    >
+                      <div className='aspect-[16/9] relative'>
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={
+                            relatedPost.featuredImageAlt |relatedPost.title
+                          }
+                          className='object-cover w-full h-full'
+                          fallbackSrc='/images/blog-placeholder.svg'                        />
+                      </div>
+                      <div className='p-4'>
+                        <span className='text-xs text-zion-cyan'>
+                          {relatedPost.category}
+                        </span>
+                        <h4 className='text-white font-bold mt-1 line-clamp-2'>
+                          {relatedPost.title}
+                        </h4>
                     <Link 
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
@@ -795,38 +792,94 @@ if (return '') {
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+<<<<<<< HEAD
 
                       </div>
                     </Link>
                   ))}
                 </div>;
               </div>;
+            </div>;
+          </div>;
+          {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+              <ImageWithRetry
+                src={post.featuredImage}
+                alt={post.featuredImageAlt || post.title}
+                className="object-cover w-full h-full"
+                fallbackSrc="/images/blog-placeholder.svg"
+              />
+            </div>
+          </div>
+          
+          {/* Article content */}
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg prose-invert max-w-none">
+              <ReactMarkdown>
+                {post.content}
+              </ReactMarkdown>;
+            </div>;
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-12">
+              {post.tags.map(tag => (
+                <span 
+                  key={tag} 
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+            
+            <Separator className="my-12 bg-zion-blue-light" />
+            
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {relatedPosts.map(relatedPost => (
+                    <Link 
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
+                          className="object-cover w-full h-full"
+                          fallbackSrc="/images/blog-placeholder.svg"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             )}
+<<<<<<< HEAD
 
+            <div className='mt-12 text-center'>
+              <p className='text-zion-slate-light'>
 
-            <div className='mt-12 text-center'>;
-              <p className='text-zion-slate-light'>;
-
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href='/services' className='text-zion-cyan underline'>;
-                  AI services;
-                </Link>{' '}
-                or browse expert{' '}
-                <Link href='/talent' className='text-zion-cyan underline'>;
-                  talent;
-                </Link>{' '}
-
-
-
-
-
-
-
+            <div className="mt-12 text-center">
+              <p className="text-zion-slate-light">
+            <div className="mt-12 text-center">
+              <p className="text-zion-slate-light">
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
-
+                <Link href='/talent' className='text-zion-cyan underline'>
+                  talent
+                </Link>{' '}
+                to accelerate your projects.
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
+<<<<<<< HEAD
 
               </p>
             </div>
@@ -835,7 +888,7 @@ if (return '') {
             </div>;
 
             {/* Navigation */}
-            <div className='flex justify-between items-center mt-12'>;
+            <div className="flex justify-between items-center mt-12">
               <Button
                 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -924,6 +977,7 @@ if (return '') {
 };
 };
 };
+<<<<<<< HEAD
 
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
@@ -955,6 +1009,7 @@ if (return '') {
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
 };
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <ahref= {'
@@ -1053,7 +1108,7 @@ export default function Page() {;
               {blog_post.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font -medium">;
                   Featured Article;
                 </span>) }
-            </div>;
+            </div>
             {/* Title */}
 
             <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6 leading -tight">;
@@ -1061,50 +1116,50 @@ export default function Page() {;
             </h1>;
 
             {/* Excerpt */}
-            <p className="text - xl text - gray - 300 mb - 8 leading -relaxed">;
-              {blog_post.excerpt}
-            </p>;
+            <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
+              {blogPost.excerpt}
+            </p>
             {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap - 4 py - 6 border - t border - b border - slate -700 / 50">;
-              <div className="flex items - center space - x - 6">;
-                <div className="flex items - center space - x - 2">;
-                  <User className="w - 5 h - 5 text - cyan -400" />;
-                  <div>;
-                    <span className="text - white font -medium">;
-                      {blog_post.author}
-                    </span>;
-                    <span className="text - gray - 400 text - sm block">;
-                      {blog_post.author_role}
-                    </span>;
-                  </div>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Calendar className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">;
-                    {format_date (blog_post.date) }
-                  </span>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Clock className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">{blog_post.read_time}</span>;
-                </div>;
-              </div>;
-              <div className="flex items - center space - x - 4">;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Heart className="w - 5 h - 5" />;
-                  <span>{blog_post.likes}</span>;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Bookmark className="w - 5 h - 5" />;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Share2 className="w - 5 h - 5" />;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
+              <div className="flex items - center space - x-6">
+                <div className="flex items - center space - x-2">
+                  <User className="w-5 h-5 text-cyan -400" />
+                  <div>
+                    <span className="text-white font -medium">
+                      {blogPost.author}
+                    </span>
+                    <span className="text-gray - 400 text-sm block">
+                      {blogPost.authorRole}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Calendar className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">
+                    {formatDate(blogPost.date) }
+                  </span>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Clock className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">{blogPost.readTime}</span>
+                </div>
+              </div>
+              <div className="flex items - center space - x-4">
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Heart className="w-5 h-5" />
+                  <span>{blogPost.likes}</span>
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Bookmark className="w-5 h-5" />
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Share2 className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Article Content */}
       <section className="py - 12">;
         <div className="container mx - auto px - 4">;
@@ -1128,12 +1183,12 @@ export default function Page() {;
               className="prose prose - invert prose - lg max - w - none">;
 
               {/* Featured Image */}
-              <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl border border - cyan - 400 / 30 flex items - center justify - center mb - 12">;
-                <div className="text - center">;
-                  <BookOpen className="w - 20 h - 20 text - cyan - 400 mx - auto mb - 4" />;
-                  <p className="text - gray -300">Featured Article Image</p>;
-                </div>;
-              </div>;
+              <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
+                <div className="text-center">
+                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
+                  <p className="text-gray -300">Featured Article Image</p>
+                </div>
+              </div>
               {/* Article Content */}
 
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost && blogPost.content }}
@@ -1171,14 +1226,14 @@ export default function Page() {;
               <div className="flex flex - wrap gap - 2">;
                 {blog_post.tags.map (tag => (<span;
                     key={tag}
-                    className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
+                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
                     {tag}
                   </span>) ) }
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Author Bio */}
 
       <section className="py - 12">;
@@ -1189,84 +1244,84 @@ export default function Page() {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 
               transition={{ duration: 0.8 }}
-              className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
-              <h3 className="text - 2xl font - bold text - white mb - 4">;
-                About the Author;
-              </h3>;
-              <div className="flex items - start space - x - 4">;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - full flex items - center justify - center flex - shrink -0">;
-                  <User className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div>;
-                  <h4 className="text - xl font - semibold text - white mb - 2">;
-                    {blog_post.author}
-                  </h4>;
-                  <p className="text - cyan - 400 mb - 2">{blog_post.author_role}</p>;
-                  <p className="text - gray -300">{blog_post.author_bio}</p>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
+              className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
+              <h3 className="text-2xl font - bold text-white mb-4">
+                About the Author
+              </h3>
+              <div className="flex items - start space - x-4">
+                <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
+                  <User className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font - semibold text-white mb-2">
+                    {blogPost.author}
+                  </h4>
+                  <p className="text-cyan - 400 mb-2">{blogPost.authorRole}</p>
+                  <p className="text-gray -300">{blogPost.authorBio}</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Related Posts */}
-      <section className="py - 20 bg - slate -800 / 50">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+      <section className="py-20 bg-slate -800 / 50">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Related Articles;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w - 3xl mx -auto">;
-              Continue exploring insights and analysis on related topics;
-            </p>;
-          </motion.div>;
-          <div className="grid md:grid - cols - 3 gap - 8 max - w - 6xl mx -auto">;
-            {blog_post.related_posts.map ((post, index) => (<motion.article;
+            className="text-center mb-16">
+            <h2 className="text-4xl font - bold text-white mb-4">
+              Related Articles
+            </h2>
+            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
+              Continue exploring insights and analysis on related topics
+            </p>
+          </motion.div>
+          <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
+            {blogPost.relatedPosts.map((post, index) => (<motion.article
                 key={post.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg - slate - 700 / 50 rounded - xl border border - slate - 600 / 50 overflow - hidden hover:border - cyan - 400 / 50 transition - all duration -300 group">;
-                <div className="h - 48 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">;
-                  <BookOpen className="w - 16 h - 16 text - cyan -400" />;
-                </div>;
-                <div className="p -6">;
-                  <div className="flex items - center space - x - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs rounded - full font -medium">;
-                      {getCategoryName (post.category) }
-                    </span>;
-                  </div>;
-                  <h3 className="text - lg font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors duration -200">;
+                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
+                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
+                  <BookOpen className="w-16 h-16 text-cyan -400" />
+                </div>
+                <div className="p -6">
+                  <div className="flex items - center space - x-2 mb-3">
+                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
+                      {getCategoryName(post.category) }
+                    </span>
+                  </div>
+                  <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
                     {post.title}
-                  </h3>;
-                  <p className="text - gray - 300 mb - 4 line - clamp -3">;
+                  </h3>
+                  <p className="text-gray - 300 mb-4 line - clamp -3">
                     {post.excerpt}
-                  </p>;
-                  <div className="flex items - center justify - between text - sm text - gray -400">;
-                    <div className="flex items - center space - x - 2">;
-                      <Calendar className="w - 4 h - 4" />;
-                      <span>{format_date (post.date) }</span>;
-                    </div>;
-                    <div className="flex items - center space - x - 2">;
-                      <Clock className="w - 4 h - 4" />;
-                      <span>{post.read_time}</span>;
-                    </div>;
-                  </div>;
-                </div>;
+                  </p>
+                  <div className="flex items - center justify - between text-sm text-gray -400">
+                    <div className="flex items - center space - x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(post.date) }</span>
+                    </div>
+                    <div className="flex items - center space - x-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
               </motion.article>) ) }
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="py - 20">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+      <section className="py-20">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
       <section className="py-12">;

@@ -1,11 +1,12 @@
 
-
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-
-
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -203,15 +204,8 @@ if (throw error) {
           .select('id')
           .single();
         if (createError) throw createError;
-
-        
-        conversationId = newConversation && newConversation.id
-
+        conversationId = newConversation.id
       }
-=======
-
-
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -345,19 +339,21 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
-
-
+          conversation_id: conversationId;
+          sender_id: user.id;
+          recipient_id: recipientId;
+          content: initialMessage;
+          created_at: new Date().toISOString()
+          read: false
+        });
+      // Update conversations list
+      await fetchConversations();
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -369,21 +365,52 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
-
-
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console && console.error('Error creating conversation:', error);
       toast({
-
-
+        title: "Failed to create conversation";
+        description: "Please try again later"
+        variant: "destructive"
+      })
+    }
+  }
+  return {
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
       })
+    }
+  };
 
-
+  return {
+;
+      // Send the initial message;
+      await supabase;
+        .from('messages');
+        .insert({;
+          conversation_id: conversationId,;
+          sender_id: user.id,;
+          recipient_id: recipientId,;
+          content: initialMessage,;
+          created_at: new Date().toISOString(),;
+          read: false;
+        }),;
+      // Update conversations list;
+      await fetchConversations(),;
+      // Return the conversation ID;
+      return conversationId;
+    } catch (error) {;
+      console.error('Error creating conversation:', error),;
+      toast({;
+        title: "Failed to create conversation",;
+        description: "Please try again later",;
+        variant: "destructive";
+      });
+    }
+  };
+  return {;
     fetchConversations;
 
     createConversation}

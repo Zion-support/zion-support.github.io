@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
   );
 };
 };
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -39,8 +40,10 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
     </Button>;
   );
 };
+};
 
 }
+<<<<<<< HEAD
 
 
 ;

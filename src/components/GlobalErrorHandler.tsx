@@ -105,19 +105,18 @@ if ( {) {
             label: 'Log In',
             on_click: login_action,
           }
-        : undefined,
-    });
-  }, []);
-  const clearAllErrors = useCallback (() => {
-    setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
-  }, []);
-  const context_value: ErrorContextType = {
-    report_error,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
-    clearAllErrors,
-
+        : undefined
+    })
+  }, [])
+  const clearAllErrors = useCallback(() => {
+    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
+  }, [])
+  const contextValue: ErrorContextType = {
+    reportError
+    showRetryableError
+    showNetworkError
+    showAuthError
+    clearAllErrors
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
@@ -180,6 +179,7 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
             label: 'Retry',;
             onClick: retryAction,;
           }
+<<<<<<< HEAD
         : undefined,;
     });
   }, []);
@@ -465,6 +465,7 @@ export function useErrorHandler() {;
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
+<<<<<<< HEAD
 
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -558,6 +559,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
+<<<<<<< HEAD
 
 
   const contextValue: ErrorContextType = {
@@ -565,8 +567,31 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     showRetryableError,
     showNetworkError,
     showAuthError,
+    clearAllErrors,
+  }
+  return (
+    <ErrorContext.Provider value={contextValue}>
+      {children}
+    </ErrorContext.Provider>
+  )
+export function useGlobalErrorHandler(): ErrorContextType {
+  const context = useContext(ErrorContext)
+  if (!context) {
+    throw new Error(
+      'useGlobalErrorHandler must be used within a GlobalErrorHandler'
+    )
+  }
+  return context
+    clearAllErrors},
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),

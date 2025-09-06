@@ -16,12 +16,10 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
-
-
+    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
+      return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
-
-
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -304,16 +302,16 @@ if (return null, ) {
             }
           }
         `}
-      </style>;
-
-        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">;
-          <p className="text-sm">Install our app for a better experience!</p>;
-          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>;
-          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">;
-            <X className="h-4 w-4" />;
-          </Button>;
-        </div>;
-      </div>;
+      </style>
+      <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
+        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
+          <p className="text-sm">Install our app for a better experience!</p>
+          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>
+          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
     </>;
   );
 },;

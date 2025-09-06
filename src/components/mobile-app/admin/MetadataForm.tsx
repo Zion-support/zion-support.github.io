@@ -1,5 +1,16 @@
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
+=======
+=======
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -33,13 +44,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle>App Metadata</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <div className="space-y-4">;
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>App Metadata</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <div className="space-y-4">
             <FormField
               control = {control,}
               name="appTitle"
@@ -196,12 +207,12 @@ if ( {) {
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
-                      aria-label="Remove keyword";
-                    >;
-                      <X className="h-3 w-3" />;
-                    </button>;
-                  </Badge>;
+                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                      aria-label="Remove keyword"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
                 ))}
 
               </div>;
@@ -221,10 +232,18 @@ if ( {) {
                       placeholder="e && e.g., 1 && 1.0.0"
 
                       {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
+                    />
+                  </FormControl>
+                </FormItem>
               )}
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+}
+};
 
                     {long_description.length}/{maxDescriptionLength} characters;
                   </FormDescription>;

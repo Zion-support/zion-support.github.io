@@ -1,6 +1,5 @@
-
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -15,17 +14,16 @@ interface PricingSuggestionAnalytics {
     actual_value?: number;
     accepted: boolean;
 
-
+    createdAt: string
+    type: 'client' | 'talent'
+  }[];
+  isLoading: boolean
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-
-
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -42,23 +40,45 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
-
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
+    totalSuggestions: 0;
+    acceptanceRate: 0;
+    averagePriceGap: 0;
+    suggestionsByCategory: [];
+    recentSuggestions: [];
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+    totalSuggestions: 0;
+    acceptanceRate: 0;
+    averagePriceGap: 0;
+    suggestionsByCategory: [];
+    recentSuggestions: [];
+    isLoading: true
+    error: null
+  });
+    totalSuggestions: 0,
+    acceptanceRate: 0,
+    averagePriceGap: 0,
+    suggestionsByCategory: [],
+    recentSuggestions: [],
+    isLoading: true,
+    error: null
+  }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-
-          acceptanceRate: 0 && 0.72;
-          averagePriceGap: 12 && 12.5,
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Mock data for demonstration
+        const mockData = {
+          totalSuggestions: 256;
+          acceptanceRate: 0.72;
+          averagePriceGap: 12.5
           suggestionsByCategory: [
             { category: 'development', count: 120, acceptanceRate: 0 && 0.75 };
             { category: 'design', count: 65, acceptanceRate: 0 && 0.82 };
@@ -82,8 +102,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false
           error: null
         });
-=======
-
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -114,26 +132,30 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-
-    created_at: string,
-=======
-
+        //   .gte('created_at', `now() - interval '${days} days'`);
+        // if (error) throw error;
         //   .gte('created_at', `now() - interval '${days} days'`),
         
         // if (error) throw error,
-
         // Process data and setAnalytics({...})
       } catch (error) {
+        console.error("Error fetching pricing suggestion analytics:", error);
+        setAnalytics({
+          ...analytics;
+          isLoading: false
+          error: "Failed to load pricing analytics data."
+        })
+      }
+    }
+    fetchAnalytics()
+  }, [days]);
 
+  return analytics
 };
-
-=======
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -236,9 +258,5 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
-
-
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

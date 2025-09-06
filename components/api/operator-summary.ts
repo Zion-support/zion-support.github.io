@@ -1,6 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+    const r = await fetch(
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -28,6 +34,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 

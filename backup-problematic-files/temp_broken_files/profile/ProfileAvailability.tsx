@@ -83,7 +83,8 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
 }</span> </div>) ;
 }</div> </div> </div>) ) ;
 }</div> </div>) ;
-
+:temp_broken_files/profile/ProfileAvailability.tsx
+}</div>) ;"}'"
 }</div>) ;
 }'"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileAvailability.tsx

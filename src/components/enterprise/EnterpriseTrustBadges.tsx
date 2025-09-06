@@ -33,6 +33,7 @@ export function EnterpriseTrustBadges() {
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
+<<<<<<< HEAD
 
 
 
@@ -63,13 +64,14 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
-
-
-
+    </section>;
+  );
+};
+}
     </section>
-
-
-import React from 'react';
+  )
+}
+import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (

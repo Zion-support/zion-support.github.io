@@ -1,8 +1,8 @@
 export function SelectResumeSection({
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -11,18 +11,24 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-
-
-
+          {resumeOptions.map(option => (            <button
+              key = {option.id,}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick = {(,) => handleResumeSelect(option.id),}
           {resumeOptions.map((option) => (
             <button
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option.id)}
+<<<<<<< HEAD
 
 
 
@@ -33,11 +39,14 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-
           
 
           
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -57,9 +66,17 @@ export function SelectResumeSection({
 
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+<<<<<<< HEAD
 
 
 }
@@ -127,7 +144,10 @@ function SelectResumeSection() {
           )}
         </>
       )}
-
+    </div>
+  )
+}}
+}
   );
 }};
 };

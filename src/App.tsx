@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
 
-const Home = () => (
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+
+const HomePage = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
@@ -29,16 +37,19 @@ const Home = () => (
           title="AI Services"
           description="Transform your business with cutting-edge AI solutions."
           icon="✨"
+          features={["Machine Learning", "Natural Language Processing", "Computer Vision"]}
         />
         <ServiceCard
           title="Cybersecurity"
           description="Protect your digital assets with advanced security solutions."
           icon="🔒"
+          features={["Threat Detection", "Compliance Management", "Security Audits"]}
         />
         <ServiceCard
           title="Cloud Infrastructure"
           description="Scale your operations with robust cloud solutions."
           icon="☁️"
+          features={["Cloud Migration", "Infrastructure Optimization", "Scalable Solutions"]}
         />
       </div>
 
@@ -58,21 +69,32 @@ const Home = () => (
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <Header />
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          <main className="pt-20">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

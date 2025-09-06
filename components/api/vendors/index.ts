@@ -1,15 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+import { listVendors } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = null;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
   res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
-
   res.status(200).json({ vendors })
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -27,10 +28,8 @@ function handler() {
 function handler() {
   const vendors = list_vendors ();
   res.status (200).json ({ vendors });
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

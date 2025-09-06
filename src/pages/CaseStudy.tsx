@@ -1,7 +1,21 @@
 import { ArrowLeft } from 'lucide-react'
 
-
-
+import {  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+  BreadcrumbSeparator
+} from '@/components/ui/breadcrumb'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
+import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+export default function CaseStudy() {
+  const router = useRouter()
+  const slug = router.query.slug as string
+  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb'
 export default function CaseStudy() {;
   const router = useRouter();
   const slug = router.query.slug as string;
@@ -10,8 +24,6 @@ export default function CaseStudy() {;
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-
-
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -45,13 +57,13 @@ export default function CaseStudy() {;
 
   const router = useRouter();
   const slug = router.query.slug as string,
-  const study = CASE_STUDIES.find((s) => s.slug === slug);
-
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
+  const study = CASE_STUDIES.find((s) => s.slug === slug),
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
 
   if (!study) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+<<<<<<< HEAD
 
   if (!study) {
     return (
@@ -76,13 +88,18 @@ export default function CaseStudy() {;
     );
   }
   return (
-
-
+    <>
+      <SEO title={study.title} description={study.excerpt} />
+      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
+        <div className='container mx-auto max-w-3xl'>
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto max-w-3xl">
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
+<<<<<<< HEAD
 
 
 
@@ -93,18 +110,22 @@ export default function CaseStudy() {;
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-
-
+                  <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
                   <Link href="/case-studies">Case Studies</Link>
+<<<<<<< HEAD
 
 
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-
-
+                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
                 <BreadcrumbLink asChild aria-current="page">
+<<<<<<< HEAD
 
 
                   <span>{study.title}</span>
@@ -117,33 +138,48 @@ export default function CaseStudy() {;
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
-
-
+            <Link href='/case-studies'>
+              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            asChild
+          >
+            <Link href="/case-studies">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
+<<<<<<< HEAD
 
 
           </Button>
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}
-
-
+            className='h-12 mb-4'
+            loading='lazy'
             className="h-12 mb-4"
             loading="lazy"
+<<<<<<< HEAD
 
 
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
-
-
+            <Button variant='secondary' className='mb-6' asChild>
+              <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
+          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
+          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
+          {study.pdf && (
+            <Button variant="secondary" className="mb-6" asChild>
+              <a href={study.pdf} target="_blank" rel="noopener noreferrer">
+                Download PDF
+              </a>
             <Button variant="secondary" className="mb-6" asChild>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </Link>
+<<<<<<< HEAD
 
 
             </Button>
@@ -152,8 +188,16 @@ export default function CaseStudy() {;
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
-
-
+          <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
+            dangerouslySetInnerHTML={{ __html: study.content }}
+          />
+          <p className="mt-8 text-white font-semibold">
+          </p>
+        </div>
+      </div>
+    </>;
+  );
+};
 }
 }
 
@@ -164,12 +208,35 @@ export default function CaseStudy() {;
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
           <p className="mt-8 text-white font-semibold">;
+=======
+<<<<<<< HEAD
+          <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
+            dangerouslySetInnerHTML={{ __html: study.content }}
+          />
+          <p className="mt-8 text-white font-semibold">
+          </p>
+        </div>
+      </div>
+    </>;
+  );
+};
+}
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <p className="mt-8 text-white font-semibold">
+            — {study.author}, {study.role}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </p>;
         </div>;
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 
   );
 }

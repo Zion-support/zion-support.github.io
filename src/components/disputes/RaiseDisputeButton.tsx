@@ -1,5 +1,65 @@
 return (
     <>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from '@/components/ui/dialog'
+import { DisputeForm } from './DisputeForm'
+
+import { ShieldAlert } from 'lucide-react'
+  DialogDescription} from "@/components/ui/dialog"
+import { DisputeForm } from "./DisputeForm"
+import { useRouter } from 'next/router'
+interface RaiseDisputeButtonProps {
+  projectId: string;
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string
+
+export function RaiseDisputeButton({
+<<<<<<< HEAD
+  projectId
+  milestoneId
+  variant = 'outline'
+  size
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   projectId: string,
   milestoneId?: string,
@@ -9,15 +69,13 @@ return (
 }
 
 export function RaiseDisputeButton({ 
-
-
-
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
 
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -29,6 +87,7 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
 
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
@@ -69,10 +128,11 @@ export function RaiseDisputeButton({
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
 }
 
 
@@ -138,6 +198,6 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
+};
 }
 ;

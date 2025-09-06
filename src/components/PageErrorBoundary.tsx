@@ -2,6 +2,7 @@
 
   },
 
+<<<<<<< HEAD
 
 
 
@@ -130,7 +131,22 @@ if ( {) {
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
-
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
+                {error.message}
+              </pre>
+            </details>
+          )}
+          {/* Action Buttons */}
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>
+            <button
+              onClick={handleRefresh}
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'            >
+              <RefreshCw className='w-4 h-4 mr-2' />
+              Try Again
+            </button>
+            <Link
+              href='/'
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
@@ -150,8 +166,6 @@ if ( {) {
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-
-
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
@@ -234,62 +248,68 @@ if ( {) {
         </div>;
 
         {/* Support Information */}
-        <div className='bg - gray - 800 text - white rounded - lg p - 6 text - center'>;
-          <p className='mb - 3'>Need help? Contact our support team</p>;
-          <div className='flex flex - col sm:flex - row gap - 3 justify - center'>;
-            <a;
-              href='mailto:support@zion.tech';
-              className='text - blue - 400 hover:underline';
-            >;
-              support@zion.tech;
-            </a>;
-            <Link href='/status' className='text - blue - 400 hover:underline'>;
-              Service Status;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
+        <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
+          <p className="mb-3">Need help? Contact our support team</p>
+          <div className="flex flex-col sm: flex-row gap-3 justify-center">
+            <a 
+              href="mailto:support@zion.tech" 
+              className="text-blue-400 hover:underline"
+            >
+              support@zion.tech
+            </Link>
+            <Link href="/status" className="text-blue-400 hover:underline">
+              Service Status
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
-  page_name?: string;
-  fallback?: React.ComponentType < FallbackProps>;
-export default /**
- * PageErrorBoundary - Function description
- */
-function PageErrorBoundary() {
-  const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {
-    prodLogError (
-      `PageErrorBoundary caught error on ${page_name || 'unknown page'}:`,
-      error);
-    logErrorToProduction (
-      error instanceof Error ? error.message : String (error),
-      error instanceof Error ? error : undefined,
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
+export default function PageErrorBoundary({
+  children
+  pageName
+  fallback
+}: PageErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    prodLogError(
+      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
+      error
+    )
+    logErrorToProduction(
+      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error : undefined
       {
-        page: page_name || 'unknown',
-        component_stack: error_info.component_stack || undefined,
-        error_boundary: 'PageErrorBoundary',
-        timestamp: new Date ().toISOString (),
-
+        page: pageName |'unknown'
+        componentStack: errorInfo.componentStack |undefined
+        errorBoundary: 'PageErrorBoundary'
+        timestamp: new Date().toISOString()
       }
-    );
+    )
   }
-
-
+  const FallbackComponent =
+    fallback |
   const FallbackComponent = null;
     fallback ||
-
-
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        logInfo(`Resetting error boundary for ${pageName |'page'}`)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+<<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
@@ -383,6 +403,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 
       onReset={() => {        // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+<<<<<<< HEAD
 
 
 
@@ -390,17 +411,22 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
       }}
     >;
       {children}
-
-
+    </ErrorBoundary>
+  )
+}
+}
+}
 } ;
 } ;
 };
 }
+<<<<<<< HEAD
 
 
     </ErrorBoundary>;
   );
 } ;
+<<<<<<< HEAD
 
 
 

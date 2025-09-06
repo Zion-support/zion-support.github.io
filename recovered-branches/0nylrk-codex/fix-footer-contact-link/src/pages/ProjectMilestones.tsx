@@ -1,23 +1,21 @@
 
-
-
+import React from 'react';
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
-
-=======
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
@@ -75,6 +73,9 @@ export default ProjectMilestones;
 =======
     </ProtectedRoute>);
 }
-export default ProjectMilestones;
+
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default ProjectMilestones;
+
+;
+export default ProjectMilestones;

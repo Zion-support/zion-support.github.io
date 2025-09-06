@@ -1,9 +1,8 @@
 
-
+import { NotificationType  } from './types';
+import { createNotification } from './createNotification';
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
-
-
 /**
  * Demo function to create test notifications for the current user
  */
@@ -53,10 +52,9 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
-=======
-
-
-=======
+    actionText: actions[randomType].text
+  })
+}
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -88,20 +86,6 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-
-
-
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  return create_notification ({
-    user_id;
-    title: titles[random_type];
-    message: messages[random_type];
-    type: random_type;
-    send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}

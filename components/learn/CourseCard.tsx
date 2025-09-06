@@ -1,9 +1,7 @@
+import Link from 'next/link';
+export type Course = {;
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export type Course = {
   id: string;
   title: string;
   duration_minutes: number;
@@ -57,11 +55,17 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
+        </Link>
+          <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
+        </a>
+
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

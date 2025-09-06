@@ -77,6 +77,7 @@ function QuickAccess() {
             <Link;
               key={index}
               href={link.link}
+<<<<<<< HEAD
 
               </p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
@@ -100,6 +101,7 @@ export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
+<<<<<<< HEAD
 
       transition: {
         duration: 0.5, ";
@@ -489,12 +491,12 @@ export default function Page() {;";
                 </div>
               </div>
               {/* CTA */}
-
-              <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}"
-                className="mt-auto">;
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="mt-auto">
                 <Link
+<<<<<<< HEAD
                   to={link && link.path}`
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
                   Explore {link && link.title}";
@@ -505,6 +507,7 @@ export default function Page() {;";
 
 export default QuickAccess;
 ;
+<<<<<<< HEAD
 
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
@@ -528,6 +531,7 @@ export default QuickAccess;
 export default QuickAccess;}
 
 export default QuickAccess;
+<<<<<<< HEAD
 
 
 

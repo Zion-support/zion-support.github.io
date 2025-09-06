@@ -1,14 +1,14 @@
 
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
 
 export interface Dispute {
-=======
+export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
+export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 
 export interface Dispute {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -36,12 +36,9 @@ export interface Dispute {;
 
   }
 }
-
-
+export interface DisputeMessage {
 
 export interface DisputeMessage {;
-
-
   id: string;
   dispute_id: string;
   user_id: string;
@@ -55,12 +52,9 @@ export interface DisputeMessage {;
 
   }
 }
-
-
+export interface DisputeAttachment {
 
 export interface DisputeAttachment {;
-
-
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -80,26 +74,28 @@ export type DisputeReason =;
   | 'payment';
   | 'contract_terms';
   | 'other';
-;
-export const disputeReasonLabels: Record < DisputeReason, string> = {
-
-=======
+export const disputeReasonLabels: Record<DisputeReason, string> = {
 
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+  contract_terms: 'Contract Terms Disagreement'
+other: 'Other Issue'}
 
+=======
+<<<<<<< HEAD
+  contract_terms: 'Contract Terms Disagreement'
+other: 'Other Issue'}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};
-
-=======
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
@@ -170,7 +166,3 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
   other: 'Other Issue'};
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

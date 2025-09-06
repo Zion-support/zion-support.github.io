@@ -78,8 +78,21 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
             <ReactMarkdown>{tutorial.content}</ReactMarkdown>
           </div>
           {tutorial.author && (
-
+            <p className='mt-8 text-white font-semibold'>
+              —{' '}
+              {typeof tutorial.author === 'string'
+                ? tutorial.author
+                : tutorial.author.name}
+            </p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
 }
+}
+<<<<<<< HEAD
 
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
@@ -106,10 +119,10 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     );
   }
   return (
-    <>;
-      <SEO title={tutorial && tutorial.title} description={tutorial && tutorial.excerpt} />;
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>;
-        <div className='container mx-auto max-w-3xl'>;
+    <>
+      <SEO title={tutorial.title} description={tutorial.excerpt} />
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto max-w-3xl">
           <Button
             variant='outline'
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -138,8 +151,8 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>;
     </>;
   );
-
 }
+<<<<<<< HEAD
 
 import Link from 'next / link';
 import { use_router } from 'next / router';

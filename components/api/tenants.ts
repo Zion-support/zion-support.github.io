@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { authenticateRequest } from '@/utils/auth';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const auth = authenticateRequest(req, false);
 
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   if (method === 'POST') {
 
     if (!branding?.name)
@@ -37,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });  }
-
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
@@ -143,6 +142,7 @@ if ( {) {
     return res.status (200).json ({ tenant: result });
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -177,9 +177,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
-
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
-
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
@@ -188,6 +186,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result })
+  }
+return res.status(405).json({ error: 'Method not allowed' });
+}
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};

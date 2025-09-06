@@ -23,8 +23,10 @@ import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
+// Market insights component
 
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
+<<<<<<< HEAD
 
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
@@ -59,9 +61,9 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
-
-
+}: any,) => (
 }: any) => (
+<<<<<<< HEAD
 
 
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -104,18 +106,17 @@ const MarketplaceFilterControls = ({;
 
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
-
+      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-
-
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
 
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
@@ -142,18 +143,18 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   const { formatPrice } = useCurrency(),;
 
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">;
-    <CardHeader className="pb-3">;
-      <div className="flex items-start justify-between">;
-        <div className="flex-1 min-w-0">;
-          <h3 className="font-semibold text-lg truncate">{product && product.title}</h3>;
-          <p className="text-sm text-muted-foreground">{product && product.category}</p>;
-          <div className="flex items-center gap-2 mt-2">;
-            <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>;
-            {product && product.aiScore && product && product.aiScore > 80 && (;
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
-                AI {product && product.aiScore}
-              </Badge>;
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
+            {product.aiScore && product.aiScore > 80 && (
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
+                AI {product.aiScore}
+              </Badge>
             )}
           </div>;
         </div>;
@@ -270,11 +271,47 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 
 
           onClick={onAddToCart}
+<<<<<<< HEAD
 
 
           aria-label="Add to cart"
-
-
+          data-testid="add-to-cart-listing-button"
+        >
+          <ShoppingCart className="h-4 w-4" />
+        </Button>
+        <Button size="sm" variant="outline" className="flex-1" onClick={onViewDetails}>
+          View Details
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+  )
+}
+// Loading grid
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
+  </div>
+)
+// Main component
+function MarketplacePageContent() {
+  const router = useRouter()
+  const { t } = useTranslation()
+  const dispatch = useDispatch<AppDispatch>()
+  const { isAuthenticated } = useAuth()
+  const [sortBy, setSortBy] = useState('newest')
+  const [filterCategory, setFilterCategory] = useState('')
+  const [showRecommended, setShowRecommended] = useState(false)
+  const fetchProducts = useCallback(async (page: number, limit: number,) => {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 300))
+    try {
+      // Combine initial products with marketplace listings
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS]
+      // Apply category filtering
+      let processedDataset = fullDataset
+      if (filterCategory) {
+        processedDataset = processedDataset.filter(p => p.category === filterCategory)
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
@@ -299,6 +336,7 @@ function MarketplacePageContent() {;
       let processedDataset = fullDataset,;
       if (filterCategory) {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
+<<<<<<< HEAD
 
 
       }
@@ -336,11 +374,8 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
-
-
+  }, [sortBy, filterCategory, showRecommended])
   }, [sortBy, filterCategory, showRecommended]),
-
-
 
   const {
     items: products
@@ -364,28 +399,28 @@ function MarketplacePageContent() {;
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
-
-
+      averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
+      averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
+      totalProducts: products.length
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-
-
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
-
-
+  }, [])
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  useEffect((,) => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800)
+    window.addEventListener('scroll', handleScroll)
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
@@ -475,10 +510,7 @@ function MarketplacePageContent() {;
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-
-
   }, [sortBy, filterCategory, showRecommended]),;
-
   const {;
     items: products,;
     loading,;
@@ -491,37 +523,31 @@ function MarketplacePageContent() {;
     scrollToTop,;
     loadMore;
   } = useInfiniteScrollPagination(fetchProducts, 12),;
-
   // Refresh when filters change;
-  useEffect((,) => {;
-    const timeoutId = setTimeout((,) => {;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
       refresh();
     }, 100),;
-
     return () => clearTimeout(timeoutId);
   }, [sortBy, filterCategory, showRecommended, refresh]),;
-
-  const marketStats = useMemo((,) => {;
-    if (products && products.length === 0) return null,;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
     return {;
-      averagePrice: products && products.reduce((sum, p,) => sum + (p && p.price || 0), 0) / products && products.length,;
-      averageRating: products && products.reduce((sum, p,) => sum + (p && p.rating || 0), 0) / products && products.length,;
-      totalProducts: products && products.length,;
-      availableCount: products && products.filter(p => p && p.availability === "Available").length;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
     }
   }, [products]),;
-
-  const categories = useMemo((,) => {;
+  const categories = useMemo(() => {;
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
   }, []),;
-
   const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect((,) => {;
-    const handleScroll = () => setShowScrollTop(window && window.scrollY > 800),;
-    window && window.addEventListener('scroll', handleScroll),;
-    return () => window && window.removeEventListener('scroll', handleScroll);
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
-
   // Loading state;
 
   if (loading && products.length === 0) {;
@@ -530,8 +556,6 @@ function MarketplacePageContent() {;
         <NextSeo;
           title="Marketplace - Zion Tech Marketplace Solutions & Services";
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
-
-
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -567,13 +591,14 @@ function MarketplacePageContent() {;
       </>;
     );
   }
+<<<<<<< HEAD
 
 
   // Error state;
   if (error && products && products.length === 0) {;
 
     return (
-      <>;
+      <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
@@ -781,6 +806,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -808,8 +837,16 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
-
-
+        />
+      </motion.div>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {products.map((item, index,) => (
+            <motion.div
+              key = {item.id,}
+              ref = {index === products.length - 1 ? lastElementRef : null,}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
 
@@ -835,6 +872,7 @@ if ( {) {
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
+<<<<<<< HEAD
 
 
 
@@ -914,14 +952,11 @@ if ( {) {
               <MarketplaceCard;
                 product = {item, }
                 onViewDetails={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
+                  if (typeof window !== 'undefined') {
                     try {
-                      session_storage.set_item (`product:${item.id}`, JSON.stringify (item));
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
-                      // ignore storage errors;
+                      // ignore storage errors
                     }
                   }
                   router.push (`/marketplace / listing/${item.id}`);
@@ -930,10 +965,10 @@ if ( {) {
 
 
                 onAddToCart={() => {;
-                  dispatch(addItem({ id: item && item.id, title: item && item.title, price: item && item.price ?? 0 })),;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
                     title: 'Added to cart',;
-                    description: `${item && item.title} has been added to your cart`,;
+                    description: `${item.title} has been added to your cart`,;
                     action: {;
                       label: 'View Cart',;
                       onClick: (,) => router && router.push('/cart')}});
@@ -950,17 +985,15 @@ if ( {) {
         </motion.div>;
       )}
 
-
                 }}
               />
             </motion.div>
 
           ))}
-
-
+        </AnimatePresence>
+      </motion.div>
+      {(isFetching |loading) && products.length > 0 && (
       {(isFetching || loading) && products.length > 0 && (
-
-
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -982,8 +1015,6 @@ if ( {) {
         </motion && motion.div>;
 
             </Button>
-
-
           )}
         </div>
       )}
@@ -1028,10 +1059,10 @@ if ( {) {
           </motion && motion.button>;
 
         )}
-      </AnimatePresence>;
-    </div>;
-    </>;
-  );
+      </AnimatePresence>
+    </div>
+    </>
+  )
 }
 
 
@@ -1101,9 +1132,10 @@ function MarketplacePage() {
   return <MarketplacePageContent />;
 }
 ;
+<<<<<<< HEAD
 
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
-
+};
 }
 ;

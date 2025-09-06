@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -16,31 +22,41 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
-// Define form schema;
-const serviceProfileSchema = z && z.object({;
-  name: z && z.string().min(2, "Name must be at least 2 characters long");
-  title: z && z.string().min(5, "Business name/title is required");
-  bio: z && z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
-  location: z && z.string().min(2, "Location is required");
-  services: z && z.string().min(2, "Enter at least one service");
-  hourlyRate: z && z.string().refine((val) => !isNaN(Number(val)), {;
-    message: "Rate must be a number"}),;
-  availability: z && z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z && z.boolean().default(true),;
-  website: z && z.string().url("Please enter a valid URL").or(z && z.string().length(0)).optional()}),;
-
-type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
-
-export function ServiceProviderRegistrationForm() {;
-
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serviceTags, setServiceTags] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-
-
-
-
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -50,7 +66,18 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-
+    message: "Rate must be a number"})
+  availability: z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z.boolean().default(true)
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()})
+type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
+export function ServiceProviderRegistrationForm() {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serviceTags, setServiceTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null)
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
     message: "Rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
@@ -58,8 +85,19 @@ const serviceProfileSchema = z.object({
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function ServiceProviderRegistrationForm() {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serviceTags, setServiceTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+export function ServiceProviderRegistrationForm() {
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [serviceTags, setServiceTags] = useState<string[]>([]),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+  
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -82,7 +120,11 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
       setServiceTags([...serviceTags, serviceInput]),
       form.setValue("services", "")
     }
-
+  }
+  // Handle removing service tags
+  const handleRemoveService = (service: string) => {
+    setServiceTags(serviceTags.filter((s) => s !== service))
+  }
   },
 
   // Handle removing service tags
@@ -90,16 +132,29 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
     setServiceTags(serviceTags.filter((s) => s !== service))
   },
 
-
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
-
+    }
+  }
+  // Handle avatar upload
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
   };
-
-=======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -192,6 +247,13 @@ export function ServiceProviderRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -199,16 +261,31 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
+    const formData = form.getValues(),
+    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-
-
-
-=======
+    }
+    try {
+      setIsGenerating(true);
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
+        body: {
+          providerData: {
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            services: serviceTags
+            location: formData.location
+          }
+        }
+      });
+      if (error) {
+        throw new Error(error.message)
+      }
+      setGeneratedContent(data as { summary: string, services: string[] })
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -236,15 +313,10 @@ export function ServiceProviderRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-
-
-
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -254,73 +326,18 @@ export function ServiceProviderRegistrationForm() {;
         title: "Generation failed"
         description: error.message |"There was an error generating your enhanced profile. Please try again."
         variant: "destructive"})
-=======
-import React, { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Switch } from '@/components / ui / switch';
-import { Badge } from '@/components / ui / badge';
-import { Separator } from '@/components / ui / separator';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { AspectRatio } from '@/components / ui / aspect - ratio';
-import { use_auth } from '@/hooks / use_auth';
-// Define form schema;
-const serviceProfileSchema = z.object ({
-  name: z.string ().min (2, "Name must be at least 2 characters long");
-  title: z.string ().min (5, "Business name / title is required");
-  bio: z.string ().min (50, "Bio must be at least 50 characters long").max (1000, "Bio cannot exceed 1000 characters");
-  location: z.string ().min (2, "Location is required");
-  services: z.string ().min (2, "Enter at least one service");
-  hourly_rate: z.string ().refine ((val) => !isNaN (Number (val)), {
-    message: "Rate must be a number"}),
-  availability: z.enum (["available", "limited", "unavailable"]);
-  enhanced_profile: z.boolean ().default (true),
-  website: z.string ().url ("Please enter a valid URL").or (z.string ().length (0)).optional ()}),
-type ServiceFormValues = z.infer < typeof serviceProfileSchema>;
-;
-export /**
- * ServiceProviderRegistrationForm - Function description
- */
-function ServiceProviderRegistrationForm() {
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [service_tags, setServiceTags] = useState < string[]>([]);
-  const [is_generating, setIsGenerating] = useState (false);
-  const [generated_content, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
-  const [uploaded_avatar, setUploadedAvatar] = useState < string | null>(null);
-;
-  // Initialize form with default values;
-  const form = use_form < ServiceFormValues>({
-    resolver: zod_resolver (serviceProfileSchema),
-    default_values: {
-      name: user?.display_name || "",
-      title: "",
-      bio: "",
-      location: "",
-      services: "",
-      hourly_rate: "",
-      availability: "available",
-      enhanced_profile: true,
-      website: ""}}),
-  // Handle adding service tags;
-  const handleAddService = () =>: any {
-    const service_input = form.get_values ("services");
-    if () {) {
-  $2
-}
-      setServiceTags ([...service_tags, service_input]);
-      form.set_value ("services", "");
+    } finally {
+      setIsGenerating(false)
     }
-
-
+  }
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary);
+      if (generatedContent.services && generatedContent.services.length > 0) {
+        const newServices = generatedContent.services.filter(
+          service => typeof service === 'string' && service && !serviceTags.includes(service)
+        );
   },
 
   // Apply generated content to form
@@ -333,8 +350,6 @@ function ServiceProviderRegistrationForm() {
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         ),
         
-
-
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
 =======
@@ -363,11 +378,8 @@ if ( {) {
         }
       }
     }
-
-
+  }
   },
-
-
 
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
@@ -377,25 +389,36 @@ if ( {) {
         description: "Please add at least one service to your profile."
         variant: "destructive"})
       return
-
-  };
-=======
     }
-
-
-
-  // Handle removing service tags;
-  const handleRemoveService = (service: string) => {;
-    setServiceTags(serviceTags && serviceTags.filter((s) => s !== service));
-  };
-
+    setIsSubmitting(true);
 
 
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
-
+      }
+      // Enhance profile if not already done
+      let finalSummary = values.bio;
+      let finalServices = serviceTags;
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
+            body: {
+              providerData: {
+                name: values.name
+                title: values.title
+                bio: values.bio
+                services: serviceTags
+                location: values.location
+              }
+            }
+          });
+          if (aiData) {
+            finalSummary = (aiData as any).summary |values.bio;
+            // Merge AI suggested services with user-provided services
+            const aiServices = (aiData as any).services |[];
+            finalServices = [...new Set([...serviceTags, ...aiServices])]
 ;
       setGeneratedContent(data as { summary: string, services: string[] }),;
       toast({;
@@ -512,17 +535,18 @@ if ( {) {
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
-
-
-
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      } else if (generatedContent) {
+        finalSummary = generatedContent.summary;
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
+      }
+      // Get user email for notification
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -531,40 +555,27 @@ if ( {) {
 
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
-      // Get user email for notification;
-      const { data: userData } = await supabase && supabase.auth.getUser(),;
-      const userEmail = userData && userData.user?.email;
-
-      // Create the service profile;
-      const { data: profileData, error } = await supabase;
-        .from('profiles');
-        .update({;
-          display_name: values && values.name,;
-          bio: finalSummary,;
-          user_type: "creator", // Set as service provider;
-          profile_complete: true,;
-          updated_at: new Date().toISOString(),;
-          headline: values && values.title,;
-          // Additional fields that might be in profiles table;
-        });
-        .eq('id', user && user.id);
-
+      // Create the service profile
+      const { data: profileData, error } = await supabase
+        .from('profiles')
+        .update({
+          display_name: values.name
+          bio: finalSummary
+          user_type: "creator", // Set as service provider
+          profile_complete: true
+          updated_at: new Date().toISOString()
+          headline: values.title
+          // Additional fields that might be in profiles table
+        })
+        .eq('id', user.id)
         .select();
       if (error) throw error;
-
-
         .select(),
 
       if (error) throw error,
-
-
 
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
@@ -572,8 +583,13 @@ if ( {) {
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
-
-
+          user_id: user.id
+          services: finalServices
+          hourly_rate: Number(values.hourlyRate)
+          availability_status: values.availability
+          location: values.location
+          website: values.website |null})
+      if (serviceError) throw serviceError;
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -582,8 +598,6 @@ if ( {) {
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
-
-
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
@@ -693,9 +707,8 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-
+  }
   },
-
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -798,7 +811,10 @@ if ( {) {
                           </FormControl>
                           <FormMessage className="text-red-400" />
                         </FormItem>
-
+                      )}
+                    />
+                  </div>
+                </div>
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -1117,9 +1133,6 @@ if ( {) {
                     />;
                   </div>;
                 </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1445,13 +1458,10 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
-
+                  </div>
+                </div>
                   </div>;
                 </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
@@ -1573,112 +1583,47 @@ if ( {) {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
-                                checked={field && field.value === "unavailable"}
-                                onChange={() => field && field.onChange("unavailable")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-red-500"></div>;
-=======
-                        <FormDescription className="text - zion - slate">;
-                          Your base hourly or project rate;
-                        </FormDescription>;
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <FormField;
-                    control={form.control}
-                    name="availability";
-                    render={({ field }) => (
-                      <FormItem className="space - y-4">;
-                        <FormLabel className="text - zion - slate - light">Current Status</FormLabel>;
-                        <FormControl>;
-                          <div className="space - y-2">;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="available";
-                                value="available";
-                                checked={field.value === "available"}
-                                on_change={() => field.on_change ("available")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="available" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - green - 500"></div>;
-                                Available for Work;
-                              </label>;
-                            </div>;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="limited";
-                                value="limited";
-                                checked={field.value === "limited"}
-                                on_change={() => field.on_change ("limited")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="limited" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="unavailable";
-                                value="unavailable";
                                 checked={field.value === "unavailable"}
-                                on_change={() => field.on_change ("unavailable")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="unavailable" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                                Currently Unavailable;
-                              </label>;
-                            </div>;
-                          </div>;
-                        </FormControl>;
-
-=======
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-
-                  />;
-                </div>;
-              </div>;
-            </CardContent>;
-
-=======
-            <CardFooter className="border - t border - zion - blue - light pt - 6">;
-              <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
-                <Button;
-                  type="button";
-                  variant="outline";
-                  className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
-                >;
-                  Save as Draft;
-                </Button>;
-                <Button;
-                  type="submit";
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-                  disabled={is_submitting}
-                >;
-                  {is_submitting ? "Creating Profile..." : "Create Service Profile"}
-
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-
-    </div>);
+                                onChange={() => field.onChange("unavailable")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                Currently Unavailable
+                              </label>
+                            </div>
+                          </div>
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="border-t border-zion-blue-light pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                >
+                  Save as Draft
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
 }
-
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

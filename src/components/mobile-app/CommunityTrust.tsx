@@ -6,6 +6,7 @@ import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
+<<<<<<< HEAD
 
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -43,6 +44,7 @@ export const CommunityTrust: React.FC = () => {
     { value: '50K+', label: 'Downloads' },
     { value: '96%', label: 'User Satisfaction' },
     { value: '12M+', label: 'Matches Made' },
+<<<<<<< HEAD
 
         </div>;
 
@@ -76,13 +78,17 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
-  ];
+  ],
 
+<<<<<<< HEAD
 
 
 
@@ -133,8 +139,7 @@ export const CommunityTrust: React.FC = () => {;
     { value: "12M+", label: "Matches Made" }
 
   ];
-
-  return (
+  return (;
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -148,24 +153,19 @@ export const CommunityTrust: React.FC = () => {;
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">;
-          {stats && stats.map((stat, index) => (;
+          {stats.map((stat, index) => (;
             <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat && stat.value}</div>;
-              <div className="text-zion-slate-light">{stat && stat.label}</div>;
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
+              <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
           ))}
-
         </div>;
-
-
         {/* Rating display */}
-        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
-          <div className="flex justify-center mb-4">;
-            {[1, 2, 3, 4, 5].map((star) => (;
-              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
+          <div className="flex justify-center mb-4">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
-
-
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -177,6 +177,7 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
 
           </div>;

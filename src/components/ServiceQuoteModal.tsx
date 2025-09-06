@@ -1,4 +1,5 @@
 ...formData;            startDate: startDate?.toISOString(),
+<<<<<<< HEAD
 
             endDate: endDate?.toISOString()}
         }
@@ -6,6 +7,7 @@
 
 }
 }
+<<<<<<< HEAD
 
 
 
@@ -19,6 +21,7 @@
 
 
 ;
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",

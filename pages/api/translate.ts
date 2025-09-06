@@ -1,5 +1,8 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,6 +33,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Translation error', err)
 
     return res.status(500).json({ error: 'Translation failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ translation: 'Translated content' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { text, targets } = req.body as { text: string, targets: string[] },;
+  if (!text || !Array.isArray(targets) || targets.length === 0) {;
+    return res.status(400).json({ error: 'Invalid input' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 =======
@@ -70,16 +93,49 @@ if (|| targets.length === 0) {) {
         temperature: 0.2}),
       const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
-    }
-    return res.status (200).json (results);
-  } catch (err: any) {
-    console.error ('Translation error', err),
-    return res.status (500).json ({ error: 'Translation failed' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return res.status(200).json(results);
+  } catch (error) {
+    console.error('Translation error', err);
+    return res.status(500).json({ error: 'Translation failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+}

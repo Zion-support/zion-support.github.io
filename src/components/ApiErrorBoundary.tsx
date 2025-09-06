@@ -59,13 +59,16 @@ if ( {) {
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
-
-
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -80,6 +83,11 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
 
 
             <div className='flex flex-col gap-2'>;
@@ -89,8 +97,6 @@ if ( {) {
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-
-
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -102,12 +108,16 @@ if ( {) {
                     Try Again
                   </>
                 )}
-
-
+              </Button>
+              <Button
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
+<<<<<<< HEAD
 
 
                 Reload Page
@@ -204,15 +214,34 @@ export const useApiErrorHandler = () =>: any {
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
-
-
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+// Hook for accessing query client in function components
+export const useApiErrorHandler = () => {
+  const handleApiError = (error: Error) => {
+    Sentry.withScope(scope => {
+      scope.setTag('source', 'useApiErrorHandler')
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+  return { handleApiError }
+}
 
 }, ;
   return { handleApiError };
@@ -234,9 +263,8 @@ export const useApiErrorHandler = () => {;
       Sentry && Sentry.captureException(error);
     });
   };
-  return { handleApiError };
-};
   return { handleApiError }
+<<<<<<< HEAD
 
 
 

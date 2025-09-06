@@ -1,14 +1,14 @@
 
-
-
+import React from 'react';
+import { CheckCircle  } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+interface VerifiedBadgeProps {
   verified: boolean,
   size?: 'sm' | 'md' | 'lg'
 }
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
-
-=======
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -17,29 +17,21 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
 }
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
-
-
+  if (!verified) return null;
   if (!verified) return null,
-
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
-
+  }
 
   },
   
-
-
   return (
     <TooltipProvider>
       <Tooltip>
@@ -54,16 +46,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
       </Tooltip>
     </TooltipProvider>
   )
-
-import {CheckCircle} from 'lucide-react';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-
-interface VerifiedBadgeProps {;
-  verified: boolean,;
-  size?: 'sm' | 'md' | 'lg';
-=======
-
-
+}
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgeProps) {;
@@ -112,6 +95,3 @@ if (return null) {
     lg: 'h - 5 w - 5';
   }
 ;
-
-
-

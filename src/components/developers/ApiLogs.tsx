@@ -16,5 +16,9 @@ function ApiLogs() {
   const hasNextPage = current_page < total_pages - 1;
   const hasPrevPage = current_page > 0);
 }
+  )
+}
+      </CardContent>;
+    </Card>;
   );
 }

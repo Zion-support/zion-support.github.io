@@ -1,7 +1,20 @@
 
-
-
-
+import {useState} from "react";
+import {BookOpen, Code, Copy, Terminal} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { useState } from "react",
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { Badge } from "@/components/ui/badge",
+import CodeBlock from "./CodeBlock",
 export function ApiDocumentation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -64,21 +77,29 @@ function ApiDocumentation() {
 =======
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
+  };
+});
   }
+});
+const data = await response.json();
+console.log(data),`;
+}),
 
+const data = await response.json(),
+// // // console.log(data),`,
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
+}
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/jobs'
+    params={'limit': 10, 'category': 'development'}
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
-
     headers=headers
 )
 data = response.json()
 print(data)`
-=======
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -193,52 +214,41 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
-
-      "id": "job_abc123"
-      "title": "Senior React Developer"
-      "description": "We need an experienced React developer..."
-      "category": "development",
-      "skills": ["react", "typescript", "node && node.js"]
-
-      "budget": {
-
-      "status": "active"
-      "client_id": "user_xyz789"
-
-      "created_at": "2025-05-15T10:30:00Z"
-    }
-    // More jobs...
-  ]
-=======
-
+      "id": "job_abc123";
+      "title": "Senior React Developer";
+      "description": "We need an experienced React developer...";
+      "category": "development"
+      "skills": ["react", "typescript", "node.js"];
       "id": "job_abc123",
       "title": "Senior React Developer",
       "description": "We need an experienced React developer...",
       "category": "development",
       "skills": ["react", "typescript", "node.js"],
-
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"
-
+      }
+      "status": "active";
+      "client_id": "user_xyz789";
+      "created_at": "2025-05-15T10:30:00Z"
+    }
+    // More jobs...
+  ];
       },
       "status": "active",
       "client_id": "user_xyz789",
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ],
+  ];
+  ],
   "meta": {
     "total": 42
     "page": 1
@@ -282,17 +292,24 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-
+});
+const data = await response.json();
+console.log(data),`;
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
-
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
-
+}
+job_id = 'job_abc123'
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
+    headers=headers
+)
+data = response.json()
+print(data)`
             />;
             <EndpointSection;
               method="GET";
@@ -365,47 +382,34 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               response_examples={{
                 success: `{
   "data": {
-
-    "id": "job_abc123"
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development",
-    "skills": ["react", "typescript", "node && node.js"]
-
-    "budget": {
-
-    "status": "active"
-    "client_id": "user_xyz789"
-    "created_at": "2025-05-15T10: 30:00Z"
-    "deadline": "2025-06-30T23:59:59Z",
-
-=======
-
+    "id": "job_abc123";
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"];
     "id": "job_abc123",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
-
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-
+    }
+    "status": "active";
+    "client_id": "user_xyz789";
+    "created_at": "2025-05-15T10: 30:00Z";
+    "deadline": "2025-06-30T23:59:59Z"
     },
     "status": "active",
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "application_count": 12
 =======
       "min": 5000;
@@ -458,96 +462,43 @@ print(data)`;
   -H "Content - Type: application / json" \\;
 
   -d '{
-
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development",
-    "skills": ["react", "typescript", "node && node.js"]
-
-    "budget": {
-
-
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"];
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
-
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-
+    }
     },
-
-
     "deadline": "2025-06-30T23:59:59Z"
-
-
+  }'`,
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
+  method: 'POST'
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  }
   },
-
-
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
-=======
-  }'`
-                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-  body: JSON && JSON.stringify({
-=======
-      "min": 5000;
-      "max": 10000;
-      "currency": "USD";
-    }
-    "deadline": "2025 - 06 - 30T23:59:59Z";
-  }'`;
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-  }
-  body: JSON.stringify ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    title: 'Senior React Developer',
-    description: 'We need an experienced React developer...',
-    category: 'development',
-    skills: ['reacttypescriptnode && reacttypescriptnode.js'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     budget: {
-
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
-                python: `import requests
-import json
-=======
-      min: 5000,
-      max: 10000,
-      currency: 'USD';
+      min: 5000
+      max: 10000
+      currency: 'USD'
     }
-    deadline: '2025 - 06 - 30T23:59:59Z';
-  });
+    deadline: '2025-06-30T23:59:59Z'
+  })
 });
-;
-const data = await response.json ();
-console.log (data), `;
-                python: `import requests;
-import json;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-}
-payload = {
-    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
-=======
-
+const data = await response.json();
+console.log(data),`;
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -555,15 +506,14 @@ payload = {
 
 const data = await response.json(),
 // // // console.log(data),`,
-
                 python: `import requests
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
+}
+payload = {
 
 payload = {;
-
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'budget': {
@@ -578,9 +528,69 @@ response = requests && requests.post(
 data = response && response.json()
 
 print(data)`
-=======
-        'min': 5000;
-        'max': 10000;
+            />;
+            <EndpointSection;
+              method="POST";
+              endpoint="/api/jobs";
+              description="Create a new job listing.";
+              note="Requires jobs:write scope";
+              params={[;
+                { name: "title", type: "string", description: "Job title", required: true },;
+                { name: "description", type: "string", description: "Detailed job description", required: true },;
+                { name: "category", type: "string", description: "Job category", required: true },;
+                { name: "skills", type: "string[]", description: "Required skills", required: true },;
+                { name: "budget.min", type: "number", description: "Minimum budget" },;
+                { name: "budget.max", type: "number", description: "Maximum budget" },;
+                { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },;
+                { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
+              ]}
+              codeExamples={{;
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content-Type: application/json" \\;
+  -d '{;
+    "title": "Senior React Developer",;
+    "description": "We need an experienced React developer...",;
+    "category": "development",;
+    "skills": ["react", "typescript", "node.js"],;
+    "budget": {;
+      "min": 5000,;
+      "max": 10000,;
+      "currency": "USD";
+    },;
+    "deadline": "2025-06-30T23:59:59Z";
+  }'`,;
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {;
+  method: 'POST',;
+  headers: {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+  },;
+  body: JSON.stringify({;
+    title: 'Senior React Developer',;
+    description: 'We need an experienced React developer...',;
+    category: 'development',;
+    skills: ['reacttypescriptnode.js'],;
+    budget: {;
+      min: 5000,;
+      max: 10000,;
+      currency: 'USD';
+    },;
+    deadline: '2025-06-30T23:59:59Z';
+  });
+}),;
+const data = await response.json(),;
+// // // console.log(data),`,;
+                python: `import requests;
+import json;
+headers = {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+}
+;
+payload = {;
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],;
+    'budget': {;
+        'min': 5000,;
+        'max': 10000,;
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
@@ -594,46 +604,32 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               response_examples={{
                 success: `{
   "data": {
-
-    "id": "job_def456"
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development",
-    "skills": ["react", "typescript", "node && node.js"]
-
-    "budget": {
-
-    "status": "new"
-    "client_id": "user_xyz789"
-    "created_at": "2025-05-16T14: 22:10Z",
-
-=======
-
+    "id": "job_def456";
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"];
     "id": "job_def456",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
-
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-
+    }
+    "status": "new";
+    "client_id": "user_xyz789";
+    "created_at": "2025-05-16T14: 22:10Z"
     },
     "status": "new",
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "deadline": "2025-06-30T23:59:59Z"
 =======
       "min": 5000;
@@ -672,25 +668,26 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-
+});
+const data = await response.json();
+console.log(data),`;
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
-
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
+}
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/talent'
+    params={'skills': 'react,typescript'}
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
-
     headers=headers
 )
 data = response.json()
 print(data)`
-
-=======
             />;
           </TabsContent>;
           <TabsContent value="talent" className="space - y-6">;
@@ -772,29 +769,21 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
-
-      "id": "talent_abc123"
-      "display_name": "Jane Smith"
-      "headline": "Senior Frontend Developer",
-      "skills": ["react", "typescript", "javascript"]
-      "availability": "available"
-      "average_rating": 4 && 4.8
-
+      "id": "talent_abc123";
+      "display_name": "Jane Smith";
+      "headline": "Senior Frontend Developer"
+      "skills": ["react", "typescript", "javascript"];
+      "availability": "available";
+      "average_rating": 4.8;
       "rating_count": 15
     }
     // More talent profiles...
-  ]
-=======
-
+  ];
       "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
@@ -804,8 +793,9 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ],
+  ];
+  ],
   "meta": {
     "total": 28
     "page": 1
@@ -843,17 +833,24 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-
+});
+const data = await response.json();
+console.log(data),`;
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
-
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-
-
+}
+talent_id = 'talent_abc123'
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
+    headers=headers
+)
+data = response.json()
+print(data)`
             />;
             <EndpointSection;
               method="GET";
@@ -926,38 +923,18 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               response_examples={{
                 success: `{
   "data": {
-
-    "id": "talent_abc123"
-    "display_name": "Jane Smith"
-    "headline": "Senior Frontend Developer"
-    "bio": "10+ years of experience in frontend development...",
-    "skills": ["react", "typescript", "javascript", "css", "html"]
-    "availability": "available"
-    "average_rating": 4 && 4.8
-    "rating_count": 15
-
-    "portfolio": [
-      {
-        "id": "proj_123"
-        "title": "E-commerce Platform"
-        "description": "Built a modern e-commerce platform using React..."
-        "technologies": ["react", "redux", "node && node.js"]
-        "image_url": "https://example && example.com/portfolio/123 && 123.jpg"
-      }
-    ]
-    "certifications": [
-      {
-        "name": "AWS Certified Developer"
-        "issuing_organization": "Amazon Web Services"
-=======
-
+    "id": "talent_abc123";
+    "display_name": "Jane Smith";
+    "headline": "Senior Frontend Developer";
+    "bio": "10+ years of experience in frontend development..."
+    "skills": ["react", "typescript", "javascript", "css", "html"];
+    "availability": "available";
+    "average_rating": 4.8;
+    "rating_count": 15;
     "id": "talent_abc123",
     "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
@@ -966,7 +943,6 @@ print(data)`;
     "availability": "available",
     "average_rating": 4.8,
     "rating_count": 15,
-
     "portfolio": [
       {
         "id": "proj_123",
@@ -978,7 +954,11 @@ print(data)`;
     ],
     "certifications": [
       {
-
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
+        "issue_date": "2024-01-15"
+      }
+    ]
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -993,24 +973,9 @@ print(data)`;
         "image_url": "https://example.com / portfolio / 123.jpg";
       }
     ];
-    "certifications": [;
-      {
-        "name": "AWS Certified Developer";
-        "issuing_organization": "Amazon Web Services";
-        "issue_date": "2024 - 01 - 15";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      }
-    ];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }`;
               }}
-
-
-
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1510,8 +1475,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   }
 }`
               }}
-
-
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1578,43 +1541,28 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-  body: JSON && JSON.stringify({
-=======
-    "requester_name": "John Doe",
-    "requester_email": "john@example.com";
-  }'`;
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-  }
-  body: JSON.stringify ({
-
-    talent_id: 'talent_abc123',
-    project_name: 'E - commerce Website Redesign',
-    project_summary: 'Redesign our outdated e - commerce website with modern UI',
-    project_description: 'Our current website is 5 years old and needs a complete overhaul...',
-    timeline: '2 - 3 months',
-    budget_min: 8000,
-    budget_max: 12000,
-    requester_name: 'John Doe',
-
-    requester_email: 'john@example.com';
-  });
+  body: JSON.stringify({
+    talent_id: 'talent_abc123'
+    project_name: 'E-commerce Website Redesign'
+    project_summary: 'Redesign our outdated e-commerce website with modern UI'
+    project_description: 'Our current website is 5 years old and needs a complete overhaul...'
+    timeline: '2-3 months'
+    budget_min: 8000
+    budget_max: 12000
+    requester_name: 'John Doe'
+    requester_email: 'john@example.com'
+  })
 });
-;
-const data = await response.json ();
-console.log (data), `;
-                python: `import requests;
-import json;
-
+const data = await response.json();
+console.log(data),`;
+                python: `import requests
+import json
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
-
-
-
+payload = {
+payload = {;
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -1736,8 +1684,10 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
-=======
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/quotes'
+    headers=headers
+)
 
 
 
@@ -1745,8 +1695,6 @@ response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/quotes',
     headers=headers
 )
-
-
 
 data = response.json()
 
@@ -1833,10 +1781,6 @@ function verifyWebhookSignature(): any (payload, signature, secret) {
   )
 }
 
-
-
-
-
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
@@ -1845,11 +1789,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature')
   }
-
-
   
-
-
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
@@ -2102,13 +2042,46 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "message": "The request was invalid";
     "details": [;
       {
-
+        "field": "project_name"
+        "field": "project_name",
+        "message": "Project name is required"
       }
     ];
   }
 }`}
-
-=======
+                language="json"
+              />
+              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
+              <p className="text-zinc-400 mb-4">
+                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
+                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive
+                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
+              </p>
+              <p className="text-zinc-400 mb-2">
+                Rate limit information is included in the response headers: </p>
+              <ul className="list-disc pl-6 space-y-1 text-zinc-400">
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>
+              </ul>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  )
+}
+// Helper component for API endpoint documentation
+function EndpointSection({
+  method
+  endpoint
+  description;
+  note;
+  params = [];
+  codeExamples;
+  responseExamples
+}) {
+  const [activeTab, setActiveTab] = useState("curl");
 
 function EndpointSection({ 
   method, 
@@ -2121,7 +2094,6 @@ function EndpointSection({
 }) {
   const [activeTab, setActiveTab] = useState("curl"),
   
-
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -2136,7 +2108,6 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
-
                 language="json";
 
               />;
@@ -2182,7 +2153,16 @@ function EndpointSection(): any ({ ;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
         <div className="flex items-center">;
-
+          <Badge;
+            variant="outline";
+            className={;
+              method === 'GET';
+                ? "border-green-500 text-green-400 font-mono";
+                : method === 'POST';
+                ? "border-blue-500 text-blue-400 font-mono";
+                : method === 'PUT';
+                ? "border-yellow-500 text-yellow-400 font-mono";
+                : "border-red-500 text-red-400 font-mono";
             }
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2299,11 +2279,7 @@ function EndpointSection() {
           </table>;
         </div>;
       )}
-
-
       
-
-
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
@@ -2341,6 +2317,7 @@ function EndpointSection() {
           />;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       {responseExamples && (;
@@ -2352,66 +2329,13 @@ function EndpointSection() {
           />;
         </div>;
       )}
-    </div>;
-  );
+    </div>
+  )
 }
-
-=======
-                    {param.required && <span className="text - red - 500">*</span>}
-                  </td>;
-                  <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
-                  <td className="py - 2 text - sm text - zinc - 400">{param.description}</td>;
-                </tr>))}
-            </tbody>;
-          </table>;
-        </div>)}
-      {code_examples && (
-        <div className="border - t border - zinc - 800 p - 4">;
-          <div className="flex items - center mb - 2">;
-            <h4 className="font - medium">Request Example</h4>;
-            <div className="ml - auto flex border border - zinc - 700 rounded - md overflow - hidden">;
-              {Object.keys (code_examples).map ((lang) => (
-                <button;
-                  key={lang}
-                  className={`px - 3 py - 1 text - xs font - medium ${
-                    active_tab === lang;
-                      ? "bg - zinc - 700 text - white";
-                      : "text - zinc - 400 hover:bg - zinc - 800";
-                  }`}
-                  on_click={() => setActiveTab (lang)}
-                >;
-                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
-                </button>))}
-            </div>;
-          </div>;
-          <CodeBlock;
-            code={code_examples[active_tab]}
-            language={active_tab === "curl" ? "bash" : active_tab}
-          />;
-        </div>)}
-      {response_examples && (
-        <div className="border - t border - zinc - 800 p - 4">;
-          <h4 className="font - medium mb - 2">Response</h4>;
-          <CodeBlock;
-            code={response_examples.success}
-            language="json";
-          />;
-        </div>)}
-    </div>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 ;
-
-=======
     </div>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

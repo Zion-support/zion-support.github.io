@@ -1,18 +1,14 @@
 
-
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
-
-=======
 import { useState } from "react",
 import { Link } from "react-router-dom",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -20,14 +16,11 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
-
-
+import { Eye, ChevronDown, Loader2 } from "lucide-react";
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -36,32 +29,20 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Button} from "@/components/ui/button";
-import {Eye, ChevronDown, Loader2} from "lucide-react";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-
-interface ApplicationActionsProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}
-
-export function ApplicationActions(): any ({;
-
+export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
-  onStatusChange;
-}: ApplicationActionsProps) {;
-=======
-
-
-
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
   onStatusChange
 }: ApplicationActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -89,12 +70,36 @@ export function ApplicationActions(): any ({;
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-
-
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "interview")}
+          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "hired")}
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
+          >
+            Reject
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <Button
+        variant="default"
       <Button 
         variant="default" 
-
-
         size="sm"
         asChild
       >
@@ -104,42 +109,7 @@ export function ApplicationActions(): any ({;
       </Button>
     </div>
   )
-
-          </Button>;
-        </DropdownMenuTrigger>;
-        <DropdownMenuContent align="end">;
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application && application.id, "shortlisted")}
-          >;
-            Shortlist;
-          </DropdownMenuItem>;
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application && application.id, "interview")}
-          >;
-            Schedule Interview;
-          </DropdownMenuItem>;
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application && application.id, "hired")}
-          >;
-            Hire;
-          </DropdownMenuItem>;
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application && application.id, "rejected")}
-            className="text-red-600";
-=======
-import { useState } from './react';
-import { Link } from './react-router-dom';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
-import { Button } from '@/components / ui / button';
-import { Eye, ChevronDown, Loader2 } from './lucide-react';
-import { JobApplication, ApplicationStatus } from '@/types / jobs';
-interface ApplicationActionsProps {
-  application: JobApplication,
-  processing_id: string | null,
-  onViewApplication: (application_id: string) => Promise < void>,
-  onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>;
-=======
-
+}
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -221,9 +191,4 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
-
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

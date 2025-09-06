@@ -12,6 +12,7 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
+<<<<<<< HEAD
 
 import React from 'react',;
 import { X } from 'lucide-react';
@@ -24,9 +25,6 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
-
-
-
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -187,11 +185,16 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   if (activeFilters && activeFilters.length === 0) {;
     return null;
+  }
 
   }
   return (
-
-
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      {activeFilters.map(filter => (
+        <Badge
+          key = {filter.key,}
+          variant="secondary"
         <Badge 
           key = {filter.key,}
 
@@ -199,9 +202,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-
-
-
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -223,11 +223,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-
-
+            onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
-
-
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -237,9 +234,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       <Button
         variant="ghost"
         size="sm"
-
-
+        onClick = {onClearAll,}
         onClick={onClearAll}
+<<<<<<< HEAD
 
 
         className="text-xs h-6 px-2"
@@ -248,19 +245,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       </Button>
     </div>
   )
+}
+export default ActiveFiltersBar
+},
 
-;
-export default ActiveFiltersBar; import React from 'react';
-import { X } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-interface SearchFilters {
-  types: string[],
-  category: string,
-  min_price: number,
-  max_price: number,
-  min_rating: number,
-  sort: string;
+export default ActiveFiltersBar,
+interface Filter {
+  key: string
+  value: string
+  label: string
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -408,7 +401,9 @@ if ( {) {
 
 
 },
+
 export default ActiveFiltersBar,
+<<<<<<< HEAD
 
         className="text-xs h-6 px-2">;
         Clear all;
@@ -429,10 +424,23 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
   filters: Filter[];
   onRemoveFilter: key: string void;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface Filter {
+  key: string
+  value: string
+  label: string
+}
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+  filters: Filter[]
+  onRemoveFilter: key: string void
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
+<<<<<<< HEAD
       </button>
     </div>
   )}

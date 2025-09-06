@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -15,20 +21,26 @@ export function ClickableBadge(): any ({;
   className;
   variant = "default";
   onRemove;
-  ...props;
-}: ClickableBadgeProps) {;
-=======
-
-
+import React from "react",
+import { X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void;
+import { cn } from "@/lib/utils",
+import { badgeVariants } from "@/components/ui/badge-variants",
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void,
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
-
+  children;
+  className;
+  variant;
   children,
   className,
   variant = "default",
   onRemove,
-
   ...props
 }: ClickableBadgeProps) {
 
@@ -45,10 +57,9 @@ export function ClickableBadge({
       {onRemove && (;
         <button
           type="button"
-          onClick={(e) => {;
-            e && e.stopPropagation();
-            onRemove();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          onClick={(e) => {
+            e.stopPropagation(),
+            onRemove()
           }}
 
     </div>;
@@ -61,16 +72,16 @@ export function ClickableBadge({
         >
           <X className="h-3 w-3" />
         </button>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import React from './react';
-import { X } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { badge_variants } from '@/components / ui / badge - variants';
-export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
-  on_remove?: () => void;
+      )}
+    </div>
+  )
+}
+import React from "react",;
+import { X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { badgeVariants } from "@/components/ui/badge-variants",;
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
+  onRemove?: () => void,;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 export /**
@@ -103,9 +114,5 @@ function ClickableBadge() {
       )}
     </div>;
   );
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

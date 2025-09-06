@@ -40,12 +40,30 @@ isOpen;
   }
 
 
+=======
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
   return (
-
-
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+            </TabsList>
             
+<<<<<<< HEAD
 
 
             <div className="flex gap-2">
@@ -85,39 +103,36 @@ isOpen;
 
 
               
+<<<<<<< HEAD
 
               <Button
                 variant="secondary"
                 size="sm"
-                onClick = {() => setShowSmartContractBuilder(true),}
-
-              >;
-                Smart Contract Builder;
-              </Button>;
-            </div>;
-          </div>;
-
-          <TabsContent value="form" className="pt-4">;
-
+                onClick={() => setShowSmartContractBuilder(true)}
+              >
+                Smart Contract Builder
+              </Button>
+            </div>
+          </div>
+          <TabsContent value="form" className="pt-4">
             <ContractForm
 
             <ContractForm 
+<<<<<<< HEAD
 
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-
+            />
+          </TabsContent>
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
               <ContractPreview
 
               <ContractPreview 
+<<<<<<< HEAD
 
                 contractContent = {generatedContract,}
                 talent = {talent,}
@@ -135,7 +150,60 @@ isOpen;
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+}/>)
+}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
+  talent
+}clientName= {
+  clientName
+}initialValues= {
+  formValues
+}onFormValuesChange= {
+  setFormValues
+}onContractGenerated= {
+  handleContractGenerated
+}/> </TabsContent> />)
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  templateManagerOpen
+}onClose= {
+  () => setTemplateManagerOpen (false)
+}onSelectTemplate= {
+  handleLoadTemplate
+}currentValues= {
+  formValues
+}/> </DialogContent> </Dialog>)
+}"}
+          
+          <TabsContent value="form" className="pt-4">
+            <ContractForm 
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleContractGenerated}
+            />
+          </TabsContent>
+          
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <ContractPreview 
+                contractContent={generatedContract}
+                talent={talent}
+                onClose={onClose}
+                status="ready"
+              />
+            )}
+          </TabsContent>;
+        </Tabs>;
+        <TemplateManager;
+          isOpen={templateManagerOpen}
+          onClose={() => setTemplateManagerOpen(false)}
+          onSelectTemplate={handleLoadTemplate}
+          currentValues={formValues}
         />;
       </DialogContent>;
     </Dialog>;

@@ -10,6 +10,7 @@ interface SeverityIndicatorProps {
   showIcon?: boolean,
   showText?: boolean,
   size?: "sm" | "md" | "lg",
+<<<<<<< HEAD
 
 
   className?: string
@@ -19,6 +20,7 @@ export function SeverityIndicator({
   severity, 
   showIcon = true, 
   showText = true, 
+<<<<<<< HEAD
 
 
           "text-green-500"
@@ -26,10 +28,10 @@ export function SeverityIndicator({
 ;
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
-  show_icon?: boolean;
-  show_text?: boolean;
-  size?: "sm" | "md" | "lg";
-  class_name?: string;
+  showIcon?: boolean,
+  showText?: boolean,
+  size?: "sm" | "md" | "lg",
+  className?: string
 }
 export function SeverityIndicator ({
   severity,
@@ -46,6 +48,7 @@ export function SeverityIndicator ({
   return (
 
     <div className={cn("flex items-center gap-1", className)}>
+<<<<<<< HEAD
 
 
       {showIcon && getSeverityIcon()}
