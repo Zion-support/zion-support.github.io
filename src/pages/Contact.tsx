@@ -19,17 +19,46 @@ const Contact: React.FC = () => {
     });
   };
 
+  const validateForm = () => {
+    const errors: string[] = [];
+    
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.message.trim()) errors.push('Message is required');
+    
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    if (formData.message && formData.message.length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+    
+    return errors;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const errors = validateForm();
+    if (errors.length > 0) {
+      toast({
+        title: "Validation Error",
+        description: errors.join(', '),
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. We'll get back to you soon.",
+        title: "Message sent successfully!",
+        description: "Thank you for your message. We'll get back to you within 24 hours.",
       });
       
       setFormData({
