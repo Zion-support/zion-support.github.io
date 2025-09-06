@@ -149,6 +149,69 @@ export default function ServicesOverviewPage() {
           bullets={["Predictive modeling", "Real-time dashboards", "Business intelligence"]}
           icon="📊"
         />
+        <ServiceCard
+          href="/services/project-management-suite"
+          title="Project Management Suite"
+          description="All-in-one project management platform with AI-powered insights and team collaboration"
+          bullets={["AI-powered insights", "Team collaboration", "Resource planning", "Progress tracking"]}
+          icon="📋"
+        />
+        <ServiceCard
+          href="/services/crm-solution"
+          title="AI-Powered CRM"
+          description="Intelligent customer relationship management with AI-driven insights and automation"
+          bullets={["AI lead scoring", "Customer insights", "Sales automation", "Predictive analytics"]}
+          icon="👤"
+        />
+        <ServiceCard
+          href="/services/ai-analytics-platform"
+          title="AI Analytics Platform"
+          description="Advanced business intelligence platform with AI and machine learning capabilities"
+          bullets={["Data integration", "AI-powered analytics", "Real-time visualization", "Predictive modeling"]}
+          icon="📈"
+        />
+        <ServiceCard
+          href="/services/ai-customer-support"
+          title="AI Customer Support"
+          description="Intelligent customer support with AI chatbots and automated ticket management"
+          bullets={["AI chatbots", "Ticket automation", "Sentiment analysis", "24/7 support"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/ai-marketing-automation"
+          title="AI Marketing Automation"
+          description="Intelligent marketing automation with AI personalization and campaign optimization"
+          bullets={["AI campaigns", "Customer segmentation", "Predictive analytics", "ROI optimization"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR, data extraction, and automated workflows"
+          bullets={["OCR & text extraction", "Data processing", "Workflow automation", "99% accuracy"]}
+          icon="📄"
+        />
+        <ServiceCard
+          href="/services/ai-inventory-management"
+          title="AI Inventory Management"
+          description="Intelligent inventory management with predictive analytics and automated reordering"
+          bullets={["Demand forecasting", "Automated reordering", "Cost optimization", "Real-time tracking"]}
+          icon="📦"
+        />
+        <ServiceCard
+          href="/services/ai-financial-analyzer"
+          title="AI Financial Analyzer"
+          description="Intelligent financial analysis with AI-powered insights and predictive modeling"
+          bullets={["Financial forecasting", "Risk assessment", "Cost optimization", "Investment analysis"]}
+          icon="💰"
+        />
+        <ServiceCard
+          href="/services/ai-hr-management"
+          title="AI HR Management"
+          description="Intelligent human resources with AI recruitment and employee analytics"
+          bullets={["AI recruitment", "Employee analytics", "Performance tracking", "Retention analysis"]}
+          icon="👥"
+        />
       </div>
       <CTA />
     </div>
