@@ -4,11 +4,12 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
+
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
+
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -652,7 +653,9 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke()
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           });
         });
@@ -681,15 +684,7 @@ ref={canvasRef}
         style={{
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
-        }}
-      />;
-      {children}
-    </div>;
-  );
-}
-export default UltraFuturisticBackground2037;
-=======
+
         }}      />
       {children}
     </div>
@@ -697,4 +692,5 @@ export default UltraFuturisticBackground2037;
 },
 
 export default UltraFuturisticBackground2037,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,20 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-  const { screenName, role } = req.body |{}
-  if (!screenName) {res.status(400).json({ error: 'screenName is required' });
-    return;
-  }
+
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
+
 =======
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
@@ -134,7 +126,9 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
@@ -142,38 +136,9 @@ export default async function handler(req, res) {
       max_tokens: 400});
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
-<<<<<<< HEAD
-  } catch (e: any) {;
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
-    res.status(500).json({ error: message });
-=======
-  } catch (error) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
-    res.status(500).json({ error: message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  }
-}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

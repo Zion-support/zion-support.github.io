@@ -1,101 +1,98 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-=======
-  "timestamp": "2025-09-06T10:44:46.097Z",
-  "totalDuration": 76866,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-  "successfulTasks": 6,
+
+
+  "timestamp": "2025-09-06T09:22:21.501Z",
+  "totalDuration": 93290,
+  "successfulTasks": 2,
+
+
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 7037,
-=======
-      "duration": 22421,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+
+
+      "duration": 80288,
+
+
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-<<<<<<< HEAD
-      "duration": 27333,
-=======
-      "duration": 27631,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-      "errors": [],
+
+
+      "duration": 5840,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
+
       "warnings": []
     },
     "securityAudit": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 1719,
-=======
-      "duration": 1683,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-      "errors": [],
+      "success": false,
+
+      "duration": 3375,
+      "errors": [
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ],
       "warnings": []
     },
     "buildOptimization": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 6250,
-=======
-      "duration": 6198,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-      "errors": [],
+      "success": false,
+      "duration": 550,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
+      ],
       "warnings": []
     },
     "seoOptimization": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "success": false,
       "duration": 39,
-"errors": [],
-=======
-      "success": true,
-      "duration": 43,
+<<<<<<< HEAD
+
+
       "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
-=======
-      "success": true,
-      "duration": 46,
-      "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-<<<<<<< HEAD
-      "duration": 9508,
-=======
-      "duration": 9692,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-      "errors": [],
+
+
+      "duration": 585,
+      "errors": [
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 6736,
-=======
-      "duration": 7154,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
-      "errors": [],
+      "success": false,
+      "duration": 990,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
+      ],
+
+
       "warnings": []
     },
     "deployment": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 1612,
-=======
-      "duration": 2037,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+
+
+      "duration": 1619,
       "errors": [],
       "warnings": []
     }
-  }
+  },
+  "recommendations": [
+    "Review and fix code quality issues",
+    "Address security vulnerabilities",
+    "Optimize application performance",
+    "Improve SEO optimization",
+    "Enhance accessibility features"
+  ]
+
 }
+
+

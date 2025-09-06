@@ -1,9 +1,9 @@
-
-// Type declarations for modules used in Vite configuration
-declare module 'vitest/config' {
-  export { defineConfig } from 'vite'
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
 }
-<<<<<<< HEAD
+
+
 
 declare module '@vitejs/plugin-react-swc' {;
 import {Plugin} from 'vite';
@@ -11,6 +11,8 @@ import {Plugin} from 'vite';
 }
 
 declare module 'path' {;
+
+
   export function resolve(...paths: string[]): string;
 
   export function join(...paths: string[]): string
@@ -18,11 +20,18 @@ declare module 'path' {;
   export function dirname(path: string): string
 }
 
+declare module '@vitejs/plugin-react - swc' {
+=======
+
+
 declare module 'lovable-tagger' {;
+
 import {Plugin} from 'vite';
-  export function componentTagger(): Plugin
+  export default function reactSWC (): Plugin;
 }
+
 ;
+
 =======
 ;
 declare module '@vitejs/plugin-react-swc' {;
@@ -41,4 +50,7 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

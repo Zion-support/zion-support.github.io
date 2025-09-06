@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import {cn} from "@/lib/utils";
-=======
-import React from "react",
-<<<<<<< HEAD
-import ReactMarkdown from "react-markdown";
-import { cn } from "@/lib/utils";
-=======
-import ReactMarkdown from "react-markdown",
-import { cn } from "@/lib/utils",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MarkdownProps {
   content: string;
   className?: string
@@ -21,27 +12,47 @@ export function Markdown({ content, className }: MarkdownProps) {
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )
-<<<<<<< HEAD
-=======
-import React from "react",;
-import ReactMarkdown from "react-markdown",;
-import { cn } from "@/lib/utils",;
+
+import {cn} from "@/lib/utils";
 interface MarkdownProps {;
-  content: string;
+  content: string,;
   className?: string;
 }
-;
-export function Markdown({ content, className }: MarkdownProps) {;
-  return (;
+
+export function Markdown(): any ({ content, className }: MarkdownProps) {;
+  return (
     <div className={cn("prose dark:prose-invert max-w-none", className)}>;
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+
+=======
+import React from './react';
+import ReactMarkdown from './react - markdown';
+import { cn  } from '@/lib / utils';
+interface MarkdownProps {
+  content: string;
+  class_name?: string;
+}
+export /**
+ * Markdown - Function description
+ */
+function Markdown() {
+  return (
+    <div className={cn ("prose dark:prose - invert max - w-none", class_name)}>;
+      <ReactMarkdown>{content}</ReactMarkdown>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+}
+
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
