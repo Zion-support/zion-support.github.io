@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity;
@@ -42,7 +40,7 @@ interface PerformanceRecommendation {
 
 const EnhancedPerformanceMonitor: React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   recs.push ({
 }return recs;
 }, []);
@@ -74,6 +72,7 @@ if (!performanceData) {;
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
+<<<<<<< HEAD
 <<<<<<< HEAD
 //FCP recommendations // Check condition
 if ( {) {
@@ -123,6 +122,8 @@ if ( {) {
 }`;
 }> {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   isLoading ? 'animate-spin' : ''
 }`
 }/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
@@ -151,4 +152,4 @@ if ( {) {
 }</AnimatePresence> </>) 
 };
 export default EnhancedPerformanceMonitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

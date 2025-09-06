@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
  const SolutionsPage: React.FC = () => {
@@ -162,10 +163,14 @@ import React from 'react';
   {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
@@ -561,10 +566,12 @@ export default Solutions;}
 ;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Heart, DollarSign, Factory, ShoppingCart, Building2;
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
   Users, Globe, Cpu, Database, Network, Target
  } from 'lucide-react';
 const SolutionsPage: React.FC;
 export default Solutions;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

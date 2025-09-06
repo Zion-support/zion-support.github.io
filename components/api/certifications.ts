@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
@@ -20,6 +21,8 @@ export default async function handler(
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -42,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res.status(500).json({ error: 'Failed to load certifications' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
     const certifications = (await fs && fs.pathExists(CERTS_FILE))
@@ -100,7 +103,5 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 }
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

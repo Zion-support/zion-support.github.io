@@ -13,18 +13,10 @@ function resolveMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
-    
-    // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)(?=\n|$)/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
@@ -72,59 +64,3 @@ function findFilesWithConflictMarkers() {
       } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.md') || item.endsWith('.json'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-            conflictedFiles.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory('.');
-  return conflictedFiles;
-}
-
-// Main execution
-function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  
-  // First, try to get conflicted files from git
-  let conflictedFiles = findConflictedFiles();
-  
-  // If no git conflicts, search for files with conflict markers
-  if (conflictedFiles.length === 0) {
-    conflictedFiles = findFilesWithConflictMarkers();
-  }
-  
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    return;
-  }
-  
-  console.log(`📁 Found ${conflictedFiles.length} files with conflicts:`);
-  conflictedFiles.forEach(file => console.log(`  - ${file}`));
-  
-  let resolvedCount = 0;
-  
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-  
-  console.log(`\n🎉 Resolution complete!`);
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-  
-  if (resolvedCount > 0) {
-    console.log('\n📝 Next steps:');
-    console.log('1. Review the resolved files');
-    console.log('2. Test the application');
-    console.log('3. Commit the changes');
-    console.log('4. Complete the merge');
-  }
-}
-
-// Run the script
-main();

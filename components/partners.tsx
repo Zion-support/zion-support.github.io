@@ -32,6 +32,7 @@ export default function PartnersPage() {
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -104,6 +105,8 @@ function PartnersPage() {
   </div>),
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         />
         <link rel='canonical' href='https://ziontechgroup.com/partners' />
       </Head>
@@ -130,4 +133,4 @@ function PartnersPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

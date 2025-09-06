@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import { X } from 'lucide-react';
-
-type ChatMessage = {
-  role: 'user' | 'assistant' | 'system'
-  content: string
-  timestamp?: number
-}
-function generateSessionId(): string {
-
-=======
 type ChatMessage = any;
 export default function ChatWidget() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -20,9 +9,6 @@ export default function ChatWidget() {
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-<<<<<<< HEAD
-
-=======
   useEffect(() => {
 sessionIdRef.current = generateSessionId();
   }, []);
@@ -56,31 +42,13 @@ body: JSON.stringify({
           payload,
         }),
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch {}
   }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-<<<<<<< HEAD
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-    } catch {}
-  }
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          reason
-          tag: 'escalate'
-        })
-      });
-
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({
@@ -90,7 +58,7 @@ body: JSON.stringify({
         }),
       });
       setShowEscalation(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch {}
   }
 
@@ -114,8 +82,6 @@ body: JSON.stringify({
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-<<<<<<< HEAD
-=======
 
 const newUserMessage: ChatMessage = {
       role: 'user',
@@ -153,7 +119,7 @@ timestamp: Date.now(),
       }
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -163,6 +129,7 @@ timestamp: Date.now(),
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
@@ -209,6 +176,8 @@ timestamp: Date.now(),
         </button>;
       )}
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     } catch (e) {
       setMessages(prev => [
         ...prev
@@ -249,7 +218,7 @@ timestamp: Date.now(),
 
 <div className='flex-1 overflow-y-auto p-3 space-y-3'>
             {messages.map((m, idx) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div
                 key={idx}
                 className={
@@ -257,18 +226,9 @@ timestamp: Date.now(),
                 }>;
                 <div
                   className={
-<<<<<<< HEAD
-                    m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
-              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
-                <div
-                  className={
-                    m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
-=======
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
                 >
@@ -276,6 +236,7 @@ timestamp: Date.now(),
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             )}
@@ -294,6 +255,8 @@ timestamp: Date.now(),
                   >
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             {isLoading && (
 <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
@@ -312,13 +275,14 @@ timestamp: Date.now(),
                     onClick={() => onSend(q)}
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
@@ -330,9 +294,11 @@ timestamp: Date.now(),
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {!showEscalation ? (
               <div className='flex gap-2'>
 
@@ -348,16 +314,6 @@ timestamp: Date.now(),
                       onSend();
                     }
                   }}
-<<<<<<< HEAD
-                  placeholder='Ask a question…';
-                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
-                <button
-                  onClick={() => onSend()}
-                  disabled={isLoading}
-              <div className="flex gap-2">
-                <input
-                  value={input}
-=======
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
                       onSend()
@@ -365,15 +321,11 @@ timestamp: Date.now(),
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-<<<<<<< HEAD
-                    }
-                  }}
-=======
 className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
                 >
                   Send
@@ -399,22 +351,12 @@ className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-
                   </a>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-}
-  );
-}
-useEffect ( () => {
-  // Check condition
-if ( {) {
-  $2
-}
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

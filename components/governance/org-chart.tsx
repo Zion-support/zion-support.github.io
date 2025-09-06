@@ -4,6 +4,7 @@ const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), 
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import dynamic from 'next / dynamic';
 ;
@@ -40,3 +41,6 @@ export default function OrgChartGovernancePage() {;
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

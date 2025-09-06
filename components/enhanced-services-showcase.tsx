@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,7 +25,7 @@ export default function EnhancedServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name'),
 
   const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -66,6 +63,7 @@ const container_variants = {
   {
 }
 }> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   children
 }</button>)
@@ -136,7 +134,9 @@ if ( {) {
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   children 
 }</button>) 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

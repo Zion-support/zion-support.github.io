@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   className?: string;
   height?: string;
@@ -65,6 +66,8 @@ interface StatsSkeletonProps {
   class_name?: string;
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import { motion } from 'framer-motion';
   rounded?: string
@@ -72,11 +75,12 @@ import { motion } from 'framer-motion';
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
@@ -154,8 +158,10 @@ interface SkeletonProps {
   height?: string;
   width?: string;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 );
 };
 
 export default Skeleton;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -2,6 +2,7 @@
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -152,6 +153,8 @@ if (return) {
     set_selected (r.record);  }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 const headers = useMemo(
     () =>
@@ -206,7 +209,7 @@ await fetch(
   return (
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
     const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
@@ -237,6 +240,7 @@ await fetch(
                     <div className='font - medium'>{g.project_name}</div>;
                     <div className='text - xs text - gray - 600'>;
                       {g.sector} • {g.region} • {g.program}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>;
                   </div>;
@@ -283,6 +287,8 @@ await fetch(
           <div className='border rounded p - 3'>;
             <h2 className='font - medium mb - 2'>Milestone Planner</h2>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                     </div>
                   </div>
                   <div className='flex gap-2'>
@@ -324,7 +330,7 @@ await fetch(
         <div>
           <div className='border rounded p-3'>
             <h2 className='font-medium mb-2'>Milestone Planner</h2>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {selected ? (
               <div className='space - y-2'>;
                 {(milestones.length === 0;
@@ -418,34 +424,6 @@ await fetch(
                         } as any,
                       ]);
                     }
-<<<<<<< HEAD
-                  >;
-                    Add Milestone;
-                  </button>;
-        </div>
-        <div>
-          <div className="border rounded p-3">
-            <h2 className="font-medium mb-2">Milestone Planner</h2>
-            {selected ? (
-              <div className="space-y-2">
-                {(milestones.length === 0 ? (selected.milestones |[]) : milestones).map((m, idx) => (
-                  <div key={m.id |idx} className="border rounded p-2">
-                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />
-                    <div className="grid grid-cols-2 gap-2">
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], dueDate: e.target.value }, return copy })} />
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.trancheAmount |0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }, return copy })} />
-                    </div>
-                    <div className="mt-2 flex items-center gap-2">
-                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>
-                    </div>
-                  </div>
-                ))}
-                <div className="flex gap-2 mt-2">
-                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
-                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>
-                </div>
-=======
                   >
                     Add Milestone
                   </button>
@@ -460,63 +438,16 @@ await fetch(
             ) : (
               <div className='text-sm text-gray-600'>
                 Select a grant to plan milestones.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             )}
           </div>
         </div>
       </div>
     </EnhancedLayout>
+  );
+}
 <<<<<<< HEAD
-
-                    onClick={saveMilestones}>;
-                    Save Milestones;
-                  </button>;
-                </div>;
-              </div>;
-            ) : (;
-              <div className='text-sm text-gray-600'>;
-                Select a grant to plan milestones.;
-              </div>            )}          </div>;
-        </div>;
-        <div>;
-          <div className="border rounded p-3">;
-            <h2 className="font-medium mb-2">Milestone Planner</h2>;
-            {selected ? (;
-              <div className="space-y-2">;
-                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (;
-                  <div key={m && m.id || idx} className="border rounded p-2">;
-                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
-                    <div className="grid grid-cols-2 gap-2">;
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
-                    </div>;
-                    <div className="mt-2 flex items-center gap-2">;
-                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
-                    </div>;
-                  </div>;
-                ))}
-                <div className="flex gap-2 mt-2">;
-                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
-                </div>;
-              </div>;
-            ) : (;
-              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-  );
-
-  );
-
-}
-}
-  );
-}
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -561,3 +492,6 @@ await fetch(
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

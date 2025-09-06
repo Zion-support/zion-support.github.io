@@ -38,6 +38,7 @@ interface CardProps {
   description: string;
   bullets?: string[];
   icon?: string;
+  pricing?: string;
 }
 
 function ServiceCard({
@@ -46,6 +47,7 @@ function ServiceCard({
   description,
   bullets = [],
   icon,
+  pricing,
 }: CardProps) {
   return (
     <Link
@@ -53,9 +55,16 @@ function ServiceCard({
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       aria-label={`Learn more about ${title} services`}
     >
-      <div className="flex items-center mb-4">
-        {icon && <span className="text-2xl mr-3" aria-hidden="true">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center">
+          {icon && <span className="text-2xl mr-3" aria-hidden="true">{icon}</span>}
+          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+        </div>
+        {pricing && (
+          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+            {pricing}
+          </span>
+        )}
       </div>
       <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
       {bullets.length > 0 && (
@@ -127,6 +136,7 @@ export default function HomePage() {
               "Payment integration"
             ]}
             icon="🚀"
+            pricing="From $25k"
           />
           <ServiceCard
             title="AI & Machine Learning"
@@ -140,6 +150,7 @@ export default function HomePage() {
               "Process automation"
             ]}
             icon="🤖"
+            pricing="From $15k"
           />
           <ServiceCard
             title="Cloud Infrastructure"
@@ -153,6 +164,7 @@ export default function HomePage() {
               "Cost optimization"
             ]}
             icon="☁️"
+            pricing="From $10k"
           />
           <ServiceCard
             title="Blockchain Solutions"
@@ -166,6 +178,7 @@ export default function HomePage() {
               "Security auditing"
             ]}
             icon="⛓️"
+            pricing="From $30k"
           />
           <ServiceCard
             title="Data Analytics"
@@ -179,6 +192,7 @@ export default function HomePage() {
               "Data visualization"
             ]}
             icon="📊"
+            pricing="From $12k"
           />
           <ServiceCard
             title="Cybersecurity"
@@ -192,6 +206,7 @@ export default function HomePage() {
               "Security training"
             ]}
             icon="🔒"
+            pricing="From $8k"
           />
         </div>
       </section>
@@ -268,13 +283,22 @@ export default function HomePage() {
           real business value. Our team has delivered 1000+ successful
           projects across various industries.
         </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Contact us to get started with your project"
-        >
-          Get Started Today
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label="Contact us to get started with your project"
+          >
+            Get Started Today
+          </Link>
+          <a
+            href="tel:+13024640950"
+            className="inline-block border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label="Call us directly"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
       </section>
     </div>
   );

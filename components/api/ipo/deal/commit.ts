@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
@@ -49,6 +50,8 @@ function handler() {
 
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -58,4 +61,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const commits = null;
   res.status(200).json(record)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

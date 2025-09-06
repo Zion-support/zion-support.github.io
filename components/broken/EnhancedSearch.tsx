@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-}];
-setIsSearching (true);
-
-//Simulate API call delay set_timeout ( () => {
-  const filtered_results = mockSearchResults.filter (result => {
-  const matches_query = result.name.toLowerCase () .includes (search_query.toLowerCase () ) || result.description.toLowerCase () .includes (search_query.toLowerCase () ) || result.category.toLowerCase () .includes (search_query.toLowerCase () );
-const matches_filters = selected_filters.length === 0 || selected_filters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-set_results (sorted_results);
-setShowResults (true);
-setIsSearching (false);
-
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -51,14 +38,12 @@ setResults (sortedResults);
 setShowResults (true);
 setIsSearching (false) 
 }, 300) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }, 300);
 }, 300);
 [selected_filters]);
 [selected_filters]);
 //Close search on outside click useEffect ( () => {
-<<<<<<< HEAD
-=======
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
@@ -85,13 +70,14 @@ setIsSearching (false)
   {
   opacity: 0, y: -10, scale: 0.95 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }animate= {
   {
   opacity: 1, y: 0, scale: 1 
 
 }exit= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 }{
   show_filters && (<div className="p - 4 border - b border-gray-700"> <div className="flex items - center gap-2 mb-3"> <Filter className="w - 4 h - 4 text-gray-400" /> <span className="text - sm font - medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
@@ -132,6 +118,8 @@ setIsSearching (false)
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
@@ -165,7 +153,7 @@ setIsSearching (false)
   /* Search Suggestions */ 
 }<AnimatePresence> {
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: -10 
 
@@ -175,6 +163,7 @@ setIsSearching (false)
 
 }exit= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
@@ -402,6 +391,8 @@ function debounce < T extends (...args: any[]) => any>(
   }
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10 
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
@@ -488,4 +479,4 @@ function debounce < T extends (...args: any[]) => any>(
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

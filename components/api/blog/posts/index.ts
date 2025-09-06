@@ -8,16 +8,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
       posts = posts && posts.filter(p => (p && p.tags || []).includes(tag));
@@ -108,10 +99,9 @@ return res.status(405).end();
   }
   return res && res.status(405).end();
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -206,73 +196,19 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 return res.status(405).end();
 }
 
 }
 }
   return res.status(405).end();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 return res.status (405).end ();
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { v4 as uuidv4  } from 'uuid';
-import { BlogPost  } from '@/utils/types/blog';
-import { readPosts, writePosts } from '@/utils/data/blogStore';
-import { requireAdmin } from '@/utils/api/auth';
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method === 'GET') {
-  if (req.method === 'GET') {;
-    const { status, topic, tag, author, limit, offset } = req.query;
-    let posts = readPosts();
-    if (status && typeof status === 'string')
-      posts = posts.filter(p => p.status === status);
-    if (topic && typeof topic === 'string')
-      posts = posts.filter(p => (p.topics |[]).includes(topic));
-    if (tag && typeof tag === 'string')
-      posts = posts.filter(p => (p.tags |[]).includes(tag));
-    if (author && typeof author === 'string')
-      posts = posts.filter(p => p.author === author);
-    posts = posts.sort(
-      (a, b) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    );
-    const o = parseInt(String(offset |0), 10) |0;
-    const l = parseInt(String(limit |20), 10) |20;
-    return res
-      .status(200)
-      .json({ items: posts.slice(o, o + l), total: posts.length });    if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
-    if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics |[]).includes(topic));
-    if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags |[]).includes(tag));
-    if (author && typeof author === 'string') posts = posts.filter((p) => p.author === author);
-    posts = posts.sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()));
-    const o = parseInt(String(offset |0), 10) |0;
-    const l = parseInt(String(limit |20), 10) |20;
-    return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
-  if (req.method === 'POST') {
-    if (!requireAdmin(req, res)) return;
-    const body = req.body as Partial<BlogPost>;
-    if (!body.title |!body.slug |!body.author |!body.publishDate) {
-      return res.status(400).json({ error: 'Missing required fields' });
-=======
   if (req.method;
     return res.status(201).json(post)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const posts = readPosts();
     if (posts.some(p => p.slug === body.slug)) {
       return res.status(409).json({ error: 'Slug already exists' });
@@ -298,37 +234,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
-<<<<<<< HEAD
 
-  }
-return res.status(405).end();
-}
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
-      },
-      body: body.body || '',
-      status: body.status || 'draft',
-      metrics: { views: 0, likes: 0, shares: 0 },
-    };
-    posts.unshift(post);
-    writePosts(posts);
-    return res.status(201).json(post);
+
   }
 
   return res.status(405).end();
-return res.status(405).end();
-}
-
-}
-}
-  return res.status(405).end();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  }
-
-  return res.status(405).end();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

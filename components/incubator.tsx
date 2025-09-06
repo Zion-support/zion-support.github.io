@@ -55,6 +55,7 @@ export default function IncubatorPage() {
     </EnhancedLayout>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }      <div className="max-w-3xl">
         <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-4">Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone-based funding, and community resources.</p>
@@ -100,5 +101,7 @@ function IncubatorPage() {
       </div>;
     </EnhancedLayout>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

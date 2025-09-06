@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -7,7 +5,7 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -30,6 +28,7 @@ export default async function handler(
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: 'Rate limit exceeded' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -157,6 +156,8 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -177,4 +178,4 @@ return res.status(400).json({ error: 'email required' });
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

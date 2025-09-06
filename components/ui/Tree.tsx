@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -85,6 +86,8 @@ export interface TreeNode {;
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react';
 
 export interface TreeNode {
@@ -123,7 +126,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       <div className='flex items-center gap-2 py-1'>
         {hasChildren ? (
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {open ? '▾' : '▸'}
           </button>;
         ) : (;
@@ -238,26 +241,13 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
       </div>;
               node={child}
               depth={depth + 1}
-<<<<<<< HEAD
-              on_deploy={on_deploy}
-            />          ))}
-
-=======
               onDeploy={onDeploy}
             />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-
-export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
-  return (
-  return (
-    <div className="w-full">;
-      {nodes && nodes.map((n) => (;
-=======
 );
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -265,7 +255,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ))}
     </div>;
   );
@@ -281,6 +271,7 @@ export default Tree;
   0
 }onDeploy= {
   onDeploy 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/>) ) ;
 }</div>) ;
@@ -322,7 +313,9 @@ function Tree() {
 export default Tree;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }/>) ) 
 }</div>) 
 }export default Tree;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

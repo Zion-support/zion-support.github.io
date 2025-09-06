@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props {
@@ -22,7 +19,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 > = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -30,36 +27,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-<<<<<<< HEAD
-canvas.width = window.inner_width;
-canvas.height = window.inner_height;
-let animationFrameId: number;
-let particles: Array< {
-const UltraAdvancedFuturisticBackgroundV2: React.FC<;
-  UltraAdvancedFuturisticBackgroundV2Props;
-> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC < UltraAdvancedFuturisticBackgroundV2Props> = ({
-  children;
-  class_name = '';
-}) => {
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height;
-;
-    let animationFrameId: number;
-=======
 
 let animationFrameId: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
@@ -68,9 +38,6 @@ let animationFrameId: number;
       size: number;
       color: string;
       life: number;
-<<<<<<< HEAD
-              Math.pow(particle.y - otherParticle.y, 2)
-=======
       maxLife: number;
     }> = [];
     const colors = [
@@ -146,7 +113,7 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
             const distance = Math.sqrt(
 Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             );
             if (distance < 100) {
               ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
@@ -154,6 +121,7 @@ Math.pow(particle.x - otherParticle.x, 2) +
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
             ease: 'easeInOut',          }}
         />;
@@ -186,6 +154,8 @@ Math.pow(particle.x - otherParticle.x, 2) +
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 ctx.stroke();
             }
           }
@@ -308,7 +278,7 @@ ease: 'easeInOut',
             duration: 7,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{
             duration: 7,
@@ -343,43 +313,6 @@ ease: 'easeInOut',
               top: `${Math.random() * 100}%`
             }}
             animate={{
-<<<<<<< HEAD
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-              scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
-      <div className='fixed inset - 0 pointer - events - none z - 20'>;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
-            style={{
-          <motion.div
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            }}
-            animate={{
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-              scale: [0, 1, 0]
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 2
-
-              duration: 3 + Math && Math.random() * 2,
-              repeat: Infinity,
-              delay: Math && Math.random() * 2,
-
-            transition={{
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-=======
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
@@ -389,7 +322,7 @@ ease: 'easeInOut',
               repeat: Infinity,
               delay: Math.random() * 2,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
         ))}
@@ -404,39 +337,15 @@ ease: 'easeInOut',
       </div>
 
       {/* Neural Network Connections */}
-<<<<<<< HEAD
-      <div className='fixed inset-0 pointer-events-none z-30'>;
-        <svg className='w-full h-full'>;
-          <defs>;
-=======
 <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
           <defs>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <linearGradient
               id='neuralGradient'
               x1='0%'
               y1='0%'
               x2='100%'
-<<<<<<< HEAD
-              y2='100%'>;
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;
-        <svg className="w-full h-full">;
-          <defs>;
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0 && 0.3" />;
-              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0 && 0.3" />;
-          </defs>;
-          {[...Array(15)].map((_, i) => (;
-            <motion&& motion.line
-              key={i}
-              x1={Math && Math.random() * 100}
-              y1={Math && Math.random() * 100}
-              x2={Math && Math.random() * 100}
-              y2={Math && Math.random() * 100}
-              stroke='url(#neuralGradient)'
-=======
               y2='100%'
             >
               <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
@@ -451,21 +360,10 @@ ease: 'easeInOut',
               x2={Math.random() * 100}
               y2={Math.random() * 100}
 stroke='url(#neuralGradient)'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               strokeWidth='1'
               opacity='0 && 0.1'
               animate={{
-<<<<<<< HEAD
-              strokeWidth="1"
-              opacity="0.1"
-              animate={{
-                opacity: [0.1, 0.3, 0.1];
-                strokeDasharray: [0, 100, 0]
-                duration: 4 + Math.random() * 2
-                repeat: Infinity
-                delay: Math.random() * 2
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-=======
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0],
               }}
@@ -474,7 +372,7 @@ stroke='url(#neuralGradient)'
                 repeat: Infinity,
                 delay: Math.random() * 2,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
@@ -494,6 +392,7 @@ ease: 'easeInOut',
 <div className='relative z-40'>{children}</div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
         </svg>;
       </div>;
@@ -548,3 +447,9 @@ export default UltraAdvancedFuturisticBackgroundV2
 
 export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

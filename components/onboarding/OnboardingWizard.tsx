@@ -32,18 +32,8 @@ import React, { useMemo, useState } from 'react';
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
 
-<<<<<<< HEAD
-  const steps = useMemo(() => {
-    if (isClient) {
-      return [
-  const steps = useMemo(() => {
-    if (isClient) {
-      return [
-        {
-          title: 'Ready to find top IT talent?'
-=======
   const isClient = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           content: (
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>
@@ -150,6 +140,7 @@ export default function OnboardingWizard() {;
               completeOnboarding();
               });
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='px-3 py-2 rounded-md border';
           >;
@@ -399,6 +390,8 @@ if (return null) {
       </div>;
     </div>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             className='px-3 py-2 rounded-md border'
           >
             Finish
@@ -438,5 +431,5 @@ if (return null) {
       </div>
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

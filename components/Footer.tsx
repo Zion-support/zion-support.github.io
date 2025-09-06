@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +69,8 @@ export default function Footer() {
                 >
                   <link.icon className="h-5 w-5" />
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 export default function Footer() {
 export default function Footer() {
@@ -299,7 +302,7 @@ const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 mr-2 text-blue-400 />
                 <a href="tel:+13024640950" className=hover:text-blue-400 transition-colors">
                   +1 302 464 0950
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
                 </a>
               </div>
               <div className="flex items-center>
@@ -322,16 +325,18 @@ const Footer: React.FC = () => {
           </div>
           {/* Services */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -339,11 +344,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
               Leading the future of AI, quantum computing, and autonomous business solutions.
 =======
@@ -396,6 +402,9 @@ const Footer: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
@@ -435,6 +444,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li><a href="/contact" className="text-gray-300 hover:text-white">Contact Us</a></li>
               <li><a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a></li>
             </ul>
@@ -455,6 +465,112 @@ const Footer: React.FC = () => {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.resources.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a
+                href="https://linkedin.com/company/zion-tech-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            {/* Social Links */}
+            <div className=mt-6">
+              <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target=_blank"
+                    rel="noopener noreferrer
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={social.name}
+                  >
+                    <social.icon className=h-5 w-5" />
+                  </a>
+                ))}
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
+              <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+main
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -486,16 +602,9 @@ const Footer: React.FC = () => {
                 Terms of Service;
               </Link>;
               <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-=======
               Leading the future of technology with innovative solutions and
               cutting-edge development.
             </p>
@@ -625,19 +734,17 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-}
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 };
 
 export default Footer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

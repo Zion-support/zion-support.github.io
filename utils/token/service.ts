@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -110,7 +104,7 @@ export function redeemToCredits(
 export function getAllTransactions() {
   return tokenStore.getTransactions();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -118,12 +112,9 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-<<<<<<< HEAD
-export interface TokenTransaction {;
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
 
@@ -143,40 +134,12 @@ export interface TokenTransaction {
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-export function issueTokens(
-  userId: string,
-  amount: number,
-  reason: string,
-): TokenTransaction {
-  const transaction: TokenTransaction = {
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
-  }
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -184,23 +147,13 @@ export function issueTokens(
     reason,
     timestamp: Date.now(),
   };
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
   transactions.push(transaction);
   return transaction;
 }
@@ -214,20 +167,6 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    type: "redeem",
-    reason,
-    timestamp: Date.now(),
-  };
-
-=======
-<<<<<<< HEAD
-    type: "redeem",
-=======
-<<<<<<< HEAD
-=======
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -255,69 +194,25 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 ;
   transactions.push (transaction);
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     type: 'redeem',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     reason,
     timestamp: Date.now(),
   };
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-  transactions.push(transaction);
-  return transaction;
-=======
 
   transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    timestamp: Date.now();
-  };
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>,
-): void {
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-<<<<<<< HEAD
-=======
-=======
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -401,12 +296,9 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
-<<<<<<< HEAD
-=======
-=======
   };
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   transactions.push(transaction);
   return transaction;
 }
@@ -414,30 +306,21 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+
+main
 }
-<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

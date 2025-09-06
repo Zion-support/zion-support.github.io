@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,10 +16,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -35,16 +26,8 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   };
 
-=======
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -69,13 +52,6 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return (
-    <button
-      className={clsx(
-=======
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -130,20 +106,18 @@ export default function EnhancedButton({
   size = "md"
   fullWidth
 
-=======
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -151,16 +125,6 @@ className={clsx(
         className
       )}
       {...props}
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
 import React from './react';
 import clsx from './clsx';
 export type EnhancedButtonProps =;
@@ -203,43 +167,19 @@ function EnhancedButton() {
       {...props}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
-=======
     />;
 );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-    />;
-);
-=======
+ursor/fix-website-loading-errors-and-merge-6662
     />
   );
-<<<<<<< HEAD
->>>>>>> main
 }
 
-const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EnhancedButton</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
 
-export default EnhancedButton;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

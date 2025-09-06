@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-{
-  /* Robots Meta */
-=======
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -24,7 +19,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -230,18 +225,6 @@ const SEO: React.FC<SEOProps> = ({
     : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http')
     ? image
-<<<<<<< HEAD
-    : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
-  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
-  image = '/images/zion-tech-group-og-image.jpg';
-  url = 'https: //ziontechgroup.com', type = 'website',  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
-  tags = [];
-  structuredData;
-=======
     : `https://ziontechgroup.com${image}`;
 
   return (
@@ -255,7 +238,7 @@ const SEO: React.FC<SEOProps> = ({
       />
       <meta name='author' content={author} />
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -411,6 +394,7 @@ const SEO: React.FC<SEOProps> = ({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             __html: JSON && JSON.stringify(structuredData),          }}
         />;
       )}
@@ -420,11 +404,14 @@ const SEO: React.FC<SEOProps> = ({
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             __html: JSON.stringify(structuredData),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 export default SEO;  )
@@ -545,9 +532,11 @@ export default SEO);
 export default SEO;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     </Head>
 );
 };
 
 export default SEO;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

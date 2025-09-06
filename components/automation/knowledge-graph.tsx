@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 ) ) 
 }</ul> </section> <section>) ) 
@@ -12,6 +13,8 @@ export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -20,7 +23,7 @@ interface Edge { source: string, target: string, weight: number, terms: string[]
 interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
 
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -48,6 +51,7 @@ type Props = any;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ) );
@@ -90,9 +94,11 @@ if (return <div > No knowledge graph yet.</div>) {
       </section>;
     </div>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         </ul>
       </section>
     </div>
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

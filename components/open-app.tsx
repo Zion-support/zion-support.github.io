@@ -1,8 +1,4 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-
-const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
-=======
 const IOS_APP_URL = null;
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
@@ -13,7 +9,7 @@ const ANDROID_APP_URL =
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
 
 export default function OpenApp() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {
   useEffect(() => {;
@@ -25,10 +21,8 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
     const timeout = setTimeout(() => {
       const elapsed = Date.now() - now;
       if (elapsed < 2000) {
-<<<<<<< HEAD
-=======
 window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }, 1200);
     // Try to open the deep link
@@ -37,45 +31,24 @@ window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
     iframe.src = DEEP_LINK_URL;
     document.body.appendChild(iframe);
     const timer = setTimeout(() => {
-<<<<<<< HEAD
-      try {
-        document.body.remove_child (iframe);
-      } catch {}    }, 1500);      try { document.body.remove_child (iframe) } catch {}
-=======
 try {
         document.body.removeChild(iframe);
       } catch {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }, 1500);
     }, 1500);
 
     return () => {;
       clearTimeout(timeout);
       clearTimeout(timer);
-<<<<<<< HEAD
-      try {;
-        document && document.body.removeChild(iframe);
-=======
 try {
         document.body.removeChild(iframe);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       } catch {}
       try { document.body.removeChild(iframe) } catch {}
     }
   }, []);
   return (
-<<<<<<< HEAD
-    <div className='min-h-[50vh] flex items-center justify-center'>;
-      <div className='text-center'>;
-        <div className='text-lg font-semibold'>Opening the Zion app…</div>;
-        <div className='mt-2 text-sm opacity-70'>;
-          If nothing happens, you’ll be redirected to the store.;
-        </div>;
-      </div>;
-    </div>;
-  );  }, []);
-
-=======
     <div className='min-h-[50vh] flex items-center justify-center'>
       <div className='text-center'>
         <div className='text-lg font-semibold'>Opening the Zion app…</div>
@@ -94,4 +67,4 @@ try {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

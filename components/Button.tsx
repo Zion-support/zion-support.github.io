@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({;
@@ -77,6 +78,8 @@ function Button() {
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
@@ -90,7 +93,7 @@ interface ButtonProps {
 export default function Button({ 
   children;
   variant;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <button;
       type={type}
@@ -101,6 +104,7 @@ export default function Button({
     </button>
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     >
@@ -127,3 +131,6 @@ export default function Button({
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

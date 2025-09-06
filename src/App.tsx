@@ -1,8 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import ErrorBoundary from './components/ErrorBoundary';
+>>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
+<<<<<<< HEAD
 import { BackToTopButton } from './components/BackToTopButton';
 
 // Simple Home component
@@ -29,19 +36,40 @@ const Home = () => (
     </div>
   </div>
 );
+=======
+import BackToTop from './components/BackToTopButton';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+>>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </main>
+            <Footer />
+            <BackToTop />
+            <ToastContainer />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 

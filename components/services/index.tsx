@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
@@ -28,6 +29,8 @@ budgetRange: values.budgetRange;
 }/> </div>)
 };export default ServicesPage;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -50,7 +53,7 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
@@ -73,6 +76,7 @@ budgetRange: values.budgetRange;
 }service= {
   selected
 }onSubmit= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   handleSubmit
 }/> </div>)
@@ -289,8 +293,10 @@ export default ServicesPage;
 export default ServicesPage;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   handleSubmit 
 }/> </div>) 
 };
 export default ServicesPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

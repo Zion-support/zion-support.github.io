@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -10,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = null;
   return res.status(201).json({ id: record.id })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -150,23 +148,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-<<<<<<< HEAD
-  return res.status(201).json({ id: record.id })
-}
-    id: uuidv4 (),
-    name,
-    email,
-    skills: skills || [],
-    program_track: program_track || null,
-    certification_status: certification_status || 'pending',
-    partner_id: auth.partner.id,
-created_at: now,
-  }
-  records.push (record);
-  await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 });
-  await record_request (req, res, auth.partner, auth.api_key, started, 201);
-  return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
-}
-=======
   return res.status(201).json({ id: record.id });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,0 +1,13 @@
+import { useRouter  } from 'next/router';
+import CertificatePreview from '../../../components/learn/CertificatePreview';
+export default function CertificatePage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-semibold">Certificate</h1>
+      <CertificatePreview courseId={courseId} />
+    </div>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

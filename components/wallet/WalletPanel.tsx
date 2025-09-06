@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 type Tx = {
@@ -21,11 +22,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = any;
       refresh()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 type Tx = {;
@@ -46,6 +49,7 @@ export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
+<<<<<<< HEAD
 <<<<<<< HEAD
   );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
   id: string
@@ -88,6 +92,8 @@ type Summary = {;
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
@@ -108,11 +114,12 @@ setSummary(data);
     ['burn', 'revoke', 'redeem'].includes(t.type)
   );
   const nextBadgeThreshold = useMemo(() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -183,6 +190,8 @@ if ( {) {
             </div>;
           </div>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 return balance;
   }, [balance]);
   const progress = Math.min(
@@ -256,7 +265,7 @@ const res = await fetch('/api/wallet/redeem', {
 
 <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
@@ -314,6 +323,7 @@ const res = await fetch('/api/wallet/redeem', {
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <button;
             on_click={connect_wallet}
@@ -433,6 +443,8 @@ const res = await fetch('/api/wallet/redeem', {
 }
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               >
                 Redeem 500
               </button>
@@ -440,18 +452,12 @@ const res = await fetch('/api/wallet/redeem', {
             <div className='text-xs text-gray-500'>
               Coming soon: Redeem for branded perks and courses.
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
         )}
       </div>
     </div>
-<<<<<<< HEAD
-);
-}
-
-}
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

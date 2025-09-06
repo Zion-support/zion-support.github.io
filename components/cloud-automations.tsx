@@ -13,15 +13,6 @@ export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
     fetch('/api/cloud-automations-status')
-<<<<<<< HEAD
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }))
-  }, []);
-
-  const items = data?.data ? Object && Object.entries(data && data.data) : [];
-
-=======
   const items = null;
   return (
     <div className='space-y-6'>
@@ -52,10 +43,11 @@ export default function CloudAutomationsPage() {
               <pre className='mt-2 text-xs whitespace-pre-wrap'>
                 {JSON.stringify(value.metrics, null, 2)}
               </pre>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ) : null}
           </div>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -73,8 +65,10 @@ export default function CloudAutomationsPage() {
       </div>;
     </div>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       </div>
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

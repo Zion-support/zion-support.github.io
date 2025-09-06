@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (stored === 'talent' |stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
       if (stored === 'talent' || stored === 'client') {
@@ -13,6 +14,8 @@
         setRoleState(stored);      }
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
   setRole: (role: UserRole) => void;
@@ -28,7 +31,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
       if (stored === 'talent' || stored === 'client') {
 setRoleState(stored);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     } catch {}
   }, []);
@@ -36,6 +39,7 @@ setRoleState(stored);
     setRoleState(r);
 try {
       window.localStorage.setItem('userRole', r);
+<<<<<<< HEAD
 <<<<<<< HEAD
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
   }
@@ -75,6 +79,8 @@ return useContext(AuthContext);
 }
   return (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
     } catch {}
   }
@@ -85,4 +91,4 @@ return useContext(AuthContext);
   );
 export function useAuth() {
   return useContext(AuthContext);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

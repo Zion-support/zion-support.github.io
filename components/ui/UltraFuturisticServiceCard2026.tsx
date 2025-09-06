@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-    monthly?: number;
-    yearly?: number;
-    currency?: string;
-=======
   id: string;
   name: string;
   tagline: string;
@@ -15,11 +9,12 @@ import React from 'react';
     trialDays?: number;
     setupTime?: string
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   competitors?: string[];
   targetMarket?: string;
@@ -361,6 +356,8 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   category: string;
   icon: string;
   marketPrice?: string;
@@ -376,4 +373,4 @@ interface ServiceCardProps {
 }
 
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 type Experiment = {
@@ -21,11 +22,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from "react",
 import fs from "fs";
 import path from "path";
 type Experiment = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -39,6 +42,7 @@ effort?: number;
 impact?: number;
 }
 type Props = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   updated_at: string | null;
 items: Experiment[] }
@@ -77,6 +81,8 @@ type Props = {;
 };
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   updatedAt: string | null;
 items: Experiment[]
 };
@@ -94,7 +100,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -200,12 +206,8 @@ export default function CurationPage({ updatedAt, items }: Props) {
           </div>
         ))}
         {!items.length && (
-<<<<<<< HEAD
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
-
-=======
 <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             Nothing to show yet.
 
         )}
@@ -223,6 +225,7 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
             {(exp.hypothesis || exp.metric) && (
@@ -357,6 +360,8 @@ export async function getStaticProps() {;
     };
   }        items: []},
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         updatedAt: parsed.updatedAt || null,
 items: parsed.items || [],
       },
@@ -371,7 +376,7 @@ items: [],
       revalidate: 300,
     };
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       revalidate: 300}
 }
 }

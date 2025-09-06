@@ -1,100 +1,17 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-
-import {
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Code,
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Code;
-  GitBranch
-  Database
-  Cloud
-  Shield
-  Zap
-
-
-
-  Code;
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-=======
 import { Code;
   GitBranch;
   Database;
   Cloud;
   Shield;
   Zap;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Cpu;
-<<<<<<< HEAD
-
-      pricing: '$10 / month',
-      market_price: '$10 - 20 / month',
-      website: 'https://github.com / features / copilot',
-      color: 'bg - gradient - to - br from - gray - 500 to - black',
-      text_color: 'text - gray - 400',
-      gradient: 'from - gray - 400 to - black',
-      popular: true,
-      ];
-      pricing: '$4 / month',
-      market_price: '$4 / month',
-      website: 'https://github.com / pricing',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      text_color: 'text - green - 400',
-      gradient: 'from - green - 400 to - emerald - 500',
-      popular: true,
-      ];
-      pricing: '$9 / month',
-      market_price: '$9 - 57 / month',
-      website: 'https://www.mongodb.com / atlas',
-      color: 'bg - gradient - to - br from - green - 500 to - blue - 600',
-      text_color: 'text - green - 400',
-      gradient: 'from - green - 400 to - blue - 500',
-      popular: false,
-      ];
-      pricing: '$20 / month',
-      market_price: '$20 / month',
-      website: 'https://vercel.com / pricing',
-      color: 'bg - gradient - to - br from - black to - gray - 600',
-      text_color: 'text - gray - 400',
-      gradient: 'from - black to - gray - 500',
-      popular: false,
-      ];
-      pricing: '$25 / month',
-      market_price: '$25 - 100 / month',
-      website: 'https://snyk.io / pricing',
-      color: 'bg - gradient - to - br from - red - 500 to - pink - 600',
-      text_color: 'text - red - 400',
-      gradient: 'from - red - 400 to - pink - 500',
-      popular: false,
-      ];
-      pricing: '$12 / month',
-      market_price: '$12 - 99 / month',
-      website: 'https://www.postman.com / pricing',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      text_color: 'text - orange - 400',
-      gradient: 'from - orange - 400 to - red - 500',
-      popular: false,
-=======
   Globe
  } from 'lucide-react';
 export default function DeveloperToolsPage() {
@@ -222,20 +139,15 @@ category: 'Security',
       popular: false,
 category: 'API Development',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
     {
-<<<<<<< HEAD
-      description: 'Average productivity improvement'
-    },  ];      description: 'Global developer tools market size'
-    }
-=======
       title: 'Dev Tools Market',
       value: '$8.2B',
       growth: '+24% YoY',
 description: 'Global developer tools market size',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'AI Code Tools',
       value: '$2.1B',
@@ -256,51 +168,6 @@ description: 'Average productivity improvement',
     },
   ];
   const devCategories = [
-<<<<<<< HEAD
-      description: 'AI - powered development tools market',
-    },    {
-      title: 'Cloud Dev Tools',
-      value: '$4.8B',
-      growth: '+32% YoY',
-      description: 'Cloud - based development platforms',
-    },    {
-      title: 'Dev Productivity',
-      value: '35%',
-      growth: '+18% YoY',
-      description: 'Average productivity improvement',
-    },  ];      description: 'Global developer tools market size';
-    }
-    {
-      title: 'AI Code Tools',
-      value: '$2.1B',
-      growth: '+45% YoY',
-    }
-  ];
-;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
-          Pricing;
-        </title>;
-      {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
-            Developer Tools & Services
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            Professional Developer Tools That Actually Work
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Curated developer tools and services that professionals use daily. Each tool has been tested and verified
-            to provide real value for developers and development teams.
-=======
     {
       name: 'Code Generation',
       description: 'AI-powered coding assistants and code completion tools',
@@ -398,20 +265,11 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
             Curated developer tools and services that professionals use daily.
             Each tool has been tested and verified to provide real value for
             developers and development teams.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
       {/* Developer Market Statistics */}
-<<<<<<< HEAD
-              Understanding the developer tools landscape helps you make;
-              informed decisions about your development stack.;
-            </p>;
-          </div>;
-
-
-
-=======
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -446,7 +304,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -455,13 +313,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
 
               Curated Developer Tools & Services
             </h2>
-<<<<<<< HEAD
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-=======
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
@@ -469,7 +320,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {developerTools.map((tool, index) => (
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
@@ -494,8 +345,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-<<<<<<< HEAD
-=======
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tool.popular && (
@@ -561,37 +410,11 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                     </ul>
 
 <div className='flex items-center justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
-<<<<<<< HEAD
-                        className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
-                        Try Tool;
-                        <ExternalLink className='w-4 h-4 ml-2' />;
-                      </Button>;
-                      <div className='text-right'>;
-                        <div className='text-xs text-gray-500'>Direct Link</div>;
-                        <div className='text-xs text-cursor-blue font-mono'>;
-                          {tool && tool.website}
-                        </div>                      </div>                      <Button
-                        href={tool && tool.website}
-                        variant="primary"
-                        size="sm"
-                        className="bg-cursor-blue hover:bg-cursor-blue-dark">;
-                        Try Tool;
-                        <ExternalLink className="w-4 h-4 ml-2" />;
-                      </Button>;
-                      <div className="text-right">;
-                        <div className="text-xs text-gray-500">Direct Link</div>;
-                        <div className="text-xs text-cursor-blue font-mono">{tool && tool.website}</div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
-=======
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'
                       >
                         Try Tool
@@ -611,7 +434,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Developer Workflow */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -630,35 +453,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
-<<<<<<< HEAD
-              Build a complete development pipeline with these essential tools;
-              that work together seamlessly.;
-            </p>;
-          </div>;
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Build a complete development pipeline with these essential tools that work together seamlessly.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {devWorkflow.map((phase, index) => (
-                        className='text-sm text-cursor-blue font-medium'>                        {tool}              Complete Developer Workflow;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Build a complete development pipeline with these essential tools that work together seamlessly.;
-            </p>;
-          </div>;
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="p-6 text-center">;
-                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <Cpu className="w-8 h-8 text-cursor-blue" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-3">{phase && phase.phase}</h3>;
-                  <p className="text-gray-400 mb-4">{phase && phase.description}</p>;
-                  <div className="space-y-1">;
-                    {phase && phase.tools.map((tool, toolIndex) => (;
-                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
-=======
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
@@ -678,7 +472,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                         key={toolIndex}
                         className='text-sm text-cursor-blue font-medium'
                       >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {tool}
                       </div>
                     ))}
@@ -756,16 +550,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                     </span>
                     <span className='text-cursor-blue font-semibold'>
                       {category.avgPrice}
-<<<<<<< HEAD
-                    </span>                  </div>                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                  <p className="text-gray-400 mb-4">{category.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
-                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
-=======
                     </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </Card>
@@ -801,34 +587,15 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
               href='/ai-tools'
               variant='primary'
               size='lg'
-<<<<<<< HEAD
-              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
-              Explore AI Tools;
-            </Button>;
-=======
               className='bg-cursor-blue hover:bg-cursor-blue-dark'
             >
               Explore AI Tools
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              Get Dev Consultation
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
-              variant="primary"
-              size="lg"
-              className="bg-cursor-blue hover:bg-cursor-blue-dark"
-              Explore AI Tools
-            </Button>
-
-=======
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
             >
               Get Dev Consultation
@@ -839,4 +606,4 @@ href='/contact'
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

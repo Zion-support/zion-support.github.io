@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const JOBS_FILE = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -27,6 +25,7 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Failed to load jobs' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET") {
@@ -94,9 +93,11 @@ if ( {) {
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     return res.status(200).json({ jobs })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load jobs" })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

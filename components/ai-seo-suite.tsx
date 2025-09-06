@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Search,
   TrendingUp,
@@ -85,6 +86,8 @@ export default function AISeosuitePage() {
   const features = [
     {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = null;
@@ -182,7 +185,7 @@ export default function AISeosuitePage() {
         'Custom dashboards',
       ],
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const pricingPlans = [
     {
@@ -191,6 +194,7 @@ export default function AISeosuitePage() {
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
     {;
@@ -218,6 +222,8 @@ export default function AISeosuitePage() {
 
   return (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 'Up to 5 websites',
         'Basic keyword research',
         'Monthly site audits',
@@ -476,7 +482,7 @@ description:
             analytics, and intelligent optimization
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
               href='#pricing'
               size='lg'
@@ -488,23 +494,6 @@ description:
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-            <Button
-              href="#pricing"
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/25">;
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
-            <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
-              Everything you need to dominate search rankings and drive organic;
-              traffic;
-            </p>;
-          </div>;
-=======
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -563,41 +552,16 @@ description:
                   <div
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.icon}
                   </div>;
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
-<<<<<<< HEAD
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to dominate search rankings and drive organic traffic
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
-                    {feature && feature.icon}
-                  </div>;
-                </div>;
-                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>;
-                  {feature && feature.title}
-                </h3>;
-                <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}              Powerful SEO Features;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Everything you need to dominate search rankings and drive organic traffic;
-            </p>;
-          </div>;
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-=======
                 </h3>
                 <p className='text-gray-400 leading-relaxed'>
                   {feature.description}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </Card>
             ))}
@@ -606,6 +570,7 @@ description:
       </section>
 
       {/* SEO Tools Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -639,6 +604,8 @@ description:
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -652,7 +619,7 @@ description:
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -666,27 +633,10 @@ description:
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div
                           key={toolIndex}
-<<<<<<< HEAD
-                          className='flex items-center text-sm text-gray-300'>;
-                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map((tool, index) => (;
-              <Card
-                key={index}
-                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
-                <div className="flex items-start space-x-4">;
-                  <div className="flex-shrink-0">{tool && tool.icon}</div>;
-                  <div className="flex-1">;
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">;
-                      {tool && tool.category}
-                    </h3>;
-                    <div className="grid grid-cols-1 gap-2">;
-                      {tool && tool.tools.map((toolName, toolIndex) => (;
-                        <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
-                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-=======
                           className='flex items-center text-sm text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {toolName}
                         </div>
                       ))}
@@ -696,36 +646,6 @@ description:
               </Card>;
             ))}
       {/* Success Metrics Section */}
-<<<<<<< HEAD
-
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              <Card
-                key={index}
-                className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
-                <div className='text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                  {metric && metric.value}
-                </div>;
-                <h3 className='text-xl font-bold mb-2 text-white'>;
-                  {metric && metric.metric}
-                </h3>;
-                <p className='text-gray-400 text-sm'>{metric && metric.description}</p>              </Card>            {successMetrics && successMetrics.map((metric, index) => (;
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
-                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
-                  {metric && metric.value}
-                </div>;
-                <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
-                <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
-              </Card>;
-=======
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -751,22 +671,10 @@ description:
                 </h3>
                 <p className='text-gray-400 text-sm'>{metric.description}</p>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
 
       {/* Use Cases Section */}
-<<<<<<< HEAD
-
-      <section className="py-24 bg-black relative overflow-hidden">
-
-            ))}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Use Cases
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-=======
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -780,7 +688,7 @@ description:
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -797,30 +705,10 @@ description:
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div
                           key={benefitIndex}
-<<<<<<< HEAD
-                          className='flex items-center text-sm text-gray-300'>;
-                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map((useCase, index) => (;
-              <Card
-                key={index}
-                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
-                <div className="flex items-start space-x-4">;
-                  <div className="text-4xl">{useCase && useCase.icon}</div>;
-                  <div className="flex-1">;
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">;
-                      {useCase && useCase.title}
-                    </h3>;
-                    <p className="text-gray-400 mb-4 leading-relaxed">;
-                      {useCase && useCase.description}
-                    </p>;
-                    <div className="grid grid-cols-2 gap-2">;
-                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
-                          <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-=======
                           className='flex items-center text-sm text-gray-300'
                         >
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {benefit}
                         </div>
                       ))}
@@ -830,6 +718,7 @@ description:
               </Card>;
             ))}
       {/* Pricing Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -876,6 +765,8 @@ description:
                 </div>;
                 <div className='text-center mb-8'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section
         id='pricing'
         className='py-24 bg-gray-900 relative overflow-hidden'
@@ -904,7 +795,7 @@ description:
                   </div>
                 )}
 <div className='text-center mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
                   </h3>;
@@ -921,13 +812,10 @@ description:
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-<<<<<<< HEAD
-
-=======
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>;
                   ))}
@@ -949,58 +837,17 @@ description:
                 </ul>
 
                 <Button
-<<<<<<< HEAD
-                  href="/contact"
-                  className={`w-full ${plan.buttonColor} text-white`}
-                  size="lg"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-=======
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </Card>
             ))}
       {/* Integrations Section */}
-<<<<<<< HEAD
-
-      <section className="py-24 bg-black relative overflow-hidden">
-
-            ))}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              <Card
-                key={index}
-                className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>;
-                  {integration && integration.icon}
-                </div>;
-                <h3 className='font-semibold text-white mb-2'>;
-                  {integration && integration.name}
-                </h3>;
-                <p className='text-sm text-gray-400'>;
-                  {integration && integration.description}
-                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
-              <Card
-                key={index}
-                className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">;
-                  {integration && integration.icon}
-                </div>;
-                <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
-                <p className="text-sm text-gray-400">{integration && integration.description}</p>;
-              </Card>;
-=======
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1028,7 +875,7 @@ href='/contact'
                   {integration.description}
                 </p>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         </div>
@@ -1074,6 +921,7 @@ href='/contact'
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href="/contact"
               variant="secondary"
@@ -1099,6 +947,8 @@ href='/contact'
     </>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -1110,4 +960,4 @@ href='/contact'
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

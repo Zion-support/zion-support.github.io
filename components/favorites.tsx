@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FavoritesPage() {
 
 export default function FavoritesPage() {;
@@ -21,17 +22,20 @@ export default function FavoritesPage() {;
 }
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
   const storageKey = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
@@ -118,6 +122,8 @@ function FavoritesPage() {
       </div>;
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
@@ -140,7 +146,7 @@ function FavoritesPage() {
 
 <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {profiles.length === 0 ? (
         <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
           <div className='text - gray - 600 dark:text - gray - 300'>;
@@ -158,6 +164,7 @@ function FavoritesPage() {
           {profiles.map (t => (
             <div;
               key={t.slug}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -200,6 +207,8 @@ function FavoritesPage() {
     </div>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>
@@ -249,4 +258,4 @@ function FavoritesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
