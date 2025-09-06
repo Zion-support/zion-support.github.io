@@ -13,13 +13,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-<<<<<<< HEAD
-            Ready to transform your business with cutting-edge technology? 
-            Let&apos;s discuss how we can help you achieve your goals.
-=======
-            Ready to transform your business with cutting-edge technology? Let's
+            Ready to transform your business with cutting-edge technology? Let&apos;s
             discuss how we can help you achieve your goals.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </p>
         </div>
 

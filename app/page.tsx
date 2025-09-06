@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';
+=======
 import React from "react";
 import Link from "next/link";
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 
 interface CardProps {
   title: string;
@@ -21,11 +26,11 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
       </div>
       <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
       {bullets.length > 0 && (
-        <ul className="space-y-1">
+        <ul className="space-y-2">
           {bullets.map((bullet, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-              {bullet}
+            <li key={index} className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-sm text-gray-700">{bullet}</span>
             </li>
           ))}
         </ul>
@@ -34,6 +39,66 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
   );
 }
 
+<<<<<<< HEAD
+export default function Home() {
+  const services = [
+    {
+      title: "AI Services",
+      href: "/services/ai-services",
+      description: "Revolutionary AI solutions that transform your business operations and drive unprecedented growth.",
+      icon: "🤖",
+      bullets: [
+        "AI-powered automation",
+        "Machine learning solutions",
+        "Natural language processing",
+        "Computer vision applications"
+      ]
+    },
+    {
+      title: "IT Services",
+      href: "/services/it-services",
+      description: "Comprehensive IT solutions designed to modernize your infrastructure and optimize performance.",
+      icon: "💻",
+      bullets: [
+        "Cloud migration",
+        "System integration",
+        "Network security",
+        "24/7 technical support"
+      ]
+    },
+    {
+      title: "Micro SaaS",
+      href: "/services/micro-saas",
+      description: "Custom micro SaaS applications that solve specific business problems with elegant simplicity.",
+      icon: "🚀",
+      bullets: [
+        "Rapid development",
+        "Scalable architecture",
+        "User-friendly interfaces",
+        "Cost-effective solutions"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results. 
+            Transform your operations with cutting-edge technology and expert implementation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <Card key={index} {...service} />
+          ))}
+        </div>
+=======
 function ServiceCard({
   title,
   href,
@@ -225,13 +290,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 
-      {/* Contact CTA */}
-      <section className="py-12">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
+          <p className="text-lg text-gray-600 mb-8">
+            Let's discuss how our solutions can drive your success.
+=======
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
 <<<<<<< HEAD
             Let&apos;s discuss your project and create a custom solution that drives real business value. 
@@ -241,28 +309,21 @@ export default function HomePage() {
             real business value. Our team has delivered 1000+ successful
             projects across various industries.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
-          <div className="mt-6 text-sm text-gray-600">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started Today
+          </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 }
 
 <<<<<<< HEAD
@@ -283,3 +344,4 @@ function FeatureCard({ title, description }: { title: string; description: strin
     </div>
   );
 }
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4

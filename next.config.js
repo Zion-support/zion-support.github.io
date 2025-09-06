@@ -24,6 +24,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   async redirects() {
     return [
       { source: '/api-documentation', destination: '/api-docs', permanent: true },
@@ -78,4 +81,8 @@ const nextConfig = {
   serverExternalPackages: ['sharp'],
 };
 
+<<<<<<< HEAD
+export default nextConfig;
+=======
 module.exports = nextConfig;
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
