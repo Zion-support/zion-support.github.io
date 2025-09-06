@@ -2,6 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+"import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
+
+
+"import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
+"import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src.disabled/components/community/EmptyState.js.jsx
 "import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -51,6 +59,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -74,3 +83,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
+"import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
+"import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

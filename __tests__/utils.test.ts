@@ -61,8 +61,8 @@ module.exports = {};
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock test for utils
-describe('Utils', () => {
-  it('should work correctly', () => {
+describe("Utils", () => {
+  it("should work correctly", () => {
     expect(true).toBe(true);
   });
 <<<<<<< HEAD
@@ -85,6 +85,7 @@ describe('Utils', () => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 });
+export {};'
 
 export {};
 

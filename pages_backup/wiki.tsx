@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/wiki.tsx
 <<<<<<< HEAD:pages/wiki.tsx
 <<<<<<< HEAD
@@ -205,6 +206,8 @@ function CopyButton({ text, label }: { text: string, label: string }) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useMemo, useState } from 'react';
 import { generateZionWiki;
   buildMarkdownFromWiki;
@@ -221,6 +224,7 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/wiki.tsx
 <<<<<<< HEAD
 
@@ -311,6 +315,9 @@ export default function WikiPage() {}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 <div className='grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8'>
       <aside className='sticky top-20 self-start hidden lg:block'>
@@ -336,6 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 <<<<<<< HEAD:pages_backup/wiki.tsx
           <li>
+<<<<<<< HEAD
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -351,10 +359,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<a href='#references' className='opacity-80 hover:opacity-100'>
+              References
+            </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </li>
         </ul>
       </aside>
 
+<<<<<<< HEAD
 
 
 "
@@ -389,6 +404,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>
       </aside>
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <article className='prose dark:prose-invert max-w-none'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         <h1>{wiki.title}</h1>
@@ -412,6 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/wiki.tsx
 <<<<<<< HEAD:pages/wiki.tsx
 <<<<<<< HEAD
@@ -520,17 +538,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </section>
         ))}
 
 <h2 id='references'>References</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/wiki.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
@@ -597,6 +621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <CopyButton text={wikitext} label='Copy Wikitext' />
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/wiki.tsx
 <<<<<<< HEAD
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
@@ -732,6 +757,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <pre className='overflow-auto text-xs whitespace-pre-wrap'>{md}</pre>
         </div>
 
@@ -744,6 +771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </article>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/wiki.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -758,3 +786,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -49,6 +49,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -82,3 +83,8 @@ interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string }; created_at?: string; updated_at?: string} interface Profile { id: 'string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string' } interface MappedUser { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' } ; export role: 'profile.role',; isEmailVerified: 'profile.is_email_verified || false',; createdAt: 'profile.created_at || supabaseUser.created_at',; updatedAt: 'profile.updated_at || supabaseUser.updated_at'}}; ;
+interface SupabaseUser { "id": string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string   }; created_at?: string; updated_at?: string} interface Profile { "id": string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string   } interface MappedUser { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string   } ; export "role": profile.role, "isEmailVerified": profile.is_email_verified || false, "createdAt": profile.created_at || supabaseUser.created_at, "updatedAt": profile.updated_at || supabaseUser.updated_at}};
+interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string }; created_at?: string; updated_at?: string} interface Profile { id: string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string } interface MappedUser { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string } ; export role: profile.role,isEmailVerified: profile.is_email_verified || false,createdAt: profile.created_at || supabaseUser.created_at,updatedAt: profile.updated_at || supabaseUser.updated_at}}; ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

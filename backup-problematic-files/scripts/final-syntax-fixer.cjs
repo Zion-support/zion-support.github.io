@@ -1,6 +1,5 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -15,9 +14,13 @@ const path = require('path')
           content = content.replace(templateLiteralSemicolon, '"$1$2")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     console.error(' Final syntax fixer "failed")
     console.error(' Final syntax fixer "failed")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

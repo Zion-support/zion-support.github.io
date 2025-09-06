@@ -17,6 +17,7 @@ import { GetServerSideProps } from 'next';
 import fs from 'fs';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 import path from 'path';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 
@@ -288,6 +289,8 @@ import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw 
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -301,6 +304,7 @@ interface LogEntry {
 interface LogEntry {;
   id: string;
   timestamp: string;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -434,6 +438,8 @@ interface LogsPageProps {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
@@ -447,6 +453,7 @@ interface LogsPageProps {;
 }
 
 interface LogsPageProps {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -457,10 +464,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
@@ -501,6 +512,8 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   lastUpdated: string
 }
 
@@ -510,12 +523,16 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
 return <Info className='h-4 w-4 text-blue-500' />;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     case 'info':
       return <Info className="h-4 w-4 text-green-500" />,
     case 'warn':
@@ -523,6 +540,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -756,6 +774,8 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
@@ -770,6 +790,7 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     info: 'bg-green-100 text-green-800',
     warn: 'bg-yellow-100 text-yellow-800',
     error: 'bg-red-100 text-red-800',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -826,6 +847,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 critical: 'bg-red-200 text-red-900',
   };
 
@@ -867,11 +890,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
+=======
+const categories = Array.from(new Set(logs.map(log => log.category))).filter(
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     Boolean
 <<<<<<< HEAD
   );
@@ -977,6 +1005,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'warn': return 'bg-yellow-100 text-yellow-800';
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -1002,6 +1031,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -1540,6 +1571,7 @@ const parts = [];
             <Info className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -1612,6 +1644,8 @@ const parts = [];
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>
           </CardContent>
@@ -1685,6 +1719,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
@@ -1739,6 +1774,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
             <div className='relative'>
               <Search className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
@@ -1750,16 +1787,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
             <Select value={levelFilter} onValueChange={setLevelFilter}>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1775,6 +1817,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <SelectItem value='all'>All Levels</SelectItem>
                 <SelectItem value='debug'>Debug</SelectItem>
                 <SelectItem value='info'>Info</SelectItem>
@@ -1786,16 +1830,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
 <SelectValue placeholder='All categories' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
               <SelectTrigger>
@@ -1856,11 +1905,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </SelectItem>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -1881,6 +1937,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <SelectValue placeholder='All sources' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+<SelectValue placeholder='All sources' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </SelectTrigger>
               <SelectContent>"
                 <SelectItem value="all">All Sources</SelectItem>
@@ -2272,6 +2332,7 @@ if ( {) {
         </CardHeader>
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
         <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -2289,6 +2350,10 @@ if ( {) {
 <div className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+<div className='space-y-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {filteredLogs.length > 0 ? (
               filteredLogs.map((log) => ("
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">"
@@ -2300,6 +2365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && ("
                         <Badge variant="outline">{log.component}</Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2396,6 +2462,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+                  {log.context && Object.keys(log.context).length > 0 && (
+                    <details className="text-xs">
+                      <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
+                        View Context
+                      </summary>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>
                         {JSON.stringify(log.context, null, 2)}
                       </pre>
@@ -2404,12 +2477,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {log.error && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         View Error Details
                       </summary>
 =======
@@ -2427,6 +2504,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <summary className="cursor-pointer">Stack Trace</summary>"
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2621,6 +2699,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         )}
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <div>
@@ -2664,12 +2744,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
 =======
@@ -2678,6 +2762,7 @@ export const getServerSideProps: GetServerSideProps = async () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     const logs_dir = path.join (process.cwd (), 'logs');
     const logs: LogEntry[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
               // Skip malformed log entries;
@@ -2692,6 +2777,8 @@ export const getServerSideProps: GetServerSideProps = async () => {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               // Skip malformed log entries
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2706,6 +2793,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
@@ -2723,6 +2811,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Sort logs by timestamp (newest first)
 logs.sort(
       (a, b) =>
@@ -2733,16 +2823,21 @@ logs.sort(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2809,6 +2904,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 errorCount,
         warningCount,
         totalCount,
@@ -2819,6 +2916,7 @@ errorCount,
     logErrorToProduction('Error reading logs:', error);
     return {
       props: {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2836,10 +2934,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     logErrorToProduction ('Error reading logs:', error);    return {}
       props: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         logs: [],
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
         lastUpdated: new Date().toISOString(),
@@ -3049,11 +3151,14 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 lastUpdated: new Date().toISOString(),
       },
     };
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/logs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3066,3 +3171,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

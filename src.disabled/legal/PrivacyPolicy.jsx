@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/legal/PrivacyPolicy.jsx
 import React from\';react\' const markdown = \" # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision.\" \" const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title=\'Privacy Policy\' description=\'Learn how Zion Tech Group handles your data and protects your privacy.\' canonical=\'"https\": \''\'",;
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",;'"'"
@@ -43,6 +44,9 @@ import _React from';react' const markdown = " # Privacy Policy Your privacy is i
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -117,6 +121,7 @@ import React from\';react\' const markdown = \" # Privacy Policy Your privacy is
 const React from"react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return () <> <SEOtitle="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -154,3 +159,9 @@ import React from\';react\' const markdown = \" # Privacy Policy Your privacy is
 const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return null; }
 import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''",;
+import React from\';react\' const markdown = \" # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision.\" \" const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title=\'Privacy Policy\' description=\'Learn how Zion Tech Group handles your data and protects your privacy.\' canonical=\'"https\": \''\'",;
+const React from";react" const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https: """",;'"'"
+import _React from';react' const markdown = " # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects,uses,and protects your information. Additional details will be added in a future revision." " const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='"https": '''",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

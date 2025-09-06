@@ -68,10 +68,13 @@ export default function sitemap(): MetadataRoute.Sitemap {;'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     ...routes,;
     ...aiServices,;
@@ -81,11 +84,17 @@ export default function sitemap(): MetadataRoute.Sitemap {;'
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`,;
 
+<<<<<<< HEAD
     lastModified: new Date();'
     changeFrequency: 'weekly';
 
 export default function sitemap (): MetadataRoute.Sitemap {';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    lastModified: new Date();
+    changeFrequency: 'weekly';
+export default function sitemap (): MetadataRoute.Sitemap {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;'
     '','
@@ -137,7 +146,8 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation';
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation';
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant';
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
+    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
+    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
 =======
 
@@ -164,6 +174,7 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
   return allRoutes.map((route) => ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     url: `${baseUrl}${route}`;
 =======
 
@@ -183,6 +194,10 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
 =======
     url: `${baseUrl}${route}`;    lastModified: new Date();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    url: `${baseUrl}${route}`;
+    lastModified: new Date();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     changeFrequency: 'weekly';
 =======
 

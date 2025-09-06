@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   memory: {
     used: number
     total: number
@@ -31,6 +32,8 @@ interface PerformanceData {;
     total: number,;
     limit: number,;
   } | null;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
 import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {'
@@ -284,6 +287,13 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
+=======
+import React, { useEffect } from 'react';
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
   onPerformanceData,
@@ -292,6 +302,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
     // Only run on client side"
     if (typeof window === "undefined" || typeof performance === "undefined") {}
       return;
+<<<<<<< HEAD
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development'
@@ -333,6 +344,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
         'paint', 'largest-contentful-paint'
       ] })
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
 
     const measurePerformance = () => {}
@@ -368,7 +381,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             }
           : null,
       };
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useState } from 'react';
 
 <<<<<<< HEAD
@@ -443,6 +460,12 @@ const PerformanceMonitor: React.FC = () => {
 origin/cursor/analyze-improve-and-deploy-application-347d
         }
       });
+<<<<<<< HEAD
+=======
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       observer.observe({ entryTypes: ['navigation'] });
 
@@ -470,8 +493,12 @@ origin/cursor/analyze-improve-and-deploy-application-347d
 
 <<<<<<< HEAD
     return () => {
+<<<<<<< HEAD
       observer.disconnect ();
       clear_timeout (timer);
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (typeof window ===, undefined
   ') return'    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV ===
@@ -766,5 +793,25 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 =======
+<<<<<<< HEAD
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  if (!metrics) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

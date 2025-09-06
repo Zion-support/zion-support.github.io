@@ -40,6 +40,7 @@ async function checkAutomationStatus() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const statusReport = {
 
@@ -51,6 +52,8 @@ async function checkAutomationStatus() {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -58,6 +61,9 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const statusReport = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "timestamp": new Date().toISOString(),
@@ -69,6 +75,7 @@ main
     // Check PM2 processes
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,10 +103,14 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -199,6 +210,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
       
     } catch (error) {
       
@@ -212,6 +224,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       
 main
 
+=======
+    } catch (error) {
+      
+    } catch (error) {
+      
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -277,6 +298,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
@@ -288,11 +310,17 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,11 +360,15 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'automation/master-orchestrator.cjs',
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -358,6 +390,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,6 +556,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         name: script,
         exists,
         path: scriptPath
@@ -559,9 +600,17 @@ main
       nodeVersion: process.version,
       platform: process.platform,
     };
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         "name": script,
         exists,
@@ -579,19 +628,33 @@ main
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-2480
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
     }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+    }
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+<<<<<<< HEAD
     
     
     
@@ -600,6 +663,8 @@ main
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -642,6 +707,7 @@ main
     // Save report
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -656,6 +722,11 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -664,6 +735,7 @@ main
     } catch (error) {
       console.log('⚠️  Could not save report file');
     }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 <<<<<<< HEAD
@@ -688,6 +760,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  } catch (error) {
+    console.error('❌ Error checking automation status:', error.message);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -697,6 +776,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     console.log('📊 Status Report:');
@@ -714,6 +794,14 @@ main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+    
+    
+    
+    
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD
@@ -731,6 +819,8 @@ main
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -755,6 +845,7 @@ main
     console.error('❌ Error checking automation status:', error.message);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -772,11 +863,15 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -897,6 +992,24 @@ if (require.main === module) {
 
 <<<<<<< HEAD
 main
+=======
+
+// Run if called directly
+
+if (require.main === module) {
+
+  checkAutomationStatus()
+    .then(() => {
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Fatal "error": ', error);
+      process.exit(1);
+    });
+}
+
+module.exports = { checkAutomationStatus };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -915,7 +1028,10 @@ const { execSync } = require('child_process')
 
 =======
       console.error('Fatal "error")
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 if (require.main === module) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -932,6 +1048,7 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
+<<<<<<< HEAD
 module.exports = checkAutomationStatus;
 <<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
@@ -956,6 +1073,8 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

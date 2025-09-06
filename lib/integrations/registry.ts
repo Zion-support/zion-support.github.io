@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 // Integration registry
 
+<<<<<<< HEAD
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
@@ -15,6 +16,9 @@ export class IntegrationRegistry {
   registerConnector(type: string, connector: BaseConnector): void {
     this.connectors.set(type, connector);
   }
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 import { IntegrationProviderMeta } from "./types";
@@ -27,6 +31,18 @@ import { IntegrationProviderMeta } from "./types";
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "salesforce"
     name: "Salesforce"
@@ -51,7 +67,11 @@ export const PROVIDERS: IntegrationProviderMeta[] = []
   }
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   getConnector(type: string): BaseConnector | undefined {
     return this.connectors.get(type);
@@ -68,6 +88,12 @@ pr-12243
     }
   }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -96,6 +122,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
@@ -103,6 +130,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export function getProviderById(
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
 
@@ -116,6 +146,18 @@ export const integrationRegistry = new IntegrationRegistry();
 import { IntegrationProviderMeta } from './types';
 import { IntegrationProviderMeta  } from './types';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: "bamboohr"
+    name: "BambooHR"
+    category: "ats"
+    description: "HRIS & ATS"
+  }
+];
+export function getProviderById(
+
+}
+import { IntegrationProviderMeta } from './types';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -124,8 +166,17 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+<<<<<<< HEAD
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
+=======
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -167,6 +218,8 @@ integrationRegistry.registerConnector('slack', new SlackConnector({
 }));
 =======
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 "
@@ -190,11 +243,14 @@ export function getProviderById(
 
   id: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -204,6 +260,7 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
   return PROVIDERS.find(p => p.id === id)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -211,3 +268,13 @@ pr-12243
 
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+): IntegrationProviderMeta | undefined {;
+  return PROVIDERS.find((p) => p.id === id);
+}
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

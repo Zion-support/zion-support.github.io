@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
 <<<<<<< HEAD
 =======
@@ -9,12 +10,17 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 >>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 
 
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import nacl from 'tweetnacl',;'
@@ -25,6 +31,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me',
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/verify-sol.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);'
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -178,6 +186,7 @@ export default async function handler() { return null; }
     return res.status(500).json({ error: e?.message || 'Verify failed' });
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
 <<<<<<< HEAD
 =======
@@ -185,6 +194,10 @@ export default async function handler() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> pr-12243
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
@@ -223,8 +236,8 @@ export default async function handler() { return null; }
 <<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
-=======
 const JWT_SECRET = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -232,17 +245,21 @@ const JWT_SECRET = null;
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' }),'`
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`),
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/verify-sol.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(200).json({ ok: true })
   } catch (e: any) {'
     return res.status(500).json({ error: e?.message || 'Verify failed' })
 <<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
   }
-<<<<<<< HEAD
-}
-=======
 };
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
   };
 };'`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/verify-sol.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

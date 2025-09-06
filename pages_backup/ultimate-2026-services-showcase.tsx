@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -221,6 +222,8 @@ import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovat
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Search,
   Star,
   DollarSign,
@@ -246,6 +249,7 @@ export default function Ultimate2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -450,6 +454,8 @@ export default function Ultimate2026ServicesShowcase(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -579,12 +585,16 @@ default:
     .filter(service => service.popular)
     .slice(0, 6);
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -705,6 +715,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           href='https://ziontechgroup.com/ultimate-2026-services-showcase'
         />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -763,6 +774,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black'>
@@ -815,6 +828,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <br />
               <span className='text-6xl md:text-8xl'>Innovations</span>
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -881,6 +895,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Discover revolutionary AI consciousness simulation, quantum neural
               interfaces, autonomous AI agents, and cutting-edge enterprise
@@ -938,6 +954,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -1034,6 +1051,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Floating Elements */}
 <div className='absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse'></div>
         <div className='absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000'></div>
@@ -1075,6 +1094,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -1166,6 +1186,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Featured Services */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -1191,6 +1213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {featuredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1208,6 +1231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1229,6 +1254,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       )}
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1320,6 +1346,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
@@ -1361,6 +1389,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -1430,6 +1459,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -1455,6 +1486,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1660,6 +1692,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Filters and Search */}
 <div className='mb-12 space-y-6'>
             {/* Search Bar */}
@@ -1770,6 +1804,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='relative'>
                 <select
                   value={sortBy}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1893,6 +1928,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   onChange={e => setSortBy(e.target.value)}
                   className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
                 >
@@ -1934,6 +1971,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 
@@ -2014,6 +2052,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Services Grid/List */}
 <div
             className={
@@ -2024,6 +2064,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {filteredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2033,10 +2074,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ultimate-2026-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 
@@ -2075,6 +2120,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className={
                   viewMode === 'grid'
                     ? 'group relative'
@@ -2220,6 +2267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
                 ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2329,6 +2377,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex items-center space-x-6'>
                     <div className='text-4xl'>{service.icon}</div>
                     <div className='flex-1'>
@@ -2358,6 +2408,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='text-right'>
                       <div className='text-2xl font-bold text-cyan-400 mb-2'>
                         {service.price}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2395,6 +2446,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <span className='text-sm text-gray-400'>
                           {service.period}
                         </span>
@@ -2410,6 +2463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Link>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -2560,6 +2614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
               </motion.div>
             ))}
@@ -2584,12 +2640,16 @@ animate={{ opacity: 1 }}
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600'>
         <div className='max-w-4xl mx-auto text-center px-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -2615,6 +2675,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business with 2026 Innovations?
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2669,6 +2730,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl text-white/90 mb-8'>
               Join thousands of forward-thinking companies already leveraging
               our revolutionary AI, quantum computing, and emerging technology
@@ -2705,6 +2768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-center'>
                 <div className='text-3xl font-bold text-white mb-2'>99.9%</div>
                 <div className='text-white/80'>Uptime Guarantee</div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2715,6 +2779,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ultimate-2026-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -2762,6 +2829,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -2832,6 +2900,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Footer Contact */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -2862,6 +2932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 <<<<<<< HEAD
@@ -3066,6 +3137,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ultimate-2026-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
             <div>
 <h4 className='text-2xl font-bold text-white mb-6'>
@@ -3123,6 +3196,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ultimate-2026-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3134,3 +3208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ultimate-2026-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

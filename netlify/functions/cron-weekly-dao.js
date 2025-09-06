@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
@@ -109,10 +112,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
     return {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+
+        content,
+        message: 'chore (automation): weekly DAO metrics update',
+        token,
+      });
+    }
+    return {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
@@ -142,6 +159,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,6 +168,8 @@ if ( {) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
@@ -191,7 +211,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 },
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

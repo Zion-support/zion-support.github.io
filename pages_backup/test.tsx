@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 <<<<<<< HEAD
 
@@ -231,6 +232,8 @@ export default function TestPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/test.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -304,6 +307,7 @@ origin/main
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/test.tsx
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -325,3 +329,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/test.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

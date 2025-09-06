@@ -33,6 +33,7 @@ interface IndustryProps {
   // Add props here as needed
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -60,6 +61,8 @@ export default function Industry({ }: IndustryProps) {
 =======
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Industry({ }: IndustryProps) {
   return (
     <div>;
@@ -68,6 +71,7 @@ export default function Industry({ }: IndustryProps) {
     </div>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -102,3 +106,6 @@ import React from 'react';
 interface IndustryProps {
   // Add props here as needed
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

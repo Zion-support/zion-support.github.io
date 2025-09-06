@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/auth/login.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +60,13 @@ import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../
 import { UserRole } from '../../../utils/messaging/types',;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/login.ts
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+main
+import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
+import { UserRole } from '../../../utils/messaging/types',;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { name, role } = req.body as { name: string, role: UserRole }
@@ -68,6 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   upsertUser(user)
   setUserCookie(res, user)
   res.status(200).json({ user })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/auth/login.ts
 <<<<<<< HEAD
 }
@@ -121,6 +130,10 @@ export default function handler(req, res) {
 };
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/login.ts
+=======
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../utils/user';
 import { UserRole } from '../../types/user';
@@ -135,9 +148,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 res.status(200).json({ user });
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/auth/login.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/login.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

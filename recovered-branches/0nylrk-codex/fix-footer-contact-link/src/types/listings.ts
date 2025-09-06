@@ -14,19 +14,24 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ListingCategory {
   id: string;
-  name: string,
+  name: string;
   description: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   icon: string;
 }
 
-}export interface ProductListing {
+}
+  description: string,
+  icon: string;
+
+export interface ProductListing {
   id: string;
-  title: string,
+  title: string;
   description: string;
 
   category: string,
   subcategory?: string, // Adding optional subcategory field;
+
 export interface ListingCategory {
 =======
 export interface ListingCategory {};
@@ -70,7 +75,7 @@ export interface ProductListing {
 export interface ProductListing {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string,
+  title: string;
   description: string;
   category: string;
   subcategory?: string; // Adding optional subcategory field;
@@ -80,6 +85,7 @@ export interface ProductListing {};
   author: {}
     name: string;
     id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
   title: string;
@@ -283,13 +289,49 @@ export interface ListingItem {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   image?: string,  review_count?: number;
+=======
+    avatarUrl?: string;
+    email?: string; // Added optional email property
+  };
+  images: string[];
+  createdAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  aiScore?: number; // Added aiScore as optional property
+  location?: string; // Adding location property to fix TypeScript errors
+  availability?: string; // Adding availability property to fix TypeScript errors
+}
+
+    avatar_url?: string,
+    email?: string, // Added optional email property;
+  }
+
+  images: string[];
+  created_at: string;
+  rating?: number;
+
+    avatar_url?: string,
+    email?: string, // Added optional email property;
+  }
+  images: string[];
+  created_at: string;
+  rating?: number;
+  review_count?: number;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   featured?: boolean,
   ai_score?: number, // Added ai_score as optional property;
   location?: string, // Adding location property to fix TypeScript errors;
   availability?: string, // Adding availability property to fix TypeScript errors;
+<<<<<<< HEAD
 =======
 export interface ListingItem {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+export interface ListingItem {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   title: string;
   category: string;
@@ -298,8 +340,10 @@ export interface ListingItem {};
   description?: string;
 }
 
+
 export interface ListingCategory {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -371,3 +415,7 @@ export type ListingView = 'grid' | 'list';
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export type ListingView = "grid" | "list";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

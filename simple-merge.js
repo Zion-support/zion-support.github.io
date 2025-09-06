@@ -2,11 +2,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+console.log('🚀 Starting simple merge process...');
+try {// Check git status;
+  console.log('📊 Checking git status...');
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  console.log('Git status:', status |'Clean working directory');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -167,6 +176,7 @@ try {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -184,11 +194,15 @@ try {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Resolve conflicts by accepting our version;
 
 
       for (const file of files) {;
         if (file.trim()) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,6 +213,9 @@ try {;
       const files = conflictFiles.trim().split('\n'),;
       const files = conflictFiles.trim().split('\n');
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       for (const file of files) {;
         if (file.trim()) {;
 
@@ -443,12 +460,15 @@ try {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       for (const file of files) {;
         if (file.trim()) {;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
 =======
           }"`
@@ -496,6 +516,13 @@ try {;
     }
   }
   // Push all changes;
+  console.log('📤 Pushing all changes to main...');
+  execSync('git push origin main');
+  console.log('🎉 All merge operations completed successfully!');
+  console.log('✅ All PRs have been merged into main branch');
+  console.log('✅ All merge conflicts have been resolved');
+  console.log('✅ Repository is now clean and up to date');
+} catch (error) {console.error('❌ Error during merge process:', error.message);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
@@ -592,6 +619,7 @@ try {;
 
   process.exit(1);
 }
+<<<<<<< HEAD
 '
   console.log ('📤 Pushing all changes to main...'),'
   exec_sync ('git push origin main'),'
@@ -626,6 +654,18 @@ try {;
 } catch (error) {;
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);}
+=======
+  console.log ('📤 Pushing all changes to main...'),
+  exec_sync ('git push origin main'),
+  console.log ('🎉 All merge operations completed successfully!'),
+  console.log ('✅ All PRs have been merged into main branch'),
+  console.log ('✅ All merge conflicts have been resolved'),
+  console.log ('✅ Repository is now clean and up to date');
+} catch (error) {
+  console.error ('❌ Error during merge process:', error.message),
+  process.exit (1);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   process.exit(1);
 }
 <<<<<<< HEAD

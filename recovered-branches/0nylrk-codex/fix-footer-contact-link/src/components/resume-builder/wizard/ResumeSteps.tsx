@@ -82,6 +82,7 @@ export const ResumeSteps = ({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,10 +91,15 @@ export const ResumeSteps = ({}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {step.label}
         </TabsTrigger>
       ))}
     </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -113,6 +119,9 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 ";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { StepProps } from "./types",;
 
 interface ResumeStepsProps {;
@@ -122,7 +131,11 @@ interface ResumeStepsProps {;
 }
 
 export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {;
+<<<<<<< HEAD
   return ("
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
       {steps && steps.map((step) => (;
         <TabsTrigger key={step && step.id} value={step && step.id}>;
@@ -131,6 +144,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
       ))}
     </TabsList>
   );
+<<<<<<< HEAD
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -140,10 +154,23 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
 };
 
 <<<<<<< HEAD
+=======
+};
+
+    </TabsList>;
+  );
+};
+
+  );
+};
+
+  steps,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   active_tab,
   on_change,
 }: ResumeStepsProps) =>: any {
   return (
+<<<<<<< HEAD
     <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb-8">;
 =======
 
@@ -168,6 +195,9 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
   return ("
     <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {steps.map ((step) => (
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
@@ -203,14 +233,17 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
   );
 }
 
-  )
+  );
 };
 
-  )
+  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

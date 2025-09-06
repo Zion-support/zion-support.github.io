@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD:pages/client/dashboard.tsx
 <<<<<<< HEAD
@@ -27,16 +28,22 @@ export default function ClientDashboard() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = null;
     mutate()
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const jobs = data.jobs as any[];
 =======
 
@@ -65,6 +72,7 @@ export default function ClientDashboard() { return null; }
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/dashboard.tsx
 <<<<<<< HEAD
 =======
@@ -104,6 +112,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
+=======
+body: JSON.stringify({ status: 'Closed' }),
+    });
+    mutate();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
   return ("
@@ -467,6 +481,7 @@ export default function ClientDashboard(req, res) {
   }
 }
               </div>
+<<<<<<< HEAD
               <div className="flex gap-2">
                 <Link href={`/client/jobs/${job.id}/applicants`}><a className="px-2 py-1 text-sm border rounded">View Applicants</Link></Link>
                 <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</Link></Link>
@@ -475,12 +490,32 @@ export default function ClientDashboard(req, res) {
             </div>
           </div>
               </div>
+=======
+<div className='flex gap-2'>
+                <Link href={`/client/jobs/${job.id}/applicants`}>
+                  <a className='px-2 py-1 text-sm border rounded'>
+                    View Applicants
+                  </a>
+                </Link>
+                <Link href={`/client/jobs/${job.id}/edit`}>
+                  <a className='px-2 py-1 text-sm border rounded'>Edit Job</a>
+                </Link>
+                <button
+                  className='px-2 py-1 text-sm border rounded'
+                  onClick={() => closeJob(job.id)}
+                >
+                  Close Job
+                </button>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           </div>
         ))}
       </div>
     </div>
 );
+<<<<<<< HEAD
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -555,3 +590,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

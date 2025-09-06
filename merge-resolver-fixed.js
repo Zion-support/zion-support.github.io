@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
@@ -211,6 +212,21 @@ function getAllFiles(dir, extensions) {;
   let files = [];
   try {;
     content = content.replace(/    
+=======
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Starting Merge Conflict Resolution');
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Remove merge conflict markers and keep HEAD version
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -400,6 +416,7 @@ for (const file of files) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Main execution;
@@ -407,11 +424,24 @@ for (const file of files) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function main() {;
+=======
+
+// Main execution
+async function main() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   console.log('🔍 Scanning for merge conflicts...');
-  const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
+  const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
   let fixedCount = 0;
+  
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+        if (fixMergeConflicts(file)) {;
+          fixedCount++;        }
+  let fixedCount = 0,;
   for (const file of files) {;
     try {;
+<<<<<<< HEAD
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('') |content.includes('
 <<<<<<< HEAD
@@ -481,6 +511,13 @@ async function main() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
+=======
+      const content = fs.readFileSync(file, 'utf8'),;
+      if (content.includes('') || content.includes('
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   let fixedCount = 0;
 <<<<<<< HEAD
   for (const file of files) {;
@@ -534,11 +571,15 @@ function fixMergeConflicts(filePath) {}
       const content = fs.readFileSync(file, 'utf8'),;
         if (fixMergeConflicts(file)) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (content.includes('        if (fixMergeConflicts(file)) {
 =======
 '
       if (content.includes('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        if (fixMergeConflicts(file)) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           fixedCount++;
         }
       }
@@ -550,6 +591,7 @@ function fixMergeConflicts(filePath) {}
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);'
   console.log('🎉 Merge conflict resolution completed!');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -590,6 +632,9 @@ main().catch(console.error),;main().catch(console.error);
 ;
 main().catch(console.error),;
 main().catch(console.error),;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 main().catch(console.error);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======

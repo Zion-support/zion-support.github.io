@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Stub admin auth utility - placeholder for missing functionality;
 export const requireAdminAuth = () => {;
   // Placeholder implementation;
@@ -21,6 +22,11 @@ export const isAdmin = () => {;
 =======
 import type { NextApiRequest } from 'next';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+import type { NextApiRequest } from 'next';
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface Session {
@@ -32,7 +38,10 @@ export interface Session {;
   userId: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
@@ -58,7 +67,15 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -70,9 +87,12 @@ export interface Session {};
 }
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Check for internal agent headers or IPs;
@@ -93,9 +113,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const isAdmin = () => {
   // Placeholder implementation
 =======
@@ -109,6 +134,7 @@ export const isAdmin = () => {};
   return true;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const isAdmin = () => {
@@ -116,6 +142,11 @@ export const isAdmin = () => {
   return true;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Admin authentication utilities
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -245,11 +276,17 @@ export function getAdminUser(id: string): AdminUser | null {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function getSessionFromReq (req: NextApiRequest): Session | null {
 =======
 
@@ -286,6 +323,7 @@ export const is_admin = () =>: any {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -295,11 +333,19 @@ export const is_admin = () =>: any {};
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
 =======
@@ -327,6 +373,13 @@ export const isAdmin = () => {
   // Placeholder implementation;
   return true;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export const isAdmin = () => {
+  // Placeholder implementation;
+  return true;
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 };
 
 };
@@ -334,6 +387,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -349,6 +403,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -356,6 +412,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 export const isAdmin = () => {};
@@ -377,3 +434,7 @@ export const isAdmin = () => {};
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

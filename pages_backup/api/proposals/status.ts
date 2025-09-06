@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/status.ts
 <<<<<<< HEAD:pages/api-disabled/api/proposals/status.ts
 <<<<<<< HEAD:pages/api/proposals/status.ts
@@ -31,6 +32,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/status.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { updateProposalMeta } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,6 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!id || !status) return res.status(400).json({ error: 'id and status are required' });
     const updated = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
     res.status(200).json({ meta: updated })
   } catch (error: any) {
 <<<<<<< HEAD
@@ -51,6 +55,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     res.status(200).json({ meta: updated })
   } catch (error: any) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
@@ -197,6 +203,7 @@ function handler() {
 
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/status.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -220,16 +227,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ========
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/status.ts
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const { id, status } = req.body || {},
     if (!id || !status) return res.status(400).json({ error: 'id and status are required' }),
     const updated = updateProposalMeta(id, (m) => ({ ...m, status })),
     res.status(200).json({ meta: updated })
   } catch (error: any) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/status.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/status.ts
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { updateProposalMeta } from '../../../utils/data/proposals',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -243,4 +256,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
 main
 
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/status.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

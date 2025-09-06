@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 <<<<<<< HEAD
 
@@ -38,11 +39,14 @@
       title
       targetInstitution
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       target_institution
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
       type
       regionalScope
       budgetOrResolution
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
       supportingMultiverses
       contentMarkdown
@@ -106,6 +110,9 @@ export default async function handler(
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       language = 'en'
 =======
       supportingMultiverses = [],
@@ -117,9 +124,12 @@ export default async function handler(
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 <<<<<<< HEAD
+<<<<<<< HEAD
     const userPrompt =
       promptAssist ||
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const userPrompt = promptAssist ||
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from '[^']*';
@@ -149,17 +159,22 @@ language = 'en',
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt =
       promptAssist ||
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +203,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ]
       temperature: 0.3
         { role: 'system', content: SYSTEM_PROMPT },
@@ -201,6 +218,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       type
       regional_scope
       budgetOrResolution
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -213,6 +231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       supportingMultiverses
       contentMarkdown
       language
@@ -243,6 +263,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,11 +279,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       supporting_multiverses
       content_markdown
       language
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });
@@ -284,6 +310,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .status(500)
       .json({ error: error?.message || "Failed to generate proposal" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/generate.ts
 <<<<<<< HEAD
 }
@@ -328,3 +355,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/generate.ts
+=======
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

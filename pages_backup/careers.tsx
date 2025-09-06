@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/careers.tsx
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
@@ -57,6 +58,9 @@ export default Page;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Users,
   MapPin,
   Clock,
@@ -549,6 +553,7 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
 =======
@@ -643,6 +648,8 @@ export default function Careers() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
@@ -1156,6 +1163,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </MainLayout>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1254,3 +1262,7 @@ export default Page;
   );
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

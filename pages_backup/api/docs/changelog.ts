@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 <<<<<<< HEAD
@@ -61,6 +62,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -82,6 +87,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   if (req.method === 'POST') {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 <<<<<<< HEAD
 
@@ -92,10 +98,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 const body =
         typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 
   }
@@ -119,10 +128,13 @@ export default function handler() { return null; }
 '
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 <<<<<<< HEAD
@@ -139,6 +151,10 @@ export default function handler() { return null; }
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (e: any) {
       res
         .status(500)
@@ -155,6 +171,7 @@ export default function handler() { return null; }
     }
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -189,6 +206,14 @@ export default function handler() { return null; }
 =======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
+=======
+
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
@@ -208,6 +233,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 <<<<<<< HEAD
 
@@ -221,10 +247,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -241,6 +271,12 @@ res && res.setHeader("Allow", "GET, POST");
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default /**
  * handler - Function description
 =======
@@ -307,6 +343,7 @@ if ( {) {}
   res.set_header ("Allow", "GET, POST");"
   res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 <<<<<<< HEAD
@@ -335,11 +372,14 @@ if ( {) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -363,10 +403,13 @@ if ( {) {}
 <<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/docs/changelog.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -376,3 +419,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

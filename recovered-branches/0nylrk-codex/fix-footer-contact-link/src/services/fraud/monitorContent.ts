@@ -6,6 +6,7 @@ export const monitorContent = async (;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +40,9 @@ export const monitorContent = async (;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -51,10 +55,12 @@ export const monitorContent = async (;
   
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-        // If contains highly suspicious phrases, mark as dangerous
+    
+    // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,6 +96,44 @@ export const monitorContent = async (;
       r.includes('payment') |
       r.includes('external') |
       r.includes('bypass')
+=======
+      r && r.includes('bypass')
+
+    )) {
+      severity = 'dangerous'
+
+
+
+// Content monitoring functionality;
+import { FraudFlag, FraudSeverity } from '@/types/fraud',;
+import { analyzeContent } from './analyzeContent',;
+import { flagContent } from './flagContent',;
+/**;
+ * Create a monitoring system helper to easily monitor any content;
+ */;
+export const monitorContent = async (;
+  userId: string,;
+  userEmail: string | undefined,;
+  contentType: FraudFlag['content_type'],;
+  contentId: string,;
+  content: string;
+): Promise<void> => {;
+  const analysis = analyzeContent(content),;
+  if (analysis.isSuspicious) {;
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',;
+    // If contains highly suspicious phrases, mark as dangerous;
+    if (analysis.reasons.some(r =>;
+      r.includes('payment') ||;
+      r.includes('external') ||;
+      r.includes('bypass');
+    )) {;
+      severity = 'dangerous';
+
+
+
+    }
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )) {
       severity = 'dangerous'
     }
@@ -187,6 +231,7 @@ export const monitorContent = async (;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +273,9 @@ export const monitorContent = async (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -272,10 +320,14 @@ if (||) {}
       analysis.reasons.join ();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       undefined // IP address would be added in a real implementation);
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -286,6 +338,15 @@ if (||) {}
 if ( {) {}
   $2;
 }'
+=======
+;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
     }
@@ -295,8 +356,11 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 };
     }
@@ -305,6 +369,7 @@ if ( {) {}
     }
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -321,3 +386,5 @@ if ( {) {}
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

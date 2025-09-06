@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 
@@ -238,6 +239,8 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -528,12 +531,16 @@ staggerChildren: 0.1,
     },
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -545,6 +552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
       transition: {
+<<<<<<< HEAD
         duration: 0.5
 =======
 
@@ -775,18 +783,24 @@ export default function EnhancedServicesShowcase2025(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 duration: 0.5,
       },
     },
   };
 
   
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     >
       <div className="min-h-screen">
         <Head>
@@ -857,10 +871,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             >
+<<<<<<< HEAD
 
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+=======
+<div className='flex items-center justify-center mb-6'>
+                <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
+                <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   2025 Innovation Showcase
                 </h1>
                 <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
@@ -1063,6 +1084,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;'
                   <div className='text-3xl font-bold text-pink-400'>;
                     {spaceCount + cybersecurityCount}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 
@@ -1095,6 +1117,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>
                   <div className='text-gray-400'>Specialized</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1108,6 +1132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
@@ -1147,6 +1172,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Search and Filters */}
 <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -1155,16 +1182,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Search */}
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1198,6 +1230,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1213,6 +1247,7 @@ onChange={e => setSelectedCategory(e.target.value)}
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1231,6 +1266,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
 
                 </select>;
@@ -1368,12 +1406,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
+<<<<<<< HEAD
 
 
 =======
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 onChange={e => setSelectedPriceRange(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
@@ -1381,12 +1422,16 @@ onChange={e => setSelectedPriceRange(e.target.value)}
                     <option key={range.id} value={range.id}>
                       {range.name}
                     </option>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
 
                 </select>;
@@ -1395,6 +1440,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Sort Options */}
                 <select;
                   value={sortBy}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 
@@ -1409,6 +1455,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 onChange={e => setSortBy(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
@@ -1604,6 +1652,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
 =======
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -1668,6 +1717,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
                           <Star className='w-4 h-4 fill-current' />
                           <span>Popular</span>
@@ -1801,6 +1852,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span>{service.customers}</span>
                       </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1874,6 +1926,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     {/* Key Features */}
 <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -1912,6 +1966,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span>{service.setupTime}</span>
                       </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1946,6 +2001,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+                    {/* Action Buttons */}
+<div className='flex gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -1964,6 +2024,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </a>;
 <<<<<<< HEAD:pages_backup/enhanced-services-showcase-2025.tsx
                       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1986,6 +2047,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         href='/contact'
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'
                       >
@@ -1999,12 +2062,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                       <div className='text-xs text-gray-300 space-y-1'>
                         <div>📱 {service.contactInfo.mobile}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -2059,6 +2126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div;
                 initial={{ opacity: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
                 animate={{ opacity: 1 }}
@@ -2244,6 +2312,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 animate={{ opacity: 1 }}
                 className='text-center py-16'
               >
@@ -2267,12 +2337,16 @@ animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Ready to Transform Your Business?
               </h2>"
               <p className="text-xl text-gray-300 mb-8">
@@ -2284,6 +2358,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center justify-center space-x-3'>
                   <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
                     <Target className='w-6 h-6 text-cyan-400' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {/* Contact Information */  } catch (error) {
@@ -2395,6 +2470,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+                  </div>
+                  <span className="text-lg text-white">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                    <Award className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <span className="text-lg text-white">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <Lightbulb className="w-6 h-6 text-green-400" />
+                  </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709
                   </span>
@@ -2402,12 +2492,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -2415,6 +2509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Rocket className='ml-2 w-6 h-6' />;
                 </a>;
                 <a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
@@ -2426,18 +2521,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   href='/pricing'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'
                 >
                   <span className='relative'>View Pricing</span>
                   <DollarSign className='ml-2 w-6 h-6' />
                 </a>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </motion.div>
           </div>
@@ -2445,6 +2546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </EnhancedFuturisticBackground>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enhanced-services-showcase-2025.tsx
 <<<<<<< HEAD
 =======
@@ -2753,3 +2855,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enhanced-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

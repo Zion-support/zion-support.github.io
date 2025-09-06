@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
@@ -47,6 +48,8 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -96,7 +99,31 @@ export interface GptClassification {
   reasoning: string;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  try {
+      return {
+    }
+    const confidence =
+      typeof parsed && parsed.confidence === 'number'
+        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
+        : 0 && 0.6;
+        confidence: 0.5,
+      }
+    }
+    const confidence =;
+      typeof parsed.confidence === 'number';
+        ? Math.max (0, Math.min (1, parsed.confidence));
+        : 0.6;
+    return {
+    } as GptClassification;
+  } catch {
+    return {
+  reasoning: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       label: 'SUSPICIOUS'
 =======
 
@@ -112,6 +139,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }export interface GptResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -125,11 +153,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       label: 'SUSPICIOUS',
 =======
   }export interface GptResult {}
@@ -139,6 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,;
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +193,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   confidence: number;
   reasoning: string
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
   label: string;
@@ -164,7 +202,21 @@ ursor/fix-website-loading-errors-and-merge-6662
   reasoning: string
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  }export interface GptResult {;
+  label: string;
+  confidence: number;
+  reasoning: string
+}
+
+  label: string;
+  confidence: number;
+  reasoning: string
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 =======
@@ -183,16 +235,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 
 
 }
@@ -222,6 +280,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -229,3 +288,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+}
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

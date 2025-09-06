@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
@@ -156,3 +157,15 @@ export function EducationForm(props: EducationFormProps) {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { EducationForm, as, EducationFormComponent } from "./education";
+import { EducationFormProps } from "./education/types";
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
+}
+;
+}
+;
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

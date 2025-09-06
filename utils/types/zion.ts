@@ -29,6 +29,7 @@ export interface Branding {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -45,10 +46,16 @@ export interface Branding {;
 export interface Branding {;
 
 
+=======
+
+export interface Branding {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -58,12 +65,21 @@ export interface Branding {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -78,6 +94,8 @@ export interface DeployModules {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -90,6 +108,7 @@ export interface DeployModules {;
   zionBrain: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Bonus;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +117,9 @@ export interface DeployModules {;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+  // Bonus;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -108,6 +130,7 @@ export interface DeployModules {;
   grantPortal?: boolean,;
   trailer?: boolean,;
   bookStore?: boolean;
+<<<<<<< HEAD
   } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -136,6 +159,14 @@ export interface DeployModules {;
 }
 <<<<<<< HEAD
 =======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
@@ -145,17 +176,28 @@ export interface DeployInput {instanceName: string;
   modules: DeployModules;
   requestedRoutes?: string[];
 }
+<<<<<<< HEAD
 export interface DeployLogEntry {timestamp: string;"
   level: "info" | "warn" | "error";
   action: string;
   details?: Record<string unknown> | string;
 }"
+=======
+export interface DeployLogEntry {timestamp: string;
+  level: "info" | "warn" | "error";
+  action: string;
+  details?: Record<string unknown> | string;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
@@ -168,6 +210,7 @@ export interface DeployResult {success: boolean;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -177,6 +220,9 @@ export interface DeployResult {success: boolean;
 =======
   // Bonus;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export interface DeployInput {;
   instanceName: string;
@@ -190,6 +236,7 @@ export interface DeployInput {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   governanceMode: GovernanceMode;
@@ -224,6 +271,8 @@ export interface GeneratedAsset {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -257,6 +306,7 @@ export interface GeneratedAsset {;"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -264,10 +314,13 @@ export interface GeneratedAsset {;"
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export interface DeployResult {;
   success: boolean;
+<<<<<<< HEAD
 
 
 
@@ -288,12 +341,18 @@ export interface DeployResult {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+export interface DeployResult {;
+  success: boolean;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,11 +382,27 @@ export interface Branding {}
 
   } catch (error) {"
     console.error("Error:", error);"
+=======
+
+
+
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
+export interface Branding {
+  logo_url?: string,
+  primary_color?: string,
+  secondary_color?: string,
+  subdomain?: string;
+
+
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
 
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -335,6 +410,9 @@ export interface Branding {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface DeployModules {
 =======
 export interface DeployModules {}
@@ -393,6 +471,7 @@ export interface AccessControlConfig {";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 <<<<<<< HEAD
@@ -427,6 +506,23 @@ export interface AccessControlConfig {;
   } catch (error) {"
     console.error("Error:", error);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  adminKeyConfigured: boolean;
+
+}
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  adminKeyConfigured: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -435,10 +531,14 @@ export interface AccessControlConfig {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
   adminKeyConfigured: boolean;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -452,3 +552,5 @@ export interface AccessControlConfig {;
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

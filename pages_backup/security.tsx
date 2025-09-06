@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/security.tsx
 <<<<<<< HEAD:pages/security.tsx
 <<<<<<< HEAD
@@ -38,6 +39,9 @@ export default Page;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/automation-improvements-final
 
 =======
@@ -56,7 +60,10 @@ const securityStats = [
 export default function SecurityPage() {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { motion } from 'framer-motion';
 import {
@@ -151,12 +158,16 @@ export default function Security() {
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-6'>
           <div className='max-w-4xl mx-auto text-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/security.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -428,6 +439,7 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           </div>
 <<<<<<< HEAD:pages_backup/security.tsx
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/security.tsx
 <<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -840,6 +852,8 @@ function SecurityPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         {/* Security Overview */}
 <section className='py-20 px-6'>
@@ -1450,6 +1464,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD:pages_backup/security.tsx
     </Layout>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages/security.tsx
 =======
@@ -1601,3 +1616,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
+=======
+
+
+    </>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

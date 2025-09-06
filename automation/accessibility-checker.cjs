@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -506,11 +509,24 @@ if (!fs.existsSync(reportsDir)) {
 =======
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+#!/usr/bin/env node
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -635,6 +651,7 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -701,6 +718,8 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/main
 
 origin/main
@@ -729,6 +748,7 @@ main
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -755,6 +775,10 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -769,9 +793,12 @@ console.log('♿ Accessibility Checker Starting...\n')
 =======
 =======
     "status"
+<<<<<<< HEAD
 module.exports = AccessibilityChecker;
 ursor/automate-test-improve-and-merge-code-59d5
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 module.exports = AccessibilityChecker;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -804,6 +831,7 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = AccessibilityChecker;
@@ -826,6 +854,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
     "status"
@@ -837,3 +866,7 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

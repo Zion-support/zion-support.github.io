@@ -93,6 +93,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {}
   const [featuresInput, setFeaturesInput] = useState('');'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
   const [additionalNotes, setAdditionalNotes] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +140,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
   >('professional');
@@ -151,6 +154,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [error, setError] = useState<string | null>(null),'
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 
@@ -182,6 +186,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 .map(f => f.trim())
       .filter(Boolean);
   }, [featuresInput]);
@@ -222,6 +228,7 @@ setAccepted(true);
 
   function handleCopy() {
     if (!generated) return;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
     navigator.clipboard.writeText(generated).catch(() => {});
@@ -342,6 +349,8 @@ setAccepted(true);
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 navigator.clipboard.writeText(generated).catch(() => {});
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
@@ -406,6 +415,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500''
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 =======
@@ -539,6 +549,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onChange={e => setTitle(e.target.value)}
             required
           />
@@ -547,17 +559,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium mb-1'>
             Target Audience
           </label>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 =======
@@ -568,6 +585,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onChange={e => setTargetAudience(e.target.value)}
             required
           />
@@ -576,12 +595,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium mb-1'>
             Key Features (one per line)
           </label>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <textarea
 =======
 
@@ -604,6 +627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
@@ -626,6 +650,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onChange={e => setFeaturesInput(e.target.value)}
             required
           />
@@ -648,12 +674,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Additional Notes (optional)
           </label>
           <textarea
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
 =======
 '
@@ -786,6 +816,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >'
             {loading ? 'Generating…' : 'Generate Description'}
           </button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
@@ -821,12 +852,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {error && <span className='text-red-600 text-sm'>{error}</span>}
 origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </form>
 
       {generated && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -868,6 +902,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mt-8 space-y-3'>
           <div className='flex items-center justify-between'>
             <h2 className='text-xl font-semibold'>Generated Description</h2>
@@ -875,17 +911,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={handleCopy}
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 Copy;
               </button>
 <<<<<<< HEAD:pages_backup/services/description-generator.tsx
               <button
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 =======
@@ -910,10 +951,17 @@ className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+                onClick={handleAccept}
+className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Accept
               </button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -976,12 +1024,18 @@ className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gr
 className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+          <textarea
+className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
           />
 
 <<<<<<< HEAD:pages_backup/services/description-generator.tsx
           {accepted && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 =======
@@ -1003,11 +1057,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
+              Accepted. You can copy and paste this into your CMS.
+            </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           )}
         </div>
       )}
 <<<<<<< HEAD:pages_backup/services/description-generator.tsx
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1131,3 +1192,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

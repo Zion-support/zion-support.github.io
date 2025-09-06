@@ -100,7 +100,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 "const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {" const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) |"";"""";"""
+
 "const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {" const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) |"";"""";"""
+<<<<<<< HEAD
 "const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {" const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) |"";"""";"""
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -128,3 +130,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025.filter (service => {" const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |"";"""";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

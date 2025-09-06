@@ -24,6 +24,7 @@ import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -43,6 +44,13 @@ import React from 'react';import {useState} from "react";
 =======
 import React from 'react';import {useState} from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+import React from 'react';
+import {useState} from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -50,6 +58,7 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
@@ -96,6 +105,29 @@ import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { use
 =======
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { useState } from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
+
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+
+import { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { GradientHeading } from '@/components / GradientHeading';
+import { ListingScoreCard } from '@/components / ListingScoreCard';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
+// Example listing type;
+// Example listing type
+import { useState } from "react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -190,6 +222,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
@@ -200,10 +233,13 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Example listing type;
 interface Listing {;
   id: string,;
-  title: string,,
+  title: string,;
   description: string,;
   category: string,;
 '
@@ -220,6 +256,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Example listing type
 <<<<<<< HEAD
@@ -231,11 +268,16 @@ interface Listing {
 // Example listing type;
 interface Listing {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Example listing type
+interface Listing {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,
   title: string,
   description: string,
   category: string,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -245,6 +287,9 @@ interface Listing {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -254,6 +299,7 @@ interface Listing {}
   rating?: number,
   reviewCount?: number,
   price?: number | null,
+<<<<<<< HEAD
   createdAt: string;
 "
 import { useState } from "react",;"
@@ -264,6 +310,18 @@ import { ListingScoreCard } from "@/components/ListingScoreCard",;"
 import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;"
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;"
+=======
+  createdAt: string
+
+import { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
 // Example listing type;
 interface Listing {;
@@ -283,9 +341,14 @@ interface Listing {;
   createdAt: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 // Example listing type}
+=======
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -304,7 +367,7 @@ interface Listing {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface CategoryListingPageProps {;
-  title: string,,
+  title: string,;
   description: string,;
   listings: Listing[],;
   sortOptions?: { label: string, value: string }[],;
@@ -312,10 +375,14 @@ interface CategoryListingPageProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Header />"
@@ -378,8 +445,12 @@ export function CategoryListingPage() { return null; }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+
+
+
               {description}
 
+<<<<<<< HEAD
 
 
           {/* Filters and Search */}"
@@ -432,12 +503,36 @@ export function CategoryListingPage() { return null; }
                 </SelectTrigger>"
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                   {sortOptions.map((option) => ("
+=======
+            </p>;
+          </div>;
+
+
+          {/* Filters and Search */}
+          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+              <div className="relative">;
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+                <Input
+                  type="text"
+                  placeholder="Search listings..."
+                  value={searchQuery}
+                    ) : null}
+                    <span>
+                      {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {sortOptions.map((option) => (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>"
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"
                   <div className="flex items-center">"
@@ -449,6 +544,19 @@ export function CategoryListingPage() { return null; }
                 </SelectTrigger>"
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                   {filterOptions.map((option) => ("
+=======
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  <div className="flex items-center">
+                    <Filter className="mr-2 h-4 w-4" />
+                    <span>
+                      {filterOptions.find(option => option.value === selectedFilter)?.label |'Filter'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {filterOptions.map((option) => (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
                     </SelectItem>
@@ -457,6 +565,7 @@ export function CategoryListingPage() { return null; }
               </Select>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Results Count */}"
           <div className="mb-6">"
             <p className="text-zion-slate-light">
@@ -487,11 +596,44 @@ export function CategoryListingPage() { return null; }
                 </SelectTrigger>;"
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
 
+=======
+          {/* Results Count */}
+          <div className="mb-6">
+            <p className="text-zion-slate-light">
+              Showing {processedListings.length} results
+              {searchQuery && ` for "${searchQuery}"`}
+            </p>
+          </div>
+
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <div className="flex items-center">;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className="mr-2 h-4 w-4" />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort)?.label || 'Sort By'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                  {sortOptions && sortOptions.map((option) => (;
+                    <SelectItem key={option && option.value} value={option && option.value} className="text-white">;
+                      {option && option.label}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </SelectItem>;
                   ))}
                 </SelectContent>;
               </Select>;
 
+<<<<<<< HEAD
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>;"
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;"
                   <div className="flex items-center">;"
@@ -518,12 +660,31 @@ export function CategoryListingPage() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <div className="flex items-center">;
+                    <Filter className="mr-2 h-4 w-4" />;
+                    <span>;
+                      {filterOptions && filterOptions.find(option => option && option.value === selectedFilter)?.label || 'Filter'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                  {filterOptions && filterOptions.map((option) => (;
+                    <SelectItem key={option && option.value} value={option && option.value} className="text-white">;
+                      {option && option.label}
+                    </SelectItem>;
+                  ))}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -546,10 +707,17 @@ export function CategoryListingPage() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Listings Grid */}
           {processedListings.length > 0 ? ("
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -583,6 +751,15 @@ export function CategoryListingPage() { return null; }
               {searchQuery && ` for "${searchQuery}"`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                <ListingScoreCard
+;
+          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>;
           </div>;
 ;
@@ -592,6 +769,8 @@ export function CategoryListingPage() { return null; }
               {processedListings.map((listing) => (;
                 <ListingScoreCard ;
                   key={listing.id}                  title={listing.title}
+<<<<<<< HEAD
+=======
                   description={listing.description}
                   category={listing.subcategory || listing.category}
                   image={listing.image}
@@ -600,6 +779,18 @@ export function CategoryListingPage() { return null; }
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+                  key={listing.id}
+                  title={listing.title}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                  description={listing.description}
+                  category={listing.subcategory || listing.category}
+                  image={listing.image}
+                  tags={listing.tags}
+                  author={listing.author}
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -680,6 +871,9 @@ export function CategoryListingPage() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>;
           </div>;
 
@@ -705,6 +899,7 @@ export function CategoryListingPage() { return null; }
                   setSearchQuery(""),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                   setSelectedFilter(filterOptions[0].value)
@@ -721,10 +916,20 @@ export function CategoryListingPage() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                  setSelectedFilter(filterOptions[0].value)
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
+                }}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </div>
@@ -737,21 +942,34 @@ export function CategoryListingPage() { return null; }
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            </div>
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           ) : (;
             <div className="text-center py-20">;
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Button
                 variant="outline" 
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
 =======
+=======
+                }}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   reviewCount={listing.reviewCount}
                 />;
               ))}
@@ -773,16 +991,22 @@ export function CategoryListingPage() { return null; }
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
                 }}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                 }}
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+                }}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -831,6 +1055,17 @@ export function CategoryListingPage() { return null; }
 =======
             </div>          )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+                }}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>;
+          )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </div>;
       <Footer />;
@@ -842,9 +1077,9 @@ export function CategoryListingPage() { return null; }
                 />))}
 <<<<<<< HEAD
             </div>) : (
-            <div className="text - center py-20">;
-              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
-              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
+            <div className="text - center py - 20">;
+              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
+              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
               <Button;
 =======
             </div>) : ("
@@ -859,7 +1094,11 @@ export function CategoryListingPage() { return null; }
                   setSelectedFilter (filter_options[0].value);
                 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
+=======
+                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >;
                 Clear all filters;
               </Button>;
@@ -870,8 +1109,11 @@ export function CategoryListingPage() { return null; }
     </>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),; //Example listing type interface Listing {
   id: string;
 title: string;
@@ -1017,6 +1259,7 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
       <Footer />
     </>
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1032,3 +1275,6 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
 
 }'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

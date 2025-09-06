@@ -33,6 +33,7 @@ export interface UserDetails {};
   company_id?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,6 +44,9 @@ export interface UserDetails {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserDetails {
 =======
 
@@ -77,10 +81,15 @@ export interface UserProfile {;
   permissions?: string[];
   company_id?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   bio?: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  bio?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   created_at?: string;
   updated_at?: string;
 }
@@ -104,15 +113,26 @@ export interface UserProfile {;
   permissions?: string[],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   company_id?: string;
 
+=======
+  company_id?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
+<<<<<<< HEAD
   updatedAt?: string;
 }
 export interface UserProfile {};
+=======
+  updatedAt?: string
+}
+export interface UserProfile {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserProfile {;
   id?: string;
   displayName?: string;
@@ -129,14 +149,24 @@ export interface UserProfile {;
 
   permissions?: string[]
 
+<<<<<<< HEAD
   companyId?: string;
 }
 // Update AuthContextType definition to match implementation;
+=======
+  companyId?: string
+}
+// Update AuthContextType definition to match implementation
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
+<<<<<<< HEAD
   isAuthenticated: boolean;
+=======
+  isAuthenticated: boolean
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>
@@ -150,6 +180,7 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,6 +198,9 @@ export interface AuthContextType {;
 =======
   company_id?: string;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string,;
@@ -204,12 +238,15 @@ export interface UserProfile {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 // Update AuthContextType definition to match implementation;
@@ -230,9 +267,14 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {};
+=======
+// Update AuthContextType definition to match implementation;
+export interface AuthContextType {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   user: UserDetails | null;
   isLoading: boolean;
   isAuthenticated: boolean;
@@ -261,6 +303,7 @@ export interface AuthContextType {};
   ) => Promise<{ error: any }>;
 }
 
+<<<<<<< HEAD
 
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -287,6 +330,12 @@ export interface UserDetails {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface UserDetails {;
+
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserDetails {;
 
 }
@@ -356,6 +405,7 @@ export interface AuthContextType {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -369,3 +419,5 @@ export interface AuthContextType {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

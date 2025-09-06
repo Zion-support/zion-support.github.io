@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -74,12 +75,36 @@ export function getAllProjects(): Project[] {  return projects;
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Project,
   Milestone,
   MilestoneStatus,
   isMilestoneStatus
 main
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+  deadline: string;
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
+
+
+  isMilestoneStatus,;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -126,11 +151,15 @@ export interface Project {};
     authorId: string;
     createdAtIso: string;
   }>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   createdAt: string;
   updatedAt: string;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   isMilestoneStatus;
@@ -141,6 +170,70 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface CreateProjectPayload {
+  title: string;
+  description: string;
+  budget: number;
+  deadline: string;
+  clientId: string;
+}
+
+export interface UpdateProjectPayload {
+  title?: string;
+  description?: string;
+  status?: Project['status'];
+  budget?: number;
+  deadline?: string;
+}
+
+export async function createProject(payload: CreateProjectPayload): Promise<Project> {
+  const res = await fetch('/api/projects', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const res = await fetch('/api/projects', {
+    method: 'GET',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateProject(projectId: string, payload: UpdateProjectPayload): Promise<Project> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function deleteProject(projectId: string): Promise<void> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface Milestone {
 =======
 
@@ -157,6 +250,7 @@ export interface Milestone {};
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -166,6 +260,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export function getAllProjects(): Project[] {
 =======
@@ -185,17 +284,25 @@ export function getAllProjects(): Project[] {;
 
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updatedAt: new Date().toISOString()
 =======
 
@@ -212,12 +319,18 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
 }
 <<<<<<< HEAD
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -236,12 +349,17 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const project = projects.find(p => p.id === id);
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!project) return null;
@@ -257,25 +375,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======  project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
+<<<<<<< HEAD
 
     updatedAt: new Date().toISOString();
 
@@ -289,6 +419,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -306,6 +437,14 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -313,6 +452,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project && project.milestones.push(newMilestone);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,6 +463,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return newMilestone;
 }
 
@@ -335,11 +481,17 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   project.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!milestone) return null,
@@ -347,6 +499,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,6 +510,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return milestone;
 }
 
@@ -369,11 +528,17 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (index === -1) return false,
@@ -381,6 +546,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   projectMembers.push(member);
@@ -554,9 +720,14 @@ export function getProjectTimeline(projectId: string): Array<{
 }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock storage;
 const projects: Project[] = [];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -666,6 +837,7 @@ export function addMilestone(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export function updateMilestone(;
   project: Project;
@@ -707,6 +879,8 @@ export function updateMilestone(;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -820,10 +994,17 @@ export function updateMilestone(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
 
 
+<<<<<<< HEAD
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

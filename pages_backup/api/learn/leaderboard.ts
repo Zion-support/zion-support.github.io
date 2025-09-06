@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/leaderboard.ts
 <<<<<<< HEAD
 =======
@@ -9,11 +10,16 @@ import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/leaderboard.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -26,6 +32,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
     const entries = Object.values(users as any).map((u: any) => ({
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/leaderboard.ts
 <<<<<<< HEAD
   };
@@ -39,11 +46,16 @@ import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 const users_path = path.join (process.cwd (), 'datalearnusers.json')
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/leaderboard.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default /**
  * handler - Function description
@@ -81,10 +93,16 @@ userId: u.userId,
     res.status(200).json({ leaderboard: top })
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/leaderboard.ts
 =======
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
 };
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/leaderboard.ts
+=======
+    res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 

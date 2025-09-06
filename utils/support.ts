@@ -20,7 +20,7 @@ export type IntentResult = {;
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
-  getArticleById: (id: string) => null
+  getArticleById: (id: string) => null;
 };
 
 export const logSupportEventToOperator = (event: any) => {};
@@ -28,6 +28,10 @@ export const logSupportEventToOperator = (event: any) => {};
   return null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface IntentMatch {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -156,10 +160,10 @@ export function searchArticles(
   get_articles: () => [],
 }
 }
-}export const logSupportEventToOperator = (event: any) => {
+}
+export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ContractTemplate {
@@ -98,14 +99,15 @@ export interface ContractTemplate {};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ContractTemplate {
-
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export interface ContractTemplate {;
-export interface ContractTemplate {  id: string;
+  id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
+<<<<<<< HEAD
 =======
 export interface ContractTemplate {  id: string;
   title: string;
@@ -134,6 +136,8 @@ export interface ContractTemplate {;
   title: string,;
   template_data: ContractFormValues,;
   is_default: boolean;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   created_at: string;
   updated_at: string;
 <<<<<<< HEAD
@@ -154,7 +158,7 @@ export interface ContractTemplate {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
-}}
+}
 ;
 =======
 }}

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,6 +16,9 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {}
     message: "Description must be at least 10 characters."});
@@ -36,6 +40,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -53,23 +58,46 @@ export const job_schema = z.object ({}
     message: "Job type must be at least 3 characters."});
   salary_range: z.string ().optional (),
   description: z.string ().min (10, {"
+=======
+import { z } from './zod';
+export const job_schema = z.object ({
+  title: z.string ().min (3, {
+    message: "Title must be at least 3 characters."});
+  company: z.string ().min (3, {
+    message: "Company name must be at least 3 characters."});
+  location: z.string ().min (3, {
+    message: "Location must be at least 3 characters."});
+  job_type: z.string ().min (3, {
+    message: "Job type must be at least 3 characters."});
+  salary_range: z.string ().optional (),
+  description: z.string ().min (10, {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: "Description must be at least 10 characters."});
   responsibilities: z.string ().optional ();
   qualifications: z.string ().optional ();
   benefits: z.string ().optional ();
   application_instructions: z.string ().optional (),
+<<<<<<< HEAD
   contact_email: z.string ().email ({"
+=======
+  contact_email: z.string ().email ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: "Please enter a valid email address."}).optional ();
   published_date: z.string ().optional ();
   expiry_date: z.string ().optional ();
   is_remote: z.boolean ().default (false).optional ();
   category: z.string ().optional ();
   status: z.string ().optional (),
+<<<<<<< HEAD
   external_apply_link: z.string ().url ({"
+=======
+  external_apply_link: z.string ().url ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: "Please enter a valid URL."}).optional ()});
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,8 +135,14 @@ import { z } from "zod",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
 import {z} from "zod";
-import { z } from "zod",import {z} from "zod";
+import { z } from "zod",
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import {z} from "zod";
 export const jobSchema = z.object({
   title: z.string().min(3, {;
     message: "Title must be at least 3 characters."});
@@ -117,6 +151,7 @@ export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { z } from "zod",
@@ -190,18 +225,38 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
     message: "Job type must be at least 3 characters."}),
   salary_range: z.string().optional(),
   description: z.string().min(10, {"
+=======
+import { z } from "zod",
+export const jobSchema = z.object({
+  title: z.string().min(3, {
+    message: "Title must be at least 3 characters."}),
+  company: z.string().min(3, {
+    message: "Company name must be at least 3 characters."}),
+  location: z.string().min(3, {
+    message: "Location must be at least 3 characters."}),
+  job_type: z.string().min(3, {
+
+    message: "Job type must be at least 3 characters."}),
+  salary_range: z.string().optional(),
+  description: z.string().min(10, {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: "Description must be at least 10 characters."}),
   responsibilities: z.string().optional(),
   qualifications: z.string().optional(),
   benefits: z.string().optional(),
   application_instructions: z.string().optional(),
+<<<<<<< HEAD
   contact_email: z.string().email({"
+=======
+  contact_email: z.string().email({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: "Please enter a valid email address."}).optional(),
   published_date: z.string().optional(),
   expiry_date: z.string().optional(),
   is_remote: z.boolean().default(false).optional(),
   category: z.string().optional(),
   status: z.string().optional(),
+<<<<<<< HEAD
   external_apply_link: z.string().url({"
     message: "Please enter a valid URL."}).optional()}),
 
@@ -230,6 +285,14 @@ import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
 ;
 export type JobSchemaType = z.infer<typeof jobSchema>,";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  external_apply_link: z.string().url({
+    message: "Please enter a valid URL."}).optional()}),
+
+
+export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { z } from "zod",;
 export const jobSchema = z.object({;
   title: z.string().min(3, {;"
@@ -241,7 +304,11 @@ export const jobSchema = z.object({;
   job_type: z.string().min(3, {;"
     message: "Job type must be at least 3 characters."}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   salary_range: z.string().optional(),,
+=======
+  salary_range: z.string().optional(),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: z.string().min(10, {;
 =======
   salary_range: z.string().optional(),;
@@ -278,6 +345,7 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 export type JobSchemaType = z.infer<typeof jobSchema>;
 export type JobSchemaType = z.infer<typeof jobSchema>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -294,3 +362,5 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

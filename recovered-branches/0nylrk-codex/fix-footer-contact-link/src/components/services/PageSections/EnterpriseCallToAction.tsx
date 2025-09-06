@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -56,10 +57,23 @@ export function EnterpriseCallToAction() {}
           Get Custom Enterprise Quote;
         </Button>
       </Link>"
+=======
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+export function EnterpriseCallToAction() {
+  return (
+    <div className="mt-12 text-center">
+      <Link to="/request-quote">
+        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+          Get Custom Enterprise Quote
+        </Button>
+      </Link>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <p className="mt-4 text-zion-slate-light">
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -136,7 +150,11 @@ import { Button } from "@/components/ui/button",  return (
         Need volume pricing or custom SLAs? Contact our enterprise sales team.;
       </p>;
     </div>);
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
 
   )
   )
@@ -146,6 +164,7 @@ import { Button } from "@/components/ui/button",  return (
 }
 ;
 
+<<<<<<< HEAD
 =======
 
 
@@ -168,6 +187,9 @@ import { Button } from "@/components/ui/button",  return (
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } <div className="mt-12 text-center"> <Link to="/request-quote"> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8"> mt-4 text-zion-slate-light" > Need volume pricing or custom SLAs? Contact our enterprise sales team. </p> </div> 
   );
 }
@@ -177,8 +199,11 @@ import { Button } from "@/components/ui/button",  return (
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,10 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {}
@@ -28,6 +33,7 @@ export interface MilestoneAssistantProps {}
   endDateIso: string,;
   project_type: ProjectType,;
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +54,10 @@ import React, { useMemo, useState } from "react",;
 "
 import React, { useMemo, useState } from "react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import React, { useMemo, useState } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 export interface MilestoneAssistantProps {;
   scopeOfWork: string,;
@@ -55,6 +65,7 @@ export interface MilestoneAssistantProps {;
   endDateIso: string,;
   projectType: ProjectType,;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -123,11 +134,20 @@ export /**;
  * MilestoneAssistant - Function description;
  */
 function MilestoneAssistant() {}
+=======
+
+}
+export /**
+ * MilestoneAssistant - Function description
+ */
+function MilestoneAssistant() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [loading, set_loading] = useState (false),
   const [error, set_error] = useState < string | null>(null),
   const [auto_add, setAutoAdd] = useState (true),
   const [items, set_items] = useState < SuggestedMilestoneItem[]>([]),
   const [expanded_idx, setExpandedIdx] = useState < number | null>(0),
+<<<<<<< HEAD
   const is_disabled = useMemo (() => {}
     return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.project_type;
   }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.project_type]),
@@ -139,10 +159,24 @@ function generate() {}
     set_error (null),
     try {}
       const payload: MilestoneSuggestionInput = {}
+=======
+  const is_disabled = useMemo (() => {
+    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.project_type;
+  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.project_type]),
+  async /**
+ * generate - Function description
+ */
+function generate() {
+    set_loading (true),
+    set_error (null),
+    try {
+      const payload: MilestoneSuggestionInput = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
         endDateIso: props.endDateIso,
         project_type: props.project_type;
+<<<<<<< HEAD
       },"
       const res = await fetch ("/api / ai / milestones", {"
         method: "POST","
@@ -154,18 +188,38 @@ if ( {) {}
   $2;
 }
         const t = await res.text (),"
+=======
+      },
+      const res = await fetch ("/api / ai / milestones", {
+        method: "POST",
+        headers: { "Content - Type": "application / json" },
+        body: JSON.stringify (payload);
+      }),
+      // Check condition
+if ( {) {
+  $2
+}
+        const t = await res.text (),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         throw new Error (t || "Failed to generate");
       }
       const data = await res.json (),
       set_items (Array.is_array (data?.milestones) ? data.milestones : []);
       setExpandedIdx (0);
+<<<<<<< HEAD
     } catch (e: any) {"
       set_error (e?.message || "Unexpected error");
     } finally {}
+=======
+    } catch (e: any) {
+      set_error (e?.message || "Unexpected error");
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_loading (false);
     }
   }
   /**
+<<<<<<< HEAD
  * update_item - Function description;
  */
 function update_item() {}
@@ -252,6 +306,29 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
   return (;"
     <div className="milestone-assistant">;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ * update_item - Function description
+ */
+function update_item() {
+    set_items ((prev) => prev.map ((m, i) => (index === idx ? { ...m, ...patch } : m)));
+  }
+  /**
+ * remove_item - Function description
+ */
+function remove_item() {
+    set_items ((prev) => prev.filter ((_, i) => i !== idx));
+  }
+  /**
+ * accept - Function description
+ */
+function accept() {
+    props.on_accept?.(items, auto_add);
+  }
+
+;
+  return (;
+    <div className="milestone-assistant">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
 
@@ -259,11 +336,14 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, alignItems: "center" }}>;
@@ -282,6 +362,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
         </label>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,11 +378,16 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </div>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 
 ;
 
 
+<<<<<<< HEAD
 
 
 
@@ -363,6 +449,31 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
             >;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <div style={{ marginTop: 12 }}>;
+        {items.length === 0 && !loading && (;
+          <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
+        )}
+        {items.map((item, idx) => (;
+          <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
+
+
+      {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
+      <div style={{ margin_top: 12 }}>;
+        {items.length === 0 && !loading && (
+          <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>)}
+        {items.map ((item, idx) => (
+          <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;
+
+
+            <div;
+              className="milestone - summary";
+              style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
+              on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
+            >;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div;
               className="milestone-summary";
 =======
@@ -375,6 +486,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
             >;"
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,12 +511,18 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -443,6 +561,36 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label>Title</label>;
+=======
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
+                  AI Suggested;
+                </span>;
+              </div>;
+              <div style={{ font_size: 12, color: "#555" }}>;
+              </div>;
+            </div>;
+            {expanded_idx === idx && (
+              <div className="milestone - details" style={{ padding: 12, display: "grid", gap: 8 }}>;
+                <div style={{ display: "grid", gap: 6 }}>;
+                  <label > Title</label>;
+                  <input;
+                    value={item.title}
+                    on_change={(e) => update_item (idx, { title: e.target.value })}
+                    placeholder="Title";
+                  />;
+                </div>;
+                <div style={{ display: "grid", gap: 6 }}>;
+                  <label > Description</label>;
+                  <textarea;
+                    value={item.description}
+                    on_change={(e) => update_item (idx, { description: e.target.value })}
+                    rows={3}
+                    placeholder="Description";
+                  />;
+                </div>;
+                <div style={{ display: "grid", gap: 6 }}>;
+                  <label > Suggested due date</label>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input;
                     value={item.title}
 <<<<<<< HEAD
@@ -681,6 +829,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -722,6 +871,15 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
+
+
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+
+                  />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>;
                   <button onClick={() => removeItem(idx)} style={{ color: "#b00" }}>Remove</button>;
@@ -732,6 +890,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
           </div>;
         ))}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -757,6 +916,20 @@ export default MilestoneAssistant;
 ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>);
+}
+
+
+;
+
+
+export default MilestoneAssistant;
+
+;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default MilestoneAssistant;
 }> <button onClick= {
   generate 
@@ -897,6 +1070,7 @@ export default MilestoneAssistant;
 }
 ;
 export default MilestoneAssistant;
+<<<<<<< HEAD
 =======
                 </div>;"
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;"
@@ -917,3 +1091,7 @@ export default MilestoneAssistant;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default MilestoneAssistant;
+export default MilestoneAssistant;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

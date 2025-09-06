@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -43,6 +44,10 @@ export default i18n;
 export const i18n = {
   language: 'en'
   resolvedLanguage: 'en'
+=======
+export const supportedLocales = ["en", "pt", "es", "ar"] as const;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 =======

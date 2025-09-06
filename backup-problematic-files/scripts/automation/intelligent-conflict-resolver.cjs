@@ -112,6 +112,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
+  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
@@ -492,9 +493,13 @@ if (require.main === module) {}
     process.exit(1)})};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = IntelligentConflictResolver;
 module.exports = IntelligentConflictResolver;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

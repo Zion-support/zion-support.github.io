@@ -34,6 +34,7 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
+
 export default /**
  * ServicesLayout - Function description
  */

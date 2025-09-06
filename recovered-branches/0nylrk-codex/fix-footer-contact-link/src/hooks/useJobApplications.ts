@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -13,6 +14,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -35,15 +40,19 @@ export const useJobApplications = (jobId?: string) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const useJobApplications = (jobId?: string) => {;
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -60,6 +69,8 @@ export const useJobApplications = (jobId?: string) => {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -105,6 +116,7 @@ export const useJobApplications = (jobId?: string) => {
 <<<<<<< HEAD
     try {
 
+
       let query = supabase
 =======
     try {}
@@ -116,6 +128,7 @@ export const useJobApplications = (jobId?: string) => {
           job: jobs(*)
 <<<<<<< HEAD
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -166,10 +179,41 @@ export const useJobApplications = (jobId?: string) => {
 =======
         `)        if (!jobId) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        `)
+        .order("created_at", { ascending: false });
+      setIsLoading(true),
+      
+      let query = supabase
+        .from("job_applications")
+        .select(`
+          *,
+          job:jobs(*),
+          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
+        `)
+        .order("created_at", { ascending: false }),
+      
+
+
+      // Filter by job if jobId is provided
+      if (jobId) {
+        query = query && query.eq("job_id", jobId)
+      }
+      // For talent users, only fetch their own applications
+
+      if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
+        query = query && query.eq("talent_id", user && user.id)
+      } 
+      // For client users, fetch applications for their jobs
+      else if (user && user.userType === "employer" || user && user.userType === "buyer") {
+
+        if (!jobId) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,6 +254,18 @@ export const useJobApplications = (jobId?: string) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+            .eq("client_id", user && user.id);
+          
+
+
+            .eq("client_id", user.id),
+          
+
+            .eq("client_id", user && user.id);
+          if (jobIds && jobIds.length > 0) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
 =======
 
@@ -223,7 +279,12 @@ export const useJobApplications = (jobId?: string) => {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
         ...app;import { useState, useEffect } from './react';
+=======
+
+import { useState, useEffect } from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
 import { JobApplication, ApplicationStatus } from '@/types / jobs';
@@ -310,10 +371,12 @@ if (throw fetch_error) {}
       const transformed_data = data.map ((app: any) => ({
 
         ...app;
+
         talent_profile: app && app.talent_profile ? {
           ...app && app.talent_profile;
           full_name: app && app.talent_profile.display_name;
           profile_picture_url: app && app.talent_profile.avatar_url,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +411,9 @@ if (throw fetch_error) {}
           profile_picture_url: app.talent_profile.avatar_url
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ...app;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -390,6 +456,7 @@ if (throw fetch_error) {}
       console && console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -756,6 +823,9 @@ if ( { // Unique violation) {}
         } else {
 =======
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
         } : undefined;
@@ -781,10 +851,105 @@ if ( { // Unique violation) {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
         } else {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
         return false;
+=======
+
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
+
+      // Transform the data to match our application types
+      const transformedData = data.map((app: any) => ({
+        ...app,
+        talent_profile: app.talent_profile ? {
+
+          ...app.talent_profile,
+          full_name: app.talent_profile.display_name,
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: []
+        } : undefined
+      })),
+      
+      setApplications(transformedData as JobApplication[]),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching applications:", err),
+      setError("Failed to fetch applications: " + err.message),
+
+
+      toast.error("Failed to fetch applications")
+    } finally {
+      setIsLoading (false);
+    }
+
+
+  },
+  
+  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
+    if (!user) {
+      toast && toast.error("You must be logged in to apply for jobs");
+      return false
+    }
+    try {
+      const { data, error } = await supabase
+        .from("job_applications")
+        .insert({
+
+
+          job_id: jobId,
+          talent_id: user.id,
+          resume_id: resumeId,
+          cover_letter: coverLetter,
+          status: "new"
+        })
+        .select()
+        .single(),
+      
+
+      if (error) {
+        if (error.code === '23505') { // Unique violation
+          toast.error("You have already applied to this job")
+        } else {
+          throw error
+
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { toast } from "sonner",;
+export const useJobApplications = (jobId?: string) => {;
+  const { user } = useAuth(),;
+  const [applications, setApplications] = useState<JobApplication[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const fetchApplications = async () => {;
+    if (!user) {;
+      setIsLoading(false),;
+      return;
+    }
+;
+    try {;
+      setIsLoading(true),;
+      let query = supabase;
+        .from("job_applications");
+        .select(`;
+          *,;
+          job:jobs(*),;
+          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio);
+        `);
+        .order("created_at", { ascending: false }),;
+      // Filter by job if jobId is provided;
+      if (jobId) {;
+        query = query.eq("job_id", jobId);
+        }
+        return false
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
 
 <<<<<<< HEAD
@@ -806,6 +971,7 @@ if ( { // Unique violation) {}
       return false
     }
   }
+<<<<<<< HEAD
 ;
       const { data, error: fetchError } = await query,;
       if (fetchError) throw fetchError,;
@@ -832,6 +998,22 @@ if ( { // Unique violation) {}
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {;
     if (!user) {;
       toast.error("You must be logged in to apply for jobs"),;
+=======
+
+
+        }
+        return false
+      }
+
+
+;
+  const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to apply for jobs");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return false;
     }
 ;
@@ -845,6 +1027,7 @@ if ( { // Unique violation) {}
           cover_letter: coverLetter,;
           status: "new";
         });
+<<<<<<< HEAD
         .select();
         .single(),;
       if (error) {;
@@ -853,6 +1036,37 @@ if ( { // Unique violation) {}
         } else {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           throw error;
+=======
+        .select ();
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( { // Unique violation) {
+  $2
+}
+          toast.error ("You have already applied to this job");
+        } else {
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+    } finally {
+      setIsLoading (false);
+    }
+  }
+        } else {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
         return false;
       }
@@ -860,6 +1074,7 @@ if ( { // Unique violation) {}
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -931,10 +1146,102 @@ if ( { // Unique violation) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           try {
+=======
+
+
+
+      
+      // Add the new application to the local state
+      const newApplication = data as JobApplication;
+      setApplications(prev => [newApplication, ...prev]);
+      toast.success("Application submitted successfully");
+      return true
+    } catch (err: any) {
+      console.error("Error applying to job:", err);
+      toast.error("Failed to submit application: " + err.message)
+      return false
+    }
+  }
+;
+      const { data, error: fetchError } = await query,;
+      if (fetchError) throw fetchError,;
+      // Transform the data to match our application types;
+      const transformedData = data.map((app: any) => ({;
+        ...app,;
+        talent_profile: app.talent_profile ? {;
+          ...app.talent_profile,;
+          full_name: app.talent_profile.display_name,;
+          profile_picture_url: app.talent_profile.avatar_url,;
+          skills: [];
+        } : undefined;
+      })),;
+      setApplications(transformedData as JobApplication[]),;
+      setError(null);
+    } catch (err: any) {;
+      console.error("Error fetching applications:", err),;
+      setError("Failed to fetch applications: " + err.message),;
+      toast.error("Failed to fetch applications");
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {;
+    if (!user) {;
+      toast.error("You must be logged in to apply for jobs"),;
+      return false;
+    }
+;
+    try {;
+      const { data, error } = await supabase;
+        .from("job_applications");
+        .insert({;
+          job_id: jobId,;
+          talent_id: user.id,;
+          resume_id: resumeId,;
+          cover_letter: coverLetter,;
+          status: "new";
+        });
+        .select();
+        .single(),;
+      if (error) {;
+        if (error.code === '23505') { // Unique violation;
+          toast.error("You have already applied to this job");
+        } else {;
+          throw error;
+        }
+        return false;
+      }
+
+
+
+
+      
+      // Add the new application to the local state
+      const newApplication = data as JobApplication;
+      setApplications(prev => [newApplication, ...prev]);
+
+      
+      toast && toast.success("Application submitted successfully");
+      return true
+    } catch (err: any) {
+      console && console.error("Error applying to job:", err);
+      toast && toast.error("Failed to submit application: " + err && err.message),
+
+      return false
+    }
+  }
+      return false
+    }
+  },
+  
+  const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
@@ -945,12 +1252,19 @@ if ( { // Unique violation) {}
         .update({ status })
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq("id", applicationId),
       
       if (error) throw error,
       
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Update the local state
 
       setApplications(prev => 
@@ -965,7 +1279,8 @@ if ( { // Unique violation) {}
 
       return false
     }
-  }      ),
+  }
+      ),
       
 =======
       ),
@@ -1013,6 +1328,7 @@ if ( { // Unique violation) {}
         .eq("id", applicationId)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         .is("viewed_at", null), // Only update if not already viewed
 <<<<<<< HEAD
 =======
@@ -1052,6 +1368,24 @@ if ( { // Unique violation) {}
 =======
         .is("viewed_at", null), // Only update if not already viewed        )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        .is("viewed_at", null), // Only update if not already viewed
+
+
+      
+      if (error) throw error,
+      
+
+
+      // Update the local state
+
+      setApplications(prev => 
+        prev && prev.map(app => app && app.id === applicationId ? 
+
+      // Update the local state
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
+        )
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       );
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1082,6 +1416,7 @@ if ( { // Unique violation) {}
     } catch (err: any) {
       console.error ("Error applying to job:", err);
       toast.error ("Failed to submit application: " + err.message),
+<<<<<<< HEAD
       return false;    }
 =======
       return true;
@@ -1090,6 +1425,10 @@ if ( { // Unique violation) {}
       return false;
     }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      return false;
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 ;
   const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {}
@@ -1164,6 +1503,7 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1183,31 +1523,57 @@ if ( {) {}
       return true;
     } catch (err: any) {;"
       console.error("Error applying to job:", err),;"
+=======
+
+;
+      // Add the new application to the local state;
+      const newApplication = data as JobApplication,;
+      setApplications(prev => [newApplication, ...prev]),;
+      toast.success("Application submitted successfully"),;
+      return true;
+    } catch (err: any) {;
+      console.error("Error applying to job:", err),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to submit application: " + err.message),;
       return false;
     }
   },;
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {;
     try {;
+<<<<<<< HEAD
       const { error } = await supabase;"
         .from("job_applications");
         .update({ status });"
+=======
+      const { error } = await supabase;
+        .from("job_applications");
+        .update({ status });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq("id", applicationId),;
       if (error) throw error,;
       // Update the local state;
       setApplications(prev =>;
         prev.map(app => app.id === applicationId ? { ...app, status } : app);
+<<<<<<< HEAD
       ),;`
       toast.success(`Application status updated to ${status}`),;
       return true;
     } catch (err: any) {;"
       console.error("Error updating application status:", err),;"
+=======
+      ),;
+      toast.success(`Application status updated to ${status}`),;
+      return true;
+    } catch (err: any) {;
+      console.error("Error updating application status:", err),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to update application status: " + err.message),;
       return false;
     }
   },;
   const markApplicationAsViewed = async (applicationId: string) => {;
     try {;
+<<<<<<< HEAD
       const { error } = await supabase;"
         .from("job_applications");
         .update({;"
@@ -1215,16 +1581,33 @@ if ( {) {}
           viewed_at: new Date().toISOString();
         });"
         .eq("id", applicationId);"
+=======
+      const { error } = await supabase;
+        .from("job_applications");
+        .update({;
+          status: "viewed",;
+          viewed_at: new Date().toISOString();
+        });
+        .eq("id", applicationId);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .is("viewed_at", null), // Only update if not already viewed;
       if (error) throw error,;
       // Update the local state;
       setApplications(prev =>;
+<<<<<<< HEAD
         prev.map(app => app.id === applicationId ?;"
+=======
+        prev.map(app => app.id === applicationId ?;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
         );
       ),;
       return true;
+<<<<<<< HEAD
     } catch (err) {;"
+=======
+    } catch (err) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error("Error marking application as viewed:", err),;
       return false;
     }
@@ -1246,6 +1629,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
@@ -1258,6 +1642,76 @@ if ( {) {}
   }
 };
 <<<<<<< HEAD
+=======
+
+
+  }
+}
+;
+        .is("viewed_at", null), // Only update if not already viewed;
+      ;
+      if (error) throw error,;
+      ;
+      // Update the local state;
+      setApplications(prev => ;
+        prev.map(app => app.id === applicationId ? ;
+          { ...app, status:"viewed", viewed_at:new Date().toISOString() } app;
+        );
+      ),;
+      ;
+      return true,;
+    } catch (err) {;
+      console.error("Error marking application as viewed:", err),;
+      return false,;
+    }
+  },;
+  ;
+  // Fetch applications when component mounts or dependencies change;
+  useEffect(() => {;
+    if (user) {;
+      fetchApplications(),;
+    }
+  }, [user, jobId]),;
+  ;
+  return {;
+    applications,;
+    isLoading,;
+    error,;
+    refetch:fetchApplications,;
+    applyToJob,;
+    updateApplicationStatus,;
+    markApplicationAsViewed;
+  },;
+},; export const useJobApplications = (jobId?: string) => {
+  const {
+  user 
+}= useAuth ();
+const [applications, setApplications] = useState<JobApplication[]> ([]);
+const [isLoading, setIsLoading] = useState (true);
+const [error, setError] = useState<string | null> (null);
+const fetchApplications = async () => {
+  if (!user) {
+  setIsLoading (false);
+return 
+}try {
+  setIsLoading (true);
+let query = supabase .from ("job applications") 
+}//For client users, fetch applications for their jobs else if (user.userType === "employer" || user.userType === "buyer") {
+  if (!jobId) {
+  //Fix: Convert the subquery to a proper array or string const {
+  data: jobIds 
+}= await supabase .from ("jobs") .select ("id") .eq ("client id", user.id);
+if (jobIds && jobIds.length > 0) {
+  const jobIdArray = jobIds.map (job => job.id);
+query = query.in ("job id", jobIdArray) 
+}else {
+  throw error 
+}return false;
+}//Add the new application to the local state const newApplication = data as JobApplication;
+setApplications (prev => [newApplication, ...prev]);
+}
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
   try {
   const {
@@ -1296,6 +1750,7 @@ markApplicationAsViewed
 };
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -1310,3 +1765,7 @@ markApplicationAsViewed
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

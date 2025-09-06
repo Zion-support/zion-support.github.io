@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -23,6 +26,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+<<<<<<< HEAD
 =======
 import React from "react",
 import { Header } from "@/components/Header",
@@ -55,12 +59,15 @@ import { Navigate, useParams } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string }
+  const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useWhitelabel } from "@/context/WhitelabelContext",
@@ -79,6 +86,8 @@ export default function CompanyWorkspace() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 
@@ -92,10 +101,10 @@ export default function CompanyWorkspace() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
-
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     )
@@ -353,10 +362,16 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
   }
+
+  if (error || !company) {
+    return <Navigate to="/not-found" />;
   }
 
+<<<<<<< HEAD
 ;
   return (;
     <ProtectedRoute>;
@@ -367,6 +382,30 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // In white-label mode, use the tenant's theme instead of the company's theme
+  const effectiveTheme = isWhitelabel
+    ? {
+        primaryColor: tenant?.primary_color || company.theme?.primaryColor,
+        backgroundColor: company.theme?.backgroundColor || "var(--background)",
+        textColor: company.theme?.textColor || "var(--foreground)",
+      }
+    : company.theme;
+
+  // Check if user has access to this company workspace
+  const hasAccess = true; // For demo purposes, always grant access
+
+  if (!hasAccess) {
+    return <Navigate to="/unauthorized" />;
+  }
+
+  return (
+    <ProtectedRoute>
+      <SEO
+        title={`${company.name} Workspace - ${isWhitelabel ? brandName : "Zion AI Marketplace"}`}
+        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : "on Zion AI Marketplace"}. Collaborate with your team to find top talent.`}
+      />
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
@@ -382,6 +421,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,6 +464,12 @@ import React from './react';
 =======
   )import React from './react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+
+import React from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
@@ -465,6 +511,7 @@ if ( {) {}
 }
 <<<<<<< HEAD
     return (
+<<<<<<< HEAD
       <div className="flex items - center justify - center min-h-screen">;
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
 =======
@@ -472,6 +519,10 @@ if ( {) {}
       <div className="flex items - center justify - center min - h-screen">;"
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="flex items - center justify - center min - h-screen">;
+        <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>);
   }
   // Check condition;
@@ -506,15 +557,20 @@ if ( {) {}
         custom_theme={effective_theme}
 <<<<<<< HEAD
       />;
+<<<<<<< HEAD
       <main className="min-h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
 =======
       />;'"
       <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CompanyDashboard company={company} />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -557,3 +613,11 @@ if ( {) {}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+
+;
+;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

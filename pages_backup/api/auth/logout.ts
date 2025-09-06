@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD:pages/api/auth/logout.ts
 <<<<<<< HEAD
@@ -46,13 +47,18 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.status(200).json({ success: true })
 
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/logout.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -65,10 +71,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearUserCookie(res);
 origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ success: true })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD:pages/api/auth/logout.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { NextApiRequest, NextApiResponse } from 'next'
+import { clearUserCookie } from '../../../utils / auth'
+
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  clearUserCookie (res)
+  res.status (200).json ({ success: true });
+}
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req, res) {
   try {
@@ -79,6 +104,7 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -173,3 +199,8 @@ export default function handler(req, res) {
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

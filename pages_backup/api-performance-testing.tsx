@@ -8,6 +8,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
 =======
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -310,6 +311,10 @@ export default function ApiPerformanceTestingPage() {}
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api-performance-testing.tsx
+=======
+	const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -541,6 +546,7 @@ export default function ApiPerformanceTestingPage(req, res) {}
 ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api-performance-testing.tsx
 <<<<<<< HEAD:pages/api-performance-testing.tsx
 <<<<<<< HEAD
@@ -554,6 +560,8 @@ export default function ApiPerformanceTestingPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api-performance-testing.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
@@ -695,6 +703,7 @@ export default function ApiPerformanceTestingPage(req, res) {}
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api-performance-testing.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -706,3 +715,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api-performance-testing.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -401,6 +401,7 @@ export default defineConfig({}
     sourcemap: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 })
@@ -438,6 +439,8 @@ export default defineConfig({}
     postcss: {
       plugins: []
     }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 })
 <<<<<<< HEAD

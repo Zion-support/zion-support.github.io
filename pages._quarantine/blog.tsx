@@ -17,8 +17,6 @@ import type { NextPage } from \'next\'; import Layout from \'../components/Layou
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
-interface BlogProps {
-  // Add props here as neededimport React from 'react';
 import * as React from 'react';
 
 <<<<<<< HEAD
@@ -54,6 +52,7 @@ interface BlogProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,11 +115,29 @@ interface BlogProps {
   // Add props here as needed
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react';
 interface BlogProps {
   // Add props here as needed
-import React from 'react';interface BlogProps {
+}
+
+
+
+import React from 'react';
+interface BlogProps {
+  // Add props here as needed
+import React from 'react';
+interface BlogProps {
+  // Add props here as needed
+
+
+
+import React from 'react';
+import * as React from 'react';
+
+interface BlogProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
@@ -139,6 +156,7 @@ export default function Blog({ }: BlogProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,11 +185,20 @@ export default function Blog({ }: BlogProps) {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+}
+
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -214,3 +241,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -55,9 +55,35 @@ import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Sta
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
+
+
 import {LucideIcon} from "lucide-react";
+<<<<<<< HEAD
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";export type BadgeKey =
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
+
+import {LucideIcon} from "lucide-react";
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
+import { LucideIcon } from "lucide-react",
+import {
+  BadgeCheck, // publishing a listing
+  Award,      // top contributor
+  Star,       // profile complete
+  Trophy,     // featured creator
+  BadgePlus,  // first action
+  BadgeDollarSign // monetization
+} from "lucide-react",
+
+
+
+
+
+
+export type BadgeKey =
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
@@ -65,7 +91,8 @@ import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Sta
 
 import { LucideIcon } from './lucide-react';
 import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization } from './lucide-react';
-;;
+;
+;
 ;
 
 <<<<<<< HEAD
@@ -84,6 +111,7 @@ import {;
   Trophy,     // featured creator;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
+<<<<<<< HEAD
 } from "lucide-react",;export interface BadgeMeta {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -231,20 +259,89 @@ export interface BadgeMeta {};
   description: string;
   icon: LucideIcon;
 <<<<<<< HEAD
+=======
+} from "lucide-react",;
+import { LucideIcon } from './lucide-react';
+import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization } from './lucide-react';
+;
+export type BadgeKey =;
+  | "first_listing";
+  | "top_contributor";
+  | "profile_complete";
+  | "featured_creator";
+  | "first_action";
+  | "monetized";
+;
+
+export interface BadgeMeta {
+  key: BadgeKey;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+
+  color: string,
+  bg: string;
+}
+export const badge_list: BadgeMeta[] = [;
+
+  {
+    key: "first_listing";
+    name: "First Listing"
+    description: "Published your first product, service, or listing.";
+
+    icon: BadgeCheck,
+    color: "#8B5CF6",  // Vivid Purple;
+    bg: "#E5DEFF",     // Soft Purple;
+
+  }
+  {
+    key: "top_contributor";
+    name: "Top Contributor";
+    description: "Recognized as a top contributor in the community.";
+
+    icon: Award,
+    color: "#F97316",  // Bright Orange;
+    bg: "#FEF7CD",     // Soft Yellow;
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     key: "profile_complete";
-    name: "Profile Complete",
-  description: "Completed all steps in your profile setup.";
+    name: "Profile Complete";
+    description: "Completed all steps in your profile setup.";
 
     icon: Star,
     color: "#FFD700", // Gold;
-    bg: "#FFFBEA",   // Very light yellow;  }
+    bg: "#FFFBEA",   // Very light yellow;
+
+  }
+  {
+    key: "featured_creator";
+    name: "Featured Creator";
+    description: "Featured on the Zion homepage.";
+
+    icon: Trophy,
+    color: "#0EA5E9", // Ocean Blue;
+    bg: "#D3E4FD",   // Soft Blue;
+
+  }
+  {
+    key: "first_action";
+    name: "First Action"
+    description: "Took your first community, posting, or listing action.";
+
+    icon: BadgePlus,
+    color: "#1EAEDB", // Bright Blue;
+    bg: "#F3F3F3",   // Light Gray;
+
+  }
   {
     key: "monetized";
-    name: "Monetized",
-  description: "Earned your first AI dollar in the marketplace.";
+    name: "Monetized";
+    description: "Earned your first AI dollar in the marketplace.";
 
   badgeList && badgeList.find((b) => b && b.key === key),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -319,6 +416,12 @@ export const badge_list: BadgeMeta[] = [;
     icon: BadgeDollarSign,"
     color: "#22C55E", // Soft Green;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+    icon: BadgeDollarSign,
+    color: "#22C55E", // Soft Green;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     bg: "#F2FCE2",    // Soft Green;
   }];
 ;
@@ -326,6 +429,7 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key),
 ;
 
+<<<<<<< HEAD
 
 
 "
@@ -334,6 +438,95 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
   bg: string;
 }
 <<<<<<< HEAD
+=======
+  | "first_action"
+
+  bg: string
+}
+export const badgeList: BadgeMeta[] = [
+
+  {
+
+}
+export const badgeList: BadgeMeta[] = [
+
+  {
+
+  | "monetized",;
+;
+export interface BadgeMeta {;
+  key:BadgeKey,;
+  name:string,;
+  description:string,;
+  icon:LucideIcon,;
+  color:string,;
+  bg:string;
+}
+;
+export const badgeList:BadgeMeta[] = [;
+  {;
+    key:"first_listing",;
+    name:"First Listing",;
+    description:"Published your first product, service, or listing.",;
+    icon:BadgeCheck,;
+    color:"#8B5CF6",  // Vivid Purple;
+    bg:"#E5DEFF",     // Soft Purple;
+  },;
+  {;
+    key:"top_contributor",;
+    name:"Top Contributor",;
+    description:"Recognized as a top contributor in the community.",;
+    icon:Award,;
+    color:"#F97316",  // Bright Orange;
+    bg:"#FEF7CD",     // Soft Yellow;
+  },;
+  {;
+    key:"profile_complete",;
+    name:"Profile Complete",;
+    description:"Completed all steps in your profile setup.",;
+    icon:Star,;
+    color:"#FFD700", // Gold;
+    bg:"#FFFBEA",   // Very light yellow;
+  },;
+  {;
+    key:"featured_creator",;
+    name:"Featured Creator",;
+    description:"Featured on the Zion homepage.",;
+    icon:Trophy,;
+    color:"#0EA5E9", // Ocean Blue;
+    bg:"#D3E4FD",   // Soft Blue;
+  },;
+  {;
+    key:"first_action",;
+    name:"First Action",;
+    description:"Took your first community, posting, or listing action.",;
+    icon:BadgePlus,;
+    color:"#1EAEDB", // Bright Blue;
+    bg:"#F3F3F3",   // Light Gray;
+  },;
+  {;
+    key:"monetized",;
+    name:"Monetized",;
+    description:"Earned your first AI dollar in the marketplace.",;
+    icon:BadgeDollarSign,;
+    color:"#22C55E", // Soft Green;
+    bg:"#F2FCE2",    // Soft Green;
+  }],;
+;
+export const getBadgeMeta = (key:BadgeKey) =>;
+  badgeList.find((b) => b.key === key),;
+; import {
+  BadgeCheck, //publishing a listing Award, //top contributor Star, //profile complete Trophy, //featured creator BadgePlus, //first action BadgeDollarSign // monetization export type BadgeKey = | "first listing" | "top contributor" | "profile complete" | "featured creator" | "first action" | "monetized";
+  | "monetized",;
+export interface BadgeMeta {;
+  key: BadgeKey,;
+  name: string,;
+  description: string,;
+  icon: LucideIcon,;
+  color: string,;
+  bg: string;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export const badgeList: BadgeMeta[] = [;
   {;
@@ -386,6 +579,7 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -399,3 +593,5 @@ export const badgeList: BadgeMeta[] = []
   {}
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

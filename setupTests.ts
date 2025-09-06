@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -27,6 +28,14 @@ import '@testing-library/jest-dom/vitest';
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
+=======
+import '@testing-library/jest-dom/vitest';
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,12 +55,16 @@ const "@testing-library/jest-dom/vitest";''"'
 import '@testing-library/jest-dom/vitest';''
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 
 '"
 const "@testing-library/jest-dom/vitest";''"'
@@ -59,6 +72,9 @@ import '@testing-library/jest-dom/vitest';'''"
 const "@testing-library/jest-dom/vitest";''"'
 import '@testing-library/jest-dom/vitest';'''"
 const "@testing-library/jest-dom/vitest";''"'
+=======
+const "@testing-library/jest-dom/vitest";''"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import '@testing-library/jest-dom/vitest';''
 ursor/integrate-build-improve-and-re-verify-8f7d'"
 const "@testing-library/jest-dom/vitest";''"'
@@ -91,6 +107,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -105,6 +122,18 @@ import '@testing-library/jest-dom/vitest';''
 =======
 =======
 =======
+=======
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+
+
+
+
+
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

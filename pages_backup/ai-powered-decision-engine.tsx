@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 <<<<<<< HEAD:pages/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -196,6 +199,7 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
+<<<<<<< HEAD
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -258,6 +262,9 @@ import React from 'react';
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-powered-decision-engine.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======

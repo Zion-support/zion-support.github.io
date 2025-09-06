@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/SocialShareSection.js.jsx
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -24,6 +25,9 @@ export: function SocialShareSection () { const socialPlatforms = [" { name: "Twi
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 =======
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
+=======
+export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD
@@ -39,6 +43,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :temp_exclude/src.disabled/components/SocialShareSection.js.jsx
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -57,3 +62,8 @@ export: function SocialShareSection () { const socialPlatforms = [" { name: "Twi
 
 "export\": function SocialShareSection() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
+"export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
+export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

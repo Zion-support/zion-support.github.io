@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Common constants used across fraud detection modules
 // Phrases that might indicate fraud
 
@@ -12,10 +13,13 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const suspiciousPhrases = [;
@@ -23,6 +27,8 @@ export const suspiciousPhrases = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "whatsapp me";
   "contact me outside";
   "cashapp only";
@@ -35,10 +41,13 @@ export const suspiciousPhrases = [;
   "payment link";
   "urgent payment";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "deal outside";
 ];
 
@@ -46,10 +55,13 @@ export const suspiciousPhrases = [;
 // Email domains often used for throwaway accounts;
 export const suspiciousEmailDomains = [;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const suspiciousPhrases = [
   "whatsapp me",
   "contact me outside",
@@ -63,6 +75,7 @@ export const suspiciousPhrases = [
   "payment link",
   "urgent payment",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   "deal outside"
 <<<<<<< HEAD
@@ -73,10 +86,16 @@ export const suspiciousPhrases = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 <<<<<<< HEAD
+=======
+  "deal outside"
+  "deal outside";
+];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ],
 
 // Email domains often used for throwaway accounts
 export const suspiciousEmailDomains = [;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -89,6 +108,9 @@ export const suspicious_phrases = [;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  "tempmail";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "throwaway";
   "fakeemail";
   "mailinator";
@@ -228,8 +250,12 @@ export const suspiciousEmailDomains = [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
@@ -250,6 +276,7 @@ export const suspiciousEmailDomains = [
 
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -268,3 +295,9 @@ export const suspiciousEmailDomains = [
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+];
+];
+  "10minutemail";
+];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

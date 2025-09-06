@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
@@ -156,3 +157,15 @@ export function SkillsForm(props: SkillsFormProps) {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { SkillsForm, as, SkillsFormComponent } from "./skills";
+import { SkillsFormProps } from "./skills/types";
+export function SkillsForm(props: SkillsFormProps) {
+  return <SkillsFormComponent {...props} />;
+}
+;
+}
+;
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

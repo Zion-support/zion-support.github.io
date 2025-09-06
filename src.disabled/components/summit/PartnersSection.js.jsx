@@ -2,6 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+
+
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src.disabled/components/summit/PartnersSection.js.jsx
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -51,6 +59,7 @@ const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -74,3 +83,8 @@ const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

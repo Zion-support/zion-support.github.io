@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,12 +21,16 @@ import _React from 'react'; export function BlogSection () {}; return null} impo
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import _React from 'react'; export function BlogSection () {}; return null} import { Link } from 'react-router-dom'; ,; {}; {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"; <h3 className="text-xl font-semibold text-white mb-3">"; <Link to={`/blog/${post.id}`} className=""hover": text-zion-cyan"> {post.title} ></div> </h3>"; <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"; <div className="flex justify-between text-sm text-zion-slate-light"> <span>{post.date}></div> <span>{post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} '"`}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\'; export function BlogSection () {}; return null} import { Link } from \'react-router-dom\'; ,; {}; {blogPosts && blogPosts.map((post) => (<article key={post && post.id} className=\"bg-white/10 backdrop-blur-sm rounded-lg p-6\">\"; <h3 className=\"text-xl font-semibold text-white mb-3\">\"; <Link to={`/blog/${post && post.id}`} className=\""hover\": text-zion-cyan\"> {post && post.title} ></div> </h3>\"; <p className=\"text-zion-slate-light mb-4\">{post && post.excerpt}</p>\"; <div className=\"flex justify-between text-sm text-zion-slate-light\"> <span>{post && post.date}></div> <span>{post && post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} \'"`}
 const React from "react"; export function BlogSection() { return; }; return null} import { Link } from "react-router-dom"; ,; {}; {blogPosts && blogPosts.map((post) => (<article key={post && post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"; <h3 className="text-xl font-semibold text-white mb-3">"; <Link to={`/blog/${post && post.id}`} className="hover: text-zion-cyan"> {post && post.title} ></div> </h3>"; <p className="text-zion-slate-light mb-4">{post && post.excerpt}</p>"; <div className="flex justify-between text-sm text-zion-slate-light"> <span>{post && post.date}></div> <span>{post && post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} ""`}""`"`
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +45,9 @@ import _React from 'react'; export function BlogSection () {}; return null} impo
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+import _React from 'react'; export function BlogSection () {}; return null} import { Link } from 'react-router-dom'; ,; {}; {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"; <h3 className="text-xl font-semibold text-white mb-3">"; <Link to={`/blog/${post.id}`} className=""hover": text-zion-cyan"> {post.title} ></div> </h3>"; <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"; <div className="flex justify-between text-sm text-zion-slate-light"> <span>{post.date}></div> <span>{post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} '"`}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\'; export function BlogSection () {}; return null} import { Link } from \'react-router-dom\'; ,; {}; {blogPosts.map((post) => (<article key={post.id} className=\"bg-white/10 backdrop-blur-sm rounded-lg p-6\">\"; <h3 className=\"text-xl font-semibold text-white mb-3\">\"; <Link to={`/blog/${post.id}`} className=\""hover\": text-zion-cyan\"> {post.title} ></div> </h3>\"; <p className=\"text-zion-slate-light mb-4\">{post.excerpt}</p>\"; <div className=\"flex justify-between text-sm text-zion-slate-light\"> <span>{post.date}></div> <span>{post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} \'"`}
 const React from "react"; export function BlogSection() { return; }; return null} import { Link } from "react-router-dom"; ,; {}; {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"; <h3 className="text-xl font-semibold text-white mb-3">"; <Link to={`/blog/${post.id}`} className="hover: text-zion-cyan"> {post.title} ></div> </h3>"; <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"; <div className="flex justify-between text-sm text-zion-slate-light"> <span>{post.date}></div> <span>{post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} ""`}""`"`
 import _React from 'react'; export function BlogSection () {}; return null} import { Link } from 'react-router-dom'; ,; {}; {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"; <h3 className="text-xl font-semibold text-white mb-3">"; <Link to={`/blog/${post.id}`} className=""hover": text-zion-cyan"> {post.title} ></div> </h3>"; <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"; <div className="flex justify-between text-sm text-zion-slate-light"> <span>{post.date}></div> <span>{post.readTime}></div> ></div> </article>) ) } ></div> ></div> </section>)} '"`}

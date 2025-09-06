@@ -16,6 +16,12 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
@@ -32,8 +38,13 @@
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};; async walkDirectory(dir) {; const analyses = [];
 =======
+=======
+; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ; async walkDirectory(dir) {; const analyses = [];
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -59,6 +70,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
@@ -113,6 +125,8 @@ const monitor = new CodeQualityMonitor();
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
@@ -167,6 +181,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     action: 'Run comprehensive code cleanup and establish coding standards'})}; return recommendations}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async checkGitStatus() {try {; const status = execSync('git status --porcelain', {; cwd: this.projectRoot
     encoding: 'utf8'}); if (status.trim()) {this.log('⚠️ Uncommitted changes detected'); return false}; return true} catch (error) {this.log(`Error checking git status: ${error.message}`); return false}}; async run() {this.log('🔍 Starting Code Quality Monitor...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Check git status; const isClean = await this.checkGitStatus(); // Analyze all files; this.log('📁 Analyzing code files...'); const analyses = await this.walkDirectory(this.projectRoot); // Generate report; this.log('📊 Generating quality report...'); const report = this.generateReport(analyses); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Code Quality Report Summary: '); this.log(`Files analyzed: ${report.summary.totalFiles}`); this.log(`Total issues: ${report.summary.totalIssues}`); this.log(`Duration: ${duration}ms`); if (report.summary.totalIssues > 0) {this.log('\n🚨 Issues by type: '); Object.entries(report.summary.issuesByType).forEach(([type, count]) = > {; this.log(` ${type}: ${count}`)}); this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)}); // If there are many issues and git is clean, suggest running the lint fixer; if (report.summary.totalIssues > 50 && isClean) {this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {this.log('✨ Excellent! No code quality issues found!')}
 } catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`); process.exit(1)}}}
+=======
+; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
+; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
+; const report = {; timestamp: new Date().toISOString(), summary: {
+      , totalFiles; totalIssues; issuesByType; issuesBySeverity
+    },
+    files: analyses && analyses.filter(analysis = > analysis && analysis.issues.length > 0),
+    recommendations: this && this.generateRecommendations(issuesByType, totalIssues)};
+; return report};
+; generateRecommendations(issuesByType, totalIssues) {; const recommendations = [];
+; if (issuesByType['trailing-spaces'] > 0) {; recommendations && recommendations.push({; type: 'trailing-spaces', priority: 'low', message: 'Remove trailing spaces from files',
+    action: 'Run the lint-fixer to automatically remove trailing spaces'})};
+; if (issuesByType['console-statement'] > 0) {; recommendations && recommendations.push({; type: 'console-statement', priority: 'medium', message: 'Remove console statements from production code',
+    action: 'Replace console statements with proper logging or remove them'})};
+; if (issuesByType['unused-import'] > 0) {; recommendations && recommendations.push({; type: 'unused-import', priority: 'medium', message: 'Remove unused imports',
+    action: 'Clean up unused imports to reduce bundle size'})};
+; if (totalIssues > 100) {; recommendations && recommendations.push({; type: 'general', priority: 'high', message: 'High number of code quality issues detected',
+    action: 'Run comprehensive code cleanup and establish coding standards'})};
+; return recommendations};
+; async saveReport(report) {; try {; const reportDir = path && path.dirname(this && this.reportFile); if (!fs && fs.existsSync(reportDir)) {; fs && fs.mkdirSync(reportDir, { recursive: true })};
+; fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2)); this && this.log(`Report saved to: ${this && this.reportFile}`)} catch (error) {; this && this.log(`Error saving report: ${error && error.message}`)}};
+; async checkGitStatus() {; try {; const status = execSync('git status --porcelain', {; cwd: this && this.projectRoot,
+    encoding: 'utf8'});
+; if (status && status.trim()) {; this && this.log('⚠️ Uncommitted changes detected'); return false};
+; return true} catch (error) {; this && this.log(`Error checking git status: ${error && error.message}`); return false}};
+; async run() {; this && this.log('🔍 Starting Code Quality Monitor...'); this && this.log(`Project root: ${this && this.projectRoot}`);
+; try {; // Create logs directory if it doesn't exist; const logsDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logsDir)) {; fs && fs.mkdirSync(logsDir, { recursive: true })};
+; // Check git status; const isClean = await this && this.checkGitStatus();
+; // Analyze all files; this && this.log('📁 Analyzing code files...'); const analyses = await this && this.walkDirectory(this && this.projectRoot);
+; // Generate report; this && this.log('📊 Generating quality report...'); const report = this && this.generateReport(analyses);
+; // Save report; await this && this.saveReport(report);
+; const duration = Date && Date.now() - this && this.startTime;
+; // Log summary; this && this.log('\n📊 Code Quality Report Summary: '); this && this.log(`Files analyzed: ${report && report.summary.totalFiles}`); this && this.log(`Total issues: ${report && report.summary.totalIssues}`); this && this.log(`Duration: ${duration}ms`);
+; if (report && report.summary.totalIssues > 0) {; this && this.log('\n🚨 Issues by type: '); Object && Object.entries(report && report.summary.issuesByType).forEach(([type, count]) = > {; this && this.log(` ${type}: ${count}`)});
+; this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)});
+; // If there are many issues and git is clean, suggest running the lint fixer; if (report && report.summary.totalIssues > 50 && isClean) {; this && this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {; this && this.log('✨ Excellent! No code quality issues found!')};
+} catch (error) {; this && this.log(`❌ Error running code quality monitor: ${error && error.message}`); process && process.exit(1)}}};
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 <<<<<<< HEAD
@@ -239,8 +292,14 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 };
 ;
@@ -272,6 +331,7 @@ monitor.run().catch(error = > {; process.exit(1)});
           });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -284,6 +344,11 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+}};
+monitor && monitor.run().catch(error = > {; process && process.exit(1)});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 <<<<<<< HEAD
@@ -635,10 +700,13 @@ monitor.run().catch(error = > {_; process.exit(1)})
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {,
       this.log(`Error walking directory ${dir}: ${error.message}`),
     };
@@ -661,6 +729,7 @@ monitor.run().catch(error = > {_; process.exit(1)})
         // Count by severity,
         issuesBySeverity[issue.severity]++,
       }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1158,6 +1227,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }),
 <<<<<<< HEAD
 =======
@@ -1178,10 +1249,13 @@ monitor.run().catch(error => {,;
         issuesByType,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         issuesBySeverity,
       },
       files: analyses.filter(analysis => analysis.issues.length > 0),
@@ -1189,6 +1263,7 @@ monitor.run().catch(error => {,;
     };
 ,
     return report,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1205,6 +1280,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -1215,6 +1292,7 @@ monitor.run().catch(error => {,;
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Run the lint-fixer to automatically remove trailing spaces',
@@ -1233,6 +1311,10 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        action: 'Run the lint-fixer to automatically remove trailing spaces',
+      }),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 <<<<<<< HEAD
 =======
@@ -1246,6 +1328,7 @@ monitor.run().catch(error => {,;
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1266,6 +1349,10 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        action: 'Replace console statements with proper logging or remove them',
+      }),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 =======
         action: 'Replace console statements with proper logging or remove them',
@@ -1286,6 +1373,7 @@ monitor.run().catch(error => {,;
         message: 'Remove unused imports',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
       }),
 =======
@@ -1302,6 +1390,10 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        action: 'Clean up unused imports to reduce bundle size',
+      }),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 ,
     if (totalIssues > 100) {,
@@ -1311,15 +1403,19 @@ monitor.run().catch(error => {,;
         message: 'High number of code quality issues detected',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
 ,
     return recommendations,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1334,6 +1430,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 <<<<<<< HEAD
 =======
@@ -1352,10 +1450,13 @@ monitor.run().catch(error => {,;
       if (!fs.existsSync(reportDir)) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         fs.mkdirSync(reportDir, { recursive: true }),
       };
 ,
@@ -1363,6 +1464,7 @@ monitor.run().catch(error => {,;
       this.log(`Report saved to: ${this.reportFile}`),
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1379,6 +1481,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 <<<<<<< HEAD
@@ -1399,6 +1503,7 @@ monitor.run().catch(error => {,;
         cwd: this.projectRoot,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         encoding: 'utf8',
 =======
 <<<<<<< HEAD
@@ -1410,6 +1515,9 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        encoding: 'utf8',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
 ,
       if (status.trim()) {,
@@ -1461,6 +1569,7 @@ monitor.run().catch(error => {,;
       if (!fs.existsSync(logsDir)) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursive: true }),
 =======
 <<<<<<< HEAD
@@ -1474,6 +1583,9 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        fs.mkdirSync(logsDir, { recursive: true }),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       };
 <<<<<<< HEAD
 =======
@@ -1513,6 +1625,7 @@ monitor.run().catch(error => {,;
       if (report.summary.totalIssues > 0) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
 <<<<<<< HEAD
@@ -1529,6 +1642,11 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        this.log('\n🚨 Issues by type: '),
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+          this.log(`  ${type}: ${count}`),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }),
 =======
           this.log(`  ${type}: ${count}`),        }),
@@ -1565,10 +1683,13 @@ monitor.run().catch(error => {,;
         if (report.summary.totalIssues > 50 && isClean) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
         };
       } else {,
@@ -1578,6 +1699,7 @@ monitor.run().catch(error => {,;
     } catch (error) {,
       this.log(`❌ Error running code quality monitor: ${error.message}`),
       process.exit(1),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1596,6 +1718,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 };
@@ -1603,6 +1727,7 @@ monitor.run().catch(error => {,;
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1620,6 +1745,10 @@ monitor.run().catch(error => {,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  process.exit(1),
+}),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }}
 <<<<<<< HEAD
 =======
@@ -2085,6 +2214,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2112,9 +2242,18 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 monitor.run().catch(error = > {; process.exit(1)});
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  process.exit(1)
+}),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

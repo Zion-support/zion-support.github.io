@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/healthcare-ai-solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +69,8 @@ export default function HealthcareAISolutions() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/healthcare-ai-solutions.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function HealthcareAISolutions() {
@@ -234,6 +237,7 @@ return (
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/healthcare-ai-solutions.tsx
 <<<<<<< HEAD
 =======
@@ -292,3 +296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/healthcare-ai-solutions.tsx
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

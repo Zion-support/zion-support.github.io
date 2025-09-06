@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD
 
@@ -17,10 +18,13 @@ export const config = {
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 responseLimit: false,
   },
 };
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -37,6 +41,8 @@ export default async function handler(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
@@ -84,6 +90,7 @@ export const config = {;
   api: {
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 =======
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -108,6 +115,10 @@ if (req && req.method !== "GET")
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (
     !companyId |;
     typeof companyId !== "string" |
@@ -118,6 +129,7 @@ if (req && req.method !== "GET")
   }
 ;
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -136,6 +148,8 @@ if (req && req.method !== "GET")
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== 'GET')
     return res.status(405).json({ error: 'method_not_allowed' });
 
@@ -148,16 +162,21 @@ res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     "Content-Disposition"
     `attachment; filename="invoice-${invoiceId}.pdf"`
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
   res.status(200).send(pdfBuffer);
 
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 
@@ -201,6 +220,9 @@ responseLimit: false}};
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -211,12 +233,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 ;
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.;
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
@@ -229,9 +254,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).send(pdfBuffer)
 
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ;
 ========
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -241,12 +270,15 @@ export const config = {;
     response_limit: false
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export default async /**
  * handler - Function description
@@ -306,6 +338,7 @@ export const config = {;
     response_limit: false
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 =======
@@ -315,6 +348,9 @@ export const config = {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   } catch (error) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -322,6 +358,7 @@ export const config = {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -345,9 +382,14 @@ export const config = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

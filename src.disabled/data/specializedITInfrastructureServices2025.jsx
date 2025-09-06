@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
 =======
 <<<<<<< HEAD
@@ -31,3 +32,6 @@ export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [""
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

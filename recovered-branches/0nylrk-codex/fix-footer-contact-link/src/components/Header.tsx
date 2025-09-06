@@ -27,7 +27,10 @@ export { HeaderComponent as Header };
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+import { Header, as, HeaderComponent  } from './header / Header';
 export { HeaderComponent as Header }
+
+
 
 export { HeaderComponent as Header };
 =======
@@ -37,9 +40,12 @@ export { HeaderComponent as Header }
 export { HeaderComponent as Header };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header, as, HeaderComponent } from "./header/Header";
+
+import { Header, as, HeaderComponent } from "./header/Header";
 export { HeaderComponent as Header }
 ;
 export { HeaderComponent as Header };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +64,5 @@ export { HeaderComponent as Header };
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

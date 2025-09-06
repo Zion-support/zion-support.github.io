@@ -33,6 +33,7 @@ export interface HelpArticle {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   last_updated: string;
   tags: string[];
@@ -83,21 +84,35 @@ export interface HelpCategory {;
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   lastUpdated: string;
   tags: string[];
 }
 
 export interface HelpCategory {;
 
+<<<<<<< HEAD
 
 }
 
 export interface HelpCategory {;
 
+=======
+  lastUpdated: string;
+  tags: string[];
+}
+
+export interface HelpCategory {;
+}
+
+export interface HelpCategory {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   articles: HelpArticle[]
@@ -112,11 +127,14 @@ export interface SupportTicket {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   articles: HelpArticle[];
 }
 
 
 
+<<<<<<< HEAD
 
 
 export interface SupportTicket {;
@@ -217,3 +235,20 @@ export interface SupportTicket {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface SupportTicket {;
+
+
+  id: string;
+  user_id: string;
+  subject: string;
+  message: string;
+  status: "open" | "in - progress" | "resolved" | "closed";
+  priority: "low" | "medium" | "high";
+  createdAt: string;
+  updatedAt: string;
+}
+;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

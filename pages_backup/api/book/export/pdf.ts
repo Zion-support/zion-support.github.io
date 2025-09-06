@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/pdf.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,10 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/pdf.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import puppeteer from 'puppeteer',;
 export const config = {
   api: {
@@ -55,6 +60,7 @@ args: ['--no-sandbox', '--disable-setuid-sandbox'],
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/pdf.ts
 <<<<<<< HEAD
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
@@ -112,6 +118,8 @@ export default async function handler(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/pdf.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const pdfBuffer = await page.pdf({
       format: pageSize === 'A4' ? 'A4' : 'Letter',
       printBackground: true,
@@ -131,12 +139,16 @@ const pdfBuffer = await page.pdf({
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/pdf.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/pdf.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}

@@ -658,8 +658,12 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD
 monitor.run();
 <<<<<<< HEAD
 =======
 monitor.run();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

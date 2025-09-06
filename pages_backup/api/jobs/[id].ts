@@ -1,9 +1,13 @@
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -24,16 +28,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -55,8 +67,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title
       description
       category
@@ -123,7 +138,10 @@ if (job.status = status as Job["status"]) {
     return;
   }
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -210,8 +228,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title
       description
       category
@@ -221,7 +242,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       deliveryDeadlineIso
       status
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       res.status(403).json({ error: 'Forbidden' });
       return
@@ -238,10 +262,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -270,11 +298,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
   } catch (error) {
@@ -282,12 +315,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
   if (req.method === "PATCH") {
@@ -298,6 +334,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       res.status(403).json({ error: 'Forbidden' });
 return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -335,6 +375,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 <<<<<<< HEAD
 res.setHeader("Allow", "GET, PATCH");
@@ -356,13 +397,22 @@ res.setHeader("Allow", "GET, PATCH");
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

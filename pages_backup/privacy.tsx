@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -39,6 +40,8 @@ import MainLayout from '../components/layout/MainLayout';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -50,6 +53,10 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -101,7 +108,10 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -127,8 +137,13 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
+=======
+
+} from 'lucide-react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 } from 'lucide-react';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
@@ -166,20 +181,28 @@ import {
       ]
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       icon: <Eye className='w-6 h-6' />,
     },
@@ -236,14 +259,20 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from "react";
 import Head from "next/head";
@@ -260,6 +289,7 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 
 =======
@@ -268,10 +298,18 @@ origin/automation-improvements-final
 
 
 
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/automation-improvements-final
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
@@ -282,6 +320,15 @@ export default function PrivacyPage() {;
 
 
 
+=======
+export default function PrivacyPage() {
+export default function PrivacyPage() {;
+  return (
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -292,7 +339,10 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -305,8 +355,11 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
@@ -337,7 +390,10 @@ import { motion } from 'framer-motion';
 return (
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
@@ -351,6 +407,7 @@ return (
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 
 <<<<<<< HEAD
@@ -375,6 +432,13 @@ return (
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -384,7 +448,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -680,6 +747,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
           {/* Privacy Principles */  } catch (error) {
@@ -1006,6 +1074,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Questions About Privacy?
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 =======
@@ -1022,18 +1092,23 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1047,6 +1122,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -1055,6 +1132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1067,11 +1145,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1084,6 +1168,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
                 <h3 className="text-xl font-semibold mb-4">
@@ -1098,6 +1184,7 @@ origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1108,6 +1195,10 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -1120,6 +1211,7 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1137,6 +1229,10 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1145,6 +1241,7 @@ origin/automation-improvements-final
                   <li>Operating system</li>
                 </ul>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 
@@ -1173,6 +1270,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
               </motion.div>
@@ -1226,6 +1334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   improve our services.
                 </p>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
@@ -1252,6 +1361,12 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+origin/automation-improvements-final
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1261,6 +1376,7 @@ origin/automation-improvements-final
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 
@@ -1289,6 +1405,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1296,6 +1423,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1318,10 +1446,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1347,6 +1483,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1372,6 +1510,7 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1381,10 +1520,16 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1405,6 +1550,12 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+origin/automation-improvements-final
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1423,6 +1574,7 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1458,6 +1610,10 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1665,6 +1821,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1676,10 +1833,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-sm text-gray-600 mt-8">
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -1692,11 +1852,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 main
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Last updated: January 2024
                 </p>
               </div>
@@ -1704,18 +1869,26 @@ main
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
     </MainLayout>;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+    </MainLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1743,6 +1916,7 @@ export default /**
  */
 function PrivacyPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1800,10 +1974,16 @@ function PrivacyPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1812,6 +1992,8 @@ function PrivacyPage() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
@@ -1853,6 +2035,7 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1865,10 +2048,15 @@ function PrivacyPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1877,6 +2065,8 @@ function PrivacyPage() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
@@ -1887,6 +2077,7 @@ function PrivacyPage() {
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1899,10 +2090,15 @@ function PrivacyPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1911,6 +2107,8 @@ function PrivacyPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -2424,6 +2622,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact'
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
                     <User className='w-5 h-5' />                    Contact Form
@@ -2437,6 +2636,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </MainLayout>;
   );
 }
@@ -2456,6 +2659,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <User className="w-5 h-5" />
                     Contact Form
                   </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2490,6 +2694,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+                    <User className='w-5 h-5' />
+                    Contact Form
+                  </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>
               </motion.div>
             </div>
@@ -2497,6 +2709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>
       </Layout>
     </ErrorBoundary>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 
@@ -2521,17 +2734,29 @@ export default PrivacyPage;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 };
 
 export default PrivacyPage;
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 =======
 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+<h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
@@ -2558,6 +2783,7 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2574,6 +2800,8 @@ export default PrivacyPage;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
@@ -2599,6 +2827,7 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/privacy.tsx
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
@@ -2630,3 +2859,14 @@ main
 export default PrivacyPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+main
+
+
+
+);
+};
+export default PrivacyPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -17,11 +17,14 @@
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Resend} from "npm: resend@2 ;
 
 
 const corsHeaders = {}
   "Access-Control-Allow-Origin": "*""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,11 +48,25 @@ interface SendNewsletterRequest {
 
 interface SendNewsletterRequest {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface SendNewsletterRequest {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   subject: string;
   preview_text: string;
   body: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+interface SendNewsletterRequest {
+  subject: string;
+  previewText: string;
+  body: string;
+  testMode?: boolean
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Resend } from "npm: resend@2.0.0",
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -61,6 +78,7 @@ import { Resend } from "npm: resend@2.0.0",
 =======
 
 
+<<<<<<< HEAD
 
 
 
@@ -90,6 +108,8 @@ import { Resend } from "npm: resend@2.0.0",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 =======
@@ -103,6 +123,7 @@ interface SendNewsletterRequest {}
   subject: string,
   previewText: string,
   body: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   testMode?: boolean,
@@ -137,6 +158,58 @@ serve(async (req) => {"
   try {}
     if (!resendApiKey) {"
       throw new Error("Resend API key is not set in environment variables")
+=======
+  testMode?: boolean,
+  testEmail?: string
+}
+serve(async (req) => {
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
+    if (!resendApiKey) {
+      throw new Error("Resend API key is not set in environment variables")
+    }
+
+    const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
+
+    // If test mode, send to test email only
+    if (testMode && testEmail) {
+      const emailResponse = await resend && resend.emails.send({
+        from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
+        to: [testEmail],
+
+        subject: `[TEST] ${subject}`;
+        html: body
+        text: previewText});
+
+
+      return new Response(JSON && JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+
+    const resend = new Resend(resendApiKey),
+    const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest,
+
+    // If test mode, send to test email only
+    if (testMode && testEmail) {
+      const emailResponse = await resend.emails.send({
+        from: "Zion Marketplace <newsletter@ziontechgroup.com>",
+        to: [testEmail],
+        subject: `[TEST] ${subject}`,
+        html: body,
+        text: previewText}),
+
+      return new Response(JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+
+        subject: `[TEST] ${subject}`;
+        html: body
+        text: previewText});
+      return new Response(JSON && JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+        status: 200})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
@@ -206,6 +279,7 @@ serve(async (req) => {"
       id: "test-email-id"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       message: "Email would be sent to all subscribers in production"
 <<<<<<< HEAD
 
@@ -228,6 +302,11 @@ serve(async (req) => {"
 =======
       message: "Email would be sent to all subscribers in production"      status: 500})
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      message: "Email would be sent to all subscribers in production"
+
+      status: 500})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 });
 
@@ -301,6 +380,7 @@ serve(async (req) => {;"
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       status: 500});
 
 <<<<<<< HEAD
@@ -328,6 +408,11 @@ serve(async (req) => {;"
       status: 500})
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      status: 500});
+
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -337,16 +422,22 @@ serve(async (req) => {;"
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       status: 500})
   }
 });
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   test_mode?: boolean,
   test_email?: string;
 }
@@ -409,6 +500,7 @@ if ( {) {}
 <<<<<<< HEAD
   }
 });
+;
   }
 });
 ;
@@ -507,6 +599,7 @@ status: 200
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -520,3 +613,7 @@ status: 200
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
@@ -87,6 +88,8 @@ const InitPage: NextPage = () => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState  } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = any;
@@ -99,12 +102,16 @@ setState(prev => ({
     }));
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = async (e: React.FormEvent) => {
 =======
   const handleSubmit = async (e: React.FormEvent) => {}
@@ -116,6 +123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages_backup/zion/init.tsx
     try {
       const res = await fetch('/api/deploy/genesis', {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -334,6 +342,8 @@ const InitPage: NextPage = () => {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(state),
@@ -356,12 +366,16 @@ body: JSON.stringify(state),
           Initialize a full Zion OS instance from a single control panel.
         </p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
@@ -649,6 +663,7 @@ const InitPage: NextPage = () => {}
             </div>
           </div>
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
@@ -667,6 +682,8 @@ const InitPage: NextPage = () => {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <label className='block text-sm font-medium'>Governance Mode</label>
             <select
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
@@ -679,6 +696,7 @@ const InitPage: NextPage = () => {}
               }
             >
               <option>Admin</option>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -688,6 +706,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
@@ -699,6 +720,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -738,6 +760,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+<section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Logo URL</label>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <input
 =======
 
@@ -751,6 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ...state,;
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -785,10 +814,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+=======
               }
             />;
           </div>;
           <div>;
+            <label className='block text-sm font-medium'>Primary Color</label>;
+            <input
+              type='color'
+              className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+              }
+            />;
+          </div>;
+          <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -811,10 +851,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -829,10 +872,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -874,6 +920,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+                  <input
+                    type='checkbox'
+                    checked={state && state.modules[key]}
+                    onChange={() => handleToggle('modules', key)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   />
                   <span>/{key}</span>
                 </label>
@@ -885,12 +937,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='space-y-2'>
               {Object.keys(state.bonusModules).map(key => (
                 <label key={key} className='flex items-center gap-3 text-sm'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input
 =======
                   <input'
@@ -898,6 +954,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     type='checkbox'
                     checked={state && state.bonusModules[key]}'
                     onChange={() => handleToggle('bonusModules', key)}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
                   />                  <span>/{key}</span>;
@@ -1025,6 +1082,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
 <<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
+=======
+                  />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span>/{key}</span>
 =======
 
@@ -1049,6 +1110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
 =======
@@ -1122,6 +1184,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+        </section>
+
+<div className='flex items-center gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <button
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
@@ -1186,6 +1254,7 @@ export default InitPage;
   }
 }
           </button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
 =======
@@ -1207,6 +1276,8 @@ export default InitPage;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {error && <span className='text-sm text-red-500'>{error}</span>}
         </div>
       </form>
@@ -1216,12 +1287,16 @@ export default InitPage;
           <pre className='mt-2 text-xs whitespace-pre-wrap'>
             {JSON.stringify(result, null, 2)}
           </pre>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/zion/init.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
       )  } catch (error) {
     console.error("Error:", error);
@@ -1261,6 +1336,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default InitPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -1291,3 +1367,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

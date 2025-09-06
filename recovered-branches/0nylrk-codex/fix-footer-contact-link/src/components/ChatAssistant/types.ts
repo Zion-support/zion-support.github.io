@@ -46,16 +46,23 @@ export interface Message {};
 
 export interface Message {;
 
-export interface Message {export interface Message {;
+
+export interface Message {;
+
 
 export interface Message {
 export interface Message {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,12 +89,18 @@ export interface Recipient {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Recipient {;
   id: string;
   name: string;
   avatarUrl?: string;
   role?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +123,10 @@ export interface Recipient {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Message {;
   id: string,;'
   role: 'user' | 'assistant',;
@@ -120,6 +137,7 @@ export interface Message {;
 ;
 export interface Recipient {;
   id: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   name: string,;
@@ -161,13 +179,28 @@ export interface Recipient {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   name: string,;  avatarUrl?: string;
+=======
+  name: string,;
+
+  avatarUrl?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   role?: string;
 }
 
+
+  avatar_url?: string;
+  role?: string;
+}
+
+;
+
+;
+;
 export interface Recipient {
   id: string;
   name: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
@@ -193,3 +226,5 @@ export interface Recipient {};
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

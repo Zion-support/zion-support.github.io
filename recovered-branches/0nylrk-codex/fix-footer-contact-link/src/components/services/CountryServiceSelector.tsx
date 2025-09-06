@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -131,8 +132,33 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+import {
+  onsiteServicePricing,
+  CountryPricing,
+} from "@/data/onsiteServicePricing";
+import { CountrySelector } from "./CountrySelector";
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
+interface CountryServiceSelectorProps {
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+export function CountryServiceSelector({
+  onCountryChange,
+  selectedCountry: initialCountry,
+}: CountryServiceSelectorProps) {
+  return (
+    <div className="space-y-6">
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+        <CountrySelector
+          onCountryChange={onCountryChange || (() => {})}
+          selectedCountry={initialCountry || null}
+        />
 
+<<<<<<< HEAD
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
@@ -145,6 +171,8 @@ import { ServiceDetails } from "./ServiceDetails",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
@@ -199,8 +227,22 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+  );
+}
+;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;
@@ -261,6 +303,7 @@ selectedCountry?: CountryPricing | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -278,3 +321,5 @@ selectedCountry?: CountryPricing | null;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

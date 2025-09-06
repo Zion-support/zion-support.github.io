@@ -7,6 +7,7 @@ const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,16 +25,27 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -41,6 +53,8 @@ const corsHeaders = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
@@ -62,9 +76,15 @@ serve(async (req) => {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
 <<<<<<< HEAD
 
+=======
+  try {
+      return new Response(
+        JSON.stringify({ error: "Bio must be at least 20 characters long" });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -83,6 +103,7 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -175,10 +196,20 @@ serve(async (req) => {;
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    const { bio, skills, title, name } = await req && req.json();
+
+    const { bio, skills, title, name } = await req.json(),
+
+
+    if (!bio || bio && bio.length < 20) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -199,23 +230,44 @@ serve(async (req) => {;
 =======
   try {      return new Response(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+
+      return new Response(
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Create a request to OpenAI API
+<<<<<<< HEAD
 =======
     // Create a request to OpenAI API;
 '
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    // Create a request to OpenAI API
+
+    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',
       headers: {'
         'Authorization': `Bearer ${OPENAI_API_KEY}`;'
         'Content-Type': 'application/json'};
 <<<<<<< HEAD
+<<<<<<< HEAD
       body: JSON && JSON.stringify({        model: 'gpt-4o-mini';
+=======
+      body: JSON && JSON.stringify({
+
+        model: 'gpt-4o-mini';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         messages: [
           {
             role: 'system'
@@ -253,7 +305,13 @@ serve(async (req) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             Skills: ${skills && skills.join()}
-                        Also, suggest 3-5 additional relevant skills that would complement their existing skills.
+            
+
+            Name: ${name}
+            Title: ${title}
+            Bio: ${bio}
+            Skills: ${skills.join()}
+            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
@@ -352,6 +410,12 @@ if ( {) {}
           }
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        temperature: 0 && 0.7})});
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
 =======
@@ -379,6 +443,7 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -387,11 +452,16 @@ if ( {) {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -416,6 +486,8 @@ if ( {) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
@@ -442,6 +514,7 @@ if ( {) {}
 
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
+
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
 <<<<<<< HEAD
@@ -691,13 +764,159 @@ if ( {) {}
     console.error("Error in profile-summary-generator function:", error),
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+        temperature: 0 && 0.7})});
+    const openAIData = await openAIResponse && openAIResponse.json();
+    if (!openAIData && openAIData.choices || openAIData && openAIData.choices.length === 0) {
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
+    const responseContent = openAIData && openAIData.choices[0].message && message.content;
+      throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
     // Parse the JSON response
     let parsedResponse;
     try {
+<<<<<<< HEAD
       // Find the JSON object in the response    )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      // Find the JSON object in the response
+
+      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
+      
+
+
+      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
+      
+
+      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        parsedResponse = JSON && JSON.parse(jsonMatch[0])
+;
+    const openAIData = await openAIResponse.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("Failed to generate profile content");
+    }
+    // Extract the generated content from the response;
+    const response_content = openAIData.choices[0].message.content;
+;
+    // Parse the JSON response;
+    let parsed_response;
+    try {
+      // Find the JSON object in the response;
+      const json_match = response_content.match (/\{[\s\S]*\}/);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        parsed_response = JSON.parse (json_match[0]);
+      } else {
+        throw new Error ("Could not extract JSON from response");
+      }
+    } catch (e) {
+      } else {
+      }
+    }
+
+    return new Response(
+      JSON.stringify(parsedResponse);
+;
+            Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
+            Return the result as a JSON object with these keys:;
+            {;
+              "summary": "The professional summary text",;
+              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...];
+            }`;
+          }
+        ],;
+        temperature: 0.7})}),;
+    const openAIData = await openAIResponse.json(),;
+    if (!openAIData.choices || openAIData.choices.length === 0) {;
+      throw new Error("Failed to generate profile content");
+    }
+;
+    // Extract the generated content from the response;
+    const responseContent = openAIData.choices[0].message.content,;
+    // Parse the JSON response;
+    let parsedResponse,;
+    try {;
+      // Find the JSON object in the response;
+      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
+      if (jsonMatch) {;
+        parsedResponse = JSON.parse(jsonMatch[0]);
+      } else {;
+        throw new Error("Could not extract JSON from response");
+      }
+    } catch (e) {;
+      console.error("Error parsing OpenAI response:", e),;
+      // Fallback parsing approach if the standard parsing fails;
+      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;
+      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
+      if (summaryMatch && skillsMatch) {;
+        const summary = summaryMatch[1],;
+        const skillsString = skillsMatch[1],;
+        const suggestedSkills = skillsString.split().map(s =>;
+          s.trim().replace(/"/g, '');
+        ).filter(Boolean),;
+        parsedResponse = { summary, suggestedSkills }
+      } else {;
+        throw new Error("Failed to parse the generated content");
+      }
+    }
+;
+    return new Response(;
+      JSON.stringify(parsedResponse),;
+      console && console.error("Error parsing OpenAI response:", e);
+
+      console.error("Error parsing OpenAI response:", e),
+
+      
+      // Fallback parsing approach if the standard parsing fails
+      const summaryMatch = responseContent && responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
+      const skillsMatch = responseContent && responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s);
+      
+      if (summaryMatch && skillsMatch) {
+
+      console.error ("Error parsing OpenAI response:", e);
+;
+      // Fallback parsing approach if the standard parsing fails;
+      const summary_match = response_content.match (/"summary"\s*:\s*"([^"]*)"/);
+      const skills_match = response_content.match (/"suggested_skills"\s*:\s*\[(.*?)\]/s);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        const summary = summary_match[1];
+        const skills_string = skills_match[1];
+        const suggested_skills = skills_string.split ().map (string =>;
+          s.trim ().replace (/"/g, '')).filter (Boolean);
+;
+        parsed_response = { summary, suggested_skills }
+
+      } else {
+        throw new Error ("Failed to parse the generated content");
+      }
+    }
+
+    console && console.error("Error in profile-summary-generator function:", error);
+
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+
+        throw new Error ("Failed to parse the generated content");
+      }
+    }
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
 
 <<<<<<< HEAD
@@ -732,6 +951,8 @@ if ( {) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     
+    console && console.error("Error in profile-summary-generator function:", error);
+
 
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
@@ -751,10 +972,14 @@ if ( {) {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return new Response (
       JSON.stringify (parsed_response);
@@ -770,6 +995,7 @@ if ( {) {}
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -799,6 +1025,22 @@ const corsHeaders = {;'
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;'
+=======
+
+
+
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1',;
+;
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
+;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method === 'OPTIONS') {;
     return new Response(null, { headers:corsHeaders }),;
   }
@@ -807,12 +1049,18 @@ serve(async (req) => {;
     const { bio, skills, title, name } = await req.json(),;
 ;
     if (!bio || bio.length < 20) {;
+<<<<<<< HEAD
       return new Response(;"
         JSON.stringify({ error:"Bio must be at least 20 characters long" }),;'
+=======
+      return new Response(;
+        JSON.stringify({ error:"Bio must be at least 20 characters long" }),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { status:400, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
       ),;
     }
 ;
+<<<<<<< HEAD
     // Create a request to OpenAI API;'
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;'
       method:'POST',;
@@ -830,6 +1078,25 @@ serve(async (req) => {;
           },;
           {;'
             role:'user',;`
+=======
+    // Create a request to OpenAI API;
+    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method:'POST',;
+      headers:{;
+        'Authorization':`Bearer ${OPENAI_API_KEY}`,;
+        'Content-Type':'application/json'},;
+      body:JSON.stringify({;
+        model:'gpt-4o-mini',;
+        messages:[;
+          {;
+            role:'system',;
+            content:`You are a professional AI assistant that helps optimize talent profiles. ;
+            Your task is to create a compelling summary for the talent based on their information;
+            and suggest additional skills that would complement their profile.`;
+          },;
+          {;
+            role:'user',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             content:`Create a professional profile summary (150-200 words) for a talent with the following information:;
             Name:${name}
             Title:${title}
@@ -838,9 +1105,15 @@ serve(async (req) => {;
             ;
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
             Return the result as a JSON object with these keys:;
+<<<<<<< HEAD
             {;"
               "summary":"The professional summary text",;"
               "suggestedSkills":["Skill 1", "Skill 2", "Skill 3", ...];`
+=======
+            {;
+              "summary":"The professional summary text",;
+              "suggestedSkills":["Skill 1", "Skill 2", "Skill 3", ...];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             }`;
           }
         ],;
@@ -848,7 +1121,11 @@ serve(async (req) => {;
 ;
     const openAIData = await openAIResponse.json(),;
     ;
+<<<<<<< HEAD
     if (!openAIData.choices || openAIData.choices.length === 0) {;"
+=======
+    if (!openAIData.choices || openAIData.choices.length === 0) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error("Failed to generate profile content"),;
     }
     ;
@@ -863,6 +1140,7 @@ serve(async (req) => {;
       ;
       if (jsonMatch) {;
         parsedResponse = JSON.parse(jsonMatch[0]),;
+<<<<<<< HEAD
       } else {;"
         throw new Error("Could not extract JSON from response"),;
       }
@@ -871,22 +1149,42 @@ serve(async (req) => {;
       ;
       // Fallback parsing approach if the standard parsing fails;"
       const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;"
+=======
+      } else {;
+        throw new Error("Could not extract JSON from response"),;
+      }
+    } catch (e) {;
+      console.error("Error parsing OpenAI response:", e),;
+      ;
+      // Fallback parsing approach if the standard parsing fails;
+      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
       ;
       if (summaryMatch && skillsMatch) {;
         const summary = summaryMatch[1],;
+<<<<<<< HEAD
         const skillsString = skillsMatch[1],;'
         const suggestedSkills = skillsString.split(',').map(s => ;'"
+=======
+        const skillsString = skillsMatch[1],;
+        const suggestedSkills = skillsString.split(',').map(s => ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           s.trim().replace(/"/g, '');
         ).filter(Boolean),;
         ;
         parsedResponse = { summary, suggestedSkills },;
+<<<<<<< HEAD
       } else {;"
+=======
+      } else {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         throw new Error("Failed to parse the generated content"),;
       }
     }
 ;
     return new Response(;
+<<<<<<< HEAD
       JSON.stringify(parsedResponse),;'
       { headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
     ),;
@@ -921,10 +1219,47 @@ body: JSON.stringify ({'
 }
 }];
 temperature: 0.7;
+=======
+      JSON.stringify(parsedResponse),;
+      { headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
+    ),;
+;
+  } catch (error) {;
+    console.error("Error in profile-summary-generator function:", error),;
+    ;
+    return new Response(;
+      JSON.stringify({ error:error.message }),;
+      { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
+    ),;  }
+}),;
+ const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
+};
+//Handle CORS preflight requests if (req.method === 'OPTIONS') {
+  
+}//Create a request to OpenAI API const openAIResponse = await fetch ('https://api.openai.com/v1/chat/completions', {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  OPENAI API KEY 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: `You are a professional AI assistant that helps optimize talent profiles. Your task is to create a compelling summary for the talent based on their information and suggest additional skills that would complement their profile.` 
+};
+{
+  role: 'user', content: `Create a professional profile summary (150-200 words) for a talent with the following information: Name: $ {
+  name 
+}
+}];
+temperature: 0.7 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }) 
 });
 }//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
 //Parse the JSON response let parsedResponse;
+<<<<<<< HEAD
 try {}
   //Find the JSON object in the response const jsonMatch = responseContent.match (/\ {}
   [\s\S]*\ 
@@ -940,12 +1275,30 @@ return new Response (JSON.stringify ({}
 });
 {}
   status: 500, headers: {'
+=======
+try {
+  //Find the JSON object in the response const jsonMatch = responseContent.match (/\ {
+  [\s\S]*\ 
+}/);
+if (jsonMatch) {
+  parsedResponse = JSON.parse (jsonMatch[0]) 
+}else {
+  ) .filter (Boolean);
+}
+}return new Response (JSON.stringify (parsedResponse);
+return new Response (JSON.stringify ({
+  error: error.message 
+});
+{
+  status: 500, headers: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ...corsHeaders, 'Content-Type': 'application/json' 
 }
 }) 
 }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -961,3 +1314,5 @@ return new Response (JSON.stringify ({}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextResponse } from 'next/server',;
 =======
 
@@ -34,10 +38,15 @@ export function middleware() { return null; }
   return NextResponse.next();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '
 import { NextResponse } from 'next / server','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import { NextResponse } from 'next / server',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextRequest } from 'next / server',
 export /**;
  * middleware - Function description;
@@ -56,6 +65,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -65,6 +75,9 @@ export const config = {matcher: ['/dashboard/dashboard/']}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const config = {matcher: ['/dashboard/dashboard/']}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextResponse } from 'next/server';
 =======
 '
@@ -93,6 +106,7 @@ export function middleware() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   return NextResponse.next ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -202,3 +216,41 @@ export const config = {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+  }
+}
+export const config = {
+  matcher: ['/dashboard / dashboard/']}
+
+
+import { NextResponse } from 'next / server',
+import type { NextRequest } from 'next / server',
+export /**
+ * middleware - Function description
+ */
+function middleware() {
+  const { pathname } = request.next_url,
+  // Check condition
+if ( {) {
+  $2
+}
+    const role = request.cookies.get ('user_role')?.value || 'talent',
+    const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
+    return NextResponse.redirect (new URL (target, request.url));
+  }
+  return NextResponse.next ();
+}
+export const config = {
+  matcher: ['/dashboard / dashboard/']}
+
+;
+export const config = {;
+  matcher: ['/dashboard/dashboard/']};
+;
+export const config = {;
+  matcher: ['/dashboard/dashboard/']};
+;
+export const config = {;
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

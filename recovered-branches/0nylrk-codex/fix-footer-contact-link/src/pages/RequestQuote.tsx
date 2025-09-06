@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -59,6 +60,12 @@ import { Footer } from "@/components/Footer";"
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 export default function RequestQuote() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+export default function RequestQuote() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Header />"
@@ -68,6 +75,7 @@ export default function RequestQuote() {}
       <Footer />
 <<<<<<< HEAD
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +175,10 @@ export default function RequestQuote() {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 import { Header } from '@/components / Header';'
 import { Footer } from '@/components / Footer';'
@@ -179,16 +191,21 @@ function RequestQuote() {}
     <>;
 <<<<<<< HEAD
       <Header />;
+<<<<<<< HEAD
       <div className="min - h-screen bg - zion-blue">;
 =======
       <Header />;"
       <div className="min - h-screen bg - zion - blue">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="min - h-screen bg - zion - blue">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <QuoteRequestForm />;
       </div>;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,10 +226,14 @@ function RequestQuote() {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
   ),;
+<<<<<<< HEAD
 } export default function RequestQuote() { return null; }
 }
 ;
@@ -233,3 +254,10 @@ function RequestQuote() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+} export default function RequestQuote () {
+  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </> 
+  );
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

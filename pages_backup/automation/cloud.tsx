@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/cloud.tsx
 <<<<<<< HEAD
 
@@ -179,6 +180,10 @@ import { useEffect, useState  } from 'react';
 import { useEffect, useState  } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/cloud.tsx
+=======
+import { useEffect, useState  } from 'react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function CloudAutomationHub() {
 =======
 export default function CloudAutomationHub() {}
@@ -212,6 +217,7 @@ export default function CloudAutomationHub() { return null; }
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/automation/cloud.tsx
 <<<<<<< HEAD:pages/automation/cloud.tsx
 <<<<<<< HEAD
@@ -231,6 +237,10 @@ export default function CloudAutomationHub() { return null; }
   }, []);
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/cloud.tsx
+=======
+  }, []);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 =======
 
@@ -414,6 +424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
 =======
@@ -592,3 +603,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/cloud.tsx
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

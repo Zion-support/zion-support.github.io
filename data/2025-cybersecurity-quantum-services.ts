@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export interface CybersecurityQuantumService {
+export interface CybersecurityQuantumService {;
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   description: string;
@@ -14,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -44,10 +53,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   {}
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.','
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
+<<<<<<< HEAD
     techStack: ['
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
@@ -71,6 +89,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
 <<<<<<< HEAD
     compliance: [
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
@@ -146,10 +167,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     icon: '🕵️',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
     compliance: []
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+    techStack: [
+      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
+    ],
+    realImplementation: true,
+
+    implementationDetails:
+      'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
+    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
+    useCases: [
+      'Advanced persistent threat detection'
+      'Malware analysis and classification'
+      'Network security monitoring'
+      'Endpoint threat detection'
+      'Security incident investigation'
+      'Threat intelligence sharing'
+    ]
+    integrations: [
+      'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools'
+    ]
+    support:
+      '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
+    compliance: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,'
     launch_date: '2024 - 02 - 01',
@@ -159,6 +208,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
@@ -166,6 +216,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
 =======
@@ -260,9 +316,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🛡️',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,'
     launch_date: '2024 - 01 - 20',
@@ -272,6 +334,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
@@ -349,10 +412,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🔮',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - purple - 500 to - pink - 600',
     popular: true,'
     launch_date: '2024 - 03 - 01',
@@ -362,6 +431,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
@@ -369,6 +439,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
 =======
@@ -392,6 +468,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -411,6 +493,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1900,
   },;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
 
@@ -561,6 +647,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
+
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -641,6 +733,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '🔍',
 =======
 '
@@ -682,8 +780,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
 '
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];'
@@ -693,13 +796,20 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🔍';
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - green - 500 to - emerald - 600';
     popular: true;'
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
@@ -708,6 +818,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1900;
   }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -732,8 +844,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export interface CybersecurityQuantumService {;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+    rating: 4.8,
+    reviews: 1900;
+  }
+;
+    rating: 4.8,
+    reviews: 1900;
+  }
+
+;
+  }
+];
+export interface CybersecurityQuantumService {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,;
   name: string,;
   tagline: string,;
@@ -996,8 +1126,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,;
     reviews: 1900;
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
@@ -1007,6 +1142,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
 
@@ -1016,3 +1152,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    rating: 4.8,
+    reviews: 1900;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

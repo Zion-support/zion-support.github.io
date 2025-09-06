@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/new.tsx
 <<<<<<< HEAD
 
@@ -36,6 +37,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
@@ -68,6 +71,7 @@ const NewProposal: NextPage = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 const NewProposal: NextPage;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/new.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -82,6 +86,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <Head>
@@ -169,6 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='mt-6 flex items-center justify-between'>
         <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
         <AIAssistant
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/new.tsx
 <<<<<<< HEAD
           buttonLabel="Generate Pitch Based on Profile & Job"
@@ -259,6 +267,8 @@ export default NewProposal;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'
           defaultPrompt={pitchPrompt}
@@ -274,6 +284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='mt-2 w-full rounded-md border p-3'
       />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/new.tsx
 <<<<<<< HEAD
   )
@@ -362,10 +373,13 @@ export default NewProposal,
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 };
 
 export default NewProposal;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/new.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -378,3 +392,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '";`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

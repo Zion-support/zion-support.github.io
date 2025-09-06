@@ -2,6 +2,7 @@
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -22,6 +23,10 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -48,15 +53,22 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Add Node.js globals;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+// Add Node.js globals;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare let __dirname: string;
 declare let process: {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -103,6 +115,7 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -136,12 +149,33 @@ interface ImportMeta {}
 }
 // Global type declarations;
 declare namespace React {}
+=======
+
+
+    PORT?: string;
+  }
+}
+// Badge component type fixes
+declare module '@/components/ui/badge' {
+
+
+interface ImportMetaEnv {
+  readonly VITE_APP_TITLE: string,
+  // add more env variables as needed;
+}
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+// Global type declarations;
+declare namespace React {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   type ReactNode = React.ReactNode,
   type FC < P = {}> = React.FC < P>,
   type FormEvent < T = Element> = React.FormEvent < T>,
   type KeyboardEvent < T = Element> = React.KeyboardEvent < T>,
   type ChangeEvent < T = Element> = React.ChangeEvent < T>;
 }
+<<<<<<< HEAD
 // Type declarations for modules used in Vite configuration;'
 declare module 'vitest / config' {'
   export { define_config } from 'vite';
@@ -241,6 +275,16 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
   export interface BadgeProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
+}
+declare module '@vitejs/plugin-react - swc' {
+  import { Plugin } from 'vite',
+  export default function reactSWC (): Plugin;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   export interface BadgeProps {
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
@@ -248,9 +292,12 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     key?: string | number
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module 'path' {
   export function resolve (...paths: string[]): string,
   export function join (...paths: string[]): string,
@@ -261,6 +308,9 @@ declare module 'lovable - tagger' {
   export function component_tagger (): Plugin;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 // Add Node.js globals;
 declare let __dirname: string,
@@ -271,14 +321,20 @@ declare let process: {
     PORT?: string;
   }
 },
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
   export interface BadgeProps {
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   export const Badge: React.FC < BadgeProps>;
 }
 // FeatureCard type fixes;
@@ -289,6 +345,7 @@ declare module '@/components / FeatureCard' {
     icon: React.ReactNode,
     class_name?: string,
 
+<<<<<<< HEAD
 =======
 declare module 'vitest/config' {;
   export { defineConfig } from 'vite';
@@ -381,6 +438,9 @@ declare module '@/components / ui / badge' {}
 <<<<<<< HEAD
 =======
 // Add Node.js globals;    key?: number | string;
+=======
+    key?: number | string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 // ListingScoreCard type fixes;
@@ -415,6 +475,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -499,10 +560,19 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    key?: string | number;
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -521,11 +591,18 @@ declare module '@/components/ProductListingCard' {;
 declare module '@/components / ProductListingCard' {}
   export interface ProductListingCardProps {}
     listing: any,;
+=======
+
+declare module '@/components / ProductListingCard' {
+  export interface ProductListingCardProps {
+    listing: any,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
   }
   export const ProductListingCard: React.FC < ProductListingCardProps>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -561,9 +638,12 @@ declare module '@/components/ProductListingCard' {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
+declare module '@livekit / components - react' {
   export interface VideoCallProps {
 =======
 
@@ -607,7 +687,9 @@ declare module '@livekit / components - styles' {}
 ;
 '
 declare module '@livekit/components-styles' {;
+
   // Empty stub for the styles;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -615,6 +697,9 @@ declare module '@livekit/components-styles' {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 =======
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 declare module '@livekit/components-react' {;
   export interface VideoCallProps {;
@@ -655,11 +740,15 @@ declare module '@livekit/components-react' {;
   export const LiveKitRoom: React.FC<any>;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -690,3 +779,9 @@ declare module '@livekit/components-styles' {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+declare module '@livekit/components-styles' {;
+  // Empty stub for the styles;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

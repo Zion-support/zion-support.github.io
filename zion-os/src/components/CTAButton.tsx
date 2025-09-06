@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ interface CTAButtonProps {
   on_click?: () => void;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -27,6 +30,7 @@ interface CTAButtonProps {href: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -37,6 +41,8 @@ interface CTAButtonProps {href: string;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export /**;
  * CTAButton - Function description;
@@ -99,6 +105,7 @@ export function CTAButton() { return null; }
     medium: "px-6 py-3 text-base",;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const sizeClasses = {;"
     small: "px-4 py-2 text-sm",;"
@@ -114,6 +121,10 @@ export function CTAButton() { return null; }
     large: "px-8 py-4 text-lg"
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    large: "px-8 py-4 text-lg";
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   return (;
     <Link;

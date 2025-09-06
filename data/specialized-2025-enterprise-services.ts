@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,7 +7,11 @@ import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   tagline: string;
@@ -38,9 +43,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     email: string;
     address: string;
 
+<<<<<<< HEAD
     website: string;
   }
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
   real_implementation: boolean;
   implementation_details: string;
@@ -54,12 +62,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   launchDate: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    website: string;
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   market_advantage: string;
@@ -71,6 +86,12 @@ const contact = {
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
 =======
@@ -86,6 +107,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com';'
   address: '364 E Main St STE 1008 Middletown DE 19709','
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
@@ -121,12 +143,21 @@ const contact = {
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -139,6 +170,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert consultation services',
     ],
     popular: true,
+<<<<<<< HEAD
   marketAdvantage: string
 }
 
@@ -162,6 +194,8 @@ const contact = null;
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/ai-consciousness-research'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -187,9 +221,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
     icon: '🧠',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
 =======
@@ -242,6 +283,12 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Advanced research platform with custom AI models and collaborative research tools',
 =======
 '
@@ -284,6 +331,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum - enhanced ML algorithms',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Quantum optimization solvers',
       'Hybrid quantum - classical computing',
       'Quantum feature selection',
@@ -295,6 +348,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert quantum consulting',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⚛️',
 
       'Multi-quantum backend platform with hybrid computing capabilities',
@@ -371,6 +425,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Code - based cryptography',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Multivariate cryptography',
       'Quantum key distribution',
       'Hybrid encryption systems',
@@ -379,6 +439,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert security consulting',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔒',
 
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
@@ -447,6 +508,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -459,6 +526,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert space consulting',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛰️',
 
       'Custom satellite orchestration platform with AI-powered optimization',
@@ -527,6 +595,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -539,6 +613,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Clinical trial support',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🧬',
 
       'Advanced BCI platform with medical-grade hardware and research tools',
@@ -607,6 +682,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -619,6 +700,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert IoT consultation',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🌐',
 
       'Industrial-grade autonomous IoT platform with AI-powered management',
@@ -755,6 +837,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    id: 'predictive - analytics - engine',
+    name: 'Predictive Analytics Engine',
+    tagline: 'AI - powered predictive insights and forecasting',
+    price: '$2, 199',
+    period: '/month',
+    description:;
+      'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
+    features: [;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -763,7 +858,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
     features: [
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -799,14 +898,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,'
     setup_time: '2 - 3 weeks','
     category: 'Advanced Analytics & AI',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: [
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
     ]
@@ -821,11 +930,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+<<<<<<< HEAD
 
       'Enterprise-grade predictive analytics platform with custom model development',
     launchDate: '2024-05-01',
@@ -867,6 +981,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time predictions',
 =======
 
+<<<<<<< HEAD
     benefits: [;'
       '60% decision accuracy improvement','
       '35% operational cost reduction','
@@ -892,6 +1007,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -909,6 +1028,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
+<<<<<<< HEAD
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -976,10 +1096,20 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
+<<<<<<< HEAD
       'Advanced predictive analytics platform with custom ML model development'
   }
       'Advanced predictive analytics platform with custom ML model development',
   },;
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      'Advanced predictive analytics platform with custom ML model development',
+  },;
+
+
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 ;
@@ -992,6 +1122,41 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+];
+export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+    benefits: [;
+      '60% decision accuracy improvement',
+      '35% operational cost reduction',
+      'Advanced ML algorithms',
+      'Real - time predictions',
+      'Custom model development',
+    ],
+    capabilities: [;
+      'Predictive modeling',
+      'Time series forecasting',
+      'Trend analysis',
+      'Anomaly detection',
+      'Scenario modeling',
+    ],
+    market_advantage:;
+      'Advanced predictive analytics platform with custom ML model development',
+  },
+      'Advanced predictive analytics platform with custom ML model development'
+  }
+];
+;
+export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
+    name: 'Quantum Machine Learning Platform';
+    tagline: 'Quantum - enhanced machine learning and optimization';
+    price: '$4, 499';
+    period: '/month';
+    description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
 =======
@@ -1057,6 +1222,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;'
       'Quantum ML algorithms_quantum optimization_hybrid computing_error correction_research tools';
     ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
@@ -1065,6 +1231,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   // Advanced Cybersecurity Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -1097,9 +1269,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '3 - 4 weeks';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Advanced Cybersecurity';
     real_service: true;'
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];'
@@ -1132,6 +1310,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -1163,9 +1347,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '8 - 12 weeks';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Space Technology';
     real_service: true;'
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];'
@@ -1189,6 +1379,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     capabilities: [;'
       'Autonomous operations_constellation optimization_mission planning_data processing_collision avoidance';
     ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
@@ -1197,6 +1388,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Neural Interface Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -1229,9 +1426,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '12 - 16 weeks';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Neural Technology & BCI';
     real_service: true;'
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];'
@@ -1255,6 +1458,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     capabilities: [;'
       'Neural signal processing_brain - computer communication_cognitive enhancement_medical applications_research tools';
     ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
@@ -1263,6 +1467,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Advanced IoT Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -1295,9 +1505,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '4 - 6 weeks';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Advanced IoT & Edge Computing';
     real_service: true;'
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];'
@@ -1321,6 +1537,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     capabilities: [;'
       'Autonomous management_self - healing networksAI optimization_predictive maintenance_security automation';
     ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
@@ -1329,6 +1546,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Advanced Analytics Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -1364,6 +1587,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -1397,10 +1626,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 export default specializedEnterpriseServices;
 ;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -1415,6 +1647,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export default specializedEnterpriseServices;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 export default specializedEnterpriseServices;
 
@@ -1428,3 +1661,13 @@ export default specializedEnterpriseServices;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+export default specializedEnterpriseServices;
+;
+export default specializedEnterpriseServices;
+
+
+export default specializedEnterpriseServices;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -67,9 +67,14 @@ describe('smoke', () => { it("true is truthy"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 });''
 
 });
+
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"
 
 describe('smoke'
   it('true is truthy'

@@ -123,6 +123,7 @@ export interface SearchSuggestion {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SearchHighlight {
 =======
 export interface SearchHighlight {};
@@ -155,6 +156,18 @@ export interface SearchHighlight {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface SearchHighlight {
+  before: string;
+  match: string;
+  after: string;
+}
+export interface FilterOptions {
+  productTypes: {
+    label: string;
+    value: string;
+  }[];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   locations: {
 =======
   locations: {}
@@ -169,6 +182,7 @@ export interface SearchHighlight {;
   ratingOptions: number[];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -176,11 +190,16 @@ export interface SearchHighlight {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface SearchSuggestion {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +221,16 @@ export interface SearchSuggestion {;
 }
 ;
 <<<<<<< HEAD
+=======
+}
+
+export interface SearchSuggestion {;
+  text:string,;
+  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
+  iconUrl?:string;
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface SearchHighlight {;
   before:string,;
   match:string,;
@@ -243,6 +272,7 @@ export interface FilterOptions {;
   ratingOptions: number[];
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -250,6 +280,9 @@ export interface FilterOptions {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export interface SearchSuggestion {
   text: string;

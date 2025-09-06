@@ -40,6 +40,7 @@ export interface FilterSidebarProps {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -78,20 +79,26 @@ export interface FilterSidebarProps {};
   price_range: [number, number];
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  setPriceRange: (range: [number, number]) => void;
+  experience_range: [number, number];
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {}
     skills: boolean;
     availability: boolean;
     region: boolean;
     experience: boolean;
-    price: boolean
-};
+    price: boolean;
+  };
   toggleSection: (sectionName: string) => void;
   sortOption: string;
   setSortOption: (option: string) => void;
   clearFilters: () => void;
   isMobileFilterOpen?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -100,6 +107,9 @@ export interface FilterSidebarProps {};
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     experience: boolean,
     price: boolean;
   }
@@ -127,6 +137,7 @@ export interface FilterComponentProps {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -139,6 +150,9 @@ export interface FilterComponentProps {};
     skills: boolean;
     availability: boolean;
     region: boolean;
+=======
+export interface SkillsFilterProps extends FilterComponentProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     experience: boolean
     price: boolean
@@ -300,6 +314,7 @@ export interface ExperienceFilterProps extends FilterComponentProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   experience_range: [number, number];
@@ -392,12 +407,17 @@ export interface ExperienceFilterProps extends FilterComponentProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export interface PriceFilterProps extends FilterComponentProps {};
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,6 +432,9 @@ export interface PriceFilterProps extends FilterComponentProps {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface FilterSidebarProps {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -445,7 +468,8 @@ export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
 
-}  searchTerm: string
+}
+  searchTerm: string
 
 }
 export interface SearchFilterProps {
@@ -483,6 +507,7 @@ export interface SortFilterProps {;
 export interface SearchFilterProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface SearchFilterProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -512,3 +537,49 @@ export interface SearchFilterProps {}
 
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+;
+export interface FilterComponentProps {;
+  expanded:boolean,;
+  toggleSection:() => void,;
+  isMobileFilterOpen?:boolean;
+}
+;
+export interface SkillsFilterProps extends FilterComponentProps {;
+  selectedSkills:string[],;
+  toggleSkill:(skill:string) => void;
+}
+;
+export interface AvailabilityFilterProps extends FilterComponentProps {;
+  selectedAvailability:string[],;
+  toggleAvailability:(availability:string) => void;
+}
+;
+export interface RegionFilterProps extends FilterComponentProps {;
+  selectedRegions:string[],;
+  toggleRegion:(region:string) => void;
+}
+;
+export interface ExperienceFilterProps extends FilterComponentProps {;
+  experienceRange:[number, number],;
+  setExperienceRange:(range:[number, number]) => void,;
+}
+;
+export interface PriceFilterProps extends FilterComponentProps {;
+  priceRange:[number, number],;
+  setPriceRange:(range:[number, number]) => void,;}
+;
+export interface SearchFilterProps {;
+  searchTerm:string,;
+  setSearchTerm:(term:string) => void;
+}
+;
+export interface SortFilterProps {;
+  sortOption:string,;
+  setSortOption:(option:string) => void;
+} 
+;
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,11 +37,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +60,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -61,6 +69,7 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 <<<<<<< HEAD
 =======
@@ -73,10 +82,15 @@ function handler() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +123,8 @@ const { companyId } = req && req.query;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   // Check condition
 if ( {) {
@@ -130,6 +146,7 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -251,6 +268,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
@@ -271,9 +295,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res.status(405).json({ error: 'method_not_allowed' });
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/usage.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/usage.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

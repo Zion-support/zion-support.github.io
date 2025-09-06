@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -17,12 +18,15 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -71,10 +75,15 @@ import {useRecordActivity} from './useRecordActivity';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,11 +100,15 @@ export const useUpdateMilestone = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
 import { Milestone, MilestoneStatus } from './types',
+<<<<<<< HEAD
 =======
 
 
@@ -108,11 +121,19 @@ import { Milestone, MilestoneStatus } from './types','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRecordActivity } from './useRecordActivity',
 export const useUpdateMilestone = () => {}
+=======
+import { useRecordActivity } from './useRecordActivity',
+export const useUpdateMilestone = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +169,7 @@ export const useUpdateMilestone = () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -160,10 +182,14 @@ export const useUpdateMilestone = () => {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         .eq('id', milestoneId)
@@ -183,6 +209,9 @@ export const useUpdateMilestone = () => {}
         .select('status')'
         .eq('id', milestoneId)
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        .eq('id', milestoneId)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
         .single(),
@@ -195,6 +224,7 @@ export const useUpdateMilestone = () => {}
       
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -266,6 +296,14 @@ export const useUpdateMilestone = () => {}
         .from('project_milestones')
         .update({ status: newStatus })      return false
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      // Update the milestone status
+      const { error } = await supabase
+        .from('project_milestones')
+        .update({ status: newStatus })
+
+      return false
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } finally {
       setIsSubmitting(false)
     }
@@ -354,6 +392,7 @@ if (throw error) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       toast.success(`Milestone status changed to ${newStatus}`);
@@ -390,6 +429,9 @@ if (throw error) {}
 =======
     } finally {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {}
@@ -397,6 +439,15 @@ if (throw error) {}
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    try {
+      setIsSubmitting(true)
+      const { error } = await supabase
+        .from('project_milestones')
+        .update(data)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return {
 =======
     try {}
@@ -486,18 +537,24 @@ export const useUpdateMilestone = () => {;
     isSubmitting;
 <<<<<<< HEAD
 
+
         .eq('id', milestoneId),
 
       
+<<<<<<< HEAD
 =======
 "
       toast && toast.success("Milestone updated successfully");
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      toast && toast.success("Milestone updated successfully");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
       return true;
     } catch (err: any) {"
       console && console.error("Error updating milestone:", err);"
       toast && toast.error("Failed to update milestone: " + err && err.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -538,6 +595,41 @@ if (throw error) {}
 
     } finally {}
   return {}
+=======
+      return false
+;
+  const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
+    // Check condition
+if (return false) {
+  $2
+}
+    try {
+      setIsSubmitting (true),
+      const { error } = await supabase;
+        .from ('project_milestones');
+        .update (data);
+        .eq ('id', milestone_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Create activity record;
+      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');
+;
+      toast.success ("Milestone updated successfully");
+;
+      return true;
+    } catch (err: any) {
+      console.error ("Error updating milestone:", err);
+      toast.error ("Failed to update milestone: " + err.message),
+      return false;
+    } finally {
+
+;
+
+  return {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updateMilestoneStatus;
     update_milestone;
     is_submitting;
@@ -546,6 +638,7 @@ if (throw error) {}
   }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -680,10 +773,15 @@ isSubmitting
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 };
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -697,3 +795,5 @@ isSubmitting
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

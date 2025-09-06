@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -35,10 +36,15 @@ export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export type ReviewStatus = "pending" | "approved" | "rejected";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Review {
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +76,10 @@ export interface Review {;
 
 export interface Review {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export interface Review {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -88,6 +98,7 @@ export interface Review {};
   report_count: number;
   reviewer_profile?: {}
     display_name: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     avatar_url?: string;
@@ -120,7 +131,13 @@ export interface ReviewReport {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     avatar_url?: string
 };
+=======
+    avatar_url?: string;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
+
 
 export interface ReviewReport {;
 <<<<<<< HEAD
@@ -132,16 +149,22 @@ export interface ReviewReport {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 export interface ReviewReport {export interface ReviewReport {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 export interface ReviewReport {export interface ReviewReport {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export interface ReviewReport {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,10 +242,13 @@ export interface ReviewReport {};
   reporter_id: string;
   reason: string;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   status: "pending" | "resolved" | "dismissed";
   created_at: string;
   resolved_at?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -234,3 +260,5 @@ export interface ReviewReport {};
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

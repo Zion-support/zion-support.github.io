@@ -83,6 +83,7 @@ export default function Jest.config({ }: Jest.configProps) {}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 }
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,3 +131,6 @@ export default function Jest.config({ }: Jest.configProps) {}
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 <<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 <<<<<<< HEAD:pages/api/wallet/burn.ts
@@ -37,6 +38,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/wallet/burn.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const { userId, amount, reason, feature, metadata } = req.body || {},
   if (!userId) return res.status(400).json({ error: "userId required" });
@@ -88,6 +91,7 @@ export default function handler(req, res) {
 }
   }
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -97,13 +101,24 @@ export default function handler(req, res) {
     return res.status (200).json ({ tx });
   } catch (err: any) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 =======
 ========
+=======
+;
+    return res.status(400).json({ error: err.message })
+
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { burnTokens, burnForFeature } from "../../../utils/token/service"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     return res.status(400).json({ error: err.message })
 
@@ -133,6 +148,7 @@ import { burnTokens, burnForFeature } from "../../../utils/token/service"
 =======
   }
 };
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -141,3 +157,6 @@ import { burnTokens, burnForFeature } from "../../../utils/token/service"
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/wallet/burn.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

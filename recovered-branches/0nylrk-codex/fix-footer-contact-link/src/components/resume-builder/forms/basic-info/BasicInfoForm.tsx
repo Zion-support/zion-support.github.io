@@ -16,6 +16,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from "react";"
 import {useForm} from "react-hook-form";"
@@ -28,19 +29,28 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";"
 import {PersonalInfoFields} from "./PersonalInfoFields";"
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  onSave: (data: BasicInfoFormData) => void,;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
 <<<<<<< HEAD
 
+
 export function BasicInfoForm(): any ({;
+
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -93,11 +103,28 @@ export function BasicInfoForm({};
   resumeId;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+export function BasicInfoForm(): any ({;
+
+  resumeId;
+
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+  onComplete?: () => void
+}
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   resumeId,
   initialData = {},
   onSave,
@@ -105,15 +132,19 @@ export function BasicInfoForm({};
   yearsExperience = 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -132,6 +163,10 @@ export function BasicInfoForm({};
       hourlyRate: 0
       ...initialData}});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       fullName: "",
       title: "",
       email: "",
@@ -139,6 +174,7 @@ export function BasicInfoForm({};
       location: "",
       website: "",
       linkedin: "",
+<<<<<<< HEAD
 =======
 
 
@@ -213,6 +249,21 @@ import React, { useState, useEffect } from "react",;
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      github: "",
+      hourlyRate: 0,
+      ...initialData}}),
+
+
+
+  useEffect(() => {
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any)
+
+import React, { useState, useEffect } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
@@ -250,7 +301,41 @@ export function BasicInfoForm({;
   initialData = {},;
   onSave,;
   skills = [],;
-  yearsExperience = 0,;  }, [initialData, form]),;
+  yearsExperience = 0,;
+
+  onComplete;
+}: BasicInfoFormProps) {;
+  const form = useForm<BasicInfoFormData>({;
+    resolver: zodResolver(basicInfoSchema),;
+    defaultValues: {;
+      fullName: "",;
+      title: "",;
+      email: "",;
+      phone: "",;
+      location: "",;
+      website: "",;
+      linkedin: "",;
+      github: "",;
+      hourlyRate: 0,;
+      ...initialData}});
+
+  useEffect(() => {;
+    if (initialData) {;
+      Object && Object.entries(initialData).forEach(([key, value]) => {;
+        if (value !== undefined) {;
+
+          form.setValue(key as keyof BasicInfoFormData, value as any);
+
+
+        }
+      });
+    }
+
+
+
+  };
+
+  }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
@@ -263,6 +348,7 @@ export function BasicInfoForm() { return null; }
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -278,6 +364,11 @@ export function BasicInfoForm() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
     <Form {...form}>;"
@@ -289,6 +380,77 @@ export function BasicInfoForm() { return null; }
           <div className="pt-4 border-t border-gray-200">;"
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+  };
+
+  }, [initialData, form]),;
+
+  const handleSubmit = (data: BasicInfoFormData) => {;
+          form && form.setValue(key as keyof BasicInfoFormData, value as any);
+        }
+      });
+    }
+  }, [initialData, form]);
+  const handleSubmit = (data: BasicInfoFormData) => {;
+
+import React, { useState, useEffect } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Button } from "@/components/ui/button",;
+import { Form } from "@/components/ui/form",;
+import { Card } from "@/components/ui/card",;
+import { RateOptimizationSection } from "../RateOptimizationSection",;
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;
+import { PersonalInfoFields } from "./PersonalInfoFields",;
+import { ContactFields } from "./ContactFields",;
+;
+export interface BasicInfoFormProps {;
+  resumeId?:string,;
+  initialData?:Partial<BasicInfoFormData>,;
+  onSave:(data:BasicInfoFormData) => void,;
+  skills?:string[],;
+  yearsExperience?:number,;
+  onComplete?:() => void;
+}
+;
+export function BasicInfoForm({;
+  resumeId,;
+  initialData = {},;
+  onSave,;
+  skills = [],;
+  yearsExperience = 0,;
+  onComplete;
+} BasicInfoFormProps) {;
+  const form = useForm<BasicInfoFormData>({;
+    resolver:zodResolver(basicInfoSchema),;
+    defaultValues:{;
+      fullName:"",;
+      title:"",;
+      email:"",;
+      phone:"",;
+      location:"",;
+      website:"",;
+      linkedin:"",;
+      github:"",;
+      hourlyRate:0,;
+      ...initialData}}),;
+;
+      ...initialData}}),;
+  useEffect(() => {;
+    if (initialData) {;
+      Object.entries(initialData).forEach(([key, value]) => {;
+        if (value !== undefined) {;
+
+
+
+
+  return (
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <RateOptimizationSection
 =======
 
@@ -352,6 +514,7 @@ export function BasicInfoForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -359,9 +522,13 @@ export function BasicInfoForm() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               yearsExperience={yearsExperience || 0}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {}
@@ -372,9 +539,11 @@ export function BasicInfoForm() { return null; }
   }
   };
 
+
         }
       });
     }
+
 
   }, [initialData, form]),;
 
@@ -402,6 +571,7 @@ export function BasicInfoForm() { return null; }
               yearsExperience={yearsExperience || 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -415,6 +585,9 @@ export function BasicInfoForm() { return null; }
 "
               location={form.getValues("location")}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              location={form.getValues("location")}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               rateType="hourly"
             />
           </div>
@@ -424,6 +597,7 @@ export function BasicInfoForm() { return null; }
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -440,16 +614,28 @@ export function BasicInfoForm() { return null; }
 
               yearsExperience={yearsExperience || 0}"
               location={form && form.getValues("location")}"
+=======
+  )
+
+              yearsExperience={yearsExperience || 0}
+              location={form && form.getValues("location")}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               rateType="hourly"
             />;
           </div>;
         </Card>;
+<<<<<<< HEAD
 "
         <div className="flex justify-end">;"
+=======
+
+        <div className="flex justify-end">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button type="submit">Save Basic Information</Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
 
 
 
@@ -463,6 +649,12 @@ export function BasicInfoForm() { return null; }
 =======
   )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -511,6 +703,7 @@ function BasicInfoForm() {}
       ...initial_data}});
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -620,3 +813,7 @@ if (initialData) {
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

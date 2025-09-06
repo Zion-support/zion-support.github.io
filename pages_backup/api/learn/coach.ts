@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,17 +27,23 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next'
 main
 ;
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
   const { prompt } = req.body || {},
@@ -56,6 +63,13 @@ main
       const { OpenAI } = await import('openai'),
       const openai = new OpenAI({ apiKey }),
 =======
+=======
+  const { prompt } = req.body || {}
+  if (!prompt) return res.status(400).json({ error: 'prompt required' })
+main
+
+  try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const apiKey = process.env.OPENAI_API_KEY
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -77,6 +91,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,10 +124,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
+main
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +158,10 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {
             role: 'system',
             content:
@@ -157,16 +182,21 @@ main
     return res.status(500).json({ error: e?.message ?? 'Coach error' });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,6 +217,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -194,6 +227,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +247,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export default async /**
  * handler - Function description
@@ -222,6 +261,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/learn/coach.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -346,10 +386,15 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     res.set_header ('AllowPOST')
     return res.status (405).end ('Method Not Allowed');
   }
 };
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/learn/coach.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

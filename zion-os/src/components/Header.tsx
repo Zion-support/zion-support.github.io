@@ -140,6 +140,7 @@ export default function Header() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -154,6 +155,9 @@ export default function Header() {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 Services;
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -191,6 +195,7 @@ export default function Header() {;
                 Services;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
 =======
@@ -201,6 +206,10 @@ export default function Header() {;
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
+                  <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </svg>;
               </button>;
               <div className=&quot;absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 20 rounded - xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0 & quot;>;
@@ -214,6 +223,7 @@ export default function Header() {;
                     >;
                       <div className=&quot;flex items - center justify - between & quot;>;
                         <span>{service.name}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
@@ -287,6 +297,18 @@ export default function Header() {;
 =======role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;    >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                        <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
+                          <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
+                        </svg>;
+                      </div>;
+                    </Link>))}
+      role="banner"
+      aria-label="Main navigation"
+role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;
+    >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
 
@@ -348,15 +370,22 @@ export default function Header() {;
                 className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
                 aria-expanded=&quot;false&quot;
                 aria-haspopup=&quot;true&quot;
-                aria-label=&quot;Services menu&quot;              </Link>
+                aria-label=&quot;Services menu&quot;
+              </Link>
             ))}
 ;
             {/* Services Dropdown */}
+<<<<<<< HEAD
             <div className="relative group">              <button 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <div className="relative group">
+<div className=&quot;relative group&quot;>
+              <button 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -422,6 +451,7 @@ export default function Header() {;
           </nav>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* CTA Button */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +472,19 @@ export default function Header() {;
 =======
           {/* CTA Button */}            <Link
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {/* CTA Button */}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="mobile-menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              {isMenuOpen ? (
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+<div className=&quot;hidden lg:flex items-center space-x-4&quot;>
+            <Link
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               aria-label="Get started with Zion Tech Group"
@@ -508,8 +551,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+            aria-expanded={isMenuOpen}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 =======
 
@@ -526,6 +574,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 =======
@@ -537,6 +586,10 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -658,6 +711,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   {item.name}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -677,6 +731,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {services.map((service) => (
                   <Link
                     key={service.name}

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -31,6 +32,13 @@ import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+=======
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
@@ -53,9 +61,13 @@ interface ServiceProfileData {}
   title: string;
   bio: string;
 
+<<<<<<< HEAD
 "
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",";
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";"
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 <<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
@@ -66,6 +78,7 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -82,6 +95,8 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ServiceProfileData {
 =======
 
@@ -92,6 +107,7 @@ interface ServiceProfileData {}
   name: string,
   title: string,
   bio: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   services?: string[],
@@ -130,19 +146,42 @@ serve(async (req) => {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  services?: string[],
+  location: string
+}
+serve(async (req) => {
+  try {
+    // CORS headers
+
+    const headers = {
+
+
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+      "Content-Type": "application/json"},
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Handle CORS preflight request
     if (req && req.method === "OPTIONS") {
       return new Response(null, { headers, status: 204 })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const reqData = await req && req.json();
     const providerData = reqData && reqData.providerData as ServiceProfileData;
     
+<<<<<<< HEAD
     // Validate input;
     if (!providerData || !providerData && providerData.bio) {}
       return new Response(
@@ -150,11 +189,21 @@ serve(async (req) => {}
   services?: string[],
 
 <<<<<<< HEAD
+=======
+    // Validate input
+    if (!providerData || !providerData && providerData.bio) {
+
+      return new Response(
+        JSON && JSON.stringify({
+  services?: string[],
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const reqData = await req.json(),
     const providerData = reqData.providerData as ServiceProfileData,
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Handle CORS preflight request
@@ -169,11 +218,14 @@ serve(async (req) => {}
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Validate input
     if (!providerData |!providerData.bio) {
       return new Response(
         JSON.stringify({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -199,12 +251,16 @@ serve(async (req) => {}
 "
           error: "Missing required service provider data"}),"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          error: "Missing required service provider data"}),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
   name: string,;
   title: string,;
   bio: string,;
   services?: string[],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,6 +277,9 @@ interface ServiceProfileData {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  location: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 serve (async (req) => {}
   try {}
@@ -265,9 +324,34 @@ if ( {) {}
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 <<<<<<< HEAD
     if (!apiKey) {
-      return new Response(        { headers, status: 500 }
+      return new Response(
+
+    // Get OpenAI API key from environment;
+    const api_key = Deno.env.get ("OPENAI_API_KEY");
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+
+          error: "OpenAI API key not configured"});
+          error: "OpenAI API key not configured"}),
+;
+    // Get OpenAI API key from environment;
+    const apiKey = Deno.env.get("OPENAI_API_KEY"),;
+    if (!apiKey) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "OpenAI API key not configured"}),;
+
+        { headers, status: 500 }
       );
-    }        { headers, status: 500 }
+    }
+        { headers, status: 500 }
+      )
+    }
+        { headers, status: 500 }
       );
     }
 <<<<<<< HEAD
@@ -353,6 +437,8 @@ if ( {) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+    ${providerData.services && providerData.services.length > 0
     ${providerData.services && providerData.services.length > 0 
 =======
 
@@ -366,7 +452,12 @@ if ( {) {}
     Current Bio: ${providerData && providerData.bio}
 <<<<<<< HEAD
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
-      ? `Current Services: ${providerData && providerData.services.join(", ")}`      : "No services listed yet."}
+      ? `Current Services: ${providerData && providerData.services.join(", ")}`
+      : "No services listed yet."}
+    Focus on highlighting their unique value proposition, expertise, and professionalism.
+
+
+      : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     Only respond with JSON in this exact format: {
@@ -375,29 +466,54 @@ if ( {) {}
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     `;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    `;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     `,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    `,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       body: JSON.stringify({
+=======
+
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+
+
+      body: JSON.stringify({
+
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`;
+        "Content-Type": "application/json"};
+      body: JSON && JSON.stringify({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         model: "gpt-4";
         messages: [
           {
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -446,6 +562,14 @@ if ( {) {}
 =======
     `;    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        model: "gpt-4";
+        messages: [
+          {
+            role: "system"
+    const prompt = `;
+    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     1. A concise yet compelling professional summary (max 250 words);
     2. A list of 5 - 10 specific services they could offer based on their description;
     Service Provider Name: ${provider_data.name}
@@ -472,6 +596,7 @@ if ( {) {}
         messages: [;
           {"
             role: "system",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -589,6 +714,73 @@ if ( {) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+            content: "You are an expert at creating professional service descriptions for marketplaces."}
+          {
+            role: "user"
+            content: prompt}];
+
+
+            role: "system",
+            content: "You are an expert at creating professional service descriptions for marketplaces."},
+          {
+            role: "user",
+            content: prompt}],
+        temperature: 0.7,
+        max_tokens: 800})}),
+
+    const responseData = await response.json(),
+    
+
+
+    if (!response.ok) {
+      console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON.stringify({
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
+    if (!response.ok) {
+      console.error("OpenAI API error:", responseData),
+      return new Response(
+        JSON.stringify({
+          error: "Failed to generate enhanced profile content"
+          error: "Failed to generate enhanced profile content",
+          details: responseData});
+        { headers, status: 500 }
+      )
+    }
+    try {
+      const content = responseData.choices[0].message.content;
+      const parsedContent = JSON.parse(content);
+      return new Response(
+        JSON.stringify({
+          summary: parsedContent.summary
+          services: parsedContent.services});
+          error: "Failed to generate enhanced profile content",
+          details: responseData}),
+    ${providerData.services && providerData.services.length > 0;
+      ? `Current Services: ${providerData.services.join(", ")}`;
+      : "No services listed yet."}
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
+    if (!response && response.ok) {
+      console && console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON && JSON.stringify({
+          error: "Failed to generate enhanced profile content",
+
+          details: responseData});
+          details: responseData});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     const response_data = await response.json ();
 ;
@@ -758,6 +950,7 @@ if ( {) {}
 =======
         { headers, status: 500 }
       );
+<<<<<<< HEAD
     }    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -765,6 +958,104 @@ if ( {) {}
       );
     }    try {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    }
+        { headers, status: 500 }
+      );
+    }
+;
+    Focus on highlighting their unique value proposition, expertise, and professionalism.;
+    Only respond with JSON in this exact format:;
+    {;
+      "summary": "Professional summary goes here...",;
+      "services": ["Service 1", "Service 2", "Service 3", ...];
+    }
+    `,;
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method: "POST",;
+      headers: {;
+        Authorization: `Bearer ${apiKey}`,;
+        "Content-Type": "application/json"},;
+      body: JSON.stringify({;
+        model: "gpt-4",;
+        messages: [;
+          {;
+            role: "system",;
+            content: "You are an expert at creating professional service descriptions for marketplaces."},;
+          {;
+            role: "user",;
+            content: prompt}],;
+        temperature: 0.7,;
+        max_tokens: 800})}),;
+    const responseData = await response.json(),;
+    if (!response.ok) {;
+      console.error("OpenAI API error:", responseData),;
+      return new Response(;
+        JSON.stringify({;
+          error: "Failed to generate enhanced profile content",;
+          details: responseData}),;
+        { headers, status: 500 }
+      );
+    }
+;
+    try {;
+      const content = responseData.choices[0].message.content,;
+      const parsedContent = JSON.parse(content),;
+      return new Response(;
+        JSON.stringify({;
+          summary: parsedContent.summary,;
+          services: parsedContent.services}),;
+    try {
+        { headers, status: 500 }
+      );
+    }
+
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      
+
+          error: "Failed to generate enhanced profile content",
+
+        { headers, status: 200 }
+      )
+    } catch (error) {
+      console.error("Error parsing AI response:", error),
+
+      return new Response(
+    try {
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      return new Response(
+          error: "Failed to parse AI response"
+          raw: responseData.choices[0]?.message?.content});
+          error: "Failed to parse AI response",
+          error: "Failed to parse AI response",
+          raw: responseData.choices[0]?.message?.content});
+          raw: responseData.choices[0]?.message?.content}),
+      );
+    } catch (error) {;
+      console.error("Error parsing AI response:", error),;
+      return new Response(;
+        JSON.stringify({;
+          error: "Failed to parse AI response",;
+          raw: responseData.choices[0]?.message?.content}),;
+        JSON && JSON.stringify({
+          summary: parsedContent && parsedContent.summary,
+          services: parsedContent && parsedContent.services});
+      const content = response_data.choices[0].message.content;
+      const parsed_content = JSON.parse (content);
+;
+      return new Response (
+        JSON.stringify ({
+          summary: parsed_content.summary,
+          services: parsed_content.services});
+        { headers, status: 200 }
+      );
+    } catch (error) {
+
+        JSON && JSON.stringify({
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
@@ -788,6 +1079,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -804,6 +1096,12 @@ if ( {) {}
 =======
           raw: response_data.choices[0]?.message?.content});          raw: response_data.choices[0]?.message?.content});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+          raw: response_data.choices[0]?.message?.content});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { headers, status: 500 }
       );
     }
@@ -831,6 +1129,7 @@ if ( {) {}
           "Access - Control - Allow - Origin": "*"},
         status: 500;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -844,9 +1143,29 @@ if ( {) {}
         status: 500;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
+
+        error: "Internal server error"}),
+      { 
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"}, 
+        status: 500 
+  } catch (error) {;
+    console.error("Function error:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error: "Internal server error"}),;
+      {;
+        headers: {;
+          "Content-Type": "application/json",;
+          "Access-Control-Allow-Origin": "*"},;
+        status: 500;
         error: "Internal server error"}),
       { 
         headers: {
@@ -903,6 +1222,7 @@ if ( {) {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -919,13 +1239,23 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+=======
+
+
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ;
 
 
 ;
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 ;
 interface ServiceProfileData {;
@@ -939,12 +1269,21 @@ interface ServiceProfileData {;
 serve(async (req) => {;
   try {;
     // CORS headers;
+<<<<<<< HEAD
     const headers = {;"
       "Access-Control-Allow-Origin":"*",;"
       "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type",;"
       "Content-Type":"application/json"},;
 ;
     // Handle CORS preflight request;"
+=======
+    const headers = {;
+      "Access-Control-Allow-Origin":"*",;
+      "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type",;
+      "Content-Type":"application/json"},;
+;
+    // Handle CORS preflight request;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (req.method === "OPTIONS") {;
       return new Response(null, { headers, status:204 }),;
     }
@@ -955,22 +1294,38 @@ serve(async (req) => {;
     // Validate input;
     if (!providerData || !providerData.bio) {;
       return new Response(;
+<<<<<<< HEAD
         JSON.stringify({;"
+=======
+        JSON.stringify({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           error:"Missing required service provider data"}),;
         { headers, status:400 }
       ),;
     }
 ;
+<<<<<<< HEAD
     // Get OpenAI API key from environment;"
     const apiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!apiKey) {;
       return new Response(;
         JSON.stringify({;"
+=======
+    // Get OpenAI API key from environment;
+    const apiKey = Deno.env.get("OPENAI_API_KEY"),;
+    if (!apiKey) {;
+      return new Response(;
+        JSON.stringify({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           error:"OpenAI API key not configured"}),;
         { headers, status:500 }
       ),;
     }
+<<<<<<< HEAD
 ;`
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const prompt = `;
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
     1. A concise yet compelling professional summary (max 250 words);
@@ -980,12 +1335,18 @@ serve(async (req) => {;
     Business/Service Title:${providerData.title}
     Location:${providerData.location}
     Current Bio:${providerData.bio}
+<<<<<<< HEAD
     ${providerData.services && providerData.services.length > 0 ;"`
       ? `Current Services:${providerData.services.join(", ")}`;"
+=======
+    ${providerData.services && providerData.services.length > 0 ;
+      ? `Current Services:${providerData.services.join(", ")}`;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       :"No services listed yet."}
     ;
     Focus on highlighting their unique value proposition, expertise, and professionalism.;
     Only respond with JSON in this exact format:;
+<<<<<<< HEAD
     {;"
       "summary":"Professional summary goes here...",;"
       "services":["Service 1", "Service 2", "Service 3", ...];
@@ -1004,6 +1365,26 @@ serve(async (req) => {;
             role:"system",;"
             content:"You are an expert at creating professional service descriptions for marketplaces."},;
           {;"
+=======
+    {;
+      "summary":"Professional summary goes here...",;
+      "services":["Service 1", "Service 2", "Service 3", ...];
+    }
+    `,;
+;
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method:"POST",;
+      headers:{;
+        Authorization:`Bearer ${apiKey}`,;
+        "Content-Type":"application/json"},;
+      body:JSON.stringify({;
+        model:"gpt-4",;
+        messages:[;
+          {;
+            role:"system",;
+            content:"You are an expert at creating professional service descriptions for marketplaces."},;
+          {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             role:"user",;
             content:prompt}],;
         temperature:0.7,;
@@ -1011,10 +1392,17 @@ serve(async (req) => {;
 ;
     const responseData = await response.json(),;
     ;
+<<<<<<< HEAD
     if (!response.ok) {;"
       console.error("OpenAI API error:", responseData),;
       return new Response(;
         JSON.stringify({;"
+=======
+    if (!response.ok) {;
+      console.error("OpenAI API error:", responseData),;
+      return new Response(;
+        JSON.stringify({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           error:"Failed to generate enhanced profile content",;
           details:responseData}),;
         { headers, status:500 }
@@ -1031,15 +1419,23 @@ serve(async (req) => {;
           services:parsedContent.services}),;
         { headers, status:200 }
       ),;
+<<<<<<< HEAD
     } catch (error) {;"
       console.error("Error parsing AI response:", error),;
       return new Response(;
         JSON.stringify({;"
+=======
+    } catch (error) {;
+      console.error("Error parsing AI response:", error),;
+      return new Response(;
+        JSON.stringify({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           error:"Failed to parse AI response",;
           raw:responseData.choices[0]?.message?.content}),;
         { headers, status:500 }
       ),;
     }
+<<<<<<< HEAD
   } catch (error) {;"
     console.error("Function error:", error),;
     return new Response(;
@@ -1048,16 +1444,31 @@ serve(async (req) => {;
       { ;
         headers:{;"
           "Content-Type":"application/json",;"
+=======
+  } catch (error) {;
+    console.error("Function error:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error:"Internal server error"}),;
+      { ;
+        headers:{;
+          "Content-Type":"application/json",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           "Access-Control-Allow-Origin":"*"}, ;
         status:500 ;
       }
     ),;  }
 }),;
+<<<<<<< HEAD
  interface ServiceProfileData {}
+=======
+ interface ServiceProfileData {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
 title: string;
 bio: string;
 services?: string[];
+<<<<<<< HEAD
 location: string;
 }try {}
   //CORS headers;
@@ -1108,6 +1519,58 @@ raw: responseData.choices[0]?.message?.content;
 {}
   headers: {"
   "Content-Type" : "application/json";"
+=======
+location: string 
+}try {
+  //CORS headers 
+}const reqData = await req.json ();
+const providerData = reqData.providerData as ServiceProfileData;
+return new Response (JSON.stringify ({
+  if (!apiKey) {
+  return new Response (JSON.stringify ({
+  error: "OpenAI API key not configured" 
+});
+{
+  headers, status: 500 
+}) 
+}const prompt = ` You are an expert in creating professional service profiles. Based on the following information about a service provider, create: 1. A concise yet compelling professional summary (max 250 words) 2. A list of 5-10 specific services they could offer based on their description temperature: 0.7;
+max tokens: 800 
+}) 
+});
+return new Response (JSON.stringify ({
+  error: "Failed to generate enhanced profile content";
+details: responseData 
+});
+{
+  headers, status: 500 
+}) 
+}try {
+  const content = responseData.choices[0].message.content;
+const parsedContent = JSON.parse (content);
+return new Response (JSON.stringify ({
+  summary: parsedContent.summary;
+services: parsedContent.services 
+});
+{
+  headers, status: 200 
+}) 
+}catch (error) {
+  return new Response (JSON.stringify ({
+  error: "Failed to parse AI response";
+raw: responseData.choices[0]?.message?.content 
+});
+{
+  headers, status: 500 
+}) 
+}
+}catch (error) {
+  return new Response (JSON.stringify ({
+  error: "Internal server error" 
+});
+{
+  headers: {
+  "Content-Type" : "application/json";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "Access-Control-Allow-Origin" : "*" 
 };
 }) 
@@ -1118,6 +1581,7 @@ raw: responseData.choices[0]?.message?.content;
   }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1141,3 +1605,5 @@ raw: responseData.choices[0]?.message?.content;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

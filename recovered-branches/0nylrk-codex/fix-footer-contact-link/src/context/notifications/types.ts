@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -67,12 +68,29 @@ export interface Notification extends BaseNotification {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Notification, as, BaseNotification } from "@/types/notifications";
+export type NotificationType =
+  | "message"
+  | "quote_request"
+  | "booking_confirmation"
+  | "hire_request"
+  | "onboarding"
+  | "system";
+
+
+
+export interface Notification extends BaseNotification {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   type: NotificationType;
   action_url?: string;
   action_text?: string;
 }
 <<<<<<< HEAD
 export type FilterType =
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,10 +109,13 @@ export interface NotificationContextType {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   | "all"
   | "unread"
   | "messages"
   | "onboarding"
+<<<<<<< HEAD
 =======
 export type FilterType ="
   | "all""
@@ -146,11 +167,23 @@ export interface NotificationContextType {export interface NotificationContextTy
 
 export interface NotificationContextType {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  | "system";
+
+import {Notification, as, BaseNotification} from '@/types / notifications';
+import {Notification, as, BaseNotification} from '@/types / notifications';
+
+
+export interface NotificationContextType {;
+
+export interface NotificationContextType {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
   loading: boolean;
   filter: FilterType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,6 +281,11 @@ export interface NotificationContextType {;
 =======
   markAllAsRead: () => Promise<void>,;  dismissNotification: (id: string) => Promise<void>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  markAsRead: (id: string) => Promise<void>;
+  markAllAsRead: () => Promise<void>;
+  dismissNotification: (id: string) => Promise<void>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 }

@@ -134,9 +134,70 @@ export async function rewardFiveStarReview(userId: string) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+
+
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+<<<<<<< HEAD
     method: 'POST',    method: 'POST',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+}
+export async function rewardReferral(userId: string) {
+  try {
+  await fetch('/functions/v1/token-manager/earn', {
+
+
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+}
+export async function rewardFiveStarReview(userId: string) {
+  try {
+  await fetch('/functions/v1/token-manager/earn', {
+
+
+
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+}
+
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+}
+export async function rewardReferral(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+
+    method: 'POST'
+    headers: { 'Content-Type': 'application/json' }
+
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+}
+export async function rewardFiveStarReview(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+
+    method: 'POST'
+    headers: { 'Content-Type': 'application/json' }
+
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+}
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+    method: 'POST',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 =======
@@ -189,13 +250,47 @@ function reward_referral() { return null; }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export async function rewardFiveStarReview(userId: string) {;
   await fetch('/functions/v1/token-manager/earn', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
 
+
+
 }
+}
+
+;
+export async function rewardOnboarding(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:50, reason:'Completed onboarding' })}),;
+}
+;
+export async function rewardReferral(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:20, reason:'Referral' })}),;
+}
+;
+export async function rewardFiveStarReview(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:10, reason:'5-star review' })}),;
+} 
+}
+}
+;
+}
+;
 export async /**
  * rewardFiveStarReview - Function description
 =======
@@ -219,6 +314,7 @@ function rewardFiveStarReview() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -231,3 +327,5 @@ function rewardFiveStarReview() { return null; }
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

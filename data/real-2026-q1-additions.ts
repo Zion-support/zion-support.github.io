@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   {
@@ -15,12 +18,20 @@
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💬',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -35,6 +46,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Embeddings, Vector DB, Next.js'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
@@ -68,6 +85,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'api - security - posture - monitor',
     name: 'API Security Posture Monitor',
@@ -79,12 +97,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
       'PR annotations and diffs',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛡️',
 
     color: 'from - rose - 600 to - pink - 700',
@@ -92,6 +117,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -103,6 +129,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     market_position: 'Developer - first API security posture','
@@ -127,6 +158,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Flexible cron/rate',
     id: 'edge - cron - orchestrator',
@@ -140,11 +172,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Flexible cron / rate',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⏰',
 
     color: 'from - amber - 500 to - orange - 600',
@@ -152,6 +191,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -162,6 +202,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     market_position: 'Unified schedules across clouds','
@@ -186,6 +231,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'email - parsing - routing - api',
     name: 'Email Parsing & Routing API',
@@ -197,12 +243,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
       'Inspector UI',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📨',
 
     color: 'from - indigo - 600 to - blue - 700',
@@ -210,6 +263,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / email - parsing - routing - api',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -221,6 +275,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     market_position: 'Developer - friendly email ingestion','
@@ -232,6 +291,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Ticket intake', 'CRM capture'],'
     roi: 'Automate manual email triage','
     competitors: ['Mailparser', 'Integromat'],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_size: '$0.8B',
@@ -243,14 +303,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2026 - 01 - 20',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 8,
     rating: 4 && 4.6,
     reviews: 5,
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Brand/tone controls',
     id: 'ai - marketing - content - studio',
@@ -264,11 +331,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Brand / tone controls',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Templates and briefs',
       'Compliance checks',
       'Multi - channel export',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📝',
 
     color: 'from - fuchsia - 600 to - pink - 700',
@@ -276,6 +350,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -286,6 +361,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'AI & Data',
     real_service: true,'
     market_position: 'On - brand AI content for teams','
@@ -310,6 +390,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'CSP/HSTS checks',
     id: 'security - headers - scanner',
@@ -323,11 +404,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CSP / HSTS checks',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Cookie flags',
       'PR annotations',
       'Weekly reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔐',
 
     color: 'from - sky - 600 to - blue - 700',
@@ -335,6 +423,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / security - headers - scanner',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -345,6 +434,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     market_position: 'Simple posture checks for web apps','
@@ -362,9 +456,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '8% CAGR',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,'
@@ -376,6 +476,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'ml - feature - store - starter',
     name: 'ML Feature Store Starter',
@@ -387,12 +488,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
       'Online serving API',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📦',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -400,6 +508,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ml - feature - store - starter',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -411,6 +520,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'AI & Data',
     real_service: true,'
     market_position: 'Lean feature store for teams','
@@ -435,6 +549,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'slo - burn - rate - coach',
     name: 'SLO Burn Rate Coach',
@@ -446,12 +561,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
       'Integrations and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📈',
 
     color: 'from - lime - 500 to - emerald - 600',
@@ -459,6 +581,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -470,6 +593,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Observability',
     real_service: true,'
     market_position: 'SLOs without the complexity','
@@ -481,6 +609,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Error budgets', 'Coaching'],'
     roi: 'Fewer incidents','
     competitors: ['Nobl9'],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_size: '$0.8B',
@@ -492,14 +621,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2026 - 02 - 01',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 10,
     rating: 4 && 4.5,
     reviews: 6,
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'browser - performance - optimizer',
     name: 'Browser Performance Optimizer',
@@ -511,12 +647,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
       'Edge hints',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⚡',
 
     color: 'from - cyan - 600 to - purple - 700',
@@ -524,6 +667,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / browser - performance - optimizer',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -535,6 +679,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     market_position: 'Developer - first CWV improvements','
@@ -546,6 +695,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['CWV, bundle size'],'
     roi: '+20 LCP, fewer regressions','
     competitors: ['SpeedCurve', 'Calibre'],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_size: '$0.5B',
@@ -557,14 +707,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2026 - 02 - 05',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 5,
     rating: 4 && 4.5,
     reviews: 3,
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'cloud - cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
@@ -576,12 +733,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
       'IaC recommendation exports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💸',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -589,6 +753,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -600,6 +765,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Cloud & FinOps',
     real_service: true,'
     market_position: 'Governance overlay for FinOps','
@@ -624,6 +794,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'api - changelog - sdk - publisher',
     name: 'API Changelog & SDK Publisher',
@@ -635,12 +806,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
       'Searchable portal',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📘',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -648,6 +826,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -659,6 +838,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     market_position: 'Ship API portals faster','
@@ -670,6 +854,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Dev portals', 'SDKs'],'
     roi: 'Docs / SDKs 5× faster','
     competitors: ['ReadMe', 'Redocly'],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_size: '$1.5B',
@@ -681,17 +866,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2026 - 02 - 12',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 9,
     rating: 4 && 4.7,
     reviews: 6,
   },
 <<<<<<< HEAD
 ];	{
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -713,11 +911,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Event ingestion, attribution, payout jobs';'
 		launchDate: '2026-01-10';
 		customers: 12;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 7
 =======
 		reviews: 7;
@@ -747,6 +952,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -768,11 +979,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Connectors, clustering, scoring models';'
 		launchDate: '2026-01-12';
 		customers: 9;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -810,11 +1028,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Spec analyzers, runners, annotations';'
 		launchDate: '2026-01-14';
 		customers: 11;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 6
 =======
 		reviews: 6;
@@ -852,11 +1077,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Scheduler API, dashboard, webhooks';'
 		launchDate: '2026-01-18';
 		customers: 7;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -894,11 +1126,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Inbound parsers, queueing, UI';'
 		launchDate: '2026-01-20';
 		customers: 8;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -936,11 +1175,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Template engine, tone guardrails';'
 		launchDate: '2026-01-22';
 		customers: 15;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 9
 =======
 		reviews: 9;
@@ -978,11 +1224,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Scanners, CI annotations, reports';'
 		launchDate: '2026-01-25';
 		customers: 20;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 10
 =======
 		reviews: 10;
@@ -1020,11 +1273,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Schemas, validators, API';'
 		launchDate: '2026-01-28';
 		customers: 6;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -1062,11 +1322,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'SLO calc, alerting, UI';'
 		launchDate: '2026-02-01';
 		customers: 10;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 6
 =======
 		reviews: 6;
@@ -1104,11 +1371,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'RUM SDK, CI checks, UI';'
 		launchDate: '2026-02-05';
 		customers: 5;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -1146,11 +1420,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Connectors, policies, exporters';'
 		launchDate: '2026-02-08';
 		customers: 6;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -1189,19 +1470,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		launchDate: '2026-02-12';
 		customers: 9;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		reviews: 6
 	}
 ];
 		reviews: 6
 	}
 ];
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 		rating: 4 && 4.7,
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 6
 	}
 ];
 
+<<<<<<< HEAD
 
   id: 'affiliate - analytics - starter';
   name: 'Affiliate Analytics Starter',
@@ -1632,6 +1919,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
 
@@ -1639,3 +1927,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

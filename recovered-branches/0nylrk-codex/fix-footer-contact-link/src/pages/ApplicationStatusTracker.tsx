@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -33,10 +34,19 @@ import { Briefcase, Inbox } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { Briefcase, Inbox } from "lucide-react",import { ProtectedRoute } from "@/components/ProtectedRoute";
+=======
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { ApplicationsTracker } from "@/components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Briefcase, Inbox } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
 
+<<<<<<< HEAD
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -164,6 +174,51 @@ function ApplicationStatusTrackerContent() {
 =======
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (
+    <>
+      <SEO
+        title="Application Status Tracker | Zion AI Marketplace"
+        description="Track the status of your job applications in the Zion AI marketplace."
+      />
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+          <div>
+            <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
+              Application Status Tracker
+            </h1>
+            <p className="text-muted-foreground mt-1">
+              Track where you stand in the hiring process
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-6">
+          <Card>
+            <CardHeader className="border-b bg-muted/50">
+              <CardTitle className="flex items-center text-lg">
+                <Inbox className="mr-2 h-5 w-5" /> Your Applications
+              </CardTitle>
+            </CardHeader>
+            <CardContent className={`p-${isMobile ? "3" : "6"}`}>
+              <ApplicationsTracker />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </>
+  );
+}
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function ApplicationStatusTracker() {
 =======
 }
@@ -181,11 +236,14 @@ export default function ApplicationStatusTracker() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -196,12 +254,15 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -209,31 +270,12 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
-          <div>;
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>;
-            <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>;
-          </div>;
-        </div>;
 
-        <div className="grid grid-cols-1 gap-6">;
-          <Card>;
-            <CardHeader className="border-b bg-muted/50">;
-              <CardTitle className="flex items-center text-lg">;
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications;
-              </CardTitle>;
-            </CardHeader>;
-            <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
-              <ApplicationsTracker />;
-            </CardContent>;
-          </Card>;
-        </div>;
-      </div>;
-    </>;
-;
+function ApplicationStatusTrackerContent() {;
+  const isMobile = useIsMobile();
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <>;
@@ -403,12 +445,15 @@ function ApplicationStatusTrackerContent() {
 <<<<<<< HEAD
     </>);
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <ProtectedRoute>
       <AppLayout>
         <ApplicationStatusTrackerContent />
       </AppLayout>
     </ProtectedRoute>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 =======
@@ -417,6 +462,9 @@ function ApplicationStatusTrackerContent() {
 =======
     </>);}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default /**
  * ApplicationStatusTracker - Function description
  */
@@ -426,6 +474,7 @@ function ApplicationStatusTracker() {
 }
 ;
 export default function ApplicationStatusTracker() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (;
@@ -446,17 +495,60 @@ export default function ApplicationStatusTracker() {;
 =======
   return (;      <AppLayout>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (;
+    <ProtectedRoute>;
+      <AppLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
+
     </ProtectedRoute>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
+    </ProtectedRoute>;
+  ),;
+} function ApplicationStatusTrackerContent () {
+  const isMobile = useIsMobile ();
+Application Status Tracker | Zion AI Marketplace"description=" Track the status of your job applications in the Zion AI marketplace."/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"> <div> <h1 className= {
+  `text-$ {
+  isMobile ? '2xl' : '3xl' 
+}font-bold` 
+}>Application Status Tracker</h1> <p className=" text-muted-foreground mt-1">Track where you stand in the hiring process</p> </div> </div> <div className=" grid grid-cols-1 gap-6"> <Card> <CardHeader className=" border-b bg-muted/50"> <CardTitle className=" flex items-center text-lg"> <Inbox className=" mr-2 h-5 w-5" /> Your Applications </CardTitle> </CardHeader> <CardContent className= {
+  `p-$ {
+  isMobile ? '3' : '6' 
+}` 
+}> <ApplicationsTracker /> </CardContent> </Card> </div> </div> </>) 
+}export default function ApplicationStatusTracker () {
+  return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent /> </AppLayout> </ProtectedRoute> 
+    </ProtectedRoute>;
+  );
+}
+;
+}
+
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+      <AppLayout>
+        <ApplicationStatusTrackerContent />
+      </AppLayout>
+    </ProtectedRoute>
+  )
+}
+;
+    </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

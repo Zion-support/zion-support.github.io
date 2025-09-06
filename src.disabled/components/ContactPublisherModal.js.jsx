@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ContactPublisherModal.js.jsx
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -23,6 +24,9 @@ export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) {
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 =======
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
+=======
+export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD

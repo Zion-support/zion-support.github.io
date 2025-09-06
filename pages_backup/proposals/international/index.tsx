@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/international/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +45,8 @@ export default function InternationalProposals() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/international/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list');
@@ -139,12 +142,16 @@ setLoading(false);
       )}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/international/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/international/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -324,6 +331,7 @@ function update_status() {
         </div>
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/proposals/international/index.tsx
 <<<<<<< HEAD
   );
@@ -401,3 +409,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

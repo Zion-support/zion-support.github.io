@@ -13,6 +13,7 @@ export interface Wallet {
 export interface Wallet {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   user_id: string;
+<<<<<<< HEAD
 
   balance: number
   updated_at: string
@@ -54,6 +55,10 @@ export type TransactionType = 'earn' | 'burn';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  balance: number;
+  updated_at: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 export type TransactionType = 'earn' | 'burn';
@@ -92,6 +97,7 @@ export interface TokenTransaction {};
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,6 +152,17 @@ export interface TokenTransaction {;
   user_id: string,;
   amount: number,;
   transaction_type: TransactionType,;  created_at: string;
+=======
+  reason: string | null;
+  created_at: string;
+}
+;
+
+
+export interface Wallet {;
+
+  created_at: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }

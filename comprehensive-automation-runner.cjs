@@ -12,6 +12,7 @@ const path = require('path');
 <<<<<<< HEAD
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -22,6 +23,9 @@ const { execSync } = require('child_process');
 const { execSync, spawn } = require('child_process');
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
@@ -29,20 +33,27 @@ const { execSync, spawn } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -173,9 +184,13 @@ if (require.main === module) {
     
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       // Run all automation steps
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();
@@ -216,6 +231,7 @@ if (require.main === module) {
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   runner.runAllAutomations().catch(error => {
@@ -226,3 +242,6 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationRunner;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

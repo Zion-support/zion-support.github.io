@@ -80,6 +80,7 @@ export async function createJob(jobData: any) {
 =======
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 import {supabase} from "@/integrations/supabase/client";
@@ -117,6 +118,14 @@ import { toast } from "sonner",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export async function createJob(jobData: any) {
+  try {
+    const { data, error } = await supabase
+      .from("jobs")
+      .insert([jobData])
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console && console.error("Error creating job:", error);
 =======
 import { supabase } from "@/integrations/supabase/client";"
@@ -130,6 +139,7 @@ export async function createJob(jobData: any) {}
     console && console.error("Error creating job:", error);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     throw new Error(error && error.message || "Failed to create job")
+
 
       .select()
       .single();
@@ -188,6 +198,7 @@ export async function updateJob(jobId: string, jobData: any) {}
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       .from("jobs")
@@ -325,6 +336,15 @@ if (throw error) {
 =======
 }    return data;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      .from("jobs")
+      .select("*")
+      .eq("id", jobId)
+      .single();
+
+    if (error) throw error;
+    return data;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error: any) {
     console.error("Error fetching job:", error);
 =======
@@ -400,7 +420,6 @@ if (throw error) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
-}  }
 
 }
 ;
@@ -417,6 +436,34 @@ if (throw error) {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+
+  const {
+  data, error 
+}= await supabase 
+}
+}export async function updateJob (jobId: string, jobData: unknown) {
+  try {
+  const {
+  data, error 
+}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();
+}
+}export async function getJobById (jobId: string) {
+  try {
+  const {
+  data, error 
+}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+}
+}
+    if (error) throw error,;
+    return data;
+  } catch (error: any) {;
+    console.error("Error fetching job:", error);
+    toast.error("Failed to load job details");
+    return null;
+  }
+}
+;
+  }
 }
 <<<<<<< HEAD
 }export async function updateJob (jobId: string, jobData: unknown) {

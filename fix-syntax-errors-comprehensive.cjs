@@ -38,7 +38,11 @@ function fixSyntaxErrors(filePath) {
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
     let originalContent = content;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -73,6 +77,7 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
+<<<<<<< HEAD
 
 
 
@@ -81,6 +86,9 @@ function fixSyntaxErrors(content, filePath) {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -92,8 +100,11 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -138,6 +149,9 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 
+=======
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
@@ -195,7 +209,11 @@ async function main() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -235,8 +253,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 <<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -298,6 +320,7 @@ ursor/automate-test-improve-and-merge-code-59d5
   }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -339,3 +362,5 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

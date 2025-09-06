@@ -8,11 +8,13 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 interface MainNavigationProps {;
+
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -30,6 +32,9 @@ import { useAuth } from "@/hooks/useAuth","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { MessageSquare } from "lucide-react",
 ;
+=======
+import { MessageSquare } from "lucide-react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -43,6 +48,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +88,17 @@ interface MainNavigationProps {}
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+interface MainNavigationProps {
+  isAdmin?: boolean,
+  unreadCount?: number,
+  className?: string
+}
+
+
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -94,6 +111,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user,
   const location = useLocation(),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -286,18 +304,49 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   // Add authenticated-only links
 =======
 import { MessageSquare } from "lucide-react",  const links = [
+=======
+  const links = [
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
       name: "Home"
       href: "/"
-      matches: (path: string) => path === "/"    {
+      matches: (path: string) => path === "/"
+
+
+    },
+
+
+    {
+      name: "Marketplace"
+      href: "/marketplace"
+      matches: (path: string) => path.startsWith("/marketplace")
+
+
+    },
+
+
+    {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
 
+
     },
+
+
+    {
+      name: "Talent"
+      href: "/talent"
+      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
+
+
+    },
+
+
     {
       name: "Equipment"
       href: "/equipment"
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/equipment")  // Add authenticated-only links
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -316,6 +365,26 @@ import { MessageSquare } from "lucide-react",  const links = [
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")  // Add authenticated-only links
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      matches: (path: string) => path.startsWith("/equipment")
+
+
+    },
+
+
+    {
+      name: "Community"
+      href: "/community"
+      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
+    }
+
+
+  ],
+  
+
+
+  // Add authenticated-only links
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (isAuthenticated) {
     links.push({
       name: "Dashboard"
@@ -345,6 +414,7 @@ import { MessageSquare } from "lucide-react",  const links = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -356,6 +426,9 @@ import { MessageSquare } from "lucide-react",  const links = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
 =======
@@ -374,32 +447,51 @@ import { MessageSquare } from "lucide-react",  const links = [
                   ? "bg-zion-purple/20 text-zion-cyan""
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { Link, useLocation } from "react-router-dom",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { MessageSquare } from "lucide-react",;
+interface MainNavigationProps {;
+  isAdmin?: boolean,;
+  unreadCount?: number,;
+  className?: string;
+}
+;
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user,;
+  const location = useLocation(),;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const links = [;
     {;
       name: "Home",;
       href: "/",;
-      matches: (path: string) => path === "/"
-};
+      matches: (path: string) => path === "/";
+    };
     {;
       name: "Marketplace",;
       href: "/marketplace",;
-      matches: (path: string) => path && path.startsWith("/marketplace")
-};
+      matches: (path: string) => path && path.startsWith("/marketplace");
+    };
     {;
       name: "Categories",;
       href: "/categories",;
-      matches: (path: string) => path && path.startsWith("/categories")
-};
+      matches: (path: string) => path && path.startsWith("/categories");
+    };
     {;
       name: "Talent",;
       href: "/talent",;
-      matches: (path: string) => path && path.startsWith("/talent") && !path && path.includes("/talent-dashboard")
-};
+      matches: (path: string) => path && path.startsWith("/talent") && !path && path.includes("/talent-dashboard");
+    };
     {;
       name: "Equipment",;
       href: "/equipment",;
-      matches: (path: string) => path && path.startsWith("/equipment")
-};
+      matches: (path: string) => path && path.startsWith("/equipment");
+    };
     {;
       name: "Community",;
       href: "/community",;
@@ -409,7 +501,8 @@ import { MessageSquare } from "lucide-react",  const links = [
 
   // Add authenticated-only links;
   if (isAuthenticated) {;
-    links && links.push({;      name: "Dashboard",;
+    links && links.push({;
+      name: "Dashboard",;
       href: "/dashboard",;
 =======
 "
@@ -453,6 +546,7 @@ export function MainNavigation() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -474,6 +568,13 @@ export function MainNavigation() { return null; }
 
         {links && links.map((link) => (;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+
+        {links && links.map((link) => (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <li key={link && link.name}>;
             <Link;
               to={link && link.href}
@@ -583,6 +684,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
@@ -594,16 +696,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               )}
             >
               {link.name}
             </Link>
           </li>
         ))}
+
+
+
+        {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className={cn(
@@ -611,10 +721,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+              className={cn(
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
                 location && location.pathname === "/messages" || location && location.pathname === "/inbox"
 
+<<<<<<< HEAD
 =======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
@@ -629,10 +744,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
 
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                location.pathname === "/messages" || location.pathname === "/inbox"
+
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               )}
             >
               {link.name}
             </Link>
+<<<<<<< HEAD
           </li>"
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",;
                 link.matches(location.pathname);"
@@ -649,6 +773,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 =======
               className={cn(            </Link>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          </li>
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",;
+                link.matches(location.pathname);
+                  ? "bg-zion-purple/20 text-zion-cyan";
+                  :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";              )}
+            >;
+              {link.name}
+            </Link>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </li>;
         ))}
         {/* Messages link with unread counter */}
@@ -670,6 +804,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
               )}
             >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -941,6 +1076,18 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
               )}
             </Link>
           </li>
+=======
+              <MessageSquare className="w-4 h-4 mr-1" />;
+              Messages;
+              {unreadCount > 0 && (;
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
+                  {unreadCount}
+
+
+
+                </span>;
+              )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </span>;
               )}
             </Link>;
@@ -962,7 +1109,220 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </ul>;
+    </nav>;
+  );
+}
+
+import { Link, use_location } from './react-router-dom';
+import { cn } from '@/lib / utils';
+import { use_auth } from '@/hooks / use_auth';
+import { MessageSquare } from './lucide-react';
+interface MainNavigationProps {
+  is_admin?: boolean;
+  unread_count?: number;
+  class_name?: string;
+}
+export /**
+ * MainNavigation - Function description
+ */
+function MainNavigation() {
+  const { user } = use_auth ();
+  const is_authenticated = !!user;
+  const location = use_location ();
+;
+  const links = [;
+    {
+      name: "Home",
+      href: "/",
+      matches: (path: string) => path === "/";
+    }
+    {
+      name: "Marketplace",
+      href: "/marketplace",
+      matches: (path: string) => path.starts_with ("/marketplace");
+    }
+    {
+      name: "Categories",
+      href: "/categories",
+      matches: (path: string) => path.starts_with ("/categories");
+    }
+    {
+      name: "Talent",
+      href: "/talent",
+      matches: (path: string) => path.starts_with ("/talent") && !path.includes ("/talent - dashboard");
+    }
+    {
+      name: "Equipment",
+      href: "/equipment",
+      matches: (path: string) => path.starts_with ("/equipment");
+    }
+    {
+      name: "Community",
+      href: "/community",
+      matches: (path: string) => path.starts_with ("/community") || path.starts_with ("/forum");
+    }
+  ];
+;
+  // Add authenticated - only links;
+  // Check condition
+if ( {) {
+  $2
+}
+    links.push ({
+      name: "Dashboard",
+      href: "/dashboard",
+      matches: (path: string) => path === "/dashboard" || path === "/client - dashboard" || path === "/talent - dashboard";
+    });
+  }
+  // Add admin - only links;
+  // Check condition
+if ( {) {
+  $2
+}
+    links.push ({
+      name: "Analytics",
+      href: "/analytics",
+      matches: (path: string) => path.starts_with ("/analytics");
+    });
+  }
+  return (
+    <nav className={cn ("ml - 6 hidden md:flex", class_name)}>;
+      <ul className="flex items - center gap - 1">;
+        {links.map ((link) => (
+          <li key={link.name}>;
+            <Link;
+              to={link.href}
+              className={cn (
+                "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors";
+                link.matches (location.pathname);
+                  ? "bg - zion - purple / 20 text - zion - cyan";
+                  : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
+            >;
+              {link.name}
+            </Link>;
+          </li>))}
+        {/* Messages link with unread counter */}
+        {is_authenticated && (
+          <li>;
+            <Link;
+              to="/messages";
+              className={cn (
+                "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative";
+                location.pathname === "/messages" || location.pathname === "/inbox";
+                  ? "bg - zion - purple / 20 text - zion - cyan";
+                  : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
+            >;
+              <MessageSquare className="w - 4 h - 4 mr - 1" />;
+              Messages;
+              {unread_count > 0 && (
+                <span className="absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 5 w - 5 flex items - center justify - center">;
+                  {unread_count}
+                </span>)}
+            </Link>;
+          </li>)}
+      </ul>;
+    </nav>);
+}
+  ),;}
+ interface MainNavigationProps {
+  isAdmin?: boolean;
+unreadCount?: number;
+className?: string 
+}export function MainNavigation ({
+  isAdmin = false, unreadCount = 0, className 
+}: MainNavigationProps) {
+  const {
+  user 
+}= useAuth ();
+const isAuthenticated = !!user;
+const location = useLocation ();
+const links = [ {
+  name: "Home";
+href: "/";
+matches: (path: string) => path === "/" 
+};
+{
+  name: "Marketplace";
+href: "/marketplace";
+matches: (path: string) => path.startsWith ("/marketplace") 
+};
+{
+  name: "Categories";
+href: "/categories";
+matches: (path: string) => path.startsWith ("/categories") 
+};
+{
+  name: "Talent";
+href: "/talent";
+matches: (path: string) => path.startsWith ("/talent") && !path.includes ("/talent-dashboard") 
+};
+{
+  name: "Equipment";
+href: "/equipment";
+matches: (path: string) => path.startsWith ("/equipment") 
+};
+{
+  name: "Community";
+href: "/community";
+matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
+}];
+//Add authenticated-only links if (isAuthenticated) {
+  links.push ({
+  
+}//Add admin-only links if (isAdmin) {
+  links.push ({
+  
+}return (<nav className= {
+  cn ("ml-6 hidden md:flex", className) 
+}> <ul className="flex items-center gap-1" > {
+  links.map ( (link) => (<li key= {
+  link.name 
+}> <Link to= {
+  link.href 
+}className= {
+  cn ("inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
+link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan" 
+}> {
+  link.name 
+}</Link> </li>) ) 
+}{
+  /* Messages link with unread counter */ 
+}{
+  isAuthenticated && (<li> <Link to="/messages" className= {
+  cn () 
+}> <MessageSquare className="w-4 h-4 mr-1" /> Messages {
+  unreadCount 
+}</span>) 
+}</Link> </li>) 
+}</ul> </nav>) 
+}
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              <MessageSquare className="w-4 h-4 mr-1" />
+              Messages
+              {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {unreadCount}
+                </span>
+              )}
+            </Link>
+          </li>
+                </span>;
+              )}
+            </Link>;
+          </li>;
+        )}
+      </ul>
+    </nav>
+  )
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

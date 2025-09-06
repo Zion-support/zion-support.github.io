@@ -12,15 +12,20 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 },export const calculateAICost = async (usage: any) => {
 =======
 
 
 
+=======
+},
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 },
 
+<<<<<<< HEAD
 
 export const calculateAICost = async (usage: any) => {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -73,23 +78,55 @@ export const calculateAICost = async (usage: any) => {;
   return { price: 99, currency: 'USD', success: true   } catch (error) {}
     console.error("Error:", error);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export const calculateAICost = async (usage: any) => {
+  // Placeholder implementation;
+  return { cost: 0, success: true }
+}
+
+
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
+
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
+  return { price: 99, currency: 'USD', success: true }
+},;
+export const calculateAICost = async (usage: any) => {;
+  // Placeholder implementation;
+  return { cost: 0, success: true }
+  return { price: 99, currency: 'USD', success: true   } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 },;
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
   return { cost: 0, success: true   } catch (error) {"
     console.error("Error:", error);"
+=======
+  return { cost: 0, success: true   } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 
+=======
+};
+};
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
 };
 
+<<<<<<< HEAD
 
 
 };
@@ -108,3 +145,6 @@ export const getAIPricing = async (service: string) => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 <<<<<<< HEAD:pages/automation/global-bounties.tsx
 <<<<<<< HEAD
@@ -89,6 +90,8 @@ export default function GlobalBountiesPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/global-bounties.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const items: any[] = (data?.items || []).slice(0, 100);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -110,6 +113,7 @@ export default function GlobalBountiesPage() {
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/global-bounties.tsx
 <<<<<<< HEAD
 =======
@@ -124,11 +128,15 @@ export default function GlobalBountiesPage() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/global-bounties.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </li>
           ))}
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/global-bounties.tsx
 <<<<<<< HEAD
   );
@@ -217,3 +225,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

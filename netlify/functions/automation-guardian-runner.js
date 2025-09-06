@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ function runNode(relPath, args = []) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const abs = path.resolve(__dirname, '....', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
@@ -39,6 +42,16 @@ const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+    return status
+  }
+  // Generate sitemap for crawling
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const abs = path && path.resolve(__dirname, '....', relPath),
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
@@ -61,11 +74,14 @@ exports && exports.handler = async () => {}
     logs && logs.push(`exit=${status}`),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return status
   }
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),  // Build search index if available
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return status
   }
@@ -77,6 +93,12 @@ exports && exports.handler = async () => {}
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    return status
+  }
+  // Generate sitemap for crawling
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   // Build search index if available
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
@@ -95,6 +117,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Commit and pushconst { spawn_sync } = require ('child_process');
 =======
   // Commit and push
+<<<<<<< HEAD
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
@@ -112,9 +135,21 @@ ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+<<<<<<< HEAD
   // Commit and push;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { spawn_sync } = require ('child_process');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
@@ -168,5 +203,9 @@ function log_step() {}`
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

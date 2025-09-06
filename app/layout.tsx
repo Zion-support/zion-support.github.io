@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -7,16 +10,30 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
+=======
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  robots: 'index, follow',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -24,7 +41,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group',
+        alt: 'Zion Tech Group - AI and Technology Solutions',
       },
     ],
     locale: 'en_US',
@@ -32,8 +49,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+<<<<<<< HEAD
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+=======
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     images: ['/og-image.jpg'],
   },
   verification: {
@@ -47,6 +69,7 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: '#000000',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   title: 'Zion Tech Group - AI-Powered Solutions',
@@ -278,3 +301,18 @@ export default function RootLayout({}
   );
 }
 "
+=======
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -58,7 +58,8 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
     headers: { 'Content - Type': 'application / json' },
     body: JSON.stringify ({ text, targets })});
   if (throw new Error ('Translation API failed')) {
-  $2  const res = await fetch('/api/translate', {;
+  $2
+  const res = await fetch('/api/translate', {;
     method: 'POST',;
 =======
 
@@ -70,7 +71,37 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
     body: JSON.stringify({ text, targets })});'
   if (!res.ok) throw new Error('Translation API failed');
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res.json();  } catch (error) {
+=======
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.json ();
+}
+export function getSelectedLanguage (): string {
+  return i18n.resolved_language || i18n.language || 'en';
+}
+
+  const res = await fetch('/api/translate', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ text, targets })});
+  if (!res.ok) throw new Error('Translation API failed');
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export function getSelectedLanguage(): string {;
+  return i18n.resolvedLanguage || i18n.language || 'en';
+  } catch (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

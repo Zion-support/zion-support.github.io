@@ -5,6 +5,7 @@ const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-impor
 console && console.log('Running icon import updater...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -23,6 +24,9 @@ console.log('Running icon import updater...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { exec } from 'child_process',
 import path from 'path',
 =======
@@ -71,6 +75,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
     console.error(`Error executing script: ${error}`),
     return
   }
+<<<<<<< HEAD
   console.log(stdout);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -83,6 +88,9 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
 
   if (stderr) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  if (stderr) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console && console.error(stderr)
   }
 });
@@ -153,6 +161,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console && console.log(stdout);
   if (stderr) {
@@ -180,10 +189,27 @@ exec (`node ${script_path}`, (error, stdout, stderr) => {}
 if ( {) {}
   $2;
 }`
+=======
+});
+
+
+// This is a simple script wrapper to execute our icon update script;
+import {exec} from 'child_process';
+import path from 'path';
+const script_path = path.join (__dirname, '../../scripts / update - icon - imports.js');
+;
+console.log ('Running icon import updater...');
+exec (`node ${script_path}`, (error, stdout, stderr) => {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error (`Error executing script: ${error}`);
     return;
   }
   console.log (stdout);
+<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
@@ -194,6 +220,18 @@ if ( {) {}
 });
 
 <<<<<<< HEAD
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    console.error (stderr);
+  }
+  console.log ('Icon imports updated successfully!');
+});
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // This is a simple script wrapper to execute our icon update script;
 import { exec } from 'child_process',;
 import path from 'path',;
@@ -227,6 +265,7 @@ return
 });
 });
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -240,3 +279,5 @@ return
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

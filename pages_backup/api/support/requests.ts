@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/support/requests.ts
 <<<<<<< HEAD
 =======
@@ -11,8 +12,13 @@ import { readJson, writeJson } from '../../../utils/fsDb',
 >>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb'
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -32,13 +38,12 @@ export default async function handler() { return null; }
     requests.push(record)'
     writeJson('support/requests.json', requests)
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, id })
   }
 <<<<<<< HEAD:pages_backup/api/support/requests.ts
@@ -64,6 +69,7 @@ export default async function handler(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });'
   return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/support/requests.ts
 <<<<<<< HEAD
 
@@ -97,3 +103,7 @@ if ( {) {
 =======
 };'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/requests.ts
+=======
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

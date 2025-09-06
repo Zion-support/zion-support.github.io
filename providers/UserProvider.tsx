@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -43,6 +44,8 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, {;
   createContext,;
   useContext,;
@@ -65,9 +68,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export type UserRole = 'client' | 'talent';
 
 export type User = {
+<<<<<<< HEAD
 id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -81,6 +91,9 @@ export type UserRole = 'client' | 'talent';
 export type User = {};
   id: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   role: UserRole;
 <<<<<<< HEAD
@@ -123,6 +136,7 @@ export interface UserContextType {};
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,6 +305,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {};
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   completeOnboarding: () => void;
 };
 
@@ -306,6 +322,28 @@ id: 'u_001',
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  updateUser: (userData: Partial<User>) => Promise<void>;
+}
+
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (context === undefined) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context;
+};
+
+interface UserProviderProps {
+  children: React.ReactNode;
+}
+
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
@@ -333,6 +371,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       // Mock login logic - replace with actual authentication
@@ -475,6 +514,8 @@ export default UserProvider;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -505,6 +546,7 @@ export function useUser() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -513,3 +555,61 @@ export default UserProvider;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+      // Mock login logic - replace with actual authentication
+      const mockUser: User = {
+        id: '1',
+        name: 'John Doe',
+        email,
+        role: 'client',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const logout = (): void => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
+
+  const updateUser = async (userData: Partial<User>): Promise<void> => {
+    if (!user) return;
+    
+    const updatedUser = {
+      ...user,
+      ...userData,
+      updatedAt: new Date().toISOString(),
+    };
+    
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
+  const contextValue = useMemo(
+    () => ({
+      user,
+      loading,
+      login,
+      logout,
+      updateUser,
+    }),
+    [user, loading]
+  );
+
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+};
+
+export default UserProvider;
+export default UserProvider;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

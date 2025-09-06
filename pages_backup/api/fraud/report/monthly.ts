@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 <<<<<<< HEAD:pages/api/fraud/report/monthly.ts
 <<<<<<< HEAD
@@ -11,6 +12,10 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/report/monthly.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
@@ -79,6 +84,7 @@ export default async function handler() { return null; }
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 <<<<<<< HEAD:pages/api/fraud/report/monthly.ts
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -117,6 +123,11 @@ export default async function handler(
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/report/monthly.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 =======
 
@@ -186,6 +197,7 @@ export default async function handler(req, res) {}
   res.status (200).json (report);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 <<<<<<< HEAD:pages/api/fraud/report/monthly.ts
 <<<<<<< HEAD
@@ -222,6 +234,9 @@ export default async function handler(req, res) {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/report/monthly.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -233,6 +248,7 @@ export default async function handler(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
@@ -264,12 +280,18 @@ export default async function handler(req, res) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/report/monthly.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/report/monthly.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -280,6 +302,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const month = null;
   res.status(200).json(report)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/fraud/report/monthly.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -290,3 +313,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/report/monthly.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

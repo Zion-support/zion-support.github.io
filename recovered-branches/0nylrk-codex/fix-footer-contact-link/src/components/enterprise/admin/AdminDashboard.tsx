@@ -52,11 +52,23 @@ import { UsageStats } from "./UsageStats";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { RoleManagement } from "./RoleManagement";
+import { TeamActivity } from "./TeamActivity";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -94,6 +106,7 @@ import {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -114,6 +127,10 @@ import {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -130,6 +147,7 @@ import {}
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </TabsList>
@@ -169,6 +187,21 @@ import {}
 =======
         </TabsList>        
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        </TabsList>
+
+
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -184,6 +217,7 @@ import {}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -289,10 +323,65 @@ export function AdminDashboard() {;
         </TabsContent>
       </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        <TabsContent value="activity" className="space-y-8">
+          <TeamActivity />
+        </TabsContent>
+      </Tabs>
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
+      <AdminHeader />;
+
+      <Tabs defaultValue="team" className="mt-8">;
+        <TabsList className="grid w-full grid-cols-4 mb-8">;
+    </div>;
+  );
+}
+    </div>
+  )
+import React from "react",;
+import { AdminHeader } from "./AdminHeader",;
+import { TeamManagement } from "./TeamManagement",;
+import { UsageStats } from "./UsageStats",;
+import { RoleManagement } from "./RoleManagement",;
+import { TeamActivity } from "./TeamActivity",;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;
+  TabsTrigger} from "@/components/ui/tabs";
+export function AdminDashboard() {;
+  return (;
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
+      <AdminHeader />;
+      <Tabs defaultValue="team" className="mt-8">;
+        <TabsList className="grid w-full grid-cols-4 mb-8">;
+          <TabsTrigger value="team">Team Management</TabsTrigger>;
+          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
+
+        <TabsContent value="team" className="space - y-8">;
+          <TeamManagement />;
+        </TabsContent>;
+        <TabsContent value="roles" className="space - y-8">;
+          <RoleManagement />;
+        </TabsContent>;
+        <TabsContent value="usage" className="space - y-8">;
+          <UsageStats />;
+        </TabsContent>;
+        <TabsContent value="activity" className="space - y-8">;
+          <TeamActivity />;
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+
 }
+
 }
         ;
 =======

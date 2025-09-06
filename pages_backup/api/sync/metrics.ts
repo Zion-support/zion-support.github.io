@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 <<<<<<< HEAD:pages/api/sync/metrics.ts
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -44,7 +47,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -124,8 +130,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/metrics.ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
@@ -133,7 +142,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   for (const e of events) {
     if (e.type === "token_transfer") {
@@ -149,6 +161,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
   const contributionsBySubject: Record<string, number> = {};
   let globalVotes = 0;
@@ -200,6 +213,8 @@ export default function handler() { return null; }
       const p = e.payload as any,
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
   const topContributors = Object.entries(contributionsBySubject)
@@ -213,6 +228,7 @@ export default function handler() { return null; }
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/metrics.ts
     lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any
@@ -325,6 +341,13 @@ export default function handler(req, res) {}
       const p = e.payload as any
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
+=======
+
+
+
+      const p = e.payload as any
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
@@ -350,6 +373,7 @@ treasuryTotals: totalsByToken,
     lastSyncedAt: state.lastSyncedAt})
 <<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/metrics.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -359,3 +383,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 };'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/metrics.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

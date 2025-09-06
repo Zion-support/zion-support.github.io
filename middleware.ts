@@ -15,6 +15,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function middleware(_request: NextRequest) {
 
   return NextResponse.next();
@@ -84,31 +85,12 @@ export function middleware(_request: NextRequest) {
 =======
 export function middleware(request: NextRequest) {
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+export function middleware(request: NextRequest) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const response = NextResponse.next();
-
-  // Security headers
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set(
-    'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=()'
-  );
-
-  // Content Security Policy
-  const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https:",
-    "font-src 'self'",
-    "connect-src 'self'",
-    "frame-ancestors 'none'",
-  ].join('; ');
-
-  response.headers.set('Content-Security-Policy', csp);
-
   return response;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -118,6 +100,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export const config = {
@@ -132,13 +116,6 @@ export const config = {
 export const config = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 <<<<<<< HEAD

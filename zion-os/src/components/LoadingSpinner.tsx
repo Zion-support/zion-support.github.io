@@ -41,6 +41,7 @@ interface LoadingSpinnerProps {"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -56,6 +57,12 @@ interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
 =======
 =======}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"use client";
+interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
+  className?: string;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export /**
  * LoadingSpinner - Function description
 =======
@@ -95,9 +102,11 @@ function LoadingSpinner() {}
         aria-hidden="true";
 =======
   return (
-    <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;  return (;
+    <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
+  return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
       <svg;
+<<<<<<< HEAD
 =======
       <svg;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -117,12 +126,18 @@ function LoadingSpinner() {}
         fill="none";"
         view_box="0 0 24 24";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        className="animate - spin text - blue - 500";
+        xmlns="http: //www.w3.org / 2000 / svg";
+        fill="none";
+        view_box="0 0 24 24";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         aria - hidden="true";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       >;
 <<<<<<< HEAD
         <circle;
-          className="opacity-25";
+          className="opacity - 25";
           cx="12";
           cy="12";
           r="10";
@@ -130,6 +145,7 @@ function LoadingSpinner() {}
           stroke="currentColor";
 =======
           stroke="current_color";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -157,11 +173,17 @@ function LoadingSpinner() {}
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          stroke_width="4";
+        />;
+        <path;
+          className="opacity - 75";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           fill="current_color";
           d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z";
         />;
       </svg>;
-      <span className="sr-only">Loading...</span>;
+      <span className="sr - only">Loading...</span>;
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

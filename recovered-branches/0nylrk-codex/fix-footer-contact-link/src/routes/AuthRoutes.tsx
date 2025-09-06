@@ -25,6 +25,7 @@ import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const AuthRoutes = () => {
 =======
@@ -39,6 +40,11 @@ const AuthRoutes = () => {import {Fragment} from "react";
 =======
 const AuthRoutes = () => {import {Fragment} from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const AuthRoutes = () => {
+const AuthRoutes = () => {;
+import {Fragment} from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
@@ -159,15 +165,24 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const AuthRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AuthRoutes = () => {;
+<<<<<<< HEAD
 =======
 const AuthRoutes = () => {}
 const AuthRoutes = () => {;
 
   return (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Routes>;
       {/* Auth Routes */}"
       <Route path="/login" element={<Login />} />"
@@ -196,6 +211,7 @@ const AuthRoutes = () => {;
         path="/service-onboarding"
 <<<<<<< HEAD
         element={
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,12 +271,15 @@ export default AuthRoutes;
 =======
         element={}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <ServiceOnboarding />
           </ProtectedRoute>
         }
       />
     </Routes>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
@@ -270,10 +289,20 @@ export default AuthRoutes;
 =======
     </Routes>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
+
+
+};
+};
+
+
 
 },
 
+<<<<<<< HEAD
 =======
 };
 
@@ -319,6 +348,27 @@ export default AuthRoutes;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+export default AuthRoutes;
+
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import Login from "@/pages / Login";
+import Signup from "@/pages / Signup";
+import ForgotPassword from "@/pages / ForgotPassword";
+import UpdatePassword from "@/pages / UpdatePassword";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import Onboarding from "@/pages / Onboarding";
+import TalentOnboarding from "@/pages / TalentOnboarding";
+import ServiceOnboarding from "@/pages / ServiceOnboarding";
+const AuthRoutes = () =>: any {
+  return (
+    <Routes>;
+      {/* Auth Routes */}
+export default AuthRoutes;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 },;
 ;
@@ -343,6 +393,7 @@ export default AuthRoutes;
   );
 },;
 export default AuthRoutes;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -359,3 +410,5 @@ export default AuthRoutes;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

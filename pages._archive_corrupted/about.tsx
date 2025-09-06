@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,6 +13,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+const \"About\": NextPage = () => {
+const \"About\": NextPage = () => {
+const \"About\": NextPage = () => {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+const \"About\": NextPage = () => {;
+import React from 'react';
+import Link from 'next/link';
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { Users, Target, Award, Globe, Shield, Zap } from 'lucide-react';
+const "About": NextPage = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 =======
@@ -197,6 +233,7 @@ const "About": NextPage = () => {
       \"image\": \'/team/david.jpg\'
     }
   ];
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
@@ -369,6 +406,7 @@ const "About": NextPage = () => {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,6 +453,10 @@ const "About": NextPage = () => {;
 =======
   ];  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  ];
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;
@@ -487,6 +529,7 @@ export default function AboutPage() {;
 =======
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -500,6 +543,8 @@ export default function AboutPage() {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ].map((v) => (;
               <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
                 <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
@@ -626,6 +671,7 @@ export default function AboutPage() {;
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="text-gray-600">{stat.label}</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,6 +728,10 @@ export default function AboutPage() {;
 =======
                 <div className="text-gray-600">{stat.label}</div>              </div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -747,6 +797,7 @@ export default function AboutPage() {;
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </main>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -800,6 +851,12 @@ export default function AboutPage() {;
 =======
     </main>      {/* Values Section */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </main>
+
+
+      {/* Values Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -808,6 +865,7 @@ export default function AboutPage() {;
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -893,6 +951,15 @@ export default function AboutPage() {;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value) => (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -927,6 +994,73 @@ export default function AboutPage() {;
               technology solutions
             </p>
           </div>
+      <section className=\"py-20 bg-gray-50\">;
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
+          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
+            {stats && stats.map((stat) => (;
+              <div key={stat && stat.label} className=\"text-center\">;
+                <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat && stat.number}</div>;
+                <div className=\"text-gray-600\">{stat && stat.label}</div>;
+              <div key={stat && stat.label} className="text-center">;
+                <div className="text-4xl font-bold text-blue-600 mb-2">{stat && stat.number}</div>;
+                <div className="text-gray-600">{stat && stat.label}</div>;
+              </div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+      <section className="py-20 bg-gray-50">;
+        <div className="container mx-auto px-4 text-center">;
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>;
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+            Let’s discuss how we can help transform your business.;
+          </p>;
+          <div className="flex flex-col "sm": flex-row justify-center gap-4">;
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
+              Get in Touch;
+            </Link>;
+            <Link href="/careers" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
+              Join Our Team;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </main>;
+      {/* Values Section */}
+      <section className=\"py-20\">;
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
+          <div className=\"text-center mb-16\">;
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Values</h2>;
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
+              The principles that guide everything we do and shape our company culture;
+            </p>;
+          </div>;
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {values && values.map((value) => (;
+              <div key={value && value.title} className=\"text-center\">;
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;
+                  <value && value.icon className=\"h-8 w-8\" />;
+                </div>;
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
+                  {value && value.title}
+                </h3>;
+                <p className=\"text-gray-600\">;
+                  {value && value.description}
+                </p>;
+              </div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Team Section */}
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1044,6 +1178,7 @@ export default function AboutPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1096,6 +1231,9 @@ export default function AboutPage() {;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -1194,6 +1332,7 @@ export default function AboutPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -1215,6 +1354,8 @@ export default function AboutPage() {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -1350,6 +1491,7 @@ export default function AboutPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -1376,6 +1518,10 @@ export default function AboutPage() {;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1468,6 +1614,7 @@ export default function AboutPage() {;
     </MainLayout>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -1486,10 +1633,13 @@ export default function AboutPage() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1514,6 +1664,10 @@ export default function AboutPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+    <>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
@@ -1526,6 +1680,7 @@ export default function AboutPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1587,6 +1742,8 @@ export default function AboutPage() {;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1799,7 +1956,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 
 }
 }

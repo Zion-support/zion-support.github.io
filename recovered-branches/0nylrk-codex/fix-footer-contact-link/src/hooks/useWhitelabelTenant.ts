@@ -9,18 +9,29 @@ import { useState, useEffect  } from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface WhitelabelTenant {export interface WhitelabelTenant {
+=======
+export interface WhitelabelTenant {
+export interface WhitelabelTenant {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
 export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { useState, useEffect  } from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -88,20 +99,30 @@ export interface WhitelabelTenant {;
 
 export interface WhitelabelTenant {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface WhitelabelTenant {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
+<<<<<<< HEAD
   logo_url: string | null;'
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {}
+=======
+  logo_url: string | null;
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+  landing_page_copy: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     headline: string;
 
     subtitle: string,
     cta: string;
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -115,10 +136,13 @@ export interface WhitelabelTenant {};
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -139,10 +163,15 @@ export interface WhitelabelTenant {};
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -194,6 +223,33 @@ export function useWhitelabelTenant() { return null; }
         // Get the current hostname, fallback to localhost if not available;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    const loadTenant = async () => {
+      setIsLoading(true);
+      setError(null);
+      // If running in the browser, bail out early when offline
+      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
+      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
+        setError('No internet connection');
+        setTenant(null);
+        setIsLoading(false);
+        return
+      }
+      try {
+        // Get the current hostname, fallback to localhost if not available
+
+        const hostname = window && window.location.hostname || 'localhost';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         const functionName = 'tenant-detector';
         // Build the query parameters;
         const params = externalSubdomain;
@@ -201,7 +257,9 @@ export function useWhitelabelTenant() { return null; }
           : `?host=${encodeURIComponent(hostname)}`;
 <<<<<<< HEAD
 
+
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -265,6 +323,13 @@ export interface WhitelabelTenant {;
 =======
           `${functionName}${params}`;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          `${functionName}${params}`;
+  dns_verified: boolean,
+  email_template_override: Record < string, any> | null;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export /**
  * useWhitelabelTenant - Function description
 =======
@@ -319,6 +384,7 @@ if ( {) {}
               'Content - Type': 'application / json'}}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 
 
@@ -349,17 +415,42 @@ if ( {) {}
   $2;
 }'
           console.error ('Edge Function error:', function_error);'
+=======
+        );
+
+;
+        if (!data) {;
+          console.warn('No tenant data received'),;
+          setTenant(null),;
+          return;
+        }
+        if (data.tenant) {
+          setTenant(data.tenant)
+
+        if (data && data.tenant) {
+          setTenant(data && data.tenant)
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          console.error ('Edge Function error:', function_error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           set_error ('Failed to load tenant configuration. Please try again later.');
           set_tenant (null);
           return;
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         } else {
           set_tenant (null);
         }
 
+<<<<<<< HEAD
 =======
         } else {
           set_tenant (null);
@@ -388,11 +479,26 @@ if ( {) {}
 
       } catch (err: any) {}
         ) {'
+=======
+        console && console.error('Error loading tenant:', err);
+        let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
+        if (
+          message && message.includes('Failed to send a request to the Edge Function') ||
+          message && message.includes('Failed to connect to Supabase') ||
+          message && message.includes('No internet connection')
+
+      } catch (err: any) {
+        ) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
         setError(message);
         setTenant(null)
+<<<<<<< HEAD
       } finally {}
+=======
+      } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         setIsLoading(false)
       }
     }
@@ -400,6 +506,7 @@ if ( {) {}
   }, [externalSubdomain]);
   return { tenant, isLoading, error }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Hook to check if current user is a tenant admin
 <<<<<<< HEAD
@@ -418,6 +525,12 @@ export function useTenantAdminStatus(tenantId?: string) {;
 =======
         );  const [isAdmin, setIsAdmin] = useState(false);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Hook to check if current user is a tenant admin
+export function useTenantAdminStatus(tenantId?: string) {
+export function useTenantAdminStatus(tenantId?: string) {;
+  const [isAdmin, setIsAdmin] = useState(false);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -442,10 +555,24 @@ export function useTenantAdminStatus() { return null; }
           return
         }
 
-        const userId = sessionData && sessionData.session.user && user.id;      } finally {
+        const userId = sessionData && sessionData.session.user && user.id;
+
+        const { data, error } = await supabase
+          .from('tenant_administrators')
+          .select('*')
+          .eq('tenant_id', tenantId)
+          .eq('user_id', userId)
+          .single();
+        setIsAdmin(!!data && !error)
+      } catch (err) {
+        console && console.error('Error checking tenant admin status:', err);
+        setIsAdmin(false)
+      } finally {
         setIsLoading (false);
       }
     }
+
+
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
 =======
@@ -489,12 +616,17 @@ export function useTenantAdminStatus() { return null; }
   return { tenant, isLoading, error }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     load_tenant ();
   }, [external_subdomain]);
@@ -548,15 +680,19 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     };
     checkAdminStatus();
   }, [tenantId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -564,10 +700,13 @@ if ( {) {}
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   return { isAdmin, isLoading }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -637,3 +776,5 @@ export function useTenantAdminStatus(tenantId?: string) {;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

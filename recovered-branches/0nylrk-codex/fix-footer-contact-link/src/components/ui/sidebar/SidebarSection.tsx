@@ -41,6 +41,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 import React from "react";"
@@ -114,6 +115,29 @@ interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
 "
 import React from "react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  className?: string;
+import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
+  title?: string;
+  children?: React.ReactNode;
+}
+
+export function SidebarSection({
+  className,
+  title,
+  children,
+  ...props
+}: SidebarSectionProps) {
+  return (
+    <div className={cn("py-2", className)} {...props}>
+      {title && (
+        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+
+import React from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -161,12 +185,31 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
         </h3>;
 =======
 
+<<<<<<< HEAD
           {title}        </h3>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
           {title}        </h3>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {title}
+import React from "react",;
+import { cn } from "@/lib/utils",;
+;
+interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?:string,;
+  title?:string,;
+  children?:React.ReactNode,;
+}
+;
+export function SidebarSection({ className, title, children, ...props } SidebarSectionProps) {;
+  return (;
+    <div className={cn("py-2", className)} {...props}>;
+      {title && (;
+        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;          {title}
+        </h3>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
 =======
 
@@ -178,6 +221,7 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,11 +267,14 @@ function SidebarSection() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   )
 }
 
   ),;}
+<<<<<<< HEAD
  interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
   className?: string;
 title?: string;
@@ -245,10 +292,30 @@ children?: React.ReactNode;
 }</h3>) "
 }<div className="space-y-1" > {}
   children;
+=======
+ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+title?: string;
+children?: React.ReactNode 
+}export function SidebarSection ({
+  className, title, children, ...props 
+}: SidebarSectionProps) {
+  return (<div className= {
+  cn ("py-2", className) 
+}{
+  ...props 
+}> {
+  title && (<h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider" > {
+  title 
+}</h3>) 
+}<div className="space-y-1" > {
+  children 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</div> 
 }
           {title}
         </h3>
+<<<<<<< HEAD
       )}"
       <div className="space-y-1">{children}</div>
     </div>
@@ -257,12 +324,18 @@ children?: React.ReactNode;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+      )}
+      <div className="space-y-1">{children}</div>
+    </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )
 }
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -280,3 +353,5 @@ children?: React.ReactNode;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

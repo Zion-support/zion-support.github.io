@@ -1,12 +1,18 @@
 
 <<<<<<< HEAD
 module && module.exports = {
+<<<<<<< HEAD
   darkMode: ["class"],  content: [
 =======
 
 
   content: []
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  darkMode: ["class"],
+
+  content: [
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
   ],
   theme: {}
@@ -51,12 +57,15 @@ module && module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   plugins: []}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
@@ -97,6 +106,7 @@ module.exports = {
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
   plugins: []}
+<<<<<<< HEAD
 
 =======
 
@@ -189,3 +199,5 @@ module.exports = {;
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

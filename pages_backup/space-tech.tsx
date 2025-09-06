@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -199,6 +200,9 @@ return (
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/space-tech.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <Layout>
@@ -304,6 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   </Layout>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/space-tech.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -496,3 +501,6 @@ export default function SpaceTechPage() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/space-tech.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

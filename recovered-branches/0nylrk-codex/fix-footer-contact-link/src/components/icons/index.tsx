@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -122,6 +123,13 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
 =======
     return <LucideIcon {...props} />
 };
+=======
+
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -139,6 +147,7 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     iconExports[alias] = createIconComponent(alias, lucideName)
 <<<<<<< HEAD
 =======
@@ -147,6 +156,21 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
 =======
 // Alias for missing icons or for icons with different names;
 const icon_aliases: Record < string, keyof typeof LucideIcons> = {
+=======
+    iconExports[alias] = createIconComponent(alias, lucideName)
+  } else {
+    console.warn (`Icon '${lucide_name}' not found in lucide-react`);
+    // Use a fallback icon;
+    icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
+  }
+});
+
+;
+
+export const {
+// Alias for missing icons or for icons with different names;
+const iconAliases: Record<string, keyof typeof LucideIcons> = {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Grid views;
   LayoutGrid: 'LayoutGrid',
   List: 'List',
@@ -593,12 +617,18 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   Tag: 'Tag' as keyof typeof LucideIcons},;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 type IconProps = LucideIcons && LucideIcons.LucideProps;// Generate icon exports;
 =======
 
 
 type IconProps = LucideIcons && LucideIcons.LucideProps;
 
+=======
+type IconProps = LucideIcons && LucideIcons.LucideProps;
+
+type IconProps = LucideIcons && LucideIcons.LucideProps;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Create a type safe export for each icon;
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
   const IconComponent = (props: IconProps) => {;
@@ -610,12 +640,21 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   return IconComponent;
 };
 
+<<<<<<< HEAD
 
 // Export all of our icon components;
 const iconExports: Record<string, React.FC<IconProps>> = {};
 
 // Generate icon exports;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Export all of our icon components;
+const iconExports: Record<string, React.FC<IconProps>> = {};
+
+// Export all of our icon components;
+const iconExports: Record<string, React.FC<IconProps>> = {};
+// Generate icon exports;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
     iconExports[alias] = createIconComponent(alias, lucideName);
@@ -626,6 +665,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 
 <<<<<<< HEAD
@@ -634,15 +674,23 @@ export const {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+});
+
+export const {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const {;
 
 
 export const {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } else {
     console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
@@ -652,6 +700,7 @@ export const {;
 export const {
 
 export const {;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -664,6 +713,9 @@ export const {;
 =======
 });  LayoutGrid;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  LayoutGrid;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   List;
   Zap;
   Settings;
@@ -918,13 +970,93 @@ export const {;
   Tag} = iconExports;
 <<<<<<< HEAD
 // Also export all original icons from lucide-react;
+<<<<<<< HEAD
 export * from 'lucide-react';  Tag} = icon_exports;
 =======
 // Also export all original icons from lucide-react;'
+=======
 export * from 'lucide-react';
 
 
 
+  LayoutGrid;
+  List;
+  Zap;
+  Settings;
+  Plus;
+  HelpCircle;
+  Twitter;
+  Linkedin;
+  Facebook;
+  Instagram;
+  Github;
+  Server;
+  Network;
+  Recycle;
+  Truck;
+  HardDrive;
+  Check;
+  CheckIcon;
+  Handshake;
+  StarIcon;
+  Moon;
+  Sun;
+  Bell;
+  CalendarIcon;
+  ChevronRight;
+  MoreHorizontal;
+  MoreVertical;
+  Quote;
+  Info;
+  AlertTriangle;
+  Ban;
+  ShieldAlert;
+  Archive;
+  Trash2;
+  Trash;
+  Power;
+  RefreshCw;
+  Copy;
+  ClipboardCopy;
+  Download;
+  LogIn;
+  EyeOff;
+  Wallet;
+  Code;
+  Megaphone;
+  Terminal;
+  ThumbsUp;
+  ThumbsDown;
+  Pin;
+  Lock;
+  Trophy;
+  Award;
+  BadgeCheck;
+  MessageSquare;
+  Link;
+  Briefcase;
+  FileText;
+  Clock;
+  Save;
+  StarOff;
+  LayoutDashboard;
+  BarChart;
+  BookOpen;
+  Key;
+
+
+
+// Also export all original icons from lucide-react;
+export * from 'lucide-react';
+  Tag} = icon_exports;
+;
+// Also export all original icons from lucide-react;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+export * from 'lucide-react';
+
+
+
+<<<<<<< HEAD
   Tag} = icon_exports;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
@@ -932,6 +1064,10 @@ export * from 'lucide-react';
 export * from 'lucide-react';
 <<<<<<< HEAD
 ;;
+=======
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
 // Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {

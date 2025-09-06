@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +59,10 @@ export default async function handler(
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from '[^']*';
 import { readJsonFile, writeJsonFile } from '[^']*';
@@ -67,12 +72,16 @@ const FILE = null;
   res.status(405).end('Method Not Allowed')
 }
 export default async function handler(
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -90,6 +99,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {}
   if (!rateLimit(req, res)) return;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/jobs.ts
@@ -134,6 +144,12 @@ return;
 return;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+    res.status(200).json({ jobs });
+return;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
   } catch (error) {
@@ -221,6 +237,7 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -228,6 +245,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -256,11 +276,15 @@ export default async function handler(req, res) {}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req && req.method === "GET") {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
 
@@ -413,6 +437,7 @@ if ( {) {}
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 <<<<<<< HEAD
       title
@@ -455,6 +480,8 @@ required_skills = [],
       budgetMaxUsd,
       deliveryDeadlineIso,
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 required_skills = []
       budgetMinUsd
       budgetMaxUsd
@@ -473,6 +500,7 @@ required_skills = []
 category: String(category || ""),
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 <<<<<<< HEAD
         : [],
@@ -482,6 +510,8 @@ category: String(category || ""),
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title,
       description,
       category,
@@ -508,6 +538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -518,6 +549,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       deliveryDeadlineIso: deliveryDeadlineIso
 =======
     const job: Job = {}
@@ -565,6 +599,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )
 <<<<<<< HEAD:pages_backup/api/jobs.ts
       )
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 <<<<<<< HEAD
         job && job.category = "Cloud";
@@ -605,15 +640,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     res.status(201).json({ job });
     return
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
 =======
     return;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   } catch (error) {"
     console.error("Error:", error);"
@@ -630,6 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -651,6 +692,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -681,6 +728,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -701,6 +749,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       client_email
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } = req.body || {}
@@ -761,6 +814,7 @@ if (=>) {}
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 <<<<<<< HEAD:pages/api/jobs.ts
 <<<<<<< HEAD
@@ -779,6 +833,8 @@ if (=>) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -807,6 +863,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -821,6 +878,10 @@ export default async function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
 =======
@@ -845,6 +906,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -876,18 +938,26 @@ res.setHeader("Allow", "GET, POST");
 =======
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         job.category = 'Cloud';
       else job.category = 'General';
     }
@@ -902,6 +972,7 @@ return;
   res.status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/jobs.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -911,3 +982,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

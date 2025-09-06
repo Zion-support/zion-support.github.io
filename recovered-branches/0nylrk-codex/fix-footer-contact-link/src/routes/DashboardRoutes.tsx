@@ -37,6 +37,7 @@ import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const DashboardRoutes = () => {
 =======
@@ -51,6 +52,11 @@ const DashboardRoutes = () => {import {Fragment} from "react";
 =======
 const DashboardRoutes = () => {import {Fragment} from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const DashboardRoutes = () => {
+const DashboardRoutes = () => {;
+import {Fragment} from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -381,6 +387,7 @@ import ContractBuilder from "@/pages/ContractBuilder",;
 const DashboardRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const DashboardRoutes = () => {;
+<<<<<<< HEAD
 =======
 const DashboardRoutes = () => {}
 const DashboardRoutes = () => {;
@@ -391,56 +398,101 @@ const DashboardRoutes = () => {;
       <Route"
         path="/dashboard"
         element={}
+=======
+  return (
+    <Routes>;
+      {/* Dashboard Routes */}
+      <Route
+        path="/dashboard"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/client-dashboard"
         element={}
+=======
+      <Route
+        path="/client-dashboard"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/talent-dashboard"
         element={}
+=======
+      <Route
+        path="/talent-dashboard"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/creator-dashboard"
         element={}
+=======
+      <Route
+        path="/creator-dashboard"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/analytics"
         element={}
+=======
+      <Route
+        path="/analytics"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/project/:id/milestones"
         element={}
+=======
+      <Route
+        path="/project/:id/milestones"
+        element={
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
       <Route"
         path="/project/:id"
         element={}
           <ProtectedRoute>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <Route
+        path="/project/:id"
+        element={
+          <ProtectedRoute>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -525,11 +577,16 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/developers"
+<<<<<<< HEAD
         element={          <ProtectedRoute>;
 =======
 
           <ProtectedRoute>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        element={
+          <ProtectedRoute>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -548,6 +605,7 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         path="/contract-builder"
@@ -926,6 +984,11 @@ export default DashboardRoutes;
 =======
         path="/contract-builder"        }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        path="/contract-builder"
+
+        }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />;
     </Routes>);
 }
@@ -936,8 +999,11 @@ export default DashboardRoutes;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />
       <Route
         path="/wallet"
@@ -967,6 +1033,7 @@ export default DashboardRoutes;
   );
 },;
 export default DashboardRoutes;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -981,3 +1048,5 @@ export default DashboardRoutes;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

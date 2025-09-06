@@ -44,6 +44,7 @@ console.log(`Fixed ${fixedCount} files`),)),
 console.log(`Fixed ${fixedCount} files`),)),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -54,6 +55,10 @@ console.log(`Fixed ${fixedCount} files`),)),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log (`Fixed ${fixed_count} files`)));
 }
 });

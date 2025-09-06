@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,6 +26,31 @@ interface ButtonProps {;
   className?: string,;
   type?: 'button' | 'submit' | 'reset',;
   fullWidth?: boolean,;
+=======
+  const content = (;
+    <>;
+      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
+      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
+      <span className={loading ? 'opacity-0' : ''}>{children}</span>;
+      {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
+    </>;
+'use client';
+import React, { forwardRef } from 'react';
+import Link from 'next/link';
+import LoadingSpinner from './LoadingSpinner';
+interface ButtonProps {children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  href?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  loading?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
+  fullWidth?: boolean;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 ;
@@ -155,8 +181,11 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
   const variant_classes = {
@@ -192,6 +221,7 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -355,18 +385,28 @@ export function FloatingActionButton({;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
 ;
 
+
   return (;
-  return (  return (;
+  return (
+  return (;
     <button;
       ref={ref}
       type={type}
-      className={classes}    <Button;
+      className={classes}
+    </button>);
+}),
+Button.display_name = 'Button',
+export default Button,
+    <Button;
       {...props}
       icon={icon}
       on_click={on_click}

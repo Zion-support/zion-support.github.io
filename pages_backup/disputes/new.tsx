@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +145,8 @@ const REASONS = ['
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -165,17 +168,22 @@ const REASONS = [
   } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 <<<<<<< HEAD
 =======
@@ -252,6 +260,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [talentUserId, setTalentUserId] = useState(talentId || '');
 const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
@@ -303,12 +313,16 @@ body: JSON.stringify({ files: filePayload }),
     } finally {
       setSubmitting(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 ;`
@@ -319,6 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD:pages_backup/disputes/new.tsx
     <EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 <<<<<<< HEAD
       <div className="max-w-2xl mx-auto">
@@ -341,6 +356,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <form onSubmit={handleSubmit} className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+<div className='max-w-2xl mx-auto'>
+        <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>
+        <form onSubmit={handleSubmit} className='space-y-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div>
             <label className="block text-sm font-medium">Project ID</label>
 =======
@@ -395,6 +416,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="pt-2">'"
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 <<<<<<< HEAD
         </form>
@@ -407,6 +429,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className='pt-2'>
             <button
               disabled={submitting}
@@ -838,6 +862,7 @@ function toBase64(file: File): Promise<string> {;
     reader.onerror = reject;
 reader.readAsDataURL(file);
   });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/new.tsx
 <<<<<<< HEAD
 
@@ -873,3 +898,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

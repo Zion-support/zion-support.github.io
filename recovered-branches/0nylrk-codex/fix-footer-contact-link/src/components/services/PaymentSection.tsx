@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
@@ -50,10 +51,24 @@ interface PaymentSectionProps {}
 "
       title: "Processing your request",
       description:"
+=======
+import { MapPin } from "lucide-react";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+interface PaymentSectionProps {
+  selectedCountry: CountryPricing;
+}
+
+
+      title: "Processing your request",
+      description:
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "You'll be redirected to our secure payment portal momentarily.",
     });
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -67,6 +82,8 @@ import { toast  } from '@/hooks / use - toast';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -85,12 +102,16 @@ import { toast  } from '@/hooks / use - toast';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -110,9 +131,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
     toast({;
-      title: "Processing your request",
-  description: "You'll be redirected to our secure payment portal momentarily."})
-};
+      title: "Processing your request";
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
   return (;
     <div className="text-center">;
       <p className="text-zion-slate-light mb-2">Selected Country</p>;
@@ -130,6 +151,7 @@ export function PaymentSection() { return null; }
         {selectedCountry.country}
       </h4>;"
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,10 +173,15 @@ export function PaymentSection() { return null; }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton;
         amount={selectedCountry.pricePerIncident}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +197,11 @@ import {MapPin} from "lucide-react";"
 import {PaymentButton} from "@/components/transactions/PaymentButton";"
 import {CountryPricing} from "@/data/onsiteServicePricing";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import {MapPin} from "lucide-react";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {toast} from "@/hooks/use-toast";
 interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
@@ -178,6 +210,7 @@ interface PaymentSectionProps {;
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
+<<<<<<< HEAD
     toast({;"
       title: "Processing your request",;'"
       description: "You'll be redirected to our secure payment portal momentarily."});
@@ -209,6 +242,26 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a"
         serviceId="it-onsite-service""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    toast({;
+      title: "Processing your request",;
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+
+  return (
+    <div className="text-center">;
+      <p className="text-zion-slate-light mb-2">Selected Country</p>;
+      <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
+        <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
+        {selectedCountry && selectedCountry.country}
+      </h4>;
+      <p className="text-2xl font-bold text-zion-cyan mb-6">;
+        ${selectedCountry && selectedCountry.pricePerIncident.toFixed(2)}
+      </p>;
+      <PaymentButton
+        amount={selectedCountry && selectedCountry.pricePerIncident}
+        serviceId="it-onsite-service"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}"
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6""
@@ -222,6 +275,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,10 +299,22 @@ function PaymentSection() {}
     toast ({"
       title: "Processing your request",
       description:;'"
+=======
+export /**
+ * PaymentSection - Function description
+ */
+function PaymentSection() {
+  // Handle successful payment;
+  const handlePaymentInitiated = () =>: any {
+    toast ({
+      title: "Processing your request",
+      description:;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "You'll be redirected to our secure payment portal momentarily.",
     });
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -265,3 +331,8 @@ function PaymentSection() {}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

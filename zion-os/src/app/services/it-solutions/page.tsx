@@ -329,9 +329,12 @@ interface ITService {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -345,6 +348,7 @@ interface ITService {id: string;
   icon: string;
   features: string[];
   technologies: string[];
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -358,6 +362,9 @@ interface ITService {id: string;
 =======
 =======  industries: string[];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  industries: string[];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 const it_services: ITService[] = [;
   {"
@@ -640,6 +647,7 @@ export default /**
  */
 function ITSolutionsPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space - y-8">;
@@ -968,6 +976,14 @@ export default function ITSolutionsPage() {;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;"
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <div className="space - y-8">;
+    <div className="space-y-8">;
+      {/* Header */}
+      <div className="text - center space - y-4">;
+        <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Enterprise - grade IT solutions designed to modernize your infrastructure;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           enhance security, and drive operational efficiency across your organization.;
@@ -975,6 +991,7 @@ export default function ITSolutionsPage() {;
       </div>;
 <<<<<<< HEAD
       {/* IT Services Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
@@ -1003,21 +1020,25 @@ export default function ITSolutionsPage() {;
                 ))}
 =======
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
+=======
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {it_services.map (service => (
           <div;
             key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";
           >;
             {/* Service Header */}
-            <div className="text - center space-y-3">;
-              <div className="text-4xl">{service.icon}</div>;
-              <h2 className="text - 2xl font-bold">{service.name}</h2>;
-              <p className="opacity-80">{service.description}</p>;
-              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
-              <div className="text - sm opacity-60">Timeline: {service.timeline}</div>;
+            <div className="text - center space - y-3">;
+              <div className="text - 4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font - bold">{service.name}</h2>;
+              <p className="opacity - 80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;
+              <div className="text - sm opacity - 60">Timeline: {service.timeline}</div>;
             </div>;
             {/* Deliverables */}
             <div>;
+<<<<<<< HEAD
 =======
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
         {it_services.map (service => (
@@ -1065,6 +1086,13 @@ export default function ITSolutionsPage() {;
                   <div key={index} className="flex items - center gap - 2 text - sm">;"
                     <span className="text - green - 400">✓</span>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <h3 className="font - semibold mb - 3 text - blue - 400">Deliverables</h3>;
+              <div className="grid grid - cols - 1 gap - 2">;
+                {service.deliverables.map ((deliverable, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - green - 400">✓</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <span>{deliverable}</span>;
                   </div>))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1073,6 +1101,7 @@ export default function ITSolutionsPage() {;
             {/* Features */}
 <<<<<<< HEAD
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-purple-400">Key Features</h3>;
@@ -1099,6 +1128,13 @@ export default function ITSolutionsPage() {;
                   <div key={index} className="flex items - center gap - 2 text - sm">;"
                     <span className="text - blue - 400">⚙️</span>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.features.map ((feature, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - blue - 400">⚙️</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <span>{feature}</span>;
                   </div>))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1107,6 +1143,7 @@ export default function ITSolutionsPage() {;
             {/* Technologies */}
 <<<<<<< HEAD
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-green-400">Technologies</h3>;
@@ -1133,6 +1170,13 @@ export default function ITSolutionsPage() {;
                   <div key={index} className="flex items - center gap - 2 text - sm">;"
                     <span className="text - yellow - 400">🔧</span>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <h3 className="font - semibold mb - 3 text - green - 400">Technologies</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.technologies.map ((tech, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - yellow - 400">🔧</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <span>{tech}</span>;
                   </div>))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1141,6 +1185,7 @@ export default function ITSolutionsPage() {;
             {/* Industries */}
 <<<<<<< HEAD
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <h3 className="font-semibold mb-3 text-orange-400">Industries Served</h3>;
@@ -1174,15 +1219,23 @@ export default function ITSolutionsPage() {;
                   <div key={index} className="flex items - center gap - 2 text - sm">;"
                     <span className="text - purple - 400">🏢</span>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <h3 className="font - semibold mb - 3 text - orange - 400">Industries Served</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
+                {service.industries.map ((industry, index) => (
+                  <div key={index} className="flex items - center gap - 2 text - sm">;
+                    <span className="text - purple - 400">🏢</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <span>{industry}</span>;
                   </div>))}
               </div>;
             </div>;
 <<<<<<< HEAD
             {/* CTA */}
-            <div className="space - y-3 pt - 4 border - t border-white / 10">;
+            <div className="space - y-3 pt - 4 border - t border - white / 10">;
               <a;
                 href={service.contact_link}
+<<<<<<< HEAD
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1195,6 +1248,9 @@ export default function ITSolutionsPage() {;
                 href={service.contact_link}"
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >;
                 Get Started;
               </a>;
@@ -1205,6 +1261,7 @@ export default function ITSolutionsPage() {;
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline";
 =======
                 href={`https://ziontechgroup.com / services/${service.id}`}
+<<<<<<< HEAD
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text-sm underline";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1214,6 +1271,9 @@ export default function ITSolutionsPage() {;
                 href={`https://ziontechgroup.com / services/${service.id}`}"
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >;
                 Learn More;
               </a>;
@@ -1250,24 +1310,25 @@ export default function ITSolutionsPage() {;
       </div>;
 <<<<<<< HEAD
       {/* IT Capabilities Overview */}
-      <div className="space-y-6">;
-        <h2 className="text - 3xl font - bold text-center">IT Capabilities Overview</h2>;
-        <div className="grid grid - cols - 1 md:grid - cols - 4 gap-6">;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">☁️</div>;
-            <h3 className="font - semibold mb-2">Cloud Solutions</h3>;
-            <p className="text - sm opacity-80">Multi - cloud strategy, migration, and optimization</p>;
+      <div className="space - y-6">;
+        <h2 className="text - 3xl font - bold text - center">IT Capabilities Overview</h2>;
+        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">☁️</div>;
+            <h3 className="font - semibold mb - 2">Cloud Solutions</h3>;
+            <p className="text - sm opacity - 80">Multi - cloud strategy, migration, and optimization</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🔒</div>;
-            <h3 className="font - semibold mb-2">Cybersecurity</h3>;
-            <p className="text - sm opacity-80">Comprehensive security and compliance solutions</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🔒</div>;
+            <h3 className="font - semibold mb - 2">Cybersecurity</h3>;
+            <p className="text - sm opacity - 80">Comprehensive security and compliance solutions</p>;
           </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
-            <div className="text - 3xl mb-3">🌐</div>;
-            <h3 className="font - semibold mb-2">Infrastructure</h3>;
-            <p className="text - sm opacity-80">Network design, implementation, and management</p>;
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">🌐</div>;
+            <h3 className="font - semibold mb - 2">Infrastructure</h3>;
+            <p className="text - sm opacity - 80">Network design, implementation, and management</p>;
           </div>;
+<<<<<<< HEAD
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
             <div className="text - 3xl mb-3">💡</div>;
             <h3 className="font - semibold mb-2">Strategy</h3>;
@@ -1276,10 +1337,17 @@ export default function ITSolutionsPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - 3xl mb - 3">💡</div>;
+            <h3 className="font - semibold mb - 2">Strategy</h3>;
+            <p className="text - sm opacity - 80">IT strategy and digital transformation consulting</p>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">;
@@ -1315,11 +1383,24 @@ export default function ITSolutionsPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border - white / 10">;
+        <h2 className="text - 3xl font - bold">Ready to Modernize Your IT Infrastructure?</h2>;
+        <p className="text - xl opacity - 80 max - w-2xl mx - auto">;
+          Let's discuss how our IT solutions can transform your technology landscape;
+          enhance security, and drive operational efficiency. Get in touch for a comprehensive IT assessment.;
+        </p>;
+        <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject = IT%20Solutions%20Consultation";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >;
             Schedule IT Consultation;
           </a>;
           <a;
             href="tel:+13024640950";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg";
@@ -1374,6 +1455,9 @@ export default function ITSolutionsPage() {;
             href="tel:+13024640950";"
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >;
             Call: +1 302 464 0950;
           </a>;
@@ -1381,9 +1465,10 @@ export default function ITSolutionsPage() {;
       </div>;
 <<<<<<< HEAD
       {/* Back to Services */}
-      <div className="text-center">;
+      <div className="text - center">;
         <a;
           href="/services";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold";
@@ -1400,6 +1485,9 @@ export default function ITSolutionsPage() {;
           href="/services";"
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         >;
           ← Back to All Services;
         </a>;

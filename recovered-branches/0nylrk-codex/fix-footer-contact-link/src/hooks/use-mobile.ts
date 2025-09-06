@@ -28,9 +28,14 @@ import {useState, useEffect} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
 import {useState, useEffect} from 'react';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useIsMobile() {
 =======
 export function useIsMobile() {}
@@ -42,13 +47,17 @@ export function useIsMobile() {}
   useEffect(() => {
 
     const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    if (typeof window !== 'undefined') {
-      window && window.addEventListener('resize', handleResize);
-      return () => window && window.removeEventListener('resize', handleResize)    }
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
     return undefined;
   }, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +107,10 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return isMobile;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       window.addEventListener ('resize', handle_resize);
 =======
   useEffect(() => {}
@@ -119,6 +132,7 @@ if ( {) {
       return () => window.removeEventListener ('resize', handle_resize);
     }
     return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }, []);
@@ -150,6 +164,12 @@ import { useState, useEffect } from 'react',;
 =======
   }, []);import { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  }, []);
+
+
+import { useState, useEffect } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
@@ -174,12 +194,17 @@ export function useIsMobile() { return null; }
   }, []);
   return isMobile;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 ;
@@ -188,7 +213,42 @@ export function useIsMobile() { return null; }
 =======
   return is_mobile;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}
+=======
+}
+}
+
+import { useState, useEffect } from 'react',;
+;
+export function useIsMobile() {;
+  const [isMobile, setIsMobile] = useState(;
+    typeof window !== 'undefined' ? window.innerWidth < 768 :false;
+  ),;
+;
+  useEffect(() => {;
+    const handleResize = () => {;
+      setIsMobile(window.innerWidth < 768),;
+    },;
+;
+    if (typeof window !== 'undefined') {;
+      window.addEventListener('resize', handleResize),;
+      return () => window.removeEventListener('resize', handleResize),;
+    }
+    return undefined,;
+  }, []),;
+;
+  return isMobile,;}
+ export function useIsMobile () {
+  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+return isMobile 
+}
+}
+;
+}
+;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD

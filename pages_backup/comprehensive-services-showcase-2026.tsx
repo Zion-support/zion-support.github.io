@@ -34,6 +34,7 @@ class ErrorBoundary extends React.Component {}
   }
 }'
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2026.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 <<<<<<< HEAD
@@ -134,6 +135,8 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { motion  } from 'framer-motion';
 import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
@@ -160,6 +163,7 @@ import {
   Sparkles;
 } from 'lucide-react';
 interface Service {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -170,6 +174,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2026.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   tagline: string;
@@ -193,6 +200,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 =======
     mobile: string;
     email: string;
@@ -313,6 +321,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: string
   },
   realImplementation: boolean;
@@ -332,6 +342,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -381,6 +392,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const allServices = [
 ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
@@ -423,12 +436,16 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     { value: '400-600', label: '$400 - $600' },
 { value: '600+', label: '$600+' },
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -501,6 +518,7 @@ default:
   });
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -950,6 +968,8 @@ default:
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Business Intelligence & Analytics': <Database className='w-5 h-5' />,
       'Content Creation & Marketing': <Sparkles className='w-5 h-5' />,
       'Customer Service & Support': <Users className='w-5 h-5' />,
@@ -978,12 +998,16 @@ default:
     return iconMap[category] || <Sparkles className='w-5 h-5' />;
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */  } catch (error) {
@@ -2269,6 +2293,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2026.tsx
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -2716,6 +2741,8 @@ export default ComprehensiveServicesShowcase2026;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2026.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <a
                 href='mailto:kleber@ziontechgroup.com'
@@ -2752,6 +2779,7 @@ export default ComprehensiveServicesShowcase2026;
 }</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
 };
 export default ComprehensiveServicesShowcase2026;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2763,3 +2791,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2026.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

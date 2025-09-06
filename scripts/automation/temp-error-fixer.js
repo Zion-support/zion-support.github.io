@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         const originalLog = console.log;
 
@@ -64,6 +65,11 @@ const originalLog = console.log;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        const originalLog = console.log;
+const originalLog = console.log;
+        const originalLog = console.log;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         let fixCount = 0;
         console.log = (...args) => {}
           const message = args.join(' ');'
@@ -73,6 +79,7 @@ const originalLog = console.log;
               fixCount = parseInt(match[1]);
             }
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +121,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 <<          originalLog(...args);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          originalLog(...args);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         };
         try {'
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
@@ -124,6 +134,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           console.error('Script error:', error.message);
           process.exit(1);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,11 +235,18 @@ const originalLog = console.log; let fixCount = 0; console.log = (...args) => { 
 =======
 <<=
 >          originalLog(...args)};
+=======
+          originalLog(...args)};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
           setTimeout(() => {
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+            process.exit(0)}, 5000)} catch (error) {
+          console.error('Script "error": ', error.message);
+          process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
             process.exit(0)}, 5000)} catch (error) {
           console.error('Script "error": ', error.message);

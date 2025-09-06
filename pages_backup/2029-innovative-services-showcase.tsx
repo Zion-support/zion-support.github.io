@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -98,6 +99,8 @@ import {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Brain,
   Atom,
   Target,
@@ -108,17 +111,22 @@ import {;
   Mail,
   MapPin,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +359,8 @@ function InnovativeServicesShowcase2029() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 };
 
@@ -595,6 +605,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
                 2029 Innovative Services
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -634,6 +645,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
                 Experience the future of technology with our revolutionary AI
                 autonomous ecosystems, emerging tech breakthroughs, and
@@ -651,12 +664,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -672,6 +689,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
         {/* Services Overview */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 =======
@@ -788,6 +806,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section
           id='services'
           className='py-20 bg-gradient-to-b from-black to-gray-900'
@@ -862,6 +882,7 @@ viewport={{ once: true }}
                     >
                       <category.icon className='w-8 h-8 text-white' />
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
@@ -883,6 +904,8 @@ viewport={{ once: true }}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <h3 className='text-2xl font-bold text-white mb-4'>
                       {category.title}
                     </h3>
@@ -904,6 +927,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1063,6 +1087,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
             </div>
           </div>
@@ -1239,6 +1265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1339,6 +1366,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
             </div>
             <motion.div
@@ -1360,6 +1389,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -1504,6 +1534,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
           <div className='container mx-auto px-4 text-center'>
@@ -1513,6 +1545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1581,6 +1614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2029-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
                 Ready to Transform Your Business?
@@ -1640,6 +1675,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <UltraFuturisticFooter2029 />
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2029-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1793,3 +1829,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2029-innovative-services-showcase.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

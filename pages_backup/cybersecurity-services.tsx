@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 
@@ -510,6 +511,8 @@ export default function CybersecurityServices() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -595,8 +598,32 @@ export default function CybersecurityServices() { return null; }
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
 
+=======
+className='max-w-4xl mx-auto'
+origin/cursor/automate-test-improve-and-merge-code-2533
+          >
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
+              <Shield className="w-5 h-5 text-red-400" />
+              <span className="text-red-400 font-medium">Cybersecurity Services</span>
+            </div>
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
+              <span className='bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent'>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Next-Generation
+              </span>
+              <br />
+              <span className="text-white">Cybersecurity</span>
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Protect your business with cutting-edge cybersecurity solutions.
+              From zero trust security to AI threat intelligence, we provide
+              comprehensive protection that adapts to evolving threats.
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -812,6 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href='/contact' className='group'>
                 <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>
               <Link href="/contact" className="group">
@@ -825,6 +853,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <span>Explore Services</span>"
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+=======
+                  <span>Get Protected</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </button>
               </Link>
 
@@ -858,6 +891,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cybersecurity-services.tsx
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
@@ -911,16 +945,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div
           className='absolute top-40 right-20 opacity-30 animate-float'
           style={{ animationDelay: '1s' }}>;
@@ -933,6 +973,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         <div'
           className='absolute bottom-40 left-20 opacity-25 animate-float'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 
@@ -969,6 +1010,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           style={{ animationDelay: '2s' }}
         >
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>
@@ -987,6 +1030,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 =======
@@ -1054,6 +1098,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1118,6 +1164,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cybersecurity-services.tsx
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
@@ -1134,6 +1181,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
@@ -1392,6 +1443,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               designed for modern enterprises
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
               <motion.div
@@ -1449,6 +1501,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {advancedCybersecurityServices2025.map((service, index) => (
@@ -1494,6 +1548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cybersecurity-services.tsx
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
@@ -1514,6 +1569,10 @@ className='animated-border'
 className='animated-border'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+className='animated-border'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -1533,6 +1592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 <<<<<<< HEAD:pages_backup/cybersecurity-services.tsx
                     {service.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1579,6 +1639,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
                         Popular
                       </span>
@@ -1593,12 +1655,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-gray-400 text-lg'>
                         {service.period}
                       </span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </div>
 =======
 
@@ -1694,8 +1760,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+<<<<<<< HEAD
                     >                      Get Protected
                     <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+=======
+                    >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       Get Protected
 =======
 =======
@@ -2078,6 +2149,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2107,6 +2179,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+
+      {/* Benefits Section */}
+<section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced protection that keeps your business safe and compliant
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {benefits.map((benefit, index) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <motion.div
+
+
+              <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
+                Our Security;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Advanced protection that keeps your business safe and compliant;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
+              <motion&& motion.div
+                key={benefit && benefit.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+className='text-center group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <benefit.icon className={`w-full h-full ${benefit.color}`} />
+                </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
@@ -2122,6 +2245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2143,10 +2267,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="container mx-auto px-4 text-center">
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/cybersecurity-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 
@@ -2169,6 +2297,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='max-w-4xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -2312,6 +2442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-gray-300">Threat Detection</div>
               </div>
               <div>
+<<<<<<< HEAD
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2326,6 +2457,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cybersecurity-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
                 <div className='text-gray-300'>ROI Improvement</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2352,6 +2485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cybersecurity-services.tsx
 <<<<<<< HEAD
 =======
@@ -2572,3 +2706,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/cybersecurity-services.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

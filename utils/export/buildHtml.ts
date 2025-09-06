@@ -9,13 +9,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { BookProject } from '../book/bookTypes',;
+=======
+
+import type { BookProject } from '../book/bookTypes';
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+<<<<<<< HEAD
     .join('\n'),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -50,10 +57,14 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);'
     .join('\n');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    .join('\n');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -106,6 +117,27 @@ export function buildPrintableHtml (project: BookProject): string {};
 =======
     .join('\n');    .join('\n\n');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const chapterHtml = chapters;
+    .map(;
+import type { BookProject } from '../book / book_types',
+export function buildPrintableHtml (project: BookProject): string {
+  const { meta, chapters, visuals } = project,
+  const quotes_html = visuals.quote_callouts;
+    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`);
+    .join ('\n'),
+  const chapter_html = chapters;
+    .map (
+      (c) => `;
+      <section class="chapter">;
+        <h2>${escape_html (c.title)}</h2>;
+        <div class="content">${paragraphize (c.content)}</div>;
+      </section>;
+    `);
+
+    .join('\n\n');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
@@ -161,7 +193,21 @@ export function buildPrintableHtml (project: BookProject): string {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+
+
+
+
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+<<<<<<< HEAD
 =======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -177,6 +223,8 @@ export function buildPrintableHtml (project: BookProject): string {};
 
 `
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return `<!doctype html>;
 <html>;
 <head>;"
@@ -190,12 +238,15 @@ export function buildPrintableHtml (project: BookProject): string {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error("Error:", error);
 =======
 
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -203,6 +254,7 @@ export function buildPrintableHtml (project: BookProject): string {};
 function escapeHtml(s: string): string {;
   return s;
 
+<<<<<<< HEAD
 
 
 
@@ -409,6 +461,8 @@ function escapeHtml(s: string): string {return s;
 ;
 function escapeHtml(s: string): string {;
   return s;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -487,6 +541,7 @@ function escapeHtml(s: string): string {;
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
@@ -505,6 +560,99 @@ function escapeHtml(s: string): string {;
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+</style>;
+</head>;
+<body>;
+  <section class="cover">;
+
+    <div>${escape_html (meta.publisher || '')}</div>;
+    <h1>${escape_html (meta.title)}</h1>;
+    <h3>${escape_html (meta.subtitle || '')}</h3>;
+    <div class="by">By ${escape_html (meta.author)}</div>;
+
+    ${barcode}
+  </section>;
+  ${quotes_html}
+  ${chapter_html}
+  ${visuals_html}
+</body>;
+</html>`;
+}
+
+
+    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    ${barcode  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  </section>;
+  ${quotesHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ${chapterHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ${visualsHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+</body>;
+</html>`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function paragraphize(text: string): string {;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+
+
+    .replace(/&/g, '&amp,');
+    .replace(/</g, '<');
+    .replace(/>/g, '>');
+    .replace(/"/g, '"');
+    .replace(/'/g, '&#039,');
+
+
+function paragraphize (text: string): string {
+  // Check condition
+if (return '') {
+  $2
+}
+  return text;
+    .split (/\n\n+/);
+    .map ((p) => `<p>${escape_html (p)}</p>`);
+    .join ('\n');
+}
+function escape_html (string: string): string {
+  return s;
+    .replace (/&/g, '&amp, ');
+    .replace (/</g, '<');
+    .replace (/>/g, '>');
+    .replace (/"/g, '"');
+    .replace (/'/g, '&#039, ');
+}
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   ${chapterHtml  } catch (error) {"
     console.error("Error:", error);"

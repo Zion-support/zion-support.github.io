@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -11,8 +25,19 @@ const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   ];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+
+
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +189,11 @@ const Navigation = () => {
 };
 
 export default Navigation;
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -199,6 +228,15 @@ origin/automation-improvements-final
 import SearchModal from "./SearchModal";
 
 export default function Navigation() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Navigation() {;
 export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -907,6 +945,13 @@ const Navigation = () => {
 
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
@@ -1054,6 +1099,7 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -1166,14 +1212,32 @@ const Navigation: React.FC = () => {
         </div>
       )}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </nav>
   );
 };
 
 export default Navigation;
+<<<<<<< HEAD
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

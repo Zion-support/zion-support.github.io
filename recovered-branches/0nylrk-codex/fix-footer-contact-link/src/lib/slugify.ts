@@ -4,6 +4,12 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+
+
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -52,10 +58,13 @@ export function slugify(title: string, separator = "-"): string {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return title
     .trim()
     .replace(/_/g, " ") // treat underscores like spaces
@@ -123,7 +132,12 @@ export function unslugify(slug: string, separator = "-"): string {};
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
 =======
@@ -136,6 +150,7 @@ export function slugify (title: string, separator = "-"): string {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
+
 
 ;
 
@@ -199,6 +214,7 @@ export function unslugify (slug: string, separator = "-"): string {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -226,3 +242,9 @@ export function unslugify (slug: string, separator = "-"): string {};
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,5 +1,7 @@
+
 #!/usr/bin/env node;
 'use strict';
+<<<<<<< HEAD
 const { execSync, spawnSync } = require('"node": child_process');
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -7,6 +9,8 @@ const { execSync, spawnSync } = require('"node": child_process');
 
 const { execSync, spawnSync } = require('"node": child_process');
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const { execSync, spawnSync } = require('"node": child_process');
 
@@ -42,6 +46,7 @@ function main() {}
 
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
+
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
 };
@@ -52,9 +57,6 @@ main();
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
-main();
-main();
-
 main();
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

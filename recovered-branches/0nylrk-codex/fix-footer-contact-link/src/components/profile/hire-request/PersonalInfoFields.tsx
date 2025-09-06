@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {}
   FormField,
@@ -36,11 +37,21 @@ import {
   FormField,
 
 <<<<<<< HEAD
+=======
+import {
+  FormField,
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormField,
 FormField,
+
+  FormField,
+  FormItem,
   FormLabel,
   FormControl,
   FormMessage,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,12 +72,19 @@ import { FormValues  } from './useHireRequestForm';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface PersonalInfoFieldsProps {
-  form: UseFormReturn < FormValues>;
+  form: UseFormReturn<FormValues>;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -166,6 +184,10 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
   return (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
       <FormField;
         control={form && form.control}"
@@ -360,6 +382,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -376,3 +399,5 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

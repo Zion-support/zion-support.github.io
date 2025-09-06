@@ -134,6 +134,7 @@ class CompleteAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -161,6 +162,11 @@ class CompleteAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    for (const step of automationSteps) {
+      const result = await this.runScript(step.script, step.description);
+      results.push({ ...step, ...result })}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Generate final summary report
     const summary = {
       "timestamp": new Date().toISOString(),
@@ -219,6 +225,7 @@ class CompleteAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -240,6 +247,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (require.main === module) {
 =======
 

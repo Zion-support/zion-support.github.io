@@ -9,7 +9,11 @@ import { ApplicationStatus } from "@/types/jobs";
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useState } from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
@@ -23,18 +27,24 @@ export function ApplicationsTracker() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { applications, isLoading, error } = useJobApplications();
 
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
     "all",;
 
   );
+
+
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -66,6 +76,7 @@ export function ApplicationsTracker() {}
 <<<<<<< HEAD
 
   if (isLoading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +156,9 @@ export function ApplicationsTracker() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -190,21 +204,30 @@ export function ApplicationsTracker() { return null; }
 
   if (applications && applications.length === 0) {;
     return <EmptyState />;
+<<<<<<< HEAD
   }  
 =======
 
+=======
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (isLoading) {;
     return <LoadingState />;
   }
 
+<<<<<<< HEAD
 
   '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const filteredApplications = statusFilter === 'all' 
     ? applications;
     : applications.filter(app => app.status === statusFilter),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +245,10 @@ export function ApplicationsTracker() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const filteredApplications =;
     statusFilter === "all";
       ? applications;
@@ -291,17 +318,23 @@ export function ApplicationsTracker() { return null; }
         <Button"
           size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "
           variant={statusFilter === "rejected" ? "default" : "outline"}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          variant={statusFilter === "rejected" ? "default" : "outline"}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           onClick={() => setStatusFilter("rejected")}
+
 
       
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -324,10 +357,16 @@ export function ApplicationsTracker() { return null; }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
@@ -342,11 +381,15 @@ export function ApplicationsTracker() { return null; }
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
       
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -358,6 +401,9 @@ export function ApplicationsTracker() { return null; }
 =======
       </div>      {filteredApplications.length === 0 && (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      {filteredApplications.length === 0 && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="text-center p-8">
 =======
 
@@ -421,12 +467,16 @@ function ApplicationsTracker() {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 ;
   // Check condition;
@@ -454,8 +504,8 @@ if ( {) {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="space-y-6">;
-      <div className="flex flex - wrap gap-2">;
+    <div className="space - y-6">;
+      <div className="flex flex - wrap gap - 2">;
         <Button;
           size="sm";
           variant={status_filter === "all" ? "default" : "outline"}
@@ -511,6 +561,89 @@ if ( {) {}
           variant={status_filter === "rejected" ? "default" : "outline"}"
           on_click={() => setStatusFilter ("rejected")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { ApplicationCard } from "./ApplicationCard",;
+import { LoadingState } from "./LoadingState",;
+import { EmptyState } from "./EmptyState",;
+import { ErrorState } from "./ErrorState",;
+import { Button } from "@/components/ui/button",;
+import { ApplicationStatus } from "@/types/jobs",;
+;
+export function ApplicationsTracker() {;
+  const { applications, isLoading, error } = useJobApplications(),;
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),;
+  ;
+  if (isLoading) {;
+    return <LoadingState />,;
+  }
+  ;
+  if (error) {;
+    return <ErrorState error={error} />,;
+  }
+  ;
+  if (applications.length === 0) {;
+    return <EmptyState />,;
+  }
+  ;
+  const filteredApplications = statusFilter === 'all' ;
+    ? applications;
+    :applications.filter(app => app.status === statusFilter),;
+  ;
+  return (;
+    <div className="space-y-6">;
+      <div className="flex flex-wrap gap-2">;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'all' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('all')}
+        >;
+          All;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'new' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('new')}
+        >;
+          Submitted;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'viewed' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('viewed')}
+        >;
+          Viewed;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'shortlisted' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('shortlisted')}
+        >;
+          Shortlisted;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'interview' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('interview')}
+        >;
+          Interview;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'hired' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('hired')}
+        >;
+          Hired;
+        </Button>;
+        <Button ;
+          size="sm";
+          variant={statusFilter === 'rejected' ? 'default' :'outline'}
+          onClick={() => setStatusFilter('rejected')}
+          variant={statusFilter === "rejected" ? "default" : "outline"}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           onClick={() => setStatusFilter("rejected")}
 =======
 
@@ -524,6 +657,7 @@ if ( {) {}
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}
 =======
 
@@ -532,3 +666,20 @@ if ( {) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
+        {filtered_applications.map ((application) => (
+          <ApplicationCard key={application.id} application={application} />))}
+      </div>;
+      {filtered_applications.length === 0 && (
+        <div className="text - center p - 8">;
+          <p className="text - muted - foreground">;
+            No applications with this status.;
+          </p>;
+        </div>)}
+    </div>);
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

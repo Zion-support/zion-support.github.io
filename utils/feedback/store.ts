@@ -1,8 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -25,6 +32,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type FeedbackRecord = {
 <<<<<<< HEAD
 =======
@@ -46,16 +54,27 @@ export interface FeedbackRecord {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 import path from 'path';
 
 export type FeedbackRecord = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type FeedbackRecord = {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
+<<<<<<< HEAD
   createdAtIso: string;
   user: { id?: string; role?: string; talentSlug?: string };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  type: string;
+  message: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   rating: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +120,7 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   id: string;
@@ -109,6 +129,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export interface FeedbackStats {};
@@ -142,12 +166,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   recent: FeedbackRecord[];
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const feedbackData: FeedbackRecord[] = [];
@@ -158,6 +193,8 @@ export async function saveFeedbackFallback(
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const feedback_data: FeedbackRecord[] = [];
 ;
 export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
@@ -166,7 +203,20 @@ export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise <
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+const feedbackData: FeedbackRecord[] = [];
+
+export async function saveFeedbackFallback(
+  feedback: FeedbackRecord,
+): Promise<void> {
+  feedbackData.push(feedback);
+  console.log("Feedback saved:", feedback.id);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export function writeAll(rows: any[]): void {";
@@ -228,6 +278,7 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -235,3 +286,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

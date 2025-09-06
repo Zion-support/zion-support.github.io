@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { TokenConfig, TokenTransaction, Wallet } from "./types";
@@ -14,6 +15,8 @@ export interface TokenStoreData {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class TokenStore {
   private config: any = {};
 
@@ -33,6 +36,7 @@ export interface TokenConfig {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   tokenName: string;
   tokenSymbol: string;
@@ -58,12 +62,33 @@ export interface TokenConfig {
 export interface TokenConfig {};
 export interface TokenConfig {;
 
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   tokenName: string;
   tokenSymbol: string;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 
+
+
+export interface TokenConfig {
+
+export interface TokenConfig {
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+=======
+  token_name: string;
+  token_symbol: string;
+export interface TokenConfig {;
+  tokenName: string;
+  tokenSymbol: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   decimals: number;
   totalSupply: number;
   issueRate: number;
@@ -74,19 +99,29 @@ export interface TokenConfig {;
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');'
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -110,9 +145,15 @@ class TokenStore {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface TokenStoreData {
 =======
 
@@ -134,18 +175,34 @@ class TokenStore {}
     minIssueAmount: 1
     maxIssueAmount: 10000
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 export interface TokenStoreData {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  }
+export interface TokenStoreData {
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 export interface TokenStoreData {
+<<<<<<< HEAD
   };
 
 export interface TokenStoreData {;
+
+=======
+  }
+export interface TokenStoreData {
+  };
+
+export interface TokenStoreData {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -153,6 +210,9 @@ export interface TokenStoreData {;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 export const tokenStore = new TokenStore();
@@ -176,10 +236,12 @@ export class TokenStorageManager {
 
   }
 export interface TokenStoreData {
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
     decimals: 18;
     totalSupply: 1000000000;
     issueRate: 1.0;
@@ -196,6 +258,9 @@ export interface TokenStoreData {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   wallets: Record<string, Wallet>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transactions: TokenTransaction[];
@@ -226,8 +291,14 @@ function readFromDisk(): TokenStoreData | null {}
   try {}
     ensureDataDir();
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 =======
@@ -274,8 +345,11 @@ export const tokenStorage = new TokenStorageManager();
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   set_config (new_config: Partial < TokenConfig>): void {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -308,9 +382,15 @@ export const token_store = new TokenStore ();
 =======
 
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -335,6 +415,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   } catch {}
     return null;
   }
+<<<<<<< HEAD
   setConfig(newConfig: Partial<TokenConfig>): void {}
     this.config = { ...this.config, ...newConfig }
   }
@@ -432,6 +513,12 @@ export const tokenStore = new TokenStore();
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
+  }
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -504,13 +591,22 @@ export const tokenStore = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+=======
+}
+export const tokenStore = new TokenStore();
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -522,3 +618,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

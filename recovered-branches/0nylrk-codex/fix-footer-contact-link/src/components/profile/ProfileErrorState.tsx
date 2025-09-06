@@ -71,9 +71,21 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
+=======
+  );
+}
+
+export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
+  return (
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
+      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
+      <Button asChild>;
+        <Link to="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -133,17 +145,21 @@ import { ArrowLeft } from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
       </Button>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +182,12 @@ import { ArrowLeft } from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
@@ -185,15 +207,16 @@ export /**;
 <<<<<<< HEAD
 function ProfileErrorState() {
   return (
-    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p-4">;
-      <div className="text - red - 400 mb - 4 text-xl">;
+    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4">;
+      <div className="text - red - 400 mb - 4 text - xl">;
         {error || "Something went wrong"}
       </div>;
       <Button as_child>;
         <Link;
           to="/talents";
-          className="bg - zion - purple hover: bg - zion - purple-dark";
+          className="bg - zion - purple hover: bg - zion - purple - dark";
         >;
+<<<<<<< HEAD
           <ArrowLeft className="mr - 2 h - 4 w-4" />;
 =======
 function ProfileErrorState() {}
@@ -209,11 +232,15 @@ function ProfileErrorState() {}
         >;"
           <ArrowLeft className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <ArrowLeft className="mr - 2 h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Back to Talent Directory;
         </Link>;
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,11 +265,19 @@ function ProfileErrorState() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  )
+  )
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
   )
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;}
 ;
@@ -254,3 +289,26 @@ function ProfileErrorState() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+
+  );}
+ interface ProfileErrorStateProps {
+  error: string | null 
+}export function ProfileErrorState ({
+  error 
+}: ProfileErrorStateProps) {
+  return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {
+  error || "Something went wrong" 
+}</div> 
+}
+  );
+}
+}
+;
+
+  );
+}
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

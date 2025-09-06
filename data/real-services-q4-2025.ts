@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'affiliate-analytics-hub'
     name: 'Affiliate Analytics Hub'
     tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
@@ -60,6 +61,8 @@
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
@@ -69,6 +72,52 @@
 
 
   {
+=======
+    id: 'affiliate-analytics-hub'
+    name: 'Affiliate Analytics Hub'
+    tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
+    price: '$89'
+    period: '/month'
+    description:
+      'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
+    features: [
+      'Link shortener and branded domains'
+      'UTM builder and traffic quality scoring'
+      'Multi-touch attribution and deduplication'
+      'Automated payouts and tax forms'
+      'Fraud and bot detection'
+      'Partner portal and reports'
+    ]
+    popular: true
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
+    marketPosition:
+      'Easier than enterprise suites; purpose-built for small teams.'
+    targetAudience: 'E-commerce, SaaS, Media'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge']
+    integrations: ['Stripe', 'Shopify', 'WooCommerce']
+    useCases: ['Partner programs', 'Influencer payouts']
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)']
+    marketSize: '$15B+ affiliate tech'
+    growthRate: '12% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Webhook ingestion, cookie-less heuristics'
+    launchDate: '2025-11-01'
+    customers: 35
+    rating: 4.6
+    reviews: 21
+  }
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
@@ -80,23 +129,45 @@
     features: [;
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi-touch attribution and deduplication',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi - touch attribution and deduplication',
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi - touch attribution and deduplication',
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Automated payouts and tax forms',
       'Fraud and bot detection',
       'Partner portal and reports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔗',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
       'Link shortener and branded domains','
       'UTM builder and traffic quality scoring','
       'Multi-touch attribution and deduplication',
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 '
       'Automated payouts and tax forms','
@@ -159,7 +230,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Webhook ingestion, cookie - less heuristics',
     launch_date: '2025 - 11 - 01',
 
+<<<<<<< HEAD
   {
+=======
+    customers: 35,
+    rating: 4 && 4.6,
+    reviews: 21,
+  },
+
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   {
@@ -175,6 +255,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - analytics - hub',
+    market_position:;
+      'Easier than enterprise suites; purpose - built for small teams.',
+    target_audience: 'E - commerce, SaaS, Media',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'Workers / Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    use_cases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner - attributed revenue by 10–30%',
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    market_size: '$15B+ affiliate tech',
+    growth_rate: '12% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Webhook ingestion, cookie - less heuristics',
+    launch_date: '2025 - 11 - 01',
+
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Portal and RMA workflows',
       'Label generation and tracking',
       'Warehousing and disposition updates',
@@ -183,6 +293,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytics and cohort reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📦',
 
     color: 'from - orange - 600 to - red - 600',
@@ -191,6 +302,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_position:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       '90% of SMBs lack streamlined returns; fast ROI with fewer tickets.',
 =======
 '
@@ -215,6 +332,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Stripe', 'Shippo'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Shopify', 'Klaviyo', 'Gorgias'],
     use_cases: ['Returns and exchanges', 'Warehouse ops'],
     roi: 'Cut support tickets by 35% and improve retention',
@@ -241,6 +364,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'survey - studio - mobile',
     name: 'Survey Studio Mobile',
@@ -252,6 +376,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Branching logic designer',
       'Embeddable SDK and JS snippet',
       'Real - time analytics and funnels',
@@ -260,6 +390,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Consent and PII redaction',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📱',
 
     color: 'from - purple - 600 to - pink - 600',
@@ -275,6 +406,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Twilio', 'PostgreSQL'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Segment', 'HubSpot', 'Slack'],
     use_cases: ['NPS / CSAT', 'In - app feedback', 'Research studies'],
     roi: 'Improve survey completion by 2 - 3x on mobile',
@@ -311,6 +448,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'website - analytics - lite',
     name: 'Website Analytics Lite',
@@ -322,6 +460,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Pageviews, sessions, and cohorts',
       'Events and conversions',
       'Source / medium attribution',
@@ -330,6 +474,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CSV and webhook export',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - indigo - 600 to - blue - 700',
@@ -338,6 +483,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_position:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Simple alternative to GA4; easy client reporting for agencies.',
 =======
   {}
@@ -363,6 +514,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'PostgreSQL', 'ClickHouse (optional)'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Shopify', 'WordPress', 'Webflow'],
     use_cases: ['Funnel analysis', 'Campaign attribution'],
     roi: 'Faster insights with low overhead',
@@ -389,6 +546,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
 ];	{
+<<<<<<< HEAD
 
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -404,10 +562,16 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     features: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 ];	{}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		];
 		popular: true;'
@@ -420,9 +584,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Sales, Success, Support, Ops';
 		trialDays: 14;'
 		setupTime: '2 hours';'
@@ -441,11 +611,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'OAuth, vector memory, policy guardrails';'
 		launchDate: '2025-10-15';
 		customers: 24;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 17
 =======
 		reviews: 17;
@@ -470,6 +647,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.';
 =======
 '
@@ -493,11 +676,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Webhook ingestion, cookie-less heuristics';'
 		launchDate: '2025-11-01';
 		customers: 35;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 21
 =======
 		reviews: 21;
@@ -522,6 +712,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.';
 =======
 '
@@ -545,11 +741,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Carrier APIs and automation rules';'
 		launchDate: '2025-11-20';
 		customers: 12;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 9
 =======
 		reviews: 9;
@@ -575,9 +778,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'CX, Product, Research';
 		trialDays: 7;'
 		setupTime: '1 hour';'
@@ -596,11 +805,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Client SDK + webhooks';'
 		launchDate: '2025-10-28';
 		customers: 16;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 10
 =======
 		reviews: 10;
@@ -625,6 +841,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.';
 =======
 '
@@ -649,18 +871,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		launchDate: '2025-12-05';
 		customers: 9;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 ;
 
 	}
 ];
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 		rating: 4 && 4.5,
 
 		reviews: 6
+<<<<<<< HEAD
 	}
 ];
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+;
+
+	}
+];
+
+	}
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -858,6 +1098,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		rating: 4.5
 		reviews: 6
 
@@ -1063,6 +1305,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 	}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -1070,12 +1316,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 
+<<<<<<< HEAD
 	}
 
 ];
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;'
 	mobile: '+1 302 464 0950',;'
@@ -1269,6 +1522,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		rating: 4.5;
 		reviews: 6;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1276,12 +1530,25 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 	}
 ];
 
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +16,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -23,6 +26,7 @@ import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricin
 import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";
 import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";
+<<<<<<< HEAD
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
@@ -74,6 +78,11 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 export default function EnterprisePlans() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
+import { SEO } from "@/components/SEO";
+export default function EnterprisePlans() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <SEO"
@@ -144,6 +153,7 @@ import {SEO} from "@/components/SEO";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -156,6 +166,9 @@ import {SEO} from "@/components/SEO";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -175,7 +188,8 @@ export default function EnterprisePlans() {;
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
       />;
       <Header />;
-      <main className="min-h-screen bg-background">;    <>;
+      <main className="min-h-screen bg-background">;
+    <>;
       <SEO;
         title="Enterprise Plans - Zion AI Marketplace";
 =======
@@ -203,6 +217,7 @@ import { SEO } from "@/components/SEO";
       />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Header />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,6 +239,12 @@ import { SEO } from "@/components/SEO";
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <Header />;
+      <main className="min - h-screen bg - background">;
+      <main className="min-h-screen bg-background">;
+      <main className="min-h-screen bg-background">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -233,6 +254,7 @@ import { SEO } from "@/components/SEO";
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -268,3 +290,12 @@ import { SEO } from "@/components/SEO";
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </>);
+}
+;
+
+
+    </>);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

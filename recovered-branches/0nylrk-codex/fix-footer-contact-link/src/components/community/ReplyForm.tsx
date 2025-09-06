@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -25,6 +26,9 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  Form,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormControl,
   FormField,
   FormItem,
@@ -36,6 +40,7 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
 }
+
 
 import {;
   Form,;
@@ -51,6 +56,7 @@ interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
+
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -72,17 +78,27 @@ import { Textarea } from "@/components/ui/textarea";
 <<<<<<< HEAD
 import {
 
+<<<<<<< HEAD
 =======
 import {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Form,
   FormControl,
   FormField,
   FormItem,
 <<<<<<< HEAD
+<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <Card>;
@@ -126,11 +142,15 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
   return (
 <<<<<<< HEAD
     <Card>;
+<<<<<<< HEAD
       <CardContent className="pt-6">;
 =======
     <Card>;"
       <CardContent className="pt - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <CardContent className="pt - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -146,7 +166,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
                           : "Join the discussion...";
 <<<<<<< HEAD
                       }
-                      className="min - h-[100px] resize-y";
+                      className="min - h-[100px] resize - y";
   FormMessage;
 } from "@/components/ui/form",;
 =======
@@ -216,8 +236,10 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
 
 <<<<<<< HEAD
 FormMessage,;
+
 } from "@/components/ui/form";
 
+<<<<<<< HEAD
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 };
 =======
@@ -227,6 +249,12 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 "
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     setIsSubmitting(true);
     try {;
@@ -238,6 +266,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -245,6 +274,11 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Card>;"
       <CardContent className="pt-6">;
@@ -278,11 +312,15 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
   return (
 <<<<<<< HEAD
     <Card>;
+<<<<<<< HEAD
       <CardContent className="pt-6">;
 =======
     <Card>;"
       <CardContent className="pt - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <CardContent className="pt - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -299,11 +337,15 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
                           : "Join the discussion...";
 <<<<<<< HEAD
                       }
+<<<<<<< HEAD
                       className="min - h-[100px] resize-y";
 =======
                       }"
                       className="min - h-[100px] resize - y";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                      className="min - h-[100px] resize - y";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {...field}
                     />;
                   </FormControl>;
@@ -312,7 +354,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
                 </FormItem>)}
 <<<<<<< HEAD
             />;
-            <div className="mt - 4 flex justify-end">;
+            <div className="mt - 4 flex justify - end">;
               <Button type="submit" disabled={is_submitting}>;
 =======
             />;"
@@ -333,6 +375,30 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 export default ReplyForm;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+
+                      className="min-h-[100px] resize-y"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "@/components/ui/form";
 =======
 
@@ -446,9 +512,14 @@ import { Textarea } from "@/components/ui/textarea";
 <<<<<<< HEAD
 import {
 
+<<<<<<< HEAD
 =======
 import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ReplyFormValues {;
 
   content: string;
@@ -460,6 +531,7 @@ interface ReplyFormValues {;
       setIsSubmitting(false);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -475,6 +547,11 @@ interface ReplyFormValues {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -524,6 +601,7 @@ interface ReplyFormValues {;
   )
 },
 
+
     </Card>;
   ),;
 },;
@@ -558,8 +636,15 @@ export default ReplyForm;
   );
 }
 export default ReplyForm;
+
+  )
+},
+
+
+export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -582,6 +667,11 @@ export default ReplyForm;
 export default ReplyForm,
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default ReplyForm;
+export default ReplyForm,
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="min - h-[100px] resize - y";
                       {...field}
                     />;
@@ -593,6 +683,7 @@ export default ReplyForm,
         </Form>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -603,3 +694,5 @@ export default ReplyForm,
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

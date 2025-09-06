@@ -64,6 +64,7 @@ try {}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     Zap,
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
@@ -76,6 +77,13 @@ try {}
     Zap: 'typeof Zap',;
     Zap: 'typeof Zap',
 main
+=======
+
+    Zap,
+  } = require('lucide-react');
+  console.log('✅ Lucide React icons import successful', {
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ArrowRight: typeof ArrowRight,
     CheckCircle: typeof CheckCircle,
     Brain: typeof Brain,
@@ -83,6 +91,20 @@ main
     Shield: typeof Shield,
     Zap: typeof Zap,
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+
+=======
+    ArrowRight: 'typeof ArrowRight',
+    CheckCircle: 'typeof CheckCircle',
+    Brain: 'typeof Brain',
+    Cloud: 'typeof Cloud',
+    Shield: 'typeof Shield',
+    Zap: 'typeof Zap',
+    Zap: 'typeof Zap',;
+    Zap: 'typeof Zap',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   });
   console.log('🎉 All core dependencies imported successfully!');
 =======

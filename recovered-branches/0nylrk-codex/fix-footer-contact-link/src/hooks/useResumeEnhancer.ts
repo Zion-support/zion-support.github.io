@@ -8,12 +8,15 @@
 export function useResumeEnhancer() {;
 
 
+<<<<<<< HEAD
 =======
 export function useResumeEnhancer() {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
@@ -24,6 +27,7 @@ export function useResumeEnhancer() {
 
 export function useResumeEnhancer() {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -49,6 +53,11 @@ export function useResumeEnhancer() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function useResumeEnhancer() {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -61,12 +70,16 @@ export function useResumeEnhancer() {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
         body: { 
           content, 
           enhancementType: type,
 
+<<<<<<< HEAD
 =======
 const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
         body: { 
@@ -86,9 +99,22 @@ export function useResumeEnhancer() {;          context
 =======
 export function useResumeEnhancer() {;          context
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          context
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       });
-      if (error) {      return null
+      if (error) {
+        throw new Error(error && error.message)
+      }
+
+      
+      return data && data.enhancedContent
+    } catch (err: any) {
+      setError(err && err.message || 'Failed to enhance content'),
+      console && console.error('Enhancement error:', err);
+
+      return null
     } finally {
 =======
 import {useState} from 'react';'
@@ -121,6 +147,7 @@ export function useResumeEnhancer() { return null; }
     enhanceContent;
     isEnhancing;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,10 +196,22 @@ export /**;
  * useResumeEnhancer - Function description;
  */
 function useResumeEnhancer() {}
+=======
+    error
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
+;
+export /**
+ * useResumeEnhancer - Function description
+ */
+function useResumeEnhancer() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 ;
   const enhance_content = async (
+<<<<<<< HEAD
     content: string,'
     type: EnhancementType = 'general';
     context?: string): Promise < string | null> => {}
@@ -192,6 +231,19 @@ function useResumeEnhancer() {}
 =======
     error          context;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    content: string,
+    type: EnhancementType = 'general';
+    context?: string): Promise < string | null> => {
+    setIsEnhancing (true);
+    set_error (null),
+    try {
+      const { data, error } = await supabase.functions.invoke ('resume - enhancer', {
+        body: {
+          content,
+          enhancement_type: type,
+          context;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       });
 ;
@@ -218,6 +270,7 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -234,6 +287,14 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+  }
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 

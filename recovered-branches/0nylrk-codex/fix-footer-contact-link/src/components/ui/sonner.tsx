@@ -12,11 +12,13 @@
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
 
+
 type ToasterProps = React.ComponentProps<typeof Sonner>
 const Toaster = ({ ...props }: ToasterProps) => {
 
   const { theme = "system" } = useTheme()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -43,6 +45,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Sonner;
       theme={theme as ToasterProps["theme"]}"
@@ -50,6 +55,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 <<<<<<< HEAD
       toastOptions={{
         classNames: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           toast:
@@ -94,10 +100,21 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
           cancelButton:"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          toast:
+
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+
+          cancelButton:
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
+<<<<<<< HEAD
 
 
 
@@ -108,6 +125,9 @@ import { use_theme } from &quot;next - themes & quot;
 =======
           toast:import { use_theme } from &quot;next - themes & quot;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { use_theme } from &quot;next - themes & quot;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
 type ToasterProps = React.ComponentProps < typeof Sonner>;
@@ -127,10 +147,14 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {}
           cancel_button:;
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 ;
 const Toaster = ({ ...props } ToasterProps) => {;"
@@ -144,8 +168,8 @@ const Toaster = ({ ...props } ToasterProps) => {;"
       toastOptions={{;
         classNames:{;
           toast:;
-            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",,
-  description:"group-[.toast]:text-muted-foreground",;
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",;
+          description:"group-[.toast]:text-muted-foreground",;
           actionButton:;
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;
           cancelButton:;
@@ -153,8 +177,11 @@ const Toaster = ({ ...props } ToasterProps) => {;"
       {...props}
     />);
 }
+
 ;
 ;
+;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export { Toaster, toast } />) 
@@ -193,3 +220,5 @@ export { Toaster, toast }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

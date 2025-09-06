@@ -69,6 +69,7 @@ ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 
@@ -122,3 +123,7 @@ ursor/add-new-services-and-deploy-updates-0462'"
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+:temp_exclude/src.disabled/components/EnhancedLoading.jsx
+'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

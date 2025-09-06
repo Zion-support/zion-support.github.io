@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/managed-postgres-ha.tsx
 <<<<<<< HEAD:pages/managed-postgres-ha.tsx
 <<<<<<< HEAD
@@ -149,6 +150,8 @@ export default function ManagedPostgresHAPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/managed-postgres-ha.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Phone,
   Mail,
@@ -168,12 +171,16 @@ export default function ManagedPostgresHAPage() {
   );
   if (!service) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/managed-postgres-ha.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/managed-postgres-ha.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>
       <Head>
@@ -403,6 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.contactInfo.address}
                   </a>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/managed-postgres-ha.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -417,12 +425,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/managed-postgres-ha.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/managed-postgres-ha.tsx
 <<<<<<< HEAD
   )
@@ -567,3 +579,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/managed-postgres-ha.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

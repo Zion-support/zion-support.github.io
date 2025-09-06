@@ -3,9 +3,11 @@
  * PM2 Sync Automation;
  * Manages PM2 processes and ensures synchronization;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class PM2SyncAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -30,6 +32,7 @@ class PM2SyncAutomation {}
         console.log(message)};
     checkPM2Status() {}
         this.log('Checking PM2 status...');
+        
         try {}
             const statusResult = execSync('pm2 status --json', { })
 <<<<<<< HEAD
@@ -40,8 +43,10 @@ class PM2SyncAutomation {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             const status = JSON.parse(statusResult;);
             this.log(`Found ${status.length} PM2 processes`);
+            
             return {;}
                 "status": 'success',
                 "processes": status.length,
@@ -55,6 +60,7 @@ class PM2SyncAutomation {}
     };
     syncPM2Processes() {}
         this.log('Syncing PM2 processes...');
+        
         try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
@@ -66,6 +72,7 @@ class PM2SyncAutomation {}
                 "stdio": 'pipe'
             }
 });
+            
             // Delete all processes;
             execSync('pm2 delete all', { })
 <<<<<<< HEAD
@@ -76,6 +83,7 @@ class PM2SyncAutomation {}
                 "stdio": 'pipe'
             }
 });
+            
             // Start processes from ecosystem file;
             execSync('pm2 start ecosystem.config.cjs', { })
 <<<<<<< HEAD
@@ -86,6 +94,7 @@ class PM2SyncAutomation {}
                 "stdio": 'pipe'
             }
 });
+            
             this.log('PM2 processes synced successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`PM2 sync "failed": ${error.message}`);
@@ -93,6 +102,7 @@ class PM2SyncAutomation {}
     };
     checkProcessHealth() {}
         this.log('Checking process health...');
+        
         try {}
             const statusResult = execSync('pm2 status --json', { })
 <<<<<<< HEAD
@@ -103,10 +113,13 @@ class PM2SyncAutomation {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             const processes = JSON.parse(statusResult;);
             const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
             const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
+            
             this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
+            
             return {;}
                 "status": 'success',
                 "total": processes.length,
@@ -119,8 +132,10 @@ class PM2SyncAutomation {}
     };
     restartUnhealthyProcesses() {}
         this.log('Restarting unhealthy processes...');
+        
         try {}
             const healthCheck = this.checkProcessHealth(;);
+            
             if ( {})
                 execSync('pm2 restart all', { })
 <<<<<<< HEAD
@@ -149,6 +164,7 @@ class PM2SyncAutomation {}
     };
     generateSyncReport() {}
         this.log('Generating PM2 sync report...');
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -160,8 +176,10 @@ class PM2SyncAutomation {}
             },
             "recommendations": this.generateSyncRecommendations();
        };
+
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`PM2 sync report saved to ${this.reportFile}`);
+        
         return report};
     generateSyncRecommendations() {}
         return [;]
@@ -175,6 +193,7 @@ class PM2SyncAutomation {}
         ]};
     async run() {}
         this.log('PM2 Sync Automation started');
+        
         try {}
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
@@ -190,9 +209,13 @@ if ( {})
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = PM2SyncAutomation;
 module.exports = PM2SyncAutomation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD:pages/404.tsx
 <<<<<<< HEAD
@@ -65,10 +66,16 @@ export default Page;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
+=======
+import React from 'react';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Link>
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/404.tsx
 <<<<<<< HEAD
   );
@@ -83,6 +90,8 @@ export default NotFoundPage;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 
 import Head from 'next / head';
@@ -119,6 +128,7 @@ const NotFoundPage: NextPage = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/404.tsx
 <<<<<<< HEAD
 
@@ -133,6 +143,8 @@ export default function Custom404() {
         <meta name="description" content="The page you're looking for doesn't exist." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
         <title>404 - Page Not Found</title>
@@ -303,6 +315,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </div>
 </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/404.tsx
 <<<<<<< HEAD
 import Head from 'next / head';
@@ -316,6 +329,8 @@ function Custom404() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -324,6 +339,7 @@ function Custom404() {
 
 ursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/404.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -362,10 +378,13 @@ const NotFoundPage: NextPage = () => {
 
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/404.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -386,3 +405,9 @@ export default Page;
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
+=======
+
+
+}
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

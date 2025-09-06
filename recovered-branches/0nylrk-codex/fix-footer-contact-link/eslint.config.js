@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -19,11 +20,16 @@ import tseslint from "typescript-eslint";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import js from "@eslint/js",
 import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -45,6 +51,10 @@ import tseslint from "typescript-eslint",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -52,6 +62,7 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"]
     languageOptions: {
       ecmaVersion: 2020
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       globals: globals.browser}
@@ -108,13 +119,30 @@ export default tseslint && tseslint.config("
 =======
       globals: globals.browser}    plugins: {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      globals: globals.browser}
+export default tseslint && tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js && js.configs.recommended, ...tseslint && tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals && globals.browser},
+    plugins: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
-    rules: {      "react-refresh/only-export-components": [
+    rules: {
+
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+
+      "react-refresh/only-export-components": [
 
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +162,9 @@ export default tseslint && tseslint.config("
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -252,6 +283,7 @@ export default tseslint.config(;"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { allowConstantExport:true }],;
       "@typescript-eslint/no-unused-vars":"off"}}
 =======
@@ -282,3 +314,10 @@ export default tseslint.config(;"
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        { allowConstantExport:true }],;
+      "@typescript-eslint/no-unused-vars":"off"}}
+),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
+}
+});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

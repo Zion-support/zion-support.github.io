@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -13,12 +14,17 @@
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 <<<<<<< HEAD
 =======
+=======
+
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -67,10 +73,13 @@ export interface InvoiceRecord {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
+<<<<<<< HEAD
   periodEndIso: string;'
   status: 'paid' | 'open' | 'void' | 'past_due';
 <<<<<<< HEAD
@@ -121,10 +130,13 @@ export interface CompanyUsageLimits {
   budgetCapUsd: number;    console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  periodEndIso: string;
+  status: 'paid' | 'open' | 'void' | 'past_due';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-;
-export interface CompanyRecord {;
-  id: string;
+export interface CompanyRecord {id: string;
   name: string;
   slug: string, // e.g. acme;
   logoUrl?: string;
@@ -132,6 +144,7 @@ export interface CompanyRecord {;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   invoices: InvoiceRecord[];  logoUrl?: string,;
@@ -197,11 +210,49 @@ export interface CompanyActivityEvent {}
   meta?: Record < string unknown>;
 }
 export interface InvoiceRecord {}
+=======
+  invoices: InvoiceRecord[];
+
+
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
+export interface CompanyUsageLimits {
+  monthlyJobPosts: number,
+  budgetCapUsd: number;
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+export interface CompanyPlan {
+  tier: 'teams' | 'business' | 'enterprise - custom',
+  seats_purchased: number,
+  seats_used: number,
+  usage_limits: CompanyUsageLimits;
+}
+export interface CompanyMember {
+  id: string,
+  email: string,
+  name: string,
+  role: EnterpriseRole;
+}
+export interface CompanyActivityEvent {
+  id: string,
+  timestamp_iso: string,
+  actor_email: string,
+  action: string,
+  meta?: Record < string unknown>;
+}
+export interface InvoiceRecord {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,
   company_id: string,
   number: string,
   amount_usd: number,
   periodStartIso: string,
+<<<<<<< HEAD
   periodEndIso: string,';
   status: 'paid' | 'open' | 'void' | 'past_due';
 }
@@ -214,16 +265,40 @@ export interface CompanyRecord {}
 
   } catch (error) {"
     console.error("Error:", error);"
+=======
+  periodEndIso: string,
+  status: 'paid' | 'open' | 'void' | 'past_due';
+}
+export interface CompanyRecord {
+  id: string,
+  name: string,
+  slug: string, // e.g. acme;
+
+
+  logoUrl?: string,;
+  brandColor?: string,;
+  plan: CompanyPlan,;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
+<<<<<<< HEAD
 
 }
 
 
   logoUrl?: string,;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+  logoUrl?: string,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   brandColor?: string,;
   plan: CompanyPlan,;
   members: CompanyMember[];

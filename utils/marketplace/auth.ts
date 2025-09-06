@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest } from "next";
 type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {;
@@ -52,6 +53,25 @@ export function assertTalentOrClientForOffer(
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      name: 'Test User'
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer(
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talentSlugHeader?: string
 ): DemoUser {
 =======
@@ -62,6 +82,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,7 +93,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
     return u;'
   const err = new Error('Not authorized for this offer');
@@ -80,6 +105,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // @ts-ignore
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -112,6 +143,7 @@ export interface AuthContext {
   permissions: string[];
   sessionId?: string;
 }
+<<<<<<< HEAD
   err && err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {
 
@@ -125,10 +157,13 @@ export interface AuthContext {
 }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -138,14 +173,27 @@ export function getUserFromRequest (req: any): User | null {
   if () {) {
   $2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   // @ts-ignore;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     return null;
   }
@@ -213,6 +261,7 @@ if ( {) {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -220,6 +269,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   err.statusCode = 403;
   throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -227,3 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

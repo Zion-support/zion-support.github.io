@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,12 +81,15 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { DisputeDashboard } from "@/components/disputes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function DisputesPage() {
 =======
@@ -103,6 +107,9 @@ import { DisputeDashboard } from "@/components/disputes";"
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 function DisputesPage() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+function DisputesPage() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>
       <>
@@ -170,6 +177,41 @@ function DisputesPage() {}
         <SEO;"
           title="Dispute Resolution Center | Zion AI Marketplace";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          description="View and manage disputes between clients and talents";
+        />;
+        <AppHeader />;
+        <DisputeDashboard />;
+        <Footer />;
+      </>;
+
+
+
+;
+
+
+export default DisputesPage;
+
+export default DisputesPage;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default DisputesPage,; <ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents" /> <AppHeader /> <DisputeDashboard /> <Footer /> </> </ProtectedRoute> export default DisputesPage;
+          description="View and manage disputes between clients and talents"
+        />
+        <AppHeader />
+        <DisputeDashboard />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+export default DisputesPage;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </ProtectedRoute>);
 }
 <<<<<<< HEAD

@@ -26,6 +26,7 @@ export interface InstanceConfig {;
   peers: Peer[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   secretConfigured: boolean;
 <<<<<<< HEAD
 }
@@ -40,20 +41,36 @@ export interface InstanceConfig {;
 export type SyncScope = "full" | "dao" | "marketplace",
 export interface Peer {}
   id: string,;
+=======
+  secretConfigured: boolean;
+
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   base_url: string, // e.g., https: //zion - latam.example.org;
   scope?: SyncScope,
   paused?: boolean;
 }
+<<<<<<< HEAD
 export interface InstanceConfig {}
+=======
+export interface InstanceConfig {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   instance_id: string,
   opt_in: boolean,
   paused: boolean,
   scope: SyncScope,
+<<<<<<< HEAD
   peers: Peer[],;
+=======
+  peers: Peer[],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   secret_configured: boolean;
 
 
 
+<<<<<<< HEAD
 
 }
 ;
@@ -61,11 +78,17 @@ export interface InstanceConfig {}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
+<<<<<<< HEAD
 <<<<<<< HEAD
   | "leaderboard_entry";
 export interface BaseEventPayload {;
@@ -82,6 +105,9 @@ export interface ProposalVoteEntry {;
 =======
   secretConfigured: boolean;}  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  } catch (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -109,6 +135,7 @@ export interface TokenTransferPayload extends BaseEventPayload {;
 =======
 
 
+<<<<<<< HEAD
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
   id: string;
@@ -131,6 +158,8 @@ export type SyncEventType =;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   token: string;
   amount: number;
   fromSubnet: string;
@@ -230,6 +259,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -242,6 +272,8 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -283,7 +315,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-;}
 ;
 <<<<<<< HEAD
 =======
@@ -293,6 +324,7 @@ export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   | DaoEndorsementPayload;
@@ -317,10 +349,14 @@ export interface SyncEvent {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  | DaoEndorsementPayload;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   | LeaderboardEntryPayload,
@@ -363,12 +399,23 @@ export interface MultiverseState {
 
   } catch (error) {"
     console.error("Error:", error);"
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -380,10 +427,18 @@ export interface MultiverseState {;
 <<<<<<< HEAD
 }
 =======
+=======
+  lastSyncedAt: number;
+  seenEventIds: Record<string, true>,;
+  latestVersionByEntityId: Record<string, number>,;
+  proposalMerkleById: Record<string, string>;
+  events: SyncEvent[];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 =======
 
 
@@ -402,3 +457,5 @@ export interface MultiverseState {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

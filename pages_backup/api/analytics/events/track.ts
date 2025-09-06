@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/analytics/events/track.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,21 +29,30 @@ function ensureLogFile() {
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/analytics/events/track.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import fs from 'fs',;
 import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics')
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl')
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/analytics/events/track.ts
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true })
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
 }
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/analytics/events/track.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -104,6 +114,7 @@ function handler() {
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/analytics/events/track.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,10 +145,13 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/analytics/events/track.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e) {
     // ignore file errors in serverless;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/analytics/events/track.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -204,6 +218,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/analytics/events/track.ts
+=======
+  res.status(200).json({ ok: true })
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const LOG_DIR = path.join(process.cwd(), 'logs');
 const LOG_FILE = path.join(LOG_DIR, 'events.log');
@@ -244,9 +263,13 @@ at: at && typeof at === 'string' ? at : nowIso,
 
   res.status(200).json({ ok: true });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/analytics/events/track.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/analytics/events/track.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

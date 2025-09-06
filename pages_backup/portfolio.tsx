@@ -8,10 +8,13 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 =======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Rocket, Brain, Atom, Shield, Cloud, BarChart3;
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -19,12 +22,16 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
   const projects = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Rocket
   Brain
@@ -372,6 +379,7 @@ function PortfolioPage() {}
 }
   ],
   const stats = [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -411,6 +419,8 @@ function PortfolioPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     { number: '500+', label: 'Projects Delivered', icon: Rocket }
     { number: '50+', label: 'Enterprise Clients', icon: Users }
     { number: '99.9%', label: 'Client Satisfaction', icon: Star }
@@ -430,16 +440,21 @@ function PortfolioPage() {}
     selectedCategory === 'All'
       ? projects
       : projects.filter(project => project.category === selectedCategory);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Our Work - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
@@ -509,6 +524,16 @@ import { motion } from 'framer-motion';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+        <meta
+          name='description'
+          content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
+        />;
+        <meta property='og:title' content='Our Work - Zion Tech Group' />;
+        <meta
+          property='og:description'
+          content='Explore our portfolio of innovative technology projects and solutions.'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />
       </Head>
@@ -522,12 +547,16 @@ import { motion } from 'framer-motion';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
 =======
 
@@ -536,6 +565,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work;
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 =======
@@ -543,21 +573,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
               and growth
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </motion.div>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 =======
@@ -626,22 +663,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
               results.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 
@@ -654,6 +698,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -666,16 +712,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 className='text-center'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -745,6 +796,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -760,6 +813,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -768,6 +822,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -777,6 +834,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
@@ -968,6 +1026,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </button>
             ))}
           </div>
@@ -1095,6 +1155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD:pages_backup/portfolio.tsx
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
       <section className='py-20 px-6'>;
@@ -1174,6 +1235,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -1183,17 +1246,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Ready to Start Your Project?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
@@ -1224,12 +1292,15 @@ Start Your Project
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Start Your Project
               </button>
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
                 Schedule Consultation
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1240,11 +1311,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 Schedule Consultation;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
@@ -1276,16 +1351,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <EnhancedFooter />
     </div>
 );
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -1398,6 +1479,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1793,12 +1875,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   duration: 0.8
 }viewport= {
   {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/portfolio.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1810,3 +1895,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

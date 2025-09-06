@@ -1,10 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const ROOT = process && process.cwd(),
 const REPORTS_DIR = path && path.join(ROOT, 'datareportsautomation'),
 const STATUS_FILE = path && path.join(REPORTS_DIR, 'status && status.json'),
 const IDEAS_DIR = REPORTS_DIR,
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function ensureDirs() {
   fs && fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
@@ -16,10 +23,14 @@ function listAutomations() {
   return files && files.filter((f) => f && f.endsWith('.cjs') || f && f.endsWith('.js')).sort()
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
@@ -54,11 +65,16 @@ function listAutomations() {}
 function writeStatus(automations, extras = {}) {
   const status = {
 
+    updatedAt: new Date().toISOString(),
+    automations,
+    ...extras},
+  fs && fs.writeFileSync(STATUS_FILE, JSON && JSON.stringify(status, null, 2)),
 
   return status
 }
 async function analyzeFeedbackIfPossible() {
   try {
+<<<<<<< HEAD
 =======
 
 
@@ -71,6 +87,9 @@ async function analyzeFeedbackIfPossible() {}
   try {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const script = path && path.join(ROOT, 'scriptsanalyze-feedback && feedback.js'),
     if (fs && fs.existsSync(script)) {}
       // Run in-process to avoid spawning'
@@ -210,6 +229,7 @@ async function main() {}
 <<<<<<< HEAD
   // Feedback analysis
   try {
+<<<<<<< HEAD
   // Generate automation ideas if key present
   try {
 <<<<<<< HEAD
@@ -224,6 +244,9 @@ async function main() {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     await generateIdeasIfPossible()
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
@@ -317,10 +340,26 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // non - fatal;
     }
   } catch {}
   // Generate automation ideas if key present;
+<<<<<<< HEAD
+=======
+
+  try {
+    await generateIdeasIfPossible ();
+  } catch {}
+
+
+  console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
+}
+
+main().catch((e) => { console && console.error(e), process && process.exit(1) }),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   try {
     await generateIdeasIfPossible ();
@@ -374,6 +413,7 @@ main().catch((e) => { console.error(e), process.exit(1) });
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -388,6 +428,10 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -418,6 +462,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -435,3 +480,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

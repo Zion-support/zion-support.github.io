@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/docs/graphql.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +69,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/graphql.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -88,6 +93,7 @@ function toSDL() {}
   });"
   return typedefs.join ("\n");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/docs/graphql.ts
 <<<<<<< HEAD:pages/api/docs/graphql.ts
 <<<<<<< HEAD
@@ -153,6 +159,16 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/graphql.ts
+=======
+
+
+
+  res.status(200).send(toSDL());
+}
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toSDL() {
@@ -163,6 +179,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/docs/graphql.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -190,3 +207,6 @@ export default function handler() { return null; }
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/graphql.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

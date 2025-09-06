@@ -39,14 +39,20 @@ module.exports = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -111,6 +117,10 @@ module.exports = {
       name: 'ci-cd-pipeline',
 
 main
+=======
+
+      name: 'bolt-zion-app',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       script: 'npm',
       args: 'run build',
@@ -166,19 +176,26 @@ main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +207,8 @@ main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -246,6 +265,16 @@ main
 
 
 
+=======
+
+      },
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
+      out_file: './logs/ci-cd-out.log',
+      log_file: './logs/ci-cd-combined.log',
+      time: true,    },
+    {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         NODE_ENV: 'production',
@@ -256,9 +285,12 @@ main
     },
     {
       name: 'auto-fix',
+<<<<<<< HEAD
       name: 'continuous-automation',
 
       name: 'continuous-automation',
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
@@ -269,22 +301,61 @@ main
       max_memory_restart: '1G',
       env: {
 
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+<<<<<<< HEAD
+        NODE_ENV: 'production'
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,
+    },
+    {
+
+        NODE_ENV: 'production',
+      },
+      log_file: 'logs/pm2/preview.log',
+      error_file: 'logs/pm2/preview-error.log',
+      out_file: 'logs/pm2/preview-out.log',
+    },
+    {
+      name: 'auto-fix',
+
+      script: 'node',
+      args: 'scripts/automation/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
 
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
-        NODE_ENV: 'production'
 
       },
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true
     },
     {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
+
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -293,6 +364,7 @@ main
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
         NODE_ENV: 'production',
 
       },
@@ -307,6 +379,7 @@ main
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
+<<<<<<< HEAD
       instances: 1,
       autorestart: true,
       watch: false,
@@ -322,31 +395,34 @@ main
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
       time: true,
+=======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true,    },
-    {
-      name: 'comprehensive-automation',
-      script: 'node',
-      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
-      cwd: '/workspace',
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
         NODE_ENV: 'production',      },
+=======
+
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
-      time: true,    },
+
     {
       name: 'marketing-automation',
       script: 'node',
@@ -357,29 +433,27 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
-      time: true,    },
-    {
-      name: 'security-audit',
-      name: 'bolt-zion-app',
+
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
+
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 2 * * *', // Daily at 2 AM
       error_file: './logs/security-audit-error.log',
       out_file: './logs/security-audit-out.log',
       log_file: './logs/security-audit-combined.log',
-      time: true,    },
+
     {
       name: 'test-runner',
       script: 'npm',
@@ -390,12 +464,12 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 */4 * * *', // Every 4 hours
       error_file: './logs/test-runner-error.log',
       out_file: './logs/test-runner-out.log',
       log_file: './logs/test-runner-combined.log',
-      time: true,    },
+
     {
       name: 'lint-checker',
       script: 'npm',
@@ -426,6 +500,7 @@ main
     {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 
 
@@ -1020,12 +1095,18 @@ module.exports = {}
 =======
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
@@ -1040,6 +1121,8 @@ main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production',      },
 
       cron_restart: '0 2 * * *', // Daily at 2 AM
@@ -1115,6 +1198,8 @@ main
       max_memory_restart: '500M',
       env: {
         NODE_ENV: 'production',      },
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
@@ -1130,6 +1215,7 @@ main
       cwd: __dirname,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 
 =======
@@ -1140,6 +1226,8 @@ main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -1153,7 +1241,12 @@ main
   ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     },
     {
@@ -1562,6 +1655,7 @@ module.exports = {}
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
@@ -1592,6 +1686,8 @@ module.exports = {}
 =======
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

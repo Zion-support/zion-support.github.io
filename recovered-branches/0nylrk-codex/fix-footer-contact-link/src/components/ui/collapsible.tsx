@@ -19,9 +19,11 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
 
+
 const Collapsible = CollapsiblePrimitive.Root
 const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
+
 
 ;
 
@@ -48,6 +50,7 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +94,14 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+export { Collapsible, CollapsibleTrigger, CollapsibleContent };
+
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }

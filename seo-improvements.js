@@ -98,6 +98,7 @@ console.log('SEO improvements "applied": ', seoEnhancements.length);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -119,6 +120,9 @@ const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descr
 =======
 const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
 const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 

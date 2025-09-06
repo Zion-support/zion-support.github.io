@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 function runNode(relPath, args = []) {}
@@ -35,6 +41,7 @@ function runNode(relPath, args = []) {}
 
 <<<<<<< HEAD
 exports && exports.handler = async () => {
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -46,9 +53,13 @@ function runNode(relPath, args = []) {
 exports.handler = async () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 exports && exports.handler = async () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const logs = [];
   function logStep(name, fn) {}
     logs && logs.push(`\n=== ${name} ===`);
@@ -56,11 +67,18 @@ exports && exports.handler = async () => {}
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),}
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const path = require ('path');
 =======
 '
@@ -97,8 +115,11 @@ function log_step() {}`
 <<<<<<< HEAD
     if (logs.push (stdout)) {
   $2
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 exports.handler = async () => {
@@ -133,6 +154,8 @@ function log_step() {}`
 },
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -170,6 +193,7 @@ const { spawn_sync } = require ('child_process';
   return { status_code: 200, body: logs.join ('\n';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -183,6 +207,8 @@ const { spawn_sync } = require ('child_process';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36
@@ -199,6 +225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 '
@@ -244,3 +271,7 @@ const { spawn_sync } = require ('child_process';'
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

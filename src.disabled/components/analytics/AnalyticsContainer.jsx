@@ -20,6 +20,7 @@
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 <<<<<<< HEAD
@@ -27,6 +28,10 @@
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx
+" " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -80,6 +85,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""

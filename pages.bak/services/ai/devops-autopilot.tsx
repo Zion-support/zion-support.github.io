@@ -33,6 +33,7 @@ interface DevopsautopilotProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -61,6 +62,11 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import * as React from 'react';
 
@@ -93,6 +99,7 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -118,6 +125,12 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+}
+}
+export default function Devopsautopilot({ }: DevopsautopilotProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -160,6 +173,7 @@ export default function Devopsautopilot(): any ({ }: DevopsautopilotProps) {;
       <h1>Devopsautopilot</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -226,3 +240,9 @@ export default function Devopsautopilot(): any ({ }: DevopsautopilotProps) {;
 =======
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

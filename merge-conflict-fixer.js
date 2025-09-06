@@ -12,8 +12,9 @@ function resolveMergeConflicts(filePath) {}
         
 <<<<<<< HEAD
         // Remove merge conflict markers and keep the HEAD version
-        content = content.replace(/        
+        
         // Remove any remaining conflict markers
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         content = content.replace(/        content = content.replace(/=======\n/g, '');
@@ -24,6 +25,9 @@ function resolveMergeConflicts(filePath) {}
         content = content.replace(/        content = content.replace(/\n/g, '');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         content = content.replace(/        
+=======
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Clean up any duplicate content
 =======
         // Remove merge conflict markers and keep the HEAD version;
@@ -63,6 +67,7 @@ function findConflictFiles() {}
                 } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {
                     try {
                         const content = fs.readFileSync(itemPath, 'utf8');
+<<<<<<< HEAD
                         if (content.includes('                            conflictFiles.push(itemPath);
 =======
                 '
@@ -74,6 +79,9 @@ function findConflictFiles() {}
                         if (content.includes('') || content.includes('>>>>>>>')) {}
                             conflictFiles.push(itemPath);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                            conflictFiles.push(itemPath);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         }
                     } catch (error) {'
                         // Skip files that can't be read;

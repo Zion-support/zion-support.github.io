@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/warehouse-accelerator.tsx
 <<<<<<< HEAD:pages/warehouse-accelerator.tsx
 <<<<<<< HEAD
@@ -131,6 +132,8 @@ export default function WarehouseAcceleratorPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/warehouse-accelerator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import SEO from '../components/SEO';
 export default function WarehouseAcceleratorPage() {
@@ -168,6 +171,7 @@ export default function WarehouseAcceleratorPage() {
       </section>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/warehouse-accelerator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -182,3 +186,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/warehouse-accelerator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

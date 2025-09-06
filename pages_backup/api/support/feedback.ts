@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/feedback.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,12 +51,17 @@ import { readJson, writeJson } from '../../../utils/fsDb';
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 main
 ;
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { articleId, helpful } = req.body as { articleId: string, helpful: boolean }
@@ -63,6 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const feedback = readJson<any[]>('support/feedback.json', [])
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/feedback.ts
 
 <<<<<<< HEAD
@@ -113,6 +120,8 @@ export default async function handler(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
@@ -123,6 +132,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ ok: true })
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/feedback.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -130,3 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/feedback.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

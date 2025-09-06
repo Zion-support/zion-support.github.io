@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -31,12 +32,50 @@
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+      'Intent classification and priority scoring'
+      'One-click reply drafts with tone controls'
+      'Auto-tagging and routing to teams'
+      'PII redaction and allowlist domains'
+      'SLA-aware escalations and summaries'
+      'Analytics: response time, CSAT impact, volume by topic'
+    ]
+    popular: true
+    icon: '✉️'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
+    marketPosition:
+      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.'
+    targetAudience: 'Support teams, sales ops, founders'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL']
+    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365']
+    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk']
+    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.'
+    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
+    marketSize: 'Helpdesk software $20B+'
+    growthRate: '25% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
 
+<<<<<<< HEAD
       'Intent classification and priority scoring',
       'One - click reply drafts with tone controls',
       'Auto - tagging and routing to teams',
@@ -53,6 +92,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Intent classification and priority scoring',
+      'One - click reply drafts with tone controls',
+      'Auto - tagging and routing to teams',
+      'PII redaction and allowlist domains',
+      'SLA - aware escalations and summaries',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,'
@@ -74,6 +124,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 60–80% and improve first - response SLAs.',
@@ -101,6 +157,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
       'Branching logic and progress-save'
       'Question bank: CSAT, NPS, PMF, churn'
       'Anonymous or identified responses'
@@ -123,6 +180,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
       'Branching logic and progress-save',
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
@@ -136,6 +196,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Branching logic and progress - save',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      'Branching logic and progress-save'
+      'Question bank: CSAT, NPS, PMF, churn'
+      'Anonymous or identified responses'
+      'Webhooks and Zapier integration'
+      'Real-time charts and cohort filters'
+      'GDPR/CCPA consent and deletion tools'
+    ]
+    popular: false
+    icon: '📱'
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/mobile-survey-studio'
+    marketPosition:
+      'Lightweight alternative to enterprise survey suites; optimized for mobile.'
+    targetAudience: 'Growth teams, product managers, agencies'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
+    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
+      'Branching logic and progress-save',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
@@ -160,14 +248,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,'
     icon: '📱',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     target_audience: 'Growth teams, product managers, agencies',
     trial_days: 7,
     setup_time: 'Same day',
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 '
     color: 'from - emerald - 600 to - teal - 700','
     text_color: 'text - emerald - 300','
@@ -179,6 +271,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Developer Tools',
 
     category: 'Developer Tools',
+=======
+=======
+      'Lightweight alternative to enterprise survey suites; optimized for mobile.',
+    target_audience: 'Growth teams, product managers, agencies',
+    trial_days: 7,
+    setup_time: 'Same day',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / mobile - survey - studio',
+    market_position:;
+
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
     trialDays: 7,
@@ -188,6 +295,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+
+    category: 'Developer Tools',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -206,6 +321,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact;
     realImplementation: true;
     implementationDetails:
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       'Responsive renderer with schema-driven forms and analytics.',
@@ -235,6 +351,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
 =======
 
@@ -262,6 +384,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
@@ -274,6 +397,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Flexible rotations and override rules',
       'Escalation policies and schedules',
       'Slack / Teams integration and on - call handoffs',
@@ -313,6 +442,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
@@ -325,6 +455,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Keyword clustering and topical maps',
       'Competitor gap analysis',
       'Outline and brief generation',
@@ -362,6 +498,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
@@ -374,6 +511,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Boolean, multivariate, and JSON flags',
       'User and cohort targeting',
       'Gradual rollouts and percentage splits',
@@ -454,6 +597,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
@@ -466,6 +610,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Workflow editor and step recorder',
       'Retry logic and backoff policies',
       'Captcha solving hooks and proxies',
@@ -498,6 +648,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
@@ -510,6 +661,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Configurable detectors (SSN, phone, email, credit card)',
       'Context - aware redaction and masking',
       'Audit logs and retention policies',
@@ -518,6 +675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Export to S3 / R2 and BigQuery',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧼',
 
     color: 'from - teal - 600 to - cyan - 700',
@@ -534,6 +692,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Data minimization', 'Compliance workflows', 'PII scrubbing'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
     market_size: 'Data security $20B+',
@@ -566,6 +730,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -603,6 +768,48 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Goal trees and KPI ownership'
+      'Weekly executive summaries'
+      'Alerting on thresholds and trends'
+      'Warehouse connectors'
+      'Shareable links with permissions'
+      'Annotations and change logs'
+    ]
+    popular: false
+    icon: '📊'
+    color: 'from-green-600 to-emerald-700'
+    textColor: 'text-green-300'
+    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio'
+    marketPosition: 'Simple executive dashboards without BI bloat.'
+    targetAudience: 'Founders, execs, ops'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Business Intelligence'
+    realService: true
+    technology: ['Next.js', 'Supabase', 'BigQuery']
+    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)']
+    useCases: ['OKRs/scorecards', 'Exec reporting']
+    roi: 'Improve visibility and accountability.'
+    competitors: ['Grid', 'Grow']
+    marketSize: 'BI $30B+'
+    growthRate: '11% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Metrics ingestion and templated reporting.'
+    launchDate: '2029-10-20'
+    customers: 36
+    rating: 4.4
+    reviews: 16
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -624,6 +831,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -632,6 +845,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Annotations and change logs',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -646,6 +860,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Supabase', 'BigQuery'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
     use_cases: ['OKRs / scorecards', 'Exec reporting'],
     roi: 'Improve visibility and accountability.',
@@ -680,8 +900,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.4,
     reviews: 16,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];	{
 ];	{
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },;
 
@@ -713,6 +936,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.4,
     reviews: 16,
   },;
+<<<<<<< HEAD
+=======
+
+
+=======
+];	{
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -736,7 +967,16 @@ export const real2029Q4Additions: RealMarketService[] = []
 <<<<<<< HEAD
     features: [
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 =======
     features: []
@@ -753,6 +993,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 =======
 '
@@ -776,11 +1022,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.';'
 		launchDate: '2029-10-12';
 		customers: 120;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 74
 =======
 		reviews: 74;
@@ -805,6 +1058,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
 =======
 '
@@ -828,11 +1087,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.';'
 		launchDate: '2029-11-05';
 		customers: 60;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 33
 =======
 		reviews: 33;
@@ -858,9 +1124,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Marketing teams, conference organizers, communities';
 		trialDays: 14;'
 		setupTime: '2 days';'
@@ -879,11 +1151,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';'
 		launchDate: '2029-09-23';
 		customers: 48;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 29
 =======
 		reviews: 29;
@@ -908,6 +1187,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
 =======
 '
@@ -931,11 +1216,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Rotations engine and integrations with chat tools.';'
 		launchDate: '2029-10-30';
 		customers: 32;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 19
 =======
 		reviews: 19;
@@ -960,9 +1252,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Content teams, agencies, solo founders';
 		trialDays: 7;'
 		setupTime: 'Same day';'
@@ -981,11 +1279,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'SERP fetchers with caching and AI summarization.';'
 		launchDate: '2029-09-10';
 		customers: 95;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 54
 =======
 		reviews: 54;
@@ -1011,9 +1316,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Startups, agencies, indie devs';
 		trialDays: 14;'
 		setupTime: 'Same day';'
@@ -1032,11 +1343,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Rules engine with SDKs and environment isolation.';'
 		launchDate: '2029-10-02';
 		customers: 70;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 21
 =======
 		reviews: 21;
@@ -1062,9 +1380,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Affordable enrichment focused on actionable signals.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Sales teams, SDRs, growth marketers';
 		trialDays: 7;'
 		setupTime: 'Same day';'
@@ -1083,11 +1407,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.';'
 		launchDate: '2029-11-18';
 		customers: 40;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 17
 =======
 		reviews: 17;
@@ -1113,9 +1444,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Cost-effective alternative with human review for accuracy.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Finance teams, accounting firms, SMBs';
 		trialDays: 7;'
 		setupTime: '2 days';'
@@ -1134,11 +1471,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.';'
 		launchDate: '2029-12-01';
 		customers: 27;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 14
 =======
 		reviews: 14;
@@ -1164,9 +1508,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Ops teams, agencies, internal tools';
 		trialDays: 14;'
 		setupTime: '3 days';'
@@ -1185,11 +1535,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Playwright runners with job queues and storage integrations.';'
 		launchDate: '2029-11-28';
 		customers: 38;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 18
 =======
 		reviews: 18;
@@ -1215,9 +1572,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Developer-first compliance tooling.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Developers, compliance teams';
 		trialDays: 14;'
 		setupTime: 'Same day';'
@@ -1236,11 +1599,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Detectors with policy engine and audit export.';'
 		launchDate: '2029-12-03';
 		customers: 22;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.3,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 12
 =======
 		reviews: 12;
@@ -1266,9 +1636,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Simple executive dashboards without BI bloat.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Founders, execs, ops';
 		trialDays: 7;'
 		setupTime: 'Same day';'
@@ -1288,18 +1664,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		launchDate: '2029-10-20';
 		customers: 36;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 ;
 
 	}
 ];
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 		rating: 4 && 4.4,
 
 		reviews: 16
+<<<<<<< HEAD
 	}
 ];
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+;
+
+	}
+];
+
+	}
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1719,6 +2113,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		rating: 4.4
 		reviews: 16
 
@@ -2146,6 +2542,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 	}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -2153,12 +2553,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 
+<<<<<<< HEAD
 	}
 
 ];
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { RealMarketService } from './real-market-services',;
 const contact = {;'
 	mobile: '+1 302 464 0950',;'
@@ -2574,6 +2981,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		rating: 4.4;
 		reviews: 16;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2581,12 +2989,25 @@ import { RealMarketService } from './real-market-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 	}
 ];
 
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { RealMarketService } from './real-market-services';
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

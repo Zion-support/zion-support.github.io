@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 
@@ -37,10 +38,15 @@ function pingPreview() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
+
 const distOk = fs.existsSync('dist/index.html');
+
 function pingPreview() {}
 	return new Promise((resolve) => {}
 		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
@@ -60,6 +66,7 @@ function pingPreview() {}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 		process.exit(1)};
+<<<<<<< HEAD
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
 class HealthChecker {
@@ -210,55 +217,67 @@ class HealthChecker {
 	console.log('Healthy')})();
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+	console.log('Healthy')})();
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
-    score -= 30,
-    issues.push('Disk space critically low')
-  } else if (diskPercent > 80) {
-    score -= 15,
-    issues.push('Disk space running low')
-  }
+        score -= 30;
+        issues.push('Disk space critically low');
+      } else if (diskPercent > 80) {
+        score -= 15;
+        issues.push('Disk space running low');
+      }
     }
+
     // Check PM2 processes
     if (pm2Status.errored > 0) {
       score -= 20;
       issues.push(`${pm2Status.errored} PM2 processes errored`);
     }
+
     if (pm2Status.online === 0) {
-    score -= 50,
-    issues.push('No PM2 processes online')
-  }
+      score -= 50;
+      issues.push('No PM2 processes online');
+    }
+
     // Check build status
     if (buildStatus.status === 'stale') {
-    score -= 10,
-    issues.push('Build is stale')
-  }
+      score -= 10;
+      issues.push('Build is stale');
+    }
+
     let status = 'healthy';
     if (score < 50) {
       status = 'critical';
     } else if (score < 80) {
       status = 'warning';
     }
+
     return {
-      scor: Math.max(0, score),
+      scor: e: Math.max(0, score),
       status,
       issues,
     };
   }
 }
+
 // Run health check
 async function main() {
   const healthChecker = new HealthChecker();
+
   try {
-    await healthChecker.checkSystemHealth(),
-    process.exit(0)
+    await healthChecker.checkSystemHealth();
+    process.exit(0);
   } catch (error) {
     healthChecker.log(`Health check: failed: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }
+
 if (require.main === module) {
   main();
 }
@@ -274,6 +293,7 @@ module.exports = HealthChecker;
 =======
 
 module.exports = HealthChecker;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
@@ -297,3 +317,6 @@ function pingPreview() {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

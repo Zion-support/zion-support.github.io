@@ -49,9 +49,10 @@ import { ReactNode } from "react";
 declare module "@/components/FeatureCard" {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   export interface FeatureCardProps {
-    title: string,
-  description: string;
+    title: string;
+    description: string;
     icon: ReactNode;
+<<<<<<< HEAD
     title: string,
   description: string;
 =======
@@ -62,15 +63,27 @@ declare module "@/components/FeatureCard" {}
     title: string;
     description: string;
     icon: ReactNode;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     className?: string;
     key?: number | string;
   }
 }
 // Extend ListingScoreCardProps to include key for mapping;
+<<<<<<< HEAD
 declare module '@/components / ListingScoreCard' {}
     title: string;
     description: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+declare module '@/components / ListingScoreCard' {
+
+// Extend ListingScoreCardProps to include key for mapping
+declare module "@/components/ListingScoreCard" {
+  export interface ListingScoreCardProps {
+    title: string;
+    description: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: string;
     image?: string;
     tags?: string[];
@@ -278,8 +291,32 @@ declare module '@/components/ProductListingCard' {;
     author_image?: string;
     ai_score?: number;
     rating?: number;
+    reviewCount?: number;
+    key?: string | number;
+    variant?: string;
   }
-}    author_image?: string;
+}
+
+// Extend ChatMessageProps to include key for mapping
+declare module "@/components/ChatAssistant/ChatMessage" {
+  export interface ChatMessageProps {
+    role: "user" | "assistant";
+    message: string;
+    timestamp?: Date;
+    key?: string | number;
+  }
+}
+
+// Extend ProductListingCardProps to include key for mapping
+declare module "@/components/ProductListingCard" {
+  export interface ProductListingCardProps {
+    listing: any;
+    view: any;
+    onRequestQuote: (listingId: string) => void;
+    key?: string | number;
+  }
+}
+    author_image?: string;
     ai_score?: number;
     rating?: number;
   }

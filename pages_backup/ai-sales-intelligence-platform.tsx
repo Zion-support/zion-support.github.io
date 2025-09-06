@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
@@ -48,6 +49,10 @@ export default function AISalesIntelligencePlatform() {}
 				"Forecasting with scenario simulations"
 				"CRM automations for notes, tasks, and next steps"
 
+=======
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
@@ -377,6 +382,7 @@ return (
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 =======
@@ -459,3 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

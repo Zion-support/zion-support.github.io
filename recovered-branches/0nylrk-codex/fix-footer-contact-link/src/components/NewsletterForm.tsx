@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -26,10 +27,13 @@ export function NewsletterForm() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 export function NewsletterForm() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const [email, setEmail] = useState("");
 =======
@@ -44,6 +48,9 @@ import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;  const [email, setEmail] = useState("");
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const [email, setEmail] = useState("");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 <<<<<<< HEAD
@@ -52,11 +59,8 @@ export function NewsletterForm() {;  const [email, setEmail] = useState("");
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -133,6 +137,14 @@ export function NewsletterForm() { return null; }
     }, 1000);
   };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 =======
@@ -194,9 +206,33 @@ export function NewsletterForm() { return null; }
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
+<<<<<<< HEAD
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
+export function NewsletterForm() {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsSubmitting(false);
+      setIsSubmitted(true),;
+      setEmail("");
+    }, 1000);
+  };
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="w-full max-w-md mx-auto">;
       {isSubmitted ? (;"
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;"
@@ -208,6 +244,7 @@ export function NewsletterForm() { return null; }
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -217,10 +254,14 @@ export function NewsletterForm() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <Input
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
+<<<<<<< HEAD
 =======
 
           <Input"
@@ -231,21 +272,32 @@ export function NewsletterForm() { return null; }
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
             required;
           />;
+<<<<<<< HEAD
           <Button"
             type="submit" 
 
 
             disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;"
+=======
+          <Button
+            type="submit" 
+
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
 
+<<<<<<< HEAD
 }
 
             disabled={isSubmitting}"
@@ -256,31 +308,59 @@ export function NewsletterForm() { return null; }
           <Input;"
             type="email";"
             placeholder="Enter your email";"
+=======
+    </div>;
+
+  );
+}
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+      ) :(;
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
+          <Input;
+            type="email";
+            placeholder="Enter your email";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
             value={email}
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required;
           />;
+<<<<<<< HEAD
           <Button ;"
             type="submit" ;
             disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
           >;"
+=======
+          <Button ;
+            type="submit" ;
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
+          >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {isSubmitting ? "Subscribing..." :"Subscribe"}
           </Button>;
         </form>;
       )}
     </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

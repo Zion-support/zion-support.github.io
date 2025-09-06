@@ -82,10 +82,14 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+<<<<<<< HEAD
 =======
 
       {onApply && ("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      {onApply && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="mt-6">
           <Button;
             onClick={onApply}
@@ -96,6 +100,10 @@ import { ResumeSelector, ResumeOption } from "../resume-selector","
 import { Button } from "@/components/ui/button",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
@@ -125,6 +133,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     if (onSelectResume) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       onSelectResume(resume && resume.id);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -136,10 +145,15 @@ import { ResumeSelector, ResumeOption  } from '../resume - selector';'
 import { Button  } from '@/components / ui / button';
 export interface ResumeTabProps {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      onSelectResume(resume && resume.id);
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   selectedResumeId?: string | null;
   onSelectResume?: (resume_id: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
     }
+<<<<<<< HEAD
   },
 
   return (
@@ -392,12 +406,37 @@ isSubmitting?: boolean
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       onSelectResume(resume && resume.id);      {onApply && (
+=======
+  }
+
+  return (
+
+
+      {onApply && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="mt-6">
           <Button 
             onClick={onApply} 
-            disabled={!selectedResumeId || isSubmitting}          {!selectedResumeId && (
+            disabled={!selectedResumeId || isSubmitting}
+
+            className="w-full"
+          >
+            {isSubmitting ? "Submitting..." : "Submit Application"}
+          </Button>
+
+
+          
+
+
+            className="w-full"
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+          </Button>
+          
+          {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
+<<<<<<< HEAD
             </p>}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -413,3 +452,144 @@ isSubmitting?: boolean
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            </p>
+    <div className="space-y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+
+      {onApply && (;
+        <div className="mt-6">;
+          <Button
+            onClick={onApply}
+            disabled={!selectedResumeId || isSubmitting}
+            className="w-full">;
+            {isSubmitting ? "Submitting..." : "Submit Application"}
+          </Button>;
+
+          {!selectedResumeId && (;
+            <p className="text-sm text-muted-foreground mt-2">;
+              Please select a resume to continue;
+            </p>;
+          )}
+        </div>;
+      )}
+    </div>
+    </div>;
+          )}
+        </div>;
+      )}
+    </div>;
+  );
+  on_apply?: () => Promise < void>;
+  is_submitting?: boolean;
+}
+export /**
+ * ResumeTab - Function description
+ */
+function ResumeTab() {
+  const handleResumeSelected = (resume: ResumeOption) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onResumeSelected (resume);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      onSelectResume (resume.id);
+    }
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+      {on_apply && (
+        <div className="mt - 6">;
+          <Button;
+            on_click={on_apply}
+            disabled={!selectedResumeId || is_submitting}
+            className="w - full";
+          >;
+            {is_submitting ? "Submitting..." : "Submit Application"}
+          </Button>;
+          {!selectedResumeId && (
+            <p className="text - sm text - muted - foreground mt - 2">;
+              Please select a resume to continue;
+            </p>)}
+        </div>)}
+    </div>);
+}
+}
+
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
+;
+export interface ResumeTabProps {;
+  selectedResumeId?:string | null,;
+  onSelectResume?:(resumeId:string) => void,;
+  onResumeSelected?:(resume:ResumeOption) => void,;
+  onApply?:() => Promise<void>,;
+  isSubmitting?:boolean;
+}
+;
+export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false } ResumeTabProps) {;
+  const handleResumeSelected = (resume:ResumeOption) => {;
+    if (onResumeSelected) {;
+      onResumeSelected(resume);
+    }
+    ;
+    if (onSelectResume) {;
+      onSelectResume(resume.id),;
+    }
+  },;
+  ;
+  return (;
+    <div className="space-y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+      ;
+      {onApply && (;
+        <div className="mt-6">;
+          <Button ;
+            onClick={onApply} ;
+            disabled={!selectedResumeId || isSubmitting}
+            className="w-full";
+          >;
+            {isSubmitting ? 'Submitting...' :'Submit Application'}
+          </Button>;
+          ;
+          {!selectedResumeId && (;
+            <p className="text-sm text-muted-foreground mt-2">;
+              Please select a resume to continue;
+            </p>;          )}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export interface ResumeTabProps {
+  selectedResumeId?: string | null;
+onSelectResume?: (resumeId: string) => void;
+onResumeSelected?: (resume: ResumeOption) => void;
+onApply?: () => Promise<void>;
+isSubmitting?: boolean 
+}selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false 
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+  if (onResumeSelected) {
+  > {
+  isSubmitting ? 'Submitting...' : 'Submit Application' 
+}</Button> Please select a resume to continue </p>) 
+}</div>) 
+}</div>) 
+}
+          )}
+        </div>
+      )}
+    </div>
+    </div>;
+  );
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

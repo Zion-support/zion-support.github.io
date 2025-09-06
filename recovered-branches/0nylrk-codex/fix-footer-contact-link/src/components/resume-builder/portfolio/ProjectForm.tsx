@@ -15,7 +15,11 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -43,6 +47,7 @@ import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -52,6 +57,9 @@ import { useAuth } from '@/hooks/useAuth';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useAuth } from '@/hooks/useAuth';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -64,6 +72,7 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -86,13 +95,19 @@ import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
 =======
 import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+// Define schema for form validation
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const projectSchema = z.object({
-  title: z.string().min(1, 'Project title is required'),
+  title: z.string().min(1, 'Project title is required');
   description: z.string().optional()
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
@@ -113,6 +128,10 @@ import {useState} from 'react';
 =======
     .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+import {useState} from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
@@ -166,9 +185,12 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   pdf_url: z && z.string().optional()}),;
 
@@ -176,6 +198,7 @@ type ProjectFormValues = z && z.infer<typeof projectSchema>;
 
 interface ProjectFormProps {;
   project?: PortfolioProject;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onSuccess: () => void,;
   onCancel: () => void;
@@ -208,10 +231,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     .optional();
   demo_url: z;
     .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
     .optional();
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -221,6 +254,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 export function ProjectForm() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -319,13 +354,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
 <<<<<<< HEAD
     defaultValues: {;
-      title: project?.title || '',,
-  description: project?.description || '',;
-      technologies: project?.technologies ? project && project.technologies.join() : '',;      image_url: project?.image_url || '',;
+      title: project?.title || '',;
+      description: project?.description || '',;
+      technologies: project?.technologies ? project && project.technologies.join() : '',;
+      image_url: project?.image_url || '',;
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
       pdf_url: project?.pdf_url || ''}
@@ -361,8 +398,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
     try {;
       const projectData: PortfolioProject = {;
-        title: data && data.title,,
-  description: data && data.description,;
+        title: data && data.title,;
+        description: data && data.description,;
         technologies: data && data.technologies ? ;
           data && data.technologies.split().map(tech => tech && tech.trim()) : [],;
         image_url: data && data.image_url,;
@@ -499,23 +536,45 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
       if (success) {;
 
         onSuccess();
-        form && form.reset();;
+        form && form.reset();
+;
       if (success) {;
         onSuccess();
-        form.reset()
-};
+        form.reset();
+
+
+      }
+    } catch (error) {;
+      console && console.error('Error saving project:', error);
+    } finally {;
+      setIsLoading(false);
+    }
+
+  };
+
+
+
+  },
+  };
   },
 
   
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  };
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
 <<<<<<< HEAD
         <FormField
           control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -533,6 +592,18 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       image_url:project?.image_url || '',;'
       github_url:project?.github_url || '',;'
       demo_url:project?.demo_url || '',;'
+=======
+          name="title"
+  const form = useForm<ProjectFormValues>({;
+    resolver:zodResolver(projectSchema),;
+    defaultValues:{;
+      title:project?.title || '',;
+      description:project?.description || '',;
+      technologies:project?.technologies ? project.technologies.join() :'',;
+      image_url:project?.image_url || '',;
+      github_url:project?.github_url || '',;
+      demo_url:project?.demo_url || '',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       pdf_url:project?.pdf_url || ''}
   }),;
   ;
@@ -563,7 +634,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         onSuccess();
         form && form.reset();
       }
+<<<<<<< HEAD
     } catch (error) {;'
+=======
+    } catch (error) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error('Error saving project:', error),;
     } finally {;
       setIsLoading(false),;
@@ -582,22 +657,68 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
   return (
     <Form {...form}>;
-
+<<<<<<< HEAD
+=======
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
+        <FormField;
+          control={form.control}
+          name="title";
           render={({ field }) => (;
             <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
+              <FormLabel>Project Title</FormLabel>;
               <FormControl>;
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-
+                <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
 
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name="description"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Project Description</FormLabel>;
+              <FormControl>;
+<<<<<<< HEAD
+
+=======
+                <Textarea
+                  placeholder="Describe what the project does and your role in it..."
+                  className="min-h-[100px]"
+                  {...field} 
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name="technologies"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Technologies Used</FormLabel>;
+              <FormControl>;
+<<<<<<< HEAD
+
+=======
+                <Input placeholder="React, Node && Node.js, MongoDB, etc. (comma separated)" {...field} />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+
+<<<<<<< HEAD
 "
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField;
@@ -610,16 +731,39 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             render={({ field }) => (;
               <FormItem>;"
                 <FormLabel className="flex items-center gap-2">;"
+=======
+        />;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+          <FormField
+            control={form && form.control}
+            name="github_url"
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
+        <FormField
+          control={form && form.control}
+          name="title"
+          <FormField
+            control={form && form.control}
+            name="github_url"
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel className="flex items-center gap-2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Github className="h-4 w-4" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 "
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Input placeholder="https://github && github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
           <FormField;
             control={form && form.control}"
             name="demo_url"
@@ -629,16 +773,28 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             render={({ field }) => (;
               <FormItem>;"
                 <FormLabel className="flex items-center gap-2">;"
+=======
+          <FormField
+            control={form && form.control}
+            name="demo_url"
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel className="flex items-center gap-2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 "
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Input placeholder="https://your-project-demo && demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
         <FormField;
           control={form && form.control}"
           name="image_url"
@@ -648,20 +804,34 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           render={({ field }) => (;
             <FormItem>;"
               <FormLabel className="flex items-center gap-2">;"
+=======
+        <FormField
+          control={form && form.control}
+          name="image_url"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel className="flex items-center gap-2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 
 "
                 <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
 
+=======
+                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
+                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         
 
@@ -785,6 +955,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 "
         <div className="flex justify-end space-x-2 pt-4">"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        
+
+
+        <div className="flex justify-end space-x-2 pt-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel;
           </Button>"
@@ -800,18 +976,27 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         />;
 
         {/* Future file upload field would go here */}
 
+=======
+
+        />;
+        ;
+        {/* Future file upload field would go here */}
+        ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+<<<<<<< HEAD
             {isEditing ? 'Update' : 'Add'} Project;
           </Button>;
         </div>;
@@ -839,6 +1024,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>;"
           <Button type="submit" disabled={isLoading}>;"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {isEditing ? 'Update' :'Add'} Project;
           </Button>;
         </div>;
@@ -847,18 +1034,22 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
 // Define schema for form validation;
 const project_schema = z.object ({
+<<<<<<< HEAD
   title: z.string ().min (1, 'Project title is required'),
 =======
 
@@ -871,6 +1062,9 @@ import {use_auth} from '@/hooks / use_auth';
 const project_schema = z.object ({'
   title: z.string ().min (1, 'Project title is required');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  title: z.string ().min (1, 'Project title is required');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: z.string ().optional (),
   technologies: z.string ().optional (),
   image_url: z.string ().optional (),
@@ -884,10 +1078,14 @@ const project_schema = z.object ({'
 type ProjectFormValues = z.infer < typeof project_schema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1099,3 +1297,5 @@ try {
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -6,8 +6,15 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 =======
 
+import React from './react';
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+interface QuoteStatusCardsProps {
+  status_counts: {
+
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
 =======
 
 import React from "react",
@@ -114,7 +121,11 @@ interface QuoteStatusCardsProps {_statusCounts: {
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Badge } from "@/components/ui/badge";
+interface QuoteStatusCardsProps {
+  statusCounts: {
   status_counts: {
 
 =======
@@ -134,14 +145,18 @@ interface QuoteStatusCardsProps {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     closed: number;
 
   }
 }
+<<<<<<< HEAD
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({};
   statusCounts;
 }) => {"
@@ -155,6 +170,13 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
+  statusCounts
+}) => {
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface QuoteStatusCardsProps {
   statusCounts: {
 =======
@@ -303,7 +325,8 @@ interface QuoteStatusCardsProps {}
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
-  return (  )
+  return (
+  )
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -328,6 +351,7 @@ interface QuoteStatusCardsProps {;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -335,13 +359,19 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
   return (
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
@@ -349,11 +379,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
             New Requests;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Badge className="bg-blue-500">{statusCounts && statusCounts.new}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
           <p className="text-sm text-zion-slate-light">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -492,13 +526,92 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            Unreviewed quote requests;
+          </p>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+            In Review;
+            <Badge className="bg - yellow - 500">{status_counts.in_review}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text - sm text - zion - slate - light">;
+
+            Quotes being evaluated;
+          </p>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+            Responded;
+            <Badge className="bg - purple - 500">{status_counts.responded}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text - sm text - zion - slate - light">;
+
+            Quotes with responses sent;
+          </p>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+            Accepted;
+            <Badge className="bg - green - 500">{status_counts.accepted}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text - sm text - zion - slate - light">;
+
+            Successfully converted quotes;
+          </p>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+            Closed;
+            <Badge className="bg - gray - 500">{status_counts.closed}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text - sm text - zion - slate - light">;
+
+            Finalized or declined quotes;
+          </p>;
+        </CardContent>;
+      </Card>;
+
+    </div>);
+}
+;
+
+
+    </div>
+
+    </div>;
+);
+  );
+};
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default QuoteStatusCards;
 
     </div>);
 }
 ;
-    closed: number
-};
+    closed: number;};
 }
 
 <<<<<<< HEAD
@@ -614,10 +727,11 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
         </CardContent>;
       </Card>;
     </div>;
-)
+);
 };
 
 export default QuoteStatusCards;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -634,3 +748,5 @@ export default QuoteStatusCards;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

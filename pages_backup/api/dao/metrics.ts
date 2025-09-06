@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
@@ -17,6 +18,8 @@ const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -24,6 +27,7 @@ const configPath = null;
     return res.status(200).json(result)
 origin/cursor/automate-test-improve-and-merge-code-2533
 async function fetchJson(url: string) {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 =======
@@ -34,6 +38,8 @@ async function fetchJson(url: string) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -63,10 +69,14 @@ async function fetchJson(url: string) {;
 ;
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/dao/metrics.ts
 ========
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
@@ -124,6 +134,7 @@ function writeJson(p: string, v: any) {
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -183,6 +194,14 @@ function readJson(p: string) {;
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+  return resp.json();
+
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -190,6 +209,7 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
@@ -212,6 +232,11 @@ function readJson(p: string) {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 function writeJson(p: string, v: any) {;
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
@@ -230,10 +255,13 @@ function readJson(p: string) {;
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {;
   return JSON.parse(fs.readFileSync(p, "utf-8"));
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -245,6 +273,7 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
@@ -258,6 +287,9 @@ function writeJson(p: string, v: any) {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 function readJson(p: string) {
@@ -274,6 +306,7 @@ function writeJson(p: string, v: any) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
@@ -296,6 +329,8 @@ function writeJson(p: string, v: any) {
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -310,6 +345,7 @@ function writeJson(p: string, v: any) {
 
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -325,6 +361,9 @@ function writeJson(p: string, v: any) {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(
   _req: NextApiRequest;
   res: NextApiResponse
@@ -376,9 +415,14 @@ function writeJson(p: string, v: any) {;
 ;
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ========
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
@@ -389,6 +433,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 ;
 export default async function handler(req, res) {
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
@@ -403,12 +448,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   try {
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+  try {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {;
 ;
 export default async function handler(req, res) {;
   try {
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
@@ -419,10 +470,14 @@ export default async function handler(req, res) {
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {;
 ;
 export default async function handler(req, res) {;
   try {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
@@ -441,10 +496,14 @@ export default async function handler(req, res) {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api/dao/metrics.ts
@@ -484,10 +543,13 @@ export default async function handler(req, res) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -510,6 +572,11 @@ export default async function handler(req, res) {;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
 return res.status(200).json({ ...cache, cached: true });
     }
@@ -517,18 +584,23 @@ return res.status(200).json({ ...cache, cached: true });
     const tokenAddr = cfg.token.address;
 
 // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
 =======
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/dao/metrics.ts
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ;
@@ -557,11 +629,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -570,11 +646,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const entries = Object.entries(holderToDelta)
 origin/cursor/automate-test-improve-and-merge-code-2533
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
@@ -585,6 +664,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/dao/metrics.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -593,16 +674,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: e && e.address;
       percent:;
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
     // Token distribution buckets (very rough: based on netDelta approximation);
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({;
       address: e.address;
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -615,15 +700,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;
     const activeProposals: any[] = [];
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
 
 const topHolders = entries.map(e => ({
@@ -655,6 +748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -665,6 +759,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         )
       : 0;
     const result = {;
@@ -675,6 +773,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
@@ -698,6 +797,13 @@ import path from './path';
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+import { NextApiRequest, NextApiResponse  } from './next';
+import fs from './fs';
+import path from './path';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -800,6 +906,7 @@ if ( {) {
     return res.status(200).json(result);
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 <<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
   }
@@ -813,12 +920,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     return res
       .status(500)
@@ -914,6 +1026,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/dao/metrics.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api/dao/metrics.ts
@@ -930,3 +1043,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dao/metrics.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

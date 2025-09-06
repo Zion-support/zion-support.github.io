@@ -51,17 +51,28 @@ export async function tagOperatorSession(sessionId: string, tag: string): Promis
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+// Operator utilities
+export const operator = {
+  // Add operator functionality here
+  logEvent: (event: any) => null
   getEvents: () => []
   getEventById: (id: string) => null
 }
 
   logEvent: (event: any) => null,
   getEvents: () => [],
-  getEventById: (id: string) => null
+  getEventById: (id: string) => null;
 };
 
+<<<<<<< HEAD
   tagOperatorSession(sessionId: string, tag: string): void {}
     // Simple implementation - in a real app this would update a database;
+=======
+
+  tagOperatorSession(sessionId: string, tag: string): void {
+    // Simple implementation - in a real app this would update a database
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
   }
 
@@ -122,6 +133,7 @@ export const operator = {
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
@@ -171,3 +183,7 @@ export const getSupportEvents = () => operatorManager.getSupportEvents();
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

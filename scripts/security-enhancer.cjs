@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -36,11 +37,28 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 #!/usr/bin/env node
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
+    console.log('� Enhancing security...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    if (content.includes('eval(')
+      issues.push('Use of eval() - potential security risk'
+    if (content.includes('innerHTML')
+      issues.push('Use of innerHTML - consider using textContent for security')
+    if (content.includes('document.write')
+      issues.push('Use of document.write - potential XSS risk')
+    if (content.includes('localStorage.setItem')
+      issues.push('Use of localStorage - ensure sensitive data is not stored')
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+      // Skip directories that can'
 
+<<<<<<< HEAD
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -354,3 +372,5 @@ enhancer.run().catch(console.error);
 
 module.exports = SecurityEnhancer;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

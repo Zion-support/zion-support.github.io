@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,11 +25,15 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+" " " " " " const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { " const [searchQuery,setSearchQuery] = useState(") const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)";";";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ' \' \' \' \' \' const listingsSchema = z && z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { \' const [searchQuery,setSearchQuery] = useState(\') const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)\';\";\";
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,3 +74,8 @@
 ' \' \' \' \' \' const listingsSchema = z.array(listingSchema) export function ServiceTypeStep() { return null; }
 " " " " " " const listingsSchema = z.array(listingSchema) export function ServiceTypeStep() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+" " " " " " const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { " const [searchQuery,setSearchQuery] = useState(") const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)";";";"""
+' \' \' \' \' \' const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { \' const [searchQuery,setSearchQuery] = useState(\') const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)\';\";\";
+" " " " " " const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { " const [searchQuery,setSearchQuery] = useState(") const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)";";";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

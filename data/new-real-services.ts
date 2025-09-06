@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     name: 'LLM Observability Suite',
@@ -11,6 +12,23 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+export const newRealServices: EnhancedRealMicroSaasService[] = [
+  {
+    name: 'LLM Observability Suite',
+    tagline: 'Track latency, cost, quality and drift across all prompts',
+    price: '$199',
+    period: '/month',
+    description:;
+      'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -33,6 +51,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '📈',
 <<<<<<< HEAD
+<<<<<<< HEAD
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
@@ -41,14 +60,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '📈';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite';
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+    marketPosition:
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from-cyan-600 to-blue-700';
+    textColor: 'text-cyan-400';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;'
     setupTime: '1 day';'
@@ -67,11 +102,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.';'
     launchDate: '2025-01-10';
     customers: 32;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 22
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
@@ -123,9 +165,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'B2B startups, agencies, SDR teams';
     trialDays: 14;'
     setupTime: '2 hours';'
@@ -144,11 +192,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';'
     launchDate: '2024-12-20';
     customers: 120;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 58
     period: '/month',
 =======
@@ -197,9 +252,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Brings policy-as-code and compliance automation into one product.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;'
     setupTime: '1–3 days';'
@@ -232,11 +293,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Policy engine plus cloud / K8s scanners and fix generators.';'
     launch_date: '2025 - 01 - 05';
     customers: 18;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 14
 =======
     reviews: 14;
@@ -255,9 +323,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;'
     setupTime: '1 day';'
@@ -290,11 +364,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Light agents and metadata collectors with warehouse connectors.';'
     launch_date: '2025 - 01 - 12';
     customers: 25;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 12
 =======
     reviews: 12;
@@ -320,9 +401,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Unified performance and security at SMB-friendly pricing.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;'
     setupTime: 'Same day';
@@ -363,11 +450,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Managed edge configs and anomaly ML with safe rollout tools.';'
     launch_date: '2025 - 01 - 15';
     customers: 14;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 9
 =======
     reviews: 9;
@@ -393,9 +487,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Product teams, founders, analysts';
     trialDays: 14;'
     setupTime: '1 day';'
@@ -439,11 +539,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Event capture SDKs and warehouse - first analytics.';'
     launch_date: '2025 - 01 - 02';
     customers: 41;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 20
 =======
     reviews: 20;
@@ -469,9 +576,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
     trialDays: 14;'
     setupTime: 'Same day';'
@@ -515,11 +628,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Embeddable widget and handoff connectors.';'
     launch_date: '2024 - 12 - 15';
     customers: 75;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 48
 =======
     reviews: 48;
@@ -544,6 +664,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     marketPosition: 'Actionable savings, not just dashboards.';
 =======
 '
@@ -589,11 +715,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Read - only billing analysis with PR - based changes.';'
     launch_date: '2025 - 01 - 03';
     customers: 19;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 11
 =======
     reviews: 11;
@@ -612,9 +745,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;'
     setupTime: '1–3 days';'
@@ -647,11 +786,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Drop - in SDKs and proxy - based tokenization.';'
     launch_date: '2025 - 01 - 07';
     customers: 9;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 7
 =======
     reviews: 7;
@@ -677,9 +823,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Accessible alternative to enterprise fraud stacks.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;'
     setupTime: '2–5 days';'
@@ -705,11 +857,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Streaming and batch detectors with human - in - the - loop review.';'
     launch_date: '2025 - 01 - 09';
     customers: 11;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 8
 =======
     reviews: 8;
@@ -735,9 +894,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;'
     setupTime: '1–2 days';
@@ -778,11 +943,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Managed cluster with observability and runbooks.';'
     launch_date: '2025 - 01 - 16';
     customers: 8;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 5
 =======
     reviews: 5;
@@ -807,6 +979,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
 =======
 '
@@ -852,11 +1030,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Agent + dashboards + anomaly alerts.';'
     launch_date: '2025 - 01 - 17';
     customers: 12;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 6
 =======
     reviews: 6;
@@ -886,9 +1071,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Builder-focused alternative to heavy SEO suites.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Growth, content, agencies';
     trialDays: 14;'
     setupTime: 'Same day';'
@@ -912,11 +1103,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$6B SEO Tools';'
     growth_rate: 'Stable';'
     variant: 'neural';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 4
 =======
     reviews: 4;
@@ -947,9 +1145,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Production safety net for integrations.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Developers, platforms';
     trialDays: 14;'
     setupTime: '1 hour';'
@@ -978,11 +1182,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Broker + storage + replayer UI.';'
     launch_date: '2025 - 01 - 19';
     customers: 7;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 3
 =======
     reviews: 3;
@@ -1001,9 +1212,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Secure alternative to self-hosting headless browsers.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;'
     setupTime: '30 minutes';'
@@ -1028,11 +1245,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['InvoicesReports'];'
     roi: 'Save days of maintenance yearly';'
     competitors: ['PDFShiftDocRaptor'];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 10
 =======
     reviews: 10;
@@ -1058,9 +1282,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Developer-first observability starter kit.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;'
     setupTime: '1 day';'
@@ -1101,11 +1331,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['API reliability_performance'];'
     roi: 'Reduce MTTR by 30–50%';'
     competitors: ['HoneycombLightstep'];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 4
 =======
     reviews: 4;
@@ -1148,9 +1385,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '2–5 days';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Security & Compliance';
     real_service: true;'
     technology: ['KeycloakAuth gateways'];'
@@ -1166,11 +1409,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Hosted broker + mappings UI.';'
     launch_date: '2025 - 01 - 17';
     customers: 6;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 3
 =======
     reviews: 3;
@@ -1201,9 +1451,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–3 days';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'IT Operations';
     real_service: true;'
     technology: ['nmapSNMPGo'];'
@@ -1214,11 +1470,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$2B ITAM';'
     growth_rate: 'Growing';'
     variant: 'holographic';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 2
 =======
     reviews: 2;
@@ -1253,9 +1516,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Faster and lighter than legacy GRC.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Security, procurement';
     trialDays: 14;'
     setupTime: '1–3 days';'
@@ -1284,13 +1553,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Portal + integrations + reports.';'
     launch_date: '2025 - 01 - 19';
     customers: 6;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     rating: 4 && 4.5,
     reviews: 3
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     rating: 4.5,
     reviews: 3;
 
@@ -1375,6 +1651,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
+    launch_date: '2025 - 01 - 10',
+    customers: 32,
+    rating: 4 && 4.8,
+    reviews: 22,
+  },
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow - up scheduling',
@@ -1383,6 +1672,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Inbox rotation support',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '✉️',
 
     color: 'from - violet - 600 to - fuchsia - 700',
@@ -1404,6 +1694,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: 'Strong growth',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1417,6 +1708,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -1441,20 +1737,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Policy packs for CIS / NIST',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
       'SOC2 / ISO 27001 export',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛡️',
 
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
 =======
@@ -1497,6 +1808,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'etl - observability - starter',
     name: 'ETL Observability Starter',
@@ -1508,12 +1820,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
       'Incident routing to Slack / Teams',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🗄️',
 
     color: 'from - blue - 600 to - indigo - 700',
@@ -1539,6 +1858,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Light agents and metadata collectors with warehouse connectors.',
 =======
   {}
@@ -1559,6 +1884,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'api - performance - shield',
     name: 'API Performance Shield',
@@ -1570,12 +1896,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
       'Zero - downtime deploys with shadow traffic',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛰️',
 
     color: 'from - cyan - 600 to - sky - 700',
@@ -1587,6 +1920,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Same day',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1598,6 +1932,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'DevOps & Automation',
     real_service: true,'
     technology: ['Workers', 'Rust', 'Redis'],'
@@ -1632,14 +1971,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Auto - segmentation and cohorts',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -1655,6 +2003,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'PostHog', 'ClickHouse'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
@@ -1699,14 +2053,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - channel widgets',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💬',
 
     color: 'from - rose - 600 to - orange - 700',
@@ -1721,6 +2084,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['RAG', 'Vector DB', 'Next.js'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
@@ -1753,6 +2122,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
@@ -1764,12 +2134,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
       'Tag hygiene and showback',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💸',
 
     color: 'from - amber - 600 to - yellow - 700',
@@ -1781,6 +2158,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '2–5 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1792,6 +2170,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Cloud & Infrastructure',
     real_service: true,'
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],'
@@ -1824,14 +2207,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Field - level encryption',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔏',
 
     color: 'from - slate - 600 to - gray - 700',
@@ -1844,6 +2236,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–3 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
       'Tokenization APIs','
@@ -1853,6 +2246,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Security & Compliance',
     real_service: true,'
     technology: ['KMS', 'HSM', 'PostgreSQL'],'
@@ -1885,14 +2283,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Graph - based anomaly detection',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧠',
 
     color: 'from - pink - 600 to - rose - 700',
@@ -1904,6 +2311,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '2–5 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
       'Explainability reports','
@@ -1913,6 +2321,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Financial Technology',
     real_service: true,'
     technology: ['Graph DB', 'Python', 'Kafka'],'
@@ -1934,6 +2347,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
@@ -1945,12 +2359,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
       'Encryption and access controls',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🗃️',
 
     color: 'from - blue - 600 to - indigo - 700',
@@ -1963,6 +2384,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–2 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1974,6 +2396,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Observability',
     real_service: true,'
     technology: ['PostgreSQL', 'Patroni', 'Wal - G'],'
@@ -1994,6 +2421,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
@@ -2005,12 +2433,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
       'A / B test impact analysis',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⚡',
 
     color: 'from - amber - 600 to - yellow - 700',
@@ -2022,6 +2457,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '30 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -2033,6 +2469,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     technology: ['JS SDK', 'ClickHouse'],'
@@ -2053,6 +2494,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
@@ -2064,12 +2506,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
       'Internal linking graph',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔎',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -2084,6 +2533,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Node.js', 'Headless Chrome'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
@@ -2118,6 +2573,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
@@ -2129,12 +2585,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
       'Fan - out and transformations',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔁',
 
     color: 'from - cyan - 600 to - sky - 700',
@@ -2149,6 +2612,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Kafka', 'S3', 'Node.js'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
@@ -2183,6 +2652,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'pdf - render - api - pro',
     name: 'PDF Render API Pro',
@@ -2194,12 +2664,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Serverless scale',
       'Template gallery',
       'Brand - safe fonts',
       'Webhook on completion',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📄',
 
     color: 'from - slate - 600 to - gray - 700',
@@ -2211,6 +2688,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '30 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -2222,6 +2700,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Workers', 'Headless Chrome'],'
@@ -2254,14 +2737,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Auto - instrumentation',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛰️',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -2273,6 +2765,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 day',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
       'RED dashboards','
@@ -2282,6 +2775,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Observability',
     real_service: true,'
     technology: ['OpenTelemetry', 'Grafana'],'
@@ -2302,6 +2800,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
@@ -2313,12 +2812,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
       'Customer sandbox',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔐',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -2330,6 +2836,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '2–5 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -2341,6 +2848,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Security & Compliance',
     real_service: true,'
     technology: ['Keycloak', 'Auth gateways'],'
@@ -2361,6 +2873,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
@@ -2372,12 +2885,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
       'CMDB integrations',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛰️',
 
     color: 'from - sky - 600 to - blue - 700',
@@ -2389,6 +2909,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–3 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -2400,6 +2921,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'IT Operations',
     real_service: true,'
     technology: ['nmap', 'SNMP', 'Go'],'
@@ -2420,6 +2946,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
@@ -2431,12 +2958,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
       'Risk scoring',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📋',
 
     color: 'from - rose - 600 to - orange - 700',
@@ -2451,6 +2985,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Node.js', 'React'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['SecurityScorecard'],
     use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
@@ -2487,6 +3027,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -3239,6 +3785,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: []
 ];
 
+<<<<<<< HEAD
 
 
 
@@ -3246,6 +3793,157 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  {
+    id: 'ai-sales-email-copilot'
+    name: 'AI Sales Email Copilot'
+    tagline: 'Personalized multi-touch outbound with real-time enrichment'
+    price: '$129'
+    period: '/month'
+    description:
+      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
+    features: [
+    reviews: 58
+  }
+  {
+    id: 'security-posture-as-code'
+    name: 'Security Posture as Code'
+    tagline: 'CIS/NIST/Kyverno policy packs with drift remediation'
+    price: '$399'
+    period: '/month'
+    description:
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
+    features: [
+    reviews: 14
+  }
+  {
+    id: 'etl-observability-starter'
+    name: 'ETL Observability Starter'
+    tagline: 'Data pipeline health with schema change and freshness alerts'
+    price: '$99'
+    period: '/month'
+    description:
+      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
+    features: [
+    reviews: 12
+  }
+  {
+    id: 'api-performance-shield'
+    name: 'API Performance Shield'
+    tagline: 'Global edge caching, rate limiting, and anomaly detection'
+    price: '$149'
+    period: '/month'
+    description:
+      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
+    features: [
+    reviews: 9
+  }
+  {
+    id: 'ai-product-analytics'
+    name: 'AI Product Analytics'
+    tagline:
+      'Session insights, funnel auto-segmentation, and LLM-based insights'
+    price: '$129'
+    period: '/month'
+    description:
+      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
+    features: [
+    reviews: 20
+  }
+  {
+    id: 'ai-support-deflection'
+    name: 'AI Support Deflection'
+    tagline: 'Self-serve answers with RAG, forms, and secure handoff'
+    price: '$99'
+    period: '/month'
+    description:
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
+    features: [
+    reviews: 48
+  }
+  {
+    id: 'cloud-cost-autopilot'
+    name: 'Cloud Cost Autopilot'
+    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
+    price: '$249'
+    period: '/month'
+    description:
+      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
+    features: [
+    reviews: 11
+  }
+  {
+    id: 'privacy-vault'
+    name: 'Privacy Vault'
+    tagline: 'Tokenize PII and control access with audit trails'
+    price: '$179'
+    period: '/month'
+    description:
+      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
+    features: [
+    reviews: 7
+  }
+  {
+    id: 'ai-fraud-detection-lite'
+    name: 'AI Fraud Detection Lite'
+    tagline: 'Graph-based anomalies with explainability for SMBs'
+    price: '$159'
+    period: '/month'
+    description:
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
+    features: [
+    reviews: 8
+  }
+  {
+    id: 'managed-postgres-ha-pro'
+    name: 'Managed Postgres HA Pro'
+    tagline: 'Turnkey HA, backups, PITR, and query tuning'
+    price: '$199'
+    period: '/month'
+    description:
+      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
+    features: [
+    reviews: 5
+  }
+  {
+    id: 'browser-performance-monitor-pro'
+    name: 'Browser Performance Monitor Pro'
+    tagline: 'RUM, Core Web Vitals, and session replay'
+    price: '$79'
+    period: '/month'
+    description:
+      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
+    features: [
+    reviews: 6
+  }
+  {
+    id: 'seo-automation-studio'
+    name: 'SEO Automation Studio'
+    tagline: 'Programmatic SEO, audits, and internal linking automation'
+    price: '$99'
+    period: '/month'
+    description:
+      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
+    features: [
+    reviews: 4
+  }
+  {
+    id: 'webhook-relay-replay-pro'
+    name: 'Webhook Relay & Replay Pro'
+    tagline: 'Reliable webhooks with DLQ and replays'
+    price: '$59'
+    period: '/month'
+    description:
+      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
+    features: [
+];
+
+];
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;'
   mobile: '+1 302 464 0950',;'
@@ -3958,6 +4656,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     reviews: 3;
   }
 ];
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -4203,6 +4902,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

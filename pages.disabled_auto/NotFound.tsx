@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -38,11 +39,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\' import Head from \'next/head\' import Link from \'next/link\' export default function NotFound() { return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you\'re looking for doesn\'t exist.\" /> </Head> <div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4\"> <div className=\"max-w-md w-full text-center\"> <div className=\"mb-8\"> <h1 className=\"text-9xl font-bold text-white mb-4\">404</h1> <h2 className=\"text-2xl font-semibold text-gray-300 mb-4\">Page Not Found</h2> <p className=\"text-gray-400 mb-8\"> The page you\'re looking for doesn\'t exist or has been moved. </p> </div> <div className=\"space-y-4\"> <Link href=\"/\" className=\"inline-flex items-center px-6 py-3 bg-blue-600 \"hover\": bg-blue-700 text-white font-medium rounded-lg transition-colors\" > Go Home </Link> </div> </div> </div> </> ) }
 import _React from 'react' import Head from 'next/head' import Link from 'next/link' export default function NotFound() { return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you're looking for doesn't exist." /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4"> <div className="max-w-md w-full text-center"> <div className="mb-8"> <h1 className="text-9xl font-bold text-white mb-4">404</h1> <h2 className="text-2xl font-semibold text-gray-300 mb-4">Page Not Found</h2> <p className="text-gray-400 mb-8"> The page you're looking for doesn't exist or has been moved. </p> </div> <div className="space-y-4"> <Link href="/" className="inline-flex items-center px-6 py-3 bg-blue-600 "hover": bg-blue-700 text-white font-medium rounded-lg transition-colors" > Go Home </Link> </div> </div> </div> </> ) }
 import React from \'react\' import Head from \'next/head\' import Link from \'next/link\' export default function NotFound() { return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you\'re looking for doesn\'t exist.\" /> </Head> <div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4\"> <div className=\"max-w-md w-full text-center\"> <div className=\"mb-8\"> <h1 className=\"text-9xl font-bold text-white mb-4\">404</h1> <h2 className=\"text-2xl font-semibold text-gray-300 mb-4\">Page Not Found</h2> <p className=\"text-gray-400 mb-8\"> The page you\'re looking for doesn\'t exist or has been moved. </p> </div> <div className=\"space-y-4\"> <Link href=\"/\" className=\"inline-flex items-center px-6 py-3 bg-blue-600 \"hover\": bg-blue-700 text-white font-medium rounded-lg transition-colors\" > Go Home </Link> </div> </div> </div> </> ) }
 import _React from 'react' import Head from 'next/head' import Link from 'next/link' export default function NotFound() { return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you're looking for doesn't exist." /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4"> <div className="max-w-md w-full text-center"> <div className="mb-8"> <h1 className="text-9xl font-bold text-white mb-4">404</h1> <h2 className="text-2xl font-semibold text-gray-300 mb-4">Page Not Found</h2> <p className="text-gray-400 mb-8"> The page you're looking for doesn't exist or has been moved. </p> </div> <div className="space-y-4"> <Link href="/" className="inline-flex items-center px-6 py-3 bg-blue-600 "hover": bg-blue-700 text-white font-medium rounded-lg transition-colors" > Go Home </Link> </div> </div> </div> </> ) }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -77,3 +85,6 @@ import _React from 'react' import Head from 'next/head' import Link from 'next/l
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

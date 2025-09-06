@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -17,6 +18,15 @@ export default function Home() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <div>;
+      <main>;
+        <h1>Welcome to Zion Tech Group</h1>;
+        <p>Advanced IT Solutions & AI Services</p>;
+        <Link href="/services">View Our Services</Link>;
+      </main>;
+    </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 <<<<<<< HEAD
 import React from './react';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/epub.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/epub.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from '[^']*';
 import { promises as fs } from '[^']*';
@@ -33,12 +36,16 @@ const Epub = null;
     .join('\n')
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/epub.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/epub.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -46,6 +53,7 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/epub.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +80,11 @@ export const config = {
     }
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/epub.ts
+=======
+      sizeLimit: "10mb"
+    }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },;
 sizeLimit: '10mb',
     },
@@ -124,6 +137,7 @@ function chapterToHtml(text: string): string {"
 export default async function handler() { return null; }
     res && res.status(405).json({ error: "Method not allowed" });
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/export/epub.ts
 <<<<<<< HEAD:pages/api/book/export/epub.ts
 <<<<<<< HEAD
@@ -176,6 +190,11 @@ export default async function handler() { return null; }
     publisher: project.meta.publisher || 'Zion'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/epub.ts
+=======
+    title: project.meta.title, author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
 '
@@ -515,11 +534,38 @@ export default async function handler(req, res) {
 }
   const tmpPath = `/tmp/${randomUUID()}.epub`,
   const options = {
+<<<<<<< HEAD
     title: project.meta.title,
+=======
+    title: project.meta.title
+    author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
+    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))}
+  try {
+    await new Epub(options, tmpPath).promise
+    const buf = await fs.readFile(tmpPath)
+    res.setHeader('Content-Typeapplication/epub+zip')
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"')
+    res.status(200).send(buf)
+
+
+
+  }
+
+  const { project } = req.body as { project: any };
+  if (!project?.meta || !Array.isArray(project?.chapters)) {
+    res.status(400).json({ error: 'Invalid payload' });
+return;
+  }
+  const tmpPath = `/tmp/${randomUUID()}.epub`;
+  const options = {
+title: project.meta.title,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
   try {
+<<<<<<< HEAD
     await new Epub(options, tmpPath).promise,
     const buf = await fs.readFile(tmpPath),
     res.setHeader('Content-Typeapplication/epub+zip'),
@@ -532,6 +578,17 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    await new Epub(options, tmpPath).promise;
+    const buf = await fs.readFile(tmpPath);
+res.setHeader('Content-Type', 'application/epub+zip');
+    res.setHeader(
+      "Content-Disposition"
+      'attachment; filename="zion-os-book.epub"'
+    );
+    res.status(200).send(buf);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e: any) {
 =======
 
@@ -547,6 +604,7 @@ export default async function handler(req, res) {
       await fs.unlink (tmp_path);
     } catch {}
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/export/epub.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -567,6 +625,14 @@ export default async function handler(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/epub.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+function chapterToHtml(text: string): string {
+  if (!text) return '';
+  return text
+    .split(/\n\n+/)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 .map(p => `<p>${escapeHtml(p)}</p>`)
     .join('\n');
 
@@ -579,6 +645,7 @@ function escapeHtml(s: string): string {
     .replace(/'/g, '&#039;');
 
 }}}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/export/epub.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -590,3 +657,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/export/epub.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

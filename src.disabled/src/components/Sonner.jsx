@@ -21,6 +21,7 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -54,3 +55,9 @@ export function Sonner({ position = 'bottom-right',richColors = true,closeButton
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+module && module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) {}; return null} "bottom - 4 right - 4"} z - 50"}> {} success: (message) => error: (message) => Error: ",message),; info: (message) => Info: ",message),; warning: (message) => Warning: ",message),; loading: (message) => Loading: ",message),; dismiss: (toastId) => Dismiss:",toastId); </div>)} export const toast = {}};}""'"'"
+
+export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

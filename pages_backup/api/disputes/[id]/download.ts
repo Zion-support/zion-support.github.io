@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
@@ -8,17 +9,23 @@
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { getDisputeById } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,
 } from '../../../../utils/auth';
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/download.ts
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -27,6 +34,7 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
@@ -76,6 +84,15 @@ export default async function handler(
 } from "../../../../utils/auth";
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+
+
+  parseUserFromRequest
+
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   req: NextApiRequest
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -84,6 +101,7 @@ export default async function handler(
   res: NextApiResponse
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
 <<<<<<< HEAD
@@ -177,6 +195,8 @@ export default async function handler(;
 export default async function handler() { return null; }
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
@@ -222,17 +242,23 @@ export default async function handler(
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 ========
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (
     !id |
     !fileName |
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 =======
@@ -242,6 +268,12 @@ export default async function handler(
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
     return res.status(400).json({ error: "Invalid parameters" });
+=======
+    return res.status(400).json({ error: "Invalid parameters" });
+
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
@@ -256,12 +288,16 @@ export default async function handler(
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
   try {;
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+<<<<<<< HEAD
   } catch (e: any) {;
 =======
   try {}
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
+=======
+  } catch (e: any) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
   const user = null;
   stream.pipe(res)
@@ -278,6 +314,7 @@ res.setHeader(
     'Content-Disposition',
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 =======
@@ -302,6 +339,10 @@ res.setHeader(
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -312,6 +353,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {;
     return res.status(400).json({ error: 'Invalid parameters' })
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/download.ts
@@ -337,6 +379,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     "Content-Disposition""
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+=======
+
+
+
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -376,6 +425,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   if (!dispute) return res && res.status($1).json({ $2 });
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
@@ -385,6 +435,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+  if (!dispute) return res && res.status($1).json({ $2 });
+  try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {;
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -516,6 +570,7 @@ export default async function handler(req, res) {;
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(att.fileName)}"`);
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
   } catch (error) {;
@@ -577,3 +632,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {}
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
+=======
+
+
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

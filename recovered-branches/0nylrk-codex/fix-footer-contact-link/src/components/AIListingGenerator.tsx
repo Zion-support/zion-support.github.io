@@ -11,6 +11,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -25,6 +26,9 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -36,12 +40,16 @@ import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import {Badge} from "@/components/ui/badge";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -51,6 +59,7 @@ interface GeneratedContent {;
   };
   keyPoints: string[];
 }
+<<<<<<< HEAD
 =======
 
 
@@ -127,6 +136,8 @@ interface GeneratedContent {;
   keyPoints: string[];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
@@ -135,6 +146,7 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     targetAudience?: string
 import { supabase } from "@/integrations/supabase/client",
@@ -145,12 +157,15 @@ import { Badge } from "@/components/ui/badge",
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience?: string;
   }
 }
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface GeneratedContent {
@@ -179,10 +194,48 @@ interface GeneratedContent {}
 interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
+=======
+
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Sparkles, ArrowRight } from "@/components/icons",
+import { supabase } from "@/integrations/supabase/client";
+import { Badge } from "@/components/ui/badge";
+interface GeneratedContent {
+
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+    max: number
+  }
+  keyPoints: string[]
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  };
+  keyPoints: string[];
+}
+
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
+<<<<<<< HEAD
   }
 }
 
@@ -204,6 +257,26 @@ import {Badge} from "@/components/ui/badge";import React, { useState } from "rea
 =======
 import {Badge} from "@/components/ui/badge";import React, { useState } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { Badge } from "@/components/ui/badge",
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+    max: number
+  },
+  keyPoints: string[]
+
+import React, { useState } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -225,7 +298,7 @@ import { Sparkles, ArrowRight } from "@/components/icons",;"
 import { supabase } from "@/integrations/supabase/client",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",;
-interface GeneratedContent {,
+interface GeneratedContent {;
   description: string,;
   tags: string[],;
   suggestedPrice: {;
@@ -292,9 +365,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         break;
 =======
+=======
+
+
+  const handleInputChange = (e: { target: { value: string } }, field: string) => {
+    switch(field) {
+      case 'title':
+        setTitle(e.target.value);
+  const [title, setTitle] = useState(initialValues && initialValues.title || "");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
@@ -305,7 +388,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const handleGenerate = async () => {
+    if (!title |!category) {
+      toast({
+        title: "Missing required fields"
+        description: "Please provide at least a title and category."
+        variant: "destructive"
+      });
+        break;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case 'category':;
         setCategory(e && e.target.value);
         break;
@@ -318,6 +412,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
   },
 
 
@@ -412,7 +507,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         break;
 
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
+
+
 
   const handleGenerate = async () => {
     if (!title |!category) {
@@ -420,6 +519,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -432,8 +532,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
-        break;      });
       return;
     }
     try {'
@@ -468,10 +570,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e.target.value),;
         break;
+
+    }
+  };
+
+  const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
-        title: "Missing required fields",,
-  description: "Please provide at least a title and category.",;
+        title: "Missing required fields",;
+        description: "Please provide at least a title and category.",;
         variant: "destructive";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -485,6 +592,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
       return;
     }
+
+    setIsLoading(true);
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -576,9 +685,13 @@ if ( {) {}
     setIsLoading (true);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     setIsLoading(true),;
     ;
@@ -593,16 +706,152 @@ if ( {) {}
         throw new Error(data.error),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 
 ;
     setIsLoading(true),;
     try {;'
+=======
+      }
+;
+      setGeneratedContent(data.generated),;
+      toast({;
+        title:"Content Generated",;
+        description:"AI has created optimized listing content for you.";
+      }),;
+    } catch (error) {;
+      console.error("Error generating content:", error),;
+      toast({;
+        title:"Generation Failed",;
+        description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+        variant:"destructive";
+      }),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent),;
+      toast({;
+        title:"Content Applied",;
+        description:"The generated content has been applied to your listing.";
+      }),;
+    }
+  },;
+;
+  return (;
+    <div className="space-y-6">;
+      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+        <CardHeader>;
+          <CardTitle className="flex items-center text-white">;
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
+            AI Listing Optimizer;
+          </CardTitle>;
+          <p className="text-sm text-zion-slate-light">;
+            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
+          </p>;
+        </CardHeader>;
+        <CardContent className="space-y-4">;
+          <div className="space-y-2">;
+            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+            <Input;
+              id="title";
+              value={title}
+              onChange={(e) => handleInputChange(e, 'title')}
+              placeholder="Enter your product or service title";
+              className="bg-zion-blue border border-zion-blue-light text-white";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+            <Input;
+              id="category";
+              value={category}
+              onChange={(e) => handleInputChange(e, 'category')}
+              placeholder="e.g. AI Tool, Digital Product, Service";
+              className="bg-zion-blue border border-zion-blue-light text-white";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+            <Textarea;
+              id="keyFeatures";
+              value={keyFeatures}
+              onChange={(e) => handleInputChange(e, 'keyFeatures')}
+              placeholder="Briefly describe the main features or benefits";
+              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+            <Input;
+              id="targetAudience";
+              value={targetAudience}
+              onChange={(e) => handleInputChange(e, 'targetAudience')}
+              placeholder="e.g. Developers, Marketers, Startups";
+              className="bg-zion-blue border border-zion-blue-light text-white";}
+}export function AIListingGenerator ({
+  onApplyGenerated, initialValues = {
+  
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+
+  const _handleInputChange = (_e: {_target: { value: string} }, _field: string) => {_switch(field) {
+      case 'title':
+        setTitle(e.target.value),
+        break,
+      case 'category':
+        setCategory(e.target.value),
+        break,
+      case 'keyFeatures':
+        setKeyFeatures(e.target.value),
+        break,
+      case 'targetAudience':
+        setTargetAudience(e.target.value),
+        break
+    }
+  },
+  const _handleGenerate = async () => {_if (!title || !category) {
+      toast({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive"
+      }),
+      return      return;
+    }
+
+    setIsLoading(true),
+    
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+
+;
+    setIsLoading(true),;
+    try {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -624,12 +873,21 @@ if ( {) {}
 <<<<<<< HEAD
 
 =======
+=======
+
+
+      }
+      if (data.error) {
+        throw new Error(data.error)
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
       setGeneratedContent(data.generated),
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       setGeneratedContent(data.generated),
@@ -647,10 +905,22 @@ if ( {) {}
       toast({"
         title: "Generation Failed""
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.""
+=======
+      toast({
+        title: "Content Generated"
+        description: "AI has created optimized listing content for you."
+      })
+    } catch (error) {
+      console.error("Error generating content:", error);
+      toast({
+        title: "Generation Failed"
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"
       })
 
 ;
+<<<<<<< HEAD
       // Check condition;
 if ( {) {}
   $2;
@@ -660,10 +930,22 @@ if ( {) {}
       // Check condition;
 if ( {) {}
   $2;
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
         throw new Error (data.error);
       }
       setGeneratedContent (data.generated);
+<<<<<<< HEAD
       toast ({"
         title: "Content Generated","
         description: "AI has created optimized listing content for you.";
@@ -719,10 +1001,41 @@ if ( {) {}
     }
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      toast ({
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {
+      console.error ("Error generating content:", error);
+      toast ({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        variant: "destructive";
+      });
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+    } finally {
+      setIsLoading(false)
+    }
+
+  },
+
+
+
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
+
 
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
@@ -737,6 +1050,7 @@ if ( {) {}
         throw new Error(data && data.error);
       }
 
+<<<<<<< HEAD
       setGeneratedContent(data && data.generated);    }
 =======
 
@@ -848,10 +1162,76 @@ if ( {) {}
           </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      setGeneratedContent(data && data.generated);
+    }
+
+  },
+
+
+  return (
+    <div className="space-y-6">
+      <Card className="border border-zion-blue-light bg-zion-blue-dark">
+        <CardHeader>
+          <CardTitle className="flex items-center text-white">
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+            AI Listing Optimizer
+          </CardTitle>
+          <p className="text-sm text-zion-slate-light">
+            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+          </p>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
+            <Input
+              id="title"
+              value={title}
+              onChange={(e) => handleInputChange(e, 'title')}
+              placeholder="Enter your product or service title"
+              className="bg-zion-blue border border-zion-blue-light text-white"
+              disabled={isLoading}
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
+            <Input
+              id="category"
+              value={category}
+              onChange={(e) => handleInputChange(e, 'category')}
+              placeholder="e.g. AI Tool, Digital Product, Service"
+              className="bg-zion-blue border border-zion-blue-light text-white"
+              disabled={isLoading}
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
+            <Textarea
+              id="keyFeatures"
+              value={keyFeatures}
+              onChange={(e) => handleInputChange(e, 'keyFeatures')}
+              placeholder="Briefly describe the main features or benefits"
+              className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
+              disabled={isLoading}
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
+            <Input
+              id="targetAudience"
+              value={targetAudience}
+              onChange={(e) => handleInputChange(e, 'targetAudience')}
+              placeholder="e.g. Developers, Marketers, Startups"
+              className="bg-zion-blue border border-zion-blue-light text-white"
+
+          <Button 
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
           <Button 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -882,17 +1262,38 @@ if ( {) {}
 
 
 "
+=======
+
+          <Button 
+
+;
+      setGeneratedContent(data.generated),;
+
+      toast({;
+        title: "Content Generated",;
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {;
+      console && console.error("Error generating content:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent);
+<<<<<<< HEAD
       toast({;"
         title: "Content Applied",;"
         description: "The generated content has been applied to your listing.";
@@ -902,10 +1303,17 @@ if ( {) {}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      toast({;
+        title: "Content Applied",;
+        description: "The generated content has been applied to your listing.";
+      });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
   return (
+<<<<<<< HEAD
 
 
 "
@@ -991,10 +1399,32 @@ if ( {) {}
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups";
+=======
+    <div className="space-y-6">;
+      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+        <CardHeader>;
+          <CardTitle className="flex items-center text-white">;
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
+            AI Listing Optimizer;
+          </CardTitle>;
+          <p className="text-sm text-zion-slate-light">;
+            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
+          </p>;
+        </CardHeader>;
+        <CardContent className="space-y-4">;
+          <div className="space-y-2">;
+            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+            <Input
+              id="title"
+              value={title}
+              onChange={(e) => handleInputChange(e, 'title')}
+              placeholder="Enter your product or service title";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
             />;
           </div>;
+<<<<<<< HEAD
           <Button;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1011,19 +1441,59 @@ if ( {) {}
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="space-y-2">;
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+            <Input
+              id="category"
+              value={category}
+              onChange={(e) => handleInputChange(e, 'category')}
+              placeholder="e && e.g. AI Tool, Digital Product, Service";
+              placeholder="e && e.g. AI Tool, Digital Product, Service";
+              className="bg-zion-blue border border-zion-blue-light text-white";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+            <Textarea
+              id="keyFeatures"
+              value={keyFeatures}
+              onChange={(e) => handleInputChange(e, 'keyFeatures')}
+              placeholder="Briefly describe the main features or benefits";
+              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+            <Input
+              id="targetAudience"
+              value={targetAudience}
+              onChange={(e) => handleInputChange(e, 'targetAudience')}
+            onClick={handleGenerate}
+            disabled={isLoading |!title |!category}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
+<<<<<<< HEAD
               <>"
                 <Sparkles className="h-4 w-4 mr-2" />
                 Generate Optimized Content;
+=======
+              <>
+                <Sparkles className="h-4 w-4 mr-2" />
+                Generate Optimized Content
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </>
             )}
           </Button>
         </CardContent>
       </Card>
+<<<<<<< HEAD
       {isLoading && ("
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
           <CardHeader>"
@@ -1040,10 +1510,28 @@ if ( {) {}
           <Button;
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}"
+=======
+      {isLoading && (
+        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
+          <CardHeader>
+            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
+            <div className="flex flex-wrap gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
+            />;
+          </div>;
+          <Button
+            onClick={handleGenerate}
+            disabled={isLoading || !title || !category}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
             {isLoading ? (;
               <>Generating Optimized Content...</>;
             ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1065,6 +1553,8 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <>;
 =======
 
@@ -1081,6 +1571,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 ))}
@@ -1092,6 +1583,9 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {isLoading && (;
 =======
 
@@ -1107,6 +1601,7 @@ if ( {) {}
               {[...Array(5)].map((_, i) => (;"
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1116,6 +1611,13 @@ if ( {) {}
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;"
             <div className="space-y-2">;
               {[...Array(3)].map((_, i) => (;"
+=======
+              ))}
+            </div>;
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
+            <div className="space-y-2">;
+              {[...Array(3)].map((_, i) => (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
               ))}
             </div>;
@@ -1126,8 +1628,13 @@ if ( {) {}
 
 
 
+<<<<<<< HEAD
       {generatedContent && !isLoading && ("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      {generatedContent && !isLoading && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>"
             <CardTitle className="text-white">Generated Content</CardTitle>
@@ -1154,6 +1661,7 @@ if ( {) {}
               <ul className="list-disc pl-5 text-white space-y-1">
                 {generatedContent.keyPoints.map((point, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <li key={index}>{point}</li>      {generatedContent && !isLoading && (;
 =======
                   <li key={index}>{point}</li>
@@ -1162,6 +1670,10 @@ if ( {) {}
 
       {generatedContent && !isLoading && (;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  <li key={index}>{point}</li>
+      {generatedContent && !isLoading && (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
           <CardHeader>;"
             <CardTitle className="text-white">Generated Content</CardTitle>;
@@ -1176,11 +1688,16 @@ if ( {) {}
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
               <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
                 {generatedContent && generatedContent.tags.map((tag, index) => (;                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
 =======
 "
                   <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                {generatedContent && generatedContent.tags.map((tag, index) => (;
+                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </div>;
             </div>;
@@ -1196,7 +1713,9 @@ if ( {) {}
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
-                ))};
+                ))}
+                ))}
+;
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -1219,58 +1738,59 @@ if ( {) {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="space-y-6">;
-      <Card className="border border - zion - blue - light bg - zion - blue-dark">;
+    <div className="space - y-6">;
+      <Card className="border border - zion - blue - light bg - zion - blue - dark">;
         <CardHeader>;
-          <CardTitle className="flex items - center text-white">;
-            <Sparkles className="h - 5 w - 5 mr - 2 text - zion-cyan" />;
+          <CardTitle className="flex items - center text - white">;
+            <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" />;
             AI Listing Optimizer;
           </CardTitle>;
-          <p className="text - sm text - zion - slate-light">;
+          <p className="text - sm text - zion - slate - light">;
             Provide basic information and let AI generate optimized, SEO - friendly content for your listing;
           </p>;
         </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
-            <label html_for="title" className="text - sm font - medium text - zion - slate-light">Title</label>;
+        <CardContent className="space - y-4">;
+          <div className="space - y-2">;
+            <label html_for="title" className="text - sm font - medium text - zion - slate - light">Title</label>;
             <Input;
               id="title";
               value={title}
               on_change={(e) => handleInputChange (e, 'title')}
               placeholder="Enter your product or service title";
-              className="bg - zion - blue border border - zion - blue - light text-white";
+              className="bg - zion - blue border border - zion - blue - light text - white";
               disabled={is_loading}
             />;
           </div>;
-          <div className="space-y-2">;
-            <label html_for="category" className="text - sm font - medium text - zion - slate-light">Category</label>;
+          <div className="space - y-2">;
+            <label html_for="category" className="text - sm font - medium text - zion - slate - light">Category</label>;
             <Input;
               id="category";
               value={category}
               on_change={(e) => handleInputChange (e, 'category')}
               placeholder="e.g. AI Tool, Digital Product, Service";
-              className="bg - zion - blue border border - zion - blue - light text-white";
+              className="bg - zion - blue border border - zion - blue - light text - white";
               disabled={is_loading}
             />;
           </div>;
-          <div className="space-y-2">;
-            <label html_for="key_features" className="text - sm font - medium text - zion - slate-light">Key Features (Optional)</label>;
+          <div className="space - y-2">;
+            <label html_for="key_features" className="text - sm font - medium text - zion - slate - light">Key Features (Optional)</label>;
             <Textarea;
               id="key_features";
               value={key_features}
               on_change={(e) => handleInputChange (e, 'key_features')}
               placeholder="Briefly describe the main features or benefits";
-              className="bg - zion - blue border border - zion - blue - light text - white min-h-20";
+              className="bg - zion - blue border border - zion - blue - light text - white min - h-20";
               disabled={is_loading}
             />;
           </div>;
-          <div className="space-y-2">;
-            <label html_for="target_audience" className="text - sm font - medium text - zion - slate-light">Target Audience (Optional)</label>;
+          <div className="space - y-2">;
+            <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light">Target Audience (Optional)</label>;
             <Input;
               id="target_audience";
               value={target_audience}
               on_change={(e) => handleInputChange (e, 'target_audience')}
               placeholder="e.g. Developers, Marketers, Startups";
+<<<<<<< HEAD
               className="bg - zion - blue border border - zion - blue - light text-white";
 =======
   return ("
@@ -1328,6 +1848,9 @@ if ( {) {}
               placeholder="e.g. Developers, Marketers, Startups";"
               className="bg - zion - blue border border - zion - blue - light text - white";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              className="bg - zion - blue border border - zion - blue - light text - white";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               disabled={is_loading}
             />;
           </div>;
@@ -1335,11 +1858,12 @@ if ( {) {}
             on_click={handle_generate}
 <<<<<<< HEAD
             disabled={is_loading || !title || !category}
-            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt-2";
+            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
           >;
             {is_loading ? (
               <>Generating Optimized Content...</>) : (
               <>;
+<<<<<<< HEAD
                 <Sparkles className="h - 4 w - 4 mr-2" />;
 =======
             disabled={is_loading || !title || !category}"
@@ -1350,6 +1874,9 @@ if ( {) {}
               <>;"
                 <Sparkles className="h - 4 w - 4 mr - 2" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                <Sparkles className="h - 4 w - 4 mr - 2" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Generate Optimized Content;
               </>)}
           </Button>;
@@ -1357,54 +1884,57 @@ if ( {) {}
       </Card>;
 <<<<<<< HEAD
       {is_loading && (
-        <Card className="border border - zion - blue - light bg - zion - blue - dark overflow-hidden">;
+        <Card className="border border - zion - blue - light bg - zion - blue - dark overflow - hidden">;
           <CardHeader>;
-            <Skeleton className="h - 8 w - 3/4 bg - zion - blue-light / 20" />;
+            <Skeleton className="h - 8 w - 3/4 bg - zion - blue - light / 20" />;
           </CardHeader>;
-          <CardContent className="space-y-4">;
-            <Skeleton className="h - 32 w - full bg - zion - blue-light / 20" />;
-            <div className="flex flex - wrap gap-2">;
+          <CardContent className="space - y-4">;
+            <Skeleton className="h - 32 w - full bg - zion - blue - light / 20" />;
+            <div className="flex flex - wrap gap - 2">;
               {[...Array (5)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue-light / 20" />))}
+                <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue - light / 20" />))}
             </div>;
-            <Skeleton className="h - 8 w - 1/3 bg - zion - blue-light / 20" />;
-            <div className="space-y-2">;
+            <Skeleton className="h - 8 w - 1/3 bg - zion - blue - light / 20" />;
+            <div className="space - y-2">;
               {[...Array (3)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - full bg - zion - blue-light / 20" />))}
+                <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />))}
             </div>;
           </CardContent>;
         </Card>)}
       {generated_content && !is_loading && (
-        <Card className="border border - zion - blue - light bg - zion - blue-dark">;
+        <Card className="border border - zion - blue - light bg - zion - blue - dark">;
           <CardHeader>;
-            <CardTitle className="text-white">Generated Content</CardTitle>;
+            <CardTitle className="text - white">Generated Content</CardTitle>;
           </CardHeader>;
-          <CardContent className="space-y-4">;
+          <CardContent className="space - y-4">;
             <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb-2">Description</h3>;
-              <p className="text-white">{generated_content.description}</p>;
+              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Description</h3>;
+              <p className="text - white">{generated_content.description}</p>;
             </div>;
             <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb-2">Tags</h3>;
-              <div className="flex flex - wrap gap-2">;
+              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
+              <div className="flex flex - wrap gap - 2">;
                 {generated_content.tags.map ((tag, index) => (
-                  <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion-purple / 30">{tag}</Badge>))}
+                  <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">{tag}</Badge>))}
               </div>;
             </div>;
             <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb-2">Suggested Price Range</h3>;
-              <p className="text-white">${generated_content.suggested_price.min.to_fixed (2)} - ${generated_content.suggested_price.max.to_fixed (2)}</p>;
+              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Suggested Price Range</h3>;
+              <p className="text - white">${generated_content.suggested_price.min.to_fixed (2)} - ${generated_content.suggested_price.max.to_fixed (2)}</p>;
             </div>;
             <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb-2">Key Selling Points</h3>;
-              <ul className="list - disc pl - 5 text - white space-y-1">;
+              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
+              <ul className="list - disc pl - 5 text - white space - y-1">;
                 {generated_content.key_points.map ((point, index) => (
                   <li key={index}>{point}</li>))}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ;
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
@@ -1417,6 +1947,7 @@ if ( {) {}
                 {generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
                 ))}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1486,3 +2017,22 @@ if ( {) {}
 
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              </ul>;
+            </div>;
+          </CardContent>;
+          <CardFooter>;
+
+            <Button;
+              on_click={handle_apply}
+              className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
+            >;
+              Apply to My Listing;
+              <ArrowRight className="ml - 2 h - 4 w - 4" />;
+            </Button>;
+          </CardFooter>;
+        </Card>)}
+    </div>);
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

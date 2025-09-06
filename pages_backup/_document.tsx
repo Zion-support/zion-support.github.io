@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,12 @@ export default function Document() {
       <Head />
 =======
 >>>>>>> pr-12243
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default function Document() {
+  return (
+    <Html lang="en">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
@@ -42,13 +49,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-<<<<<<< HEAD
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-=======
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a1a" />
@@ -94,19 +94,27 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
 =======
+=======
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
           rel='stylesheet'
         />
       </Head>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <body>
         <Main />
         <NextScript />
@@ -114,7 +122,10 @@ export default function Document() {
     </Html>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   );
   );
@@ -180,16 +191,24 @@ function Document() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+main
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> pr-12243
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -68,6 +69,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =
 >        fix: (content) => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+        fix: (content) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = // // require('fs');
 <<<<<<< HEAD
 =======
@@ -195,11 +199,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-=
         fix: (content) => {
           // Remove merge conflict markers
           return content
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
@@ -251,6 +255,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >        fix: (content) => {
+=======
+        fix: (content) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           // Remove merge conflict markers
           return content
         }
@@ -275,6 +282,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           if (!content.includes("import React")) {
           if (!content.includes("import React")) {
+<<<<<<< HEAD
           if (!content.includes("import React")) {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -310,6 +318,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
           if (!content.includes("import React")) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -318,6 +328,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -364,6 +375,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =
 >  async runBuildCheck() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  async runBuildCheck() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
 <<<<<<< HEAD
       this.log('Running build check...');
@@ -392,6 +406,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,6 +463,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =
 >  async runLintCheck() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  async runLintCheck() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       this.log('Running lint check...');
       const result = execSync('yarn lint --format=json', { 
@@ -464,6 +482,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -522,6 +541,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  async runTypeCheck() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       this.log('Running TypeScript check...');
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
@@ -537,6 +559,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       return { success: false, output: error.stdout || error.message };
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -580,6 +603,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <=
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   extractErrorInfo(buildOutput) {
     const errors = [];
@@ -589,6 +614,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
@@ -648,13 +674,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >    lines.forEach((line, index) => {
+=======
+    lines.forEach((line, index) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
-=
       
+<<<<<<< HEAD
 >      
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -663,6 +695,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         });
       }
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -740,11 +773,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >  async fixFile(filePath) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    
+    return errors;
+  }
+
+  async fixFile(filePath) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -797,10 +838,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =
 >    try {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -855,6 +900,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      // Apply error pattern fixes
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
         if (matches) {
@@ -868,6 +916,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         }
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -920,11 +969,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =
 >      // Specific fixes for common issues
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      // Specific fixes for common issues
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
         modified = true;
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1001,13 +1054,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =
 >      if (content.includes('};')) {
+=======
+      if (content.includes('};')) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         content = content.replace(/}\s*;\s*$/gm, '}');
         modified = true;
       }
-=
 
+<<<<<<< HEAD
 >
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
@@ -1134,24 +1193,27 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-=
->      if (modified) {
+      if (modified) {
         // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
-=
         
+<<<<<<< HEAD
 >        
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
         return true;
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1193,11 +1255,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =
 >      return false;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      return false;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1214,20 +1280,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async cleanupDuplicateFiles() {
-    this.log('Checking for duplicate page files...');
-    const pagesDir = path.join(process.cwd(), 'pages');
-    if (!fs.existsSync(pagesDir)) {
-      return;
-    }
-    const duplicates = [];
-    const seen = new Set();
-    function scanDirectory(dir) {
-      const files = fs.readdirSync(dir, { withFileTypes: true });
-
-=
-
->  async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
     
@@ -1264,6 +1320,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1343,6 +1400,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       
 >      files.forEach(file => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      
+
+
+      
+      files.forEach(file => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         if (file.isDirectory()) {
 <<<<<<< HEAD
 =======
@@ -1354,6 +1418,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
           const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1397,6 +1462,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           
 >          
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+          
+          
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -1405,6 +1474,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1451,6 +1521,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     scanDirectory(pagesDir);
 
 <<<<<<< HEAD
@@ -1565,6 +1639,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+
     scanDirectory(pagesDir);
 
 <<<<<<< HEAD
@@ -1592,6 +1667,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD
 =
 >    scanDirectory(pagesDir);
 
@@ -1601,6 +1677,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         }
       }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 <<<<<<< HEAD
 =======
@@ -1675,7 +1753,9 @@ const {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
           "fix": content => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             // Remove merge conflict markers
@@ -1766,6 +1846,7 @@ const {
 <<<<<<< HEAD
 <<<<<<< HEAD
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1919,17 +2000,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =
 >        execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+=======
+        execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
 
 
+<<<<<<< HEAD
 =
 >        this.log('Running build check...');
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        this.log('Running build check...');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         const result = execSync('yarn build', {
           "encoding": 'utf8',
           "stdio": 'pipe',
@@ -1954,6 +2042,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this.log('Lint check found "issues": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2027,6 +2116,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
     return report;
@@ -2142,8 +2234,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         );
         );
+<<<<<<< HEAD
         );
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
 <<<<<<< HEAD
 =======
@@ -2269,13 +2364,20 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
 
+<<<<<<< HEAD
 =
 >}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 <<<<<<< HEAD
 =======
@@ -2545,11 +2647,12 @@ module.exports = IntelligentErrorFixer;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 
 
-=
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 }

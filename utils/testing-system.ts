@@ -39,6 +39,7 @@ export class TestingSystem {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -65,6 +66,14 @@ export class TestingSystem {
 
 
 
+=======
+        break;
+      case 'type': // Handle typing;
+        break;
+      case 'hover': // Handle hover;
+        break;
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -72,6 +81,7 @@ export class TestingSystem {
 
 
 }
+<<<<<<< HEAD
 
   }
 <<<<<<< HEAD
@@ -97,3 +107,13 @@ export class TestingSystem {
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+  }
+  }
+
+
+}
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

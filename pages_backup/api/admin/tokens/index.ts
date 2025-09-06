@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/tokens/index.ts
 
 <<<<<<< HEAD
@@ -110,3 +111,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/index.ts
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { getAllTransactions } from "../../../../utils/token/service",;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { userId } = req.query
+  const txs = getAllTransactions()
+  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
+  const { userId } = req.query;
+  const txs = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  res.status(200).json({ transactions: filtered })
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

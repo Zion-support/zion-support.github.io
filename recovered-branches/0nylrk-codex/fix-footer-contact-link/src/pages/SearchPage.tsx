@@ -35,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -45,6 +46,9 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -52,6 +56,7 @@ import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function SearchPage() {;
@@ -69,12 +74,20 @@ export default function SearchPage() {;
 
   const navigate = useNavigate();
 <<<<<<< HEAD
+=======
+export default function SearchPage() {;
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   const initial = params.get("q") || "";
@@ -82,12 +95,18 @@ export default function SearchPage() {;
   const { results, loading, search } = useAISearch();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  const initial = params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 import { useAISearch } from "@/hooks/useAISearch";
+<<<<<<< HEAD
 =======
 
 
@@ -141,12 +160,33 @@ import { SearchSuggestion } from "@/types/search",
   const { results, loading, search } = useAISearch(),;
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { AppLayout } from "@/layout/AppLayout";
+export default function SearchPage() {
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+  const initial = params.get("q") |"";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
+import { useAISearch } from "@/hooks/useAISearch",
+import { AppLayout } from "@/layout/AppLayout",
+export default function SearchPage() {
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+  const { results, loading, search } = useAISearch(),
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+<<<<<<< HEAD
 
   useEffect(() => {}
     if (initial) {}
@@ -213,6 +253,40 @@ export default function SearchPage() {;    if (initial) {
       search(initial)
     }  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  useEffect(() => {
+    if (initial) {
+      search(initial)
+    }
+
+  const initial = params && params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+
+  useEffect(() => {;
+    if (initial) {;
+      search(initial);
+    }
+  }, [initial]);
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+    search(query);
+  };
+
+  }, [initial]),
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    navigate(`/search?q=${encodeURIComponent(query)}`),
+    search(query)
+  },
+
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
@@ -230,6 +304,7 @@ export default function SearchPage() {;    if (initial) {
             onChange={setQuery}
             searchSuggestions={suggestions}"
             placeholder="Search talent, jobs, and projects..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -256,12 +331,20 @@ export default function SearchPage() {;    if (initial) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+          />;
+        </form>;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { SearchSuggestion } from "@/types/search",;
 import { useAISearch } from "@/hooks/useAISearch",;
+<<<<<<< HEAD
 =======
 "
 import { useEffect, useState } from "react",;"
@@ -273,6 +356,14 @@ import { useAISearch } from "@/hooks/useAISearch",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AppLayout } from "@/layout/AppLayout",;
 export default function SearchPage() { return null; }
+=======
+import { AppLayout } from "@/layout/AppLayout",;
+export default function SearchPage() {;
+  const [params] = useSearchParams(),;
+  const navigate = useNavigate(),;
+  const initial = params.get("q") || "",;
+  const [query, setQuery] = useState(initial),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { results, loading, search } = useAISearch(),;
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   useEffect(() => {;
@@ -281,22 +372,36 @@ export default function SearchPage() { return null; }
     }
   }, [initial]),;
   const handleSubmit = (e: React.FormEvent) => {;
+<<<<<<< HEAD
     e.preventDefault(),;`
+=======
+    e.preventDefault(),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     navigate(`/search?q=${encodeURIComponent(query)}`);
     search(query);
   };
   return (;
+<<<<<<< HEAD
     <AppLayout>;"
       <main className="container mx-auto px-4 py-8">;"
+=======
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput;
             value={query}
             onChange={setQuery}
+<<<<<<< HEAD
             searchSuggestions={suggestions}"
+=======
+            searchSuggestions={suggestions}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -315,6 +420,10 @@ export default function SearchPage() { return null; }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          />;
+        </form>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;"
           <p className="text-zion-slate-light">No results found.</p>;
@@ -339,6 +448,7 @@ export default function SearchPage() { return null; }
       </main>;
     </AppLayout>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -391,12 +501,17 @@ export default function SearchPage() { return null; }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { SearchSuggestion } from '@/types / search';
 import { useAISearch } from '@/hooks / useAISearch';
+<<<<<<< HEAD
 =======
 
 
@@ -415,32 +530,59 @@ export default /**;
 function SearchPage() {}
   const [params] = useSearchParams ();
   const navigate = use_navigate ();"
+=======
+import { AppLayout } from '@/layout / AppLayout';
+export default /**
+ * SearchPage - Function description
+ */
+function SearchPage() {
+  const [params] = useSearchParams ();
+  const navigate = use_navigate ();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const initial = params.get ("q") || "";
   const [query, set_query] = useState (initial);
   const { results, loading, search } = useAISearch ();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions (),
+<<<<<<< HEAD
   useEffect (() => {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       search (initial);
     }
   }, [initial]);
 ;
+<<<<<<< HEAD
   const handle_submit = (e: React.FormEvent) =>: any {}
     e.prevent_default (),`
+=======
+  const handle_submit = (e: React.FormEvent) =>: any {
+    e.prevent_default (),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     navigate (`/search?q=${encodeURIComponent (query)}`);
     search (query);
   }
 ;
   return (
+<<<<<<< HEAD
     <AppLayout>;"
       <main className="container mx - auto px - 4 py - 8">;"
+=======
+    <AppLayout>;
+      <main className="container mx - auto px - 4 py - 8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <form on_submit={handle_submit} className="mb - 6">;
           <EnhancedSearchInput;
             value={query}
             on_change={set_query}
+<<<<<<< HEAD
             search_suggestions={suggestions}"
             placeholder="Search talent, jobs, and projects...";
           />;
@@ -459,6 +601,26 @@ if ( {) {}
                   {r.type}
                 </p>;"
                 <h3 className="text - lg font - bold text - white">{r.title}</h3>;"
+=======
+            search_suggestions={suggestions}
+            placeholder="Search talent, jobs, and projects...";
+          />;
+        </form>;
+        {loading && <p className="text - zion - slate - light">Searching...</p>}
+        {!loading && results.length === 0 && (
+          <p className="text - zion - slate - light">No results found.</p>)}
+        {!loading && results.length > 0 && (
+          <div className="space - y-4">;
+            {results.map ((r) => (
+              <div;
+                key={`${r.type}-${r.id}`}
+                className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";
+              >;
+                <p className="text - xs uppercase text - zion - slate - light mb - 1">;
+                  {r.type}
+                </p>;
+                <h3 className="text - lg font - bold text - white">{r.title}</h3>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <p className="text - zion - slate - light">{r.description}</p>;
               </div>))}
           </div>)}
@@ -468,8 +630,11 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -517,6 +682,7 @@ if ( {) {}
     </AppLayout>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -533,3 +699,5 @@ if ( {) {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

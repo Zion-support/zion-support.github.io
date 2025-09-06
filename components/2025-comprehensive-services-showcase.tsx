@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React, { useState } from 'react',
 import SEO from '../components/SEO';
@@ -175,11 +179,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 };export default ComprehensiveServicesShowcase;
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
 pr-12243
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import SEO from './seo/Seo';
 import { motion } from 'framer-motion';
@@ -427,6 +437,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <div className="flex flex-col gap-2">
                     <a
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+<<<<<<< HEAD
 
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
@@ -596,7 +607,13 @@ main
 pr-12243
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >"
                       <Mail className="w-4 h-4" />
@@ -604,11 +621,23 @@ pr-12243
                     </a>
 <<<<<<< HEAD
                     <a
+<<<<<<< HEAD
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
 =======
                     <a;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+ursor/fix-netlify-build-and-merge-to-main-9571
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+main
+
+=======
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >"
                       <Phone className="w-4 h-4" />
@@ -623,6 +652,13 @@ pr-12243
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
+<<<<<<< HEAD
+=======
+              <motion.div 
+          {/* Services Display */}
+          <AnimatePresence mode="wait">
+            {viewMode === 'grid' ? (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
               <motion.div
 
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup && ziontechgroup.com'}?subject=Inquiry about ${service && service.name}`}
@@ -654,9 +690,17 @@ pr-12243
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
+<<<<<<< HEAD
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+main
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -709,7 +753,13 @@ pr-12243
                               {feature}
                             </li>;
                           ))}
+<<<<<<< HEAD
 pr-12243
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
@@ -768,6 +818,7 @@ pr-12243
                         </ul>
                       </div>
 
+<<<<<<< HEAD
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (;
                   <motion&& motion.div
@@ -817,7 +868,14 @@ pr-12243
                           ))}
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {/* Category Badge */}
 =======
 
@@ -831,7 +889,11 @@ pr-12243
                       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
@@ -851,7 +913,13 @@ pr-12243
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+<<<<<<< HEAD
 pr-12243
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -888,6 +956,7 @@ pr-12243
                             </span>
                           </div>
                           
+<<<<<<< HEAD
 
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
@@ -909,7 +978,14 @@ pr-12243
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
 =======
@@ -922,6 +998,7 @@ pr-12243
                                 <li key={idx} className="flex items-center">"
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   {feature}
                                 </li>
                               ))}
@@ -929,6 +1006,18 @@ pr-12243
                           </div>
 
 pr-12243
+=======
+
+
+=======
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -977,8 +1066,16 @@ pr-12243
                             </ul>
                           </div>
 
+<<<<<<< HEAD
 main
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
 =======
@@ -990,8 +1087,48 @@ pr-12243
                               {getCategoryIcon(service.category)}"
                               <span className="ml-1">{service.category}</span>
                             </span>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+                            
+                            <a
+                              href={service.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"
+                            >
+                              Learn More
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <Search className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
+              <p className="text-gray-600">Try adjusting your search terms or category filters.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             </ul>;
                           </div>;
                           {/* Category and Action */}
@@ -1088,8 +1225,16 @@ pr-12243
         </div>
       </section>
 
+<<<<<<< HEAD
 main
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1108,6 +1253,15 @@ pr-12243
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 "
@@ -1127,6 +1281,16 @@ pr-12243
                 Cutting-edge AI and machine learning solutions that deliver real business value;
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
             <motion.div
@@ -1146,6 +1310,16 @@ pr-12243
                 Bank-grade security and compliance for mission-critical business applications;
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
             <motion.div
@@ -1168,6 +1342,16 @@ pr-12243
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
       {/* Contact Section */}
@@ -1185,7 +1369,18 @@ pr-12243
             Let's discuss how our innovative services can help you achieve your business goals;
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
+=======
+ursor/fix-netlify-build-and-merge-to-main-9571
+          
+main
+
+=======
+          
+          
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1212,8 +1407,16 @@ pr-12243
           </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 pr-12243
+=======
+<<<<<<< HEAD
+
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
@@ -1304,11 +1507,20 @@ pr-12243
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
 ursor/fix-netlify-build-and-merge-to-main-9571
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 main
 pr-12243
+=======
+<<<<<<< HEAD
+main
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
 =======
@@ -1323,6 +1535,7 @@ pr-12243
             </a>
 <<<<<<< HEAD
             <a
+<<<<<<< HEAD
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1338,6 +1551,27 @@ pr-12243
 
 export default ComprehensiveServicesShowcase2025;
 pr-12243
+=======
+<<<<<<< HEAD
+
+
+=======
+              href="https://ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
+            >
+              <Globe className="w-5 h-5" />
+              Visit Website
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Visit Website;
             </a>;
           </div>;
@@ -1384,6 +1618,7 @@ pr-12243
 };
 
 export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
 main
   duration: 0.5, delay: 0.2
 }className="text-center p-6" > <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Globe className="w-8 h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3> <p className="text-gray-600"> Cloud-native solutions that scale globally with enterprise-grade reliability </p> </motion.div> </div> </div> </section> {
@@ -1392,8 +1627,13 @@ main
 };
 export default ComprehensiveServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
             <a;
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

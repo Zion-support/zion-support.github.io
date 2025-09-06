@@ -1,6 +1,7 @@
 /// <reference types="next" />"
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,3 +45,8 @@
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -6,6 +6,7 @@ export const basicInfoSchema = z.object({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,9 @@ export const basicInfoSchema = z.object({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
 =======
@@ -42,6 +46,7 @@ export const basicInfoSchema = z.object({;
   phone: z.string().optional();
   location: z.string().optional();"
   website: z.string().url().optional().or(z.literal(""));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   linkedin: z.string().optional();
@@ -65,6 +70,16 @@ export const basicInfoSchema = z && z.object({";
   email: z && z.string().email("Invalid email address");
   phone: z && z.string().optional();
   location: z && z.string().optional();"
+=======
+  linkedin: z.string().optional();
+
+export const basicInfoSchema = z && z.object({
+  fullName: z && z.string().min(1, "Full name is required");
+  title: z && z.string().min(1, "Professional title is required");
+  email: z && z.string().email("Invalid email address");
+  phone: z && z.string().optional();
+  location: z && z.string().optional();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   website: z && z.string().url().optional().or(z && z.literal(""));
   linkedin: z && z.string().optional();
   github: z && z.string().optional(),
@@ -73,6 +88,7 @@ export const basicInfoSchema = z && z.object({";
 export type BasicInfoFormData = z && z.infer<typeof basicInfoSchema>;
 
 
+<<<<<<< HEAD
 
 
 import { z } from './zod';
@@ -83,6 +99,9 @@ import { z } from './zod';
 =======
   linkedin: z.string().optional();import { z } from './zod';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { z } from './zod';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const basicInfoSchema = z.object ({
   full_name: z.string ().min (1, "Full name is required");
   title: z.string ().min (1, "Professional title is required");
@@ -106,18 +125,24 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 =======
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   github: z.string().optional()
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -131,6 +156,8 @@ export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { z } from "zod",
 export const basicInfoSchema = z.object({"
   fullName: z.string().min(1, "Full name is required"),"
@@ -140,6 +167,7 @@ export const basicInfoSchema = z.object({"
   location: z.string().optional(),"
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +212,18 @@ export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+
+
+
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
 =======
 ;
@@ -245,6 +285,7 @@ export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -259,3 +300,5 @@ export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

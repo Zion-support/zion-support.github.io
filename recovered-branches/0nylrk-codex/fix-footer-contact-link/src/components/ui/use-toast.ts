@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -55,16 +56,12 @@ import { useToast, toast } from "@/hooks/use-toast";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useToast, toast } from "@/hooks/use-toast";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-import {useToast, toast} from "@/hooks/use-toast";
-export { useToast, toast }
-
-import { useToast, toast } from "@/hooks/use-toast",
-
-export { useToast, toast },
-import { useToast, toast } from "@/hooks/use-toast",;
 export { useToast, toast };
+
 
 export { useToast, toast };
 export { useToast, toast };

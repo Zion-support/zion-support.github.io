@@ -99,6 +99,7 @@ interface ErrorBoundaryProps {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
   render() {;
@@ -122,6 +123,9 @@ interface ErrorBoundaryProps {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -145,6 +149,7 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   }
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {";
     console.error ("Error caught by boundary:", error, error_info);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -199,10 +204,32 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+  render () {
+    // Check condition
+if ( {) {
+  $2
+}
+      return this.props.fallback || (
+        <div className="p - 6 text - center">;
+          <div className="text-[var (--error)] text - lg mb - 2">Something went wrong</div>;
+        <div className="p-6 text-center">;
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
+          <button;
+            on_click={() => this.set_state ({ has_error: false })}
+            className="btn - primary";
+          >;
+            Try again;
+          </button>;
+        </div>);
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,6 +307,12 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
 <<<<<<< HEAD
 =======
   }}
+=======
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Skeleton loading component;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -292,6 +325,7 @@ export /**
 function Skeleton() {
   return (
     <div className={`animate - pulse ${class_name}`}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {Array.from ({ length: lines }).map ((_, i) => (
@@ -426,25 +460,34 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
+=======
+      {Array.from ({ length: lines }).map ((_, i) => (
+    <div className={`animate-pulse ${className}`}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {Array.from({ length: lines }).map((_, i) => (;
         <div;
           key={i}
-          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
           style={{ width: `${Math.random () * 40 + 60}%` }}
         />))}
     </div>);
-}      // Log performance metrics in development;
+}
+      // Log performance metrics in development;
       // Check condition
 if ( {) {
   $2
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     }
   }

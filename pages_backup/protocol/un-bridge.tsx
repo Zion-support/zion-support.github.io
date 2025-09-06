@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 
@@ -64,6 +65,8 @@ import React, { useState } from 'react';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 export default function UNBridge() {
   const [form, setForm] = useState({
@@ -124,6 +127,7 @@ const onChange = (
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +165,8 @@ export default function UNBridge(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ...form,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           supportingMultiverses: form.supportingMultiverses
@@ -169,6 +175,7 @@ export default function UNBridge(req, res) {
             .filter(Boolean)
         })
       });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
       const data = await res.json();
@@ -238,6 +245,9 @@ export default function UNBridge(req, res) {}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const data = await res.json();
 
   const [form, setForm] = useState({;
@@ -301,6 +311,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setResult(data);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 =======
@@ -319,6 +330,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -330,17 +343,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
     }  }
@@ -354,6 +372,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -365,12 +385,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ id: result.meta.id }),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       // Refresh meta;'
       const list = await fetch('/api/proposals/list');
@@ -381,6 +405,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 =======
@@ -408,6 +433,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -419,6 +446,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ id: result.meta.id, channels }),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -429,12 +457,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
     } finally {;
       setLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 
@@ -456,6 +488,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -508,6 +543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={form && form.regionalScope}
               onChange={onChange}'
               className='w-full border rounded p-2'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 =======
@@ -710,12 +746,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
+=======
+            >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
@@ -734,6 +775,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <label className='block'>
             <span className='text-sm'>Regional scope</span>
             <input
@@ -742,12 +785,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onChange={onChange}
               className='w-full border rounded p-2'
             />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </label>
           <label className="block">
             <span className="text-sm">Budget / Resolution goals</span>
@@ -1214,6 +1261,7 @@ if (return) {
               <div>;'
                 <span className='font - medium'>Status:</span>{' '}
                 {result.meta.status}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 =======
@@ -1289,6 +1337,8 @@ if (return) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
               {result.meta.artifacts?.markdownPath && (
                 <div>
@@ -1328,6 +1378,7 @@ if (return) {
       </div>
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1339,3 +1390,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

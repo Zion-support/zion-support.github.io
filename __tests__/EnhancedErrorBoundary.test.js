@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,10 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary" describe("EnhancedErrorBoundary",() => {" test("renders without crashing",() => {" render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedErrorBoundary / / />) }) test("handles user interactions",() => {" render(<EnhancedErrorBoundary / / />) }) test("applies correct styling",() => {" render(<EnhancedErrorBoundary / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary" describe('EnhancedErrorBoundary',() => {' test('renders without crashing',() => {' render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedErrorBoundary / / />) }) test('handles user interactions',() => {' render(<EnhancedErrorBoundary / / />) }) test('applies correct styling',() => {' render(<EnhancedErrorBoundary / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary" describe('EnhancedErrorBoundary',() => {' test('renders without crashing',() => {' render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedErrorBoundary / / />) }) test('handles user interactions',() => {' render(<EnhancedErrorBoundary / / />) }) test('applies correct styling',() => {' render(<EnhancedErrorBoundary / / />) }) })

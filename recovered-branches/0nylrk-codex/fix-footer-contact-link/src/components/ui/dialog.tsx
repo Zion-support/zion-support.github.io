@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
@@ -33,6 +34,9 @@ import {X} from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from '@/lib/utils';
 const Dialog = DialogPrimitive.Root;
 const DialogTrigger = DialogPrimitive.Trigger;
@@ -101,8 +105,27 @@ import { X } from "lucide-react"const DialogOverlay = React.forwardRef<
 =======
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
+<<<<<<< HEAD
 import { X } from "lucide-react"const DialogOverlay = React.forwardRef<
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { X } from "lucide-react"
+
+
+
+
+import { cn } from "@/lib/utils"
+
+const Dialog = DialogPrimitive.Root
+
+const DialogTrigger = DialogPrimitive.Trigger
+
+const DialogPortal = DialogPrimitive.Portal
+
+const DialogClose = DialogPrimitive.Close
+
+const DialogOverlay = React.forwardRef<
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
@@ -124,6 +147,7 @@ const DialogOverlay = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Overlay
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 =======
   <DialogPrimitive.Overlay;
 "
@@ -137,6 +161,37 @@ const DialogOverlay = React && React.forwardRef<;
     ref={ref}
     className={cn(
       className;
+=======
+
+import * as React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
+;
+import { cn } from "@/lib/utils";
+;
+const Dialog = DialogPrimitive.Root;
+;
+const DialogTrigger = DialogPrimitive.Trigger;
+;
+const DialogPortal = DialogPrimitive.Portal;
+;
+const DialogClose = DialogPrimitive.Close;
+;
+const DialogOverlay = React.forwardRef<;
+  React.ElementRef<typeof DialogPrimitive.Overlay>,;
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>;
+>(({ className, ...props }, ref) => (;
+  <DialogPrimitive.Overlay;
+    ref={ref}
+
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+
+
+      className
+    ref={ref}
+    className={cn(
+      className
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />;
@@ -146,6 +201,7 @@ const DialogOverlay = React && React.forwardRef<;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,12 +244,15 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
 >(({ className, children, ...props }, ref) => (
   <DialogPortal>
     <DialogOverlay />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <DialogPrimitive.Content
 <<<<<<< HEAD
@@ -212,6 +271,11 @@ const DialogContent = React.forwardRef<
 =======
     <DialogPrimitive.Content;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <DialogPrimitive.Content
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
 
 const DialogContent = React && React.forwardRef<;
@@ -220,6 +284,7 @@ const DialogContent = React && React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <DialogPortal>;
     <DialogOverlay />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <DialogPrimitive&& DialogPrimitive.Content
 
@@ -250,11 +315,17 @@ const DialogContent = React.forwardRef<;
 =======
       classNameconst DialogContent = React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <DialogPrimitive&& DialogPrimitive.Content
+
+const DialogContent = React.forwardRef<;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.ElementRef<typeof DialogPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>;
 >(({ className, children, ...props }, ref) => (;
   <DialogPortal>;
     <DialogOverlay />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <DialogPrimitive.Content;
@@ -288,11 +359,24 @@ const DialogContent = React.forwardRef<;
 =======
     <DialogPrimitive.Content;      className={cn(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <DialogPrimitive.Content;
+
+
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
+        className
+      ref={ref}
+      className={cn(
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
         className
       )}
       {...props}>;
       {children}
+
+
 
       ref={ref}
       className={cn(
@@ -333,16 +417,20 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -413,6 +501,41 @@ const DialogHeader = ({
 =======
       className;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </DialogPrimitive.Close>
+    </DialogPrimitive.Content>
+  </DialogPortal>
+))
+DialogContent.displayName = DialogPrimitive.Content.displayName
+DialogContent.displayName = DialogPrimitive.Content.displayName
+const DialogHeader = ({
+  className
+  ...props
+}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
+  <div
+    className={cn(
+
+DialogContent && DialogContent.displayName = DialogPrimitive && DialogPrimitive.Content.displayName,;
+
+const DialogHeader = ({;
+  className,;
+  ...props;
+}: React && React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (;
+  <div
+    className={cn(
+      'flex flex-col space-y-1 && 1.5 text-center sm:text-left',
+
+      className
+    )}
+    {...props}
+  />;
+);
+
+
+      "flex flex-col space-y-1.5 text-center sm:text-left",
+
+      className
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />
@@ -424,10 +547,16 @@ DialogHeader.displayName = "DialogHeader"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const DialogFooter = ({
   className
   ...props
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -457,6 +586,9 @@ DialogHeader && DialogHeader.displayName = 'DialogHeader';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+DialogHeader && DialogHeader.displayName = 'DialogHeader';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const DialogFooter = ({;
   className,;
@@ -466,9 +598,11 @@ const DialogFooter = ({;
   <div
     className={cn(
 
+
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
 
       className
+  <div
     className={cn(
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -499,6 +633,7 @@ const DialogFooter = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
@@ -518,6 +653,9 @@ const DialogTitle = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />
@@ -532,8 +670,10 @@ const DialogTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 <<<<<<< HEAD
 
+
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Title>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Title
+>(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
 =======
 
@@ -688,15 +828,56 @@ const DialogDescription = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
+DialogFooter.displayName = "DialogFooter";
+;
+const DialogTitle = React.forwardRef<;
+  React.ElementRef<typeof DialogPrimitive.Title>,;
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>;
+>(({ className, ...props }, ref) => (;
+  <DialogPrimitive.Title;
+    ref={ref}
+
       "text-lg font-semibold leading-none tracking-tight",
 
+
+      className
+    ref={ref}
+    className={cn(
+      className
+    className={cn(;
+      "text-lg font-semibold leading-none tracking-tight",;
       className;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 
 ;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    )}
+    {...props}
+  />;
+));
+
+
+
+
+
+const DialogDescription = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Description>
+  React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Description
+DialogTitle && DialogTitle.displayName = DialogPrimitive && DialogPrimitive.Title.displayName;
+
+const DialogDescription = React && React.forwardRef<;
+  React && React.ElementRef<typeof DialogPrimitive && DialogPrimitive.Description>,;
+  React && React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Description>;
+>(({ className, ...props }, ref) => (;
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from '@/lib / utils';
 ;
 const Dialog = DialogPrimitive.Root;
@@ -756,6 +937,8 @@ export {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+
+
 export {;
   Dialog,;
   DialogPortal,;
@@ -766,7 +949,7 @@ export {;
   DialogHeader,;
   DialogFooter,;
   DialogTitle,;
-  DialogDescription,
+  DialogDescription,;
 };
   />));
 DialogOverlay.display_name = DialogPrimitive.Overlay.display_name;
@@ -839,10 +1022,15 @@ const DialogDescription = React.forward_ref<;
     {...props}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 DialogDescription && DialogDescription.displayName = DialogPrimitive && DialogPrimitive.Description.displayName;export {;
 =======
 export {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+DialogDescription && DialogDescription.displayName = DialogPrimitive && DialogPrimitive.Description.displayName;
+export {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,;
   DialogPortal,;
   DialogOverlay,;
@@ -852,6 +1040,7 @@ export {;
   DialogHeader,;
   DialogFooter,;
   DialogTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogDescription,
 };
@@ -865,6 +1054,27 @@ export {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  DialogDescription,;
+};
+  />));
+DialogDescription.display_name = DialogPrimitive.Description.display_name;
+;
+export {
+  Dialog
+  DialogPortal
+  DialogOverlay
+  DialogClose
+  DialogTrigger
+  DialogContent
+  DialogHeader
+  DialogFooter
+  DialogTitle
+  DialogDescription
+}
+
+  />));
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 DialogDescription.display_name = DialogPrimitive.Description.display_name;
 ;
 export {
@@ -885,6 +1095,7 @@ export {}
   DialogContent,
   DialogHeader,
   DialogFooter,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle,
@@ -908,6 +1119,14 @@ export {;
 =======
   DialogTitle,export {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  DialogTitle,
+
+  DialogDescription,;
+};
+
+export {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,;
   DialogPortal,;
   DialogOverlay,;
@@ -920,9 +1139,16 @@ export {;
   DialogDescription}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   DialogDescription,
 }
 ;  DialogDescription} const Dialog = DialogPrimitive.Root const DialogTrigger = DialogPrimitive.Trigger const DialogPortal = DialogPrimitive.Portal const DialogClose = DialogPrimitive.Close const DialogOverlay = React.forwardRef< React.ElementRef<typeof DialogPrimitive.Overlay>;
+=======
+
+
+
+  DialogDescription} const Dialog = DialogPrimitive.Root const DialogTrigger = DialogPrimitive.Trigger const DialogPortal = DialogPrimitive.Portal const DialogClose = DialogPrimitive.Close const DialogOverlay = React.forwardRef< React.ElementRef<typeof DialogPrimitive.Overlay>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay> > ( ({
   className, ...props 
 }, ref) => (<DialogPrimitive.Overlay) 
@@ -958,6 +1184,7 @@ React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description> > ( ({
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   DialogDescription,
@@ -978,3 +1205,8 @@ React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description> > ( ({
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  DialogDescription,
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

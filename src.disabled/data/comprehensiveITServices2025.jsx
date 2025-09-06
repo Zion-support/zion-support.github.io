@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": const COMPREHENSIVE_IT_SERVICES_2025 = [
 export: const COMPREHENSIVE_IT_SERVICES_2025 = [""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -38,3 +39,6 @@ export: const COMPREHENSIVE_IT_SERVICES_2025 = [""
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

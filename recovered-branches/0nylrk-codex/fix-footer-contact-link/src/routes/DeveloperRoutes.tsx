@@ -45,6 +45,7 @@ class ErrorBoundary extends React.Component {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -58,12 +59,24 @@ import React from "react";
 =======
 }import React from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+import React from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";
 import ApiGettingStarted from "../pages/ApiGettingStarted";
-import ApiWebhooks from "../pages/ApiWebhooks";import React from "react",
+import ApiWebhooks from "../pages/ApiWebhooks";
+
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiSampleCode from "../pages/ApiSampleCode";
+
+
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+import React from "react",
 import { Navigate, Route, Routes } from "react-router-dom",
 import DeveloperPortal from "../pages/DeveloperPortal",
 import ApiDocsHub from "../pages/ApiDocsHub",
@@ -73,6 +86,7 @@ import ApiWebhooks from "../pages/ApiWebhooks",
 import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 import ApiSampleCode from "../pages/ApiSampleCode",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import ApiErrorCodes from "../pages/ApiErrorCodes",
@@ -93,6 +107,11 @@ import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
 =======
 import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import ApiErrorCodes from "../pages/ApiErrorCodes",
+export default function DeveloperRoutes() {
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Routes>
       <Route path="/" element={<Navigate to="/developers/portal" />} />
       <Route path="/portal" element={<DeveloperPortal />} />
@@ -103,6 +122,7 @@ import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
       <Route path="/docs/samples" element={<ApiSampleCode />} />
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,3 +343,7 @@ export default function DeveloperRoutes() {}
 }
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

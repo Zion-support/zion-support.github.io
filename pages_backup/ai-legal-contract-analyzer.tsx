@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 =======
@@ -8,18 +9,24 @@ import Head from 'next/head';
 
 <<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Phone
   Mail
@@ -346,6 +353,7 @@ export default function AILegalContractAnalyzerPage() {
 =======
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 <<<<<<< HEAD
     s.link.endsWith('/ai-legal-contract-analyzer');
@@ -408,20 +416,27 @@ export default function AILegalContractAnalyzerPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     s.link.endsWith('/ai-legal-contract-analyzer')
   );
   if (!service) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,17 +457,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-legal-contract-analyzer'
         />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -478,6 +499,7 @@ export default function AILegalContractAnalyzerPage() { return null; }
               <p className="text-slate-300 mb-6">{service.description}</p>"
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 <<<<<<< HEAD
@@ -523,6 +545,8 @@ export default function AILegalContractAnalyzerPage() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-legal-contract-analyzer.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5'
@@ -622,6 +646,7 @@ export default function AILegalContractAnalyzerPage() { return null; }
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-legal-contract-analyzer.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -634,3 +659,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-legal-contract-analyzer.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

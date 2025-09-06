@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 export default function Page() {;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export default function Page() {;
 pr-12243
@@ -20,6 +22,13 @@ export default function Page() {
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Playbook — Autonomous Delivery</title>
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <meta
           name='description'
 =======
@@ -57,7 +66,15 @@ export default function Page() {
 pr-12243
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />;'
         <p className='mt-6 text-white/60 text-sm'>;
@@ -67,6 +84,7 @@ pr-12243
     </div>;
 <<<<<<< HEAD
   );export default function Page() {;
+<<<<<<< HEAD
 pr-12243
 
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
@@ -75,6 +93,19 @@ pr-12243
 =======
   );export default function Page() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+<<<<<<< HEAD
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
+
+
+
+=======
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />'
         <p className='mt-6 text-white/60 text-sm'>
@@ -94,16 +125,27 @@ export default function Page() {}
 
 <<<<<<< HEAD
 export default function Page() {
+<<<<<<< HEAD
   return (
 pr-12243
+=======
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Page() {
 export default function Page() {
 =======
 
+<<<<<<< HEAD
 
 
 export default function Page() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
 }
@@ -111,6 +153,7 @@ export default function Page() {}
 <<<<<<< HEAD
 export default function Page() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Playbook — Autonomous Delivery</title>;
@@ -133,7 +176,17 @@ pr-12243
 =======
 
 
+<<<<<<< HEAD
 export default function Page() {}
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+import Head from 'next / head';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 ';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -199,10 +252,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <Head>
         <title>Playbook — Autonomous Delivery</title>
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
@@ -227,6 +286,7 @@ pr-12243
         </p>
       </main>
     </div>
+<<<<<<< HEAD
     </div>;
   );export default function Page() {}
   return (
@@ -238,6 +298,19 @@ export default function Page() {}
 <<<<<<< HEAD
 pr-12243
 =======
+=======
+<<<<<<< HEAD
+
+
+=======
+    </div>;
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 "
@@ -258,6 +331,11 @@ pr-12243
 <<<<<<< HEAD
 pr-12243
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
   );
 }
@@ -265,6 +343,11 @@ pr-12243
 =======
 
 
+=======
+    </div>
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>;
   );
 }
@@ -285,9 +368,18 @@ pr-12243
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

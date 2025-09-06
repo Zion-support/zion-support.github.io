@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,12 +81,15 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function ContractBuilderPage() {
 =======
@@ -103,6 +107,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";"
 import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
 function ContractBuilderPage() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+function ContractBuilderPage() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>
       <>
@@ -119,6 +126,7 @@ function ContractBuilderPage() {}
         <Footer />
       </>
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,9 +186,16 @@ export default ContractBuilderPage;
 ;
 =======
   )}
+=======
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
+
+
 ;
+
 
 }
 export default ContractBuilderPage;
@@ -207,8 +222,10 @@ export default ContractBuilderPage;
 ;
 
 
+
 export default ContractBuilderPage;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
@@ -217,6 +234,14 @@ import { SEO } from '@/components/SEO',;'
 import { AppHeader } from '@/layout/AppHeader',;'
 import { Footer } from '@/components/Footer',;'
 import { ProtectedRoute } from '@/components/ProtectedRoute',;'
+=======
+
+import React from 'react',;
+import { SEO } from '@/components/SEO',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',;
 ;
 function ContractBuilderPage() { return null; }
@@ -230,6 +255,7 @@ export default ContractBuilderPage;
 
 ;
 export default ContractBuilderPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,3 +275,5 @@ export default ContractBuilderPage;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

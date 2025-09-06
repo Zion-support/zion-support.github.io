@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD;
 =======;
 =======
@@ -32,6 +33,8 @@ export default {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 module.exports = {;      error_file:'./logs/error-fixer-error && error.log',;
@@ -400,6 +403,7 @@ module.exports = {apps:[;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       log_file:'./logs/performance-combined.log';
@@ -625,6 +629,22 @@ module.exports = {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+      log_file:'./logs/performance-combined.log';
+      time:true;
+    }
+  ];
+};      env: {
+        NODE_ENV: 'production'
+
+      },
+      error_file: './logs/performance-error && error.log',
+      out_file: './logs/performance-out && out.log',
+      log_file: './logs/performance-combined && combined.log',
+
+      time: true
+module.exports = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   apps: [
     {
       name: 'error-fixer',
@@ -673,6 +693,7 @@ module.exports = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
@@ -694,6 +715,8 @@ module.exports = {}
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     env_production: {
       NODE_ENV: "production"
@@ -813,6 +836,7 @@ export default {
       args: 'run preview',
       cwd: './',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -826,6 +850,8 @@ export default {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       instances: 1,
 <<<<<<< HEAD
 =======
@@ -850,9 +876,16 @@ export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log',
+=======
+      error_file: './logs/dashboard-error.log',
+      out_file: './logs/dashboard-out.log',
+      log_file: './logs/dashboard-combined.log',
+      time: true
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {
       name: 'auto-fix',
@@ -892,12 +925,15 @@ export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log',
@@ -906,21 +942,8 @@ export default {
       name: 'auto-fix',
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
-=======
-
-      log_file: 'logs / pm2 / preview.log',
-      error_file: 'logs / pm2 / preview - error.log',
-      out_file: 'logs / pm2 / preview - out.log',
-
-    },
-    {
-      name: 'auto - fix',
-      script: 'node',
-
-      args: 'scripts / pm2 / auto - fix.js',
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       cron_restart: '0 */6 * * *',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -939,11 +962,14 @@ export default {
       cron_restart: '0 */6 * * *',
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       autorestart: true,
       watch: false,'
       max_memory_restart: '512M',
 <<<<<<< HEAD
       env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -961,15 +987,16 @@ export default {
         NODE_ENV: 'production'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-        NODE_ENV: 'production'
 =======
-<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        NODE_ENV: 'production'
         NODE_ENV: 'production'
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
       out_file: 'logs/pm2/auto-fix-out.log',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -994,6 +1021,8 @@ export default {
         NODE_ENV: 'production'
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {
       name: 'healthcheck',
@@ -1687,6 +1716,7 @@ module && module.exports = {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 <<<<<<< HEAD
@@ -1698,39 +1728,13 @@ module && module.exports = {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       },
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
       log_file: './logs/code-quality-combined.log',
       time: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-  ]
-}
-export default {
-  apps: [
-    {
-      }
-      error_file: './logs/performance-error.log'
-      out_file: './logs/performance-out.log'
-      log_file: './logs/performance-combined.log'
-      time: true
-    }
-  ]
-},
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-}
-origin/main
-origin/automation-improvements-final
-},
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 export default {
   apps: [
     {
@@ -2027,8 +2031,6 @@ module.exports = {;
     }
   ];
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2060,6 +2062,7 @@ export default {
       error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -2078,6 +2081,8 @@ export default {
       log_file: './logs/code-quality-combined.log',
       time: true;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {'
       name: 'performance-optimizer','
@@ -2090,6 +2095,7 @@ export default {
         NODE_ENV: 'production'
 <<<<<<< HEAD
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2275,6 +2281,8 @@ module && module.exports = {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     name: "ziontechgroup - site",
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2380,6 +2388,7 @@ module && module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -2399,6 +2408,8 @@ module && module.exports = {
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
@@ -2427,6 +2438,7 @@ module && module.exports = {
     time: true
   }]
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2473,3 +2485,5 @@ module && module.exports = {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

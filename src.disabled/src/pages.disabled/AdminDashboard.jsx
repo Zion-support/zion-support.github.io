@@ -107,7 +107,9 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return (); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+<<<<<<< HEAD
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -122,3 +124,6 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Roc
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Search,
   Filter,
@@ -56,18 +60,23 @@ import {
   Flame,
   Zap as ZapIcon,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 
@@ -209,6 +218,8 @@ export default function ExplorePage() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
@@ -885,6 +896,7 @@ import React, { useState } from 'react';
         return 0;    }
   });
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
 =======
         return 0;    }
@@ -897,6 +909,10 @@ import React, { useState } from 'react';
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+<div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Head>
         <title>Explore Technology Categories | Zion Tech Group</title>
         <meta
@@ -984,6 +1000,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <SmartHeader />
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 
@@ -1014,6 +1031,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+=======
+<section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
@@ -1032,6 +1055,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1061,6 +1085,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+          >
+<h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Explore Technology Categories
             </h1>
 =======
@@ -1076,6 +1105,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Start Exploring"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -1103,11 +1133,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 View All Services;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+=======
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+                View All Services
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -1176,6 +1212,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -1185,12 +1223,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex-1 max-w-md'>
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input
                     type="text"
 =======
@@ -1205,6 +1247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     placeholder="Search categories..."
                     value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -1319,6 +1362,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1326,6 +1371,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
               {/* Sort Options */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
               <div className='flex items-center gap-4'>
@@ -1351,6 +1397,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+<div className='flex items-center gap-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <select
                   value={sortBy}
 
@@ -1383,6 +1433,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
+<<<<<<< HEAD
 =======
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
@@ -1423,21 +1474,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
                   <option value='featured'>Sort by Featured</option>
                 </select>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -1571,6 +1629,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Featured Services */}
 <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -1623,16 +1683,21 @@ className="mb-12"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 className='mb-12'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -1703,6 +1768,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-white/60'>
               Explore our most innovative and cutting-edge technology solutions
             </p>
@@ -1725,12 +1792,16 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
                   <div className='flex items-center justify-between mb-3'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service && service.status === 'active'
@@ -2056,6 +2127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                     <ChevronRight className="w-4 h-4 ml-1" />
@@ -2077,10 +2149,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
+=======
+                    <ChevronRight className='w-4 h-4 ml-1' />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Categories Grid */}
+<section className='px-6 pb-20'>
+        <div className='max-w-7xl mx-auto'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2165,10 +2252,15 @@ className='mb-12'
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+className='mb-12'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -2211,6 +2303,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-white/60'>
               {sortedCategories.length} categories available for exploration
             </p>
@@ -2218,12 +2312,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <AnimatePresence mode='wait'>
             {sortedCategories.length === 0 ? (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <motion.div
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
@@ -2252,6 +2350,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+<<<<<<< HEAD
 =======
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -2492,10 +2591,15 @@ className='text-center py-20'
 className='text-center py-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+className='text-center py-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                   <Search className="w-12 h-12 text-white/40" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -2539,6 +2643,8 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className='text-2xl font-semibold text-white mb-2'>
                   No categories found
                 </h3>
@@ -2548,6 +2654,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 <button
                   onClick={() => setSearchTerm('')}
 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2557,11 +2664,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 <button;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >
                   Clear Search;
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -2590,6 +2701,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {sortedCategories.map((category, index) => (
@@ -2680,6 +2793,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -2816,6 +2930,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+                      {category.featured && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <div className='absolute top-4 right-4'>
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>
                             ⭐ Featured
@@ -2843,6 +2960,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {category.serviceCount}
                           </div>
                           <div className='text-xs text-white/60'>Services</div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -2926,11 +3044,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
                             {category.featured ? '⭐' : '🚀'}
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                           <div className="text-xs text-white/60">
@@ -3021,6 +3143,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <div className='text-xs text-white/60'>
                             {category.featured ? 'Featured' : 'Active'}
                           </div>
@@ -3064,6 +3188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Technology Trends */}
+<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
@@ -3109,10 +3234,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto">
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+=======
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                           </div>;
@@ -3164,6 +3296,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
 =======
 
@@ -3177,6 +3313,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Stay ahead of the curve with our insights into the latest technology developments;
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -3233,6 +3370,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
@@ -3281,6 +3420,7 @@ description:
                 icon: TrendingUp,
                 title: 'Autonomous Systems',
                 description:
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3530,6 +3670,8 @@ description:
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
                 color: 'from-emerald-500 to-green-500',
@@ -3542,6 +3684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
@@ -3591,6 +3734,10 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
@@ -3703,6 +3850,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3741,6 +3889,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* CTA Section */}
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -3811,6 +3961,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 View All Services"
                 <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3837,6 +3988,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <a
                 href='mailto:kleber@ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
@@ -3859,6 +4012,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
@@ -4062,3 +4216,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+=======
+      <SmartFooter />
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

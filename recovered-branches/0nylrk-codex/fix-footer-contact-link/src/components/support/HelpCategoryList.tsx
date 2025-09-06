@@ -91,6 +91,8 @@ export function HelpCategoryList({}
       )
     : categories,
 
+
+
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
@@ -115,6 +117,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -170,10 +173,19 @@ interface HelpCategoryListProps {;
   searchQuery: string;
 }
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+    );
+  }
+);
+    : categories;
+      );
+    : categories;
       )
     : categories,
 
+<<<<<<< HEAD
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
@@ -197,10 +209,24 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
   return ("
+=======
+  if (filteredCategories.length === 0) {
+    return (
+      <div className="text-center py-8">
+        <h3 className="text-lg font-medium mb-2">No results found</h3>
+        <p className="text-zion-slate-light">
+          Try adjusting your search query or browse all categories.
+        </p>
+      </div>
+    );
+}
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
 <<<<<<< HEAD
         <Card
+<<<<<<< HEAD
     );
   }
   return (
@@ -229,6 +255,9 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       {filteredCategories.map(category => (
         <Card          key={category.id}
 <<<<<<< HEAD
+=======
+          key={category.id}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -246,6 +275,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
           </CardContent>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
@@ -256,11 +286,17 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
 <<<<<<< HEAD
+=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HelpCategory } from "./types",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface HelpCategoryListProps {;
   categories: HelpCategory[],;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
+<<<<<<< HEAD
 ;
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
 =======
@@ -381,6 +417,17 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           key={category.id}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    : categories;
+
+  if (filteredCategories && filteredCategories.length === 0) {;
+    return (
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map((category) => (
+        <Card
+          key={category.id}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -397,6 +444,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -416,6 +464,9 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 =======
         <Card;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ))}
     </div>
   );
@@ -479,6 +530,7 @@ if ( {) {}
 }
 <<<<<<< HEAD
     return (
+<<<<<<< HEAD
       <div className="text - center py-8">;
         <h3 className="text - lg font - medium mb-2">No results found</h3>;
         <p className="text - zion - slate-light">;
@@ -488,19 +540,25 @@ if ( {) {}
         <h3 className="text - lg font - medium mb - 2">No results found</h3>;"
         <p className="text - zion - slate - light">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="text - center py - 8">;
+        <h3 className="text - lg font - medium mb - 2">No results found</h3>;
+        <p className="text - zion - slate - light">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>);
   }
 <<<<<<< HEAD
   return (
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
       {filtered_categories.map ((category) => (
         <Card;
           key={category.id}
-          className="cursor - pointer hover:border - zion - purple / 50 transition-colors";
+          className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
           on_click={() => onCategorySelect (category.id)}
         >;
+<<<<<<< HEAD
           <CardHeader className="pb-2">;
             <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb-3">;
 =======
@@ -515,6 +573,10 @@ if ( {) {}
           <CardHeader className="pb - 2">;"
             <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <CardHeader className="pb - 2">;
+            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {category.icon}
             </div>;
             <CardTitle>{category.name}</CardTitle>;
@@ -522,11 +584,15 @@ if ( {) {}
           </CardHeader>;
 <<<<<<< HEAD
           <CardContent>;
+<<<<<<< HEAD
             <p className="text - sm text - zion - slate-light">;
 =======
           <CardContent>;"
             <p className="text - sm text - zion - slate - light">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <p className="text - sm text - zion - slate - light">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {category.articles.length} articles;
             </p>;
           </CardContent>;

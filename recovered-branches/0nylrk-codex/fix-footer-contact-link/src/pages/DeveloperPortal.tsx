@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -93,11 +94,26 @@ import {
 } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  BookOpen,
+  Code,
+  Key,
+  List,
+  LucideIcon,
+  Terminal,
+  Webhook,
+} from "lucide-react";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
 import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface TabDefinition {
 =======
@@ -130,6 +146,9 @@ import { ApiDocumentation } from "@/components/developers/ApiDocumentation";"
 import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface TabDefinition {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   label: string;
   icon: LucideIcon;
@@ -150,6 +169,7 @@ export function DeveloperPortal() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -164,6 +184,9 @@ export function DeveloperPortal() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -180,6 +203,7 @@ export function DeveloperPortal() {};
 "
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -237,6 +261,42 @@ export function DeveloperPortal() {};
   const [activeTab, setActiveTab] = useState<string>("documentation"),
               return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api-keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List },
+  ];
+
+  return (
+
+    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-white flex items-center">
+          <Terminal className="mr-3" size={32} />
+          Developer Portal
+        </h1>
+        <p className="text-zinc-400 mt-2">
+          Access the Zion API, manage your API keys, and set up webhooks.
+        </p>
+      </div>
+
+      {/* Tabs */}
+
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+
+            const Icon = tab.icon,
+
+            return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <button
 =======
             return (
@@ -250,6 +310,7 @@ export function DeveloperPortal() {};
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="border - b border - zinc - 800 mb-8">;
         <div className="flex flex - wrap -mb-px">;
@@ -307,28 +368,93 @@ export function DeveloperPortal() { return null; }
           <Terminal className="mr-3" size={32} />;
           Developer Portal;
         </h1>;"
+=======
+
+                <Icon size={16} className="mr-2" />
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import {;
+  BookOpen,;
+  Code,;
+  Key,;
+  List,;
+  LucideIcon,;
+  Terminal,;
+  Webhook;
+} from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
+import { WebhooksManager } from "@/components/developers/WebhooksManager",;
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",;
+import { ApiLogs } from "@/components/developers/ApiLogs",;
+interface TabDefinition {;
+  id: string,;
+  label: string,;
+  icon: LucideIcon;
+}
+;
+export function DeveloperPortal() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState<string>("documentation"),;
+
+      <div className="border - b border - zinc - 800 mb - 8">;
+        <div className="flex flex - wrap -mb - px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
+
+  // Define the tabs;
+  const tabs: TabDefinition[] = [;
+    { id: "documentation", label: "Documentation", icon: BookOpen },;
+    { id: "api-keys", label: "API Keys", icon: Key },;
+    { id: "webhooks", label: "Webhooks", icon: Webhook },;
+    { id: "logs", label: "Logs", icon: List }],;
+
+  return (
+    { id: "logs", label: "Logs", icon: List }];
+  return (;
+    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
+      <div className="mb-8">;
+        <h1 className="text-3xl font-bold text-white flex items-center">;
+          <Terminal className="mr-3" size={32} />;
+          Developer Portal;
+        </h1>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text-zinc-400 mt-2">;
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
+<<<<<<< HEAD
       {/* Tabs */}"
       <div className="border-b border-zinc-800 mb-8">;"
+=======
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="flex flex-wrap -mb-px">;
 
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
               <button;
+<<<<<<< HEAD
                 key={tab.id}`
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${;
                   activeTab === tab.id;"
                     ? "text-white border-zion-purple";"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";`
+=======
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${;
+                  activeTab === tab.id;
+                    ? "text-white border-zion-purple";
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -340,6 +466,9 @@ export function DeveloperPortal() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Icon size={16} className="mr-2" />
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                <Icon size={16} className="mr-2" />
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {tab.label}
               </button>
             );
@@ -347,30 +476,56 @@ export function DeveloperPortal() { return null; }
         </div>
       </div>
 
+<<<<<<< HEAD
 
+=======
+      {/* Tab content */}
+      <div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {tabs && tabs.map((tab) => {;
             const Icon = tab && tab.icon;
             return (
       {/* Tab content */}
       <div>;
+<<<<<<< HEAD
 "
         {activeTab === "documentation" && <ApiDocumentation />}"
         {activeTab === "api-keys" && <ApiKeysManager />}"
         {activeTab === "webhooks" && <WebhooksManager />}"
+=======
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
+=======
+
+
+
+;
+
+export default function ProtectedDeveloperPortal() {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
 =======
@@ -422,6 +577,24 @@ export default function ProtectedDeveloperPortal() { return null; }
                 }`}
                 on_click={() => setActiveTab (tab.id)}
               >;"
+=======
+  );
+}
+
+;
+;
+
+
+              <button;
+                key={tab.id}
+                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
+                  active_tab === tab.id;
+                    ? "text - white border - zion - purple";
+                    : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
+                }`}
+                on_click={() => setActiveTab (tab.id)}
+              >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Icon size={16} className="mr - 2" />;
                 {tab.label}
               </button>);
@@ -429,18 +602,32 @@ export default function ProtectedDeveloperPortal() { return null; }
         </div>;
       </div>;
       {/* Tab content */}
+<<<<<<< HEAD
       <div>;"
         {active_tab === "documentation" && <ApiDocumentation />}"
         {active_tab === "api - keys" && <ApiKeysManager />}"
         {active_tab === "webhooks" && <WebhooksManager />}"
+=======
+      <div>;
+        {active_tab === "documentation" && <ApiDocumentation />}
+        {active_tab === "api - keys" && <ApiKeysManager />}
+        {active_tab === "webhooks" && <WebhooksManager />}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {active_tab === "logs" && <ApiLogs />}
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 export default /**;
  * ProtectedDeveloperPortal - Function description;
  */
 function ProtectedDeveloperPortal() {}
+=======
+export default /**
+ * ProtectedDeveloperPortal - Function description
+ */
+function ProtectedDeveloperPortal() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>;
       <DeveloperPortal />;
@@ -449,8 +636,11 @@ function ProtectedDeveloperPortal() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 }
       </div>
@@ -474,6 +664,7 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -490,3 +681,5 @@ export default function ProtectedDeveloperPortal() {;
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -10,6 +10,19 @@ import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
 interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+  asChild?: boolean;
+}
+
+export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(;
+  ({ className, children, asChild = false, ...props }, ref) => {;
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(
+
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
 =======
   className?: string;
@@ -30,6 +43,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -39,6 +53,10 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -48,6 +66,7 @@ import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { forwardRef } from "react",
 
@@ -56,10 +75,13 @@ import React, { forwardRef } from "react",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
 interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+<<<<<<< HEAD
 =======
 "
 import React, { forwardRef } from "react";"
@@ -78,23 +100,34 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
   asChild?: boolean;
 }
 <<<<<<< HEAD
+=======
+
+  className?: string;
+  children?: React && React.ReactNode;
+  asChild?: boolean;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(;
   ({ className, children, asChild = false, ...props }, ref) => {;
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
   asChild?: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -127,6 +160,9 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
   ({ className, children, asChild = false, ...props }, ref) => {
@@ -136,6 +172,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
       <Comp
         className={cn(
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
@@ -170,6 +207,14 @@ import { Slot } from "@radix-ui/react-slot",;
 import React, { forwardRef } from "react",;"
 import { Slot } from "@radix-ui/react-slot",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+          className
+import React, { forwardRef } from "react",;
+import { Slot } from "@radix-ui/react-slot",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils",;
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
   className?: string,;
@@ -178,6 +223,7 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 }
 ;
 export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(;
+<<<<<<< HEAD
   ({ className, children, asChild = false, ...props }, ref) => {;"
     const Comp = asChild ? Slot : "button",;
     return (;
@@ -206,6 +252,21 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
 
           className;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  ({ className, children, asChild = false, ...props }, ref) => {;
+    const Comp = asChild ? Slot : "button",;
+    return (;
+      <Comp;
+        className={cn(;
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",;
+          "text-muted-foreground hover:text-foreground hover:bg-accent",;
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",;
+          className;
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+          className
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         )}
         ref={ref as any}
         {...props}>;
@@ -213,6 +274,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
       </Comp>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 SidebarMenuButton.displayName = "SidebarMenuButton";
@@ -237,6 +299,14 @@ SidebarMenuButton.displayName = "SidebarMenuButton",
           "text-muted-foreground hover:text-foreground hover:bg-accent",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+),
+
+
+SidebarMenuButton && SidebarMenuButton.displayName = "SidebarMenuButton";
+
+SidebarMenuButton.displayName = "SidebarMenuButton",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 );
@@ -277,7 +347,23 @@ export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuBut
 SidebarMenuButton.display_name = "SidebarMenuButton";
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+        )}
+        ref={ref as any}
+        {...props}
+      >
+        {children}
+      </Comp>
+    )
+  }
+);
+SidebarMenuButton.displayName = "SidebarMenuButton";
+
+),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -290,9 +376,12 @@ SidebarMenuButton.displayName = "SidebarMenuButton",
 SidebarMenuButton.displayName = "SidebarMenuButton";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { forwardRef } from "react",;
 import { Slot } from "@radix-ui/react-slot",;
 import { cn } from "@/lib/utils",;
@@ -345,6 +434,7 @@ className
 });
 SidebarMenuButton.displayName = "SidebarMenuButton";
 SidebarMenuButton.displayName = "SidebarMenuButton";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -359,3 +449,5 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

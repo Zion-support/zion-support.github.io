@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -82,6 +83,10 @@ import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationFor
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -112,6 +117,7 @@ export default function CreateTalentProfile() {}
         <TalentRegistrationForm />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,9 +229,19 @@ export default function CreateTalentProfile() {;
             to get discovered for AI and tech projects on the Zion Marketplace.;
           </p>;
         </div>;    </div>);
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 ;
+
+
+    </div>);
+}
+
+;
+
 
         ;
         <TalentRegistrationForm />;

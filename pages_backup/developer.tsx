@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/developer.tsx
 <<<<<<< HEAD
 
@@ -238,6 +239,13 @@ export default function DeveloperPage() {_return (
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
+=======
+import React from 'react',
+import Head from 'next/head',
+origin/cursor/automate-test-improve-and-merge-code-2533
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>
           Developer Portal
@@ -731,9 +739,13 @@ export default function DeveloperPortal() {
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/developer.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -9,6 +9,33 @@ import { SeverityIndicator } from "@/components/ui/severity-indicator",
 import React from "react",
 import { SeverityIndicator } from "@/components/ui/severity-indicator",
 interface SeverityDisplayProps {
+<<<<<<< HEAD
+=======
+  severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
+
+}) => {
+  return (
+
+}) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+
+
+interface SeverityDisplayProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   severity: string
 }
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
@@ -16,6 +43,13 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
 }) => {
   return (
 
+<<<<<<< HEAD
+=======
+
+};
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
@@ -45,6 +79,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
       showText={true}
     />;
   );
+<<<<<<< HEAD
 =======
 
 import React from './react';
@@ -57,6 +92,15 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    />
+  );
+};
+  ),;
+},; interface SeverityDisplayProps {
+  severity: string 
+}severity 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }) => {
 =======
 
@@ -75,6 +119,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
   severity,;
 }) => {;
   return (
+
 
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
@@ -172,11 +217,15 @@ interface SeverityDisplayProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-}
+
 };
+};
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

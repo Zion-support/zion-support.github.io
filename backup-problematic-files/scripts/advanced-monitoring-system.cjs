@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
 =======
 <<<<<<< HEAD
@@ -28,6 +29,10 @@ const path = require('path')
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -78,5 +83,8 @@ console.log(' Starting Advanced Monitoring System...')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   return { "status": 'success', "metrics": mockPerformance, "message"}
+<<<<<<< HEAD
   return { "status": 'success', "metrics": mockPerformance, "message"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

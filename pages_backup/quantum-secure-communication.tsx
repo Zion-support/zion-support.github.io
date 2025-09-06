@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CheckCircle,
   ArrowRight,
   Star,
@@ -65,6 +68,7 @@ import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -300,6 +304,8 @@ export default function QuantumSecureCommunication() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <UltraAdvancedFuturisticBackground
       intensity="high"
@@ -456,6 +462,7 @@ export default function QuantumSecureCommunication() {}
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
         <UltraAdvancedNavigation />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
@@ -532,6 +539,8 @@ function QuantumSecureCommunication() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Hero Section */}
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -628,6 +637,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300'></div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -735,6 +745,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -755,6 +767,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Unbreakable encryption for the{' '}
                 <span className='text-purple-400 font-bold'>quantum era</span>
               </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -861,6 +874,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -874,6 +889,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 communications, ensuring your data remains secure even against
                 quantum computers.
               </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -956,6 +972,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               {/* Pricing and CTA */}
               <motion.div
@@ -985,12 +1003,16 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2
                         href='/contact'
                         variant='primary'
                         className='w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       >
                         Start Free Trial;
                       </Button>
@@ -1002,6 +1024,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
@@ -1048,6 +1071,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <Button
                     href='/contact'
                     variant='secondary'
@@ -1181,6 +1206,7 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1331,6 +1357,9 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+        {/* Features Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -1592,6 +1621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   whileHover={{ scale: 1.02, y: -5 }}
                   key={index  } catch (error) {
     console.error("Error:", error);
@@ -1665,6 +1695,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   whileHover={{ scale: 1.02, y: -5 }}
 className='group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1713,6 +1745,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
                   while_hover={{ scale: 1.02, coordinate_y: -5 }}
@@ -1758,6 +1791,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   whileHover={{ scale: 1.02, y: -5 }}
 className='group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1766,6 +1801,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center'>
                       <Shield className='w-5 h-5 text-white' />
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
@@ -1787,6 +1823,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <h3 className='text-lg font-semibold text-white group-hover:text-green-300 transition-colors'>
                       {useCase}
                     </h3>
@@ -1800,6 +1838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1815,6 +1854,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-secure-communication.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {/* Technology Stack */}
               <motion.div;
 
@@ -2139,6 +2181,7 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                       <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>
                       <span className='text-gray-200'>{integration}</span>
                     </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2183,6 +2226,8 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
                 </div>
               </motion.div>
@@ -2207,6 +2252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </h2>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2314,6 +2360,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               <motion.div
@@ -2352,6 +2400,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2439,6 +2488,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -2479,6 +2530,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
@@ -2502,6 +2554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -2569,6 +2623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2735,6 +2790,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <Button
                     href='/contact'
                     variant='primary'
@@ -2779,6 +2836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2831,6 +2889,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <Button
                     href='/contact'
                     variant='secondary'
@@ -2849,6 +2909,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2878,6 +2939,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mt-8 text-gray-400'>
                 <p>
                   Contact us:{' '}
@@ -2896,18 +2959,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>
                 </p>
                 <p className='mt-2'>{contactInfo.address}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-secure-communication.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-secure-communication.tsx
 <<<<<<< HEAD:pages/quantum-secure-communication.tsx
 <<<<<<< HEAD
@@ -3028,3 +3096,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-secure-communication.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

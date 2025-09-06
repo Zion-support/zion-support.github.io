@@ -74,12 +74,26 @@ export default function FeatureCard({
   gradient
   className = ''
 }: FeatureCardProps) {
+<<<<<<< HEAD
   className?: string;  className?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   className?: string;  className?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+interface FeatureCardProps {icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
+  className?: string;
+}
+export default /**
+ * FeatureCard - Function description
+ */
+function FeatureCard() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   className?: string;
 }
@@ -104,8 +118,11 @@ function FeatureCard() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={`feature - card group ${class_name}`}>;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
         <span className=&quot;text - white text - xl & quot;>{icon}</span>;
@@ -115,6 +132,7 @@ function FeatureCard() {}
       <ul className=&quot;text - sm text - white / 60 space - y-1 & quot;>;
         {features.map ((feature, index) => (
           <li key={index}>• {feature}</li>))}
+<<<<<<< HEAD
 =======
   return (
     <div className={`feature-card group ${className}`}>
@@ -140,6 +158,8 @@ function FeatureCard() {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </ul>;
     </div>);
 }

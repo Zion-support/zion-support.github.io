@@ -111,6 +111,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -138,3 +139,6 @@ const nodemailer = require('nodemailer') class AlertingSystem { constructor() { 
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const nodemailer = require('nodemailer') class AlertingSystem { constructor() { this.transporter = nodemailer.createTransporter({ service: 'gmail',auth: { user: process.env.ALERT_EMAIL_USER,pass: 'process.env.ALERT_EMAIL_PASS' } })} async sendAlert(subject,message,severity = 'warning') { const mailOptions = { from: 'process.env.ALERT_EMAIL_USER',to: 'process.env.ALERT_EMAIL_RECIPIENTS',subject: `[${severity.toUpperCase()}] ${subject}`,text: 'message',html: ` <h2>${subject}</h2> <p><strong>Severity:</strong> ${severity}</p> <p><strong>Time:</strong> ${new Date().toISOString()}</p> <p><strong>Message:</strong></p> <pre>${message}</pre> ` }; try { await this.transporter.sendMail(mailOptions)} catch { } } checkThresholds(metrics) { const alerts = []; if ( { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) { { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}]; if ( { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',severity: 'warning' })} return alerts) { { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,severity: 'warning' })} return alerts}} } module.exports = AlertingSystem;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

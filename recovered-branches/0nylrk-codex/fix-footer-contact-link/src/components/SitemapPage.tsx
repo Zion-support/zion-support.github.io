@@ -3,13 +3,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -371,19 +375,10 @@ import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const SitemapPage: React.FC = () => {
-import React from 'react';
-import {completeSitemap, dynamicPaths} from '@/config/sitemap';
-import {Link} from 'react-router-dom';
-import {ChevronRight} from 'lucide-react';
-import {SEO} from './SEO';
-import {AppLayout} from '@/layout/AppLayout';
-import React from 'react',
-import { completeSitemap, dynamicPaths } from '@/config/sitemap',
-import { Link } from 'react-router-dom',
-import { ChevronRight } from 'lucide-react',
-import { SEO } from './SEO',
-import { AppLayout } from '@/layout/AppLayout',  return (
+  return (
     <AppLayout>
       <SEO"
         title="Sitemap | Zion AI Marketplace""
@@ -551,14 +546,18 @@ import { AppLayout } from '@/layout/AppLayout',  return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </ul>
           </div>
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -631,5 +630,8 @@ import { AppLayout } from '@/layout/AppLayout',  return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 "

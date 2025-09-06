@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
 =======
@@ -33,6 +34,8 @@ export default function handler(req, res) {
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
 =======
 
@@ -142,6 +145,7 @@ export default withErrorLogging(handler);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
 =======
@@ -164,6 +168,9 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -176,12 +183,16 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       url: session.url
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -229,6 +240,7 @@ export default withErrorLogging(handler);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
 =======
@@ -266,3 +278,6 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

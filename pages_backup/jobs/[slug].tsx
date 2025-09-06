@@ -41,6 +41,7 @@ import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
 export default function JobDetailsPage() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -172,6 +173,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
   useEffect(() => {}
+=======
+useEffect(() => {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
@@ -203,6 +208,7 @@ export default function JobDetailsPage() { return null; }
 
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 <<<<<<< HEAD
@@ -229,6 +235,9 @@ export default function JobDetailsPage() { return null; }
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -241,6 +250,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <EnhancedCard>"
             <div className="flex items-start justify-between gap-3">
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 <<<<<<< HEAD
@@ -276,6 +286,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h1 className='text-xl font-semibold'>
 =======
 
@@ -361,6 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='font-semibold mb-2'>Requirements</h2>
             <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>
               <li>3+ years with Python or TypeScript</li>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -376,6 +389,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
@@ -478,6 +494,7 @@ function JobDetailsPage() {
                 </EnhancedButton>              )}
             </div>;
           </EnhancedCard>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -665,6 +682,9 @@ function JobDetailsPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
+=======
+      {isMobile && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3'>
           <div className='container mx-auto px-2'>
             <EnhancedButton onClick={onApply} variant='primary' fullWidth>
@@ -675,6 +695,7 @@ function JobDetailsPage() {
       )}
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -690,3 +711,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

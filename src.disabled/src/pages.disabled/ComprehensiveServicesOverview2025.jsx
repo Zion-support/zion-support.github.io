@@ -37,9 +37,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
 ursor/add-new-services-and-deploy-updates-0462
+import React from 'react';
+interface ComprehensiveServicesOverview2025Props {
+  // Add props here as needed
+}
+export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServicesOverview2025Props) {
+  return (
+    <div>
+      <h1>ComprehensiveServicesOverview2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
 }
 }
 import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/ComprehensiveServicesOverview2025.jsx
 >>>>>>>> main:corrupted_backup/ComprehensiveServicesOverview2025.jsx
@@ -89,3 +102,6 @@ import _React,{ useState } from 'react';'''; import { Link } from 'react-router-
 
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensiveServicesOverview2025 = () => {}}; const [selectedService,setSelectedService] = useState(null); const [selectedCategory,setSelectedCategory] = useState('all'); const categories = [; 'all',; 'AI & Business Intelligence',; 'Cybersecurity & Quantum Computing',; 'DevOps & Infrastructure',; 'Blockchain & Supply Chain',; 'Healthcare & AI',; 'Quantum Computing & AI',; 'FinTech & AI',; 'IoT & Edge Computing',; 'Legal Tech & AI',; 'Marketing & AI',; 'Energy & Sustainability',; 'Logistics & Transportation'; ]; const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory); const getCategoryIcon = (category) => {}; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }; export { ComprehensiveServicesOverview2025 }}}}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/working-automation-suite.cjs
 =======
 <<<<<<< HEAD
@@ -16,6 +17,10 @@
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/working-automation-suite.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,5 +45,8 @@ console.log('====')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       this.log(` Automation suite "failed"`)
+<<<<<<< HEAD
       this.log(` Automation suite "failed"`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

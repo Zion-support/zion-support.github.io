@@ -68,12 +68,38 @@ import { format } from 'date-fns',;
  * Formats a date for PDF display;
 =======
 
+<<<<<<< HEAD
 import {format} from 'date-fns'; * Formats a date for PDF display;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 import {format} from 'date-fns'; * Formats a date for PDF display;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {format} from 'date-fns';
+
+
+import {format} from 'date-fns';
+
+
+/**
+ * Formats a date for PDF display
+ * @param date Date or string to format
+ * @returns Formatted date string
+ */
+export function formatDate(date: Date | string | undefined): string {
+
+  if (!date) return ''
+
+  if (typeof date === 'string') {
+    return format(new Date(date), 'MMM yyyy')
+  }
+  return format(date, 'MMM yyyy')
+import { format } from 'date-fns',;
+/**;
+
+ * Formats a date for PDF display;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * @param date Date or string to format;
  * @returns Formatted date string;
  */;
@@ -81,6 +107,7 @@ export function formatDate(date: Date | string | undefined): string {;'
   if (!date) return '';'
   if (typeof date === 'string') {;'
     return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +122,9 @@ export function formatDate(date: Date | string | undefined): string {;'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 =======
 
@@ -130,8 +160,8 @@ export function formatDate(date: Date | string | undefined): string {;'
     return format (new Date (date), 'MMM yyyy');
   }
   return format (date, 'MMM yyyy');
-}}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,3 +183,8 @@ export function formatDate(date: Date | string | undefined): string {;'
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -9,6 +9,7 @@ console.log('=');
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ console.log('=');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :scripts/resolve-final-conflicts.cjs
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('🔧 Resolving Final Conflicts');
@@ -41,6 +45,11 @@ console.log('🔧 Final Build Fix');
 console.log('====');
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Function to fix all remaining syntax errors
@@ -155,6 +164,7 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fix.cjs
     const originalContent = content;
 
@@ -169,6 +179,8 @@ for (const file of filesToFix) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const originalContent = content;
     
     content = fixAllSyntax(content);
@@ -246,4 +258,10 @@ console.log('\n🎉 Final build fix completed!');
 
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

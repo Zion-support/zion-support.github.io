@@ -78,14 +78,20 @@ const { describe,it,expect } from "vitest"; describe('Trust Score User API', () 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { describe, it, expect } from 'vitest'
 describe('Trust Score User API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { describe, it, expect } from 'vitest';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

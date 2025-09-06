@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
@@ -44,6 +45,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/generate.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -60,15 +64,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     res.status(405).json({ error: 'Method not allowed' });
     return
@@ -95,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   res.status(200).json({ chapters: drafted })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/generate.ts
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
@@ -116,6 +126,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+import OpenAI from 'openai'
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async /**
  * handler - Function description
 =======
@@ -153,6 +168,7 @@ if ( {) {}
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
 =======
@@ -210,6 +226,11 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 <<<<<<< HEAD
@@ -285,6 +306,7 @@ if ( {) {}
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
@@ -302,6 +324,13 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
     return;
     } catch (error) {
+=======
+
+
+;
+  res.status(200).json({ chapters: drafted });
+  } catch (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -345,6 +374,7 @@ export default async function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -400,6 +430,9 @@ export default async function handler(req, res) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.status(200).json({ chapters: drafted });
 };
 }
@@ -407,6 +440,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -431,3 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,11 +25,15 @@ import type { UserProfile } from "@/types/auth",
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**
@@ -75,6 +80,19 @@ export function useAuthState() {
  */
 export function useAuthState() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/**
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {
+
+  const [user, setUser] = useState<UserProfile | null>(null),
+  const [isLoading, setIsLoading] = useState<boolean>(true),
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
+
+  
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return {
 =======
 import React, { useState } from "react",";
@@ -105,6 +123,7 @@ export function useAuthState() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -121,6 +140,11 @@ import type { UserProfile } from "@/types/auth",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React, { useState } from "react",;
+import type { UserProfile } from "@/types/auth",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
   }
@@ -153,7 +177,8 @@ export /**
 function useAuthState() {
   const [user, set_user] = useState < UserProfile | null>(null);
   const [is_loading, setIsLoading] = useState < boolean>(true);
-  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);  const [user, setUser] = useState<UserProfile | null>(null),;
+  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
+  const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
   return {;
@@ -170,6 +195,7 @@ function useAuthState() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,6 +212,11 @@ function useAuthState() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 ;
@@ -220,6 +251,7 @@ export function useAuthState() { return null; }
     is_loading;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsLoading;
 
 
@@ -250,3 +282,12 @@ export function useAuthState() { return null; }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    setIsLoading;
+
+    onboarding_step;
+
+    setOnboardingStep;
+  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

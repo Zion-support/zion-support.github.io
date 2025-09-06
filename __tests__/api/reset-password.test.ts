@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http'; // RequestMethod can be useful;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset'; // Adjust path as necessary;
@@ -16,6 +17,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -23,6 +31,7 @@ import { describe, it, expect, vi } from 'vitest'
 describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
+      "method"'"body": { token: 'invalid', "newPassword"'"
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset';
 interface ErrorResponse {
@@ -31,32 +40,51 @@ interface ErrorResponse {
 describe('/api/auth/reset token validation', () => {
   it('returns 400 if token is missing', async () => {
     const { req, res } = createMocks({
+<<<<<<< HEAD
       "method": 'POST' as RequestMethod,
       "body": { newPassword: 'pass12345' }});
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST' as RequestMethod,
       body: { newPassword: 'pass12345' },
     });
     // Cast to the specific NextApi types for the handler
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+      "method": 'POST' as RequestMethod,
+      "body": { newPassword: 'pass12345' }});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse
     );
     expect(res._getStatusCode()).toBe(400);
+<<<<<<< HEAD
     // Assuming the response JSON structure is { message: string } for errors
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     expect((res._getJSONData() as ErrorResponse).message).toBe(
       'Token and new password are required.'
     );
   });
   it('returns 400 for invalid token', async () => {
     const { req, res } = createMocks({
+<<<<<<< HEAD
       "method": 'POST' as RequestMethod,
       "body": { token: 'invalid', "newPassword": 'pass12345' }});
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST' as RequestMethod,
       body: { token: 'invalid', newPassword: 'pass12345' },
     });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+      "method": 'POST' as RequestMethod,
+      "body": { token: 'invalid', "newPassword": 'pass12345' }});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse
@@ -68,6 +96,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
 });
 
+<<<<<<< HEAD
       "body": { token: 'invalid', "newPassword"
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
@@ -87,3 +116,11 @@ main
   // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+
+=======
+import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
+import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

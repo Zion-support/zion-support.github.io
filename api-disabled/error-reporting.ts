@@ -26,6 +26,7 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -36,6 +37,13 @@ ursor/add-new-services-and-deploy-updates-0462
 
 =======
 
+=======
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 module.exports = {};
 
 =======
@@ -112,6 +120,7 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -127,3 +136,5 @@ module.exports = {};
 
 module.exports = {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

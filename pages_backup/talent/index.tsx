@@ -71,6 +71,7 @@ interface Talent {;
 =======
 
 interface Talent {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/index.tsx
 <<<<<<< HEAD
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
@@ -90,6 +91,30 @@ interface Talent {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  testimonial?: { quote: string, author: string }
+}
+
+const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
+  id: String(i + 1);
+  name: `Talent ${i + 1}`,
+  title: 'Full-Stack Developer',
+badges: (i % 3 === 0
+    ? ['Verified']
+    : i % 3 === 1
+      ? ['Pro']
+      : ['Top Rated']) as Talent['badges']
+  testimonial:
+    i % 5 === 0
+origin/cursor/automate-test-improve-and-merge-code-2533
+      ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
+      : undefined
+}));
+const TalentDirectory: NextPage = () => {
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+  testimonial?: { quote: string; author: string };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
@@ -215,6 +240,7 @@ const TalentDirectory: NextPage = () => {}
   const total = mockTalent.length,
 <<<<<<< HEAD:pages_backup/talent/index.tsx
   const pageItems = useMemo(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/index.tsx
 <<<<<<< HEAD
     const start = (page - 1) * pageSize,
@@ -366,6 +392,8 @@ const TalentDirectory: NextPage = () => {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const start = (page - 1) * pageSize;
 return mockTalent.slice(start, start + pageSize);
   }, [page]);
@@ -521,6 +549,7 @@ export default TalentDirectory;
         total={total}
         onChange={setPage}
       />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/index.tsx
 <<<<<<< HEAD
     </div>
@@ -533,6 +562,9 @@ export default TalentDirectory;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
   )
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -154,6 +155,8 @@ import {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ArrowRight,
   CheckCircle,
   Globe,
@@ -165,16 +168,21 @@ import {;
   Mail,
   MapPin,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,6 +211,8 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   };
 
@@ -218,6 +228,7 @@ const matchesSearch =
       const matchesPrice =
         priceRange === 'all' || getPriceRange(service.price) === priceRange;
       return matchesSearch && matchesCategory && matchesPrice;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -234,12 +245,16 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
 
       return matchesSearch && matchesCategory && matchesPrice;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     })
     .sort((a, b) => {}
       switch (sortBy) {'
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
         case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -278,6 +293,8 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
@@ -302,17 +319,22 @@ staggerChildren: 0.1,
     },
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -588,6 +610,9 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      transition: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 duration: 0.5,
       },
     },
@@ -629,6 +654,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </Head>
       <EnhancedNavigation />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
     console.error("Error:", error);
@@ -699,10 +725,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      {/* Hero Section */}
+<section className='relative py-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -766,6 +799,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
               2025 Comprehensive Services Showcase
@@ -778,6 +813,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 
             {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -826,6 +862,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='flex flex-wrap justify-center gap-6 mb-8 text-white/70'>
               <div className='flex items-center gap-2'>
                 <Phone className='w-5 h-5' />
@@ -842,6 +880,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -899,6 +938,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Stats */}
 <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
               <div className='text-center'>
@@ -931,6 +972,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -992,6 +1034,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -1007,6 +1051,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='relative max-w-2xl mx-auto'>
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5' />
                 <input
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
                   type="text"
@@ -1081,6 +1126,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   type='text'
                   placeholder='Search services by name, description, or features...'
                   value={searchTerm}
@@ -1098,6 +1145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Category
                 </label>
                 <select
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1142,6 +1190,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
@@ -1152,6 +1202,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -1363,6 +1414,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
                 </select>
               </div>
@@ -1427,6 +1480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -1511,6 +1565,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Services Grid */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -1525,6 +1581,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-3xl font-bold text-white mb-2'>
                 {filteredServices.length} Services Found
               </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
               <p className="text-white/60">
@@ -1599,6 +1656,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-white/60'>
                 Showing results for &quot;{searchTerm || 'all services'}&quot;
                 in{' '}
@@ -1633,6 +1692,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Clear Filters;
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1776,6 +1836,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ) : (
 <div
                 className={
@@ -1802,6 +1864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${'
                       view_mode === 'list' ? 'flex' : '';`
                     }`}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
                   >;
@@ -1937,6 +2000,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   >
                     {/* Service Card Content */}
 <div
@@ -1971,6 +2036,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.description}
                       </p>
                       {/* Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2206,6 +2272,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mb-4'>
                         <h4 className='text-sm font-semibold text-white/70 mb-2'>
                           Key Features:
@@ -2252,17 +2320,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           target='_blank'
                           rel='noopener noreferrer'
                           className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         >
                           Learn More;
                         </a>
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
                         <a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2303,10 +2376,16 @@ className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg 
 className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+                          href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         >
                           Contact;
                         </a>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -2383,6 +2462,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {/* Additional Info */}
 <div className='mt-4 pt-4 border-t border-white/10'>
                         <div className='grid grid-cols-2 gap-4 text-xs text-white/50'>
@@ -2414,6 +2495,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2572,6 +2654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      {/* Contact CTA */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='px-6 pb-20'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -2585,6 +2670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -2625,6 +2711,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>
               Our team of experts is ready to help you implement the perfect
               solution for your business needs. Get in touch today for a
@@ -2633,6 +2721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2686,6 +2775,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 href={`mailto:${contactInfo.email}?subject=Business Consultation Request`}
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2'
               >
@@ -2715,6 +2806,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
 <<<<<<< HEAD
@@ -2823,3 +2915,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

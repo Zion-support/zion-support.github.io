@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/press.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +165,8 @@ const contactInfo = {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Press() {
   const pressReleases = [
     {
@@ -238,6 +241,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -251,6 +255,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+=======
+
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -267,6 +276,7 @@ return (
   </>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/press.tsx
 export default function PressPage() {
 <<<<<<< HEAD
@@ -297,12 +307,23 @@ export default function PressPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+=======
+
+
+import React from 'react';
+import SEO from '../components/SEO';
+
+export default function PressPage() {
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/press.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +347,11 @@ export default function PressPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -539,9 +565,13 @@ export default function PressPage() {
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/press.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

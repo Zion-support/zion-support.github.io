@@ -71,7 +71,13 @@ files.for_each ((file) => {}
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       (match) => {
 =======
 

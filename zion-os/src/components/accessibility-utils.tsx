@@ -115,7 +115,7 @@ export function useFocusTrap(enabled: boolean = true) {;
 =======
     <a;
       href={`#${target_id}`}
-      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z-50";
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     >;
       {children}
     </a>);
@@ -123,7 +123,7 @@ export function useFocusTrap(enabled: boolean = true) {;
     <div;
       role={role}
       aria - live={aria_live}
-      className="sr-only";
+      className="sr - only";
       aria - atomic="true";
     >;
       {message}
@@ -352,6 +352,7 @@ export function useFocusTrap(enabled: boolean = true) {;
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             e.preventDefault();
@@ -746,14 +747,101 @@ export function Tooltip({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
             e.preventDefault();            firstElement.focus();
+=======
+            e.preventDefault();
+            firstElement.focus();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
         }
-      }        <span>{label}</span>;
+      }
+    }
+    container.addEventListener("keydown", handleKeyDown);
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]);
+  return containerRef;
+}
+// Keyboard navigation hook;
+export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
+  const [selected_index, setSelectedIndex] = useState (-1),
+  const handleKeyDown = (e: KeyboardEvent) =>: any {
+    switch (e.key) {
+      case "ArrowDown": e.prevent_default (),
+        setSelectedIndex (prev => (prev + 1) % items.length),
+        break,
+      case "ArrowUp":;
+        e.prevent_default (),
+        setSelectedIndex (prev => (prev - 1 + items.length) % items.length),
+        break,
+      case "Enter":;
+      case " ":;
+        e.prevent_default (),
+        // Check condition
+if ( {) {
+  $2
+}
+          on_select (items[selected_index]);
+        }
+        break,
+      case "Escape": setSelectedIndex (-1),
+        break;
+    }
+  },
+  useEffect (() => {
+    document.addEventListener ("keydown", handleKeyDown),
+    return () => document.removeEventListener ("keydown", handleKeyDown);
+  }, [items, selected_index, on_select]),
+  return { selected_index, setSelectedIndex }
+}
+// Announcement component for screen readers;
+export /**
+ * Announcement - Function description
+ */
+function Announcement() {
+  const [announcements, set_announcements] = useState < string[]>([]),
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_announcements (prev => [...prev, message]),
+      // Clear announcement after a delay;
+      const timer = set_timeout (() => {
+        set_announcements (prev => prev.slice (1));
+      }, 1000),
+      return () => clear_timeout (timer);
+    }
+  }, [message]),
+  return (
+    <div aria - live={priority} aria - atomic="true" className="sr - only">;
+      {announcements.map ((announcement, index) => (
+        <div key={index}>{announcement}</div>))}
+    </div>);
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  );
+}
+// Progress indicator component;
+export /**
+ * ProgressIndicator - Function description
+ */
+function ProgressIndicator() {
+  const percentage = Math.round ((value / max) * 100),
+  return (
+    <div className="space - y-2">;
+      <div className="flex justify - between text - sm">;
+  return (;
+    <div className="space-y-2">;
+      <div className="flex justify-between text-sm">;
+        <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
-      <div className="w - full bg-[var (--border)] rounded - full h-2">;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
         <div;
-          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
           style={{ width: `${percentage}%` }}
           role="progressbar";
           aria - valuenow={value}
@@ -765,10 +853,9 @@ export function Tooltip({;
     </div>);
 }
   return (;
-    <div className="border border-[var(--border)] rounded-lg">;  return (;
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
-        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
         aria - expanded={is_expanded}
         aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
@@ -782,16 +869,20 @@ export function Tooltip({;
         }`}
         aria - hidden={!is_expanded}
       >;
-        <div className="px - 4 pb-3">;
+        <div className="px - 4 pb - 3">;
           {children}
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (
+    <div className="relative inline - block">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (;
-    <div className="relative inline-block">;  return (;
     <div className="relative inline-block">;
 =======
 
@@ -818,7 +909,7 @@ export function Tooltip({;
         >;
 <<<<<<< HEAD
           {content}
-          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
         </div>)}
     </div>);
 }

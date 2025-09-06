@@ -106,6 +106,7 @@ function fixSyntaxAndConflicts() { return null; }
       // Remove merge conflict markers
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       content = content.replace(/      content = content.replace(/=======[\s\S]*?      content = content.replace(/      content = content.replace(/=======/g, '');
 =======
       content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, '');
@@ -114,6 +115,9 @@ function fixSyntaxAndConflicts() { return null; }
       content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, '');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       content = content.replace(/      
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Fix import statements
       content = content.replace(/import React from "react",/g, 'import React from "react";');
       content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");

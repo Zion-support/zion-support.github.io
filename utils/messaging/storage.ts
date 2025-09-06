@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -151,6 +152,8 @@ export function createOrGetConversation(;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   conversation_id: string;  sender_id: string;
   recipient_id: string;
@@ -162,10 +165,15 @@ export function createOrGetConversation(;
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   body: string;
   link_url?: string;
   attachmentBase64?: string;
@@ -182,10 +190,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   reactions: Array<{
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Conversation {  }>;
 }
 export interface Conversation {  id: string;
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     userId: string;
     emoji: string;
 
@@ -197,11 +208,19 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
   reactions: Array<{}
   }>;
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface Conversation {
+  }>;
+}
+export interface Conversation {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface Conversation {;
@@ -213,6 +232,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+export interface Conversation {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   participants: string[];
@@ -239,17 +261,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface MessageThread {;
 
 
@@ -275,12 +306,20 @@ export interface MessageSearchResult {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 
 
 export interface MessageSearchResult {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface MessageSearchResult {
+
+export interface MessageSearchResult {;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   message: Message;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   conversation: Conversation;
@@ -292,11 +331,44 @@ class MessagingStorage {}
   private messages: Map<string, Message> = new Map();
   private conversations: Map<string, Conversation> = new Map();
   private threads: Map<string, MessageThread> = new Map();
+<<<<<<< HEAD
   private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds;
   private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds;
   // Message methods'
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {}
     const newMessage: Message = {}
+=======
+  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
+  private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
+  // Message methods
+  async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
+    const newMessage: Message = {
+<<<<<<< HEAD
+
+      ...message,
+      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+      sentAtIso: new Date().toISOString(),
+      isRead: false,
+      isEdited: false,
+      isDeleted: false,
+      reactions: []
+    };
+
+    this && this.messages.set(newMessage && newMessage.id, newMessage);
+
+    // Update conversation
+    await this && this.updateConversationLastMessage(newMessage && newMessage.conversationId, newMessage && newMessage.id);
+
+    // Update user conversations
+    this && this.addToUserConversations(newMessage && newMessage.senderId, newMessage && newMessage.conversationId);
+    this && this.addToUserConversations(newMessage && newMessage.recipientId, newMessage && newMessage.conversationId);
+
+    // Add to conversation messages
+    this && this.addToConversationMessages(newMessage && newMessage.conversationId, newMessage && newMessage.id);
+
+
+    return newMessage;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 <<<<<<< HEAD
   async getMessage(id: string): Promise<Message | null> {
@@ -305,6 +377,8 @@ class MessagingStorage {}
 
     return this && this.messages.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
@@ -312,6 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -324,6 +399,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -335,15 +416,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async deleteMessage(id: string): Promise<boolean> {}
     const message = this && this.messages.get(id);
     if (!message) return false;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     message.deletedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.messages.set(id, message);
 
     message && message.isDeleted = true;
@@ -354,16 +441,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   async markAsRead(id: string): Promise<boolean> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     message.readAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   async markAsRead(id: string): Promise<boolean> {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
@@ -376,16 +471,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   async markAsUnread(id: string): Promise<boolean> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     message.readAtIso = undefined
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   async markAsUnread(id: string): Promise<boolean> {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
@@ -401,7 +504,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     // Remove existing reaction from this user
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
 
@@ -419,24 +525,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
     // Remove existing reaction from this user;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return true;
   }
   async removeReaction(messageId: string, userId: string): Promise<boolean> {}
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     message.reactions = message.reactions.filter(r => r.userId !== userId)
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
@@ -447,7 +564,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
     const newConversation: Conversation = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       ...conversation,
       id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -463,18 +583,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.addToUserConversations(participantId, newConversation.id);
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     return newConversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return this.conversations.get(id) |null
 
     return this && this.conversations.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
@@ -485,9 +615,15 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!conversation) return null
     const updatedConversation = {
       ...conversation
@@ -514,6 +650,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ...updates;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updatedAtIso: new Date().toISOString()
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     };
@@ -531,12 +668,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!conversation) return false
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Remove from user conversations
     for (const participantId of conversation && conversation.participants) {
       this && this.removeFromUserConversations(participantId, id);
     }
     // Delete all messages in this conversation
+<<<<<<< HEAD
 <<<<<<< HEAD
     for (const messageId of messageIds) {
       this && this.messages.delete(messageId);
@@ -544,6 +687,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.messages.delete(messageId);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const messageIds = this && this.conversationMessages.get(id) || new Set();
 
@@ -562,6 +707,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
     // Remove from user conversations;
@@ -570,10 +716,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     // Delete all messages in this conversation;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+    for (const messageId of messageIds) {
+      this && this.messages.delete(messageId);
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   async archiveConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -583,15 +737,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = true;
@@ -605,21 +766,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     conversation.updatedAtIso = new Date().toISOString()
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = false;
@@ -633,21 +802,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     conversation.updatedAtIso = new Date().toISOString()
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = true;
@@ -661,21 +838,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     conversation.updatedAtIso = new Date().toISOString()
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = false;
@@ -688,18 +873,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     const messageIds = this.conversationMessages.get(conversationId) |new Set()
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const messageIds = this.conversationMessages.get(conversationId) |new Set()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const sortedIds = Array.from(messageIds).sort((a, b) => {
 =======
   // Query methods;
@@ -720,9 +913,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
     const conversations = Array && Array.from(conversationIds)
@@ -738,10 +934,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     return conversations.sort((a, b) =>
       new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime()
@@ -756,9 +957,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async getUnreadMessageCount(userId: string): Promise<number> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
 
@@ -773,10 +977,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   async getUnreadMessageCount(userId: string): Promise<number> {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {}
         const message = this && this.messages.get(messageId);
@@ -1075,6 +1284,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -1082,11 +1292,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+          count++,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       }
     }
     return count;
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const conversationIds = this && this.userConversations.get(userId) || new Set();
@@ -1098,9 +1314,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       }
     }
@@ -1112,7 +1333,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Search methods
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
 
@@ -1125,7 +1349,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         if (body.includes(queryLower)) {
 =======
   // Search methods;
@@ -1142,6 +1371,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       }
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       id: `thread_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -1165,18 +1395,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.threads.set(threadId, thread);
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     return true;
   }
   async getThread(threadId: string): Promise<MessageThread | null> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return this.threads.get(threadId) |null
 
     return this && this.threads.get(threadId) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async getThreadMessages(threadId: string): Promise<Message[]> {
@@ -1184,10 +1424,17 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     if (!thread) return []
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return thread.messages
 =======
     }
@@ -1214,15 +1461,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {}
     const conversation = this && this.conversations.get(conversationId);
     if (!conversation) return;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.conversations.set(conversationId, conversation);
 
     conversation && conversation.lastMessageId = messageId;
@@ -1241,8 +1494,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     if (userConversations) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       userConversations && userConversations.delete(conversationId),    }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       userConversations.delete(conversationId)
 
@@ -1251,8 +1507,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+<<<<<<< HEAD
     if (userConversations) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      userConversations && userConversations.delete(conversationId),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
@@ -1268,10 +1529,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const highlights: string[] = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),    while (index !== -1) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD
@@ -1279,6 +1543,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    let index = textLower && textLower.indexOf(queryLower),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     while (index !== -1) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1294,7 +1561,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   private calculateRelevanceScore(text: string, query: string): number {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const textLower = text && text.toLowerCase();
     const queryLower = query && query.toLowerCase();
@@ -1415,7 +1685,12 @@ if ( {) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       score += matches * (word.length / query.length);
 =======
   private calculateRelevanceScore(text: string, query: string): number {}
@@ -1426,6 +1701,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return score;
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     activeUsers: number
@@ -1441,9 +1717,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 // Singleton instance;
@@ -1451,9 +1732,12 @@ export const messagingStorage = new MessagingStorage();
 <<<<<<< HEAD
 // Main functions for external use
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return messagingStorage && messagingStorage.updateMessage(id, updates);}
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
   return messagingStorage.createMessage(message);
 =======
@@ -1471,7 +1755,14 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  return messagingStorage && messagingStorage.updateMessage(id, updates);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1481,7 +1772,10 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return messagingStorage.updateMessage(id, updates);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
@@ -1517,7 +1811,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
 
 =======
+<<<<<<< HEAD
 
+=======
+}
+export async function deleteMessage(id: string): Promise<boolean> {
+  return messagingStorage && messagingStorage.deleteMessage(id),
+}
+export async function markAsRead(id: string): Promise<boolean> {
+  return messagingStorage && messagingStorage.markAsRead(id),
+}
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+  return messagingStorage && messagingStorage.createConversation(conversation);
+}
+export async function getConversation(id: string): Promise<Conversation | null> {
+  return messagingStorage && messagingStorage.getConversation(id),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  return messagingStorage.createConversation(conversation);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export async function deleteMessage(id: string): Promise<boolean> {}
   return messagingStorage && messagingStorage.deleteMessage(id),
@@ -1540,6 +1851,7 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 
 <<<<<<< HEAD
   return messagingStorage && messagingStorage.getConversation(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -1556,8 +1868,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
 
 =======
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
+  return messagingStorage && messagingStorage.updateConversation(id, updates);
+}
+export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {
+  return messagingStorage && messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+}
+export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {}
@@ -1565,11 +1889,17 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {}
 
 <<<<<<< HEAD
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+  return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return messagingStorage.markAsRead(id)
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
@@ -1623,6 +1953,7 @@ export async function searchMessages(query: string, userId: string, limit?: numb
   return messagingStorage.searchMessages(query, userId, limit);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1634,6 +1965,8 @@ export function createMessageData(
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -1715,26 +2048,37 @@ export function listConversations(userId: string): InboxItem[] {
 
 export function getConversationById(
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+// Utility functions
+export function createMessageData(
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   conversationId: string
-): Conversation | undefined {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  return conversations.find(c => c.id === conversationId);
-
-export function getMessages(conversationId: string): Message[] {
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  return messages
-    .filter(m => m.conversationId === conversationId)
-    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-
-export function markAsRead(conversationId: string, userId: string): void {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  const now = new Date().toISOString();
-
-  // Update message statuses
-  let changed = false;
-  
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
+  return {
+    conversationId
+    senderId
+    recipientId
+    body
+    ...additionalData
   }
+}
+export function createConversationData(
+  participants: string[]
+  additionalData?: Partial<Conversation>
+): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
+  return {
+    participants
+    lastMessageAtIso: new Date().toISOString()
+    isArchived: false
+    isMuted: false
+    ...additionalData
+  }
+<<<<<<< HEAD
   if (changed) writeJson(MESSAGES_FILE, messages);
 
   // Update conversation unreadBy
@@ -1749,6 +2093,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 // Utility functions
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+}
+// Utility functions
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -1771,6 +2120,7 @@ export function generateConversationId(): string {};`
 <<<<<<< HEAD
 export function formatMessageTime(isoString: string): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======  const date = new Date(isoString);
   const now = new Date();
   if (diffInHours < 1) {
@@ -1779,6 +2129,11 @@ export function formatMessageTime(isoString: string): string {
 =======
 export function formatMessageTime(isoString: string): string {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1796,6 +2151,7 @@ export function generateConversationId(): string {;`
 }
 
 export function formatMessageTime(isoString: string): string {;
+<<<<<<< HEAD
 
   const date = new Date(isoString);
   const now = new Date();
@@ -1810,7 +2166,15 @@ export function formatMessageTime(isoString: string): string {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  const date = new Date(isoString);
+  const now = new Date();
+  if (diffInHours < 1) {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } else if (diffInHours < 24) {
 =======
   } else if (diffInHours < 24) {}`
@@ -1823,10 +2187,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   } else {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return date && date.toLocaleDateString();
 
 <<<<<<< HEAD
@@ -1834,10 +2201,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   } else {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1998,6 +2370,7 @@ if ( { // 7 days) {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 
 
@@ -2116,6 +2489,7 @@ export function sendMessage(input: NewMessageInput): {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   }
@@ -2125,3 +2499,130 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  }
+  // Cleanup methods;
+  async clear_all (): Promise < void> {
+    this.messages.clear ();
+    this.conversations.clear ();
+    this.threads.clear ();
+    this.user_conversations.clear ();
+    this.conversation_messages.clear ();
+  }
+  // Statistics;
+  async get_stats (): Promise<{
+    total_messages: number;
+    total_conversations: number;
+    total_threads: number;
+    active_users: number,
+  }> {
+    return {
+      total_messages: this.messages.size,
+      total_conversations: this.conversations.size,
+      total_threads: this.threads.size,
+      active_users: this.user_conversations.size;
+    }
+  }
+}
+// Singleton instance;
+export const messaging_storage = new MessagingStorage ();
+;
+// Main functions for external use;
+export async function create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {
+  return messaging_storage.create_message (message);
+}
+export async function get_message (id: string): Promise < Message | null> {
+  return messaging_storage.get_message (id),
+}
+export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
+  return messaging_storage.update_message (id, updates);
+}
+export async function delete_message (id: string): Promise < boolean> {
+  return messaging_storage.delete_message (id),
+}
+export async function markAsRead (id: string): Promise < boolean> {
+  return messaging_storage.markAsRead (id),
+}
+export async function create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {
+  return messaging_storage.create_conversation (conversation);
+}
+export async function get_conversation (id: string): Promise < Conversation | null> {
+  return messaging_storage.get_conversation (id),
+}
+export async function update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
+  return messaging_storage.update_conversation (id, updates);
+}
+export async function getMessagesByConversation (conversation_id: string, limit?: number, offset?: number): Promise < Message[]> {
+  return messaging_storage.getMessagesByConversation (conversation_id, limit, offset);
+}
+export async function getConversationsByUser (user_id: string, include_archived?: boolean): Promise < Conversation[]> {
+  return messaging_storage.getConversationsByUser (user_id, include_archived);
+}
+export async function getUnreadMessageCount (user_id: string): Promise < number> {
+  return messaging_storage.getUnreadMessageCount (user_id),
+}
+export async function search_messages (query: string, user_id: string, limit?: number): Promise < MessageSearchResult[]> {
+  return messaging_storage.search_messages (query, user_id, limit);
+}
+// Utility functions;
+export function createMessageData (
+  conversation_id: string,
+  sender_id: string,
+  recipient_id: string,
+  body: string,
+  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'> {
+  return {
+    conversation_id,
+    sender_id,
+    recipient_id,
+    body,
+    ...additional_data;
+  }
+}
+export function createConversationData (
+  participants: string[],
+  additional_data?: Partial < Conversation>): Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
+  return {
+    participants,
+    lastMessageAtIso: new Date ().toISOString (),
+    is_archived: false,
+    is_muted: false,
+    ...additional_data;
+  }
+}
+export function generateMessageId (): string {
+  return `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+export function generateConversationId (): string {
+  return `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+export function formatMessageTime (iso_string: string): string {
+  const date = new Date (iso_string);
+  const now = new Date ();
+  const diffInHours = (now.get_time () - date.get_time ()) / (1000 * 60 * 60);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return 'Just now',
+  } else // Check condition
+if ( {) {
+  $2
+}
+    return `${Math.floor (diffInHours)}h ago`;
+  } else // Check condition
+if ( { // 7 days) {
+  $2
+}
+    return `${Math.floor (diffInHours / 24)}d ago`;
+  } else {
+    return date.toLocaleDateString ();
+  }
+}
+  }
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

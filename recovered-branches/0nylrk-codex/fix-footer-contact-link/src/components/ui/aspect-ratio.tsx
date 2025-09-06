@@ -14,19 +14,33 @@ import * as AspectRatioPrimitive from &quot;@radix - ui / react - aspect - ratio
 const AspectRatio = AspectRatioPrimitive.Root;
 
 export { AspectRatio }
+
 import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 
 const AspectRatio = AspectRatioPrimitive.Root
 
+<<<<<<< HEAD
 =======
 import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 ;
 const AspectRatio = AspectRatioPrimitive.Root;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import * as AspectRatioPrimitive from &quot;@radix-ui/react-aspect-ratio&quot;
+const AspectRatio = AspectRatioPrimitive.Root
+export { AspectRatio }
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
+
+const AspectRatio = AspectRatioPrimitive.Root
+
+export { AspectRatio }
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { AspectRatio };
 
 export { AspectRatio };
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,3 +59,7 @@ export { AspectRatio }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export { AspectRatio }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -56,6 +56,7 @@ describe ('WalletPage', () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 
@@ -111,6 +112,16 @@ describe('WalletPage', () => {
 =======
 });describe('WalletPage', () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+});
+
+import { render, screen } from '@testing-library/react',;
+import WalletPage from '@/pages/Wallet',;
+import { vi } from 'vitest',;
+import * as useWalletHook from '@/hooks/useWallet',;
+
+describe('WalletPage', () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
 =======
@@ -133,6 +144,7 @@ describe('WalletPage', () => {'
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -159,3 +171,7 @@ describe('WalletPage', () => {'
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+});
+});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

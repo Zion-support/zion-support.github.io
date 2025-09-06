@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
@@ -57,6 +61,7 @@ import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -66,6 +71,9 @@ import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React,{ useState } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; export default function Page() {; ,\"; { \"icon\": <Star className=\"w-6 h-6\"/>,\"value\": \"4.8/5\",\"label\": \"Global Rating\" },\"; { \"icon\": <TrendingUp className=\"w-6 h-6\"/>,\"value\": \"98%\",\"label\": \"Client Satisfaction\" } ]; const partnerships = [{}; export {};
 const React,{ useState } from "react"; import { motion,AnimatePresence } from "framer-motion"; export default function Page() {; ,"; { icon: <Star className="w-6 h-6"/>,value: "4.8/5",label: "Global Rating" },"; { icon: <TrendingUp className="w-6 h-6"/>,value: "98%",label: "Client Satisfaction" } ]; const partnerships = [{}; export {};'"'"
 import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};

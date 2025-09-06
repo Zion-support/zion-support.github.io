@@ -17,9 +17,11 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {';
 <<<<<<< HEAD
     ? {
 
+
   return theme === 'light' 
     ? { ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,12 +66,22 @@ export interface PdfThemeColors {;
 * Theme configuration for PDF export;
 */;
 export interface PdfThemeColors {
+=======
+        background: '#ffffff';
+        text: '#000000';
+        heading: '#222222';
+
+        subheading: '#444444',
+        accent: '#9b87f5';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   background: string;
   text: string;
   heading: string;
     ? {
         background: '#ffffff';
         text: '#000000';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -99,6 +111,23 @@ export interface PdfThemeColors {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+        heading: '#222222';
+        subheading: '#444444'
+        accent: '#9b87f5'
+      }
+    : {
+        background: '#1A1F2C';
+        text: '#ffffff';
+        heading: '#ffffff';
+
+        subheading: '#cccccc',
+        accent: '#9b87f5';
+
+        subheading: '#cccccc'
+
+        accent: '#9b87f5'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**;
  * Theme configuration for PDF export */;
 export interface PdfThemeColors {;
@@ -127,6 +156,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         subheading: '#cccccc',
         accent: '#9b87f5';
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -143,3 +173,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
       }
 }'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

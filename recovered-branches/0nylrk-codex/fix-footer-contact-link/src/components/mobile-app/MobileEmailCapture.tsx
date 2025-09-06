@@ -51,14 +51,19 @@ if (return) {}
       console.error ("Error subscribing:", error);
     } finally {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!email || isSubmitting) return;
 
     setIsSubmitting(true),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +83,14 @@ if (return) {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+    try {;
+      // In a real implementation, this would connect to a backend service;
+      // For now, we'll simulate a successful submission;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsSuccess(true);
+      setEmail("");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       setTimeout(() => {;
         setIsSuccess(false);
@@ -87,6 +100,7 @@ if (return) {}
     } finally {;
       setIsSubmitting(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -121,6 +135,10 @@ export const MobileEmailCapture: React.FC = () => {;"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    }
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -129,10 +147,13 @@ export const MobileEmailCapture: React.FC = () => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       setTimeout(() => {;
         setIsSuccess(false);
@@ -145,6 +166,7 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
@@ -162,11 +184,23 @@ export const MobileEmailCapture: React.FC = () => {"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleSubmit = async (e: React.FormEvent) => {}
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+export const MobileEmailCapture: React.FC = () => {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSuccess, setIsSuccess] = useState(false),
+
+  const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     e.preventDefault(),
     if (!email || isSubmitting) return,
 
     setIsSubmitting(true),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       // In a real implementation, this would connect to a backend service
@@ -258,6 +292,59 @@ export const MobileEmailCapture:React.FC = () => {;
   },;
 ;
   return (;
+=======
+    try {
+      // In a real implementation, this would connect to a backend service
+      // For now, we'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      setIsSuccess(true),
+      setEmail(""),
+
+      setTimeout(() => {
+        setIsSuccess(false)
+      }, 5000)
+    } catch (error) {
+      console.error("Error subscribing:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+}
+
+},
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+export const MobileEmailCapture: React.FC = () => {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSuccess, setIsSuccess] = useState(false),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (!email || isSubmitting) return,;
+    setIsSubmitting(true),;
+    try {;
+      // In a real implementation, this would connect to a backend service;
+      // For now, we'll simulate a successful submission;
+      await new Promise(resolve => setTimeout(resolve, 1000)),;
+      setIsSuccess(true),;
+      setEmail(""),;
+      setTimeout(() => {;
+        setIsSuccess(false);
+      }, 5000);
+    } catch (error) {;
+      console.error("Error subscribing:", error);
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+  return (;
+
+  },
+
+
+  return (
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
       <div className="container mx-auto px-4">;
         <div className="max-w-3xl mx-auto text-center">;
@@ -267,16 +354,23 @@ export const MobileEmailCapture:React.FC = () => {;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
+<<<<<<< HEAD
 =======
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Input
               type="email"
               placeholder="Enter your email address"
               value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               onChange={(e) => setEmail(e.target.value)}
@@ -387,27 +481,44 @@ export const MobileEmailCapture: React.FC = () => {;"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+              onChange={(e) => setEmail(e && e.target.value)}
+              className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400";
+              required;
+            />;
+            <Button
+              type="submit" 
+              disabled={isSubmitting || isSuccess}
+              className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium">;
+              {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
+            </Button>;
+          </form>;
+
+          <p className="text-sm text-gray-400 mt-4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsSubmitting (false);
     }
   }
 ;
 <<<<<<< HEAD
   return (
-    <section className="py - 16 bg - gradient - to - r from - zion - blue - dark to - zion-purple / 30">;
-      <div className="container mx - auto px-4">;
-        <div className="max - w-3xl mx - auto text-center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb-4">;
+    <section className="py - 16 bg - gradient - to - r from - zion - blue - dark to - zion - purple / 30">;
+      <div className="container mx - auto px - 4">;
+        <div className="max - w-3xl mx - auto text - center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
             Get Early Access to New Features;
           </h2>;
-          <p className="text - lg text - gray - 300 mb - 8 max - w-2xl mx-auto">;
+          <p className="text - lg text - gray - 300 mb - 8 max - w-2xl mx - auto">;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
-          <form on_submit={handle_submit} className="flex flex - col sm:flex - row gap - 4 max - w-md mx-auto">;
+          <form on_submit={handle_submit} className="flex flex - col sm:flex - row gap - 4 max - w-md mx - auto">;
             <Input;
               type="email";
               placeholder="Enter your email address";
               value={email}
               on_change={(e) => set_email (e.target.value)}
+<<<<<<< HEAD
               className="flex - grow bg - zion - blue - dark / 70 text - white border - zion - purple / 30 placeholder:text - gray-400";
 =======
   return ("
@@ -428,17 +539,21 @@ export const MobileEmailCapture: React.FC = () => {;"
               on_change={(e) => set_email (e.target.value)}"
               className="flex - grow bg - zion - blue - dark / 70 text - white border - zion - purple / 30 placeholder:text - gray - 400";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              className="flex - grow bg - zion - blue - dark / 70 text - white border - zion - purple / 30 placeholder:text - gray - 400";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               required;
             />;
             <Button;"
               type="submit";
 <<<<<<< HEAD
               disabled={is_submitting || is_success}
-              className="bg - zion - cyan hover:bg - zion - cyan / 80 text - zion - blue - dark font-medium";
+              className="bg - zion - cyan hover:bg - zion - cyan / 80 text - zion - blue - dark font - medium";
             >;
               {is_submitting ? "Subscribing..." : is_success ? "Subscribed!" : "Subscribe"}
             </Button>;
           </form>;
+<<<<<<< HEAD
           <p className="text - sm text - gray - 400 mt-4">;
 =======
               disabled={is_submitting || is_success}"
@@ -468,10 +583,37 @@ export const MobileEmailCapture: React.FC = () => {;"
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+          <p className="text - sm text - gray - 400 mt - 4">;
+          ;
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+            <Input;
+              type="email";
+              placeholder="Enter your email address";
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400";
+              required;
+            />;
+            <Button;
+              type="submit";
+              disabled={isSubmitting || isSuccess}
+              className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium";
+            >;
+              {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
+            </Button>;
+          </form>;
+          <p className="text-sm text-gray-400 mt-4">;
+            We respect your privacy and will never share your information.;
+          </p>;
+        </div>;
+      </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -491,6 +633,12 @@ export const MobileEmailCapture: React.FC = () => {;"
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+};
+    </section>);
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
     </section>);
 }
@@ -514,8 +662,9 @@ setEmail ("");
 return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30"> <div className=" container mx-auto px-4"> <div className=" max-w-3xl mx-auto text-center"> <h2 className=" text-3xl md:text-4xl font-bold text-white mb-4"> text-lg text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our mobile app updates and be the first to try new features before they're released to the public. </p> </Button> </form> <p className="text-sm text-gray-400 mt-4" > We respect your privacy and will never share your information. </p> </div> </div> </section>) 
 };
     </section>;
-  )
+  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -532,3 +681,5 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

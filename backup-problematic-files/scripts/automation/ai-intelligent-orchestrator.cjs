@@ -9,9 +9,12 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -41,9 +44,13 @@ const { execSync } = require('child_process')
       this.log(` Learning model update "failed"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 export type CurrentUser = {;
   userId: string;
@@ -77,6 +78,8 @@ export function validateUser(userId: string, role: string): User | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextApiRequest, NextApiResponse } from "next";
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -92,16 +95,54 @@ ursor/fix-website-loading-errors-and-merge-6662
 import { NextApiRequest, NextApiResponse } from 'next';
 
 main
+=======
+export interface User {
+  id: string;
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name?: string;
+}
+
+export interface AuthContext {
+  user: User | null;
+  login: (email: string, password: string) => Promise<User | null>;
+  logout: () => void;
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+}
+
+export function validateUser(userId: string, role: string): User | null {
+  if (!userId || !role) return null;
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+  
+  return {
+    id: userId,
+    email: '',
+    role: role as User['role']
+  };
+}
+
+
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+<<<<<<< HEAD
 
     return null;
   }
   return user;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+    return null;
+  }
+  return user;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function getUserFromRequest (req: any): User | null {
@@ -114,6 +155,7 @@ export function getUserFromRequest (req: any): User | null {
   }
   return user;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -162,13 +204,20 @@ export function getUserFromRequest (req: any): User | null {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

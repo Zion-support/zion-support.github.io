@@ -72,6 +72,7 @@ interface ProjectDetailsFieldProps {
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -123,6 +124,18 @@ import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormV
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
@@ -193,6 +206,12 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
+  form: UseFormReturn<FormValues>;
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
   return (
@@ -244,8 +263,11 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

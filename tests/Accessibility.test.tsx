@@ -47,6 +47,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 </ModeToggle>'
 </ModeToggle>'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -56,3 +57,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+</ModeToggle>'
+</ModeToggle>'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

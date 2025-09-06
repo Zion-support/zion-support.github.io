@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/translate.ts
 <<<<<<< HEAD:pages/api/translate.ts
 <<<<<<< HEAD
@@ -72,6 +73,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/translate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = null;
@@ -119,6 +122,7 @@ export default async function handler(req, res) {}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -140,11 +144,17 @@ const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/translate.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async /**
  * handler - Function description
 =======
@@ -284,6 +294,7 @@ export default async function handler(req, res) {}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/translate.ts
 =======
 <<<<<<< HEAD
@@ -323,3 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/translate.ts
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

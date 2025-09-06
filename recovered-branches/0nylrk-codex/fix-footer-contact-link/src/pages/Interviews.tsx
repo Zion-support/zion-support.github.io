@@ -3,12 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
 import {Interview} from "@/types/interview";
@@ -21,6 +24,7 @@ import {InterviewCard} from "@/components/interviews/InterviewCard";
 import {Button} from "@/components/ui/button";
 import {Calendar, Clock, Video} from "lucide-react";
 import {format, isAfter, parseISO, startOfDay} from "date-fns";
+<<<<<<< HEAD
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
@@ -55,11 +59,14 @@ import { Button } from "@/components/ui/button",
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
+=======
+
+function InterviewsContent() {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-import { Calendar, Clock, Video } from "lucide-react",
-import { format, isAfter, parseISO, startOfDay } from "date-fns",
 
+<<<<<<< HEAD
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
@@ -250,39 +257,64 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
-
     const loadInterviews = async () => {
+<<<<<<< HEAD
       await fetchInterviews()
     loadInterviews()
 =======
   useEffect(() => {}
     // Modified to handle Promise<Interview[]> return type;
     const loadInterviews = async () => {}
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       await fetchInterviews();
     };
 
     loadInterviews();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, []);
-  // Filter interviews based on status and date
+
+  // Filter interviews based on status and date;
   const now = new Date();
   const today = startOfDay(now);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const upcomingInterviews = interviews
     .filter((interview) => {
-        ['confirmedrequested'].includes(interview.status)
+      const interviewDate = parseISO(interview.scheduled_date);
+      return (
+        isAfter(interviewDate, now) &&
+        ["confirmedrequested"].includes(interview.status)
+      );
     })
-    .sort((a, b) =>
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    interview.status === 'requested'
+    .sort(
+      (a, b) =>
+        parseISO(a.scheduled_date).getTime() -
+        parseISO(b.scheduled_date).getTime(),
+    );
+
+  const pendingInterviews = interviews.filter(
+    (interview) => interview.status === "requested",
   );
-  const pastInterviews = interviews.filter(interview => {
+
+  const pastInterviews = interviews.filter((interview) => {
     const interviewDate = parseISO(interview.scheduled_date);
-    return !isAfter(interviewDate, now) |
-      ['completeddeclinedcancelled'].includes(interview.status)
+    return (
+      !isAfter(interviewDate, now) ||
+      ["completeddeclinedcancelled"].includes(interview.status)
+    );
   });
+<<<<<<< HEAD
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     interviews.forEach((interview) => {
@@ -403,19 +435,30 @@ function InterviewsContent() {;
       ['completeddeclined', 'cancelled'].includes(interview.status),;
   }),;
 ;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Group interviews by date;
-  const groupInterviewsByDate = (interviews:Interview[]) => {;
-    const grouped:Record<string Interview[]> = {},;
-    ;
-    interviews.forEach((interview) => {;
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),;
-      if (!grouped[dateKey]) {;
-        grouped[dateKey] = [],;
+  const groupInterviewsByDate = (interviews: Interview[]) => {;
+    const grouped: Record<string, Interview[]> = {};
+
+    interviews.forEach((interview) => {
+      const dateKey = format(parseISO(interview.scheduled_date), "yyyy-MM-dd");
+      if (!grouped[dateKey]) {
+        grouped[dateKey] = [];
       }
+<<<<<<< HEAD
       grouped[dateKey].push(interview),;
     }),;    return grouped
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      grouped[dateKey].push(interview);
+    });
+
+    return grouped;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -699,6 +742,7 @@ function InterviewsContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       ))
 =======
   }
@@ -729,6 +773,12 @@ function InterviewsContent() {;
 
   return (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      ));
+  };
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO"
         title="Interviews | Zion AI Marketplace""
@@ -839,9 +889,12 @@ function InterviewsContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </TabsContent>
         </Tabs>
       </main>
@@ -861,12 +914,15 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       ));
@@ -874,6 +930,7 @@ export default function Interviews() {
 
   return (
     <>;
+<<<<<<< HEAD
       <SEO"
         title="Interviews | Zion AI Marketplace" "
         description="Manage your scheduled interviews with clients and talent" 
@@ -1163,6 +1220,12 @@ if ( {) {
         title="Interviews | Zion AI Marketplace" ;
         description="Manage your scheduled interviews with clients and talent" ;
       />;
+=======
+      <SEO
+        title="Interviews | Zion AI Marketplace" 
+        description="Manage your scheduled interviews with clients and talent" 
+      />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
@@ -1171,20 +1234,31 @@ if ( {) {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">;
           <TabsList className="mb-6">;
             <TabsTrigger value="upcoming" className="flex items-center">;
               <Clock className="h-4 w-4 mr-2" />;
               Upcoming;
+<<<<<<< HEAD
               {upcomingInterviews.length > 0 && (;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">;
                   {upcomingInterviews.length}
+=======
+              {upcomingInterviews && upcomingInterviews.length > 0 && (;
+                <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
+                  {upcomingInterviews && upcomingInterviews.length}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </span>;
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
               Pending;
+<<<<<<< HEAD
               {pendingInterviews.length > 0 && (;
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">;
                   {pendingInterviews.length}
@@ -1254,12 +1328,81 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+              {pendingInterviews && pendingInterviews.length > 0 && (;
+                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0 && 0.5 text-xs">;
+                  {pendingInterviews && pendingInterviews.length}
+                </span>;
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="past">Past</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="upcoming" className="space-y-6">
+            {isLoading ? (
+              <div className="flex justify-center py-12">
+                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+              </div>
+            ) : upcomingInterviews.length > 0 ? (
+              renderInterviewGroups(upcomingGrouped)
+            ) : (
+              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
+                <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+                <h3 className="text-xl font-medium mb-2">
+                  No upcoming interviews
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  You don't have any scheduled interviews coming up.
+                </p>
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="pending" className="space-y-6">
+            {isLoading ? (
+              <div className="flex justify-center py-12">
+                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+              </div>
+            ) : pendingInterviews.length > 0 ? (
+              renderInterviewGroups(pendingGrouped)
+            ) : (
+              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
+                <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+                <h3 className="text-xl font-medium mb-2">
+                  No pending interviews
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  You don't have any interview requests that need your
+                  attention.
+                </p>
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="past" className="space-y-6">
+            {isLoading ? (
+              <div className="flex justify-center py-12">
+                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+              </div>
+            ) : pastInterviews.length > 0 ? (
+              renderInterviewGroups(pastGrouped)
+            ) : (
+              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
+                <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+                <h3 className="text-xl font-medium mb-2">No past interviews</h3>
+                <p className="text-muted-foreground">
+                  Your interview history will appear here.
+                </p>
+              </div>
+            )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </TabsContent>
         </Tabs>
       </main>
       <Footer />
     </>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
@@ -1298,16 +1441,29 @@ export default function Interviews() {}
     </>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}
+
+export default function Interviews() {
+  return (
+    <ProtectedRoute>
+      <InterviewsContent />
+    </ProtectedRoute>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
 ;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Interviews() {;
   return (
     <ProtectedRoute>;
       <InterviewsContent />;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </ProtectedRoute>;
@@ -1331,6 +1487,16 @@ export default function Interviews() {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </ProtectedRoute>;
+  );
+}
+
+;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>);
 }
 export default /**;
@@ -1347,8 +1513,11 @@ function Interviews() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   ),;
 }
@@ -1362,6 +1531,7 @@ export default function Interviews() {;
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1376,3 +1546,5 @@ export default function Interviews() {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/dashboard/client.tsx
 <<<<<<< HEAD:pages/dashboard/client.tsx
 <<<<<<< HEAD
@@ -27,16 +28,22 @@ const STEPS = ['
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/client.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ] as const;
 =======
 ] as const;'
@@ -119,6 +126,7 @@ try {
         'onboarding.client'
         JSON.stringify(completed)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
   useEffect(() => {}
 export default function ClientDashboard() { return null; }
@@ -136,6 +144,8 @@ export default function ClientDashboard() { return null; }
         'onboarding && onboarding.client',;
         JSON && JSON.stringify(completed);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       );
     } catch {}
   }, [completed]);
@@ -146,6 +156,7 @@ export default function ClientDashboard() { return null; }
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/dashboard/client.tsx
 <<<<<<< HEAD:pages/dashboard/client.tsx
 <<<<<<< HEAD
@@ -182,6 +193,9 @@ export default function ClientDashboard(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -198,6 +212,7 @@ export default function ClientDashboard(req, res) {
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
 =======
   return (
     <div className='space-y-4'>;
@@ -332,6 +347,8 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           />
         </div>
       </EnhancedCard>
@@ -347,12 +364,16 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
                   {completed[s.key] ? '✓' : ''}
                 </span>
                 <span className='text-sm'>{s.label}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/client.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
               {completed[s.key] ? ("
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
@@ -543,6 +564,7 @@ function ClientDashboard() {}
                   className='text - xs py - 1 px - 2';
                 >;'
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/client.tsx
 <<<<<<< HEAD
 =======
@@ -584,6 +606,8 @@ function ClientDashboard() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </EnhancedButton>
               )}
             </li>
@@ -592,6 +616,7 @@ function ClientDashboard() {}
       </EnhancedCard>
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/client.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -613,3 +638,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

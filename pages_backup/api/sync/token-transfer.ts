@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD:pages/api/sync/token-transfer.ts
@@ -122,6 +123,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     eventId: uuidv4(), type: "token_transfer" as const;
     payload: {;
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     eventId: uuidv4(), type: "token_transfer" as const
     payload: {
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
@@ -135,6 +138,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
   await Promise.all(;
@@ -142,6 +146,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   await Promise.all(
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/token-transfer.ts
     state.config.peers
@@ -149,11 +156,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .map(async (peer) => {;
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';
 import { sign_payload  } from '../../../utils / sync / signature';
@@ -317,12 +327,15 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
@@ -368,6 +381,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   const version = nextVersionFor(state, txId)
   const event = {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/token-transfer.ts
@@ -554,6 +568,8 @@ export default async function handler(req, res) {;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 eventId: uuidv4(),
     type: 'token_transfer' as const,
     payload: {
@@ -586,6 +602,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         const url = new URL('/api/sync/publish', peer.baseUrl).toString();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/token-transfer.ts
         try {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD
         } catch {}
@@ -597,6 +614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           await axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
       })
@@ -605,6 +624,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/token-transfer.ts
@@ -621,6 +641,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
@@ -643,6 +668,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
   );
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/token-transfer.ts
 <<<<<<< HEAD
@@ -770,3 +796,7 @@ export default async function handler(req, res) {
 };
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/token-transfer.ts
+=======
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

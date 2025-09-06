@@ -52,11 +52,23 @@ import { PaymentMethods } from "./PaymentMethods";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+import React from "react";
 import { BillingHeader } from "./BillingHeader";
 import { CurrentSubscription } from "./CurrentSubscription";
 import { PaymentMethods } from "./PaymentMethods";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { InvoiceHistory } from "./InvoiceHistory";
+import { UsageOverview } from "./UsageOverview";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { BillingHeader } from "./BillingHeader",
 import { CurrentSubscription } from "./CurrentSubscription",
@@ -94,6 +106,7 @@ import {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -114,6 +127,10 @@ import {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -130,6 +147,7 @@ import {}
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </TabsList>
@@ -169,6 +187,21 @@ import {}
 =======
         </TabsList>        
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        </TabsList>
+
+
+        <TabsContent value="subscription" className="space-y-8">
+          <CurrentSubscription />
+        </TabsContent>
+        <TabsContent value="payment" className="space-y-8">
+          <PaymentMethods />
+        </TabsContent>
+        <TabsContent value="invoices" className="space-y-8">
+          <InvoiceHistory />
+        </TabsContent>
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <TabsContent value="subscription" className="space-y-8">
           <CurrentSubscription />
         </TabsContent>
@@ -184,6 +217,7 @@ import {}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -289,10 +323,65 @@ export function BillingDashboard() {;
         </TabsContent>
       </Tabs>          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        <TabsContent value="usage" className="space-y-8">
+          <UsageOverview />
+        </TabsContent>
+      </Tabs>
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
+      <BillingHeader />;
+
+      <Tabs defaultValue="subscription" className="mt-8">;
+        <TabsList className="grid w-full grid-cols-4 mb-8">;
+    </div>;
+  );
+}
+    </div>
+  )
+import React from "react",;
+import { BillingHeader } from "./BillingHeader",;
+import { CurrentSubscription } from "./CurrentSubscription",;
+import { PaymentMethods } from "./PaymentMethods",;
+import { InvoiceHistory } from "./InvoiceHistory",;
+import { UsageOverview } from "./UsageOverview",;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;
+  TabsTrigger} from "@/components/ui/tabs";
+export function BillingDashboard() {;
+  return (;
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
+      <BillingHeader />;
+      <Tabs defaultValue="subscription" className="mt-8">;
+        <TabsList className="grid w-full grid-cols-4 mb-8">;
+          <TabsTrigger value="subscription">Subscription</TabsTrigger>;
+          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
+
+        <TabsContent value="subscription" className="space - y-8">;
+          <CurrentSubscription />;
+        </TabsContent>;
+        <TabsContent value="payment" className="space - y-8">;
+          <PaymentMethods />;
+        </TabsContent>;
+        <TabsContent value="invoices" className="space - y-8">;
+          <InvoiceHistory />;
+        </TabsContent>;
+        <TabsContent value="usage" className="space - y-8">;
+          <UsageOverview />;
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+
 }
+
 }
         ;
 =======

@@ -1,8 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -25,12 +29,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const vendor = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 pr-12243
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
     slug
     name
@@ -60,7 +78,16 @@ pr-12243
   if (!slug |!name)'
     return res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req && req.method !== 'POST')
 =======
 
@@ -91,6 +118,12 @@ pr-12243
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       about,  try {
 =======
 '
@@ -101,10 +134,21 @@ pr-12243
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
 <<<<<<< HEAD
   try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const vendor = registerVendor({
       slug;
       name;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0);
+      about;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const vendor = registerVendor({
       slug;
       name;
@@ -125,7 +169,22 @@ pr-12243
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
+=======
+=======
+    const vendor = registerVendor({
+      slug;
+      name;
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0);
+      about;
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
+    res && res.status(201).json({ vendor })
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e: any) {
 =======
 
@@ -137,6 +196,7 @@ pr-12243
     res && res.status(201).json({ vendor });
 <<<<<<< HEAD
   } catch (e: any) {
+<<<<<<< HEAD
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
@@ -144,6 +204,9 @@ pr-12243
 }
 
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -152,10 +215,23 @@ pr-12243
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
 pr-12243
 =======
   } catch (e: any) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+=======
+
+    res && res.status(500).json({ error: e && e.message });
+  }    res && res.status(500).json({ error: e && e.message })
+  };
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -194,6 +270,19 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+    res.status(500).json({ error: e.message });
+  }    res.status(500).json({ error: e.message })
+  }
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -208,8 +297,16 @@ pr-12243
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+}
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

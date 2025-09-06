@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -84,6 +85,16 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   unreadCount,
   onMarkAllAsRead,
 }) => {}
@@ -143,7 +154,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
         </Button>;
       )}
     </div>
-  )
+  );
 };
 import React from './react';'
 import { Button  } from '@/components / ui / button';
@@ -157,6 +168,7 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({}
 <<<<<<< HEAD
 }) => {
   return (
+<<<<<<< HEAD
     <div className="flex justify - between items - center p - 4 border - b border - zion - blue-light">;
       <h3 className="font - medium text-white">Notifications</h3>;
 =======
@@ -165,23 +177,32 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({}
     <div className="flex justify - between items - center p - 4 border - b border - zion - blue - light">;"
       <h3 className="font - medium text - white">Notifications</h3>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <div className="flex justify - between items - center p - 4 border - b border - zion - blue - light">;
+      <h3 className="font - medium text - white">Notifications</h3>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {unread_count > 0 && (
         <Button;"
           variant="ghost";"
           size="sm";
 <<<<<<< HEAD
           on_click={onMarkAllAsRead}
+<<<<<<< HEAD
           className="text - xs text - zion - cyan hover:text - white hover:bg - zion - blue-dark";
 =======
           on_click={onMarkAllAsRead}"
           className="text - xs text - zion - cyan hover:text - white hover:bg - zion - blue - dark";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          className="text - xs text - zion - cyan hover:text - white hover:bg - zion - blue - dark";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         >;
           Mark all as read;
         </Button>)}
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 };
@@ -197,3 +218,14 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
+          Mark all as read;
+        </Button>;
+      )}
+    </div>
+  );
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

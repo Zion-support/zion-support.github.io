@@ -125,6 +125,7 @@ export default function Reports() {};
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/reports/index.tsx
 <<<<<<< HEAD
 
@@ -132,6 +133,8 @@ export default function Reports() {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/reports/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -162,6 +165,7 @@ export default function Reports() {};
   }, []),
 
   const lastUptime = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/reports/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -175,6 +179,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     Promise.all([]
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)'
@@ -195,6 +202,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .then(setPagespeed)
     ]).catch(() => {});  }, []);
   const lastUptime = uptime[uptime.length - 1];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/reports/index.tsx
 <<<<<<< HEAD
 
@@ -209,6 +217,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/reports/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 <div className='space-y-6'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -540,6 +551,7 @@ function Reports() {}
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/reports/index.tsx
 <<<<<<< HEAD
 
@@ -620,6 +632,8 @@ function Reports() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/reports/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className='border rounded p-4'>
           <div className='font-medium mb-1'>SEO (weekly)</div>
           <div className='text-sm text-gray-600'>
@@ -653,6 +667,7 @@ function Reports() {}
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/reports/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -675,3 +690,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

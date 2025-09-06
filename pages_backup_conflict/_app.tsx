@@ -31,6 +31,7 @@ const React from "react"; import type { AppProps } from "next/app"; import "./sr
 import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -57,3 +58,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

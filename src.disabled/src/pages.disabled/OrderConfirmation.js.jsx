@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,11 +25,15 @@ const { useRouter } from "next/router";"""; import Link from "next/link";"""; im
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useRouter } from \'next/router\';\''\'; import Link from \'next/link\';\''\'; import CheckoutProgress from \'@/components/checkout/CheckoutProgress\'; export default function OrderConfirmation() {}; return null} const { orderId } = router && router.query; if (!orderId); return null; return (<div className=\"container max-w-2xl py-10 text-center\"> <CheckoutProgress currentStep={2} className=\"mb-6\"/> <h1 className=\"text-3xl font-bold mb-4\">Thank you for your order!></div> <p className=\"mb-6\">Your order ID is {orderId}.></div> <Link href=\"/orders\" className=\"text-zion-purple underline\">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,3 +79,8 @@ const { useRouter } from "next/router";"""; import Link from "next/link";"""; im
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
+import { useRouter } from \'next/router\';\''\'; import Link from \'next/link\';\''\'; import CheckoutProgress from \'@/components/checkout/CheckoutProgress\'; export default function OrderConfirmation() {}; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className=\"container max-w-2xl py-10 text-center\"> <CheckoutProgress currentStep={2} className=\"mb-6\"/> <h1 className=\"text-3xl font-bold mb-4\">Thank you for your order!></div> <p className=\"mb-6\">Your order ID is {orderId}.></div> <Link href=\"/orders\" className=\"text-zion-purple underline\">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };
+const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

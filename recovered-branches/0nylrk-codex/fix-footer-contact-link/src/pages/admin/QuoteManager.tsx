@@ -34,6 +34,7 @@ class ErrorBoundary extends React.Component {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +45,9 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -51,6 +55,7 @@ import {useAdminQuotes} from "@/hooks/useAdminQuotes";
 import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -84,12 +89,28 @@ export default function QuoteManager() { return null; }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+import {Navigate} from "react-router-dom";
+
+import type { QuoteRequest } from "@/types/quotes";
+
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";
+import {ExportToCSV} from "@/components/quotes/ExportToCSV";
+import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+
+
+export default function QuoteManager() {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {;
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -102,6 +123,9 @@ import {Navigate} from "react-router-dom";import React, { useState } from "react
 =======
 import {Navigate} from "react-router-dom";import React, { useState } from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useState } from "react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
@@ -141,7 +165,33 @@ import type { QuoteRequest } from "@/types/quotes";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);    quotes;
+  const [showDetails, setShowDetails] = useState(false);
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useAdminQuotes } from '@/hooks / useAdminQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Card, CardContent } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Navigate } from './react-router-dom';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { ExportToCSV } from '@/components / quotes / ExportToCSV';
+import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
+;
+export default /**
+ * QuoteManager - Function description
+ */
+function QuoteManager() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin';
+;
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+    quotes;
     is_loading;
     error;
     status_filter;
@@ -189,6 +239,7 @@ import {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -198,10 +249,16 @@ import {}
 
 export default function QuoteManager() {}
   const { user } = useAuth(),'
+=======
+
+export default function QuoteManager() {
+  const { user } = useAuth(),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isAdmin = user?.userType === 'admin',
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
@@ -214,6 +271,10 @@ export default function QuoteManager() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
 =======
 
@@ -236,15 +297,20 @@ export default function QuoteManager() {}
     toggleArchive,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     deleteQuote
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+    deleteQuote
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   } = useAdminQuotes(),
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   } = useAdminQuotes();
@@ -254,6 +320,8 @@ export default function QuoteManager() {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -262,6 +330,7 @@ export default function QuoteManager() {}
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
@@ -269,11 +338,14 @@ export default function QuoteManager() {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (!isAdmin) {
@@ -306,6 +378,17 @@ export default function QuoteManager() {}
     in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;'
     accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;'
     responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;'
+=======
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+
+  // Count quotes by status;
+  const statusCounts = {;
+    new: quotes && quotes.filter(q => q && q.status === 'new').length,;
+    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;
+    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;
+    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     closed: quotes && quotes.filter(q => q && q.status === 'closed').length;
   };
 
@@ -314,18 +397,29 @@ export default function QuoteManager() {}
     setShowDetails(true);
   };
 
+<<<<<<< HEAD
   const handleResetFilters = () => {;'
     setStatusFilter('all');'
     setArchiveFilter('all');'
+=======
+  const handleResetFilters = () => {;
+    setStatusFilter('all');
+    setArchiveFilter('all');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined });
   };
 
+<<<<<<< HEAD
   if (!isAdmin) {;"
+=======
+  if (!isAdmin) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <Navigate to="/unauthorized" replace />;
   }
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
@@ -385,6 +479,12 @@ import React, { useState } from "react",;
 =======
     deleteQuote            
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+            
+            
+import React, { useState } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
@@ -423,6 +523,10 @@ export default function QuoteManager() { return null; }
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function QuoteManager() {;
   const { user } = useAuth(),;
 =======
@@ -437,8 +541,11 @@ export default function QuoteManager() { return null; }
   const [showDetails, setShowDetails] = useState(false),;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {;
     quotes,;
     isLoading,;
@@ -455,6 +562,22 @@ export default function QuoteManager() { return null; }
     toggleArchive,;
     deleteQuote;
   } = useAdminQuotes(),;
+<<<<<<< HEAD
+=======
+  // Count quotes by status;
+  const statusCounts = {;
+    new: quotes.filter(q => q.status === 'new').length,;
+    in_review: quotes.filter(q => q.status === 'in_review').length,;
+    accepted: quotes.filter(q => q.status === 'accepted').length,;
+    responded: quotes.filter(q => q.status === 'responded').length,;
+    closed: quotes.filter(q => q.status === 'closed').length;
+  },;
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true);
+  },;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Count quotes by status;
   const statusCounts = {;'
     new: quotes.filter(q => q.status === 'new').length,;'
@@ -485,6 +608,7 @@ export default function QuoteManager() { return null; }
   },;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   const handleResetFilters = () => {;'
@@ -494,14 +618,26 @@ export default function QuoteManager() { return null; }
     setDateRange({ from: undefined, to: undefined });
   };
   if (!isAdmin) {;"
+=======
+  const handleResetFilters = () => {;
+    setStatusFilter('all'),;
+    setArchiveFilter('all'),;
+    setSearchQuery(''),;
+    setDateRange({ from: undefined, to: undefined });
+  };
+  if (!isAdmin) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <Navigate to="/unauthorized" replace />;
   }
 ;
   return (;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;"
@@ -517,6 +653,7 @@ export default function QuoteManager() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -526,9 +663,22 @@ export default function QuoteManager() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
+            ;
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+            ;
+            {/* Filters */}
+            <QuotesFilter;
+              searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -586,6 +736,7 @@ function QuoteManager() {}
     date_range;
     setDateRange;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (                    isLoading={isLoading}
                     updateStatus={updateStatus}
@@ -654,6 +805,42 @@ function QuoteManager() {}
                     onViewDetails={handleViewDetails}
 
 <<<<<<< HEAD
+=======
+  return (
+            {/* Filters */}
+            <QuotesFilter
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+              onReset={handleResetFilters}
+
+            />;
+
+            {/* Tabs for Active/Archived */}
+            <Tabs defaultValue="active" className="mb-6">;
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
+              </TabsList>;
+
+              <TabsContent value="active">;
+
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable
+                    quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   />;
                 </Card>;
               </TabsContent>;
@@ -664,6 +851,7 @@ function QuoteManager() {}
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -678,6 +866,8 @@ function QuoteManager() {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   />;
                 </Card>;
@@ -687,6 +877,7 @@ function QuoteManager() {}
         </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -694,14 +885,27 @@ function QuoteManager() {}
                 </Card>;
               </TabsContent>;
                   <QuotesTable;
+=======
+                  />;
+                </Card>;
+              </TabsContent>;
+                  <QuotesTable
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
                   />
                 </Card>
+<<<<<<< HEAD
               </TabsContent>"
               <TabsContent value="archived">"
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable;
+=======
+              </TabsContent>
+              <TabsContent value="archived">
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
@@ -722,13 +926,17 @@ function QuoteManager() {}
 
 
           onClose={() => {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   />
                 </Card>
               </TabsContent>
             </Tabs>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -744,6 +952,9 @@ function QuoteManager() {}
 =======
                     onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {/* Quote Details Modal */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
@@ -753,15 +964,20 @@ function QuoteManager() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -789,10 +1005,14 @@ function QuoteManager() {}
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -804,12 +1024,15 @@ function QuoteManager() {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -823,6 +1046,8 @@ function QuoteManager() {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           onClose={() => {;
             setShowDetails(false);
@@ -832,6 +1057,7 @@ function QuoteManager() {}
   } = useAdminQuotes ();
 ;
   // Count quotes by status;
+<<<<<<< HEAD
   const status_counts = {'
     new: quotes.filter (q => q.status === 'new').length,'
     in_review: quotes.filter (q => q.status === 'in_review').length,'
@@ -841,26 +1067,51 @@ function QuoteManager() {}
   }
 ;
   const handleViewDetails = (quote: QuoteRequest) =>: any {}
+=======
+  const status_counts = {
+    new: quotes.filter (q => q.status === 'new').length,
+    in_review: quotes.filter (q => q.status === 'in_review').length,
+    accepted: quotes.filter (q => q.status === 'accepted').length,
+    responded: quotes.filter (q => q.status === 'responded').length,
+    closed: quotes.filter (q => q.status === 'closed').length;
+  }
+;
+  const handleViewDetails = (quote: QuoteRequest) =>: any {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSelectedQuote (quote),
     setShowDetails (true);
   }
 ;
+<<<<<<< HEAD
   const handleResetFilters = () =>: any {'
     setStatusFilter ('all');'
     setArchiveFilter ('all');'
+=======
+  const handleResetFilters = () =>: any {
+    setStatusFilter ('all');
+    setArchiveFilter ('all');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSearchQuery ('');
     setDateRange ({ from: undefined, to: undefined });
   }
 ;
+<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
 }"
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <Navigate to="/unauthorized" replace />;
   }
   return (
     <ProtectedRoute admin_only>;
       <div>;
+<<<<<<< HEAD
         <Header />;"
         <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
           <div className="container mx - auto">;"
@@ -869,6 +1120,16 @@ if ( {) {}
                 <h1 className="text - 3xl font - bold text - white mb - 2">Quote Request Manager</h1>;"
                 <p className="text - zion - slate - light">Manage and respond to all talent hire requests</p>;
               </div>;"
+=======
+        <Header />;
+        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;
+          <div className="container mx - auto">;
+            <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+              <div>;
+                <h1 className="text - 3xl font - bold text - white mb - 2">Quote Request Manager</h1>;
+                <p className="text - zion - slate - light">Manage and respond to all talent hire requests</p>;
+              </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <ExportToCSV quotes={quotes} filename="zion - quote - requests" />;
             </div>;
             {/* Status Summary Cards */}
@@ -885,6 +1146,7 @@ if ( {) {}
               setDateRange={setDateRange}
               on_reset={handleResetFilters}
             />;
+<<<<<<< HEAD
             {/* Tabs for Active / Archived */}"
             <Tabs default_value="active" className="mb - 6">;"
               <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;"
@@ -893,6 +1155,16 @@ if ( {) {}
               </TabsList>;"
               <TabsContent value="active">;
                 {/* Quotes Table */}"
+=======
+            {/* Tabs for Active / Archived */}
+            <Tabs default_value="active" className="mb - 6">;
+              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value="active">;
+                {/* Quotes Table */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
                   <QuotesTable;
                     quotes={quotes.filter (quote => !quote.is_archived)}
@@ -903,8 +1175,13 @@ if ( {) {}
                     onViewDetails={handleViewDetails}
                   />;
                 </Card>;
+<<<<<<< HEAD
               </TabsContent>;"
               <TabsContent value="archived">;"
+=======
+              </TabsContent>;
+              <TabsContent value="archived">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
                   <QuotesTable;
                     quotes={quotes.filter (quote => quote.is_archived)}
@@ -924,7 +1201,11 @@ if ( {) {}
         <QuoteDetails;
           quote={selected_quote}
           is_open={show_details}
+<<<<<<< HEAD
           on_close={() => {}
+=======
+          on_close={() => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             setShowDetails (false);
             setSelectedQuote (null);
           }}
@@ -935,12 +1216,15 @@ if ( {) {}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -1016,6 +1300,7 @@ const [showDetails, setShowDetails] = useState (false);
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1032,3 +1317,5 @@ const [showDetails, setShowDetails] = useState (false);
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

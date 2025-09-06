@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -13,6 +14,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 =======
@@ -26,6 +31,7 @@ type EnhancementType ='
   | 'job-post''
   | 'proposal''
   | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +107,9 @@ export interface AIEnhancementOptions {;
 export interface AIEnhancementOptions {
 
 export interface AIEnhancementOptions {;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -108,6 +117,7 @@ export interface AIEnhancementOptions {;
 }
 export function useAIContentEnhancer() {
 
+<<<<<<< HEAD
 export function useAIContentEnhancer() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -136,10 +146,52 @@ export interface AIEnhancementOptions {};
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {toast} from '@/hooks / use - toast';
+type EnhancementType =;
+  | 'resume - summary';
+  | 'work - description';
+  | 'job - post';
+  | 'proposal';
+  | 'general';
+;
+
+export interface AIEnhancementOptions {
+  enhancement_type: EnhancementType;
+
+
+export interface AIEnhancementOptions {;
+
+  enhancementType: EnhancementType;
+  content?: string;
+
+
+
+export function useAIContentEnhancer() {;
+
+
+
+export interface AIEnhancementOptions {
+  enhancement_type: EnhancementType;
+  const [isEnhancing, setIsEnhancing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const enhanceContent = async ({
+    enhancementType;
+    content = '';
+    context = '';
+    instructions = ''
+  }: AIEnhancementOptions): Promise<string | null> => {
+    setIsEnhancing(true);
+    setError(null);
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
 
+<<<<<<< HEAD
 =======
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
@@ -155,6 +207,8 @@ export interface AIEnhancementOptions {};
 =======
     try {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           content;
           enhancementType;
           context;
@@ -186,6 +240,7 @@ export interface AIEnhancementOptions {};
       toast({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         title: "AI Enhancement Failed";
         description: errorMessage
 <<<<<<< HEAD
@@ -212,6 +267,11 @@ import { useState } from 'react',;
         title: "AI Enhancement Failed",
   description: errorMessageimport { useState } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        title: "AI Enhancement Failed";
+        description: errorMessage
+import { useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
 =======
       if (error) {}
@@ -258,6 +318,7 @@ export function useAIContentEnhancer() { return null; }
         }
       }),;
       if (error) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error(error.message);
@@ -311,6 +372,21 @@ export function useAIContentEnhancer() { return null; }
 =======
         throw new Error(error.message);        variant: "destructive"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        throw new Error(error.message);
+
+
+      }
+      
+      return data.enhancedContent
+    } catch (err: any) {
+      const errorMessage = err.message || 'Failed to enhance content',
+      setError(errorMessage),
+      toast({
+        title: "AI Enhancement Failed",
+        description: errorMessage,
+        variant: "destructive"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
 =======
 
@@ -324,10 +400,14 @@ export function useAIContentEnhancer() { return null; }
     } finally {}
       setIsEnhancing(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   context?: string,
   instructions?: string;
 }
@@ -338,10 +418,14 @@ function useAIContentEnhancer() {}
   const [is_enhancing, setIsEnhancing] = useState (false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [error, set_error] = useState < string | null>(null);
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -358,6 +442,21 @@ function useAIContentEnhancer() {}
     try {'
       const { data, error } = await supabase.functions.invoke ('ai - content - enhancer', {}
         body: {}
+=======
+;
+  const enhance_content = async ({
+    enhancement_type;
+    content = '';
+    context = '';
+    instructions = '';
+  }: AIEnhancementOptions): Promise < string | null> => {
+    setIsEnhancing (true);
+    set_error (null);
+;
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - content - enhancer', {
+        body: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           content;
           enhancement_type;
           context,
@@ -365,13 +464,20 @@ function useAIContentEnhancer() {}
         }
       });
 ;
+<<<<<<< HEAD
       // Check condition;
 if ( {) {}
   $2;
+=======
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
         throw new Error (error.message);
       }
       return data.enhanced_content;
+<<<<<<< HEAD
     } catch (err: any) {'
       const error_message = err.message || 'Failed to enhance content';
       set_error (error_message);
@@ -383,10 +489,24 @@ if ( {) {}
       console.error ('Enhancement error:', err);
       return null;
     } finally {}
+=======
+    } catch (err: any) {
+      const error_message = err.message || 'Failed to enhance content';
+      set_error (error_message);
+      toast ({
+        title: "AI Enhancement Failed";
+        description: error_message,
+        variant: "destructive";
+      });
+      console.error ('Enhancement error:', err);
+      return null;
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsEnhancing (false);
     }
   }
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -436,3 +556,11 @@ if ( {) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return {
+    enhance_content;
+    is_enhancing;
+    error;
+  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

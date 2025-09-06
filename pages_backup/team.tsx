@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/team.tsx
 <<<<<<< HEAD:pages/team.tsx
 <<<<<<< HEAD
@@ -35,6 +36,9 @@ const Page = () => {
 export default Page;
 =======
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -408,7 +412,10 @@ const teamMembers = [;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/team.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function TeamPage() {
   return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -942,6 +949,7 @@ export default /**;
  */
 function TeamPage() {}
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/team.tsx
 
 <<<<<<< HEAD:pages/team.tsx
@@ -1037,6 +1045,10 @@ export default Page;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -1214,6 +1226,7 @@ export default function Team() {
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/team.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1224,3 +1237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

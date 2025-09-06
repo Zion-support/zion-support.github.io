@@ -52,6 +52,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -77,6 +78,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import pricing-guide from '../pages/pricing-guide" describe('pricing-guide Integration Tests',() => {' test('page renders correctly',() => {' render(<pricing-guide / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<pricing-guide / />) }) test('page content is accessible',() => {' render(<pricing-guide / />) }) test('page loads with correct data',() => {' render(<pricing-guide / />) })})
 import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import pricing-guide from '../pages/pricing-guide" describe('pricing-guide Integration Tests',() => {' test('page renders correctly',() => {' render(<pricing-guide / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<pricing-guide / />) }) test('page content is accessible',() => {' render(<pricing-guide / />) }) test('page loads with correct data',() => {' render(<pricing-guide / />) })})
 <<<<<<< HEAD

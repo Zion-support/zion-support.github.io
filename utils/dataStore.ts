@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 // Data store utilities
@@ -21,10 +22,13 @@ export const dataStore = {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -76,6 +80,9 @@ export const dataStore = {
 
 
 
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   getData: () => [],
@@ -85,6 +92,7 @@ export const dataStore = {
 };
 
 
+<<<<<<< HEAD
 
 
 
@@ -99,6 +107,16 @@ interface Project {}
 }  id: string;
   title: string,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+interface Project {
+  id: string;
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   status: string;
   createdAt: Date;
@@ -128,6 +146,10 @@ interface Review {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  createProject(data: Partial<Project>): Project {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || "",
@@ -139,7 +161,7 @@ interface Review {
     this.projects.push(project);
     return project;
   }
-=======
+
   // Review methods
   hasExistingReview(
     projectId: string,
@@ -153,7 +175,68 @@ interface Review {
         review.fromId === fromId,
     );
   }
+
+  upsertReview(data: Partial<Review>): Review {
+    const existingIndex = this.reviews.findIndex(
+      (review) =>
+        review.projectId === data.projectId &&
+        review.fromRole === data.fromRole &&
+        review.fromId === data.fromId,
+    );
+
+    if (existingIndex !== -1) {
+      // Update existing review
+      this.reviews[existingIndex] = {
+        ...this.reviews[existingIndex],
+        ...data,
+        updatedAt: new Date(),
+      };
+      return this.reviews[existingIndex];
+    } else {
+      // Create new review
+      const review: Review = {
+        id: Math.random().toString(36).substr(2, 9),
+        projectId: data.projectId || "",
+        fromRole: data.fromRole || "client",
+        fromId: data.fromId || "",
+        toRole: data.toRole || "talent",
+        toId: data.toId || "",
+        rating: data.rating || 0,
+        text: data.text || "",
+        categories: data.categories,
+        anonymous: data.anonymous || false,
+        approved: data.approved || false,
+        removed: data.removed || false,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+      this.reviews.push(review);
+      return review;
+    }
+  }
+
+  getReviewsByProject(projectId: string): Review[] {
+    return this.reviews.filter((review) => review.projectId === projectId);
+  }
+
+  getAllReviews(): Review[] {
+    return [...this.reviews];
+  }
+
+  counterpartRole(role: "client" | "talent"): "client" | "talent" {
+    return role === "client" ? "talent" : "client";
+  }
+
+
+// Data store utilities;
+export const data_store = {
+  // Add data store functionality here;
+  get_data: () => [],
+  set_data: (data: any) => null,
+  update_data: (id: string, data: any) => null,
+  delete_data: (id: string) => null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +246,8 @@ interface Review {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
@@ -174,12 +259,15 @@ interface Review {
     };
     this.projects.push(project);
     return project;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   // Review methods
@@ -252,8 +340,11 @@ const store = new DataStore();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const findProjectById = (id: string) => store && store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store && store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
@@ -264,6 +355,7 @@ export async function readProjects(): Promise<Project[]> {
   await ensureFilesExist();
   return fs.readJson(PROJECTS_PATH);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -274,10 +366,28 @@ export async function readProjects(): Promise<Project[]> {
 
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) =>;
+=======
+
+export async function writeProjects(projects: Project[]): Promise<void> {
+  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 });
+}
+
+// Data store utilities;
+export const data_store = {
+  // Add data store functionality here;
+  get_data: () => [],
+  set_data: (data: any) => null,
+  update_data: (id: string, data: any) => null,
+  delete_data: (id: string) => null;
+}
+export const findProjectById = (id: string) => store.findProjectById(id);
+export const createProject = (data: Partial<Project>) =>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   store.createProject(data);
 export const hasExistingReview = (
   projectId: string,
   fromRole: string,
+<<<<<<< HEAD
   fromId: string,;
 ) => store.hasExistingReview(projectId, fromRole, fromId);
 export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
@@ -354,3 +464,18 @@ export const counterpartRole = (role: "client" | "talent") =>;
   store.counterpartRole(role);
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  fromId: string,
+) => store.hasExistingReview(projectId, fromRole, fromId);
+export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
+export const getReviewsByProject = (projectId: string) =>
+  store.getReviewsByProject(projectId);
+export const getAllReviews = () => store.getAllReviews();
+export const counterpartRole = (role: "client" | "talent") =>
+  store.counterpartRole(role);
+export const counterpartRole = (role: "client" | "talent") =>
+  store.counterpartRole(role);
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

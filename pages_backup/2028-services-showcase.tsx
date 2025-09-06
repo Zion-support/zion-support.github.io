@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
@@ -137,6 +138,8 @@ import {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CheckCircle,
   ArrowRight,
   Star,
@@ -164,16 +167,21 @@ import {;
   Music,
   Gamepad2,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,6 +253,8 @@ const service_categories = [;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 };
 
@@ -457,6 +467,7 @@ export default function ServicesShowcase2028() {
       {/* Hero Section */}
 <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
         {/* Animated Background */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -505,6 +516,8 @@ export default function ServicesShowcase2028() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className='absolute inset-0'>
           <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
           <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
@@ -514,6 +527,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -626,6 +640,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -668,6 +684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <DollarSign className='w-5 h-5' />
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -702,6 +719,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -726,6 +745,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
@@ -791,6 +811,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -912,6 +934,7 @@ className='group relative'
                             {service.name}
                           </span>
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -956,6 +979,8 @@ className='group relative'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       ))}
                     </div>
                     <Link
@@ -970,6 +995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
@@ -1031,6 +1057,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -1167,6 +1195,7 @@ className='group relative'
                           ({service.reviews} reviews)
                         </span>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
                       <div className="text-sm text-purple-300">
@@ -1241,6 +1270,8 @@ className='group relative'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <div className='text-sm text-purple-300'>
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service.marketSize}
@@ -1273,6 +1304,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
@@ -1363,6 +1395,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -1386,6 +1420,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1427,6 +1462,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -1443,6 +1480,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1455,6 +1493,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 with some sectors growing at 300-800% annually.
               </p>"
               <div className="text-3xl font-bold text-green-400">500%+</div>"
@@ -1529,6 +1570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1565,6 +1607,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -1584,6 +1628,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-blue-300'>Total Addressable Market</div>
             </motion.div>
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1619,6 +1664,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -1641,6 +1688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1832,6 +1880,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+      {/* CTA Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
@@ -1849,6 +1900,7 @@ className='space-y-8'
               </span>{' '}
               Your Business?
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -1893,6 +1945,8 @@ className='space-y-8'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               Join hundreds of forward-thinking companies already leveraging our
               futuristic services to gain competitive advantages and drive
@@ -1937,6 +1991,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       <UltraFuturisticFooter2028 />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/2028-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2132,3 +2187,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

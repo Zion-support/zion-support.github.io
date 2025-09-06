@@ -10,9 +10,12 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+
+
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -45,10 +48,14 @@ interface ConversationItemProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
 import { Conversation } from '@/types/messaging',;
+<<<<<<< HEAD
 =======
 
 
@@ -62,6 +69,8 @@ import { format } from 'date-fns',;'
 import { cn } from '@/lib/utils',;'
 import { Conversation } from '@/types/messaging',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 interface ConversationItemProps {;
   conversation: Conversation,;
@@ -69,13 +78,17 @@ interface ConversationItemProps {;
   onClick: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -102,6 +115,15 @@ interface ConversationItemProps {;
   isActive: boolean,
   onClick: () => void
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+}
+}
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   conversation: Conversation
   isActive: boolean
 =======
@@ -161,13 +183,18 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
     <div 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     <div;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -188,6 +215,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">'
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,12 +272,16 @@ import React from 'react';import React from 'react';
 =======
 import React from 'react';import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {conversation.context_data?.title && (
-          <div className="text - xs mt - 1 text - zion-cyan truncate">;
+          <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
       {conversation.unread_count > 0 && (
-        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text-xs">;
+        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
+
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
@@ -284,7 +316,110 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
       className={cn(
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors"
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
-        conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";        </div>)}
+        conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";
+      )}
+      onClick={onClick}
+    >;
+      <Avatar className="h-12 w-12 border border-zion-purple/20">;
+        <AvatarImage src={conversation && conversation.other_user.avatar_url} alt={conversation && conversation.other_user.name} />;
+        <AvatarFallback className="bg-zion-blue-dark text-white">;
+          {conversation && conversation.other_user.name && name.charAt(0).toUpperCase()}
+        </AvatarFallback>;
+      </Avatar>;
+
+      <div className="flex-1 min-w-0">;
+        <div className="flex justify-between items-start">;
+          <div className="font-medium text-white truncate">{conversation && conversation.other_user.name}</div>;
+          <div className="text-xs text-zion-slate whitespace-nowrap">;
+            {format(new Date(conversation && conversation.updated_at), 'MMM d')}
+          </div>;
+        </div>;
+
+        <div className="text-sm text-zion-slate truncate">;
+          {conversation && conversation.last_message?.content || '(No messages yet)'}
+        </div>;
+
+        {conversation && conversation.context_data?.title && (;
+          <div className="text-xs mt-1 text-zion-cyan truncate">;
+            Re: {conversation && conversation.context_data.title}
+          </div>;
+        )}
+      </div>;
+
+      {conversation && conversation.unread_count > 0 && (;
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">;
+          {conversation && conversation.unread_count}
+        </div>;
+      )}
+    </div>;
+  );
+}
+
+        </div>)}
+    </div>);
+}
+        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />;
+        <AvatarFallback className="bg-zion-blue-dark text-white">;
+          {conversation.other_user.name.charAt(0).toUpperCase()}
+        </AvatarFallback>;
+      </Avatar>;
+      ;
+      <div className="flex-1 min-w-0">;
+        <div className="flex justify-between items-start">;
+          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>;
+          <div className="text-xs text-zion-slate whitespace-nowrap">;
+            {format(new Date(conversation.updated_at), 'MMM d')}
+          </div>;
+        </div>;
+        ;
+        <div className="text-sm text-zion-slate truncate">;
+          {conversation.last_message?.content || '(No messages yet)'}
+        </div>;
+        ;
+        {conversation.context_data?.title && (;
+          <div className="text-xs mt-1 text-zion-cyan truncate">;
+            Re:{conversation.context_data.title}
+          </div>;
+        )}
+      </div>;
+      ;
+      {conversation.unread_count > 0 && (;
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">;
+          {conversation.unread_count}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export function ConversationItem ({
+  conversation, isActive, onClick 
+}: ConversationItemProps) {
+  return (<div className= {
+  cn () 
+}onClick= {
+  onClick 
+}> Re: {
+  conversation.context data.title 
+}</div>) 
+}</div> {
+  conversation.unread count 
+}</div>) 
+}</div>) 
+}
+        {conversation.context_data?.title && (
+          <div className="text-xs mt-1 text-zion-cyan truncate">
+            Re: {conversation.context_data.title}
+          </div>
+        )}
+      </div>
+      {conversation.unread_count > 0 && (
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
+          {conversation.unread_count}
+        </div>
+      )}
+    </div>
+  )
+}
+        </div>)}
     </div>);
 }
 =======

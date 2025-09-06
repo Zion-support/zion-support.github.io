@@ -89,9 +89,14 @@ function resolveMergeConflicts() {
 =======
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
+<<<<<<< HEAD
               .replace(/\n/g, '')
               .replace(/
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              .replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);

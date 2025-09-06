@@ -19,6 +19,7 @@ import React from';react' "export": interface AdvancedAIService {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
+<<<<<<< HEAD
    website: string;'
 import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: 'strin',g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''';,;'"
    address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  "export": const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
@@ -80,3 +81,12 @@ import React from';react' export: interface AdvancedAIService {'; id: string; ti
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+   website: string;
+import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: 'strin',g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''';,;
+   address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  "export": const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
+import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
+
+
+import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

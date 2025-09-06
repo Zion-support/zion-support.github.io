@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -26,6 +27,8 @@ export function earnTokens(;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -137,7 +140,12 @@ export function getAllTransactions() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -147,6 +155,7 @@ export function getConfig() {
   };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenTransaction {;  id: string;
 =======
 <<<<<<< HEAD
@@ -154,12 +163,19 @@ export interface TokenTransaction {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface TokenTransaction {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
@@ -218,9 +234,22 @@ export function issueTokens(
   userId: string,
   amount: number,
   reason: string,
+<<<<<<< HEAD
 ): TokenTransaction {}
   const transaction: TokenTransaction = {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount
+    type: 'issue'
+    reason
+    timestamp: Date.now()
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,"
@@ -228,6 +257,7 @@ export function issueTokens(
     reason,
     timestamp: Date.now(),;
   };
+<<<<<<< HEAD
   
 
 
@@ -235,7 +265,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   transactions.push(transaction);
   return transaction;
 <<<<<<< HEAD
@@ -251,6 +288,7 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,6 +379,8 @@ export function handleAction(userId: string, action: string, metadata?: Record<s
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -400,6 +440,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
   return transaction;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -407,11 +448,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 `
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+    type: "redeem",
+    reason,
+    timestamp: Date.now(),
+  };
+
+    type: "redeem",
+    type: 'redeem',
+    reason,
+    timestamp: Date.now(),
+  };
+
+  transactions.push(transaction);
+  return transaction;
+
+  transactions.push(transaction);
+  return transaction;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     timestamp: Date.now()
@@ -550,6 +612,8 @@ export function set_config (
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -640,6 +704,30 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   };
   
 
+=======
+    timestamp: Date.now();
+  };
+// Token service utilities
+export interface TokenConfig {
+  id: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: string;
+  contractAddress?: string;
+  network: string;
+  isActive: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>,
+): void {
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   transactions.push(transaction);
 =======
 =======  transactions.push(transaction);
@@ -652,9 +740,15 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
@@ -662,10 +756,13 @@ export function set_config (
   Object.assign (current, partial);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -697,6 +794,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -704,3 +802,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

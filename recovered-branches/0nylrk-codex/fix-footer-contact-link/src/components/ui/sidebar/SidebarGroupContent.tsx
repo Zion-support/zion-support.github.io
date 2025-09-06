@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { cn } from "@/lib/utils";
@@ -77,31 +78,38 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
 import React from "react";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-import {cn} from "@/lib/utils";
-interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+interface SidebarGroupContentProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   children?: React.ReactNode;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   children?: React && React.ReactNode;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  children?: React.ReactNode;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
+export function SidebarGroupContent({
+  className,
+  children,
+  ...props
+}: SidebarGroupContentProps) {
+  return (
+
+    <div className={cn("space-y-1", className)} {...props}>
+      {children}
+    </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -170,16 +178,33 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
+  return (;
+
+    <div className={cn("space-y-1", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={cn("space-y-1", className)} {...props}>;
       {children}
 import React from './react';'
@@ -202,6 +227,7 @@ function SidebarGroupContent() {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -216,3 +242,5 @@ function SidebarGroupContent() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -30,6 +30,7 @@ import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
 <<<<<<< HEAD
 
@@ -54,10 +55,15 @@ import type { QuoteRequest } from "@/types/quotes",
 
 type QuoteRequestsListProps = {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import type { QuoteRequest } from "@/types/quotes",
+type QuoteRequestsListProps = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   quotes: QuoteRequest[],
   isLoading: boolean,
   isArchived: boolean,
   onViewDetails: (quote: QuoteRequest) => void,
+<<<<<<< HEAD
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
 },
@@ -68,12 +74,21 @@ type QuoteRequestsListProps = {}
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  onMarkAsResponded: (id: string) => void,
+  onToggleArchive: (id: string, isArchived: boolean) => void
+},
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
   isArchived;
   onViewDetails;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
@@ -97,12 +112,31 @@ import type { QuoteRequest } from "@/types/quotes",}) => {
 =======
 import type { QuoteRequest } from "@/types/quotes",}) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
+  quotes;
+  isLoading;
+  isArchived;
+  onViewDetails;
+  onMarkAsResponded
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
+  onMarkAsResponded,
+
+
+
+  onToggleArchive
+}) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (isLoading) {
     return (
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,12 +181,21 @@ type QuoteRequestsListProps = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from "react",;
+import { QuoteRequestCard } from "./QuoteRequestCard",;
+import { EmptyStateCard } from "./EmptyStateCard",;
+import type { QuoteRequest } from "@/types/quotes",;
+type QuoteRequestsListProps = {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +223,16 @@ import { EmptyStateCard } from './EmptyStateCard';"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest } from "@/types / quotes";
 type QuoteRequestsListProps = {}
+=======
+};
+
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+import React from './react';
+import { QuoteRequestCard } from './QuoteRequestCard';
+import { EmptyStateCard } from './EmptyStateCard';
+import type { QuoteRequest } from "@/types / quotes";
+type QuoteRequestsListProps = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   quotes: QuoteRequest[],
   is_loading: boolean,
   is_archived: boolean,
@@ -189,16 +242,21 @@ type QuoteRequestsListProps = {}
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   quotes;
   is_loading;
   is_archived;
   onViewDetails;
     return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react",;
@@ -234,6 +292,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
@@ -248,6 +308,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -269,6 +330,12 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   if (quotes && quotes.length === 0) {;'
+=======
+  }
+
+
+  if (quotes && quotes.length === 0) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
 <<<<<<< HEAD
@@ -276,18 +343,71 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+
+
+  }
+  if (quotes.length === 0) {
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
+  }
+  
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {quotes.map(quote => (
+        <QuoteRequestCard
+          key={quote.id}
+          quote={quote}
+          onViewDetails={onViewDetails}
+          onMarkAsResponded={!isArchived ? onMarkAsResponded : undefined}
+          onToggleArchive={onToggleArchive}
+        />
+      ))}
+
+
+  
+
+  if (quotes && quotes.length === 0) {;
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
+  }
+    </div>;
+  );
+  }
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
+      {quotes && quotes.map(quote => (;
+        <QuoteRequestCard
+          key={quote && quote.id}
+  onMarkAsResponded,
+  onToggleArchive;
+}) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 20">;
+        <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+      </div>);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   if (quotes.length === 0) {'
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
   return ("
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {quotes.map(quote => (
+=======
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
+      {quotes.map (quote => (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <QuoteRequestCard;
           key={quote.id}
           quote={quote}
@@ -376,13 +496,18 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </div>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -400,16 +525,24 @@ if ( {) {}
   );
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </div>;
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
         />))}
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -438,3 +571,47 @@ if ( {) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          onMarkAsResponded={!isArchived ? onMarkAsResponded :undefined}
+          onToggleArchive={onToggleArchive}
+        />;
+      ))}
+    </div>;
+  ),;
+},; type QuoteRequestsListProps = {
+  quotes: QuoteRequest[];
+isLoading: boolean;
+isArchived: boolean;
+onViewDetails: (quote: QuoteRequest) => void;
+onMarkAsResponded: (id: string) => void;
+onToggleArchive: (id: string, isArchived: boolean) => void 
+};
+quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive 
+}) => {
+  if (isLoading) {
+  return (<div className="text-center py-20" > <p className="text-zion-slate-light" >Loading {
+  isArchived ? 'archived' : 'your' 
+}hire requests...</p> </div>) 
+}<QuoteRequestCard key= {
+  quote.id 
+}quote= {
+  quote 
+}onViewDetails= {
+  onViewDetails 
+}onMarkAsResponded= {
+  !isArchived ? onMarkAsResponded : undefined 
+}onToggleArchive= {
+  onToggleArchive 
+}/>) ) 
+}</div>) 
+};
+    </div>
+  )
+}
+
+    </div>;
+  );
+    </div>;
+  );
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

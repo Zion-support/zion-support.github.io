@@ -97,7 +97,9 @@ import _React from';react' "export": default function SitemapPage() { const publ
 import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>\'';
 const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>"";'"'"
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
+
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
+<<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -109,3 +111,6 @@ import _React from';react' "export": default function SitemapPage() { const publ
 
 import _React from';react' "export": default function SitemapPage() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

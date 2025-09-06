@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Resume } from "@/types/resume";
 export interface ResumeOption {;
 =======
@@ -13,6 +14,9 @@ export interface ResumeOption {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { Resume  } from '@/types / resume';
 
@@ -49,6 +53,7 @@ export interface ResumeOption {};
   file?: File
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   file?: File;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -78,6 +83,14 @@ import { Resume } from "@/types/resume",
 =======
 }import { Resume } from "@/types/resume",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+export interface ResumeSelectorProps {
+
+
+
+import { Resume } from "@/types/resume",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ResumeOption {
 =======
 
@@ -102,6 +115,7 @@ export interface ResumeOption {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
 =======
@@ -119,6 +133,13 @@ export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
+=======
+
+export interface ResumeSelectorProps {;
+
+
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onResumeSelected: (resume_option: ResumeOption) => void;
 =======
 

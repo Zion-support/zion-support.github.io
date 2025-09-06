@@ -76,9 +76,12 @@ interface FeatureCardProps {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -90,6 +93,7 @@ interface FeatureCardProps {id: number;
   href: string;
   isActive: boolean;
   onClick: () => void;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
@@ -99,6 +103,9 @@ interface FeatureCardProps {id: number;
 =======
 =======}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export /**
  * FeatureCard - Function description
 =======
@@ -140,6 +147,7 @@ if ( {) {
   $2
 }
           e.prevent_default ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           on_click ();
@@ -189,6 +197,9 @@ export function FeatureCard({;
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          on_click ();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           e.preventDefault();
           onClick();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -237,18 +248,19 @@ export function FeatureCard({;
       aria - label={`${title} - ${description}`}
 <<<<<<< HEAD
     >;
-      <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
+      <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 200">;
         {icon}
       </div>;
-      <h3 className="text - xl font - semibold mb - 2 group - hover:text - white transition-colors">;
+      <h3 className="text - xl font - semibold mb - 2 group - hover:text - white transition - colors">;
         {title}
       </h3>;
-      <p className="text - gray - 400 group - hover:text - gray - 300 transition-colors">;
+      <p className="text - gray - 400 group - hover:text - gray - 300 transition - colors">;
         {description}
       </p>;
-      <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration-200">;
+      <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200">;
         <Link;
           href={href}
+<<<<<<< HEAD
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
 =======
     >;"
@@ -266,6 +278,9 @@ export function FeatureCard({;
           href={href}"
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           on_click={(e) => e.stop_propagation ()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         >;

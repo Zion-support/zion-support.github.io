@@ -15,6 +15,7 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
+<<<<<<< HEAD
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -32,16 +33,28 @@ import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "
 import React from "react";"
 import { useWallet } from "@/hooks/useWallet";
 import {}
+=======
+import { useWallet } from "@/hooks/useWallet";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,";
 } from "@/components/ui/card";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { ScrollArea } from "@/components/ui/scroll-area";"
 import { Badge } from "@/components/ui/badge";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {};
   const { transactions, loading } = useWallet();
@@ -58,8 +71,8 @@ export function TransactionHistory() {};
 
   if (loading) {;
 
-  if (loading) {
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -157,12 +170,15 @@ export function TransactionHistory() {
 =======
       </Card>;    return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Card>
         <CardHeader>
           <CardTitle>Transaction History</CardTitle>
           <CardDescription>Loading transactions...</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
     );
   }
 
@@ -362,6 +378,8 @@ export function TransactionHistory() {;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
       </Card>;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
   }
 ;
@@ -369,18 +387,129 @@ export function TransactionHistory() {;
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
   return (;
 
+  const earnTransactions = transactions.filter(
+    (tx) => tx.transaction_type === "earn",
+  );
+  const burnTransactions = transactions.filter(
+    (tx) => tx.transaction_type === "burn",
+  );
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Transaction History</CardTitle>
+        <CardDescription>Your recent ZION$ activity</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Tabs defaultValue="earned">
+          <TabsList className="w-full">
+            <TabsTrigger value="earned" className="flex-1">
+              Earned
+            </TabsTrigger>
+            <TabsTrigger value="spent" className="flex-1">
+              Spent
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="earned">
+            <ScrollArea className="h-64">
+              {earnTransactions.length === 0 ? (
+                <p className="text-center py-8 text-muted-foreground">
+                  No tokens earned yet
+                </p>
+              ) : (
+                <div className="space-y-2 mt-2">
+                  {earnTransactions.map((tx) => (
+                    <div
+                      key={tx.id}
+                      className="flex items-center justify-between py-2 border-b"
+                    >
+                      <div>
+                        <p className="font-medium">
+                          {tx.reason || "Token reward"}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {formatDistanceToNow(new Date(tx.created_at), {
+                            addSuffix: true,
+                          })}
+                        </p>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="bg-green-100 text-green-800"
+                      >
+                        +{tx.amount} ZION$
+                      </Badge>
+                    </div>
+                  ))}
+                </div>;
+              )}
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="spent">
+            <ScrollArea className="h-64">
+              {burnTransactions.length === 0 ? (
+                <p className="text-center py-8 text-muted-foreground">
+                  No tokens spent yet
+                </p>
+              ) : (
+                <div className="space-y-2 mt-2">
+                  {burnTransactions.map((tx) => (
+                    <div
+                      key={tx.id}
+                      className="flex items-center justify-between py-2 border-b"
+                    >
+                      <div>
+                        <p className="font-medium">
+                          {tx.reason || "Feature purchase"}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {formatDistanceToNow(new Date(tx.created_at), {
+                            addSuffix: true,
+                          })}
+                        </p>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="bg-red-100 text-red-800"
+                      >
+                        -{tx.amount} ZION$
+                      </Badge>
+                    </div>
+                  ))}
+                </div>;
+              )}
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  );
+}
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Transaction History</CardTitle>;
+          <CardDescription > Loading transactions...</CardDescription>;
+        </CardHeader>;
+      </Card>);
+  }
+  const earn_transactions = transactions.filter (tx => tx.transaction_type === 'earn');
+  const burn_transactions = transactions.filter (tx => tx.transaction_type === 'burn');
+;
+  return (
     <Card>;
       <CardHeader>;
-        <CardTitle>Transaction History</CardTitle>;
-        <CardDescription>Your recent ZION$ activity</CardDescription>;
+        <CardTitle > Transaction History</CardTitle>;
+        <CardDescription > Your recent ZION$ activity</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <Tabs defaultValue="earned">;
-          <TabsList className="w-full">;
-            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>;
-            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>;
+        <Tabs default_value="earned">;
+          <TabsList className="w - full">;
+            <TabsTrigger value="earned" className="flex - 1">Earned</TabsTrigger>;
+            <TabsTrigger value="spent" className="flex - 1">Spent</TabsTrigger>;
           </TabsList>;
           <TabsContent value="earned">;
+<<<<<<< HEAD
             <ScrollArea className="h-64">;
 <<<<<<< HEAD
                   ))}
@@ -497,10 +626,41 @@ if ( {) {
                     <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;                      <div>;
                         <p className="font-medium">{tx.reason || "Feature purchase"}</p>;
                         <p className="text - xs text - muted-foreground">;
+=======
+            <ScrollArea className="h - 64">;
+              {earn_transactions.length === 0 ? (
+                <p className="text - center py - 8 text - muted - foreground">No tokens earned yet</p>) : (
+                <div className="space - y-2 mt - 2">;
+                  {earn_transactions.map (tx => (
+                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
+                      <div>;
+                        <p className="font - medium">{tx.reason || "Token reward"}</p>;
+                        <p className="text - xs text - muted - foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
                         </p>;
                       </div>;
-                      <Badge variant="outline" className="bg - red - 100 text - red-800">;
+                      <Badge variant="outline" className="bg - green - 100 text - green - 800">;
+                        +{tx.amount} ZION$;
+                      </Badge>;
+                    </div>))}
+                </div>)}
+            </ScrollArea>;
+          </TabsContent>;
+          <TabsContent value="spent">;
+            <ScrollArea className="h - 64">;
+              {burn_transactions.length === 0 ? (
+                <p className="text - center py - 8 text - muted - foreground">No tokens spent yet</p>) : (
+                <div className="space - y-2 mt - 2">;
+                  {burn_transactions.map (tx => (
+                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
+                      <div>;
+                        <p className="font - medium">{tx.reason || "Feature purchase"}</p>;
+                        <p className="text - xs text - muted - foreground">;
+                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
+                        </p>;
+                      </div>;
+                      <Badge variant="outline" className="bg - red - 100 text - red - 800">;
                         -{tx.amount} ZION$;
                       </Badge>;
 <<<<<<< HEAD
@@ -583,6 +743,7 @@ if ( {) {
                       </Badge>;
                     </div>))}
                 </div>)}
+<<<<<<< HEAD
             </ScrollArea>;
           </TabsContent>;"
           <TabsContent value="spent">;"
@@ -607,11 +768,15 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -650,3 +815,8 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </Card>);
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

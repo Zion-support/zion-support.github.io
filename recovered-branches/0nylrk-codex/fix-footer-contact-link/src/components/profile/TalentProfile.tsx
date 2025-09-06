@@ -114,6 +114,7 @@ export function TalentProfile(): any ({ ;
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -125,6 +126,21 @@ export function TalentProfile(): any ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function TalentProfile(): any ({ ;
+
+  profile;
+  onRequestHire;
+  onMessageTalent;
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth();
+
+}
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -175,6 +191,7 @@ export function TalentProfile({
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
+<<<<<<< HEAD
   const { isAuthenticated } = useAuth(),
   
 <<<<<<< HEAD
@@ -204,10 +221,33 @@ export function TalentProfile({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const { isAuthenticated } = useAuth();
+
+export function TalentProfile({ ;
+  profile;
+  onRequestHire;
+export function TalentProfile({ 
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth(),
+  
+  // Create proper availability object from talent profile
+
+  const availability: Availability = {
+    status: profile.availability_type === 'full_time' ? 'available' :
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -384,6 +424,109 @@ export function TalentProfile() { return null; }
     name: skill
     level: 3 // Default level since we don't have this data      {/* Profile Header */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Create proper skills array for ProfileSkills component
+  const skillsArray = profile.skills?.map(skill => ({
+    name: skill
+    level: 3 // Default level since we don't have this data
+
+
+  })) || [],
+  
+
+
+  // Create proper projects array for ProfileProjects component
+  const projectsArray = profile.key_projects?.map((proj, i) => ({
+    id: `project-${i}`
+    title: proj.title
+    description: proj.description
+    date: new Date().toISOString() // Default date since we don't have this data
+  })) || [],
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+import React from "react",;
+import { Handshake, MessageSquare, Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "./HireNowCTA",;
+import { ProfileHero } from "./ProfileHero",;
+import { ProfileSkills } from "./ProfileSkills",;
+import { ProfileExperience } from "./ProfileExperience",;
+import { ProfileProjects } from "./ProfileProjects",;
+import { ProfileAvailability } from "./ProfileAvailability",;
+import { ProfileContact } from "./ProfileContact",;
+import { ProfileRatings } from "./ProfileRatings",;
+import { TalentProfile as TalentProfileType } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Availability } from "@/types/profile",;
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+;
+export function TalentProfile({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent;
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth(),;
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile.availability_type === 'full_time' ? 'available' :;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+  },;
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [],;
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj.title,;
+    description: proj.description;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+  return (;
+    <div className="container mx-auto px-4 py-8">;
+
+
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile && profile.availability_type === 'full_time' ? 'available' : ;
+            profile && profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`;
+  };
+
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile && profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [];
+
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile && profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj && proj.title,;
+    description: proj && proj.description,;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+
+
+  return (
+    <div className="container mx-auto px-4 py-8">;
+
+  })) || [],
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+
+  return (
+    <div className="container mx-auto px-4 py-8">;
+      {/* Profile Header */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <ProfileHero
 =======
 
@@ -400,12 +543,17 @@ export function TalentProfile() { return null; }
         reviewCount={profile && profile.rating_count}
       />;
 
+
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
+<<<<<<< HEAD
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -417,8 +565,13 @@ export function TalentProfile() { return null; }
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">;          {/* Bio Section */}
+        <div className="lg:col-span-2 space-y-8">;
+          {/* Bio Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
@@ -432,6 +585,7 @@ export function TalentProfile() { return null; }
             </div>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -495,6 +649,28 @@ import React from './react';
           
           import React from './react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          
+
+
+          
+          
+          {/* Projects Section */}
+          <ProfileProjects projects={projectsArray} />
+          {/* Ratings Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />
+              Reviews & Ratings
+            </h2>
+              userId={profile.id}
+              averageRating={profile.average_rating}
+              ratingCount={profile.rating_count}
+            />
+          </div>
+import React from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';
@@ -560,11 +736,15 @@ function TalentProfile() {}
 ;
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
     <div className="container mx - auto px - 4 py-8">;
 =======
   return ("
     <div className="container mx - auto px - 4 py - 8">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <div className="container mx - auto px - 4 py - 8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -576,8 +756,9 @@ function TalentProfile() {}
       />;
 <<<<<<< HEAD
       {/* Main content area */}
-      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt-8">;
+      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8">;
         {/* Left Column - Skills & Info */}
+<<<<<<< HEAD
         <div className="space-y-8">;
 =======
       {/* Main content area */}"
@@ -585,6 +766,9 @@ function TalentProfile() {}
         {/* Left Column - Skills & Info */}"
         <div className="space - y-8">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="space - y-8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ProfileSkills skills={skills_array} />;
           <ProfileAvailability availability={availability} />;
           <ProfileContact;
@@ -595,8 +779,9 @@ function TalentProfile() {}
         </div>;
 <<<<<<< HEAD
         {/* Right Column - Bio & Projects */}
-        <div className="lg:col - span - 2 space-y-8">;
+        <div className="lg:col - span - 2 space - y-8">;
           {/* Bio Section */}
+<<<<<<< HEAD
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
             <h2 className="text - xl font - bold text - white mb-4">About {profile.full_name}</h2>;
             <div className="prose prose - invert max-w-none">;
@@ -610,12 +795,19 @@ function TalentProfile() {}
             <div className="prose prose - invert max - w-none">;"
               <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;
+            <h2 className="text - xl font - bold text - white mb - 4">About {profile.full_name}</h2>;
+            <div className="prose prose - invert max - w-none">;
+              <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
           {/* Projects Section */}
           <ProfileProjects projects={projects_array} />;
 <<<<<<< HEAD
           {/* Ratings Section */}
+<<<<<<< HEAD
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
             <h2 className="text - xl font - bold text - white mb - 4 flex items-center">;
               <Star className="mr - 2 h - 5 w - 5 text - yellow-400" />;
@@ -625,6 +817,11 @@ function TalentProfile() {}
             <h2 className="text - xl font - bold text - white mb - 4 flex items - center">;"
               <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;
+            <h2 className="text - xl font - bold text - white mb - 4 flex items - center">;
+              <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Reviews & Ratings;
             </h2>;
             <ProfileRatings;
@@ -637,11 +834,12 @@ function TalentProfile() {}
           {/* Hire Now CTA */}
 <<<<<<< HEAD
           {is_authenticated && (
-            <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb-8">;
-              <div className="flex flex - col items - center text-center">;
-                <h3 className="text - xl font - bold text - white mb-2">Ready to collaborate?</h3>;
-                <p className="text - zion - slate mb - 6 max-w-md">;
+            <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
+              <div className="flex flex - col items - center text - center">;
+                <h3 className="text - xl font - bold text - white mb - 2">Ready to collaborate?</h3>;
+                <p className="text - zion - slate mb - 6 max - w-md">;
                   Connect with {profile.full_name} for your next project and get started right away.;
+<<<<<<< HEAD
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}                </div>;
 =======
           {is_authenticated && ("
@@ -655,6 +853,13 @@ function TalentProfile() {}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;"
             <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;"
             <div className="prose prose-invert max-w-none">;"
+=======
+                  {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
+
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
+            <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;
+            <div className="prose prose-invert max-w-none">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className="text-zion-slate whitespace-pre-wrap">{profile && profile.bio}</p>;
             </div>;
           </div>;
@@ -662,6 +867,7 @@ function TalentProfile() {}
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
 
+<<<<<<< HEAD
           {/* Ratings Section */}"
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;"
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">;"
@@ -669,6 +875,15 @@ function TalentProfile() {}
               Reviews & Ratings;
             </h2>;
             <ProfileRatings;
+=======
+          {/* Ratings Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
+              Reviews & Ratings;
+            </h2>;
+            <ProfileRatings
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               userId={profile && profile.id}
               averageRating={profile && profile.average_rating}
               ratingCount={profile && profile.rating_count}
@@ -676,6 +891,7 @@ function TalentProfile() {}
           </div>;
 
           {/* Hire Now CTA */}
+<<<<<<< HEAD
           {isAuthenticated && (;"
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;"
               <div className="flex flex-col items-center text-center">;"
@@ -690,11 +906,28 @@ function TalentProfile() {}
                     size="lg" "
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark"
                     onClick={onRequestHire}>;"
+=======
+          {isAuthenticated && (;
+            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;
+              <div className="flex flex-col items-center text-center">;
+                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;
+                <p className="text-zion-slate mb-6 max-w-md">;
+                  Connect with {profile && profile.full_name} for your next project and get started right away.;
+                  {profile && profile.hourly_rate && ` Rate starts at $${profile && profile.hourly_rate}/hour.`}
+                </p>;
+
+                <div className="flex flex-wrap gap-4 justify-center">;
+                  <Button
+                    size="lg" 
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+                    onClick={onRequestHire}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Handshake className="mr-2 h-5 w-5" />;
                     Hire Now;
                   </Button>;
 
                   {onMessageTalent && (;
+<<<<<<< HEAD
                     <Button"
                       size="lg" 
 
@@ -703,15 +936,27 @@ function TalentProfile() {}
                       variant="outline""
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={onMessageTalent}>;"
+=======
+                    <Button
+                      size="lg" 
+
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick={onMessageTalent}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <MessageSquare className="mr-2 h-5 w-5" />;
                       Message;
                     </Button>;
                   )}
+<<<<<<< HEAD
 
 
 
                 </div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </div>;
           )}
@@ -722,6 +967,7 @@ function TalentProfile() {}
     </div>;
   );
 }
+<<<<<<< HEAD
 =======
 
 
@@ -732,16 +978,35 @@ function TalentProfile() {}
                     className="bg - zion - purple text - white hover:bg - zion - purple - dark";
                     on_click={onRequestHire}
                   >;"
+=======
+
+                </p>;
+                <div className="flex flex - wrap gap - 4 justify - center">;
+                  <Button;
+                    size="lg";
+                    className="bg - zion - purple text - white hover:bg - zion - purple - dark";
+                    on_click={onRequestHire}
+                  >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Handshake className="mr - 2 h - 5 w - 5" />;
                     Hire Now;
                   </Button>;
                   {onMessageTalent && (
+<<<<<<< HEAD
                     <Button;"
                       size="lg";"
                       variant="outline";"
                       className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                       on_click={onMessageTalent}
                     >;"
+=======
+                    <Button;
+                      size="lg";
+                      variant="outline";
+                      className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+                      on_click={onMessageTalent}
+                    >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <MessageSquare className="mr - 2 h - 5 w - 5" />;
                       Message;
                     </Button>)}
@@ -752,8 +1017,104 @@ function TalentProfile() {}
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  ),;}
+ interface TalentProfileProps {
+  profile: TalentProfileType;
+onRequestHire: () => void;
+onMessageTalent?: () => void 
+}export function TalentProfile ({
+  profile;
+onRequestHire;
+onMessageTalent 
+}: TalentProfileProps) {
+  const {
+  isAuthenticated 
+}= useAuth ();
+//Create proper availability object from talent profile const availability: Availability = {
+  status: profile.availability type === 'full time' ? 'available' : profile.availability type === 'part time' ? 'limited' : 'unavailable';
+message: `$ {
+  profile.professional title 
+}with $ {
+  profile.years experience 
+}years of experience` 
+};
+//Create proper skills array for ProfileSkills component const skillsArray = profile.skills?.map (skill => ({
+  name: skill;
+level: 3 //Default level since we don't have this data 
+}) ) || [];
+id: `project-$ {
+  i 
+}`;
+title: proj.title;
+description: proj.description;
+date: new Date () .toISOString () //Default date since we don't have this data 
+}) ) || [];
+return (</div> </div> {
+  /* Projects Section */ 
+}<ProfileProjects projects= {
+  projectsArray 
+}/> Reviews & Ratings </h2> <ProfileRatings userId= {
+  profile.id 
+}averageRating= {
+  profile.average rating 
+}ratingCount= {
+  profile.rating count 
+}/> </div> Connect with {
+  profile.full name 
+}for your next project and get started right away. {
+  profile.hourly rate && `Rate starts at $$ {
+  profile.hourly rate 
+}/hour.` 
+}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {
+  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick= {
+  onMessageTalent 
+}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) 
+}</div> </div> </div>) 
+}</div> </div> </div>) 
+}
+          {/* Hire Now CTA */}
+          {isAuthenticated && (
+            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
+              <div className="flex flex-col items-center text-center">
+                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>
+                <p className="text-zion-slate mb-6 max-w-md">
+                  Connect with {profile.full_name} for your next project and get started right away.
+                  {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+                    onClick={onRequestHire}
+                  >
+                    <Handshake className="mr-2 h-5 w-5" />
+                    Hire Now
+                  </Button>
+                  {onMessageTalent && (
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick={onMessageTalent}
+                    >
+                      <MessageSquare className="mr-2 h-5 w-5" />
+                      Message
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

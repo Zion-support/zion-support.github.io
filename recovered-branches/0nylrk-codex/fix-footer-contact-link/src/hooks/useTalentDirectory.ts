@@ -40,11 +40,106 @@ import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Fetch auth status and saved talents
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const {
     isAuthenticated;
+=======
+  // Fetch auth status and saved talents
+  const {
+    isAuthenticated;
+
+    userDetails
+    savedTalents
+    handleToggleSave
+  } = useAuthStatus();
+  // Fetch talent data
+  const {
+    talents
+    isLoading
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { 
+    isAuthenticated,
+    userDetails, 
+    savedTalents, 
+    handleToggleSave 
+  } = useAuthStatus(),
+
+  // Fetch talent data
+  const { 
+    talents, 
+    isLoading 
+  } = useTalentData(),
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+import { useUIState } from './talent / useUIState';
+export /**
+ * useTalentDirectory - Function description
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+
+  const {
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
+  const {
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+
+    expanded_sections;
+
+
+
+
+  } = useTalentData();
+  // Apply filters and sorting
+  const {
+    filteredTalents,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters
+
+  } = useFilterTalents(talents),
+
+
+  // Manage UI state
+  const {
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    toggleSection
+
+  } = useUIState(),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     userDetails
     savedTalents
@@ -246,7 +341,11 @@ function useTalentDirectory() {}
     
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -259,6 +358,7 @@ function useTalentDirectory() {}
 }
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     expanded_sections;
@@ -290,6 +390,10 @@ import { useAuthStatus } from "./talent/useAuthStatus",;
 =======
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    expanded_sections;
+import { useAuthStatus } from "./talent/useAuthStatus",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 =======
@@ -378,6 +482,7 @@ export function useTalentDirectory() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -391,6 +496,10 @@ export function useTalentDirectory() { return null; }
   }
 }
 ;
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
@@ -425,7 +534,12 @@ export function useTalentDirectory() { return null; }
     handleToggleSave;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }  }
+=======
+}
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 <<<<<<< HEAD

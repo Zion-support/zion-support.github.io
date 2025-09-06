@@ -27,7 +27,22 @@ export function useDisputes() {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
+export function useDisputes() {;
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -51,6 +66,7 @@ export function useDisputes() {}
   const [isLoading, setIsLoading] = useState(true),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,17 +81,24 @@ export function useDisputes() {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const [error, setError] = useState<string | null>(null),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(false);
       return
     }
     try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       setIsLoading(true);
@@ -83,6 +106,8 @@ export function useDisputes() {}
       
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -112,6 +137,7 @@ if ( {) {
         .from ("disputes");
         .select (`;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -121,6 +147,8 @@ if ( {) {
   const fetchDisputes = async () => {}
     if (!user) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           *;
           project: projects (
             scope_summary;
@@ -129,10 +157,14 @@ if ( {) {
             talent_id;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       setIsLoading(true),
       
 
+<<<<<<< HEAD
 =======
       setIsLoading(false),
       return
@@ -147,6 +179,9 @@ if ( {) {
 =======
       const { data, error: fetchError } = await supabase"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      const { data, error: fetchError } = await supabase
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .from("disputes")
         .select(`
           *,
@@ -157,6 +192,7 @@ if ( {) {
             talent_id,
             job:jobs(title)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -170,9 +206,37 @@ if ( {) {
 =======
   const [error, setError] = useState<string | null>(null),          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         `)
         .order("created_at", { ascending: false });
-      if (fetchError) throw fetchError;        ...dispute;
+      if (fetchError) throw fetchError;
+          ),
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+        `)
+        .order("created_at", { ascending: false }),
+      
+      if (fetchError) throw fetchError,
+      
+
+
+      // Transform data if needed
+      const transformedData = data && data.map((dispute: any) => ({
+            job:jobs (title)),
+          client_profile:projects ! projects_client_id_fkey (client_profile:profiles ! projects_client_id_fkey (display_name, avatar_url));
+          talent_profile:projects ! projects_talent_id_fkey (talent_profile:profiles ! projects_talent_id_fkey (display_name, avatar_url));
+        `);
+        .order ("created_at", { ascending: false });
+;
+      // Check condition
+if (throw fetch_error) {
+  $2
+}
+      // Transform data if needed;
+      const transformed_data = data.map ((dispute: any) => ({
+        ...dispute;
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
@@ -185,6 +249,7 @@ if ( {) {
       console && console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err && err.message),
       toast && toast.error("Failed to fetch disputes")
+
     } finally {
 =======
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))`
@@ -282,6 +347,18 @@ if (throw fetch_error) {}
 
 ;
   const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
+
+          ...dispute && dispute.project,
+          title: dispute && dispute.project?.job?.title || 'Untitled Project'
+        }
+      // Transform data if needed
+      const transformedData = data.map((dispute: any) => ({
+        ...dispute,
+        client_profile: dispute.client_profile?.client_profile,
+        talent_profile: dispute.talent_profile?.talent_profile,
+        project: {
+          ...dispute.project
+          title: dispute.project?.job?.title |'Untitled Project'
         }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }));
@@ -309,6 +386,7 @@ if (throw fetch_error) {}
 
 ;
   const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -318,6 +396,18 @@ if (throw fetch_error) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        }
+      }));
+      setDisputes(transformedData as Dispute[]);
+      setError(null)
+    } catch (err: any) {
+    } finally {
+      setIsLoading (false);
+    }
+  }
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase;
         .from ("disputes");
 =======
@@ -333,6 +423,7 @@ if (throw fetch_error) {}
             job_id;
             client_id;
             talent_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -378,6 +469,21 @@ if (throw error) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+            job:jobs (title)),
+          client_profile:projects ! projects_client_id_fkey (client_profile:profiles ! projects_client_id_fkey (display_name, avatar_url));
+          talent_profile:projects ! projects_talent_id_fkey (talent_profile:profiles ! projects_talent_id_fkey (display_name, avatar_url));
+        `);
+        .eq ("id", dispute_id);
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       })),
       
       setDisputes(transformedData as Dispute[]),
@@ -385,6 +491,7 @@ if (throw error) {}
     } catch (err: any) {"
       console.error("Error fetching disputes:", err),"
       setError("Failed to fetch disputes: " + err.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,12 +508,18 @@ if (throw error) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast.error("Failed to fetch disputes")
     } finally {}
+=======
+
+      toast.error("Failed to fetch disputes")
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(false)
     }
 
   },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -419,6 +532,8 @@ if (throw error) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
@@ -442,6 +557,7 @@ if (throw error) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -449,6 +565,11 @@ if (throw error) {}
 =======
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
+=======
+
+          ),
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .eq("id", disputeId)
@@ -499,6 +620,7 @@ if (throw error) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       return {
         ...data,
@@ -515,14 +637,18 @@ if (throw error) {}
         }
       } as Dispute
     } catch (err: any) {
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
 
-=======          ...data.project,
+          ...data.project,
           title: data.project?.job?.title || 'Untitled Project';
         }
       } as Dispute;
     } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -618,6 +744,40 @@ if (throw error) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+        }
+      } as Dispute
+    } catch (err: any) {
+  },
+
+  const createDispute = async (disputeData: { 
+    project_id: string,
+    milestone_id?: string,
+    reason_code: string,
+
+
+    description: string
+  }): Promise<Dispute | null> => {
+    if (!user) {
+      toast && toast.error("You must be logged in to create a dispute");
+      return null
+    }
+    try {
+      const { data, error } = await supabase
+        .from("disputes")
+        .insert({
+          ...disputeData;
+          raised_by: user && user.id
+        })
+        .select()
+
+      
+      toast && toast.success("Dispute submitted successfully");
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .single(),
 
       if (error) throw error,
@@ -631,6 +791,7 @@ if (throw error) {}
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       toast && toast.success("Dispute submitted successfully");
@@ -644,6 +805,9 @@ if (throw error) {}
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      toast && toast.success("Dispute submitted successfully");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -652,17 +816,22 @@ if (throw error) {}
       return null
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   },
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       fetchDisputes(), // Refresh the list
@@ -680,11 +849,14 @@ if (throw error) {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -716,11 +888,16 @@ if (throw error) {}
         .update({ status })
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq("id", disputeId),
       
       if (error) throw error,
       
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -743,10 +920,22 @@ if (throw error) {}
 =======
       );
       `
+=======
+
+      // Update local state
+
+      setDisputes(prevDisputes => 
+        prevDisputes && prevDisputes.map(dispute => 
+          dispute && dispute.id === disputeId ? { ...dispute, status } : dispute
+        )
+      );
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast && toast.success(`Dispute status updated to ${status}`);
 
 
       ),
+<<<<<<< HEAD
       `
       toast.success(`Dispute status updated to ${status}`),
 
@@ -764,23 +953,35 @@ if (throw error) {}
 =======
     }      return true
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      
+      toast.success(`Dispute status updated to ${status}`),
+
+      return true
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (err: any) {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
+
     }
   }
   const resolveDispute = async (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     disputeId: string
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    disputeId: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ("Error fetching dispute:", err);
       toast.error ("Failed to fetch dispute details");
 
     disputeId: string, 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -811,10 +1012,13 @@ if (throw error) {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",;
+<<<<<<< HEAD
 =======
 
 
@@ -836,6 +1040,10 @@ import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/typ
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
 export function useDisputes() { return null; }
+=======
+import { toast } from "sonner",;
+export function useDisputes() {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth(),;
   const [disputes, setDisputes] = useState<Dispute[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
@@ -848,8 +1056,13 @@ export function useDisputes() { return null; }
 ;
     try {;
       setIsLoading(true),;
+<<<<<<< HEAD
       const { data, error: fetchError } = await supabase;"
         .from("disputes");`
+=======
+      const { data, error: fetchError } = await supabase;
+        .from("disputes");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .select(`;
           *,;
           project:projects(;
@@ -860,8 +1073,13 @@ export function useDisputes() { return null; }
             job:jobs(title);
           ),;
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
+<<<<<<< HEAD
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));`
         `);"
+=======
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+        `);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .order("created_at", { ascending: false }),;
       if (fetchError) throw fetchError,;
       // Transform data if needed;
@@ -870,15 +1088,25 @@ export function useDisputes() { return null; }
         client_profile: dispute.client_profile?.client_profile,;
         talent_profile: dispute.talent_profile?.talent_profile,;
         project: {;
+<<<<<<< HEAD
           ...dispute.project,;'
+=======
+          ...dispute.project,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           title: dispute.project?.job?.title || 'Untitled Project';
         }
       })),;
       setDisputes(transformedData as Dispute[]),;
       setError(null);
+<<<<<<< HEAD
     } catch (err: any) {;"
       console.error("Error fetching disputes:", err),;"
       setError("Failed to fetch disputes: " + err.message),;"
+=======
+    } catch (err: any) {;
+      console.error("Error fetching disputes:", err),;
+      setError("Failed to fetch disputes: " + err.message),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to fetch disputes");
     } finally {;
       setIsLoading(false);
@@ -886,8 +1114,13 @@ export function useDisputes() { return null; }
   },;
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {;
     try {;
+<<<<<<< HEAD
       const { data, error } = await supabase;"
         .from("disputes");`
+=======
+      const { data, error } = await supabase;
+        .from("disputes");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .select(`;
           *,;
           project:projects(;
@@ -898,8 +1131,13 @@ export function useDisputes() { return null; }
             job:jobs(title);
           ),;
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
+<<<<<<< HEAD
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));`
         `);"
+=======
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+        `);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq("id", disputeId);
         .single(),;
       if (error) throw error,;
@@ -908,23 +1146,37 @@ export function useDisputes() { return null; }
         client_profile: data.client_profile?.client_profile,;
         talent_profile: data.talent_profile?.talent_profile,;
         project: {;
+<<<<<<< HEAD
           ...data.project,;'
           title: data.project?.job?.title || 'Untitled Project';
         }
       } as Dispute;
     } catch (err: any) {;"
       console.error("Error fetching dispute:", err),;"
+=======
+          ...data.project,;
+          title: data.project?.job?.title || 'Untitled Project';
+        }
+      } as Dispute;
+    } catch (err: any) {;
+      console.error("Error fetching dispute:", err),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to fetch dispute details"),;
 
       return null;
     }
   }
 ;
+<<<<<<< HEAD
   const create_dispute = async (dispute_data: {}
+=======
+  const create_dispute = async (dispute_data: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     project_id: string;
     milestone_id?: string;
     reason_code: string,
     description: string;
+<<<<<<< HEAD
   }): Promise < Dispute | null> => {}
     // Check condition;
 if ( {) {}
@@ -937,12 +1189,27 @@ if ( {) {}
       const { data, error } = await supabase;"
         .from ("disputes");
         .insert ({}
+=======
+  }): Promise < Dispute | null> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to create a dispute");
+      return null;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ("disputes");
+        .insert ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ...dispute_data;
           raised_by: user.id;
         });
         .select ();
         .single ();
 ;
+<<<<<<< HEAD
       // Check condition;
 if (throw error) {}
   $2;
@@ -952,11 +1219,23 @@ if (throw error) {}
       return data as Dispute;
     } catch (err: any) {"
       console.error ("Error creating dispute:", err);"
+=======
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast.success ("Dispute submitted successfully");
+      fetch_disputes (), // Refresh the list;
+      return data as Dispute;
+    } catch (err: any) {
+      console.error ("Error creating dispute:", err);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error ("Failed to submit dispute");
       return null;
     }
   }
 ;
+<<<<<<< HEAD
   const updateDisputeStatus = async (dispute_id: string, status: DisputeStatus): Promise < boolean> => {}
     try {}
       const { error } = await supabase;"
@@ -967,20 +1246,41 @@ if (throw error) {}
       // Check condition;
 if (throw error) {}
   $2;
+=======
+  const updateDisputeStatus = async (dispute_id: string, status: DisputeStatus): Promise < boolean> => {
+    try {
+      const { error } = await supabase;
+        .from ("disputes");
+        .update ({ status });
+        .eq ("id", dispute_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       // Update local state;
       set_disputes (prev_disputes =>;
         prev_disputes.map (dispute =>;
           dispute.id === dispute_id ? { ...dispute, status } : dispute));
+<<<<<<< HEAD
 ;`
       toast.success (`Dispute status updated to ${status}`);
       return true;
     } catch (err: any) {"
       console.error ("Error updating dispute status:", err);"
+=======
+;
+      toast.success (`Dispute status updated to ${status}`);
+      return true;
+    } catch (err: any) {
+      console.error ("Error updating dispute status:", err);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error ("Failed to update dispute status");
       return false;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const resolveDispute = async (;
@@ -1034,6 +1334,23 @@ if (throw error) {}
     disputeId: string  ): Promise < boolean> => {
     try {  }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  },;
+  const resolveDispute = async (;
+    disputeId: string,;
+
+
+
+
+    resolution: { summary: string, resolution_type: string }
+  ): Promise < boolean> => {
+    try {
+
+          resolution_summary: resolution && resolution.summary,
+          resolution_type: resolution && resolution.resolution_type
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   const resolve_dispute = async (
     dispute_id: string,
@@ -1053,8 +1370,8 @@ if (throw error) {}
   const createDispute = async (disputeData: {;
     project_id: string,;
     milestone_id?: string,;
-    reason_code: string,,
-  description: string;
+    reason_code: string,;
+    description: string;
   }): Promise<Dispute | null> => {;
     if (!user) {;
       toast.error("You must be logged in to create a dispute"),;
@@ -1113,6 +1430,7 @@ if (throw error) {}
           resolved_at: new Date().toISOString();
           resolution_summary: resolution.summary
           resolution_type: resolution.resolution_type
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1238,6 +1556,64 @@ if (throw error) {}
       if (error) throw error;
       // Update local state      return true
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        })
+        .eq("id", disputeId);
+      if (error) throw error;
+      // Update local state
+
+      const { error } = await supabase
+        .from("disputes")
+        .update({
+
+          status: 'resolved',
+          resolved_at: new Date().toISOString(),
+          resolution_summary: resolution.summary,
+          resolution_type: resolution.resolution_type
+        })
+        .eq("id", disputeId),
+      
+      if (error) throw error,
+      
+      // Update local state
+      setDisputes(prevDisputes => 
+        prevDisputes.map(dispute => 
+          dispute.id === disputeId 
+            ? { 
+                ...dispute, 
+                status: 'resolved', 
+                resolved_at: new Date().toISOString(),
+                resolution_summary: resolution.summary,
+
+
+                resolution_type: resolution.resolution_type as any
+              }
+            : dispute
+        )
+
+      setDisputes(prevDisputes => 
+        prevDisputes && prevDisputes.map(dispute => 
+          dispute && dispute.id === disputeId 
+            ? { 
+                ...dispute, 
+                status: 'resolved', 
+                resolved_at: new Date().toISOString();
+                resolution_summary: resolution && resolution.summary,
+                resolution_type: resolution && resolution.resolution_type as any
+              } 
+            : dispute
+        )
+      );
+      
+      toast && toast.success("Dispute resolved successfully");
+
+
+      ),
+      
+      toast.success("Dispute resolved successfully"),
+
+      return true
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (err: any) {
       console && console.error("Error resolving dispute:", err);
       toast && toast.error("Failed to resolve dispute");
@@ -1270,9 +1646,13 @@ if (throw error) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
   },
 
-  const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {    try {
+
+
+  const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
+    try {
       const { data, error } = await supabase;
         .from ("dispute_messages");
         .select (`;
@@ -1338,9 +1718,29 @@ if (throw error) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+        .order("created_at", { ascending: true }),
+      
+      if (error) throw error,
+      
+
+
+      return data as DisputeMessage[]
+    } catch (err: any) {
+      console && console.error("Error fetching dispute messages:", err);
+      toast && toast.error("Failed to fetch messages");
+      return []
+    }
+
+
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast && toast.error("You must be logged in to send a message");
@@ -1394,6 +1794,7 @@ if (throw error) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1419,11 +1820,27 @@ if (throw error) {}
       return data as DisputeMessage[];
     } catch (err: any) {"
       console.error ("Error fetching dispute messages:", err);"
+=======
+
+          user_profile:profiles ! dispute_messages_user_id_fkey (display_name, avatar_url);
+        `);
+        .eq ("dispute_id", dispute_id);
+        .order ("created_at", { ascending: true });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return data as DisputeMessage[];
+    } catch (err: any) {
+      console.error ("Error fetching dispute messages:", err);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error ("Failed to fetch messages");
       return [];
     }
   }
 ;
+<<<<<<< HEAD
   const addDisputeMessage = async (dispute_id: string, message: string, isAdminNote = false): Promise < boolean> => {}
     // Check condition;
 if ( {) {}
@@ -1578,6 +1995,88 @@ if ( {) {}
           user_id: user.id;
           message  ): Promise<boolean> => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const addDisputeMessage = async (dispute_id: string, message: string, isAdminNote = false): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to send a message");
+      return false;
+    }
+    try {
+      const { error } = await supabase;
+        .from ("dispute_messages");
+        .insert ({
+          dispute_id: dispute_id;
+
+          user_id: user.id;
+          message
+          user_id: user && user.id;
+          message,
+
+      
+      toast && toast.success("Message sent successfully");
+
+          dispute_id: disputeId,
+          user_id: user.id,
+          message,
+          is_admin_note: isAdminNote
+        }),
+      
+      if (error) throw error,
+      
+      toast.success("Message sent successfully"),
+
+      toast && toast.success("Message sent successfully");
+      return true
+    } catch (err: any) {
+      console && console.error("Error sending message:", err);
+      toast && toast.error("Failed to send message");
+      return false
+
+          is_admin_note: isAdminNote;
+        });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast.success ("Message sent successfully");
+      return true;
+    } catch (err: any) {
+      console.error ("Error sending message:", err);
+      toast.error ("Failed to send message");
+      return false;
+    }
+  }
+;
+  // Fetch disputes when component mounts or user changes;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_disputes ();
+    }
+  }, [user]);
+;
+
+  return {
+    disputes;
+    is_loading;
+    error;
+    refetch: fetch_disputes;
+    getDisputeById;
+    create_dispute;
+    updateDisputeStatus;
+
+    resolve_dispute;
+    getDisputeMessages,
+    addDisputeMessage;
+
+  ): Promise<boolean> => {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {;
       const { error } = await supabase;"
         .from("disputes");
@@ -1674,6 +2173,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -1689,10 +2189,244 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
-;  }
-}  }
+  }
+}
+    resolve_dispute;
+    getDisputeMessages,
+    addDisputeMessage;
+  }
+  },;
+;
+  const resolveDispute = async (;
+    disputeId:string, ;
+    resolution:{ summary:string, resolution_type:string }
+  ):Promise<boolean> => {;
+    try {;
+      const { error } = await supabase;
+        .from("disputes");
+        .update({;
+          status:'resolved',;
+          resolved_at:new Date().toISOString(),;
+          resolution_summary:resolution.summary,;
+          resolution_type:resolution.resolution_type;
+        });
+        .eq("id", disputeId),;
+      ;
+      if (error) throw error,;
+      ;
+      // Update local state;
+      setDisputes(prevDisputes => ;
+        prevDisputes.map(dispute => ;
+          dispute.id === disputeId ;
+            ? { ;
+                ...dispute, ;
+                status:'resolved', ;
+                resolved_at:new Date().toISOString(),;
+                resolution_summary:resolution.summary,;
+                resolution_type:resolution.resolution_type as any;
+              } dispute;
+        );
+      ),;
+      ;
+      toast.success("Dispute resolved successfully"),;
+      return true,;
+    } catch (err:any) {;
+      console.error("Error resolving dispute:", err),;
+      toast.error("Failed to resolve dispute"),;
+      return false,;
+    }
+  },;
+;
+  const getDisputeMessages = async (disputeId:string):Promise<DisputeMessage[]> => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("dispute_messages");
+        .select(`;
+          *,;
+          user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url);
+        `);
+        .eq("dispute_id", disputeId);
+        .order("created_at", { ascending:true }),;
+      ;
+      if (error) throw error,;
+      ;
+      return data as DisputeMessage[],;
+    } catch (err:any) {;
+      console.error("Error fetching dispute messages:", err),;
+      toast.error("Failed to fetch messages"),;
+      return [],;
+    }
+  },;
+;
+  const addDisputeMessage = async (disputeId:string, message:string, isAdminNote = false):Promise<boolean> => {;
+    if (!user) {;
+      toast.error("You must be logged in to send a message"),;
+      return false,;
+    }
+;
+    try {;
+      const { error } = await supabase;
+        .from("dispute_messages");
+        .insert({;
+          dispute_id:disputeId,;
+          user_id:user.id,;
+          message,;
+          is_admin_note:isAdminNote;
+        }),;
+      ;
+      if (error) throw error,;
+      ;
+      toast.success("Message sent successfully"),;
+      return true,;
+    } catch (err:any) {;
+      console.error("Error sending message:", err),;
+      toast.error("Failed to send message"),;
+      return false,;
+    }
+  },;
+;
+  // Fetch disputes when component mounts or user changes;
+  useEffect(() => {;
+    if (user) {;
+      fetchDisputes(),;
+    }
+  }, [user]),;
+;
+  return {;
+    disputes,;
+    isLoading,;
+    error,;
+    refetch:fetchDisputes,;
+    getDisputeById,;
+    createDispute,;
+    updateDisputeStatus,;
+    resolveDispute,;
+    getDisputeMessages,;
+    addDisputeMessage;
+  },; export function useDisputes () {
+  const {
+  user 
+}= useAuth ();
+const [disputes, setDisputes] = useState<Dispute[]> ([]);
+const [isLoading, setIsLoading] = useState (true);
+const [error, setError] = useState<string | null> (null);
+const fetchDisputes = async () => {
+  if (!user) {
+  setIsLoading (false);
+return 
+}try {
+  setIsLoading (true);
+const {
+  data, error: fetchError 
+}= await supabase .from ("disputes") project: projects (scope summary;
+job id;
+client id;
+talent id;
+job:jobs (title) );
+client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url) );
+talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) ) `) //Transform data if needed 
+}finally {
+  setIsLoading (false) 
+}
+};
+const getDisputeById = async (disputeId: string) : Promise<Dispute | null> => {
+  try {
+  const {
+  data, error 
+}= await supabase .from ("disputes") project: projects (scope summary;
+job id;
+client id;
+talent id;
+job:jobs (title) );
+client profile:projects!projects client id fkey (client profile:profiles!projects client id fkey (display name, avatar url) );
+talent profile:projects!projects talent id fkey (talent profile:profiles!projects talent id fkey (display name, avatar url) ) `) if (error) throw error;
+}
+};
+const createDispute = async (disputeData: {
+  project id: string;
+milestone id?: string;
+reason code: string;
+description: string 
+}) : Promise<Dispute | null> => {
+  if (!user) {
+  
+}try {
+  const {
+  data, error 
+}= await supabase .from ("disputes") .insert ({
+  ...disputeData;
+raised by: user.id 
+}) if (error) throw error;
+}
+};
+const updateDisputeStatus = async (disputeId: string, status: DisputeStatus) : Promise<boolean> => {
+  try {
+  const {
+  error 
+}= await supabase .from ("disputes") .update ({
+  status 
+}) //Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id === disputeId ? {
+  ...dispute, status 
+}: dispute) );
+}
+};
+//Update local state setDisputes (prevDisputes => prevDisputes.map (dispute => dispute.id === disputeId ? {
+  ...dispute, status: 'resolved', resolved at: new Date () .toISOString (), resolution summary: resolution.summary, resolution type: resolution.resolution type as any 
+}: dispute) );
+}
+};
+const getDisputeMessages = async (disputeId: string) : Promise<DisputeMessage[]> => {
+  try {
+  const {
+  data, error 
+}= await supabase .from ("dispute messages") user profile:profiles!dispute messages user id fkey (display name, avatar url) `) 
+}
+};
+const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false) : Promise<boolean> => {
+  if (!user) {
+  
+}try {
+  const {
+  error 
+}= await supabase .from ("dispute messages") .insert ({
+  dispute id: disputeId;
+user id: user.id;
+message;
+is admin note: isAdminNote 
+});
+}
+};
+// Fetch disputes when component mounts or user changes useEffect ( () => {
+  if (user) {
+  fetchDisputes () 
+}
+}, [user]);
+return {
+  disputes;
+isLoading;
+error;
+refetch: fetchDisputes;
+getDisputeById;
+createDispute;
+updateDisputeStatus;
+resolveDispute;
+getDisputeMessages;
+addDisputeMessage 
+}
+}
+  }
+}
+;
+  }
+}
+;
+  }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

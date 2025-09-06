@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
@@ -33,7 +36,12 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ];
@@ -73,6 +81,7 @@ export default function ServicesPage() {,
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,        {/* Why Choose Us */};
 =======
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
+<<<<<<< HEAD
 }
 ];
 export default function ServicesPage() {return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};        {/* Why Choose Us */}
@@ -113,12 +122,15 @@ export default function ServicesPage() {
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                       <ul className="space-y-2">,
                         {service.services.map((item, idx) => (,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
                             {item};
                     {/* CTA */};
+<<<<<<< HEAD
                     <Link
                       href={service.href};
                       Explore {service.title};
@@ -129,14 +141,32 @@ export default function ServicesPage() {
 
 
 
+=======
+                    <Link,
+                      href={service.href};
+                      Explore {service.title};
+                      <ArrowRight className="w-4 h-4 ml-2" />,
+                    </Link>,
+                  </div>,
+                </motion.div>,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
               ))};
             </div>,
           </div>,
         </section>,
+<<<<<<< HEAD
 
         {/* Why Choose Us */};
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+        {/* Why Choose Us */};
+
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ];
 ;
@@ -148,12 +178,18 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
         {/* Why Choose Us */}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 ;
   }
+<<<<<<< HEAD
 
 ;
   }
@@ -167,7 +203,12 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
   }
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ],;
 ,;
 export default function ServicesPage() {,;
@@ -181,12 +222,20 @@ export default function ServicesPage() {,;
         {/* Hero Section */};
                     {/* Header */};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         {/* Hero Section */};
                     {/* Header */};
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Hero Section */},;
                     {/* Header */},;
                     <div className="flex items-center mb-6">,;
@@ -204,8 +253,13 @@ export default function ServicesPage() {,;
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                     {/* Description */};
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <p className="text-gray-600 mb-6">{service.description}</p>,;
@@ -213,8 +267,13 @@ export default function ServicesPage() {,;
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key:Services:</h4>,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                       <ul className="space-y-2">,;
                         {service.services.map((item, idx) => (,;
                           <li key={idx} className="flex items-center text-sm text-gray-600">,;
@@ -231,7 +290,16 @@ export default function ServicesPage() {,;
             </div>,;
           </div>,;
         </section>,;
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+<<<<<<< HEAD
+=======
+
+
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Why Choose Us */};
                             {item};
                     {/* CTA */};
@@ -255,6 +323,7 @@ export default function ServicesPage() {,;
         {/* Why Choose Us */};
         {/* Why Choose Us */};
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Why Choose Us */};
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -266,6 +335,8 @@ export default function ServicesPage() {,;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         {/* Why Choose Us */};
 
@@ -282,4 +353,10 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

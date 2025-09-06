@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:hooks.disabled/useWallet.ts
 ========
 =======
@@ -46,6 +47,9 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -68,6 +72,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,6 +121,20 @@ interface UseWalletProps {
 >>>>>>> main
 <<<<<<<< HEAD:hooks.disabled/useWallet.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+interface UseWalletProps {
+  // Add props here as needed
+
+
+
+import React from 'react';
+
+interface UseWalletProps {
+  // Add props here as needed
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function UseWallet({ }: UseWalletProps) {
 ========
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -142,6 +161,7 @@ export default function UseWallet({ }: UseWalletProps) {
       <h1>UseWallet</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -325,9 +345,35 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
   );}
 
+=======
+  );
+}
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
+
+
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+}
+
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

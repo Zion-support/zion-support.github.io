@@ -24,6 +24,7 @@ console.log('=====');
 const { execSync } = require('child_process');
 const fs = require('fs');
 
+<<<<<<< HEAD
 
 
 console.log('🧪 Automated Testing Suite');
@@ -88,6 +89,10 @@ async function runTests() {
 
 
 
+=======
+console.log('🧪 Automated Testing Suite');
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -107,6 +112,7 @@ runTests().catch(console.error);
   
   return report;
 }
+<<<<<<< HEAD
 
 
 runTests().catch(console.error);
@@ -527,4 +533,10 @@ module.exports = AutomatedTestingSuite;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

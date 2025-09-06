@@ -3,10 +3,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔍 Debugging Next.js project structure...');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -221,6 +228,7 @@ for (const file of allFiles) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -257,6 +265,15 @@ for (const file of allFiles) {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+    if (content.includes('') || content.includes('
+}
+}
+      problematicFiles.push(file);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   } catch (error) {'
     // Skip files that can't be read;
@@ -289,6 +306,7 @@ function getAllFiles(dir, extensions) {}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,6 +334,9 @@ console.log('✅ Debug completed'),;console.log('✅ Debug completed');
 =======
 ;
 console.log('✅ Debug completed'),;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('✅ Debug completed');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======

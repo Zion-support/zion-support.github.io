@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD:pages/automation/contract-builder.tsx
 <<<<<<< HEAD
@@ -455,6 +456,8 @@ export default function ContractBuilderPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/contract-builder.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -808,10 +811,13 @@ if (return, ) {}
             </div>
           </div>"
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {contract}
           </article>
         </div>
@@ -848,6 +854,7 @@ if (return, ) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </article>;
         </div>;
       )  } catch (error) {"
@@ -902,3 +909,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

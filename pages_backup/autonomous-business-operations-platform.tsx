@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +55,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Bot,
   Brain,
   Cpu,
@@ -77,16 +80,21 @@
   Workflow,;
 } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
       icon: Bot,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
       title: "AI Autonomous Management",
@@ -163,6 +171,8 @@ const AutonomousBusinessOperationsPlatform = () => {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 title: 'AI Autonomous Management',
       description:
         'Fully autonomous business operations with intelligent decision-making',
@@ -219,6 +229,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Automated trading, risk management, and compliance monitoring',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
       title: "Retail"
@@ -471,6 +482,8 @@ const AutonomousBusinessOperationsPlatform = () => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: 'Retail',
       description:
         'Inventory management, customer service, and sales optimization',
@@ -504,12 +517,16 @@ title: 'Increased Efficiency',
     },
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -566,6 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='https://ziontechgroup.com/autonomous-business-operations-platform'
         />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -646,6 +664,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
         {/* Hero Section */}
@@ -674,6 +694,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
@@ -792,6 +813,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
 <div className='flex justify-center mb-6'>
                 <div className='p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full'>
@@ -832,6 +855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1140,6 +1164,9 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+        {/* Features Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1211,6 +1238,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   >
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -1336,6 +1364,8 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <h3 className='text-xl font-semibold text-white mb-3'>
                     {feature.title}
                   </h3>
@@ -1409,6 +1439,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}
 className='flex items-center space-x-3'
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -1480,6 +1511,8 @@ className='flex items-center space-x-3'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
                   <span className='text-gray-300'>{capability}</span>
                 </motion.div>
@@ -1506,6 +1539,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1519,6 +1553,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               className="text - center mb - 16";
             >;
@@ -1538,12 +1574,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {benefits.map((benefit, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1642,6 +1682,7 @@ className='text-center'
                     <div className='inline-flex p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4'>
                       <benefit.icon className='w-8 h-8 text-white' />
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
                     <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.value}</div>
@@ -1917,6 +1958,8 @@ className='text-center'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <div className='text-3xl font-bold text-blue-400 mb-2'>
                       {benefit.value}
                     </div>
@@ -2085,6 +2128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 };
 export default AutonomousBusinessOperationsPlatform;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
 <<<<<<< HEAD
 
@@ -2161,3 +2205,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

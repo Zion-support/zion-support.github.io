@@ -11,11 +11,13 @@ import {Label} from "@/components/ui/label";
 import {useToast} from "@/hooks/use-toast";
 import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {;
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +55,20 @@ export function WaitlistSection() {
 =======
   const { toast } = useToast();  const [email, setEmail] = useState(""),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const { toast } = useToast();
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { useToast } from "@/hooks/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast",
+import { Checkbox } from "@/components/ui/checkbox",
+export function WaitlistSection() {
+  const [email, setEmail] = useState(""),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [name, setName] = useState(""),
   const [role, setRole] = useState(""),
   const [agreeTerms, setAgreeTerms] = useState(false),
@@ -65,10 +81,16 @@ export function WaitlistSection() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email |!name |!role |!agreeTerms) {
@@ -79,12 +101,15 @@ export function WaitlistSection() { return null; }
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -92,6 +117,7 @@ export function WaitlistSection() { return null; }
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -100,6 +126,9 @@ export function WaitlistSection() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     
     setIsSubmitting(true),
     
@@ -108,13 +137,15 @@ export function WaitlistSection() { return null; }
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
 
+
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
+      setEmail("");
+      setName("");
+      setRole("");
       setEmail(""),
-      setName(""),
-      setRole(""),      setEmail(""),
       setName(""),
       setRole(""),
       setAgreeTerms(false)
@@ -122,10 +153,100 @@ export function WaitlistSection() { return null; }
       toast({
         variant: "destructive"
         title: "Something went wrong"
-        description: "Please try again later."})    } finally {
+        description: "Please try again later."})
+
+import { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { use_toast } from '@/hooks / use - toast';
+import { Checkbox } from '@/components / ui / checkbox';
+export /**
+ * WaitlistSection - Function description
+ */
+function WaitlistSection() {
+  const [email, set_email] = useState ("");
+  const [name, set_name] = useState ("");
+  const [role, set_role] = useState ("");
+  const [agree_terms, setAgreeTerms] = useState (false);
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { toast } = use_toast ();
+;
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default (),
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        variant: "destructive",
+        title: "Missing information",
+        description: "Please fill all fields and agree to the terms."}),
+      return;
+    }
+    setIsSubmitting (true);
+;
+    try {
+      // Simulating an API call;
+      await new Promise (resolve => set_timeout (resolve, 1000));
+;
+      toast ({
+        title: "Success!",
+        description: "Thank you for registering with Zion. We'll be in touch soon."}),
+      // Reset form;
+      set_email ("");
+      set_name ("");
+      set_role ("");
+      setAgreeTerms (false);
+    } catch (error) {
+      toast ({
+        variant: "destructive",
+        title: "Something went wrong",
+        description: "Please try again later."});
+
+
+    } finally {
       setIsSubmitting (false);
     }
   }
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+
+    if (!email || !name || !role || !agreeTerms) {;
+      toast({;
+        variant: "destructive",;
+        title: "Missing information",;
+        description: "Please fill all fields and agree to the terms."}),;
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {;
+      // Simulating an API call;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast({;
+        title: "Success!",;
+        description: "Thank you for registering with Zion. We'll be in touch soon."}),;
+
+      // Reset form;
+      setEmail("");
+      setName("");
+      setRole("");
+      setAgreeTerms(false);
+    } catch (error) {;
+      toast({;
+        variant: "destructive",;
+        title: "Something went wrong",;
+        description: "Please try again later."});
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+
     } finally {
 =======
     
@@ -250,9 +371,12 @@ if ( {) {}
 <<<<<<< HEAD
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
+
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">;
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>;
         <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;
       </div>;
+
       <div className="container mx-auto px-4 relative z-10">;
         <div className="max-w-3xl mx-auto">;
 =======
@@ -276,7 +400,26 @@ if ( {) {}
 <<<<<<< HEAD
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
             <div className="space-y-2">;
-              <Label htmlFor="name">Full Name</Label>;              <Input
+              <Label htmlFor="name">Full Name</Label>;
+
+
+  return (
+    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
+      {/* Background elements */}
+              <Input
+                id="name"
+                placeholder="John Smith"
+                value={name}
+
+                onChange={(e) => setName(e && e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+
+            <div className="space-y-2">;
+              <Label htmlFor="email">Email Address</Label>;
+
+              <Input
                 id="email"
                 type="email"
                 placeholder="you@company && company.com"
@@ -287,6 +430,7 @@ if ( {) {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
   return ("
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
@@ -298,10 +442,14 @@ if ( {) {}
                 value={name}
 
                 onChange={(e) => setName(e && e.target.value)}"
+=======
+                onChange={(e) => setEmail(e && e.target.value)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
 
+<<<<<<< HEAD
 
 
               <Input"
@@ -324,15 +472,33 @@ if ( {) {}
                 value={role}
 
                 onChange={(e) => setRole(e && e.target.value)}"
+=======
+            <div className="space-y-2">;
+              <Label htmlFor="role">Your Role</Label>;
+
+              <Input
+                id="role"
+                placeholder="IT Manager, Developer, Business Owner, etc."
+                value={role}
+
+                onChange={(e) => setRole(e && e.target.value)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
 
+<<<<<<< HEAD
 
+=======
+            <div className="flex items-center space-x-2">;
+              <Checkbox
+                id="terms" 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />;
+<<<<<<< HEAD
               <Label"
                 htmlFor="terms"
 <<<<<<< HEAD
@@ -408,6 +574,17 @@ if ( {) {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <Label
+                htmlFor="terms"
+
+
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >"
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -417,6 +594,7 @@ if ( {) {}
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,6 +611,9 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -461,10 +642,14 @@ export function WaitlistSection() { return null; }
         variant: "destructive",;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Missing information",;
         description: "Please fill all fields and agree to the terms."}),;
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
@@ -483,22 +668,33 @@ export function WaitlistSection() { return null; }
     }
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
 
 
+<<<<<<< HEAD
 
 
             <Button"
               type="submit" 
               disabled={isSubmitting} "
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;"
+=======
+            <Button
+              type="submit" 
+              disabled={isSubmitting} 
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {isSubmitting ? "Processing..." : "Complete Registration"}
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -515,33 +711,58 @@ export function WaitlistSection() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-    <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow-hidden">;
+    <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
       {/* Background elements */}
-      <div className="absolute top - 0 left - 0 w - full h - full overflow - hidden opacity-10">;
-        <div className="absolute -top - 40 -left - 40 w - 80 h - 80 bg - zion - purple rounded-full filter blur-[100px]"></div>;
-        <div className="absolute top - 40 right - 20 w - 60 h - 60 bg - zion - cyan rounded-full filter blur-[100px]"></div>;
+      <div className="absolute top - 0 left - 0 w - full h - full overflow - hidden opacity - 10">;
+        <div className="absolute -top - 40 -left - 40 w - 80 h - 80 bg - zion - purple rounded - full filter blur-[100px]"></div>;
+        <div className="absolute top - 40 right - 20 w - 60 h - 60 bg - zion - cyan rounded - full filter blur-[100px]"></div>;
       </div>;
-      <div className="container mx - auto px - 4 relative z-10">;
-        <div className="max - w-3xl mx-auto">;
-          <div className="text - center mb-12">;
+      <div className="container mx - auto px - 4 relative z - 10">;
+        <div className="max - w-3xl mx - auto">;
+          <div className="text - center mb - 12">;
             <GradientHeading > Register Now</GradientHeading>;
-            <p className="text - zion - slate - light text - lg mt-4">;
+            <p className="text - zion - slate - light text - lg mt - 4">;
               Join our growing community of AI and tech professionals.;
               Complete your registration to access exclusive features and personalized services.;
             </p>;
-          </div>;              <Input;
+          </div>;
+          <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
+            <div className="space - y-2">;
+              <Label html_for="name">Full Name</Label>;
+              <Input;
                 id="name";
                 placeholder="John Smith";
-                value={name}              <Input;
+                value={name}
+                on_change={(e) => set_name (e.target.value)}
+                className="bg - zion - blue - dark border - zion - blue - light";
+              />;
+            </div>;
+            <div className="space - y-2">;
+              <Label html_for="email">Email Address</Label>;
+              <Input;
+                id="email";
+                type="email";
+                placeholder="you@company.com";
+                value={email}
+                on_change={(e) => set_email (e.target.value)}
+                className="bg - zion - blue - dark border - zion - blue - light";
+              />;
+            </div>;
+            <div className="space - y-2">;
+              <Label html_for="role">Your Role</Label>;
+              <Input;
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
                 on_change={(e) => set_role (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue-light";
+                className="bg - zion - blue - dark border - zion - blue - light";
               />;
             </div>;
-            <div className="flex items - center space-x-2">;
+            <div className="flex items - center space - x-2">;
               <Checkbox;
                 id="terms";
                 checked={agree_terms}
@@ -549,6 +770,7 @@ export function WaitlistSection() { return null; }
               />;
               <Label;
                 html_for="terms";
+<<<<<<< HEAD
                 className="text - sm text - zion - slate font-normal";              >;
 =======
   return ("
@@ -605,14 +827,24 @@ export function WaitlistSection() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                className="text - sm text - zion - slate font - normal";
+              >;
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
+              </Label>;
+            </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Button;
               type="submit";
               disabled={is_submitting}
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
             >;
               {is_submitting ? "Processing..." : "Complete Registration"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ;
             <Button ;
               type="submit" ;
@@ -626,6 +858,7 @@ export function WaitlistSection() { return null; }
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
             >;
               {isSubmitting ? "Processing..." : "Complete Registration"}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -635,10 +868,13 @@ export function WaitlistSection() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Button>;
           </form>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>;
   );
@@ -649,12 +885,15 @@ export function WaitlistSection() { return null; }
 =======
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 }
     </section>);
+<<<<<<< HEAD
     </section>;
   ),; const handleSubmit = async (e: React.FormEvent) => {}
   e.preventDefault ();
@@ -668,18 +907,40 @@ if (!email || !name || !role || !agreeTerms) {}
 };"
 return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden" > {}
   /* Background elements */ "
+=======
+}
+}
+    </section>);
+    </section>;
+  ),; const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault ();
+if (!email || !name || !role || !agreeTerms) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+}finally {
+  setIsSubmitting (false) 
+}
+};
+return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden" > {
+  /* Background elements */ 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }<div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10" > <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]" ></div> <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]" ></div> container mx-auto px-4 relative z-10"> <div className=" max-w-3xl mx-auto"> <div className=" text-center mb-12"> <GradientHeading>Register Now</GradientHeading> <p className=" text-zion-slate-light text-lg mt-4"> Join our growing community of AI and tech professionals. Complete your registration to access exclusive features and personalized services. </p> </div> /> </div> <div className=" space-y-2"> <Label htmlFor=" email">Email Address</Label> <Input /> </div> <div className=" space-y-2"> <Label htmlFor=" role">Your Role</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Checkbox /> <Label htmlFor=" terms"className=" text-sm text-zion-slate font-normal" > I agree to receive updates about Zion and understand I can unsubscribe anytime. </Label> </div> <Button </Button> </form> </div> </div> </section>) 
 }
     </section>;
   );
 }
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -693,3 +954,5 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

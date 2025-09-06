@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -14,10 +15,14 @@
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function useResumeList() {
@@ -29,11 +34,15 @@ export function useResumeList() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function useResumeList() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -69,6 +78,11 @@ export function useResumeList() {  const { user } = useAuth();
 =======
 export function useResumeList() {  const { user } = useAuth();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  const { user } = useAuth();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -85,6 +99,7 @@ export function useResumeList() {  const { user } = useAuth();
       const { data: resumeData, error: resumeError } = await supabase'
         .from('talent_resumes')'
         .select('*')
+<<<<<<< HEAD
 <<<<<<< HEAD
         setResumes([]);
         return []
@@ -116,10 +131,28 @@ function useResumeList() {
   const fetch_resumes = async () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        .eq('user_id', user && user.id)
+        .order('is_active', { ascending: false })
+        .order('created_at', { ascending: false });
+      if (resumeError) throw resumeError;
+
+      
+      if (!resumeData || resumeData && resumeData.length === 0) {
+
+        setResumes([]);
+        return []
+      }
+      // Transform data to match Resume type
+      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
+        id: resume && resume.id;
+        user_id: resume && resume.user_id;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         basic_info: {
 <<<<<<< HEAD
@@ -165,6 +198,15 @@ if ( {) {}
 
 
 
+=======
+        basic_info: {
+
+          id: resume && resume.id;
+          title: resume && resume.title;
+          headline: resume && resume.headline,
+          summary: resume && resume.summary
+        };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         work_experience: [];
         education: [];
         skills: [];
@@ -175,12 +217,63 @@ if ( {) {}
 ;
       set_resumes (transformed_resumes);
       return transformed_resumes;
+<<<<<<< HEAD
     } catch (e: any) {'
+=======
+    } catch (e: any) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ('Error fetching resumes:', e);
       set_error (e.message);
       return [];
 
+<<<<<<< HEAD
     } finally {}
+=======
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+;
+  // Fetch resumes when the component mounts;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_resumes ();
+    }
+  }, [user]);
+;
+
+  return {
+    is_loading;
+    error;
+    resumes;
+
+
+  }
+}
+      const transformedResumes: Resume[] = resumeData.map(resume => ({
+        id: resume.id;
+        user_id: resume.user_id;
+        basic_info: {
+          id: resume.id;
+          title: resume.title;
+          headline: resume.headline
+          summary: resume.summary
+        }
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: []
+        is_active: resume.is_active
+      }));
+      setResumes(transformedResumes);
+      return transformedResumes
+    } catch (e: any) {
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading (false);
     }
   }

@@ -9,10 +9,15 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+<<<<<<< HEAD
 export interface TalentProfileData {export interface TalentProfileData {
 =======
 import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';
+=======
+export interface TalentProfileData {
+export interface TalentProfileData {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -24,12 +29,16 @@ import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   title: string;
   bio: string;
@@ -38,6 +47,7 @@ export interface TalentProfileData {;
   location?: string;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -52,6 +62,9 @@ export interface CategorizedSkills {;
 export interface CategorizedSkills {
 =======
 =======
+=======
+export interface CategorizedSkills {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   title: string;
   bio: string;
@@ -59,15 +72,19 @@ export interface CategorizedSkills {
   location?: string;
 }
 export interface CategorizedSkills {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 export interface CategorizedSkills {;
 
+<<<<<<< HEAD
 
 export interface TalentProfileData {};
   name: string;
@@ -85,9 +102,25 @@ export interface CategorizedSkills {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   programming: string[];
   devops: string[];
   platforms: string[];
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export interface TalentProfileData {
+  name: string;
+  title: string;
+  bio: string;
+}
+export interface CategorizedSkills {
+
+export interface CategorizedSkills {;
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +166,7 @@ export interface EnhancedProfile {}
     setIsGenerating(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setError(null)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,12 +199,32 @@ export function useTalentProfileEnhancer() { return null; }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    setError(null)
+
+export interface EnhancedProfile {
+  summary: string,
+  categorizedSkills: CategorizedSkills
+}
+
+export function useTalentProfileEnhancer() {;
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+    setIsGenerating(true);
+    setError(null),
+    
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -199,6 +253,12 @@ export function useTalentProfileEnhancer() { return null; }
 =======
     setError(null)      if (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+      if (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         throw new Error(error.message)
 import { useState } from 'react',;
 =======
@@ -266,6 +326,7 @@ export interface CategorizedSkills {};
   devops: string[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   platforms: string[];
 
       return null;
@@ -279,6 +340,13 @@ export interface CategorizedSkills {};
 =======
 
 
+=======
+  platforms: string[];
+      return null
+    } finally {
+      setIsGenerating(false)
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -286,15 +354,19 @@ export interface CategorizedSkills {};
   
 
 
+<<<<<<< HEAD
 
   }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return {
     enhanceProfile;
     isGenerating;
 
     error
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -303,11 +375,20 @@ export interface CategorizedSkills {};
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+  }
+  return {
+    enhanceProfile;
+    isGenerating;
+
+    error
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },;
   return {;
     enhanceProfile;
     isGenerating;
     error;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   soft_skills: string[],
 =======
@@ -316,6 +397,9 @@ export interface CategorizedSkills {};
 =======
   platforms: string[];  soft_skills: string[],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  soft_skills: string[],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   other: string[];
 }
 export interface EnhancedProfile {
@@ -358,6 +442,7 @@ if ( {) {
     is_generating;
     error;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
@@ -374,3 +459,10 @@ if ( {) {
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

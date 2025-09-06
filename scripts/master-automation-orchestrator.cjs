@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -41,6 +42,8 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -49,11 +52,19 @@
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -68,9 +79,33 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
 <<<<<<< HEAD
 =======
   console.log('\n "Recommendations")
+<<<<<<< HEAD
 
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+
+<
+
+<<<<<<< HEAD
+=======
+class MasterAutomationOrchestrator {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.logFile = path.join(this.reportsDir, 'master-automation.log');
+    this.results = {
+      scripts: [],
+      tests: { passed: 0, failed: 0 },
+      builds: { success: false },
+      improvements: [],
+      errors: []
+    };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.ensureDirectories();
   }
 
@@ -80,27 +115,87 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
     }
   }
 
+<<<<<<< HEAD
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
+=======
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    const logMessage = `${prefix} [${timestamp}] ${message}`;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
+<<<<<<< HEAD
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
+        timeout: 300000, // 5 minutes timeout
+        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options,
       });
+<<<<<<< HEAD
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
+=======
+      this.log(`✅ ${description} completed successfully`, 'SUCCESS');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+      };
+    }
+  }
+
+  async runScript(scriptPath, description) {
+    this.log(`\n🔄 Running: ${description}`);
+    
+    try {
+      const result = await this.runCommand(`node ${scriptPath}`, description);
+      
+      this.results.scripts.push({
+        name: description,
+        path: scriptPath,
+        success: result.success,
+        error: result.error
+      });
+      
+      if (result.success) {
+        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
+      } else {
+        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
+        this.results.errors.push(`${description}: ${result.error}`);
+      }
+      
+      return result;
+    } catch (error) {
+      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
+      this.results.errors.push(`${description}: ${error.message}`);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return { success: false, error: error.message };
     }
   }
@@ -327,7 +422,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return { success: false, error: error.message };
     }
   }
@@ -531,17 +629,26 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 }
 
+<<<<<<< HEAD
 // Run the automation
 if (require.main === module) {
   const automation = new MasterAutomationOrchestrator();
   automation.run().then(result => {
     if (result.success) {
+=======
+// Run the master automation orchestrator
+if (require.main === module) {
+  const orchestrator = new MasterAutomationOrchestrator();
+  orchestrator.run().then(result => {
+    if (result && result.success) {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       console.log('✅ Master automation orchestration completed successfully');
       process.exit(0);
     } else {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
+<<<<<<< HEAD
   });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
@@ -563,8 +670,18 @@ module.exports = MasterAutomationOrchestrator;
 >origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
   console.log('\n "Recommendations")
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  }).catch(console.error);
+}
+
+module.exports = MasterAutomationOrchestrator;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

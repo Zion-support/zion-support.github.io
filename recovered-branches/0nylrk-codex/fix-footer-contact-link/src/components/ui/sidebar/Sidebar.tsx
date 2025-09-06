@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,10 +32,15 @@ import { cn } from "@/lib/utils",
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   children?: React && React.ReactNode;
@@ -122,8 +128,13 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 import React from "react",
 import { cn } from "@/lib/utils",
 
+=======
+
+  className?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   children?: React && React.ReactNode;
 }
+
 
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
@@ -136,12 +147,20 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
 
         className
+        className
+
 
       className={cn(
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -152,8 +171,10 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
 
+
 import React from "react",
 import { cn } from "@/lib/utils",
+
 
 import {cn} from "@/lib/utils";
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
@@ -221,6 +242,7 @@ export function Sidebar() { return null; }
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -251,6 +273,23 @@ function Sidebar() {}
   return (
     <div;
       className={cn ("
+=======
+}
+
+import React from './react';
+import { cn } from '@/lib / utils';
+interface SidebarProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+}
+export /**
+ * Sidebar - Function description
+ */
+function Sidebar() {
+  return (
+    <div;
+      className={cn (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "flex flex - col h - screen bg - background border - r border - border shrink - 0 w - 64 overflow - y-auto transition - all duration - 200";
         class_name)}
       {...props}
@@ -260,6 +299,9 @@ function Sidebar() {}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -300,6 +342,7 @@ children?: React.ReactNode
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -315,3 +358,5 @@ children?: React.ReactNode
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

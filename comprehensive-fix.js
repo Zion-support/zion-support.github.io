@@ -199,6 +199,7 @@ function fixNextLinks(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -241,6 +242,9 @@ function fixNextLinks(filePath) {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    if (content.includes("href="/") && !content.includes("import Link")) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   content = content.replace(;
         /import React from "react";/,"
         "import React from "react";"
@@ -257,6 +261,7 @@ import Link from "next/link";";
     fs.writeFileSync(filePath, content);"
     console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {}`
   console.error(`Error fixing links in ${filePath}:`, error.message)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,6 +287,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 =======
 

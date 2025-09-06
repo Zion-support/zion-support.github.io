@@ -1,22 +1,38 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactFormdynamic from '../components/ContactForm.dynamic';
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 describe('ContactFormdynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormdynamic />);
     expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});
@@ -49,10 +65,15 @@ describe('ContactFormdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormdynamic from "./components/ContactForm.dynamic"; describe('ContactFormdynamic', () => { test("renders without crashing",() => { render(<ContactFormdynamic />); expect(screen.getByTestId("contactform.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormdynamic />)}); test("handles user interactions",() => { render(<ContactFormdynamic />)}); test("applies correct styling"
+
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});
+<<<<<<< HEAD
 main
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   test('displays correct content', () => {
     render(<ContactFormdynamic />);
@@ -70,3 +91,9 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

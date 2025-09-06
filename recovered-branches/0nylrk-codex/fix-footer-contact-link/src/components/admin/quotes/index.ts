@@ -22,6 +22,7 @@ export { QuotesTable } from "./QuotesTable";
 export { QuoteStatusCards } from './QuoteStatusCards',;
 export { QuotesFilter } from './QuotesFilter',;
 export { QuotesTable } from './QuotesTable';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -32,3 +33,13 @@ export { QuotesTable } from './QuotesTable';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export { QuoteStatusCards } from "./QuoteStatusCards";
+export { QuotesFilter } from "./QuotesFilter";
+export { QuotesTable } from "./QuotesTable";
+
+export { QuoteStatusCards } from './QuoteStatusCards',;
+export { QuotesFilter } from './QuotesFilter',;
+export { QuotesTable } from './QuotesTable';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

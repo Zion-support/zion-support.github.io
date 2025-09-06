@@ -32,7 +32,10 @@ function fixMergeConflicts(filePath) {
     // Remove merge conflict markers and keep the HEAD version (first part)
 <<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     const conflictRegex = /
     
@@ -51,7 +54,11 @@ function fixMergeConflicts(filePath) {
 
     // Remove any remaining conflict markers
     content = content.replace(/
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
@@ -168,7 +175,12 @@ console.log('\n✨ Merge conflict resolution script completed!');
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

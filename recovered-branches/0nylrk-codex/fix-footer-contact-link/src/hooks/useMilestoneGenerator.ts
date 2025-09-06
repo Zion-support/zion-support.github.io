@@ -35,6 +35,7 @@ export interface MilestoneInput {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export interface GeneratedMilestone {
@@ -58,10 +59,15 @@ export interface GeneratedMilestone {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
 
 export interface GeneratedMilestone {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -72,6 +78,9 @@ export interface GeneratedMilestone {;
 =======
   title: string,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
 <<<<<<< HEAD
 
@@ -85,6 +94,7 @@ export interface GeneratedMilestone {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+
 export function useMilestoneGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -108,6 +118,7 @@ export function useMilestoneGenerator() {};
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -119,10 +130,16 @@ export function useMilestoneGenerator() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
+<<<<<<< HEAD
         isAiGenerated: true}));      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({    } finally {
 =======
   const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {}
@@ -135,10 +152,15 @@ export function useMilestoneGenerator() {};
       if (error) throw error;
       // Mark each milestone as AI generated;
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({}
+=======
+
+      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   due_date: string;
   estimated_hours: number,
   isAiGenerated: boolean;
 }
+<<<<<<< HEAD
 export /**;
  * useMilestoneGenerator - Function description;
  */
@@ -161,11 +183,36 @@ if (throw error) {}
       const milestonesWithFlag = data.milestones.map ((milestone: any) => ({}
         ...milestone,
 
+=======
+export /**
+ * useMilestoneGenerator - Function description
+ */
+function useMilestoneGenerator() {
+  const [is_generating, setIsGenerating] = useState (false);
+  const [generated_milestones, setGeneratedMilestones] = useState < GeneratedMilestone[]>([]);
+;
+  const generate_milestones = async (input: MilestoneInput): Promise < GeneratedMilestone[]> => {
+    try {
+      setIsGenerating (true),
+      const { data, error } = await supabase.functions.invoke ('generate - milestones', {
+        body: input;
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Mark each milestone as AI generated;
+      const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
+
+        ...milestone,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         isAiGenerated: true}));
 
 ;
       setGeneratedMilestones (milestonesWithFlag);
       return milestonesWithFlag;
+<<<<<<< HEAD
     } catch (error) {'
       console.error ('Error generating milestones:', error);'
       toast.error ('Failed to generate milestones');
@@ -217,6 +264,21 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useState } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    } catch (error) {
+      console.error ('Error generating milestones:', error);
+      toast.error ('Failed to generate milestones');
+      return [];
+
+        isAiGenerated: true}));
+    } finally {
+      setIsGenerating (false);
+    }
+  }
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from 'sonner',;
 export interface MilestoneInput {;
   scope: string,;
@@ -233,7 +295,16 @@ export interface GeneratedMilestone {;
   isAiGenerated: boolean;
 }
 ;
+<<<<<<< HEAD
 export function useMilestoneGenerator() { return null; }
+=======
+export function useMilestoneGenerator() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {;
+    try {;
+      setIsGenerating(true),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase.functions.invoke('generate-milestones', {;
         body: input;
       }),;
@@ -244,8 +315,13 @@ export function useMilestoneGenerator() { return null; }
         isAiGenerated: true})),;
       setGeneratedMilestones(milestonesWithFlag),;
       return milestonesWithFlag;
+<<<<<<< HEAD
     } catch (error) {;'
       console.error('Error generating milestones:', error),;'
+=======
+    } catch (error) {;
+      console.error('Error generating milestones:', error),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error('Failed to generate milestones'),;
       return [];
     } finally {;
@@ -259,6 +335,7 @@ export function useMilestoneGenerator() { return null; }
     generateMilestones,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     generatedMilestones;
@@ -269,12 +346,15 @@ export function useMilestoneGenerator() { return null; }
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
     generatedMilestones;
     isGenerating;
 
+<<<<<<< HEAD
 
 
     generatedMilestones;
@@ -313,6 +393,23 @@ export function useMilestoneGenerator() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   }    clearGeneratedMilestones}
+=======
+    generatedMilestones;
+    isGenerating;
+
+;
+  const clearGeneratedMilestones = () =>: any {
+    setGeneratedMilestones ([]);
+  }
+;
+  return {
+    generate_milestones;
+    generated_milestones;
+    is_generating;
+    clearGeneratedMilestones}
+}
+    clearGeneratedMilestones}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

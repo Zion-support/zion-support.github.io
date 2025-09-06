@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 
@@ -593,6 +594,8 @@ export default function AIAutomationServices() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -620,6 +623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -699,6 +703,12 @@ export default function AIAutomationServices() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+        {/* Open Graph */}
+        <meta
+          property='og:title'
+          content='AI Automation Services - Zion Tech Group'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />
         <meta
           property='og:description'
@@ -844,12 +854,16 @@ export default function AIAutomationServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='max-w-4xl mx-auto'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
               <Zap className='w-5 h-5 text-emerald-400' />
@@ -878,6 +892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <br />'
               <span className='text-white'>Revolution</span>
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 
@@ -897,17 +912,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Transform your business operations with cutting-edge AI
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -925,6 +946,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
 <<<<<<< HEAD:pages_backup/ai-automation-services.tsx
                   <span>Get Started</span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
@@ -1265,6 +1287,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
@@ -1275,6 +1299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1388,6 +1413,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+{/* Floating Elements */}
+        <div className='absolute top-20 left-10 opacity-20 animate-float'>
+          <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
 =======
@@ -1400,6 +1431,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>"
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
       </section>
@@ -1420,6 +1452,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
           style={{ animationDelay: '2s' }}
@@ -1440,6 +1474,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 =======
@@ -1504,6 +1539,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1626,12 +1663,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {advancedAIAutomationServices2025.map((service, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <motion.div
 
 =======
@@ -1876,6 +1917,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-automation-services.tsx
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
@@ -1896,6 +1938,10 @@ className='animated-border'
 className='animated-border'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+className='animated-border'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -1915,6 +1961,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 <<<<<<< HEAD:pages_backup/ai-automation-services.tsx
                     {service.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1961,6 +2008,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <span className='bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
                         Popular
                       </span>
@@ -1975,12 +2024,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-gray-400 text-lg'>
                         {service.period}
                       </span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </div>
 =======
 
@@ -2079,8 +2132,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+<<<<<<< HEAD
                     >                      Get Started
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+=======
+                    >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       Get Started
 =======
 =======
@@ -2375,6 +2433,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2404,6 +2463,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+
+      {/* Benefits Section */}
+<section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with intelligent automation that delivers measurable results
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {benefits.map((benefit, index) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <motion.div
+
+              <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
+                AI Automation;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Transform your business with intelligent automation that delivers;
+              measurable results;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
+              <motion&& motion.div
+                key={benefit && benefit.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+className='text-center group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <benefit.icon className={`w-full h-full ${benefit.color}`} />
+                </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
@@ -2419,6 +2529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2440,10 +2551,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="container mx-auto px-4 text-center">
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-automation-services.tsx
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
@@ -2471,6 +2586,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='max-w-4xl mx-auto'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -2488,12 +2605,16 @@ className='max-w-4xl mx-auto'
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='/contact' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span>Start Your Automation Journey</span>
 =======
                   <span>Start Your Automation Journey</span>'
@@ -2647,6 +2768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-gray-300">Uptime Guarantee</div>
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-automation-services.tsx
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
@@ -2665,11 +2787,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-automation-services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   350%
                 </div>
                 <div className='text-gray-300'>Average ROI</div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2682,6 +2807,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-automation-services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           </motion.div>
         </div>
@@ -2701,6 +2829,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-automation-services.tsx
 <<<<<<< HEAD
 =======
@@ -2927,3 +3056,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-automation-services.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

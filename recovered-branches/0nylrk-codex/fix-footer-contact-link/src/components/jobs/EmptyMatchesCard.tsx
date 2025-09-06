@@ -3,15 +3,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
   isProcessing: boolean
 =======
@@ -54,7 +59,10 @@ export interface EmptyMatchesCardProps {
   onRefresh: () => void,
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isProcessing: boolean
+
 
 export interface EmptyMatchesCardProps {;
 
@@ -62,11 +70,14 @@ export interface EmptyMatchesCardProps {;
   isProcessing: boolean
 }
 
+
+export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
 
-  return (import { Card } from "@/components/ui/card";
+  return (
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 =======
 
@@ -138,14 +149,18 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </Card>
   );
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -154,6 +169,9 @@ import { Card } from "@/components/ui/card",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Card } from "@/components/ui/card",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
 =======
 "
@@ -173,6 +191,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -185,6 +204,9 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 =======
   return (  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -199,11 +221,15 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
   return (;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -212,6 +238,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
       <p className="text-muted-foreground mb-6">;
         Run AI matching to find talents that match this job's requirements.;
       </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
@@ -229,6 +256,9 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {isProcessing ? (;
           <>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
@@ -249,6 +279,7 @@ export function EmptyMatchesCard() { return null; }
     </Card>;
 <<<<<<< HEAD
   );
+
 import { Card  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 =======
@@ -269,21 +300,22 @@ export /**;
 <<<<<<< HEAD
 function EmptyMatchesCard() {
   return (
-    <Card className="p - 6 text - center border - dashed border - 2 bg-muted / 30">;
-      <div className="mb - 4 flex justify-center">;
-        <Sparkles className="h - 12 w - 12 text - muted-foreground" />;
+    <Card className="p - 6 text - center border - dashed border - 2 bg - muted / 30">;
+      <div className="mb - 4 flex justify - center">;
+        <Sparkles className="h - 12 w - 12 text - muted - foreground" />;
       </div>;
-      <h3 className="text - lg font - medium mb-2">No talent matches yet</h3>;
-      <p className="text - muted - foreground mb-6">;
+      <h3 className="text - lg font - medium mb - 2">No talent matches yet</h3>;
+      <p className="text - muted - foreground mb - 6">;
         Run AI matching to find talents that match this job's requirements.;
       </p>;
-      <Button on_click={on_refresh} disabled={is_processing} className="mx-auto">;
+      <Button on_click={on_refresh} disabled={is_processing} className="mx - auto">;
         {is_processing ? (
           <>;
-            <RefreshCcw className="mr - 2 h - 4 w - 4 animate-spin" />;
+            <RefreshCcw className="mr - 2 h - 4 w - 4 animate - spin" />;
             Processing...;
           </>) : (
           <>;
+<<<<<<< HEAD
             <Sparkles className="mr - 2 h - 4 w-4" />;
 =======
 function EmptyMatchesCard() {}
@@ -305,6 +337,9 @@ function EmptyMatchesCard() {}
           <>;"
             <Sparkles className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <Sparkles className="mr - 2 h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             Find AI Matches;
           </>)}
       </Button>;
@@ -329,6 +364,7 @@ function EmptyMatchesCard() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+
 }
   ),;}
  export interface EmptyMatchesCardProps {};
@@ -348,6 +384,7 @@ isProcessing: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -364,3 +401,6 @@ isProcessing: boolean;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

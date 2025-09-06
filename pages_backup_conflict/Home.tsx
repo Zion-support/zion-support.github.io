@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -19,6 +20,9 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 export default function Home() {
   return (
@@ -49,6 +53,7 @@ export default function Home() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
 =======
 >>>>>>> origin/main
@@ -64,3 +69,6 @@ import React from 'react'; import Head from 'next/head'; export default function
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

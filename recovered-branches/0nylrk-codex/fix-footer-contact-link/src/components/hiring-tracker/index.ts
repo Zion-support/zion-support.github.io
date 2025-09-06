@@ -23,6 +23,7 @@ export * from "./HiringAnalytics";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 export * from './KanbanBoard',;
 export * from './KanbanColumn',;
 export * from './CandidateCard',;

@@ -6,6 +6,7 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 import {useCurrentUser} from '../../utils/auth';
@@ -18,6 +19,8 @@ import {useCurrentUser} from '../../utils/auth';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useCurrentUser } from '../../utils/auth';
 const fetcher = null;
     mutate()
@@ -114,6 +117,7 @@ export default function DisputeDetailPage() {;
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
   const dispute = data?.dispute;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -329,6 +333,8 @@ export default function DisputeDetailPage() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [activeTab, setActiveTab] = useState<
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
   >('Overview');
@@ -337,17 +343,22 @@ const [activeTab, setActiveTab] = useState<
   async function sendMessage() {
     if (!message.trim() || !id) return;
 await fetch(`/api/disputes/${id}/message`, {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ body: message }),
     });
     setMessage('');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 =======
@@ -363,23 +374,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     mutate();
   }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
     if (!id) return;
 await fetch(`/api/disputes/${id}/resolve`, {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ resolutionSummary, status }),
     });
     setResolutionSummary('');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 =======
@@ -429,6 +447,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     mutate();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -443,6 +463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {!dispute ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/disputes/[id].tsx
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
@@ -480,6 +501,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='max-w-4xl mx-auto'>
           <div className='flex items-center justify-between mb-4'>
             <h1 className='text-2xl font-semibold'>Case {dispute.id}</h1>
@@ -528,6 +551,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/disputes/[id].tsx
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
@@ -551,6 +575,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -602,12 +628,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {dispute.reason}
                   {dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Description</div>
@@ -632,6 +662,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>"
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/disputes/[id].tsx
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
@@ -789,6 +820,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
                   {dispute.resolvedAt && (
                     <li className='mb-6 ml-4'>
@@ -806,12 +839,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {activeTab === 'Messages' && (
 <div className='space-y-4'>
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {dispute.messages.length === 0 ? (
 =======
 "
@@ -823,6 +860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ) : ("
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -836,11 +874,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
                           {m.authorRole} •{' '}
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
                     ))}
@@ -888,6 +929,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
                         <div className="whitespace-pre-wrap">{m.body}</div>
+=======
+                        <div className='whitespace-pre-wrap'>{m.body}</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </li>
 <<<<<<< HEAD
 =======
@@ -979,6 +1024,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               {user.role !== 'guest' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="flex gap-2">
                   <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -1060,6 +1106,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex gap-2'>
                   <input
                     value={message}
@@ -1084,12 +1132,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (
                 <ul className='divide-y'>
                   {dispute.attachments.map((a: any) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <li
                       key={a && a.id}
                       className='py-2 flex items-center justify-between'>;
@@ -1101,6 +1153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                       <a
                         className='text-blue-600 hover:underline'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 =======
@@ -1145,6 +1198,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
                       >
                         Download
@@ -1161,12 +1216,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-sm text-gray-500'>
                   Admin access required
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ) : (
                 <ul className="divide-y">
                   {dispute.attachments.map((a: any) => (
@@ -1233,6 +1292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages_backup/disputes/[id].tsx
                     <button
                       onClick={() => resolve('Resolved')}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
 =======
@@ -1333,6 +1393,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/[id].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className='px-3 py-2 rounded bg-green-600 text-white'
                     >
                       Resolve
@@ -1368,6 +1430,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/disputes/[id].tsx
 <<<<<<< HEAD:pages/disputes/[id].tsx
 <<<<<<< HEAD
@@ -1541,3 +1604,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/[id].tsx
+=======
+    </EnhancedLayout>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

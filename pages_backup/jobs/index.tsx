@@ -60,6 +60,7 @@ import { useEffect, useState  } from 'react';'
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {};
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/index.tsx
 <<<<<<< HEAD
 =======
@@ -108,6 +109,10 @@ export default function JobsListPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
+=======
+  useEffect(() => { const t = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
 =======
@@ -236,6 +241,7 @@ export default function JobsListPage() {}
                   subtitle={j.subtitle}
 <<<<<<< HEAD:pages_backup/jobs/index.tsx
                   description={j.description}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/index.tsx
 <<<<<<< HEAD
 =======
@@ -318,6 +324,8 @@ export default function JobsListPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   footer={<span className='text-blue-600'>View Job →</span>}
                 />
               </a>
@@ -327,6 +335,7 @@ export default function JobsListPage() {}
       )}
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -339,3 +348,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

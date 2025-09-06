@@ -13,10 +13,12 @@
  * - Performance monitoring and optimization;
  * - Better permission handling;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const chokidar = require('chokidar');
+
 class ImprovedPM2SyncAutomation {}
   constructor() {}
     this.config = {}
@@ -44,6 +46,7 @@ class ImprovedPM2SyncAutomation {}
       "testInterval": 600000, // 10 minutes;
       "securityInterval": 1800000 // 30 minutes;
     };
+    
     this.isRunning = false;
     this.pendingChanges = new Set();
     this.changeTimeout = null;
@@ -62,19 +65,23 @@ class ImprovedPM2SyncAutomation {}
   async initialize() {}
     try {}
       this.log('Initializing Improved PM2 Sync Automation System...');
+      
       // Check if git repository exists;
       if (!this.isGitRepository()) {}
         this.log('Not a git repository. Initializing...', 'WARN');
         this.initializeGitRepository()};
       // Setup file watcher;
       this.setupFileWatcher();
+      
       // Start automation loops;
       this.startAutomationLoops();
+      
       // Initial sync and build;
       await this.performFullSync();
       await this.performBuild();
       await this.runTests();
       await this.runSecurityScan();
+      
       this.log('Improved PM2 Sync Automation System initialized successfully');
       this.isRunning = true} catch (error) {}
       this.log(`Initialization "failed": ${error.message}`, 'ERROR');
@@ -105,6 +112,7 @@ class ImprovedPM2SyncAutomation {}
   };
   setupFileWatcher() {}
     this.log('Setting up file watcher...');
+    
     this.watcher = chokidar.watch(this.config.watchPatterns, {})
       "ignored": this.config.ignorePatterns,
       "persistent": true,
@@ -115,6 +123,7 @@ class ImprovedPM2SyncAutomation {}
       };
     }
 });
+
     this.watcher;
       .on('add', (filePath) => this.handleFileChange(filePath, 'add'));
       .on('change', (filePath) => this.handleFileChange(filePath, 'change'));
@@ -123,10 +132,12 @@ class ImprovedPM2SyncAutomation {}
       .on('ready', () => this.log('File watcher ready'))};
   handleFileChange(filePath, event) {}
     const relativePath = path.relative(this.config.projectRoot, filePath);
+    
     if (this.shouldIgnoreFile(relativePath)) {}
       return};
     this.log(`File ${event}: ${relativePath}`);
     this.pendingChanges.add(relativePath);
+    
     // Debounce changes;
     clearTimeout(this.changeTimeout);
     this.changeTimeout = setTimeout(() => {}
@@ -142,11 +153,14 @@ class ImprovedPM2SyncAutomation {}
       /\.next/,
       /coverage/
     ];
+    
     return ignorePatterns.some(pattern => pattern.test(filePath))};
   async processPendingChanges() {}
     if (this.pendingChanges.size === 0) return;
+    
     try {}
       this.log(`Processing ${this.pendingChanges.size} pending changes...`);
+      
       // Add all changes to git;
       const addResult = execSync('git add -A', { })
 <<<<<<< HEAD
@@ -158,6 +172,7 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
+      
       // Commit changes;
       const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
       const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
@@ -170,7 +185,9 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
+      
       this.log(`Committed ${this.pendingChanges.size} changes`);
+      
       // Push changes;
       const pushResult = execSync('git push origin main', { })
 <<<<<<< HEAD
@@ -182,9 +199,11 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
+      
       this.log('Changes pushed to repository');
       this.lastSync = Date.now();
       this.successCount++;
+      
       // Clear pending changes;
       this.pendingChanges.clear()} catch (error) {}
       this.log(`Failed to process "changes": ${error.message}`, 'ERROR');
@@ -193,9 +212,11 @@ class ImprovedPM2SyncAutomation {}
   async performFullSync() {}
     try {}
       this.log('Performing full repository sync...');
+      
       // Fetch latest changes;
       execSync('git fetch origin', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       // Check for conflicts;
       const status = execSync('git status --porcelain', { })
 <<<<<<< HEAD
@@ -207,8 +228,10 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
+      
       if (status.trim()) {}
         this.log(`Found ${status.trim().split('\n').length} changed files, handling sync...`);
+        
         // Add all changes;
         try {}
           execSync('git add -A', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -227,6 +250,7 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
 });
+          
           if (stagedStatus.trim()) {}
             execSync('git commit -m "Auto-"sync": comprehensive updates and improvements"', { })
 <<<<<<< HEAD
@@ -261,6 +285,7 @@ class ImprovedPM2SyncAutomation {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
 });
+        
         if (aheadStatus.includes('ahead')) {}
           execSync('git push origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
@@ -275,18 +300,22 @@ class ImprovedPM2SyncAutomation {}
   async resolveConflicts() {}
     try {}
       this.log('Resolving merge conflicts...');
+      
       // Abort any ongoing merge;
       try {}
         execSync('git merge --abort', { "cwd": this.config.projectRoot, "stdio": 'pipe' })} catch {};
       // Reset to clean state;
       execSync('git reset --hard HEAD', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       // Clean untracked files;
       execSync('git clean -fd', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       // Pull again;
       execSync('git pull origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       this.log('Conflicts resolved successfully')} catch (error) {}
       this.log(`Failed to resolve "conflicts": ${error.message}`, 'ERROR');
       throw error};
@@ -294,6 +323,7 @@ class ImprovedPM2SyncAutomation {}
   async performBuild() {}
     try {}
       this.log('Starting build process...');
+      
       // Install dependencies if needed;
       if (!fs.existsSync('node_modules')) {}
         this.log('Installing dependencies...');
@@ -302,6 +332,7 @@ class ImprovedPM2SyncAutomation {}
       this.log('Building application...');
       execSync('npm run build', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       this.log('Build completed successfully');
       this.lastBuild = Date.now()} catch (error) {}
       this.log(`Build "failed": ${error.message}`, 'ERROR');
@@ -310,6 +341,7 @@ class ImprovedPM2SyncAutomation {}
   async fixBuildIssues() {}
     try {}
       this.log('Attempting to fix build issues...');
+      
       // Clear build cache (skip if permission issues);
       const cacheDirs = ['.next', 'dist', 'build', 'node_modules/.cache'];
       cacheDirs.forEach(dir => {})
@@ -322,6 +354,7 @@ class ImprovedPM2SyncAutomation {}
         };
       }
 });
+      
       // Reinstall dependencies (skip if permission issues);
       try {}
         this.log('Reinstalling dependencies...');
@@ -339,6 +372,7 @@ class ImprovedPM2SyncAutomation {}
   async runTests() {}
     try {}
       this.log('Running tests...');
+      
       // Check if test script exists;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {}
@@ -346,6 +380,7 @@ class ImprovedPM2SyncAutomation {}
         return};
       execSync('npm test', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       this.log('Tests completed successfully');
       this.lastTest = Date.now()} catch (error) {}
       this.log(`Tests "failed": ${error.message}`, 'ERROR');
@@ -354,6 +389,7 @@ class ImprovedPM2SyncAutomation {}
   async fixTestIssues() {}
     try {}
       this.log('Attempting to fix test issues...');
+      
       // Clear test cache;
       const testCacheDirs = ['.nyc_output', 'coverage', 'test-results'];
       testCacheDirs.forEach(dir => {})
@@ -364,6 +400,7 @@ class ImprovedPM2SyncAutomation {}
         };
       }
 });
+      
       // Try tests again;
       await this.runTests()} catch (error) {}
       this.log(`Failed to fix test "issues": ${error.message}`, 'ERROR');
@@ -372,9 +409,11 @@ class ImprovedPM2SyncAutomation {}
   async runSecurityScan() {}
     try {}
       this.log('Running security scan...');
+      
       // Check for security vulnerabilities;
       execSync('npm audit', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
+      
       // Try to fix vulnerabilities;
       try {}
         execSync('npm audit fix', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -392,16 +431,19 @@ class ImprovedPM2SyncAutomation {}
       if (this.isRunning && this.pendingChanges.size > 0) {}
         await this.processPendingChanges()};
     }, this.config.syncInterval);
+
     // Build loop;
     setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastBuild > this.config.buildInterval) {}
         await this.performBuild()};
     }, this.config.buildInterval);
+
     // Test loop;
     setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastTest > this.config.testInterval) {}
         await this.runTests()};
     }, this.config.testInterval);
+
     // Security loop;
     setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastSecurity > this.config.securityInterval) {}
@@ -410,6 +452,7 @@ class ImprovedPM2SyncAutomation {}
   async stop() {}
     this.log('Stopping Improved PM2 Sync Automation System...');
     this.isRunning = false;
+    
     if (this.watcher) {}
       await this.watcher.close()};
     // Process any remaining changes;
@@ -440,6 +483,7 @@ process.on('SIGINT', async () => {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
+
 process.on('SIGTERM', async () => {}
   console.log('\nReceived SIGTERM, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {}
@@ -456,6 +500,7 @@ process.on('SIGTERM', async () => {}
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
+  
   // Keep the process alive;
   setInterval(() => {}
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {}
@@ -464,9 +509,13 @@ if (require.main === module) {}
   }, 60000)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = ImprovedPM2SyncAutomation;
 module.exports = ImprovedPM2SyncAutomation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

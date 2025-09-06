@@ -141,6 +141,7 @@ class ErrorPreventionOrchestrator {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -148,6 +149,9 @@ class ErrorPreventionOrchestrator {}
       
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -191,6 +195,7 @@ switch (command) {}
   case 'logs':
     orchestrator.logs();
     break;
+<<<<<<< HEAD
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
 <<<<<<< HEAD
 
@@ -199,3 +204,6 @@ switch (command) {}
     process.exit(1)};
     process.exit(1)};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

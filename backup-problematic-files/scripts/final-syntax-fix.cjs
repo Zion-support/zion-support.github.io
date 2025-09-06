@@ -8,8 +8,10 @@
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/final-syntax-cleanup.cjs
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-fix.cjs
@@ -22,6 +24,12 @@ console.log('=');
 
 console.log('🔧 Final Syntax Fix');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+console.log('🔧 Final Syntax Fix');
+console.log('====');
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -30,34 +38,42 @@ function fixSpecificErrors(content) {
     .replace(/<\/\$1>/g, '>')
     .replace(/<\$1/g, '<')
     .replace(/<\/\$1/g, '</')
+    
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
+    
     // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
+    
     // Fix array and object syntax
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
+    
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
+    
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
+    
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
+    
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
 }
+
 // Files to fix
 const filesToFix = [
   'pages/about.tsx',
@@ -71,6 +87,7 @@ const filesToFix = [
   'components/Layout.tsx',
   'components/layout/MainLayout.tsx'
 ];
+
 let totalFixed = 0;
 <<<<<<< HEAD
 =======
@@ -78,9 +95,12 @@ let totalFixed = 0;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -94,7 +114,9 @@ for (const file of filesToFix) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
+    
     content = fixSpecificErrors(content);
+    
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -104,11 +126,15 @@ for (const file of filesToFix) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 }
+
 console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 console.log('🎉 Final syntax fix completed!');
+<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

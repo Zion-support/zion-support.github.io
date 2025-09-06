@@ -14,6 +14,7 @@ import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillsFilterProps } from "@/types/filters",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -23,6 +24,12 @@ import { SkillsFilterProps } from "@/types/filters",
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { SkillsFilterProps } from "@/types/filters",
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -41,6 +48,7 @@ const POPULAR_SKILLS = [
   "Node.js",
   "TypeScript",
   "DevOps",
+<<<<<<< HEAD
 =======
 import {ChevronDown, ChevronUp} from "lucide-react";"
 import {Button} from "@/components/ui/button";"
@@ -122,9 +130,45 @@ import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, Chevro
 =======
 import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  "Security"
+],
+
+export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+        <span>Skills</span>
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+        )}
+      </button>
+      {expanded && (
+        <div className="mt-4 space-y-2">
+          {POPULAR_SKILLS.map(skill => (
+            <div key={skill} className="flex items-center">
+              <Checkbox
+                id={`skill-${skill}`}
+                checked={selectedSkills.includes(skill)}
+                onCheckedChange={() => toggleSkill(skill)}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+
+import { ChevronDown, ChevronUp } from "lucide-react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
+// Common skills in AI and tech;
 const POPULAR_SKILLS = [;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -153,6 +197,14 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
+
+      </button>;
+
+      {expanded && (;
+        <div className="mt-4 space-y-2">;
+          {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
+            <div key={skill} className="flex items-center">;
+
               <Checkbox
 =======
 
@@ -216,10 +268,14 @@ const POPULAR_SKILLS = [;"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {skill}
@@ -227,6 +283,7 @@ const POPULAR_SKILLS = [;"
             </div>;
           ))}
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -245,11 +302,15 @@ const POPULAR_SKILLS = [;"
 
 
 
+=======
+      )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </div>;
   );
 }
 
+<<<<<<< HEAD
 
 
 
@@ -281,6 +342,36 @@ function SkillsFilter() {}
               />;
               <label;`
                 html_for={`skill-${skill}`}"
+=======
+;
+export /**
+ * SkillsFilter - Function description
+ */
+function SkillsFilter() {
+  return (
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+      <button;
+        on_click={toggle_section}
+        className="flex w - full items - center justify - between text - white font - medium";
+      >;
+        <span > Skills</span>;
+        {expanded ? (
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+      </button>;
+      {expanded && (
+        <div className="mt - 4 space - y-2">;
+          {POPULAR_SKILLS.map (skill => (
+            <div key={skill} className="flex items - center">;
+              <Checkbox;
+                id={`skill-${skill}`}
+                checked={selected_skills.includes (skill)}
+                onCheckedChange={() => toggle_skill (skill)}
+                className="border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple";
+              />;
+              <label;
+                html_for={`skill-${skill}`}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="ml - 2 text - sm text - zion - slate - light cursor - pointer";
               >;
                 {skill}
@@ -290,13 +381,22 @@ function SkillsFilter() {}
     </div>);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 ;
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+};
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <label;
                 htmlFor={`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
@@ -355,6 +455,7 @@ toggleSection
 }
 };
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -369,3 +470,5 @@ toggleSection
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

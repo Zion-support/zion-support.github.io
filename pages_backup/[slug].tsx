@@ -9,6 +9,7 @@ import {GetStaticPaths, GetStaticProps} from 'next';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -51,6 +52,8 @@ const service = useMemo(() => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         enhancedRealMicroSaasServices as any,
         extraServices as any,
         additionalEnhancedServices as any,
@@ -76,12 +79,16 @@ const service = useMemo(() => {
         real2025Q3Additions as any,
         realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       );
     const byLink = all.find(s => {
       try {
@@ -351,6 +358,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	return {props: { service }
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -615,10 +623,13 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -628,6 +639,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>"
@@ -658,6 +672,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;"
 				<meta name="description" content={service && service.tagline || service && service.description} />;"
 				<link rel="canonical" href={canonical} />;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -715,6 +730,13 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON && JSON.stringify(
+							{
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "@context": "https://schema.org",
 								"@type": "Service",
 								name: service.name,
@@ -736,10 +758,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							}
 							null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 							2;
 							);}
 				/>;			</Head>
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 2;
 							);}
 				/>;
@@ -760,12 +785,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -977,6 +1006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 
@@ -1017,6 +1047,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 </Link>
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
@@ -1056,10 +1088,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/[slug].tsx
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
@@ -1067,6 +1102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
+<<<<<<< HEAD
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1089,6 +1125,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -1096,6 +1135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
@@ -1380,3 +1420,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
+=======
+	);
+;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -63,8 +63,11 @@ function handler() {}
     );
 <<<<<<< HEAD:pages_backup/api/integrations/connect.ts
     const connection: ProviderConnection = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/connect.ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       provider_id: provider_id as any
       status: "connected"
       access_token: "mock_access_token"
@@ -78,7 +81,10 @@ function handler() {}
       level: "info"
       action: "connect"
       details: { sync_rules }
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/connect.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     });
   });
@@ -160,6 +166,7 @@ export default function handler(req, res) {
   });
 <<<<<<< HEAD:pages_backup/api/integrations/connect.ts
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/connect.ts
 <<<<<<< HEAD
 =======
@@ -189,3 +196,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

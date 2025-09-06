@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 <<<<<<< HEAD
@@ -26,10 +27,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { ReactNode } from "react";
 import { ReactNode } from "react";
 import EnhancedNavigation from "./EnhancedNavigation";
 import EnhancedFooter from "./EnhancedFooter";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
@@ -112,6 +119,14 @@ interface EnhancedLayoutProps {
   \"children\": ReactNode;
 }interface EnhancedLayoutProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+}
+interface EnhancedLayoutProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   \"children\": ReactNode;
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
@@ -124,6 +139,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
       <EnhancedFooter />
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,11 +158,18 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -187,6 +210,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 } import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+
+
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";

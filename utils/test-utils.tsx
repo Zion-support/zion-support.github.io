@@ -51,12 +51,16 @@ export const createMockProps = (overrides = {}) => ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </ThemeProvider>;
   );
 },;
@@ -83,6 +87,7 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,8 +141,15 @@ export const mockNextRouter = () => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 export const createMockProps = (overrides = {}) => ({;
+  ...overrides;
+
+
+
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ...overrides;

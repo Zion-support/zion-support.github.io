@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from "../types/service-variants";
 
 export interface RealMarketService {
@@ -6,7 +9,11 @@ export interface RealMarketService {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string,
+=======
+  period: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   features: string[];
   popular: boolean;
@@ -32,8 +39,13 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string
 };
+=======
+    website: string;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -94,6 +106,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 950
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 ],
 =======
@@ -114,3 +127,7 @@ export const realMarketServices: RealMarketService[] = [
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

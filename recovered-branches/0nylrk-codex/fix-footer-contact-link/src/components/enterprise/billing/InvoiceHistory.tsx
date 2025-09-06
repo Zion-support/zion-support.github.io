@@ -16,7 +16,11 @@ import React from "react";
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 =======
 import {};
@@ -25,6 +29,7 @@ import {};
   TableBody;
   TableCell;
   TableHead;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   TableHeader;
@@ -37,12 +42,16 @@ import {};
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  TableHeader;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -64,6 +73,10 @@ import React from "react",
 =======
   TableHeader;import React from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from "react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 =======
 
@@ -83,6 +96,7 @@ import {}
   TableBody,
   TableCell,
   TableHead,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   TableHeader,
@@ -143,6 +157,25 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  TableHeader,
+
+  TableRow} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Download, FileText, Search } from "lucide-react",
+
+
+import { Input } from "@/components/ui/input",
+import { toast } from "@/hooks/use-toast",
+
+
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import { Input } from "@/components/ui/input",
+import { toast } from "@/hooks/use-toast",
+export function InvoiceHistory() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Mock invoice data
 
   const invoices = [
@@ -155,6 +188,7 @@ import { Download, FileText, Search } from "lucide-react",export function Invoic
 =======
 
 
+<<<<<<< HEAD
 "
   TableRow} from "@/components/ui/table","
 import { Button } from "@/components/ui/button","
@@ -199,6 +233,12 @@ export function InvoiceHistory() {};
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      id: "INV-1234",;
+      date: "May 1, 2025";
+      amount: "$1,999.00";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "INV-1234"
       date: "May 1, 2025";
       amount: "$1,999.00";
@@ -255,12 +295,14 @@ export function InvoiceHistory() {};
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
 
       id: "INV-1234",
       date: "May 1, 2025",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       amount: "$1,999.00",
@@ -537,6 +579,105 @@ export function InvoiceHistory() { return null; }
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      amount: "$1,999.00",
+      status: "paid",
+      period: "May 2025"},
+    {
+      id: "INV-1233",
+      date: "Apr 1, 2025",
+      amount: "$1,999.00",
+      status: "paid",
+      period: "Apr 2025"},
+    {
+      id: "INV-1232",
+      date: "Mar 1, 2025",
+      amount: "$1,999.00",
+      status: "paid",
+      period: "Mar 2025"},
+    {
+      id: "INV-1231",
+      date: "Feb 1, 2025",
+      amount: "$1,999.00",
+      status: "paid",
+      period: "Feb 2025"},
+    {
+      id: "INV-1230",
+      date: "Jan 1, 2025",
+      amount: "$1,999.00",
+      status: "paid",
+      period: "Jan 2025"},
+    {
+      id: "INV-1229",
+      date: "Dec 1, 2024",
+      amount: "$1,999.00",
+      status: "paid",
+      period: "Dec 2024"}],
+
+  const handleDownloadInvoice = (invoiceId: string) => {
+    // In a real app, this would trigger a download of the invoice PDF
+    toast({
+      title: "Downloading invoice"
+      description: `Downloading invoice ${invoiceId} as PDF.`})
+
+
+  },
+
+
+
+  const getBadgeForStatus = (status: string) => {
+    switch (status) {
+export function InvoiceHistory() {;
+  // Mock invoice data;
+  const invoices = [;
+    {;
+      id: "INV-1234",;
+      date: "May 1, 2025";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "May 2025"},;
+    {;
+      id: "INV-1233",;
+      date: "Apr 1, 2025";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "Apr 2025"},;
+    {;
+      id: "INV-1232",;
+      date: "Mar 1, 2025";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "Mar 2025"},;
+    {;
+      id: "INV-1231",;
+      date: "Feb 1, 2025";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "Feb 2025"},;
+    {;
+      id: "INV-1230",;
+      date: "Jan 1, 2025";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "Jan 2025"},;
+    {;
+      id: "INV-1229",;
+      date: "Dec 1, 2024";
+      amount: "$1,999 && 999.00";
+      status: "paid",;
+      period: "Dec 2024"}],;
+
+  const handleDownloadInvoice = (invoiceId: string) => {;
+    // In a real app, this would trigger a download of the invoice PDF;
+    toast({;
+      title: "Downloading invoice",;
+      description: `Downloading invoice ${invoiceId} as PDF.`});
+  };
+
+  const getBadgeForStatus = (status: string) => {;
+    switch (status) {;
+      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "pending":;
 =======
 
@@ -545,11 +686,20 @@ export function InvoiceHistory() { return null; }
       case "pending":;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="outline">Pending</Badge>;
+
+      case "overdue":;
+        return <Badge variant="destructive">Overdue</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+
+    }
+  }
     }
 
 <<<<<<< HEAD
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const getBadgeForStatus = (status: string) => {
@@ -591,6 +741,32 @@ export function InvoiceHistory() { return null; }
             placeholder="Search invoices...""
             className="w-[200px] md:w-[300px] pl-9"
 "
+=======
+
+  return (
+      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
+      case "pending":;
+        return <Badge variant="outline">Pending</Badge>;
+    }
+  }
+
+  return (
+    <div className="space-y-6">;
+      <div className="flex items-center justify-between">;
+        <h3 className="text-xl font-medium">Invoice History</h3>;
+        <div className="relative">;
+          <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+          <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+          <Input
+            type="search"
+            placeholder="Search invoices..."
+            className="w-[200px] md:w-[300px] pl-9"
+
+          />;
+        </div>;
+      </div>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -599,11 +775,16 @@ export function InvoiceHistory() { return null; }
               <TableHead>Date</TableHead>;
               <TableHead>Billing Period</TableHead>;
               <TableHead>Amount</TableHead>;
+<<<<<<< HEAD
               <TableHead>Status</TableHead>;"
+=======
+              <TableHead>Status</TableHead>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
 
 
 
@@ -678,6 +859,30 @@ export function InvoiceHistory() { return null; }
                       size="sm"
                       className="h-8 gap-1"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            {invoices && invoices.map((invoice) => (;
+              <TableRow key={invoice && invoice.id}>;
+                <TableCell className="font-medium">{invoice && invoice.id}</TableCell>;
+                <TableCell>{invoice && invoice.date}</TableCell>;
+                <TableCell>{invoice && invoice.period}</TableCell>;
+                <TableCell>{invoice && invoice.amount}</TableCell>;
+                <TableCell>{getBadgeForStatus(invoice && invoice.status)}</TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex justify-end gap-2">;
+
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 gap-1"
+                      onClick={() => handleDownloadInvoice(invoice && invoice.id)}
+                    >;
+                      <Download className="h-3 && 3.5 w-3 && 3.5" />;
+                      PDF;
+                    </Button>;
+                    <Button
+                      variant="outline"
+                      size="sm"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
                       className="h-8 gap-1">;
 =======
@@ -747,7 +952,7 @@ function InvoiceHistory() {}
 <<<<<<< HEAD
   const getBadgeForStatus = (status: string) =>: any {
     switch (status) {
-      case "paid": return <Badge className="bg - green-500">Paid</Badge>;
+      case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
       case "overdue":;
@@ -767,18 +972,19 @@ function InvoiceHistory() {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="space-y-6">;
-      <div className="flex items - center justify-between">;
-        <h3 className="text - xl font-medium">Invoice History</h3>;
+    <div className="space - y-6">;
+      <div className="flex items - center justify - between">;
+        <h3 className="text - xl font - medium">Invoice History</h3>;
         <div className="relative">;
-          <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+          <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
           <Input;
             type="search";
             placeholder="Search invoices...";
-            className="w-[200px] md:w-[300px] pl-9";
+            className="w-[200px] md:w-[300px] pl - 9";
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
       <div className="rounded-md border">;
 =======
   return ("
@@ -796,6 +1002,9 @@ function InvoiceHistory() {}
       </div>;"
       <div className="rounded - md border">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="rounded - md border">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -805,31 +1014,36 @@ function InvoiceHistory() {}
               <TableHead > Amount</TableHead>;
 <<<<<<< HEAD
               <TableHead > Status</TableHead>;
+<<<<<<< HEAD
               <TableHead className="text-right">Actions</TableHead>;
 =======
               <TableHead > Status</TableHead>;"
               <TableHead className="text - right">Actions</TableHead>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <TableHead className="text - right">Actions</TableHead>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {invoices.map ((invoice) => (
 <<<<<<< HEAD
               <TableRow key={invoice.id}>;
-                <TableCell className="font-medium">{invoice.id}</TableCell>;
+                <TableCell className="font - medium">{invoice.id}</TableCell>;
                 <TableCell>{invoice.date}</TableCell>;
                 <TableCell>{invoice.period}</TableCell>;
                 <TableCell>{invoice.amount}</TableCell>;
                 <TableCell>{getBadgeForStatus (invoice.status)}</TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex justify - end gap-2">;
+                <TableCell className="text - right">;
+                  <div className="flex justify - end gap - 2">;
                     <Button;
                       variant="outline";
                       size="sm";
-                      className="h - 8 gap-1";
+                      className="h - 8 gap - 1";
                       on_click={() => handleDownloadInvoice (invoice.id)}
                     >;
-                      <Download className="h - 3.5 w-3.5" />;
+                      <Download className="h - 3.5 w - 3.5" />;
+            {invoices.map((invoice) => (;
               <TableRow key={invoice.id}>;
 =======
               <TableRow key={invoice.id}>;"
@@ -866,6 +1080,18 @@ function InvoiceHistory() {}
                     >;"
                       <Download className="h-3.5 w-3.5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                      PDF;
+                    </Button>;
+                    <Button;
+                      variant="outline";
+                      size="sm";
+                      className="h - 8 gap - 1";
+                    >;
+                      <FileText className="h - 3.5 w - 3.5" />;
+                      className="h-8 gap-1";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     >;
                       <FileText className="h-3.5 w-3.5" />;
                       className="h-8 gap-1";
@@ -892,6 +1118,7 @@ function InvoiceHistory() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -910,12 +1137,16 @@ function InvoiceHistory() {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
+<<<<<<< HEAD
   TableHeader,;"
   TableRow} from "@/components/ui/table",;"
 import { Button } from "@/components/ui/button",;"
@@ -983,6 +1214,138 @@ export function InvoiceHistory() { return null; }
             placeholder="Search invoices...";"
             className="w-[200px] md:w-[300px] pl-9";
           />;
+=======
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Download, FileText, Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
+export function InvoiceHistory() {;
+  // Mock invoice data;
+  const invoices = [;
+    {;
+      id: "INV-1234",;
+      date: "May 1, 2025",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "May 2025"},;
+    {;
+      id: "INV-1233",;
+      date: "Apr 1, 2025",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "Apr 2025"},;
+    {;
+      id: "INV-1232",;
+      date: "Mar 1, 2025",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "Mar 2025"},;
+    {;
+      id: "INV-1231",;
+      date: "Feb 1, 2025",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "Feb 2025"},;
+    {;
+      id: "INV-1230",;
+      date: "Jan 1, 2025",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "Jan 2025"},;
+    {;
+      id: "INV-1229",;
+      date: "Dec 1, 2024",;
+      amount: "$1,999.00",;
+      status: "paid",;
+      period: "Dec 2024"}],;
+  const handleDownloadInvoice = (invoiceId: string) => {;
+    // In a real app, this would trigger a download of the invoice PDF;
+    toast({;
+      title: "Downloading invoice",;
+      description: `Downloading invoice ${invoiceId} as PDF.`});
+  },;
+  const getBadgeForStatus = (status: string) => {;
+    switch (status) {;
+      case "paid": return <Badge className="bg-green-500">Paid</Badge>,;
+      case "pending":;
+        return <Badge variant="outline">Pending</Badge>,;
+      case "overdue":;
+        return <Badge variant="destructive">Overdue</Badge>;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+  return (;
+    <div className="space-y-6">;
+      <div className="flex items-center justify-between">;
+        <h3 className="text-xl font-medium">Invoice History</h3>;
+        <div className="relative">;
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;
+          <Input;
+            type="search";
+            placeholder="Search invoices...";
+            className="w-[200px] md:w-[300px] pl-9";
+          />;
+        </div>;
+      </div>;
+      <div className="rounded-md border">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Invoice Number</TableHead>;
+              <TableHead>Date</TableHead>;
+              <TableHead>Billing Period</TableHead>;
+              <TableHead>Amount</TableHead>;
+              <TableHead>Status</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {invoices.map((invoice) => (;
+              <TableRow key={invoice.id}>;
+                <TableCell className="font-medium">{invoice.id}</TableCell>;
+                <TableCell>{invoice.date}</TableCell>;
+                <TableCell>{invoice.period}</TableCell>;
+                <TableCell>{invoice.amount}</TableCell>;
+                <TableCell>{getBadgeForStatus(invoice.status)}</TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex justify-end gap-2">;
+                    <Button;
+                      variant="outline";
+                      size="sm";
+                      className="h-8 gap-1";
+                      onClick={() => handleDownloadInvoice(invoice.id)}
+                    >
+                      <Download className="h-3.5 w-3.5" />
+                      PDF
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 gap-1"
+                    >
+                      <FileText className="h-3.5 w-3.5" />
+                      View
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+
+          </TableBody>;
+        </Table>;
+      </div>;
+
+      <div className="flex items-center justify-between">;
+        <Button variant="outline" size="sm">;
+          Previous;
+        </Button>;
+        <div className="text-sm text-muted-foreground">;
+          Showing 1 - 6 of 12 invoices;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </div>;"
       <div className="rounded-md border">;
@@ -1141,6 +1504,12 @@ export function InvoiceHistory() { return null; }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+}
+    </div>);
+}
 }
     </div>);
     </div>;
@@ -1206,16 +1575,20 @@ period: "Jan 2025"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1229,3 +1602,5 @@ period: "Jan 2025"
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

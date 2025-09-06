@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface InnovativeITService {
 id: string;
   name: string;
@@ -34,6 +35,8 @@ id: string;
     website: string;
   }
   {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   {
@@ -48,6 +51,47 @@ id: string;
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+export interface InnovativeITService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -89,6 +133,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Edge Computing',
       'IoT',
       '5G',
@@ -99,6 +149,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'AWS',
     ],
+<<<<<<< HEAD
 
     integrations: [;
       'AWS IoT',
@@ -525,6 +576,26 @@ export interface InnovativeITService {;
 origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
+    launch_date: '2024 - 01 - 20';
+    customers: 2500;
+    rating: 4.7,
+    reviews: 1250;
+
+  }
+
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -733,6 +804,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'cyberpunk'
 <<<<<<< HEAD
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -752,6 +824,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 1250,
   },;
+<<<<<<< HEAD
+=======
+
+=======
+      'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
+    launchDate: '2024-01-20'
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -764,11 +848,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7
 
     reviews: 1250
+<<<<<<< HEAD
   }
 ];
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface InnovativeITService {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
     contactInfo: {}
 '
 ];      mobile: '+1 302 464 0950';'
@@ -783,6 +872,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7;
     reviews: 1250;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,;
   name: string,;
   tagline: string,;
@@ -866,6 +960,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
 
   }
@@ -1060,6 +1158,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
   }
@@ -1069,3 +1168,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +43,8 @@ export default Page;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
@@ -54,6 +57,7 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog.tsx
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -80,6 +84,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 export default function BlogPage() {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function BlogPage() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
@@ -150,6 +160,7 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,12 +198,17 @@ export default function BlogPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,6 +266,12 @@ export default Page;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>
       <Head>
@@ -266,9 +288,13 @@ export default Page;
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

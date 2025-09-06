@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // Export all job application components from the job-application folder;
@@ -26,10 +27,16 @@ export * from "./job-application";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Export all job application components from the job - application folder;
 export * from "./job - application";export * from "./job-application";
+=======
+
+// Export all job application components from the job-application folder;
+export * from "./job-application";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 // Export all job application components from the job-application folder;
 export * from './job-application';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Export all job application components from the job-application folder;
@@ -63,3 +70,7 @@ export * from "./job - application";
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Export all job application components from the job - application folder;
+export * from "./job - application";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

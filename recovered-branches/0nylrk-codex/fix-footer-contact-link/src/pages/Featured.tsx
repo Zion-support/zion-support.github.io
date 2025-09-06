@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -64,6 +65,13 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Featured() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { GradientHeading } from "@/components/GradientHeading";
+export default function Featured() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Header />"
@@ -82,6 +90,7 @@ export default function Featured() {}
               Marketplace has to offer.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Header } from '@/components / Header';
@@ -106,6 +115,8 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -255,6 +266,18 @@ function Featured() {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+}
+  ),;}
+ export default function Featured () {
+  return (min-h-screen bg-zion-blue"> <div className=" container mx-auto px-4 py-12"> <div className=" text-center mb-12"> <GradientHeading level=" h1"className=" text-4xl md:text-5xl font-bold mb-4"> Featured Listings </GradientHeading> <p className=" text-zion-slate-light text-lg max-w-3xl mx-auto" > Discover our handpicked selection of premium AI products and services. These featured listings represent the best that the Zion Marketplace has to offer. </p> </div> {
+  /* Reuse the FeaturedListings component */ 
+}<FeaturedListingsSection showTitle= {
+  false 
+}/> </div> </div> <Footer /> </>) 
+}
+}
+}
+;
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection show_title={false} />;
         </div>;
@@ -262,6 +285,7 @@ function Featured() {
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -277,3 +301,5 @@ function Featured() {
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

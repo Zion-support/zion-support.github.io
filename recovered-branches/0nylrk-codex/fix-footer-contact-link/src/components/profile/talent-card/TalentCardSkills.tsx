@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
@@ -55,10 +56,21 @@ interface TalentCardSkillsProps {}
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
 <<<<<<< HEAD
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+interface TalentCardSkillsProps {
+  skills: string[] | undefined;
+}
+
+export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Get top skills (limit to 4)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -69,6 +81,9 @@ import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
 =======
 import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Get top skills (limit to 4);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
@@ -90,6 +105,7 @@ import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
+<<<<<<< HEAD
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -102,20 +118,33 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {}
       {topSkills.map((skill) => (;
         <Badge;
           key={skill}"
+=======
+        <Badge
+          key={skill}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
           {skill}
         </Badge>
       ))}
+<<<<<<< HEAD
       {skills.length > 4 && ("
         <Badge className="bg-zion-blue-light text-zion-slate-light border-0">
           +{skills.length - 4} more;
+=======
+      {skills.length > 4 && (
+        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">
+          +{skills.length - 4} more
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Badge>
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
   // Get top skills (limit to 4);
   const topSkills = skills && skills.slice(0, 4) || [];
@@ -135,6 +164,7 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
           {skill}
         </Badge>;
       ))}
@@ -144,6 +174,7 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
         </Badge>;
       )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;  );
 =======
@@ -163,6 +194,12 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>;
+  );
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 =======
 
@@ -183,15 +220,16 @@ function TalentCardSkills() {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="flex flex - wrap gap - 1 mb-5">;
+    <div className="flex flex - wrap gap - 1 mb - 5">;
       {top_skills.map ((skill) => (
         <Badge;
           key={skill}
-          className="bg - zion - purple / 10 hover:bg - zion - purple / 30 text - zion - purple border-0";
+          className="bg - zion - purple / 10 hover:bg - zion - purple / 30 text - zion - purple border - 0";
         >;
           {skill}
         </Badge>))}
       {skills.length > 4 && (
+<<<<<<< HEAD
         <Badge className="bg - zion - blue - light text - zion - slate - light border-0">;
 =======
   return ("
@@ -206,6 +244,9 @@ function TalentCardSkills() {}
       {skills.length > 4 && ("
         <Badge className="bg - zion - blue - light text - zion - slate - light border - 0">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <Badge className="bg - zion - blue - light text - zion - slate - light border - 0">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           +{skills.length - 4} more;
         </Badge>)}
     </div>);

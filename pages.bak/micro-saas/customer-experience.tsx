@@ -33,6 +33,7 @@ interface CustomerexperienceProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -61,6 +62,11 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import * as React from 'react';
 
@@ -93,6 +99,7 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -118,6 +125,12 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+}
+}
+export default function Customerexperience({ }: CustomerexperienceProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -158,6 +171,7 @@ export default function Customerexperience(): any ({ }: CustomerexperienceProps)
       <h1>Customerexperience</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -224,3 +238,9 @@ export default function Customerexperience(): any ({ }: CustomerexperienceProps)
 =======
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

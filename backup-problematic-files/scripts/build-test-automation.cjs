@@ -3,6 +3,7 @@
  * Build and Test Automation;
  * Comprehensive build and testing automation;
  */
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -18,6 +19,7 @@ class BuildTestAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
 <<<<<<< HEAD
@@ -28,6 +30,9 @@ class BuildTestAutomation {}
     
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.report.steps.push({})
       timestamp,
       type,
@@ -91,6 +96,7 @@ class BuildTestAutomation {}
     try {}
       const buildDirs = ['.next', 'dist', 'build', 'out'];
       let buildFound = fal;s;e;
+      
       for (const dir of buildDirs) {}
         if ()) {}
           this.log(`Build output found "in": ${dir}`, 'success')) {`}
@@ -114,24 +120,33 @@ class BuildTestAutomation {}
     this.report.status = this.report.errors.length === 0 ? 'success' : 'failed';
     this.report.duration = endTime - this.startTime;
     this.report.endTime = endTime.toISOString();
+
     const reportPath = path.join('/workspace', 'build-test-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+    
     this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting Build and Test Automation');
+      
       // Clean previous builds;
       await this.cleanBuild();
+      
       // Install dependencies;
       await this.installDependencies();
+      
       // Run tests;
       await this.runTests();
+      
       // Run linting;
       await this.runLinting();
+      
       // Build application;
       await this.buildApplication();
+      
       // Check build output;
       await this.checkBuildOutput();
+      
       this.log('Build and Test Automation completed successfully', 'success')} catch (error) {}
       this.log(`Build and Test Automation "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
@@ -144,9 +159,13 @@ if ( {})
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = BuildTestAutomation;
 module.exports = BuildTestAutomation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

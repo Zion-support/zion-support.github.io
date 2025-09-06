@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
@@ -213,6 +214,8 @@ import {
 
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -392,6 +395,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +425,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -475,6 +481,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages/solutions.tsx
 =======
@@ -483,6 +490,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -1072,6 +1083,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD:pages_backup/solutions.tsx
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1087,6 +1099,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </UltraAdvancedFuturisticBackground>
   )
 
@@ -1125,6 +1139,7 @@ export default Solutions,
 
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
 =======
@@ -1155,6 +1170,10 @@ export default Solutions,
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -1172,6 +1191,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/solutions.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1200,3 +1220,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

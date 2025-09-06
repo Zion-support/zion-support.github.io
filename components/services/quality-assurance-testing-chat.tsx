@@ -1,13 +1,21 @@
 
 
+<<<<<<< HEAD
 import type { NextPage } from "next";"
 import Head from "next/head";"
+=======
+<<<<<<< HEAD
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Link from "next/link";
 const QualityAssuranceTestingChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
         <meta"
           name="description""
           content="QualityAssuranceTestingChat service""
@@ -15,15 +23,28 @@ const QualityAssuranceTestingChat: NextPage = () => {;
       <main>
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>"
+=======
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />{" "}
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <a href="/services">Back to Services</a>
       </main>
     </div>
       </Head>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
         <p>Service details coming soon...</p>;"
@@ -36,8 +57,11 @@ export default QualityAssuranceTestingChat;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 "
 import type { NextPage } from "next";"
@@ -59,8 +83,16 @@ const QualityAssuranceTestingChat: NextPage = () => {}
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
+=======
+
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from './next';
 import Head from './next / head';
 =======
@@ -138,8 +170,18 @@ export default QualityAssuranceTestingChat;
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

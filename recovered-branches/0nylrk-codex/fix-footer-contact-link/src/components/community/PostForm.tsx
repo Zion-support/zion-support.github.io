@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 =======
@@ -15,6 +16,9 @@ import { useForm } from "react-hook-form";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -23,6 +27,7 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -55,10 +60,17 @@ import { useState } from "react","
 import { useForm } from "react-hook-form",
 
 <<<<<<< HEAD
+=======
+
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { useState } from "react",
@@ -71,6 +83,10 @@ import { useForm } from "react-hook-form",
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -153,7 +169,9 @@ interface PostFormProps {
   onSubmit: (values: PostFormValues) => void,
 =======
 
+
 import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -161,6 +179,26 @@ import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormV
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { ForumCategory } from "@/types/community",
+
+interface PostFormValues {
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
+
+
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+}
+interface PostFormProps {
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isEditing?: boolean
 =======
 interface PostFormValues {}
@@ -182,6 +220,7 @@ interface PostFormProps {}
 
 export const PostForm = ({;
   initialValues;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   onSubmit;
@@ -207,13 +246,22 @@ import { useState } from "react",;
 "
 import { useState } from "react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  onSubmit;
+
+import { useState } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from "react-hook-form",;
 import {;
   Card,;
   CardContent,;
   CardFooter,;
   CardHeader,;
+<<<<<<< HEAD
   CardTitle;"
+=======
+  CardTitle;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "@/components/ui/card",;
 import {;
   Form,;
@@ -221,11 +269,19 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage;"
 } from "@/components/ui/form",;"
 import { Input } from "@/components/ui/input",;"
 import { Button } from "@/components/ui/button",;"
 import { Textarea } from "@/components/ui/textarea",;"
+=======
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ForumCategory } from "@/types/community",;
 interface PostFormValues {;
   title: string,;
@@ -239,6 +295,7 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
@@ -253,6 +310,11 @@ interface PostFormProps {;
 =======
   onSubmit;  initialValues?: Partial<PostFormValues>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  initialValues?: Partial<PostFormValues>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
@@ -286,6 +348,9 @@ export const PostForm = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -305,6 +370,7 @@ interface PostFormValues {;
 interface PostFormProps {;
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,;
+<<<<<<< HEAD
 =======
   onSubmit: (values: PostFormValues) => void;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -313,6 +379,15 @@ interface PostFormProps {;
 export const PostForm = ({};
   isEditing = false;
 <<<<<<< HEAD
+=======
+  isEditing?: boolean;
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
+  isEditing = false;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: PostFormProps) => {;
   const form = useForm<PostFormValues>({;
     defaultValues: {;
@@ -320,6 +395,7 @@ export const PostForm = ({};
       content: initialValues?.content || "",;
       categoryId: initialValues?.categoryId || "project-help",;
       tags: initialValues?.tags || "";
+<<<<<<< HEAD
 
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -405,20 +481,68 @@ export const PostForm = ({};
       await on_submit (values);
     } finally {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+import { useState } from './react';
+import { use_form } from './react - hook - form';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { ForumCategory } from '@/types / community';
+interface PostFormValues {
+  title: string,
+  content: string,
+  category_id: ForumCategory,
+  tags: string;
+}
+interface PostFormProps {
+  initial_values?: Partial < PostFormValues>;
+  on_submit: (values: PostFormValues) => void,
+  is_editing?: boolean;
+}
+export const PostForm = ({
+  initial_values;
+  on_submit;
+  is_editing = false;
+}: PostFormProps) =>: any {
+  const form = use_form < PostFormValues>({
+    default_values: {
+      title: initial_values?.title || "",
+      content: initial_values?.content || "",
+      category_id: initial_values?.category_id || "project - help",
+      tags: initial_values?.tags || "";
+    }
+  });
+;
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const handle_submit = async (values: PostFormValues) => {
+    setIsSubmitting (true),
+
     try {
       await on_submit (values);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     } finally {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } finally {
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
       categoryId: initialValues?.categoryId || "project-help",
+<<<<<<< HEAD
 =======
     } finally {}
   }"
@@ -426,6 +550,8 @@ export const PostForm = ({};
       content: initialValues?.content || "","
       categoryId: initialValues?.categoryId || "project-help","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       tags: initialValues?.tags || ""
     }
   };
@@ -433,17 +559,22 @@ export const PostForm = ({};
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -476,6 +607,12 @@ export const PostForm = ({};
     } finally {    }
   }  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    }
+  }
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card>;
       <CardHeader>;"
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
@@ -510,11 +647,15 @@ export const PostForm = ({};
       <CardContent>;
 <<<<<<< HEAD
         <Form {...form}>;
+<<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
 =======
         <Form {...form}>;"
           <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField;
               control={form.control}"
               name="title";
@@ -538,6 +679,10 @@ export const PostForm = ({};
             />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
 =======
@@ -563,6 +708,10 @@ export const PostForm = ({};
             />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
 =======
@@ -591,6 +740,10 @@ export const PostForm = ({};
             />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
 =======
@@ -620,6 +773,8 @@ export const PostForm = ({};
     }
   }
 
+
+
     }
 =======
 
@@ -659,11 +814,15 @@ export const PostForm = ({};
       <CardContent>;
 <<<<<<< HEAD
         <Form {...form}>;
+<<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
 =======
         <Form {...form}>;"
           <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField;
               control={form.control}"
               name="title";
@@ -813,7 +972,7 @@ export const PostForm = ({};
                   <FormControl>;
                     <Textarea;
                       placeholder="Write your post content here...";
-                      className="min-h-[200px]";
+                      className="min - h-[200px]";
                       {...field}
                     />;
                   </FormControl>;
@@ -828,7 +987,7 @@ export const PostForm = ({};
                   <FormLabel > Category</FormLabel>;
                   <FormControl>;
                     <select;
-                      className="w - full p - 2 border rounded-md";
+                      className="w - full p - 2 border rounded - md";
                       {...field}
                     >;
                       <option value="getting - hired">Getting Hired</option>;
@@ -990,7 +1149,208 @@ export const PostForm = ({;
             />;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
-    </Card>);export default PostForm;
+
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+
+    </Card>);
+}
+;
+export default PostForm;
+;
+
+},
+
+
+
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { ;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle;
+} from "@/components/ui/card",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ForumCategory } from "@/types/community",;
+;
+interface PostFormValues {;
+  title:string,;
+  content:string,;
+  categoryId:ForumCategory,;
+  tags:string;}
+;
+interface PostFormProps {;
+  initialValues?:Partial<PostFormValues>,;
+  onSubmit:(values:PostFormValues) => void,;
+  isEditing?:boolean;
+}
+;
+export const PostForm = ({;
+  initialValues,;
+  onSubmit,;
+  isEditing = false;
+} PostFormProps) => {;
+  const form = useForm<PostFormValues>({;
+    defaultValues:{;
+      title:initialValues?.title || "",;
+      content:initialValues?.content || "",;
+      categoryId:initialValues?.categoryId || "project-help",;
+      tags:initialValues?.tags || "";
+    }
+  }),;
+;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+;
+  const handleSubmit = async (values:PostFormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      await onSubmit(values);
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  },;
+;
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle>{isEditing ? "Edit Post" :"Create New Post"}</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>;
+            <FormField;
+              control={form.control}
+              name="title";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Title</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder="Enter post title..." {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={form.control}
+              name="content";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Content</FormLabel>;
+                  <FormControl>;
+                    <Textarea ;
+                      placeholder="Write your post content here..." ;
+                      className="min-h-[200px]";
+                      {...field} ;
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={form.control}
+              name="categoryId";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Category</FormLabel>;
+                  <FormControl>;
+                    <select;
+                      className="w-full p-2 border rounded-md";
+                      {...field}
+                    >;
+                      <option value="getting-hired">Getting Hired</option>;
+                      <option value="project-help">Project Help</option>;
+                      <option value="ai-tools">AI Tools Discussion</option>;
+                      <option value="feedback">Feedback & Feature Requests</option>;
+                    </select>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={form.control}
+              name="tags";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Tags (comma-separated)</FormLabel>;
+                  <FormControl>;
+                    <Input ;
+                      placeholder="e.g. resume, hiring, flutter" ;
+                      {...field} ;
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+            />;
+            ;
+            <Button type="submit" disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." :isEditing ? "Update Post" :"Create Post"}
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+    </Card>;
+  ),;
+},;
+;
+export default PostForm,; import {
+  Card;
+CardContent;
+CardFooter;
+CardHeader;
+CardTitle import {
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+FormMessage interface PostFormValues {
+  title: string;
+content: string;
+categoryId: ForumCategory;
+tags: string 
+}interface PostFormProps {
+  initialValues?: Partial<PostFormValues>;
+onSubmit: (values: PostFormValues) => void;
+isEditing?: boolean 
+}initialValues, onSubmit, isEditing = false 
+}: PostFormProps) => {
+  const form = useForm<PostFormValues> ({
+  defaultValues: {
+  const [isSubmitting, setIsSubmitting] = useState (false);
+return (<Card> <CardHeader> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Content</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Tags (comma-separated) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </form> </Form> </CardContent> </Card>) 
+};
+export default PostForm;
+}
+export default PostForm;
+
+},
+
+export default PostForm,
+export default PostForm;
+export default PostForm,
+export default PostForm;
 export default PostForm,
 
 <<<<<<< HEAD

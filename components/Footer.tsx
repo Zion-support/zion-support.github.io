@@ -1,5 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Phone
   Mail
   MapPin
@@ -19,6 +35,52 @@ pr-12243
 
 import React from 'react;';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Github 
+} from 'lucide-react';
+
+const socialLinks = [
+  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'GitHub', href: '#', icon: Github }
+];
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Leading provider of AI solutions, IT services, and micro SaaS applications. 
+              Transform your business with cutting-edge technology.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <link.icon className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default function Footer() {
 export default function Footer() {
@@ -250,6 +312,12 @@ const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 mr-2 text-blue-400 />
                 <a href="tel:+13024640950" className=hover:text-blue-400 transition-colors">
                   +1 302 464 0950
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </a>
               </div>
               <div className="flex items-center>
@@ -271,6 +339,17 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* Services */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -324,7 +403,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -448,7 +532,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
@@ -487,6 +580,54 @@ pr-12243
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <li><a href="/contact" className="text-gray-300 hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a></li>
+=======
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
+              <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+<<<<<<< HEAD
+=======
+}
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                     href={link && link.href}
@@ -596,6 +737,13 @@ pr-12243
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -631,6 +779,7 @@ pr-12243
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+<<<<<<< HEAD
               Leading the future of technology with innovative solutions and
               cutting-edge development.
             </p>
@@ -761,18 +910,31 @@ pr-12243
             </div>
           </div>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 main
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export default Footer;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 pr-12243
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

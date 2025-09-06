@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -108,17 +109,22 @@ import {PortfolioProject} from '@/types/resume';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
+<<<<<<< HEAD
 =======
 import { useState  } from './react';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -127,52 +133,18 @@ import { Badge  } from '@/components / ui / badge';import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '@/components / ui / alert - dialog';
-import { Edit, Trash2, Github, Link, FileText  } from './lucide-react';
-import { PortfolioProject  } from '@/types / resume';
+} from "@/components/ui/alert-dialog";
+import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
+import { PortfolioProject } from "@/types/resume";
 interface ProjectCardProps {
 =======
 import {PortfolioProject} from '@/types/resume';interface ProjectCardProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   project: PortfolioProject;
-  on_edit: (project: PortfolioProject) => void;
-  on_delete: (project_id: string) => void;
-}
-export /**
- * ProjectCard - Function description
- */
-function ProjectCard() {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
-;
-  const handle_delete = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_delete (project.id);
-    }
-    setDeleteDialogOpen (false);
-  }
-;
-
-  return (
-    <Card className="h - full flex flex-col">;
-      <div className="relative h - 48 overflow - hidden rounded - t-lg bg-muted">;
-        {project.image_url ? (
-          <img;
-            src={project.image_url}
-            alt={project.title}
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';interface ProjectCardProps {
-  project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +178,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
@@ -220,6 +198,7 @@ export function ProjectCard() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onDelete(project.id);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     setDeleteDialogOpen(false);
   }
@@ -292,6 +271,12 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    setDeleteDialogOpen(false);
+  };
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="h-full flex flex-col">
 =======
 
@@ -307,9 +292,49 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
             alt={project.title}
             className="w-full h-full object-cover"
           />;
+<<<<<<< HEAD
         ) : (;    <Card className="h-full flex flex-col">;
 =======
             alt={project.title}"
+=======
+        ) : (;
+            src={project.image_url}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />;
+        ) : (;
+
+import { useState } from 'react',;
+import { Card, CardContent, CardFooter } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
+import { PortfolioProject } from '@/types/resume',;
+;
+interface ProjectCardProps {;
+  project:PortfolioProject,;
+  onEdit:(project:PortfolioProject) => void,;
+  onDelete:(projectId:string) => void;
+}
+;
+export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
+  ;
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id),;
+    }
+    setDeleteDialogOpen(false),;
+  },;
+  ;
+  return (;
+  return (
+    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
+          <img
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -352,10 +377,15 @@ export function ProjectCard() { return null; }
           />;
 <<<<<<< HEAD
         ) :(;
+<<<<<<< HEAD
 =======
 "
           <div className="w-full h-full flex items-center justify-center bg-muted">;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        ) : (;
+          <div className="w-full h-full flex items-center justify-center bg-muted">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
@@ -382,6 +412,7 @@ export function ProjectCard() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </div>
 <<<<<<< HEAD
@@ -399,6 +430,13 @@ export function ProjectCard() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      </div>
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
@@ -503,22 +541,31 @@ export function ProjectCard() { return null; }
 }
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

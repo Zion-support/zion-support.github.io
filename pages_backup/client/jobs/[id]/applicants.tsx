@@ -4,6 +4,7 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
 <<<<<<< HEAD
 
@@ -13,16 +14,22 @@ import Link from 'next/link';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fetcher = null;
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function JobApplicantsPage() {
   const router = useRouter()
@@ -30,6 +37,7 @@ export default function JobApplicantsPage() {
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null
     fetcher
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
 <<<<<<< HEAD
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -48,6 +56,11 @@ export default function JobApplicantsPage() {
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+  );
+  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
@@ -77,6 +90,7 @@ export default function JobApplicantsPage() {
   const applications = (appsData?.applications as any[]) || []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 =======
@@ -93,18 +107,25 @@ export default function JobApplicantsPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='space-y-4'>
       <div className='flex items-center justify-between'>
         <h1 className='text-2xl font-semibold'>Applicants</h1>
         <Link href='/client/dashboard'>
           <a className='text-sm underline'>Back to Dashboard</a>
         </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
       {job && <p className='text-sm text-gray-600'>For job: {job.title}</p>}
       <div className='grid gap-3'>
@@ -115,6 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
             >
               <div className='flex items-center justify-between'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
 <<<<<<< HEAD
 
@@ -127,6 +149,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div>
                   <p className='font-medium'>{talent?.name |a.talentSlug}</p>
                   <p className='text-xs text-gray-500'>
@@ -197,6 +222,7 @@ export default function JobApplicantsPage() {_const _router = useRouter();
 =======
           );
         })}
+<<<<<<< HEAD
 =======
           );
         })}
@@ -324,3 +350,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/jobs/[id]/applicants.tsx
+=======
+      </div>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

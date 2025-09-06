@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 exports && exports.handler = async function () {
   try {
 =======
@@ -42,6 +48,7 @@ const { upsert_file } = require ('./_lib / github');
 <<<<<<< HEAD
 exports.handler = async function () {
   try {
+<<<<<<< HEAD
     const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
     const coursesPath = path.join(
       process.cwd()
@@ -125,7 +132,38 @@ if ( {) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+    const users_path = path.join (process.cwd (), 'data', 'learn', 'users.json');
+    const courses_path = path.join (
+      process.cwd (),
+      'data',
+      'learn',
+      'courses.json');
+    const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8'));
+    const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8'));    const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+    const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+    const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
+    const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8')),
+    const summary = {
+      updated_at: Date.now (),
+      totals: {
+        users: Object.keys (users).length,
+        courses: courses.length,
+        completions: Object.values (users).reduce (
+          (acc, u) => acc + (u.certifications?.length || 0),
+          0),
+      },
+      top_badges: Object.values (users).reduce ((map, u) => {
+        (u.badges || []).for_each (boolean => {
+          map[b] = (map[b] || 0) + 1;
+        });
+        return map;
+      }, {}),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         content,
 =======
         content,'
@@ -134,6 +172,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         token,
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +187,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         users: Object.keys(users).length,
         courses: courses.length,
@@ -166,7 +207,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return map
 =======
 
@@ -187,11 +233,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 =======
@@ -267,6 +316,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+
+};      }
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
+        return map
+      }, {})
+    }
+    const owner = process.env.GITHUB_OWNER
+    const repo = process.env.GITHUB_REPO
+    const token = process.env.GITHUB_TOKEN
+    const content = JSON.stringify(summary, null, 2)
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
     return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
   } catch (e) {}
@@ -286,6 +355,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,6 +385,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 },
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -322,16 +394,33 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
     // Check condition;
 if ( {) {}
   $2;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+},
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {}
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -360,6 +449,8 @@ if ( {) {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 },
 
@@ -368,7 +459,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

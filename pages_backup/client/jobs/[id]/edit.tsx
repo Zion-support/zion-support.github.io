@@ -4,8 +4,14 @@
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
+=======
+import { useEffect, useState } from 'react';
+const fetcher = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
@@ -80,6 +86,7 @@ export default function EditJobPage(req, res) {}
 <<<<<<< HEAD
   useEffect(() => {
     if (job) {
+<<<<<<< HEAD
       setTitle(job.title |'');
       setDescription(job.description |'');
       setCategory(job.category |'');    }
@@ -329,6 +336,8 @@ export default function EditJobPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/edit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setTitle(job.title || '');
       setDescription(job.description || '');
 setCategory(job.category || '');
@@ -347,12 +356,16 @@ body: JSON.stringify({ title, description, category }),
   return (
 <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/edit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/edit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div>
         <label className="block text-sm font-medium">Title</label>
 =======
@@ -373,6 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/jobs/[id]/edit.tsx
 <<<<<<< HEAD
 =======
@@ -445,3 +459,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/jobs/[id]/edit.tsx
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

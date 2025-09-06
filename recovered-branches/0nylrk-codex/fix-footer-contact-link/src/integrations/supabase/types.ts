@@ -8,6 +8,7 @@ export type Json =;
   | { [key: string]: Json | undefined }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   | Json[];
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -20,13 +21,33 @@ export type Database = {}
         Row: {}
         }
         Insert: {};
+=======
+  | Json[];
+
+export type Database = {
+  public: {
+    Tables: {
+      ai_chats: {
+        Row: {
+          created_at: string;
+          id: string;
+          message: string;
+          response: string;
+          user_id: string;
+        }
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           id?: string;
           message: string;
           response: string;
           user_id: string;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           id?: string;
           message?: string;
@@ -34,6 +55,7 @@ export type Database = {}
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
           {}
             foreignKeyName: "ai_chats_user_id_fkey";"
             columns: ["user_id"];
@@ -44,6 +66,18 @@ export type Database = {}
       }
       analytics_events: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "ai_chats_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      analytics_events: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string | null;
           event_type: string;
           id: string;
@@ -52,7 +86,11 @@ export type Database = {}
           session_id: string | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string | null;
           event_type: string;
           id?: string;
@@ -61,7 +99,11 @@ export type Database = {}
           session_id?: string | null;
           user_id?: string | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string | null;
           event_type?: string;
           id?: string;
@@ -71,6 +113,7 @@ export type Database = {}
           user_id?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "analytics_events_user_id_fkey";"
             columns: ["user_id"];
@@ -81,6 +124,18 @@ export type Database = {}
       }
       api_keys: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "analytics_events_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      api_keys: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           expires_at: string | null;
           id: string;
@@ -88,11 +143,19 @@ export type Database = {}
           key_hash: string;
           key_prefix: string;
           last_used_at: string | null;
+<<<<<<< HEAD
           name: string;"
           scopes: Database["public"]["Enums"]["api_key_scope"][];
           user_id: string;
         }
         Insert: {}
+=======
+          name: string;
+          scopes: Database["public"]["Enums"]["api_key_scope"][];
+          user_id: string;
+        }
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -100,11 +163,19 @@ export type Database = {}
           key_hash: string;
           key_prefix: string;
           last_used_at?: string | null;
+<<<<<<< HEAD
           name: string;"
           scopes?: Database["public"]["Enums"]["api_key_scope"][];
           user_id: string;
         }
         Update: {}
+=======
+          name: string;
+          scopes?: Database["public"]["Enums"]["api_key_scope"][];
+          user_id: string;
+        }
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -112,20 +183,33 @@ export type Database = {}
           key_hash?: string;
           key_prefix?: string;
           last_used_at?: string | null;
+<<<<<<< HEAD
           name?: string;"
+=======
+          name?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           scopes?: Database["public"]["Enums"]["api_key_scope"][];
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "api_keys_user_id_fkey";"
             columns: ["user_id"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
+=======
+          {
+            foreignKeyName: "api_keys_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             referenced_columns: ["user_id"];
           }];
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -134,10 +218,13 @@ export type Database = {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       api_logs: {;
         Row: {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -307,6 +394,9 @@ export type Database = {}
 =======
   | Json[];          api_key_id: string | null;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          api_key_id: string | null;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           endpoint: string;
           id: string;
@@ -318,12 +408,17 @@ export type Database = {}
           user_id: string | null;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Insert: {        Insert: {
 =======
 
 
         Insert: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        Insert: {
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -336,10 +431,15 @@ export type Database = {}
           user_id?: string | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
 
 
+=======
+        }
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -352,10 +452,23 @@ export type Database = {}
           user_id?: string | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+        }
+        Relationships: [;
+          {
+        }
+        Relationships: [
+          {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
         Relationships: [;
           {
             foreignKeyName: "api_logs_api_key_id_fkey"
+<<<<<<< HEAD
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
@@ -1462,9 +1575,516 @@ export type Database = {}
 <<<<<<< HEAD
 =======
         }            foreignKeyName: "api_logs_api_key_id_fkey"
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             columns: ["api_key_id"]
             isOneToOne: false
-            referencedRelation: "api_keys"            columns: ["resume_id"]
+            referencedRelation: "api_keys"
+
+            foreignKeyName: "api_logs_api_key_id_fkey";
+            columns: ["api_key_id"];
+            isOneToOne: false;
+            referenced_relation: "api_keys";
+            referenced_columns: ["id"];
+
+          }
+          }
+
+            referencedColumns: ["id"]
+
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
+        }
+        Relationships: [;
+          {
+          }
+          {
+            foreignKeyName: "api_logs_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      certifications: {
+        Row: {
+          created_at: string;
+          credential_id: string | null;
+          credential_url: string | null;
+          expiration_date: string | null;
+          id: string;
+          issue_date: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Update: {
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization?: string;
+          name?: string;
+          resume_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "certifications_resume_id_fkey";
+            columns: ["resume_id"];
+            isOneToOne: false;
+            referenced_relation: "talent_resumes";
+            referenced_columns: ["id"];
+          }];
+      }
+      content: {
+        Row: {
+          content_type: string;
+          content_url: string | null;
+          created_at: string;
+          creator_id: string;
+          description: string | null;
+          id: string;
+          published: boolean | null;
+          thumbnail_url: string | null;
+          title: string;
+          updated_at: string;
+          views: number | null;
+        }
+        Insert: {
+          content_type: string;
+          content_url?: string | null;
+          created_at?: string;
+          creator_id: string;
+          description?: string | null;
+          id?: string;
+          published?: boolean | null;
+          thumbnail_url?: string | null;
+          title: string;
+          updated_at?: string;
+          views?: number | null;
+        }
+        Update: {
+          content_type?: string;
+          content_url?: string | null;
+          created_at?: string;
+          creator_id?: string;
+          description?: string | null;
+          id?: string;
+          published?: boolean | null;
+          thumbnail_url?: string | null;
+          title?: string;
+          updated_at?: string;
+          views?: number | null;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "content_creator_id_fkey";
+            columns: ["creator_id"];
+            isOneToOne: false;
+            referenced_relation: "profiles";
+            referenced_columns: ["id"];
+          }];
+      }
+      contract_templates: {
+        Row: {
+          created_at: string;
+          id: string;
+          is_default: boolean | null;
+          template_data: Json;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          id?: string;
+          is_default?: boolean | null;
+          template_data: Json;
+          title: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          id?: string;
+          is_default?: boolean | null;
+          template_data?: Json;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "contract_templates_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      education: {
+        Row: {
+          created_at: string;
+          degree: string;
+          description: string | null;
+          end_date: string | null;
+          field_of_study: string | null;
+          id: string;
+          institution: string;
+          institution_logo_url: string | null;
+          is_current: boolean;
+          location: string | null;
+          resume_id: string;
+          start_date: string;
+          updated_at: string;
+        }
+        Insert: {
+          created_at?: string;
+          degree: string;
+          description?: string | null;
+          end_date?: string | null;
+          field_of_study?: string | null;
+          id?: string;
+          institution: string;
+          institution_logo_url?: string | null;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id: string;
+          start_date: string;
+          updated_at?: string;
+        }
+        Update: {
+          created_at?: string;
+          degree?: string;
+          description?: string | null;
+          end_date?: string | null;
+          field_of_study?: string | null;
+          id?: string;
+          institution?: string;
+          institution_logo_url?: string | null;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id?: string;
+          start_date?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "education_resume_id_fkey";
+            columns: ["resume_id"];
+            isOneToOne: false;
+            referenced_relation: "talent_resumes";
+            referenced_columns: ["id"];
+          }];
+      }
+      fraud_detection_reports: {
+        Row: {
+          action_taken_count: number;
+          dangerous_count: number;
+          false_positive_count: number;
+          generated_at: string;
+          id: string;
+          report_data: Json | null;
+          report_month: string;
+          suspicious_count: number;
+          total_flags: number;
+        }
+        Insert: {
+          action_taken_count?: number;
+          dangerous_count?: number;
+          false_positive_count?: number;
+          generated_at?: string;
+          id?: string;
+          report_data?: Json | null;
+          report_month: string;
+          suspicious_count?: number;
+          total_flags?: number;
+        }
+        Update: {
+          action_taken_count?: number;
+          dangerous_count?: number;
+          false_positive_count?: number;
+          generated_at?: string;
+          id?: string;
+          report_data?: Json | null;
+          report_month?: string;
+          suspicious_count?: number;
+          total_flags?: number;
+        }
+        Relationships: [];
+      }
+      fraud_flags: {
+        Row: {
+          action_taken: string | null;
+          content_excerpt: string;
+          content_id: string;
+          content_type: string;
+          gpt_classification: string | null;
+          gpt_explanation: string | null;
+          id: string;
+          ip_address: string | null;
+          is_false_positive: boolean | null;
+          reason: string;
+          reviewed_at: string | null;
+          reviewed_by: string | null;
+          severity: Database["public"]["Enums"]["fraud_severity"];
+          status: string;
+          timestamp: string;
+          updated_at: string | null;
+          user_email: string | null;
+          user_id: string | null;
+        }
+        Insert: {
+          action_taken?: string | null;
+          content_excerpt: string;
+          content_id: string;
+          content_type: string;
+          gpt_classification?: string | null;
+          gpt_explanation?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          is_false_positive?: boolean | null;
+          reason: string;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          severity?: Database["public"]["Enums"]["fraud_severity"];
+          status?: string;
+          timestamp?: string;
+          updated_at?: string | null;
+          user_email?: string | null;
+          user_id?: string | null;
+        }
+        Update: {
+          action_taken?: string | null;
+          content_excerpt?: string;
+          content_id?: string;
+          content_type?: string;
+          gpt_classification?: string | null;
+          gpt_explanation?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          is_false_positive?: boolean | null;
+          reason?: string;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          severity?: Database["public"]["Enums"]["fraud_severity"];
+          status?: string;
+          timestamp?: string;
+          updated_at?: string | null;
+          user_email?: string | null;
+          user_id?: string | null;
+        }
+        Relationships: [;
+          {
+
+            foreignKeyName: "fraud_flags_reviewed_by_fkey";
+            columns: ["reviewed_by"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+
+          }
+          }
+
+          },
+
+          {
+            foreignKeyName: "fraud_flags_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      hire_requests: {
+        Row: {
+          attachments: Json | null;
+          budget_display: string | null;
+          budget_max: number | null;
+          budget_min: number | null;
+          created_at: string;
+          expiry_date: string | null;
+          id: string;
+          project_overview: string;
+          project_summary: string | null;
+          project_type: string | null;
+          requester_email: string;
+          requester_id: string | null;
+          requester_name: string;
+          status: string;
+          talent_id: string;
+          timeline: string;
+          updated_at: string;
+        }
+        Insert: {
+          attachments?: Json | null;
+          budget_display?: string | null;
+          budget_max?: number | null;
+          budget_min?: number | null;
+          created_at?: string;
+          expiry_date?: string | null;
+          id?: string;
+          project_overview: string;
+          project_summary?: string | null;
+          project_type?: string | null;
+          requester_email: string;
+          requester_id?: string | null;
+          requester_name: string;
+          status?: string;
+          talent_id: string;
+          timeline: string;
+          updated_at?: string;
+        }
+        Update: {
+          attachments?: Json | null;
+          budget_display?: string | null;
+          budget_max?: number | null;
+          budget_min?: number | null;
+          created_at?: string;
+          expiry_date?: string | null;
+          id?: string;
+          project_overview?: string;
+          project_summary?: string | null;
+          project_type?: string | null;
+          requester_email?: string;
+          requester_id?: string | null;
+          requester_name?: string;
+          status?: string;
+          talent_id?: string;
+          timeline?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      interviews: {
+        Row: {
+          client_id: string;
+          created_at: string;
+          duration_minutes: number;
+          end_time: string | null;
+          id: string;
+          interview_type: string;
+          meeting_link: string | null;
+          meeting_platform: string | null;
+          notes: string | null;
+          reminder_sent: string | null;
+          scheduled_date: string;
+          status: string;
+          talent_id: string;
+          title: string | null;
+          updated_at: string;
+        }
+        Insert: {
+          client_id: string;
+          created_at?: string;
+          duration_minutes?: number;
+          end_time?: string | null;
+          id?: string;
+          interview_type?: string;
+          meeting_link?: string | null;
+          meeting_platform?: string | null;
+          notes?: string | null;
+          reminder_sent?: string | null;
+          scheduled_date: string;
+          status?: string;
+          talent_id: string;
+          title?: string | null;
+          updated_at?: string;
+        }
+        Update: {
+          client_id?: string;
+          created_at?: string;
+          duration_minutes?: number;
+          end_time?: string | null;
+          id?: string;
+          interview_type?: string;
+          meeting_link?: string | null;
+          meeting_platform?: string | null;
+          notes?: string | null;
+          reminder_sent?: string | null;
+          scheduled_date?: string;
+          status?: string;
+          talent_id?: string;
+          title?: string | null;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      job_applications: {
+        Row: {
+          cover_letter: string | null;
+          created_at: string | null;
+          id: string;
+          is_shortlisted: boolean | null;
+          job_id: string;
+          match_breakdown: Json | null;
+          match_score: number | null;
+          match_suggestion: string | null;
+          match_summary: string | null;
+          resume_id: string | null;
+          scored_at: string | null;
+          status: string;
+          talent_id: string;
+          viewed_at: string | null;
+        }
+        Insert: {
+          cover_letter?: string | null;
+          created_at?: string | null;
+          id?: string;
+          is_shortlisted?: boolean | null;
+          job_id: string;
+          match_breakdown?: Json | null;
+          match_score?: number | null;
+          match_suggestion?: string | null;
+          match_summary?: string | null;
+          resume_id?: string | null;
+          scored_at?: string | null;
+          status?: string;
+          talent_id: string;
+          viewed_at?: string | null;
+        }
+        Update: {
+          cover_letter?: string | null;
+          created_at?: string | null;
+          id?: string;
+          is_shortlisted?: boolean | null;
+          job_id?: string;
+          match_breakdown?: Json | null;
+          match_score?: number | null;
+          match_suggestion?: string | null;
+          match_summary?: string | null;
+          resume_id?: string | null;
+          scored_at?: string | null;
+          status?: string;
+          talent_id?: string;
+          viewed_at?: string | null;
+        }
+        Relationships: [;
+          {
+
+
+          },
+
+
+          {
+            foreignKeyName: "job_applications_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
@@ -1484,8 +2104,14 @@ export type Database = {}
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
+<<<<<<< HEAD
           }          },
 =======
+=======
+          }
+          },
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           },
 
@@ -1531,8 +2157,8 @@ export type Database = {}
           category: string;
           client_id: string;
           created_at: string;
-          deadline: string | null,
-  description: string;
+          deadline: string | null;
+          description: string;
           id: string;
           skills: string[];
           status: string;
@@ -1544,8 +2170,8 @@ export type Database = {}
           category: string;
           client_id: string;
           created_at?: string;
-          deadline?: string | null,
-  description: string;
+          deadline?: string | null;
+          description: string;
           id?: string;
           skills?: string[];
           status?: string;
@@ -1612,7 +2238,512 @@ export type Database = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+            foreignKeyName: "milestone_activities_milestone_id_fkey";
+            columns: ["milestone_id"];
+            isOneToOne: false;
+            referenced_relation: "project_milestones";
+            referenced_columns: ["id"];
+
+          }
+          }
+
+          },
+
+          {
+            foreignKeyName: "milestone_activities_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      notification_preferences: {
+        Row: {
+          created_at: string;
+          id: string;
+          marketing_emails: boolean | null;
+          system_notifications: boolean | null;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          id?: string;
+          marketing_emails?: boolean | null;
+          system_notifications?: boolean | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          id?: string;
+          marketing_emails?: boolean | null;
+          system_notifications?: boolean | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+      }
+      notifications: {
+        Row: {
+          created_at: string | null;
+          id: string;
+          message: string;
+          read: boolean | null;
+          related_id: string | null;
+          title: string;
+          type: string;
+          updated_at: string | null;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string | null;
+          id?: string;
+          message: string;
+          read?: boolean | null;
+          related_id?: string | null;
+          title: string;
+          type: string;
+          updated_at?: string | null;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string | null;
+          id?: string;
+          message?: string;
+          read?: boolean | null;
+          related_id?: string | null;
+          title?: string;
+          type?: string;
+          updated_at?: string | null;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+      }
+      partner_payouts: {
+        Row: {
+          amount: number;
+          completed_at: string | null;
+          created_at: string;
+          id: string;
+          method: string;
+          partner_id: string;
+          payout_details: Json | null;
+          status: string;
+          updated_at: string;
+        }
+        Insert: {
+          amount: number;
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          method: string;
+          partner_id: string;
+          payout_details?: Json | null;
+          status?: string;
+          updated_at?: string;
+        }
+        Update: {
+          amount?: number;
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          method?: string;
+          partner_id?: string;
+          payout_details?: Json | null;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "partner_payouts_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }];
+      }
+      partner_profiles: {
+        Row: {
+          audience_size: string;
+          bio: string;
+          commission_rate: number | null;
+          created_at: string;
+          fraud_flags: number | null;
+          id: string;
+          name: string;
+          niche: string;
+          payout_method: string;
+          social_media: Json | null;
+          status: string;
+          updated_at: string;
+          user_id: string;
+          website: string | null;
+        }
+        Insert: {
+          audience_size: string;
+          bio: string;
+          commission_rate?: number | null;
+          created_at?: string;
+          fraud_flags?: number | null;
+          id?: string;
+          name: string;
+          niche: string;
+          payout_method: string;
+          social_media?: Json | null;
+          status?: string;
+          updated_at?: string;
+          user_id: string;
+          website?: string | null;
+        }
+        Update: {
+          audience_size?: string;
+          bio?: string;
+          commission_rate?: number | null;
+          created_at?: string;
+          fraud_flags?: number | null;
+          id?: string;
+          name?: string;
+          niche?: string;
+          payout_method?: string;
+          social_media?: Json | null;
+          status?: string;
+          updated_at?: string;
+          user_id?: string;
+          website?: string | null;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "partner_profiles_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      partner_referral_links: {
+        Row: {
+          campaign: string | null;
+          clicks: number | null;
+          conversions: number | null;
+          created_at: string;
+          id: string;
+          name: string;
+          partner_id: string;
+          source: string | null;
+          updated_at: string;
+        }
+        Insert: {
+          campaign?: string | null;
+          clicks?: number | null;
+          conversions?: number | null;
+          created_at?: string;
+          id?: string;
+          name: string;
+          partner_id: string;
+          source?: string | null;
+          updated_at?: string;
+        }
+        Update: {
+          campaign?: string | null;
+          clicks?: number | null;
+          conversions?: number | null;
+          created_at?: string;
+          id?: string;
+          name?: string;
+          partner_id?: string;
+          source?: string | null;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "partner_referral_links_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }];
+      }
+      portfolio_projects: {
+        Row: {
+          created_at: string;
+          demo_url: string | null;
+          description: string | null;
+          github_url: string | null;
+          id: string;
+          image_url: string | null;
+          pdf_url: string | null;
+          technologies: string[] | null;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          demo_url?: string | null;
+          description?: string | null;
+          github_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          pdf_url?: string | null;
+          technologies?: string[] | null;
+          title: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          demo_url?: string | null;
+          description?: string | null;
+          github_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          pdf_url?: string | null;
+          technologies?: string[] | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "portfolio_projects_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null;
+          average_rating: number | null;
+          bio: string | null;
+          created_at: string;
+          display_name: string | null;
+          headline: string | null;
+          id: string;
+          ip_address: string | null;
+          last_login_ip: string | null;
+          profile_complete: boolean;
+          rating_count: number | null;
+          rating_sum: number | null;
+          role: string | null;
+          signup_timestamp: string | null;
+          tenant_id: string | null;
+          updated_at: string;
+          user_type: string | null;
+        }
+        Insert: {
+          avatar_url?: string | null;
+          average_rating?: number | null;
+          bio?: string | null;
+          created_at?: string;
+          display_name?: string | null;
+          headline?: string | null;
+          id: string;
+          ip_address?: string | null;
+          last_login_ip?: string | null;
+          profile_complete?: boolean;
+          rating_count?: number | null;
+          rating_sum?: number | null;
+          role?: string | null;
+          signup_timestamp?: string | null;
+          tenant_id?: string | null;
+          updated_at?: string;
+          user_type?: string | null;
+        }
+        Update: {
+          avatar_url?: string | null;
+          average_rating?: number | null;
+          bio?: string | null;
+          created_at?: string;
+          display_name?: string | null;
+          headline?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          last_login_ip?: string | null;
+          profile_complete?: boolean;
+          rating_count?: number | null;
+          rating_sum?: number | null;
+          role?: string | null;
+          signup_timestamp?: string | null;
+          tenant_id?: string | null;
+          updated_at?: string;
+          user_type?: string | null;
+        }
+        Relationships: [;
+          {
+
+            foreignKeyName: "profiles_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+
+          }
+          }
+
+          },
+
+          {
+            foreignKeyName: "profiles_tenant_id_fkey";
+            columns: ["tenant_id"];
+            isOneToOne: false;
+            referenced_relation: "whitelabel_tenants";
+            referenced_columns: ["id"];
+          }];
+      }
+      project_milestones: {
+        Row: {
+          amount: number;
+          created_at: string;
+          created_by: string;
+          deliverables: Json | null;
+          description: string | null;
+          due_date: string | null;
+          id: string;
+          project_id: string;
+          status: string;
+          title: string;
+          updated_at: string;
+        }
+        Insert: {
+          amount: number;
+          created_at?: string;
+          created_by: string;
+          deliverables?: Json | null;
+          description?: string | null;
+          due_date?: string | null;
+          id?: string;
+          project_id: string;
+          status?: string;
+          title: string;
+          updated_at?: string;
+        }
+        Update: {
+          amount?: number;
+          created_at?: string;
+          created_by?: string;
+          deliverables?: Json | null;
+          description?: string | null;
+          due_date?: string | null;
+          id?: string;
+          project_id?: string;
+          status?: string;
+          title?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+
+            foreignKeyName: "project_milestones_created_by_fkey";
+            columns: ["created_by"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+
+          }
+          }
+
+          },
+
+          }
+
+          },
+          {
+            foreignKeyName: "project_milestones_project_id_fkey";
+            columns: ["project_id"];
+            isOneToOne: false;
+            referenced_relation: "projects";
+            referenced_columns: ["id"];
+          {
+
+            foreignKeyName: "project_notes_project_id_fkey";
+            columns: ["project_id"];
+            isOneToOne: false;
+            referenced_relation: "projects";
+            referenced_columns: ["id"];
+
+          }
+          }
+
+          },
+
+          {
+            foreignKeyName: "project_notes_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      projects: {
+        Row: {
+          agreement_url: string | null;
+          client_id: string;
+          created_at: string;
+          id: string;
+          job_id: string;
+          payment_terms: string;
+          scope_summary: string;
+          start_date: string;
+          status: string;
+          talent_id: string;
+          updated_at: string;
+        }
+        Insert: {
+          agreement_url?: string | null;
+          client_id: string;
+          created_at?: string;
+          id?: string;
+          job_id: string;
+          payment_terms: string;
+          scope_summary: string;
+          start_date: string;
+          status?: string;
+          talent_id: string;
+          updated_at?: string;
+        }
+        Update: {
+          agreement_url?: string | null;
+          client_id?: string;
+          created_at?: string;
+          id?: string;
+          job_id?: string;
+          payment_terms?: string;
+          scope_summary?: string;
+          start_date?: string;
+          status?: string;
+          talent_id?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+
+
+          },
+
+
+          {
+            foreignKeyName: "projects_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+
+            foreignKeyName: "projects_client_id_fkey";
+            columns: ["client_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
           },
           {
@@ -2985,6 +4116,7 @@ export type Database = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           }
           },
@@ -3077,6 +4209,9 @@ export type Database = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "quote_requests_requester_id_fkey";
 =======
         Update: {}
@@ -3091,13 +4226,17 @@ export type Database = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           }
 
           },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -3106,6 +4245,8 @@ export type Database = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
 =======
@@ -3119,6 +4260,7 @@ export type Database = {}
             referenced_relation: "profiles";"
             referenced_columns: ["id"];
           }];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       }
@@ -3170,12 +4312,21 @@ export type Database = {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      }
+
+
+      referral_codes: {;
+        Row: {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           code: string;
           created_at: string;
           id: string;
           updated_at: string;
           user_id: string;
         }
+<<<<<<< HEAD
 
 
         Insert: {}
@@ -3226,6 +4377,27 @@ export type Database = {}
           updated_at?: string;
           user_id?: string;        Relationships: [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        Insert: {
+        Insert: {
+          code: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;
+
+
+
+        }
+        Relationships: [;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
             foreignKeyName: "referral_codes_user_id_fkey";
 =======
@@ -3273,6 +4445,7 @@ export type Database = {}
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3324,20 +4497,156 @@ export type Database = {}
           {
             foreignKeyName: "referral_rewards_partner_id_fkey"
             columns: ["partner_id"]
+=======
+          {
+
+
+          },
+
+
+          {
+            foreignKeyName: "referral_rewards_referral_id_fkey"
+            columns: ["referral_id"]
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+
+            foreignKeyName: "referral_rewards_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }
+
+          },
+
+
+          {
+            foreignKeyName: "referral_rewards_referral_id_fkey";
+            columns: ["referral_id"];
+            isOneToOne: false;
+            referenced_relation: "referrals";
+            referenced_columns: ["id"];
+          }
+          {
+            foreignKeyName: "referral_rewards_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      referrals: {
+        Row: {
+          completed_at: string | null;
+          created_at: string;
+          email: string | null;
+          id: string;
+          ip_address: string | null;
+          partner_id: string | null;
+          referral_code: string;
+          referred_id: string | null;
+          referred_user_type: string | null;
+          referrer_id: string;
+          referrer_user_type: string | null;
+          reward_issued: boolean;
+          reward_issued_at: string | null;
+          status: Database["public"]["Enums"]["referral_status"];
+        }
+        Insert: {
+          completed_at?: string | null;
+          created_at?: string;
+          email?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          partner_id?: string | null;
+          referral_code: string;
+          referred_id?: string | null;
+          referred_user_type?: string | null;
+          referrer_id: string;
+          referrer_user_type?: string | null;
+          reward_issued?: boolean;
+          reward_issued_at?: string | null;
+          status?: Database["public"]["Enums"]["referral_status"];
+        }
+        Update: {
+          completed_at?: string | null;
+          created_at?: string;
+          email?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          partner_id?: string | null;
+          referral_code?: string;
+          referred_id?: string | null;
+          referred_user_type?: string | null;
+          referrer_id?: string;
+          referrer_user_type?: string | null;
+          reward_issued?: boolean;
+          reward_issued_at?: string | null;
+          status?: Database["public"]["Enums"]["referral_status"];
+        }
+        Relationships: [;
+          {
+
+
+          },
+
+
+          {
+            foreignKeyName: "referrals_referral_code_fkey"
+            columns: ["referral_code"]
+            isOneToOne: false
+            referencedRelation: "referral_codes"
+            referencedColumns: ["code"]
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
           },
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+          {
+            foreignKeyName: "referrals_referred_id_fkey"
+            columns: ["referred_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+
+            foreignKeyName: "referrals_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }
+
+          },
+
+
+          {
+            foreignKeyName: "referrals_referral_code_fkey";
+            columns: ["referral_code"];
+            isOneToOne: false;
+            referenced_relation: "referral_codes";
+            referenced_columns: ["code"];
+          }
+          {
+            foreignKeyName: "referrals_referred_id_fkey";
+            columns: ["referred_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
           },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -3418,6 +4727,7 @@ export type Database = {}
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
       referrals: {}
         Row: {}
           completed_at: string | null;
@@ -3691,6 +5001,14 @@ export type Database = {}
 =======
       }          clicked_at: string | null;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+      reminder_logs: {;
+        Row: {;
+
+          clicked_at: string | null;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           email_body: string;
           email_subject: string;
           id: string;
@@ -3700,12 +5018,17 @@ export type Database = {}
           user_id: string;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Insert: {        Insert: {
 =======
 
 
         Insert: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        Insert: {
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -3716,10 +5039,15 @@ export type Database = {}
           user_id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
 
 
+=======
+        }
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -3729,6 +5057,7 @@ export type Database = {}
           sent_at?: string | null;
           user_id?: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3744,6 +5073,12 @@ export type Database = {}
 =======
         }        Relationships: [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+        }
+        Relationships: [;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
@@ -3791,6 +5126,7 @@ export type Database = {}
         Relationships: [;
 <<<<<<< HEAD
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3887,6 +5223,9 @@ export type Database = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "review_reports_reporter_id_fkey";
 =======
           {}
@@ -3898,6 +5237,7 @@ export type Database = {}
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           }          }
 
@@ -3936,6 +5276,23 @@ export type Database = {}
       }
       reviews: {}
         Row: {}
+=======
+          }
+          }
+
+          },
+
+          {
+            foreignKeyName: "review_reports_review_id_fkey";
+            columns: ["review_id"];
+            isOneToOne: false;
+            referenced_relation: "reviews";
+            referenced_columns: ["id"];
+          }];
+      }
+      reviews: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating: number | null;
           created_at: string;
           id: string;
@@ -3953,7 +5310,11 @@ export type Database = {}
           updated_at: string;
           would_work_again: boolean | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -3971,7 +5332,11 @@ export type Database = {}
           updated_at?: string;
           would_work_again?: boolean | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -3990,6 +5355,7 @@ export type Database = {}
           would_work_again?: boolean | null;
         }
         Relationships: [;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {
 <<<<<<< HEAD
@@ -4071,11 +5437,15 @@ export type Database = {}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
           },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           }
@@ -4101,6 +5471,10 @@ export type Database = {}
           {"
             foreignKeyName: "reviews_reviewee_id_fkey""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          {
+            foreignKeyName: "reviews_reviewee_id_fkey"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             columns: ["reviewee_id"]
             isOneToOne: false"
             referencedRelation: "user_metrics""
@@ -4308,6 +5682,7 @@ export type Database = {}
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
           }]
       }
       scheduled_jobs: {
@@ -4470,12 +5845,186 @@ export type Database = {}
             columns: ["tenant_id"];
             isOneToOne: false;"
             referenced_relation: "whitelabel_tenants";"
+=======
+
+            foreignKeyName: "reviews_project_id_fkey";
+            columns: ["project_id"];
+            isOneToOne: false;
+            referenced_relation: "projects";
+            referenced_columns: ["id"];
+          }
+
+          },
+
+
+          {
+            foreignKeyName: "reviews_reviewee_id_fkey";
+            columns: ["reviewee_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }
+          {
+            foreignKeyName: "reviews_reviewer_id_fkey";
+            columns: ["reviewer_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      scheduled_jobs: {
+        Row: {
+          completed_at: string | null;
+          created_at: string;
+          id: string;
+          job_type: string;
+          payload: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at: string;
+        }
+        Insert: {
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type: string;
+          payload?: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at?: string;
+        }
+        Update: {
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type?: string;
+          payload?: Json | null;
+          scheduled_for?: string;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      subscriptions: {
+        Row: {
+          created_at: string;
+          current_period_end: string | null;
+          current_period_start: string | null;
+          id: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id: string | null;
+          stripe_subscription_id: string | null;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type?: string;
+          status?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "subscriptions_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      talent_resumes: {
+        Row: {
+          created_at: string;
+          headline: string | null;
+          id: string;
+          is_active: boolean;
+          summary: string | null;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "talent_resumes_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      tenant_administrators: {
+        Row: {
+          created_at: string | null;
+          id: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string | null;
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string | null;
+          id?: string;
+          tenant_id?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+
+            foreignKeyName: "tenant_administrators_tenant_id_fkey";
+            columns: ["tenant_id"];
+            isOneToOne: false;
+            referenced_relation: "whitelabel_tenants";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             referenced_columns: ["id"];
 
           }
 
           },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -4496,6 +6045,18 @@ export type Database = {}
       }
       user_onboarding: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "tenant_administrators_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      user_onboarding: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent: boolean | null;
           application_sent_at: string | null;
           availability_set: boolean | null;
@@ -4522,7 +6083,11 @@ export type Database = {}
           updated_at: string;
           user_id: string | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent?: boolean | null;
           application_sent_at?: string | null;
           availability_set?: boolean | null;
@@ -4549,7 +6114,11 @@ export type Database = {}
           updated_at?: string;
           user_id?: string | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent?: boolean | null;
           application_sent_at?: string | null;
           availability_set?: boolean | null;
@@ -4577,6 +6146,7 @@ export type Database = {}
           user_id?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "user_onboarding_user_id_fkey";"
             columns: ["user_id"];
@@ -4587,20 +6157,40 @@ export type Database = {}
       }
       user_privacy_settings: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "user_onboarding_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      user_privacy_settings: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled: boolean | null;
           ai_analysis_enabled: boolean | null;
           id: string;
           message_scanning_enabled: boolean | null;
           updated_at: string | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled?: boolean | null;
           ai_analysis_enabled?: boolean | null;
           id: string;
           message_scanning_enabled?: boolean | null;
           updated_at?: string | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled?: boolean | null;
           ai_analysis_enabled?: boolean | null;
           id?: string;
@@ -4608,6 +6198,7 @@ export type Database = {}
           updated_at?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "user_privacy_settings_id_fkey";"
             columns: ["id"];
@@ -4618,6 +6209,18 @@ export type Database = {}
       }
       webhook_configs: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "user_privacy_settings_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      webhook_configs: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           event_types: string[];
           id: string;
@@ -4629,7 +6232,11 @@ export type Database = {}
           url: string;
           user_id: string;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           event_types: string[];
           id?: string;
@@ -4641,7 +6248,11 @@ export type Database = {}
           url: string;
           user_id: string;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           event_types?: string[];
           id?: string;
@@ -4654,6 +6265,7 @@ export type Database = {}
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "webhook_configs_user_id_fkey";"
             columns: ["user_id"];
@@ -4664,6 +6276,18 @@ export type Database = {}
       }
       whitelabel_tenants: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "webhook_configs_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      whitelabel_tenants: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id: string | null;
           brand_name: string;
           created_at: string | null;
@@ -4679,7 +6303,11 @@ export type Database = {}
           theme_preset: string;
           updated_at: string | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id?: string | null;
           brand_name: string;
           created_at?: string | null;
@@ -4695,7 +6323,11 @@ export type Database = {}
           theme_preset?: string;
           updated_at?: string | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id?: string | null;
           brand_name?: string;
           created_at?: string | null;
@@ -4712,6 +6344,7 @@ export type Database = {}
           updated_at?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";"
             columns: ["account_manager_id"];
@@ -4722,6 +6355,18 @@ export type Database = {}
       }
       work_history: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";
+            columns: ["account_manager_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      work_history: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url: string | null;
           company_name: string;
           created_at: string;
@@ -4735,7 +6380,11 @@ export type Database = {}
           start_date: string;
           updated_at: string;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url?: string | null;
           company_name: string;
           created_at?: string;
@@ -4749,7 +6398,11 @@ export type Database = {}
           start_date: string;
           updated_at?: string;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url?: string | null;
           company_name?: string;
           created_at?: string;
@@ -4764,6 +6417,7 @@ export type Database = {}
           updated_at?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
           {"
             foreignKeyName: "work_history_resume_id_fkey";"
             columns: ["resume_id"];
@@ -4784,28 +6438,65 @@ export type Database = {}
       }
       daily_page_views: {}
         Row: {}
+=======
+          {
+            foreignKeyName: "work_history_resume_id_fkey";
+            columns: ["resume_id"];
+            isOneToOne: false;
+            referenced_relation: "talent_resumes";
+            referenced_columns: ["id"];
+          }];
+      }
+    }
+    Views: {
+      conversion_rates: {
+        Row: {
+          conversion_count: number | null;
+          conversion_rate: number | null;
+          conversion_type: string | null;
+          date: string | null;
+          view_count: number | null;
+        }
+        Relationships: [];
+      }
+      daily_page_views: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           date: string | null;
           path: string | null;
           view_count: number | null;
         }
         Relationships: [];
       }
+<<<<<<< HEAD
       user_metrics: {}
         Row: {}
+=======
+      user_metrics: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications: number | null;
           profile_views: number | null;
           quote_invites: number | null;
           success_rate: number | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
         Insert: {}
+=======
+        Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications?: never;
           profile_views?: never;
           quote_invites?: never;
           success_rate?: never;
           user_id?: string | null;
         }
+<<<<<<< HEAD
         Update: {}
+=======
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications?: never;
           profile_views?: never;
           quote_invites?: never;
@@ -4816,6 +6507,7 @@ export type Database = {}
       }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4881,11 +6573,15 @@ export type Database = {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
 
+<<<<<<< HEAD
 
 
           user_id: string;
@@ -4893,6 +6589,9 @@ export type Database = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          user_id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           email: string;
           display_name: string;
           user_type: string;
@@ -4913,6 +6612,7 @@ export type Database = {}
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -4927,6 +6627,9 @@ export type Database = {}
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       complete_referral: {
 =======
 
@@ -4950,6 +6653,7 @@ export type Database = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -4958,10 +6662,13 @@ export type Database = {}
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
+<<<<<<< HEAD
 
         Args: Record < PropertyKey, never>;
 <<<<<<< HEAD
@@ -4973,6 +6680,9 @@ export type Database = {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        Args: Record < PropertyKey, never>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Returns: undefined;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
@@ -5019,6 +6729,7 @@ export type Database = {}
         Args: Record < PropertyKey, never>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Returns: string;
 
 
@@ -5038,10 +6749,29 @@ export type Database = {}
         Returns: {}
       }
       hash_api_key: {}
+=======
+        Returns: string;
+      get_current_tenant_id: {;
+        Args: Record<PropertyKey never>;
+        Returns: string;
+
+
+      }
+      get_event_distribution: {
+        Args: { days_back?: number }
+        Returns: {
+          date: string;
+          event_type: string;
+          count: number;
+        }[];
+      }
+      hash_api_key: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { api_key: string }
         Returns: string;
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -5071,10 +6801,28 @@ export type Database = {}
         Returns: undefined;
       }
       verify_api_key: {}
+=======
+
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+        Args: Record < PropertyKey, never>;
+        Returns: number;
+      }
+      trigger_resume_scoring: {
+        Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { provided_key: string, stored_hash: string }
         Returns: boolean;
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     Enums: {
 <<<<<<< HEAD
@@ -7358,12 +9106,17 @@ export type Database = {;
 =======
         Returns: string;      api_key_scope:;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    Enums: {
+      api_key_scope:;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
         | "quotes:write";
         | "webhooks:manage";
-      fraud_severity: "safe" | "suspicious" | "dangerous";      fraud_severity: "safe" | "suspicious" | "dangerous";
+      fraud_severity: "safe" | "suspicious" | "dangerous";
+      fraud_severity: "safe" | "suspicious" | "dangerous";
       quote_request_status:;
         | "new";
         | "in_review";
@@ -7371,6 +9124,7 @@ export type Database = {;
         | "responded";
         | "closed";
         | "archived";
+<<<<<<< HEAD
 =======
     Enums: {}
       api_key_scope:;"
@@ -7434,6 +9188,47 @@ export type Tables<;
           date: string;
           event_type: string;
           count: number;
+=======
+      referral_status: "pending" | "completed" | "expired";
+    }
+    CompositeTypes: {
+      [_ in never]: never;
+    }
+  }
+}
+
+type DefaultSchema = Database[Extract < keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
+      Row: infer R;
+    }
+    ? R;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"]);
+    ? (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+        Row: infer R;
+      }
+
+
+
+          date: string
+          event_type: string
+          count: number
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }[]
       }
       hash_api_key: {}
@@ -7501,6 +9296,7 @@ export type Tables<
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7510,10 +9306,15 @@ export type Tables<
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+<<<<<<< HEAD
 =======
 
 
@@ -7549,10 +9350,27 @@ export type Tables<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
+      Row: infer R
+    }
+    ? R
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])
+    ? (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+        Row: infer R
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ? R
       : never
     : never
 export type TablesInsert<
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends
@@ -7566,16 +9384,209 @@ export type TablesInsert<
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+=======
+  DefaultSchemaTableNameOrOptions extends
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       ? R;
       : never;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
+<<<<<<< HEAD
+=======
+    | keyof DefaultSchema["Tables"];
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Insert: infer I;
+      }
+
+
+    | keyof DefaultSchema["Tables"]
+
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Insert: infer I
+    }
+    ? I
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Insert: infer I
+      }
+      ? I
+      : never
+    : never
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends
+
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Update: infer U;
+      }
+
+
+    | keyof DefaultSchema["Tables"]
+
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Update: infer U
+    }
+    ? U
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Update: infer U
+      }
+      ? U
+      : never
+    : never
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+export const Constants = {
+  public: {
+    Enums: {
+      api_key_scope: [;
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+      api_key_scope: [
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+        "webhooks:manage"]
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"]
+
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "jobs:read",
+        "jobs:write",
+        "talent:read",
+        "quotes:write",
+        "webhooks:manage"],
+      fraud_severity: ["safe", "suspicious", "dangerous"],
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"]);
+    ? (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ? R;
       : never;
     : never;
 export type TablesInsert<;
+<<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends;"
     | keyof DefaultSchema["Tables"];
 
@@ -7583,6 +9594,56 @@ export type TablesInsert<;
 
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {}
+=======
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;
+    | keyof DefaultSchema["Enums"];
+
+    | { schema: keyof Database }
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     schema: keyof Database;
   }"
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
@@ -7987,6 +10048,7 @@ export type Enums<;
     : never = never;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
 
   }"
@@ -7996,6 +10058,19 @@ export type Enums<;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+
+
+    | keyof DefaultSchema["Enums"]
+
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -8003,6 +10078,7 @@ export type Enums<;
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
@@ -8028,6 +10104,17 @@ export type CompositeTypes<;
 =======
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
+    : never;
+export type CompositeTypes<;
+  PublicCompositeTypeNameOrOptions extends;
+    | keyof DefaultSchema["CompositeTypes"];
+
+    | { schema: keyof Database }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
 =======
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {}
@@ -8039,16 +10126,23 @@ export type CompositeTypes<;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     | keyof DefaultSchema["CompositeTypes"]
 
+
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database  }
+    schema: keyof Database
+  }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -8097,7 +10191,36 @@ export const Constants = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
+    : never;
+
+export const Constants = {
+  public: {
+    Enums: {
+      api_key_scope: [;
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+        "webhooks:manage"]
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [;
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
+
 ;
 export const Constants = {
   public: {
@@ -8105,7 +10228,7 @@ export const Constants = {
 
       api_key_scope: [
 
-;        "archived"],
+        "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
       referral_status:"pending" | "completed" | "expired";
@@ -8240,6 +10363,7 @@ export const Constants = {;
       referral_status: ["pending", "completed", "expired"]}}} as const;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
@@ -8263,3 +10387,6 @@ export const Constants = {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

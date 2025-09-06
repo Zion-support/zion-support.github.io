@@ -30,9 +30,13 @@ export interface ProfileSkill {};
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 export interface ProfileProject {
@@ -53,7 +57,7 @@ export interface ProfileProject {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
-  title: string,
+  title: string;
   description: string;
   image_url?: string;
   tags?: string[];
@@ -111,10 +115,13 @@ export interface ProfileExperience {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   role: string;
-  company: string,
+  company: string;
   description: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   startDate: string;
   endDate?: string;
   current?: boolean;
@@ -124,6 +131,7 @@ export interface ProfileExperience {};
   end_date?: string,
   current?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -144,6 +152,14 @@ export interface Availability {
   available_hours?: { day: string, hours: string }[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export interface Availability {
+  status: "available" | "limited" | "unavailable";
+  nextAvailable?: string;
+  message?: string;
+  availableHours?: { day: string; hours: string }[];
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 <<<<<<< HEAD
@@ -222,6 +238,7 @@ export interface ProfileData {;
   hourlyRate?: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   contactEmail?: string;
 }
 <<<<<<< HEAD
@@ -248,19 +265,30 @@ export interface ProfileData {;
 
   hourlyRate?: number;
   contactEmail?: string;
+=======
+  contactEmail?: string;
+}
+  hourlyRate?: number
+
+  contactEmail?: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
   endorsements?: number;
 }
+<<<<<<< HEAD
 
 
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ProfileProject {;
   id: string,;
-  title: string,,
+  title: string,;
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -271,7 +299,7 @@ export interface ProfileProject {;
 export interface ProfileExperience {;
   id: string,;
   role: string,;
-  company: string,,
+  company: string,;
   description: string,;
   startDate: string,;
   endDate?: string,;
@@ -309,6 +337,7 @@ export interface ProfileData {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -322,3 +351,6 @@ export interface ProfileData {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

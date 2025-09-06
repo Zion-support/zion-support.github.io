@@ -1,6 +1,11 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -20,6 +25,7 @@ import {;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -63,6 +69,9 @@ import { Button } from "@/components/ui/button";"
 import { Globe } from "lucide-react";
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -77,6 +86,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+import React from 'react',
 import { useTranslation } from 'react-i18next',
 import { Button } from '@/components/ui/button',
 =======
@@ -136,14 +146,19 @@ export function LanguageSelector() {};
             <div className="flex items-center gap-2">;
               <span className="text-lg">{lang && lang.flag}</span>;
               <span>{t(`language.${lang && lang.code}`)}</span>;
+<<<<<<< HEAD
 =======
 
             </div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </DropdownMenuItem>;
         ))}
       </DropdownMenuContent>;
     </DropdownMenu>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );} from "@/components/ui/dropdown-menu";
 =======
@@ -166,6 +181,30 @@ DropdownMenuTrigger,;
 "
 } from "@/components/ui/dropdown-menu";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+import React from './react';
+import { use_translation  } from './react - i18next';
+import { Button  } from '@/components / ui / button';
+import { Globe  } from './lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
+export /**
+ * LanguageSelector - Function description
+ */
+function LanguageSelector() {
+  const { t } = use_translation ();
+  const { current_language, change_language, supported_languages } = use_language ();
+;
+DropdownMenuTrigger,;
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
   return (
@@ -175,14 +214,15 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         <Button;
           variant="ghost";
           size="icon";
-          className="text - white hover:bg - zion-purple / 10";
+          className="text - white hover:bg - zion - purple / 10";
         >;
-          <Globe className="h - 5 w-5" />;
-          <span className="sr-only">{t ("general.select_language")}</span>;
+          <Globe className="h - 5 w - 5" />;
+          <span className="sr - only">{t ("general.select_language")}</span>;
         </Button>;
       </DropdownMenuTrigger>;
       <DropdownMenuContent;
         align="end";
+<<<<<<< HEAD
         className="bg - zion - blue - dark border border - zion-purple / 20";
 =======
         <Button;"
@@ -198,6 +238,9 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         align="end";"
         className="bg - zion - blue - dark border border - zion - purple / 20";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        className="bg - zion - blue - dark border border - zion - purple / 20";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       >;
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
@@ -213,9 +256,13 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
           </DropdownMenuItem>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
-}
-}  );
 }
 }
   ),;}
@@ -235,6 +282,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
   );
 }
+<<<<<<< HEAD
 =======
 
   );
@@ -245,3 +293,6 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

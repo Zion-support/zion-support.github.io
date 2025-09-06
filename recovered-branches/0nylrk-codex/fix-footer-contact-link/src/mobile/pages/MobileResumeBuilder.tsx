@@ -14,6 +14,7 @@ import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
@@ -64,6 +65,17 @@ import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import {
+  MobileResumeBuilder,
+  as,
+  ResumeBuilderComponent,
+} from "../components/resume/MobileResumeBuilder";
+export function MobileResumeBuilder() {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function MobileResumeBuilder() {
   return (
@@ -77,6 +89,7 @@ export function MobileResumeBuilder() {}
         title="Resume Builder"
 <<<<<<< HEAD
         showBack
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +121,9 @@ export function MobileResumeBuilder() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -115,11 +131,13 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
 
+
 export function MobileResumeBuilder() {
   return (
     <div className="min-h-screen">
       <MobileHeader title="Resume Builder" showBack />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -139,10 +157,13 @@ export function MobileResumeBuilder() {}
       <MobileHeader title="Resume Builder" showBack />
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <main className="py-4">
         <ResumeBuilderComponent />
       </main>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -199,6 +220,11 @@ export function MobileResumeBuilder() {;
 =======
     </div>;  );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <BottomNavigation />
+    </div>
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 import React from './react';'
 import { MobileHeader } from '../components / common / MobileHeader';'
@@ -210,11 +236,12 @@ export /**;
 <<<<<<< HEAD
 function MobileResumeBuilder() {
   return (
-    <div className="min-h-screen">;
+    <div className="min - h-screen">;
       <MobileHeader;
         title="Resume Builder";
         show_back;
       />;
+<<<<<<< HEAD
       <main className="py-4">;
 =======
 function MobileResumeBuilder() {}
@@ -226,11 +253,15 @@ function MobileResumeBuilder() {}
       />;"
       <main className="py - 4">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <main className="py - 4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <ResumeBuilderComponent />;
       </main>;
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,10 +274,13 @@ function MobileResumeBuilder() {}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
 
 
+<<<<<<< HEAD
 "
 import React from "react",;"
 import { MobileHeader } from "../components/common/MobileHeader",;"
@@ -276,3 +310,32 @@ export function MobileResumeBuilder() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",;
+;
+export function MobileResumeBuilder() {;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        showBack;
+      />;
+      ;
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+      ;
+      <BottomNavigation />;
+    </div>;
+  ),;
+} export function MobileResumeBuilder () {
+  return (<div className="min-h-screen" > Resume Builder"showBack /> <main className=" py-4" > <ResumeBuilderComponent /> </main> <BottomNavigation /> </div> 
+}
+;
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

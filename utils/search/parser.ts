@@ -142,10 +142,11 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
+export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-=======
+
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -237,8 +238,9 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     filters.skills = skills;
   }
 
-  return filters,
-  keywords: [],
+  return filters;
+
+    keywords: [],
     skills: [],
     location: null,
     type: null;
@@ -246,21 +248,26 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     all: [],
     talent: [],
     jobs: [],
-    projects: []
+    projects: [];
+
+  };
 };
-};
+
 
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
-  return null
+  return null;
+
 };
 
 }
-  }}
+  }
+}
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -284,3 +291,6 @@ export const suggestDidYouMean = (query: string) =>: any {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

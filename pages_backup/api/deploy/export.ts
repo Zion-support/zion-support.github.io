@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/deploy/export.ts
 <<<<<<< HEAD
 =======
@@ -19,6 +20,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/deploy/export.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -30,6 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/deploy/export.ts
 <<<<<<< HEAD
 
@@ -82,12 +86,17 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/deploy/export.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return res.status(200).json(fake);
 };
 
@@ -136,6 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/deploy/export.ts
 <<<<<<< HEAD
   // In a real system, look up persisted deployment by id;
@@ -176,6 +186,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
+=======
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
   } catch (error) {
@@ -185,6 +200,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/deploy/export.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -198,10 +214,15 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/deploy/export.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -63,6 +63,7 @@ if (return, ) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch {}
 
 
@@ -80,10 +81,14 @@ if (return, ) {}
 
 
 <<<<<<< HEAD
+=======
+  } catch {}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
+<<<<<<< HEAD
 
 
 }
@@ -99,3 +104,11 @@ if (return, ) {}
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  } catch {}
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

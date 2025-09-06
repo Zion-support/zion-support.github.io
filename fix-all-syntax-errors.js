@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 };
@@ -28,6 +29,9 @@ const fixApi = () => {
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    if (!content && content.includes('export default')) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

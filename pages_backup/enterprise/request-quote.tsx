@@ -90,6 +90,7 @@ export default function RequestQuote() {
   return (
     <main style={{ padding: '3rem', maxWidth: 800, margin: '0 auto' }}>
       <h1>Request a Quote</h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/request-quote.tsx
 <<<<<<< HEAD
 =======
@@ -150,6 +151,8 @@ export default function RequestQuote() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/request-quote.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <p>
         Tell us about your team size, hiring needs, and timelines. Our team will
         reach out within 1 business day.
@@ -170,6 +173,7 @@ export default function RequestQuote() {}
       </form>
     </main>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/request-quote.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -185,3 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/request-quote.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

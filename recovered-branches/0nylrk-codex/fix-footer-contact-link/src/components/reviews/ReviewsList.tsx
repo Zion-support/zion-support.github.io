@@ -73,6 +73,7 @@ export function ReviewsList({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space - y-4">;
 =======
       <div className="space-y-4">;
@@ -91,6 +92,15 @@ export function ReviewsList({
 =======
               key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <div className="space-y-4">
+        {Array(3)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              key={i}
+              className="border rounded-lg p-4 bg-card animate-pulse"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -254,6 +264,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return (
@@ -265,17 +276,49 @@ if ( {) {}
     return ("
       <div className="text - center py - 8 border rounded - lg bg - muted / 20">;"
         <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;"
+=======
+
+      </div>
+    );
+  }
+
+  if (reviews.length === 0) {
+    return (
+      <div className="text-center py-8 border rounded-lg bg-muted/20">
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
+        <p className="text-muted-foreground">
+          Once reviews are submitted and approved, they will appear here.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 8 border rounded - lg bg - muted / 20">;
+        <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text - muted - foreground">;
           Once reviews are submitted and approved, they will appear here.;
         </p>;
       </div>);
   }
+<<<<<<< HEAD
   return ("
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space - y-4">;
       {reviews.map ((review) => (
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,6 +340,8 @@ if ( {) {}
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 ;

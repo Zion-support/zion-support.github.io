@@ -18,7 +18,9 @@ const { execSync } = require("child_process");
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
@@ -266,6 +268,10 @@ module.exports = BuildErrorDetector;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -397,10 +403,16 @@ this.log("� Report "generated": ${reportFile}")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
       this.log("� Build Error Detector completed!")
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

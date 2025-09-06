@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -344,6 +345,8 @@ if (return, ) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -351,6 +354,7 @@ export default function ProjectPage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
       setShowFeedback(true)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
@@ -625,6 +629,8 @@ export default function ProjectPage(req, res) {
 ;
   return (;
     <div className="max-w-4xl mx-auto p-6 space-y-6">;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -890,6 +896,7 @@ export default function ProjectPage(req, res) {
           <div className="flex justify-end">"
             {project.status !== "COMPLETED" && ("
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/project/[projectId].tsx
 <<<<<<< HEAD:pages/project/[projectId].tsx
 <<<<<<< HEAD
@@ -1002,6 +1009,8 @@ export default function ProjectPage(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             )}
           </div>
         </div>
@@ -1015,6 +1024,7 @@ export default function ProjectPage(req, res) {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1025,3 +1035,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

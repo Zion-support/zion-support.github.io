@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 =======
@@ -41,6 +42,21 @@ export function AdminHeader() {}
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
+=======
+export function AdminHeader() {;
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Download, Settings } from "lucide-react",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
@@ -95,6 +111,7 @@ export function AdminHeader() {}
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -105,13 +122,19 @@ export function AdminHeader() {
 =======
 export function AdminHeader() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function AdminHeader() {;
+
+
 
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -126,6 +149,10 @@ import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;
@@ -143,6 +170,10 @@ export function AdminHeader() { return null; }
   const { company } = useCompanyWorkspace();
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-4">;
 =======
 "
@@ -162,6 +193,7 @@ export function AdminHeader() { return null; }
 <<<<<<< HEAD
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Download className="h-4 w-4" />;
@@ -252,6 +284,50 @@ function AdminHeader() {
       </div>;
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <Download className="h-4 w-4" />;
+            Export Data;
+          </Button>;
+        </div>;
+      </div>;
+
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Subscription Plan</div>;
+          <div className="text - xl font - medium">{company?.plan || "Enterprise"}</div>;
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Team Members</div>;
+          <div className="text - xl font - medium">{company?.team_size || "Loading..."} / {company?.team_limit || "∞"}</div>;
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Billing Cycle</div>;
+          <div className="text - xl font - medium">{company?.billing_cycle || "Annual"}</div>;
+        </div>;
+      </div>;
+      <div className="bg - muted / 50 rounded - lg p - 4 flex items - center justify - between">;
+        <div className="flex items - center gap - 4">;
+          <div className="h - 12 w - 12 rounded - lg bg - card flex items - center justify - center">;
+            <img;
+              src={company?.logo_url || "/placeholder.svg"}
+              alt={company?.name || "Company"}
+              className="max - h-10 max - w-10";
+            />;
+          </div>;
+          <div>;
+            <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
+            <p className="text - sm text - muted - foreground">;
+              Workspace URL: {company?.workspace_url || "loading..."}
+            </p>;
+          </div>;
+        </div>;
+        <Button > Customize Workspace</Button>;
+      </div>;
+    </div>);
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 }

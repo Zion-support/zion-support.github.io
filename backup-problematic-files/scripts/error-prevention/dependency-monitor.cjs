@@ -28,10 +28,14 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+<<<<<<< HEAD
     
     
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -64,9 +68,12 @@ class DependencyMonitor {}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -91,6 +98,7 @@ class DependencyMonitor {}
       line.includes('→') && !line.includes('Package');
    ;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -98,6 +106,9 @@ class DependencyMonitor {}
     
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -132,9 +143,12 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -193,6 +207,10 @@ if ( {})
 =======
   
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = DependencyMonitor;
 module.exports = DependencyMonitor;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

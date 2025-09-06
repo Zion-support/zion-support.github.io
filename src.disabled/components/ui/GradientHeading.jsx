@@ -43,6 +43,7 @@ ursor/add-new-services-and-deploy-updates-0462
 import _React from react''; import { cn } from '@/lib/utils'; "export": function GradientHeading({} children,' variant =';';primary',''; "size": = '2xl';';,' "className": = '';';,customGradient}) {} const gradients = {}''; "primary": '''';';bg-gradient-to-r: from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparen,t,,'';';'; "secondary": '''';';bg-gradient-to-r: from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparen,t,,'';';'; "accent": '''';';bg-gradient-to-r: from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparen,t,,''; "custom": ''';'; customGradient: ||'''';';bg-gradient-to-r: from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparen,t} const getGradientClasses = () => {} return gradients[variant] } const getSizeClasses = () => {} const sizes = {}';';'; "xs": 'text-x,s,,'';';'; "sm": 'text-s,m,,'';';'; "md": 'text-bas,e,,'';';'; "lg": 'text-l,g,,'';';'; "xl": 'text-x,l,2xl': '; text-2xl',3xl';';: 'text-3xl,4xl': '; text-4xl',5xl';';: 'text-5xl,6xl':';';text-6xl'} "return": 'sizes[size]' }' return()'' <h1''''; className={cn('''';';font-"bold": leading-tight';';,getSizeClasses(),getGradientClasses(),"className": ')'} > {children} </h1> ) }'';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/GradientHeading.jsx
 =======
 <<<<<<< HEAD
@@ -72,3 +73,6 @@ import _React from react''; import { cn } from '@/lib/utils'; "export": function
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React from react''; import { cn } from '@/lib/utils'; "export": function GradientHeading({} children,' variant =';';primary',''; "size": = '2xl';';,' "className": = '';';,customGradient}) {} const gradients = {}''; "primary": '''';';bg-gradient-to-r: from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparen,t,,'';';'; "secondary": '''';';bg-gradient-to-r: from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparen,t,,'';';'; "accent": '''';';bg-gradient-to-r: from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparen,t,,''; "custom": ''';'; customGradient: ||'''';';bg-gradient-to-r: from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparen,t} const getGradientClasses = () => {} return gradients[variant] } const getSizeClasses = () => {} const sizes = {}';';'; "xs": 'text-x,s,,'';';'; "sm": 'text-s,m,,'';';'; "md": 'text-bas,e,,'';';'; "lg": 'text-l,g,,'';';'; "xl": 'text-x,l,2xl': '; text-2xl',3xl';';: 'text-3xl,4xl': '; text-4xl',5xl';';: 'text-5xl,6xl':';';text-6xl'} "return": 'sizes[size]' }' return()'' <h1''''; className={cn('''';';font-"bold": leading-tight';';,getSizeClasses(),getGradientClasses(),"className": ')'} > {children} </h1> ) }'';';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 =======
@@ -15,11 +16,15 @@ import { Button } from "@/components/ui/button";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -49,10 +54,17 @@ import React, { useState } from "react","
 import { Button } from "@/components/ui/button",
 
 <<<<<<< HEAD
+=======
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import React, { useState } from "react",
@@ -65,6 +77,10 @@ import { Button } from "@/components/ui/button",
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -83,8 +99,12 @@ import { DisputeForm } from "./DisputeForm",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
@@ -92,6 +112,7 @@ import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
+<<<<<<< HEAD
 =======
 =======
 import { useNavigate } from "react-router-dom";
@@ -109,16 +130,14 @@ interface RaiseDisputeButtonProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
 
-  milestoneId?: string;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-  className?: string;
-}
-=======
+  projectId: string
+
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
@@ -130,7 +149,9 @@ interface RaiseDisputeButtonProps {
   className?: string;
 }
 
+
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { ShieldAlert } from "lucide-react",
@@ -214,6 +235,25 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
   className
 =======
 import { ShieldAlert } from "lucide-react",  milestoneId, 
+=======
+import { ShieldAlert } from "lucide-react",
+
+  className?: string;
+}
+interface RaiseDisputeButtonProps {
+  projectId: string,
+  milestoneId?: string,
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
+  size?: "default" | "sm" | "lg" | "icon",
+  className?: string
+}
+
+
+export function RaiseDisputeButton({ 
+  projectId,
+
+  milestoneId, 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   variant = "outline", 
   size,
   className 
@@ -236,6 +276,7 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   
@@ -246,6 +287,9 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleDisputeCreated = (disputeId: string) => {
 =======
 
@@ -259,6 +303,7 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -279,15 +324,31 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
   return (
     <>
       <Button;
+=======
+
+  },
+  
+  return (
+    <>
+      <Button
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant={variant}
         size={size}
         className={className}
         onClick={() => setIsDialogOpen(true)}
+<<<<<<< HEAD
       >"
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute;
       </Button>
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>"
+=======
+      >
+        <ShieldAlert className="h-4 w-4 mr-2" />
+        Raise Dispute
+      </Button>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <DialogContent className="sm:max-w-[550px]">
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
@@ -295,6 +356,7 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -311,6 +373,34 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
+=======
+
+
+export function RaiseDisputeButton(): any ({ ;
+  projectId;
+  milestoneId, ;
+  variant = "outline", ;
+  size;
+  className ;
+}: RaiseDisputeButtonProps) {;
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDisputeCreated = (disputeId: string) => {;
+    setIsDialogOpen(false),;
+    navigate(`/dashboard/disputes/${disputeId}`);
+  };
+
+  return (
+    <>;
+      <Button
+        variant={variant} 
+        size={size} 
+        className={className} 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,;
   DialogContent,;
   DialogHeader,;
@@ -321,6 +411,7 @@ import {;
 import { DisputeForm } from "./DisputeForm",;
 import { useNavigate } from "react-router-dom",;
 import { ShieldAlert } from "lucide-react",;
+<<<<<<< HEAD
 interface RaiseDisputeButtonProps {;
   projectId: string,;
   milestoneId?: string,;
@@ -350,18 +441,40 @@ export function RaiseDisputeButton(): any ({ ;
   size;
   className ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+interface RaiseDisputeButtonProps {;
+  projectId:string,;
+  milestoneId?:string,;
+  variant?:"default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
+  size?:"default" | "sm" | "lg" | "icon",;
+  className?:string;
+}
+;
+export function RaiseDisputeButton({ ;
+  projectId,;
+  milestoneId, ;
+  variant = "outline", ;
+  size,;
+  className ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDisputeCreated = (disputeId: string) => {;
+<<<<<<< HEAD
     setIsDialogOpen(false),;`
+=======
+    setIsDialogOpen(false),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     navigate(`/dashboard/disputes/${disputeId}`);
   };
 
   return (
     <>;
       <Button;
+<<<<<<< HEAD
         variant={variant} 
         size={size} 
         className={className} 
@@ -474,14 +587,43 @@ function RaiseDisputeButton() {
 
 
             <DialogDescription>;'
+=======
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+      <Button
+        variant={variant} 
+        size={size} 
+        className={className} 
+        onClick={() => setIsDialogOpen(true)}
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;
+
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className="sm:max-w-[550px]">;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+            <DialogDescription>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
 
 
           
+<<<<<<< HEAD
           <DisputeForm;
           <DisputeForm;
+=======
+          <DisputeForm 
+          <DisputeForm 
+
+
+          <DisputeForm
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -494,6 +636,7 @@ function RaiseDisputeButton() {
   );
 }
 
+<<<<<<< HEAD
 
 
           <DisputeForm;
@@ -503,6 +646,9 @@ function RaiseDisputeButton() {
 =======
             <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <DisputeForm;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
@@ -517,8 +663,11 @@ function RaiseDisputeButton() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ;
           <DisputeForm ;
             projectId={projectId}
@@ -563,6 +712,7 @@ return (<> <Button variant= {
     </>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -577,3 +727,5 @@ return (<> <Button variant= {
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

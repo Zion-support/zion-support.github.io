@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -163,6 +164,8 @@ export default function DesignMapPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
@@ -178,12 +181,16 @@ body: JSON.stringify({ screenName, role }),
     } catch (e: any) {
       setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/design-map.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(false);
       } catch (error) {"
     console.error("Error:", error);"
@@ -267,6 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -321,16 +329,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Zion OS Design Map</h1>
           <div className='flex gap-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/design-map.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <a
               href="/api/design-map"
 =======
@@ -404,6 +418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             title="Mobile Layouts"
             sections={designMap.products.mobile}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -460,6 +475,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
 
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>
@@ -513,6 +530,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onChange={e => setRole(e.target.value)}
                 className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40'
               >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/design-map.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -524,6 +542,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/design-map.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -532,6 +553,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option>Mobile</option>
               </select>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -585,6 +607,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <button
               onClick={requestWireframe}
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60"
@@ -597,6 +621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <pre className='mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800'>
               {suggestion}
             </pre>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/design-map.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -606,10 +631,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/design-map.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           )}
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -657,6 +686,10 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/design-map.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 function MapColumn({}
   title,
@@ -798,6 +831,7 @@ function MapColumn() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/design-map.tsx
 <<<<<<< HEAD:pages/design-map.tsx
 <<<<<<< HEAD
@@ -913,3 +947,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/design-map.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

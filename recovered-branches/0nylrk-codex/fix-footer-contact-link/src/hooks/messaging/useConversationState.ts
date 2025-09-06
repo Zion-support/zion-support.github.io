@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -70,6 +71,20 @@ export function useConversationState() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+=======
+
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+
+
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
@@ -110,6 +125,7 @@ function useConversationState() {}
     unread_count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setUnreadCount;
 
 <<<<<<< HEAD
@@ -140,6 +156,11 @@ function useConversationState() {}
 =======
     setUnreadCount;    activeConversation;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    setUnreadCount;
+
+    activeConversation;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 =======
 
@@ -175,6 +196,7 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
+<<<<<<< HEAD
 }}
 =======
 export function useConversationState() { return null; }
@@ -185,3 +207,7 @@ export function useConversationState() { return null; }
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

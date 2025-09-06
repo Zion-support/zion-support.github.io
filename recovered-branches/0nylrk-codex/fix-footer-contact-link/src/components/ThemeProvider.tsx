@@ -5,6 +5,7 @@
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,9 +26,15 @@ import { createContext, useContext, useEffect, useState } from "react"
 import { createContext, useContext, useEffect, useState } from "react"
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import { createContext, useContext, useEffect, useState } from "react"
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type Theme = "dark" | "light" | "system"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type ThemeProviderProps = {
   children: React.ReactNode
@@ -49,6 +56,14 @@ type ThemeProviderProps = {};
   defaultTheme?: Theme;
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+type ThemeProviderProps = {
+  children: React.ReactNode
+  defaultTheme?: Theme
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ;
@@ -57,6 +72,7 @@ type ThemeProviderState = {;
 
   setTheme: (theme: Theme) => void;
 }
+<<<<<<< HEAD
 const initialState: ThemeProviderState = {}
 "
   theme: "system",
@@ -91,6 +107,22 @@ export function ThemeProvider({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+const initialState: ThemeProviderState = {
+
+  theme: "system",
+
+  setTheme: () => null}
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+export function ThemeProvider({
+
+  children,;
+  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+
+  children,
+  defaultTheme = "system"}: ThemeProviderProps) {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   children
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
@@ -98,11 +130,15 @@ export function ThemeProvider({
   children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
@@ -135,11 +171,22 @@ export function ThemeProvider({
   useEffect(() => {}
     const root = window.document.documentElement;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  children,
+  defaultTheme = "system"}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(
+    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+  )
+  useEffect(() => {
+    const root = window.document.documentElement
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {}
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches;
         ? &quot;dark&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         : &quot;light&quot;
@@ -172,6 +219,19 @@ export function ThemeProvider({
 =======
         : &quot;light&quot;      root.classList.add(systemTheme)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        : &quot;light&quot;
+    root.classList.remove("light", "dark")
+
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light"
+
+
+      root.classList.add(systemTheme)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return
     }
     root.classList.add(theme)
@@ -180,19 +240,27 @@ export function ThemeProvider({
     theme
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setTheme: (theme: Theme) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    setTheme: (theme: Theme) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       localStorage.setItem(&quot;theme&quot;, theme)
       setTheme(theme)
     }}
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
 =======
@@ -217,11 +285,15 @@ export function ThemeProvider({
   return (;
 
 
+=======
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (;
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
 type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
 ;
+<<<<<<< HEAD
 type ThemeProviderProps = {}
   children: React.ReactNode;
   default_theme?: Theme;
@@ -246,6 +318,32 @@ function ThemeProvider() {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+type ThemeProviderProps = {
+  children: React.ReactNode;
+  default_theme?: Theme;
+}
+type ThemeProviderState = {
+  theme: Theme;
+  set_theme: (theme: Theme) => void;
+}
+const initial_state: ThemeProviderState = {
+  theme: &quot;system & quot;,
+  set_theme: () => null}
+const ThemeProviderContext = create_context < ThemeProviderState>(initial_state);
+export /**
+ * ThemeProvider - Function description
+ */
+function ThemeProvider() {
+  const [theme, set_theme] = useState < Theme>(
+    () => (local_storage.get_item (&quot;theme & quot) as Theme) || default_theme);
+  useEffect (() => {
+    const root = window.document.document_element;
+    root.class_list.remove (&quot;light & quot;, &quot;dark & quot);
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       const system_theme = window.match_media (&quot;(prefers - color - scheme: dark)&quot);
         .matches;
@@ -257,18 +355,28 @@ if ( {) {}
     }
     root.class_list.add (theme);
   }, [theme]);
+<<<<<<< HEAD
   const value = {}
     theme,
     set_theme: (theme: Theme) => {}
+=======
+  const value = {
+    theme,
+    set_theme: (theme: Theme) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       local_storage.set_item (&quot;theme & quot;, theme);
       set_theme (theme);
     }}
   return (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
 type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
 ;
+<<<<<<< HEAD
 type ThemeProviderProps = {}
   children: React.ReactNode;
   default_theme?: Theme;
@@ -293,6 +401,32 @@ function ThemeProvider() {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+type ThemeProviderProps = {
+  children: React.ReactNode;
+  default_theme?: Theme;
+}
+type ThemeProviderState = {
+  theme: Theme;
+  set_theme: (theme: Theme) => void;
+}
+const initial_state: ThemeProviderState = {
+  theme: &quot;system & quot;,
+  set_theme: () => null}
+const ThemeProviderContext = create_context < ThemeProviderState>(initial_state);
+export /**
+ * ThemeProvider - Function description
+ */
+function ThemeProvider() {
+  const [theme, set_theme] = useState < Theme>(
+    () => (local_storage.get_item (&quot;theme & quot) as Theme) || default_theme);
+  useEffect (() => {
+    const root = window.document.document_element;
+    root.class_list.remove (&quot;light & quot;, &quot;dark & quot);
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       const system_theme = window.match_media (&quot;(prefers - color - scheme: dark)&quot);
         .matches;
@@ -304,15 +438,24 @@ if ( {) {}
     }
     root.class_list.add (theme);
   }, [theme]);
+<<<<<<< HEAD
   const value = {}
     theme,
     set_theme: (theme: Theme) => {}
+=======
+  const value = {
+    theme,
+    set_theme: (theme: Theme) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       local_storage.set_item (&quot;theme & quot;, theme);
       set_theme (theme);
     }}
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createContext, useContext, useEffect, useState } from "react";
 ;
 type Theme = "dark" | "light" | "system";
@@ -365,6 +508,7 @@ export function ThemeProvider({;
     }}
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -373,10 +517,13 @@ export function ThemeProvider({;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <ThemeProviderContext.Provider value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -398,11 +545,28 @@ if (
 
 }
 export const useTheme = () => {}
+=======
+
+export const use_theme = () =>: any {
+  const context = useContext (ThemeProviderContext);
+  // Check condition
+if (
+    throw new Error (&quot) {
+  $2
+}use_theme must be used within a ThemeProvider & quot);
+  return context;
+
+  if (context === undefined)
+
+}
+export const useTheme = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const context = useContext(ThemeProviderContext)
 
   if (context === undefined)
 
 
+<<<<<<< HEAD
 ;
   return context;
 }
@@ -420,6 +584,12 @@ export const useTheme = () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     setTheme: (theme: Theme) => {  return context
+=======
+  return context
+}
+;
+  return context
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

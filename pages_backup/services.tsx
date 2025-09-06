@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +33,8 @@ const ServicesPage = () => {
 export default ServicesPage;
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
@@ -929,6 +932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services.tsx
 <<<<<<< HEAD
 
@@ -1155,6 +1159,8 @@ function Services() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     >
                       <div className='flex items-center justify-between mb-6'>
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
@@ -3105,12 +3111,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </a>
               </div>
 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </section>
 
@@ -3277,6 +3287,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services.tsx
 <<<<<<< HEAD
 }
@@ -3294,11 +3305,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </section>
 
@@ -3343,9 +3359,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Layout>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/services.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

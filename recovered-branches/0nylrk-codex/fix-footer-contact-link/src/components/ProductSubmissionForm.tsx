@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -16,6 +17,9 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -36,6 +40,9 @@ import {Sparkles} from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -56,6 +63,7 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
+<<<<<<< HEAD
 =======
 
 
@@ -67,12 +75,15 @@ export function ProductSubmissionForm() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useToast } from "@/hooks/use-toast";
@@ -107,20 +118,33 @@ import { useToast } from "@/hooks/use-toast";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate } from "react-router-dom";
 import {};
+=======
+import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Form;
   FormControl;
   FormDescription;
   FormField;
   FormItem;
+<<<<<<< HEAD
   FormLabel;"
 import { useToast } from "@/hooks/use-toast","
 import { useNavigate } from "react-router-dom",
 import {}
+=======
+  FormLabel;
+import { useToast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Form,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
+<<<<<<< HEAD
   FormLabel,"
   FormMessage} from "@/components/ui/form","
 import { Input } from "@/components/ui/input","
@@ -135,6 +159,20 @@ import { Sparkles } from "lucide-react",
 ;
 // Define the form schema with zod;
 <<<<<<< HEAD
+=======
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
+import { Sparkles } from "lucide-react";
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
+import { Sparkles } from "lucide-react",
+// Define the form schema with zod;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   description: z && z.string().min(10, "Description must be at least 10 characters");
@@ -157,6 +195,7 @@ export function ProductSubmissionForm() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define the form schema with zod
@@ -165,6 +204,10 @@ export function ProductSubmissionForm() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Define the form schema with zod
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
@@ -311,9 +354,158 @@ export function ProductSubmissionForm() {
     }
     setIsSubmitting(true);
 
+    message: "Price must be a valid number"}),
+  category: z.string().min(1, "Please select a category"),
+  image: z.instanceof(File).optional(),
+  tags: z.string().optional()}),
+
+// Type for our form values
+type ProductFormValues = z.infer<typeof productSchema>,
+
+
+  // Initialize the form
+  const form = useForm<ProductFormValues>({
+    resolver: zodResolver(productSchema)
+    defaultValues: {
+      title: ""
+      description: ""
+      price: ""
+      category: ""
+      tags: ""}})
+  // Handle image upload preview
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      form.setValue("image", file),
+      const reader = new FileReader(),
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+      }
+      // If we have an image, upload it
+      if (values.image) {
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(imagePath, values.image);
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        // Get the public URL for the image
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(imagePath);
+        // Update the product with the image URL
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({
+            images: [publicUrlData.publicUrl]
+          })
+          .eq('id', productRecord.id);
+        if (updateError) {
+          throw new Error(updateError.message)
+        }
+      }
+        .single(),
+        
+      if (productError) {
+        throw new Error(productError.message)
+import React from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import z from "zod",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useToast } from "@/hooks/use-toast",;
+import { useNavigate } from "react-router-dom",;
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator",;
+import { Sparkles } from "lucide-react",;
+// Define the form schema with zod;
+const productSchema = z.object({;
+  title: z.string().min(3, "Title must be at least 3 characters"),;
+  description: z.string().min(10, "Description must be at least 10 characters"),;
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z.string().min(1, "Please select a category"),;
+  image: z.instanceof(File).optional(),;
+  tags: z.string().optional()}),;
+// Type for our form values;
+type ProductFormValues = z.infer<typeof productSchema>,;
+export function ProductSubmissionForm() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const navigate = useNavigate(),;
+  const [isSubmitting, setIsSubmitting] = React.useState(false),;
+  const [imagePreview, setImagePreview] = React.useState(null as string | null),;
+  const [activeTab, setActiveTab] = React.useState("manual"),;
+
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+
+  // Initialize the form;
+  const form = useForm<ProductFormValues>({;
+    resolver: zodResolver(productSchema),;
+    defaultValues: {;
+      title: "",;
+      description: "",;
+      price: "",;
+      category: "",;
+      tags: ""}}),;
+
+
+
+  // Handle form submission
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+        title: "Authentication Required"
+        description: "You must be logged in to publish products"
+        variant: "destructive"})
+      return
+    }
+
+
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       // Create the product listing
       const productData = {
@@ -332,6 +524,7 @@ export function ProductSubmissionForm() {
         .insert([productData])
         .select('id')
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
@@ -367,6 +560,10 @@ import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       }
         .single(),
@@ -644,11 +841,12 @@ export function ProductSubmissionForm() { return null; }
     } finally {}
       setIsSubmitting(false)
 
+
     try {;
       // Create the product listing;
       const productData = {;
-        title: values && values.title,,
-  description: values && values.description,;
+        title: values && values.title,;
+        description: values && values.description,;
         price: parseFloat(values && values.price),;
         category: values && values.category,;"
         currency: "USD", // Default currency;'
@@ -700,6 +898,7 @@ export function ProductSubmissionForm() { return null; }
       // Show success message;
 <<<<<<< HEAD
       toast({;
+<<<<<<< HEAD
         title: "Product Published!",,
   description: "Your product has been successfully published on Zion."}),;
 =======
@@ -707,12 +906,17 @@ export function ProductSubmissionForm() { return null; }
         title: "Product Published!",;"
         description: "Your product has been successfully published on Zion."}),;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        title: "Product Published!",;
+        description: "Your product has been successfully published on Zion."}),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       // Redirect to product page;`
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
 <<<<<<< HEAD
       toast({;
+<<<<<<< HEAD
         title: "Publication Failed",,
   description: error instanceof Error ? error && error.message : "An unknown error occurred",;
 =======
@@ -720,11 +924,16 @@ export function ProductSubmissionForm() { return null; }
         title: "Publication Failed",;"
         description: error instanceof Error ? error && error.message : "An unknown error occurred",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        title: "Publication Failed",;
+        description: error instanceof Error ? error && error.message : "An unknown error occurred",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
 
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }    }
 =======
@@ -745,6 +954,23 @@ export function ProductSubmissionForm() { return null; }
 <<<<<<< HEAD
 
 =======
+=======
+  }
+    }
+
+  },
+
+
+  return (
+
+  return (
+
+    }
+  }
+  },
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
@@ -758,6 +984,7 @@ export function ProductSubmissionForm() { return null; }
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -768,20 +995,33 @@ export function ProductSubmissionForm() { return null; }
             <FormField;
               control={form.control}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <FormField
+              control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="title"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Product Title</FormLabel>
+<<<<<<< HEAD
                   <FormControl>"
                     <Input placeholder="Enter product title" {...field} />
                   </FormControl>
                   <FormDescription>
                     Create a compelling title that describes your product;
+=======
+                  <FormControl>
+                    <Input placeholder="Enter product title" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    Create a compelling title that describes your product
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
 
 
+<<<<<<< HEAD
 
 
 ;
@@ -795,6 +1035,19 @@ export function ProductSubmissionForm() { return null; }
       toast({;"
         title: "Publication Failed",;"
         description: error instanceof Error ? error.message : "An unknown error occurred",;"
+=======
+;
+      // Show success message;
+      toast({;
+        title: "Product Published!",;
+        description: "Your product has been successfully published on Zion."}),;
+      // Redirect to product page;
+      navigate(`/marketplace/listing/${productRecord.id}`);
+    } catch (error) {;
+      toast({;
+        title: "Publication Failed",;
+        description: error instanceof Error ? error.message : "An unknown error occurred",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -804,6 +1057,7 @@ export function ProductSubmissionForm() { return null; }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
 =======
@@ -812,6 +1066,9 @@ export function ProductSubmissionForm() { return null; }
 =======
   return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <TabsList className="grid grid-cols-2 mb-6">;
 =======
 
@@ -832,6 +1089,7 @@ export function ProductSubmissionForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -840,6 +1098,11 @@ export function ProductSubmissionForm() { return null; }
 "
       <TabsContent value="manual">;
         <Form {...form}>;"
+=======
+
+      <TabsContent value="manual">;
+        <Form {...form}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
     }
     setIsSubmitting(true);
@@ -847,7 +1110,10 @@ export function ProductSubmissionForm() { return null; }
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
               name="title"
@@ -855,7 +1121,10 @@ export function ProductSubmissionForm() { return null; }
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -871,6 +1140,7 @@ import { Textarea } from '@/components / ui / textarea';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
 import { AIListingGenerator } from '@/components / listing / AIListingGenerator';
+<<<<<<< HEAD
 =======
             <FormField;
               control={form && form.control}"
@@ -901,20 +1171,37 @@ const product_schema = z.object ({"
   description: z.string ().min (10, "Description must be at least 10 characters");
   price: z.string ().refine ((val) => !isNaN (parse_float (val)) && parse_float (val) >= 0, {"
     message: "Price must be a valid number"}),"
+=======
+import { Sparkles } from './lucide-react';
+// Define the form schema with zod;
+const product_schema = z.object ({
+  title: z.string ().min (3, "Title must be at least 3 characters");
+  description: z.string ().min (10, "Description must be at least 10 characters");
+  price: z.string ().refine ((val) => !isNaN (parse_float (val)) && parse_float (val) >= 0, {
+    message: "Price must be a valid number"}),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   category: z.string ().min (1, "Please select a category");
   image: z.instanceof (File).optional (),
   tags: z.string ().optional ()}),
 // Type for our form values;
 type ProductFormValues = z.infer < typeof product_schema>;
 ;
+<<<<<<< HEAD
 export /**;
  * ProductSubmissionForm - Function description;
  */
 function ProductSubmissionForm() {}
+=======
+export /**
+ * ProductSubmissionForm - Function description
+ */
+function ProductSubmissionForm() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   const { toast } = use_toast ();
   const navigate = use_navigate ();
   const [is_submitting, setIsSubmitting] = React.useState (false);
+<<<<<<< HEAD
   const [image_preview, setImagePreview] = React.useState (null as string | null);"
   const [active_tab, setActiveTab] = React.useState ("manual");
 ;
@@ -937,6 +1224,30 @@ if ( {) {}
       form.set_value ("image", file);
       const reader = new FileReader ();
       reader.onloadend = () => {}
+=======
+  const [image_preview, setImagePreview] = React.useState (null as string | null);
+  const [active_tab, setActiveTab] = React.useState ("manual");
+;
+  // Initialize the form;
+  const form = use_form < ProductFormValues>({
+    resolver: zod_resolver (product_schema),
+    default_values: {
+      title: "",
+      description: "",
+      price: "",
+      category: "",
+      tags: ""}}),
+  // Handle image upload preview;
+  const handleImageChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const file = e.target.files?.[0],
+    // Check condition
+if ( {) {
+  $2
+}
+      form.set_value ("image", file);
+      const reader = new FileReader ();
+      reader.onloadend = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         setImagePreview (reader.result as string);
       }
       reader.readAsDataURL (file);
@@ -944,6 +1255,7 @@ if ( {) {}
   }
 ;
   // Apply AI - generated content to the form;
+<<<<<<< HEAD
   const handleApplyGenerated = (content: any) =>: any {"
     form.set_value ("description", content.description);"
     form.set_value ("tags", content.tags.join (", "));
@@ -953,10 +1265,22 @@ if ( {) {}
     form.set_value ("price", average_price);
 ;
     // Switch to the manual tab to show applied content;"
+=======
+  const handleApplyGenerated = (content: any) =>: any {
+    form.set_value ("description", content.description);
+    form.set_value ("tags", content.tags.join (", "));
+;
+    // Set a default price as the middle of the suggested range;
+    const average_price = ((content.suggested_price.min + content.suggested_price.max) / 2).to_fixed (2);
+    form.set_value ("price", average_price);
+;
+    // Switch to the manual tab to show applied content;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setActiveTab ("manual");
   }
 ;
   // Handle form submission;
+<<<<<<< HEAD
   const on_submit = async (values: ProductFormValues) => {}
     // Check condition;
 if ( {) {}
@@ -965,11 +1289,22 @@ if ( {) {}
       toast ({"
         title: "Authentication Required","
         description: "You must be logged in to publish products","
+=======
+  const on_submit = async (values: ProductFormValues) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication Required",
+        description: "You must be logged in to publish products",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"}),
       return;
     }
     setIsSubmitting (true);
 ;
+<<<<<<< HEAD
     try {}
       // Create the product listing;
       const product_data = {}
@@ -992,10 +1327,35 @@ if ( {) {}
       // Check condition;
 if ( {) {}
   $2;
+=======
+    try {
+      // Create the product listing;
+      const product_data = {
+        title: values.title,
+        description: values.description,
+        price: parse_float (values.price),
+        category: values.category,
+        currency: "USD", // Default currency;
+        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [];
+        author: {
+          name: user.display_name || "Anonymous Creator",
+          id: user.id},
+        created_at: new Date ().toISOString ()},
+      const { data: product_record, error: product_error } = await supabase;
+        .from ('product_listings');
+        .insert ([product_data]);
+        .select ('id');
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
         throw new Error (product_error.message);
       }
       // If we have an image, upload it;
+<<<<<<< HEAD
       // Check condition;
 if ( {) {}
   $2;
@@ -1008,15 +1368,34 @@ if ( {) {}
         // Check condition;
 if ( {) {}
   $2;
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        const image_path = `product_images/${product_record.id}/${values.image.name}`;
+        const { error: upload_error } = await supabase.storage;
+          .from ('products');
+          .upload (image_path, values.image);
+;
+        // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           throw new Error (upload_error.message);
         }
         // Get the public URL for the image;
+<<<<<<< HEAD
         const { data: publicUrlData } = supabase.storage;'
+=======
+        const { data: publicUrlData } = supabase.storage;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           .from ('products');
           .getPublicUrl (image_path);
 ;
         // Update the product with the image URL;
+<<<<<<< HEAD
         const { error: update_error } = await supabase;'
           .from ('product_listings');
           .update ({}
@@ -1027,11 +1406,24 @@ if ( {) {}
         // Check condition;
 if ( {) {}
   $2;
+=======
+        const { error: update_error } = await supabase;
+          .from ('product_listings');
+          .update ({
+            images: [publicUrlData.public_url];
+          });
+          .eq ('id', product_record.id);
+;
+        // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           throw new Error (update_error.message);
         }
       }
       // Show success message;
+<<<<<<< HEAD
       toast ({"
         title: "Product Published!","
         description: "Your product has been successfully published on Zion."}),
@@ -1043,10 +1435,24 @@ if ( {) {}
         description: error instanceof Error ? error.message : "An unknown error occurred","
         variant: "destructive"});
     } finally {}
+=======
+      toast ({
+        title: "Product Published!",
+        description: "Your product has been successfully published on Zion."}),
+      // Redirect to product page;
+      navigate (`/marketplace / listing/${product_record.id}`);
+    } catch (error) {
+      toast ({
+        title: "Publication Failed",
+        description: error instanceof Error ? error.message : "An unknown error occurred",
+        variant: "destructive"});
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsSubmitting (false);
     }
   }
 ;
+<<<<<<< HEAD
   return ("
     <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;"
       <TabsList className="grid grid - cols - 2 mb - 6">;"
@@ -1063,10 +1469,29 @@ if ( {) {}
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <FormField;
               control={form.control}"
+=======
+  return (
+    <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
+      <TabsList className="grid grid - cols - 2 mb - 6">;
+        <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">;
+          Manual Creation;
+        </TabsTrigger>;
+        <TabsTrigger value="ai" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">;
+          <Sparkles className="h - 4 w - 4 mr - 2" />;
+          AI - Powered Creation;
+        </TabsTrigger>;
+      </TabsList>;
+      <TabsContent value="manual">;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+            <FormField;
+              control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="title";
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1075,6 +1500,8 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />;
             <FormField
               control={form && form.control}
@@ -1089,6 +1516,7 @@ if ( {) {}
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1106,6 +1534,9 @@ if ( {) {}
 
                   <FormControl>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  <FormControl>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1119,6 +1550,7 @@ if ( {) {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1137,6 +1569,14 @@ if ( {) {}
             />;
 
 <<<<<<< HEAD
+=======
+
+              )}
+
+            />;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
               name="description"
@@ -1148,6 +1588,7 @@ if ( {) {}
                     <Textarea
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       {...field} 
@@ -1172,11 +1613,16 @@ if ( {) {}
 =======
                       {...field}                     />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      {...field} 
+                    />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </FormControl>;
                   <FormDescription>;'
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>)}
             />;
@@ -1187,6 +1633,12 @@ if ( {) {}
             />;"
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+                </FormItem>)}
+            />;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <FormField;
                 control={form.control}"
                 name="price";
@@ -1197,6 +1649,7 @@ if ( {) {}
                     <FormControl>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     <FormControl>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1204,34 +1657,59 @@ if ( {) {}
 
 
 
+=======
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </FormControl>;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
                     <FormMessage />;
 
+<<<<<<< HEAD
 
               <FormField;
                 control={form && form.control}"
                 name="category"
 
+=======
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="category"
+              <FormField
+                control={form && form.control}
+                name="category"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
 
                       <select"
+=======
+                      <select
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}>;
                   </FormItem>)}
               />;
               <FormField;
+<<<<<<< HEAD
                 control={form.control}"
+=======
+                control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 name="category";
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Category</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
                       <select;"
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
@@ -1240,20 +1718,30 @@ if ( {) {}
                       >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+                      <select;
+                        className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
+                        {...field}
+                      >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <select;
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                         {...field}
                       >;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
                         <option value="ai_tool">AI Tool</option>;
                         <option value="course">Course</option>;
                         <option value="template">Template</option>;
+<<<<<<< HEAD
 =======
 
 
@@ -1265,13 +1753,24 @@ if ( {) {}
                         <option value="course">Course</option>;"
                         <option value="template">Template</option>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <option value="other">Other</option>;
                       </select>;
                     </FormControl>;
                     <FormMessage />;
 
+<<<<<<< HEAD
             <FormField;
               control={form && form.control}"
+=======
+              />;
+            </div>;
+
+
+            <FormField
+              control={form && form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="tags"
               render={({ field }) => (;
                 <FormItem>;
@@ -1280,15 +1779,22 @@ if ( {) {}
               />;
             </div>;
             <FormField;
+<<<<<<< HEAD
               control={form.control}"
+=======
+              control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="tags";
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />;
             <FormField
               control={form && form.control}
@@ -1303,6 +1809,7 @@ if ( {) {}
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1319,6 +1826,9 @@ if ( {) {}
 
                   <FormControl>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  <FormControl>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1326,11 +1836,16 @@ if ( {) {}
 <<<<<<< HEAD
             />;
 
+
             <FormField
               control={form && form.control}
               name="image"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
@@ -1354,6 +1869,7 @@ if ( {) {}
                         <img
                           src={imagePreview} 
                           alt="Preview" 
+<<<<<<< HEAD
 =======
 
 
@@ -1362,6 +1878,12 @@ if ( {) {}
               name="image"
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+            <FormField
+              control={form && form.control}
+              name="image"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -1370,14 +1892,35 @@ if ( {) {}
                 </FormItem>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               )}
 
+=======
+              )}
+
+            />;
+
+            <div className="flex justify-end">;
+              <Button
+                type="submit" 
+
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                {isSubmitting ? "Publishing..." : "Publish Product"}
+
+
+            title: form.getValues("title"),
+
+
+            category: form.getValues("category")
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </Button>;
             </div>;
           </form>;
         </Form>;
       </TabsContent>;
 
+<<<<<<< HEAD
         <AIListingGenerator;
           onApplyGenerated={handleApplyGenerated}
 <<<<<<< HEAD
@@ -1392,6 +1935,14 @@ if ( {) {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+      <TabsContent value="ai">;
+        <AIListingGenerator
+          onApplyGenerated={handleApplyGenerated}
+          initialValues={{
+            title: form && form.getValues("title"),
+            category: form && form.getValues("category")
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ;
       <TabsContent value="ai">;
         <AIListingGenerator ;
@@ -1399,6 +1950,7 @@ if ( {) {}
           initialValues={{;
             title:form.getValues("title"),;
             category:form.getValues("category");
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1411,11 +1963,16 @@ if ( {) {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />;
       </TabsContent>;
     </Tabs>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
@@ -1423,16 +1980,27 @@ if ( {) {}
                 </FormItem>)}
             />;
             <FormField;
+<<<<<<< HEAD
               control={form.control}"
+=======
+              control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="image";
               render={() => (
                 <FormItem>;
                   <FormLabel > Product Image</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Input;"
                       type="file";"
                       accept="image/*";
                       on_change={handleImageChange}"
+=======
+                    <Input;
+                      type="file";
+                      accept="image/*";
+                      on_change={handleImageChange}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="cursor - pointer";
                     />;
                   </FormControl>;
@@ -1440,17 +2008,27 @@ if ( {) {}
                     Upload a high - quality image of your product (recommended size: 1200x800px);
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
                   {image_preview && ("
                     <div className="mt - 2 w - full max - w-md border rounded overflow - hidden">;
                       <AspectRatio ratio={3 / 2}>;
                         <img;
                           src={image_preview}"
                           alt="Preview";"
+=======
+                  {image_preview && (
+                    <div className="mt - 2 w - full max - w-md border rounded overflow - hidden">;
+                      <AspectRatio ratio={3 / 2}>;
+                        <img;
+                          src={image_preview}
+                          alt="Preview";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           className="w - full h - full object - cover";
                         />;
                       </AspectRatio>;
                     </div>)}
                 </FormItem>)}
+<<<<<<< HEAD
             />;"
             <div className="flex justify - end">;
               <Button;"
@@ -1458,24 +2036,107 @@ if ( {) {}
                 disabled={is_submitting}"
                 className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
               >;"
+=======
+            />;
+            <div className="flex justify - end">;
+              <Button;
+                type="submit";
+                disabled={is_submitting}
+                className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+              >;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {is_submitting ? "Publishing..." : "Publish Product"}
               </Button>;
             </div>;
           </form>;
         </Form>;
+<<<<<<< HEAD
       </TabsContent>;"
       <TabsContent value="ai">;
         <AIListingGenerator;
           onApplyGenerated={handleApplyGenerated}
           initial_values={{"
             title: form.get_values ("title"),"
+=======
+      </TabsContent>;
+      <TabsContent value="ai">;
+        <AIListingGenerator;
+          onApplyGenerated={handleApplyGenerated}
+          initial_values={{
+            title: form.get_values ("title"),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             category: form.get_values ("category");
           }}
         />;
       </TabsContent>;
     </Tabs>);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  ),; import {
+  Form;
+FormControl;
+FormDescription;
+FormField;
+FormItem;
+FormLabel;
+tags: z.string () .optional () 
+});
+//Type for our form values type ProductFormValues = z.infer<typeof productSchema>;
+const [isSubmitting, setIsSubmitting] = React.useState (false);
+const [imagePreview, setImagePreview] = React.useState (null as string | null);
+const [activeTab, setActiveTab] = React.useState ("manual");
+  const file = e.target.files?.[0];
+if (file) {
+  reader.onloadend = () => {
+  setImagePreview (reader.result as string) 
+};
+reader.readAsDataURL (file) 
+}
+};
+//Apply AI-generated content to the form if (!user) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+const {
+  data: productRecord, error: productError 
+}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
+.from ('products') .upload (imagePath, values.image);
+//Get the public window.URL for the image const {
+  data: publicUrlData 
+}= supabase.storage.from ('products') .getPublicUrl (imagePath);
+//Update the product with the image window.URL const {
+  error: updateError 
+}= await supabase .from ('product listings') //Redirect to product page navigate (`/marketplace/listing/$ {
+  productRecord.id 
+}`) 
+}catch (error) {
+  toast ({
+  
+}finally {
+  setIsSubmitting (false) 
+}
+};
+return (<Tabs value= {
+  activeTab 
+}onValueChange= {
+  setActiveTab 
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> </FormControl> <FormDescription> Create a compelling title that describes your product </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Description</FormLabel> <FormControl> <Textarea placeholder=" Describe your product in detail..."className="min-h-32" {
+  ...field 
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <FormField </FormControl> <FormDescription> Set your price in USD </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" digital product">Digital Product</option> <option value=" service">Service</option> <option value=" ai tool">AI Tool</option> <option value=" course">Course</option> <option value=" template">Template</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <FormField </FormControl> <FormDescription> Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type=" file"accept=" image/*"onChange= {
+  handleImageChange 
+}className=" cursor-pointer"/> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> /> </AspectRatio> </div>) 
+}</FormItem>) 
+}/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
+            title: form.getValues("title")
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             title: form.getValues("title"),
             category: form.getValues("category")
           }}
@@ -1483,6 +2144,7 @@ if ( {) {}
       </TabsContent>
     </Tabs>
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1498,3 +2160,6 @@ if ( {) {}
 
 }'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

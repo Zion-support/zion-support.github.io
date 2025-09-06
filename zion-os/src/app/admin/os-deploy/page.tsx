@@ -28,10 +28,21 @@ import { useState } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "use client";
+<<<<<<< HEAD
 import { useState } from 'react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+import React, { useState } from "react";
+"use client";
+
+import React, { useState } from "react";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function OSDeployPage() {
 =======
 =======
@@ -52,6 +63,7 @@ const [loading, setLoading] = useState(false);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -85,10 +97,43 @@ class ErrorBoundary extends React.Component {
 'use client';
 =======    const labels: { [key: string]: string } = {
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  }
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions
+  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+  const labelFor = (key: string) => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+'use client';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const labels: { [key: string]: string } = {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ai: 'AI Integration'
@@ -112,10 +157,17 @@ ai: 'Advanced AI capabilities and automation'
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -181,10 +233,34 @@ ai: 'Advanced AI capabilities and automation','
 =======
 =======
 
+<<<<<<< HEAD
 
         {/* Header */}
 
 main
+=======
+  const getFeatureDescription = (key: string) => {
+    const descriptions: { [key: string]: string } = {
+ai: 'Advanced AI capabilities and automation',
+      blockchain: 'Secure blockchain infrastructure',
+      governance: 'Decentralized governance mechanisms',
+      treasury: 'Automated treasury management'
+    };
+    return descriptions[key] || "Feature description";
+  };
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">
+            🚀 Launch Your Digital Economy
+          </h1>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            Deploy your custom Zion OS instance with advanced features and
+            configurations
+          </p>
+        </div>
+        {/* Header */}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className="text-center mb-12">;
@@ -254,6 +330,7 @@ main
 <<<<<<< HEAD
 =======
         </div>;
+<<<<<<< HEAD
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -269,6 +346,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+
+        <form onSubmit={handleSubmit} className="space-y-8">;
+          {/* Basic Configuration */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">
+                ⚙️
+              </span>
+              Basic Configuration
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Instance Name *
+                </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -277,6 +372,7 @@ main
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
 
+<<<<<<< HEAD
                 />;
               </div>;
               <div className="space-y-2">;
@@ -284,10 +380,17 @@ main
 
 
 main
+=======
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Vertical
+                </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 <select
                   id="vertical"
                   name="vertical"
 
+<<<<<<< HEAD
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
   }
 ;
@@ -340,7 +443,28 @@ ai: 'Advanced AI capabilities and automation',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Domain
+                </label>
+                <input
+                  name="domain"
+                  type="text"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  placeholder="zion.example.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Subdomain
+                </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -351,7 +475,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 </select>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   placeholder="zion && zion.example.com"
                 />;
@@ -363,7 +490,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -478,6 +610,7 @@ main
                 </select>;
 =======
 
+<<<<<<< HEAD
                 />;
               </div>;
               <div className="space-y-2">;
@@ -487,12 +620,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Default Language
+                </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
 
+<<<<<<< HEAD
                 />;
               </div>;
               <div className="space-y-2">;
@@ -502,16 +642,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Region
+                </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 />;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>;
@@ -545,12 +694,82 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               Economic Configuration
             </h2>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
 
 
 
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Token System
+                </label>
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Governance Type
+                </label>
+                <select
+                  name="governanceType"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                >
+                  <option value="ADMIN">Admin Control</option>
+                  <option value="DAO LITE">DAO-lite</option>
+                  <option value="DAO FULL">Full DAO</option>
+                  <option value="HYBRID">Hybrid Governance</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Country
+                </label>
+                <input
+                  name="country"
+                  type="text"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  placeholder="United States"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Payment Gateway
+                </label>
+                <select
+                  id="paymentGateway"
+                  name="paymentGateway"
+
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+                  <option value="">None</option>;
+                  <option value="stripe">Stripe</option>;
+                  <option value="coinbase-commerce">Coinbase Commerce</option>;
+                  <option value="paypal">PayPal</option>;
+                  <option value="crypto">Crypto Payments</option>;
+                </select>;
+              </div>;
+            </div>;
+          </div>;
+
+          {/* Feature Selection */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">
+                🔧
+              </span>
+              Feature Selection
+            </h2>
+
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 <select
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   id="tokenSystem"
@@ -614,17 +833,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 >;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
@@ -641,13 +870,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 />;
               </div>;
@@ -676,10 +913,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </h2>;
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label;
@@ -688,12 +930,20 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input
               <div className="space-y-2">;
                 <label html_for="country" className="block text - sm font - medium text-white / 90">Country</label>;
@@ -780,6 +1030,7 @@ main
 <<<<<<< HEAD
                     value={k}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     value={k}"
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
@@ -810,6 +1061,8 @@ main
 <<<<<<< HEAD
 =======                <input
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             </div>;
           </div>;
@@ -825,6 +1078,31 @@ main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <div>
+                    <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                      {labelFor(k)}
+                    </div>
+                    <div className="text-sm text-white/60">
+                      {getFeatureDescription(k)}
+                    </div>
+                  </div>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Additional Features */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
+                🚀
+              </span>
+              Additional Features
+            </h2>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
                 <input
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -833,6 +1111,7 @@ main
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
 =======
@@ -855,8 +1134,22 @@ main
               </label>
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 main
+=======
+                />
+                <div>
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                    Treasury Management
+                  </div>
+                  <div className="text-sm text-white/60">
+                    Manage community funds with transparency
+                  </div>
+                </div>
+              </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -871,18 +1164,27 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
 =======
@@ -905,8 +1207,22 @@ main
               </label>
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 main
+=======
+                />
+                <div>
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                    Governance System
+                  </div>
+                  <div className="text-sm text-white/60">
+                    Local + global decision making
+                  </div>
+                </div>
+              </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -921,18 +1237,27 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
 =======
@@ -955,8 +1280,22 @@ main
               </label>
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 main
+=======
+                />
+                <div>
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                    Content Moderation
+                  </div>
+                  <div className="text-sm text-white/60">
+                    Automated content and behavior monitoring
+                  </div>
+                </div>
+              </label>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -971,18 +1310,27 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
 =======
@@ -1026,6 +1374,8 @@ main
             </div>;
           </div>;
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 />;
                 <div>;
@@ -1113,22 +1463,58 @@ main
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+                />
+                <div>
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                    Partnership Management
+                  </div>
+                  <div className="text-sm text-white/60">
+                    Institutional partnership management
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <div className="text-center">
+            <button
+              disabled={loading}
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
+            >
+              {loading ? "Deploying..." : "Deploy Digital Economy"}
+            </button>
+
+              <div
+                className={`mt-6 p-4 rounded-lg ${
+                  messageType === "success"
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400"
+                    : "bg-red-900/20 border border-red-500/20 text-red-400"
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 </div>;
               </label>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
             </button>;
             {message && (;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }`}
               >
@@ -1138,11 +1524,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 }`}
               >
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1542,6 +1932,7 @@ export default function AdminDeployPage() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1562,6 +1953,8 @@ export default function AdminDeployPage() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
   return (
@@ -1632,6 +2025,11 @@ export default function AdminDeployPage() { return null; }
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
             </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                {message}
+              </div>;
+            )}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           </div>
         </form>
       </div>
@@ -1639,6 +2037,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1695,6 +2094,8 @@ function getFeatureDescription(key: string) {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }`}>;
                 {message}
               </div>;
@@ -1730,11 +2131,14 @@ function getFeatureDescription(key: string) {;
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 {message}
               </div>;
             )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -1750,6 +2154,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </form>;
       </div>;
@@ -1800,6 +2210,7 @@ function getFeatureDescription(key: string) {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -1831,6 +2242,8 @@ function getFeatureDescription(key: string) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1839,7 +2252,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

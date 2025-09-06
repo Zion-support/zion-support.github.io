@@ -32,6 +32,8 @@ interface AIEnhancementButtonProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
@@ -60,14 +62,19 @@ import {toast} from '@/hooks/use-toast';
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   size?: "default" | "sm" | "lg" | "icon";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  size?: "default" | "sm" | "lg" | "icon";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -75,6 +82,14 @@ import {toast} from '@/hooks/use-toast';
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";"
   size?: "default" | "sm" | "lg" | "icon";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+export function AIEnhancementButton(): any ({;
+
+  options;
+  onEnhanced;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -101,6 +116,7 @@ import {toast} from '@/hooks/use-toast';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -109,11 +125,16 @@ import {toast} from '@/hooks/use-toast';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -146,6 +167,11 @@ import { toast } from '@/hooks/use-toast',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -159,6 +185,7 @@ interface AIEnhancementButtonProps {
 =======
   contentLength?: number
 }
+<<<<<<< HEAD
 =======
 interface AIEnhancementButtonProps {}
   options: AIEnhancementOptions,
@@ -172,6 +199,11 @@ interface AIEnhancementButtonProps {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function AIEnhancementButton({;
   options;
   onEnhanced;"
@@ -205,6 +237,7 @@ export function AIEnhancementButton({};
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,11 +260,22 @@ export function AIEnhancementButton({};
 =======
 
 
+=======
+  
+  const handleEnhance = async () => {
+    if ((!options.content |options.content.trim().length < contentLength) &&
+        (!options.context |options.context.trim().length < contentLength)) {
+      toast({
+        title: "Not enough content"
+        description: `Please enter at least ${contentLength} characters before enhancing.`
+        variant: "destructive"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
   };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -262,22 +306,48 @@ import { useState } from 'react',;'
 import { Button } from '@/components/ui/button',;'
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;'
+=======
+      }),
+      return
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from '@/hooks/use-toast',;
 interface AIEnhancementButtonProps {;
   options: AIEnhancementOptions,;
   onEnhanced: (enhancedContent: string) => void,;
   buttonText?: string,;
+<<<<<<< HEAD
   className?: string,;"
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;"
+=======
+  className?: string,;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   size?: "default" | "sm" | "lg" | "icon",;
   contentLength?: number;
 }
 ;
+<<<<<<< HEAD
 export function AIEnhancementButton() { return null; }
+=======
+export function AIEnhancementButton({;
+  options,;
+  onEnhanced,;
+  buttonText = "Enhance with AI",;
+  className,;
+  variant = "ghost",;
+  size = "sm",;
+  contentLength = 10;
+}: AIEnhancementButtonProps) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const [showActions, setShowActions] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
 
+<<<<<<< HEAD
 
   const handleEnhance = async () => {;
     if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
@@ -310,6 +380,17 @@ export function AIEnhancementButton() { return null; }
 =======
         return;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const handleEnhance = async () => {;
+    if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
+        (!options && options.context || options && options.context.trim().length < contentLength)) {;
+      toast({;
+        title: "Not enough content",;
+        description: `Please enter at least ${contentLength} characters before enhancing.`,;
+        variant: "destructive";
+      });
+      return;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
@@ -320,8 +401,11 @@ export function AIEnhancementButton() { return null; }
 <<<<<<< HEAD
 =======
 
+
+
   
 <<<<<<< HEAD
+
 
   
 <<<<<<< HEAD
@@ -349,23 +433,17 @@ export function AIEnhancementButton() { return null; }
       onEnhanced(generatedContent);
       setShowActions(false);
       setGeneratedContent(null);
-      }),;
-      return;
-    }
-;
-    const enhancedContent = await enhanceContent(options),;
-    if (enhancedContent) {;
-      setGeneratedContent(enhancedContent),;
-      setShowActions(true);
-    }
-  },  const handleAccept = () => {
+  
+  const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+      toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -374,6 +452,12 @@ export function AIEnhancementButton() { return null; }
 
 =======
   }
+=======
+
+
+  },
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleRegenerate = async () => {
     await handleEnhance()
   }
@@ -412,6 +496,7 @@ export function AIEnhancementButton() { return null; }
   },
   
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleCancel = () => {
     setShowActions(false);
@@ -453,6 +538,20 @@ export function AIEnhancementButton() { return null; }
     setShowActions(false);
     setGeneratedContent(null)  if (showActions) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const handleCancel = () => {
+    setShowActions(false);
+    setGeneratedContent(null)
+
+  };
+
+
+  },
+  
+
+  if (showActions) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
 =======
   if (showActions) {}
@@ -604,6 +703,7 @@ export function AIEnhancementButton() { return null; }
 =======
 
   },;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -684,6 +784,9 @@ export function AIEnhancementButton() { return null; }
   }
     }
   };
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent);
@@ -697,6 +800,7 @@ export function AIEnhancementButton() { return null; }
   const handleRegenerate = async () => {;
     await handleEnhance();
   };
+<<<<<<< HEAD
   const handleCancel = () => {;
     setShowActions(false);
     setGeneratedContent(null);
@@ -1084,17 +1188,169 @@ return;
     await handleEnhance()
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleCancel = () => {;
     setShowActions(false);
-    setGeneratedContent(null)
-};
+    setGeneratedContent(null);
+  };
 
   if (showActions) {;
+    return (
+      <div className="flex gap-2 items-center">;
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleAccept}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;
+          <Check className="h-4 w-4 mr-1" />;
+          Apply;
+        </Button>;
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleRegenerate}
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+          disabled={isEnhancing}>;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
+          ) : (;
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+import { toast } from '@/hooks/use-toast',;
+;
+interface AIEnhancementButtonProps {;
+  options:AIEnhancementOptions,;
+  onEnhanced:(enhancedContent:string) => void,;
+  buttonText?:string,;
+  className?:string,;
+  variant?:"default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;
+  size?:"default" | "sm" | "lg" | "icon",;
+  contentLength?:number;
+}
+;
+export function AIEnhancementButton({;
+  options,;
+  onEnhanced,;
+  buttonText = "Enhance with AI",;
+  className,;
+  variant = "ghost",;
+  size = "sm",;
+  contentLength = 10;
+} AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const [showActions, setShowActions] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+  ;
+  const handleEnhance = async () => {;
+    if ((!options.content || options.content.trim().length < contentLength) && ;
+        (!options.context || options.context.trim().length < contentLength)) {;
+      toast({;
+        title:"Not enough content",;
+        description:`Please enter at least ${contentLength} characters before enhancing.`,;
+        variant:"destructive";
+      }),;
+      return,;
+    }
+    ;
+    const enhancedContent = await enhanceContent(options),;
+    ;
+    if (enhancedContent) {;
+      setGeneratedContent(enhancedContent),;
+      setShowActions(true),;
+    }
+  },;
+  ;
+  const handleAccept = () => {;
+    if (generatedContent) {;
+      onEnhanced(generatedContent),;
+      setShowActions(false),;
+      setGeneratedContent(null),;
+      toast({;
+        title:"Content applied",;
+        description:"AI-enhanced content has been applied."}),;
+    }
+  },;
+  ;
+  const handleRegenerate = async () => {;
+    await handleEnhance(),;
+  },;
+  ;
+  const handleCancel = () => {;
+    setShowActions(false),;
+    setGeneratedContent(null),;
+  },;
+  ;
+  if (showActions) {;
+    return (;
+      <div className="flex gap-2 items-center">;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleAccept}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";
+        >;
+          <Check className="h-4 w-4 mr-1" />;
+          Apply;
+        </Button>;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleRegenerate}
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";
+          disabled={isEnhancing}
+        >;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
+          ) :(;
+            <RefreshCw className="h-4 w-4 mr-1" />;
+          )}
+          Regenerate;
+        </Button>;
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleCancel}
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleCancel}
+          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20";
+        >;
+          <X className="h-4 w-4 mr-1" />;
+          Cancel;
+        </Button>;
+      </div>;
+    );
+  }
+
+
+
+          <X className="h-4 w-4 mr-1" />;
+          Cancel;
+        </Button>;
+  return (
     <Button;
       type="button";
       variant={variant}
       size={size}
+
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;
+  );
+}
+
       className={`gap-1 ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
@@ -1120,6 +1376,7 @@ return;
 =======
       variant={variant}
       size={size}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       variant={variant}
@@ -1131,15 +1388,83 @@ return;
   handleAccept "
 }className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
+=======
+      className={`gap - 1 ${class_name}`}
+      on_click={handle_enhance}
+      disabled={is_enhancing}
+    >;
+      {is_enhancing ? (
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
+        <Sparkles className="h - 4 w - 4" />)}
+      <span className="text - xs">{button_text}</span>;
+    </Button>);
+}
+
+}
+;
+
+  }
+  ;
+  return (;
+    <Button;
+      type="button";      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >;
+      {isEnhancing ? (;
+        <Loader2 className="h-4 w-4 animate-spin" />;
+      ) :(;
+        <Sparkles className="h-4 w-4" />;
+      )}
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;
+  ),; 
+}export function AIEnhancementButton ({
+  options;
+onEnhanced;
+buttonText = "Enhance with AI";
+className;
+variant = "ghost";
+size = "sm";
+contentLength = 10 
+}: AIEnhancementButtonProps) {
+  const {
+  enhanceContent, isEnhancing 
+}= useAIContentEnhancer ();
+const [showActions, setShowActions] = useState (false);
+const [generatedContent, setGeneratedContent] = useState<string | null> (null);
+if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {
+  toast ({
+  variant: "destructive" 
+});
+return 
+}
+
+}
+;
+
+}
+};
+<Button type="button" variant="ghost" size="sm" onClick= {
+  handleAccept 
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) 
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) 
 }</Button>) 
 }
 }
 }
 ;
+<<<<<<< HEAD
 
 
 }
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

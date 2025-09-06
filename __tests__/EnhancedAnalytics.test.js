@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,10 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedAnalytics from "./components/EnhancedAnalytics" describe("EnhancedAnalytics",() => {" test("renders without crashing",() => {" render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedAnalytics / / />) }) test("handles user interactions",() => {" render(<EnhancedAnalytics / / />) }) test("applies correct styling",() => {" render(<EnhancedAnalytics / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })

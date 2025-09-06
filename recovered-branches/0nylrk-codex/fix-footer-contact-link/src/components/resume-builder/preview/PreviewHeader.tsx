@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -58,11 +59,14 @@ import {useIsMobile} from '@/hooks/use-mobile';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Link } from "lucide-react";
 import { PdfExportButton } from "../PdfExportButton";
 import { Resume } from "@/types/resume";
 import { useState } from "react";
+<<<<<<< HEAD
 =======
 import { Button } from "@/components/ui/button";"
 import { ArrowLeft, FileText, Link } from "lucide-react";"
@@ -95,6 +99,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
+=======
+import { useIsMobile } from "@/hooks/use-mobile";
+interface PreviewHeaderProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   resume: Resume;
   onBack: () => void;
 }
@@ -106,7 +114,12 @@ import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleBrowserPrint = () => {
 =======
 
@@ -135,19 +148,30 @@ interface PreviewHeaderProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Inject print-specific CSS only for the duration of printing;
     const style = document && document.createElement('style');
     style && style.innerHTML = `;
       @media print {;
         body * {;
+=======
+    // Inject print-specific CSS only for the duration of printing
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @media print {
+        body * {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           visibility: hidden;
 <<<<<<< HEAD
 =======
@@ -323,10 +347,11 @@ export function PreviewHeader() { return null; }
 
     // Remove the temporary style element after printing
     setTimeout(() => {
-      document.head.removeChild(style),
-      setIsPrinting(false)
-    }, 1000)
-  },
+      document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
@@ -335,6 +360,7 @@ export function PreviewHeader() { return null; }
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,6 +412,18 @@ export function PreviewHeader() { return null; }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={handleBrowserPrint}           disabled={isPrinting}
+=======
+
+      <div
+        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
+      >
+        <PdfExportButton resume={resume} />
+
+        <Button
+          variant="outline"
+          onClick={handleBrowserPrint}
+          disabled={isPrinting}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
@@ -397,11 +435,25 @@ export function PreviewHeader() { return null; }
           Add to Profile
         </Button>
       </div>
+<<<<<<< HEAD
     </div>    document.head.append_child (style);
 =======
 
     document.head.append_child (style);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </div>
+  );
+}
+    document.head.append_child (style);
+;
+
+
+
+  );
+}
+    document.head.append_child (style);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     // Trigger print dialog;
     window.print ();
@@ -418,6 +470,7 @@ export function PreviewHeader() { return null; }
       className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
 <<<<<<< HEAD
     >;
+<<<<<<< HEAD
       <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
         <ArrowLeft className="h - 4 w-4" />;
 =======
@@ -425,6 +478,10 @@ export function PreviewHeader() { return null; }
       <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;"
         <ArrowLeft className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
+        <ArrowLeft className="h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Back;
       </Button>;
       <div;"`
@@ -436,11 +493,12 @@ export function PreviewHeader() { return null; }
           on_click={handleBrowserPrint}
 <<<<<<< HEAD
           disabled={is_printing}
-          className="gap-2";
+          className="gap - 2";
         >;
-          <FileText className="h - 4 w-4" />;
+          <FileText className="h - 4 w - 4" />;
           Print;
         </Button>;
+<<<<<<< HEAD
         <Button variant="outline" className="gap-2">;
           <Link className="h - 4 w-4" />;
 =======
@@ -453,6 +511,10 @@ export function PreviewHeader() { return null; }
         <Button variant="outline" className="gap - 2">;"
           <Link className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <Button variant="outline" className="gap - 2">;
+          <Link className="h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Add to Profile;
         </Button>;
       </div>;
@@ -488,8 +550,11 @@ document.head.appendChild (style);
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

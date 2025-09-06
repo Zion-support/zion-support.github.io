@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -20,9 +21,12 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 <<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;/* eslint - disable no - console */;
 =======
+=======
+
+const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 /* eslint - disable no - console */;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -76,6 +80,9 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
@@ -84,6 +91,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -151,6 +159,9 @@ async function post_json (url: string, body: any): Promise < any> {}
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       })
     });
     req && req.on('error', reject);
@@ -334,6 +345,7 @@ main ().catch ((e) => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -344,6 +356,8 @@ main ().catch ((e) => {}
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 =======

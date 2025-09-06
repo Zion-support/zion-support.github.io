@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 export default function Page() {;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export default function Page() {;
 pr-12243
@@ -20,6 +22,13 @@ export default function Page() {
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Case Study — Autonomous Reports</title>
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <meta
           name='description'
 =======
@@ -57,7 +66,15 @@ export default function Page() {
 pr-12243
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />;'
         <p className='mt-6 text-white/60 text-sm'>;
@@ -70,14 +87,20 @@ pr-12243
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
 
 pr-12243
 =======
   );export default function Page() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />'
         <p className='mt-6 text-white/60 text-sm'>
@@ -97,11 +120,19 @@ export default function Page() {
   );export default function Page() {
   return (
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Case Study — Autonomous Reports</title>;
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -111,6 +142,13 @@ pr-12243
         <title>Case Study — Autonomous Reports</title>;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next / head';
 export default /**;
  * Page - Function description;
@@ -154,14 +192,24 @@ function Page() {}
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title > Case Study — Autonomous Reports</title>;
 
 pr-12243
+=======
+
+
+=======
+        <title > Case Study — Autonomous Reports</title>;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Autonomous Reports" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
+<<<<<<< HEAD
 }
 =======
 
@@ -174,10 +222,18 @@ pr-12243
       </Head>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
 pr-12243
+=======
+=======
+
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study  Autonomous Reports</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / explore" target="_blank" rel="noopener">https://ziontechgroup.com / explore</a></p><h2 > Scenario</h2><p > Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -199,7 +255,10 @@ pr-12243
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <Head>
         <title>Case Study — Autonomous Reports</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
@@ -224,6 +283,7 @@ pr-12243
         </p>
       </main>
     </div>
+<<<<<<< HEAD
     </div>;
   );export default function Page() {}
   return (
@@ -237,6 +297,19 @@ pr-12243
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+
+=======
+    </div>;
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Autonomous Reports</title>"
@@ -253,6 +326,11 @@ pr-12243
 <<<<<<< HEAD
 pr-12243
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
   );
 }
@@ -260,6 +338,11 @@ pr-12243
 =======
 
 
+=======
+    </div>
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>;
   );
 }
@@ -279,9 +362,17 @@ pr-12243
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

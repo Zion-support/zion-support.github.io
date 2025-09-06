@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React && React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress && Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 =======
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React && React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress && Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
@@ -36,6 +40,7 @@ const React from "react";"""; import { cn } from "././lib/utils"; const Progress
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -45,6 +50,9 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };

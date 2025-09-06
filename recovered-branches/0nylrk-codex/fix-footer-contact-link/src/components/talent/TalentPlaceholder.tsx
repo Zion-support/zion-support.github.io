@@ -67,6 +67,7 @@ export function TalentPlaceholder() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -156,7 +157,11 @@ export function TalentPlaceholder() {;
         Join as Talent;
       </Button>;
     </div>);
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
 
   )
   )
@@ -165,6 +170,7 @@ export function TalentPlaceholder() {;
   );
 }
 ;
+
 
 } export function TalentPlaceholder () {
   return (<div className="p-8 text-center" > <h3 className="text-2xl font-bold text-white mb-4" >Talent Directory Coming Soon</h3> <p className="text-zion-slate-light mb-6 max-w-md mx-auto" > 
@@ -199,8 +205,11 @@ export function TalentPlaceholder() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

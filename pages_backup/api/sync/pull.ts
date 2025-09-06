@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/pull.ts
 <<<<<<< HEAD:pages/api/sync/pull.ts
 <<<<<<< HEAD
@@ -22,6 +23,8 @@
 import type { NextApiRequest, NextApiResponse } from './next';,'
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/pull.ts
@@ -46,6 +49,7 @@ function handler() {}
     events,
     scope: requested_scope});
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/pull.ts
 <<<<<<< HEAD:pages/api/sync/pull.ts
 <<<<<<< HEAD
@@ -76,6 +80,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/pull.ts
+=======
+
+    instanceId: state.config.instanceId
+    lastSyncedAt: state.lastSyncedAt
+    events
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
 
@@ -122,6 +136,7 @@ export default function handler() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return res.status(200).json({
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/pull.ts
 <<<<<<< HEAD
 
@@ -142,18 +157,26 @@ export default function handler() { return null; }
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/pull.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
   if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/pull.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/pull.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
@@ -207,11 +230,25 @@ export default function handler(req, res) {}
     scope: requestedScope
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/pull.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -257,6 +294,7 @@ function handler() { return null; }
     lastSyncedAt: state.lastSyncedAt,
     events,
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/pull.ts
 <<<<<<< HEAD:pages/api/sync/pull.ts
 <<<<<<< HEAD
@@ -277,3 +315,7 @@ function handler() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/pull.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

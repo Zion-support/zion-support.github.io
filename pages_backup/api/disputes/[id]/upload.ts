@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -44,6 +45,15 @@ import {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   ensureDisputeUploadDir,
   getDisputeById,
@@ -92,6 +102,7 @@ export const config = {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 =======
 <<<<<<< HEAD
@@ -237,6 +248,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+) {;
+  const { id } = req.query;
+
+  if (typeof id !== 'string')
+    return res.status(400).json({ error: 'Invalid id' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const user = parseUserFromRequest(req);
+
+  if (req && req.method === "POST") {
+    const dispute = await getDisputeById(id);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 =======
 
@@ -284,6 +307,7 @@ if ( {) {}
     }
     const { files } =;
       req.body ||;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -452,6 +476,11 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       { recursive: true }
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+      { recursive: true }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
 ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -500,12 +529,16 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 fs.mkdir(
       require('path').dirname(filePath),
       { recursive: true },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -527,6 +560,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     );
   });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -552,6 +586,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
@@ -570,6 +607,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 =======
@@ -585,6 +623,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -607,17 +649,24 @@ export default async function handler(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -649,6 +698,9 @@ export default async function handler(req, res) {}
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
 =======
@@ -745,6 +797,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -774,10 +827,13 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 =======
 
@@ -786,3 +842,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

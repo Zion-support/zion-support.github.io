@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ApplicationStatus } from "@/types/jobs";
 =======
 
@@ -32,18 +37,43 @@ interface StatusBadgeProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;interface StatusBadgeProps {
 =======
 interface StatusBadgeProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
+  switch (status) {;
+interface StatusBadgeProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   status: ApplicationStatus;
 }
 export function StatusBadge({ status }: StatusBadgeProps) {}
   switch (status) {";
     case "new": return <Badge variant;
 <<<<<<< HEAD
+<<<<<<< HEAD
     default:      return <Badge variant="outline">{status}</Badge>;
+=======
+    default:
+    case "new":;
+      return <Badge variant="secondary">Submitted</Badge>;
+    case "viewed":;
+      return <Badge variant="outline">Viewed</Badge>;
+    case "shortlisted":;
+      return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
+    case "interview":;
+      return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
+    case "hired":;
+      return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
+    case "rejected":;
+      return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
+    default:;
+      return <Badge variant="outline">{status}</Badge>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -123,6 +153,16 @@ export function StatusBadge() { return null; }
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export /**
+ * StatusBadge - Function description
+ */
+function StatusBadge() {
+  switch (status) {
+
+    case "new":;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":;
       return <Badge variant="outline">Viewed</Badge>;
@@ -193,6 +233,19 @@ export function StatusBadge({ status }: StatusBadgeProps) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+      return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
+    case "interview":;
+      return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
+    case "hired":;
+      return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
+    case "rejected":;
+      return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
+    default:;
+
+      return <Badge variant="outline">{status}</Badge>;
+  }
+}
+
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 interface StatusBadgeProps {
@@ -203,8 +256,12 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 import { ApplicationStatus } from "@/types/jobs",
@@ -220,16 +277,20 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   }
 
 import { ApplicationStatus } from "@/types/jobs",;
+<<<<<<< HEAD
 =======
 "
 import { ApplicationStatus } from "@/types/jobs",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Badge } from "@/components/ui/badge",;
 ;
 interface StatusBadgeProps {;
   status:ApplicationStatus;
 }
 ;
+<<<<<<< HEAD
 export function StatusBadge() { return null; }
       return <Badge variant="outline">{status}</Badge>,;  }
  interface StatusBadgeProps {}
@@ -263,3 +324,36 @@ default: return <Badge variant="outline"> {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export function StatusBadge({ status } StatusBadgeProps) {;
+  switch (status) {;
+    case "new":return <Badge variant="secondary">Submitted</Badge>,;
+    case "viewed":;
+      return <Badge variant="outline">Viewed</Badge>,;
+    case "shortlisted":;
+      return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,;
+    case "interview":;
+      return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,;
+    case "hired":;
+      return <Badge className="bg-green-100 text-green-800">Hired</Badge>,;
+    case "rejected":;
+      return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,;
+    default:;
+      return <Badge variant="outline">{status}</Badge>,;  }
+ interface StatusBadgeProps {
+  status: ApplicationStatus 
+}export function StatusBadge ({
+  status 
+}: StatusBadgeProps) {
+  switch (status) {
+  case "viewed": return <Badge variant="outline">Viewed</Badge>;
+case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
+case "interview": return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;
+case "hired": return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
+case "rejected": return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>;
+default: return <Badge variant="outline"> {
+  status 
+}</Badge> 
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

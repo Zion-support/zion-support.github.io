@@ -2,7 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -22,6 +28,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Server, Clock, MapPin } from './lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 interface ServiceDetailsProps {
   country: string
 }
@@ -86,12 +93,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {}
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -109,11 +120,21 @@ interface ServiceDetailsProps {
   country: string;
 }
 <<<<<<< HEAD
+=======
+
+  const getDatacenters = (country: string): string[] => {
+    const dataCenters: Record<string, string[]> = {;
+
+interface ServiceDetailsProps {
+  country: string;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
 
 interface ServiceDetailsProps {;
+<<<<<<< HEAD
 =======
 ";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
@@ -143,6 +164,17 @@ interface ServiceDetailsProps {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  country: string;
+}
+
+// Component to show service details for the selected country;
+export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const getDatacenters = (country: string): string[] => {;
+    const dataCenters: Record<string, string[]> = {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Component to show service details for the selected country;
 export /**;
  * ServiceDetails - Function description;
@@ -153,6 +185,7 @@ function ServiceDetails() {}
   const get_datacenters = (country: string): string[] => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const data_centers: Record < string, string[]> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,12 +193,16 @@ function ServiceDetails() {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    const data_centers: Record < string, string[]> = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
       "Japan": ["Tokyo", "Osaka"];
       "Australia": ["Sydney", "Melbourne", "Perth"];
       "Singapore": ["Singapore Central"];
+<<<<<<< HEAD
 =======
   const get_datacenters = (country: string): string[] => {}
     const data_centers: Record < string, string[]> = {}
@@ -192,6 +229,12 @@ function ServiceDetails() {}
 =======
     const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      "Canada": ["Toronto", "Montreal", "Vancouver"];
+
+
+    const dataCenters: Record<string string[]> = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -202,11 +245,15 @@ function ServiceDetails() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       // Default for other countries
       "default": ["Major metropolitan areas"]
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,6 +280,9 @@ function ServiceDetails() {}
     return regions[country] |regions["default"]
   }    },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    },
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     
 =======
 
@@ -253,12 +303,15 @@ function ServiceDetails() {}
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
@@ -272,11 +325,74 @@ function ServiceDetails() {}
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+
+      // Default for other countries;
+      "default": ["Major metropolitan areas"];
+    };
+
+    return dataCenters[country] || dataCenters["default"];
+  };
+
+  // Get region-specific image;
+  const getRegionalImage = (country: string): string => {;
+    // In a real app, you'd have specific images for each region;
+    const regions: Record<string, string> = {;
+      "United States": "https://source && source.unsplash.com/featured/900x700/?datacenter,usa";
+      "United Kingdom": "https://source && source.unsplash.com/featured/900x700/?datacenter,uk";
+      "Germany": "https://source && source.unsplash.com/featured/900x700/?datacenter,germany";
+      "Japan": "https://source && source.unsplash.com/featured/900x700/?datacenter,japan";
+      "Australia": "https://source && source.unsplash.com/featured/900x700/?datacenter,australia";
+      "Singapore": "https://source && source.unsplash.com/featured/900x700/?datacenter,singapore";
+      // Default placeholder;
+      "default": "https://source && source.unsplash.com/featured/900x700/?datacenter";
+    };
+
+    return regions[country] || regions["default"];
+  };
+
+  // Get region-specific instructions;
+  const getRegionalInstructions = (country: string): string => {;
+    // In a real implementation, this would be much more detailed and specific;
+    const timeZones: Record<string, string> = {;
+
       "United States": "EST/CST/PST depending on location";
       "United Kingdom": "GMT/BST";
-      "Germany": "CET/CEST";      "Japan": "JST";
+      "Germany": "CET/CEST";
+      // Default for other countries;
+      "default": ["Major metropolitan areas"];
+    }
+;
+    return data_centers[country] || data_centers["default"];
+  }
+;
+  // Get region - specific image;
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region;
+    const regions: Record < string, string> = {
+      "United States": "https://source.unsplash.com / featured / 900x700/?datacenter, usa";
+      "United Kingdom": "https://source.unsplash.com / featured / 900x700/?datacenter, uk";
+      "Germany": "https://source.unsplash.com / featured / 900x700/?datacenter, germany";
+      "Japan": "https://source.unsplash.com / featured / 900x700/?datacenter, japan";
+      "Australia": "https://source.unsplash.com / featured / 900x700/?datacenter, australia";
+      "Singapore": "https://source.unsplash.com / featured / 900x700/?datacenter, singapore";
+      // Default placeholder;
+      "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
+    }
+;
+    return regions[country] || regions["default"];
+  }
+;
+  // Get region - specific instructions;
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific;
+    const time_zones: Record < string, string> = {
+      "United States": "EST / CST / PST depending on location";
+      "United Kingdom": "GMT / BST";
+      "Germany": "CET / CEST";
+      "Japan": "JST";
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
+
 
     }
     return regions[country] |regions["default"]
@@ -379,6 +495,7 @@ function ServiceDetails() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -394,6 +511,10 @@ function ServiceDetails() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -405,6 +526,7 @@ function ServiceDetails() {}
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -429,10 +551,16 @@ function ServiceDetails() {}
 
     },
     "
+=======
+
+    },
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const timezone = timeZones[country] || timeZones["default"],
     
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -461,6 +589,13 @@ function ServiceDetails() {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
+           `Response times are typically within 4 hours for metropolitan areas. ` +
+           `Please have site access permissions and contact details ready for our technicians. ` +
+           `For remote locations, additional travel fees may apply.`
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
   
@@ -468,6 +603,7 @@ function ServiceDetails() {}
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -504,13 +640,35 @@ function ServiceDetails() {}
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`
            `Response times are typically within 4 hours for metropolitan areas. ` +;`
            `Please have site access permissions and contact details ready for our technicians. ` +;`
+=======
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center">
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" />
+      "default": "Local timezone";
+    };
+    const timezone = timeZones[country] || timeZones["default"];
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
+           `Response times are typically within 4 hours for metropolitan areas. ` +;
+           `Please have site access permissions and contact details ready for our technicians. ` +;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
            `For remote locations, additional travel fees may apply.`;
   };
 
   const datacenters = getDatacenters(country);
+<<<<<<< HEAD
   return (
 "
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+=======
+
+  return (
+  const datacenters = getDatacenters(country);
+  return (
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Server, Clock, MapPin } from "lucide-react",;
 ;
 interface ServiceDetailsProps {;
@@ -518,13 +676,32 @@ interface ServiceDetailsProps {;
 }
 ;
 // Component to show service details for the selected country;
+<<<<<<< HEAD
 export function ServiceDetails() { return null; }
     },;
     ;"
+=======
+export function ServiceDetails({ country } ServiceDetailsProps) {;
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const getDatacenters = (country:string):string[] => {;
+    const dataCenters:Record<string string[]> = {;
+      "United States":["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;
+      "United Kingdom":["London", "Manchester", "Birmingham"],;
+      "Germany":["Frankfurt", "Berlin", "Munich"],;
+      "Japan":["Tokyo", "Osaka"],;
+      "Australia":["Sydney", "Melbourne", "Perth"],;
+      "Singapore":["Singapore Central"],;
+      "Canada":["Toronto", "Montreal", "Vancouver"],;
+      // Default for other countries;
+      "default":["Major metropolitan areas"];
+    },;
+    ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return dataCenters[country] || dataCenters["default"],;
   },;
   ;
   // Get region-specific image;
+<<<<<<< HEAD
   const getRegionalImage = (country:string):string => {;'
     // In a real app, you'd have specific images for each region;
     const regions:Record<string string> = {;"
@@ -538,12 +715,28 @@ export function ServiceDetails() { return null; }
       "default":"https://source.unsplash.com/featured/900x700/?datacenter";
     },;
     ;"
+=======
+  const getRegionalImage = (country:string):string => {;
+    // In a real app, you'd have specific images for each region;
+    const regions:Record<string string> = {;
+      "United States":"https://source.unsplash.com/featured/900x700/?datacenter,usa",;
+      "United Kingdom":"https://source.unsplash.com/featured/900x700/?datacenter,uk",;
+      "Germany":"https://source.unsplash.com/featured/900x700/?datacenter,germany",;
+      "Japan":"https://source.unsplash.com/featured/900x700/?datacenter,japan",;
+      "Australia":"https://source.unsplash.com/featured/900x700/?datacenter,australia",;
+      "Singapore":"https://source.unsplash.com/featured/900x700/?datacenter,singapore",;
+      // Default placeholder;
+      "default":"https://source.unsplash.com/featured/900x700/?datacenter";
+    },;
+    ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return regions[country] || regions["default"],;
   },;
   ;
   // Get region-specific instructions;
   const getRegionalInstructions = (country:string):string => {;
     // In a real implementation, this would be much more detailed and specific;
+<<<<<<< HEAD
     const timeZones:Record<string string> = {;"
       "United States":"EST/CST/PST depending on location",;"
       "United Kingdom":"GMT/BST",;"
@@ -559,12 +752,30 @@ export function ServiceDetails() { return null; }
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`
            `Response times are typically within 4 hours for metropolitan areas. ` +;`
            `Please have site access permissions and contact details ready for our technicians. ` +;`
+=======
+    const timeZones:Record<string string> = {;
+      "United States":"EST/CST/PST depending on location",;
+      "United Kingdom":"GMT/BST",;
+      "Germany":"CET/CEST",;
+      "Japan":"JST",;
+      "Australia":"AEST/ACDT/AWST depending on location",;
+      "Singapore":"SGT",;
+      "default":"Local timezone";
+    },;
+    ;
+    const timezone = timeZones[country] || timeZones["default"],;
+    ;
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
+           `Response times are typically within 4 hours for metropolitan areas. ` +;
+           `Please have site access permissions and contact details ready for our technicians. ` +;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
            `For remote locations, additional travel fees may apply.`,;
   },;
   ;
   const datacenters = getDatacenters(country),;
   ;
   return (;
+<<<<<<< HEAD
 "
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;"
@@ -585,10 +796,32 @@ export function ServiceDetails() { return null; }
       "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
     }
 ;"
+=======
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center">;
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> ;
+;
+  // Get region - specific image;
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region;
+    const regions: Record < string, string> = {
+      "United States": "https://source.unsplash.com / featured / 900x700/?datacenter, usa";
+      "United Kingdom": "https://source.unsplash.com / featured / 900x700/?datacenter, uk";
+      "Germany": "https://source.unsplash.com / featured / 900x700/?datacenter, germany";
+      "Japan": "https://source.unsplash.com / featured / 900x700/?datacenter, japan";
+      "Australia": "https://source.unsplash.com / featured / 900x700/?datacenter, australia";
+      "Singapore": "https://source.unsplash.com / featured / 900x700/?datacenter, singapore";
+      // Default placeholder;
+      "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
+    }
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return regions[country] || regions["default"];
   }
 ;
   // Get region - specific instructions;
+<<<<<<< HEAD
   const getRegionalInstructions = (country: string): string => {}
     // In a real implementation, this would be much more detailed and specific;
     const time_zones: Record < string, string> = {"
@@ -601,10 +834,24 @@ export function ServiceDetails() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           IT Onsite Service in {country}
         </CardTitle>;"
+=======
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific;
+    const time_zones: Record < string, string> = {
+      "United States": "EST / CST / PST depending on location";
+      "United Kingdom": "GMT / BST";
+      "Germany": "CET / CEST";
+      "Japan": "JST";
+      "Australia": "AEST / ACDT / AWST depending on location";
+      "Singapore": "SGT";
+          IT Onsite Service in {country}
+        </CardTitle>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardDescription className="text-zion-slate-light">;
           Details about our service locations and capabilities in {country}
 
         </CardDescription>;
+<<<<<<< HEAD
       </CardHeader>;"
       <CardContent className="space-y-4">;"
         <div className="overflow-hidden rounded-lg mb-4">;
@@ -742,10 +989,112 @@ export function ServiceDetails() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </CardHeader>;
+      <CardContent className="space-y-4">;
+        <div className="overflow-hidden rounded-lg mb-4">;
+
+          <img
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Server, Clock, MapPin } from "lucide-react",;
+interface ServiceDetailsProps {;
+  country: string;
+}
+;
+// Component to show service details for the selected country;
+export function ServiceDetails({ country }: ServiceDetailsProps) {;
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const getDatacenters = (country: string): string[] => {;
+    const dataCenters: Record<string string[]> = {;
+      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;
+      "United Kingdom": ["London", "Manchester", "Birmingham"],;
+      "Germany": ["Frankfurt", "Berlin", "Munich"],;
+      "Japan": ["Tokyo", "Osaka"],;
+      "Australia": ["Sydney", "Melbourne", "Perth"],;
+      "Singapore": ["Singapore Central"],;
+      "Canada": ["Toronto", "Montreal", "Vancouver"],;
+      // Default for other countries;
+      "default": ["Major metropolitan areas"];
+    },;
+    return dataCenters[country] || dataCenters["default"];
+  },;
+  // Get region-specific image;
+  const getRegionalImage = (country: string): string => {;
+    // In a real app, you'd have specific images for each region;
+    const regions: Record<string string> = {;
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",;
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",;
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",;
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",;
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",;
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",;
+      // Default placeholder;
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter";
+    },;
+    return regions[country] || regions["default"];
+  },;
+  // Get region-specific instructions;
+  const getRegionalInstructions = (country: string): string => {;
+    // In a real implementation, this would be much more detailed and specific;
+    const timeZones: Record<string string> = {;
+      "United States": "EST/CST/PST depending on location",;
+      "United Kingdom": "GMT/BST",;
+      "Germany": "CET/CEST",;
+      "Japan": "JST",;
+      "Australia": "AEST/ACDT/AWST depending on location",;
+      "Singapore": "SGT",;
+      "default": "Local timezone";
+    },;
+    const timezone = timeZones[country] || timeZones["default"],;
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
+           `Response times are typically within 4 hours for metropolitan areas. ` +;
+           `Please have site access permissions and contact details ready for our technicians. ` +;
+           `For remote locations, additional travel fees may apply.`;
+  };
+  const datacenters = getDatacenters(country);
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center">;
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" />;
+          IT Onsite Service in {country}
+        </CardTitle>
+        <CardDescription className="text-zion-slate-light">
+          Details about our service locations and capabilities in {country}
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent className="space-y-4">;
+        <div className="overflow-hidden rounded-lg mb-4">;
+          <img;
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110";
+
+          />;
+        </div>;
+
+
+          />;
+        </div>;
+        <div className="space-y-4">;
+          <div>;
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />;
+              Service Locations;
+            </h4>;
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;"
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 >;
@@ -766,10 +1115,18 @@ export function ServiceDetails() { return null; }
 =======
                 >;                </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                >;
+
+
+                  {dc}
+                </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
 
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -788,6 +1145,23 @@ export function ServiceDetails() { return null; }
           </div>"
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">'"
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>"
+=======
+
+          <div>;
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
+              <Clock className="mr-2 h-4 w-4 text-zion-purple" />;
+              Service Instructions;
+            </h4>;
+            <p className="text-zion-slate-light">;
+              {getRegionalInstructions(country)}
+            </p>;
+          </div>;
+
+            </p>
+          </div>
+          <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
+            <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
               <li>Transportation to your site</li>
               <li>First hour of onsite technical support</li>
@@ -797,14 +1171,20 @@ export function ServiceDetails() { return null; }
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
       </CardContent>"
       <CardFooter className="border-t border-zion-blue-light pt-4">"
+=======
+      </CardContent>
+      <CardFooter className="border-t border-zion-blue-light pt-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -814,6 +1194,11 @@ export function ServiceDetails() { return null; }
           </div>;
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            </p>;
+          </div>;
+          ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">;
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>;
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">;
@@ -822,6 +1207,7 @@ export function ServiceDetails() { return null; }
               <li>Basic hardware diagnosis</li>;
               <li>Network connectivity troubleshooting</li>;
               <li>Equipment installation assistance</li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       "default": "Local timezone";
@@ -840,12 +1226,44 @@ export function ServiceDetails() { return null; }
                 </div>;
               ))}
 
+=======
+;
+                  {dc}
+                </div>))}
+            </div>;
+          </div>;
+          <div>;
+            <h4 className="text - lg font - medium text - white mb - 2 flex items - center">;
+              <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" />;
+              Service Instructions;
+            </h4>;
+            <p className="text - zion - slate - light">;
+              {getRegionalInstructions (country)}
+            </p>;
+          </div>;
+          <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light">;
+            <h4 className="text - lg font - medium text - white mb - 2">What's Included</h4>;
+            <ul className="list - disc list - inside text - zion - slate - light space - y-1">;
+              <li > Transportation to your site</li>;
+              <li > First hour of onsite technical support</li>;
+              <li > Basic hardware diagnosis</li>;
+              <li > Network connectivity troubleshooting</li>;
+              <li > Equipment installation assistance</li>;
+
+                </div>;
+              ))}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </ul>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 "
       <CardFooter className="border - t border - zion - blue - light pt - 4">;"
+=======
+
+      <CardFooter className="border - t border - zion - blue - light pt - 4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text - sm text - zion - slate - light">;
           For custom enterprise needs or multi - site services in {country}, please contact our enterprise team for tailored pricing.;
         </p>;
@@ -853,17 +1271,25 @@ export function ServiceDetails() { return null; }
     </Card>);
 }
 
+<<<<<<< HEAD
 
 }
 ;
 "
       <CardFooter className="border-t border-zion-blue-light pt-4">;"
+=======
+}
+;
+
+      <CardFooter className="border-t border-zion-blue-light pt-4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text-sm text-zion-slate-light">;
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.;
         </p>;
       </CardFooter>;
     </Card>;
   ),;}
+<<<<<<< HEAD
  interface ServiceDetailsProps {}
   country: string;
 }//Component to show service details for the selected country export function ServiceDetails ({};
@@ -882,11 +1308,32 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {}
   dc;
 }</div>) ) '"
+=======
+ interface ServiceDetailsProps {
+  country: string 
+}//Component to show service details for the selected country export function ServiceDetails ({
+  country 
+}: ServiceDetailsProps) {
+  //Get datacenters for regions (simplified - in production this would come from a real database) const getDatacenters = (country: string) : string[] => {
+  return dataCenters[country] || dataCenters["default" ];
+};
+};
+}operate during business hours (8AM-6PM $ {
+  timezone 
+}) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` 
+};
+return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4" > <img /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
+  idx 
+}className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {
+  dc 
+}</div>) ) 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) 
 }
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -902,3 +1349,5 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-sustainability-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +129,9 @@ export default function AISustainabilityPlatformPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-sustainability-platform.tsx
+=======
+import React from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Page() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -146,6 +150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-sustainability-platform.tsx
 <<<<<<< HEAD
   )
@@ -204,3 +209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sustainability-platform.tsx
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

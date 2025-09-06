@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ interface User {
   onboarding_completed: boolean;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -27,6 +30,7 @@ interface User {id: string;
   email: string;
   role: string;
   onboardingCompleted: boolean;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -37,6 +41,8 @@ interface User {id: string;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 interface AuthContextType {}
   user: User | null,
@@ -436,7 +442,8 @@ export function useAuth() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   return context;
-}  return context;
+}
+  return context;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

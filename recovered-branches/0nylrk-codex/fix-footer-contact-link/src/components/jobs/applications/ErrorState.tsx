@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Card, CardContent } from "@/components/ui/card";
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -34,6 +35,13 @@ import { Card, CardContent } from "@/components/ui/card",
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ErrorStateProps {
   error: string;
 }
@@ -44,6 +52,7 @@ interface ErrorStateProps {;
 }
 
 export function ErrorState(): any ({ error }: ErrorStateProps) {;
+
   return (
     <Card className="border-red-200">;
       <CardContent className="p-6 text-center">;
@@ -84,13 +93,14 @@ export /**;
 <<<<<<< HEAD
 function ErrorState() {
   return (
-    <Card className="border - red-200">;
-      <CardContent className="p - 6 text-center">;
-        <h3 className="text - lg font - medium text - red - 600 mb-1">;
+    <Card className="border - red - 200">;
+      <CardContent className="p - 6 text - center">;
+        <h3 className="text - lg font - medium text - red - 600 mb - 1">;
           Something went wrong;
         </h3>;
-        <p className="text - muted-foreground">{error}</p>;
+        <p className="text - muted - foreground">{error}</p>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>);  )
 =======
 function ErrorState() {}
@@ -115,6 +125,41 @@ function ErrorState() {}
 
   )"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </Card>);
+}
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+
+import { Card, CardContent } from "@/components/ui/card",
+
+
+import { Card, CardContent } from "@/components/ui/card",
+
+interface ErrorStateProps {
+  error: string
+}
+export function ErrorState({ error }: ErrorStateProps) {
+  return (
+    <Card className="border-red-200">
+      <CardContent className="p-6 text-center">
+        <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>
+        <p className="text-muted-foreground">{error}</p>
+      </CardContent>
+
+    </Card>
+
+    </Card>;
+  );
+}
+
+
+    </Card>
+  );
+}
+  )
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {;
   error: string;
@@ -128,15 +173,21 @@ export function ErrorState() { return null; }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 <<<<<<< HEAD
+=======
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </Card>;
   );
 }
 
 
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -148,3 +199,5 @@ export function ErrorState() { return null; }
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

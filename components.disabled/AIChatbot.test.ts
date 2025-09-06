@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AIChatbot from './AIChatbot;';
 =======
 <<<<<<< HEAD
@@ -20,6 +21,10 @@ import AIChatbot from './AIChatbot;';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'

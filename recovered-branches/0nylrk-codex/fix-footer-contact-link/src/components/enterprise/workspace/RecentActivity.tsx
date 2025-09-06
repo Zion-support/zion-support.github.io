@@ -20,11 +20,20 @@ import {Badge} from "@/components/ui/badge";
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
@@ -39,11 +48,15 @@ import { Badge } from "@/components/ui/badge",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Badge } from "@/components/ui/badge",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -194,12 +207,50 @@ export function RecentActivity() {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Badge } from "@/components/ui/badge",      id: "act-1",
+=======
+
+
+      id: "act-1",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
-      timestamp: "1h ago",      type: "job"
+      timestamp: "1h ago",
+
+
+      type: "job";
+    };
+      type: "job"
     }
     },
+      type: "job"
+    }
+    },
+
+
+    {
+      id: "act-2"
+      user: "Sarah Wilson"
+      action: "shortlisted"
+      target: "5 candidates for UI/UX Designer"
+      timestamp: "3h ago"
+      type: "candidate"
+
+
+    },
+
+
+    {
+      id: "act-3"
+      user: "David Johnson"
+      action: "scheduled an interview with"
+      target: "Alex Morgan"
+      timestamp: "Yesterday"
+      type: "interview"
+
+
+    },
+
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -220,6 +271,7 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +305,12 @@ import {Badge} from "@/components/ui/badge";
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -293,6 +351,7 @@ import {Badge} from "@/components/ui/badge";
 
   },
 
+<<<<<<< HEAD
   }
   },
 <<<<<<< HEAD
@@ -309,6 +368,8 @@ import {Badge} from "@/components/ui/badge";
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <Card>
@@ -352,6 +413,7 @@ import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 "
 import React from "react",;"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
@@ -375,22 +437,46 @@ import { Badge } from "@/components/ui/badge",;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
+
+}
+
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+
+export function RecentActivity() {;
+  // Mock activity data;
+  const activities = [;
+    {;
+      id: "act-1",;
+      user: "Michael Chen",;
+      action: "posted a new job",;
+      target: "Senior React Developer",;
+      timestamp: "1h ago",;
+      type: "job";
+    };
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
       action: "shortlisted",;
       target: "5 candidates for UI/UX Designer",;
       timestamp: "3h ago",;
-      type: "candidate"
-};    {;
+      type: "candidate";
+    };
+    {;
       id: "act-3",;
       user: "David Johnson",;
       action: "scheduled an interview with",;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       type: "interview";
@@ -402,6 +488,10 @@ import { Badge } from "@/components/ui/badge",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      type: "interview";
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -412,10 +502,14 @@ import { Badge } from "@/components/ui/badge",;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ];
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -431,6 +525,10 @@ import { Badge } from "@/components/ui/badge",;
 =======
       type: "interview";      case "candidate":;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
+      case "candidate":;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
 =======
@@ -452,7 +550,34 @@ export function RecentActivity() { return null; }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (          {activities && activities.map((activity) => (;
+=======
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle>Recent Activity</CardTitle>;
+        <CardDescription>Latest actions from your team</CardDescription>;
+      </CardHeader>;
+      <CardContent className="p-0">;
+        <div className="divide-y divide-border">;
+          {activities && activities.map((activity) => (;
+            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
+              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
+                {activity && activity.user.charAt(0)}
+              </div>;
+              <div className="flex-1">;
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">;
+                  <p className="text-sm">;
+                    <span className="font-medium">{activity && activity.user}</span>{" "}
+                    {activity && activity.action}{" "}
+                    <span className="font-medium">{activity && activity.target}</span>;
+                  </p>;
+                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
+                    {getBadgeForType(activity && activity.type)}
+                    <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;
+          {activities && activities.map((activity) => (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
 =======
@@ -483,6 +608,7 @@ export function RecentActivity() { return null; }
 
 <<<<<<< HEAD
         <div className="p-3 text-center border-t border-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
@@ -592,14 +718,24 @@ function RecentActivity() {
 =======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+            View All Activity;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </button>;
         </div>;
       </CardContent>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-;
     </Card>);
+<<<<<<< HEAD
 }}
 =======
 
@@ -609,6 +745,10 @@ function RecentActivity() {
 
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </Card>);
     </Card>;
   ); export function RecentActivity () {}
@@ -661,16 +801,20 @@ default:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -682,3 +826,5 @@ default:
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

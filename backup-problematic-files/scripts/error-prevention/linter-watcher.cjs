@@ -11,11 +11,14 @@ class LinterWatcher {}
   async start() {}
     console.log('Starting Linter Watcher...');
     this.isRunning = true;
+    
     // Initial lint check;
     await this.runLint();
+    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -24,6 +27,9 @@ class LinterWatcher {}
     
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -38,11 +44,14 @@ class LinterWatcher {}
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
+
       let output = ;';';
       let errorOutput = ;';';
+
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
+
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -52,9 +61,12 @@ class LinterWatcher {}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -63,6 +75,7 @@ class LinterWatcher {}
           console.log('Lint check failed ✗');
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
+          
           // Attempt to auto-fix;
           this.attemptAutoFix()};
       })} catch (error) {}
@@ -84,9 +97,12 @@ class LinterWatcher {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -99,6 +115,7 @@ class LinterWatcher {}
   stop() {}
     console.log('Stopping Linter Watcher...');
     this.isRunning = false;
+    
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Linter Watcher stopped')) {}
@@ -111,16 +128,20 @@ if ( {})
   const watcher = new LinterWatcher) {}
      {}
   const watcher = new LinterWatcher}(;);
+  
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     watcher.stop();
     process.exit(0)}
 });
+  
   process.on('SIGTERM', () => {}
     watcher.stop();
     process.exit(0)}
 });
+  
   watcher.start().catch(console.error)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -129,3 +150,6 @@ if ( {})
 module.exports = LinterWatcher;
 module.exports = LinterWatcher;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/get.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +71,19 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 <<<<<<< HEAD
 =======
 =======
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+;
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!address) return res.status(400).json({ error: 'Missing address' });
   const data = store[String(address).toLowerCase()] || null;
   return res.status(200).json({ data })
@@ -98,7 +112,10 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/get.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { address } = req.query as { address?: string }
   if (!address) return res.status(400).json({ error: 'Missing address' })
   const data = store[String(address).toLowerCase()] |null
@@ -207,6 +224,7 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { address } = req.query as { address?: string };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/get.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,10 +256,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/get.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/get.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,10 +288,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/get.ts
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/get.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -284,10 +311,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/get.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

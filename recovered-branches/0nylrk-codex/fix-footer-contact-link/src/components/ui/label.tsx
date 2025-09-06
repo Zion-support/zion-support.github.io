@@ -38,6 +38,7 @@ import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import {cva, type, VariantProps} from "class-variance-authority"
 
+<<<<<<< HEAD
 import {cn} from "@/lib/utils"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -49,11 +50,26 @@ import {cn} from "@/lib/utils"
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cva, type, VariantProps } from "class-variance-authority";
+import * as React from "react"
+import * as LabelPrimitive from "@radix-ui/react-label"
+import {cva, type, VariantProps} from "class-variance-authority"
+
+import {cn} from "@/lib/utils"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cva, type VariantProps } from "class-variance-authority"
 "
 import { cn } from "@/lib/utils"
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,16 +83,24 @@ import { cn } from "@/lib/utils"
 import { cn } from "@/lib/utils";
 
 <<<<<<< HEAD
+=======
+import { cn } from "@/lib/utils";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const labelVariants = cva(
 =======
 const labelVariants = cva("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const labelVariants = cva(
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
 );
 
@@ -87,12 +111,16 @@ const Label = React.forwardRef<
     VariantProps<typeof labelVariants>
 >(({ className, ...props }, ref) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
   <LabelPrimitive.Root
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+  <LabelPrimitive.Root
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import * as React from './react';
 import * as LabelPrimitive from "@radix - ui / react - label";
@@ -102,6 +130,7 @@ import { cn  } from '@/lib / utils';
 const label_variants = cva (
   "text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70",
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
     className={cn(labelVariants(), className)}
@@ -129,6 +158,18 @@ import { cn } from "@/lib/utils";    ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+
+export { Label };
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -160,10 +201,15 @@ const Label = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
     VariantProps<typeof labelVariants>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
   <LabelPrimitive&& LabelPrimitive.Root    ref={ref}
 =======
     ref={ref}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  <LabelPrimitive&& LabelPrimitive.Root
+    ref={ref}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     className={cn (label_variants (), class_name)}
     {...props}"
 import * as React from "react";"
@@ -199,9 +245,13 @@ Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 export { Label }
 ;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -223,11 +273,15 @@ Label.display_name = LabelPrimitive.Root.display_name;
 export { Label }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Label.displayName = LabelPrimitive.Root.displayName;
 ;
 export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
@@ -244,6 +298,7 @@ export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & Va
 Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -262,3 +317,5 @@ export { Label };
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

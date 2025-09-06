@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,11 +73,20 @@ interface TeamProps {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -97,12 +107,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Team({ }: TeamProps) {
   return (
     <div>
       <h1>Team</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -210,3 +223,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+
+
+}
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

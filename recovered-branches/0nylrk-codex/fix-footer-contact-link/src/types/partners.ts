@@ -9,6 +9,7 @@ export interface PartnerProfile {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface PartnerProfile {;
 <<<<<<< HEAD
@@ -30,8 +31,12 @@ export interface PartnerProfile {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface PartnerProfile {;
-export interface PartnerProfile {export interface PartnerProfile {
+
+export interface PartnerProfile {
 
 export interface PartnerProfile {;
 export interface PartnerProfile {
@@ -59,14 +64,15 @@ export interface PartnerProfile {};
     instagram?: string;
     youtube?: string;
     linkedin?: string;
-    [key: string]: string | undefined
-};
+    [key: string]: string | undefined;
+  };
   niche: string;
   audience_size: string;
   payout_method: string;
   bio: string;
   status: "pending" | "approved" | "rejected";
   created_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   updated_at: string;
@@ -86,11 +92,16 @@ export interface PartnerSettings {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  updated_at: string;
+  commission_rate?: number;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 export interface PartnerSettings {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -104,6 +115,8 @@ export interface PartnerSettings {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   commission_rate: number;
   fraud_threshold: number;
@@ -115,6 +128,7 @@ export interface PartnerSettings {;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -165,6 +179,26 @@ export interface PartnerReferralLink {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export interface PartnerReferralLink {;
+
+  updated_at: string
+
+  commission_rate?: number
+}
+export interface PartnerSettings {
+
+export interface PartnerSettings {;
+export interface PartnerSettings {
+  id: string;
+  commission_rate: number;
+}
+export interface PartnerReferralLink {
+
+export interface PartnerReferralLink {;
+export interface PartnerReferralLink {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   url: string;
@@ -173,10 +207,23 @@ export interface PartnerReferralLink {
   clicks: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   conversions: number;
   created_at: string;
 <<<<<<< HEAD
 
+=======
+  conversions: number;
+  created_at: string;
+}
+
+
+export interface PartnerPayout {;
+
+  conversions: number
+
+  created_at: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 

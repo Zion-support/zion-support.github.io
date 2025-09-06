@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -157,13 +160,19 @@ function resolveMergeConflicts(filePath) {}
         
 <<<<<<< HEAD
         // Check if file has merge conflicts
-        if (!content.includes('            return false; // No conflicts to resolve
+<<<<<<< HEAD
+=======
+        if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+            return false; // No conflicts to resolve
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
-        content = content.replace(/        
+<<<<<<< HEAD
+        
         // Remove any remaining conflict markers
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         content = content.replace(/        content = content.replace(/=======\n/g, '');
@@ -174,6 +183,17 @@ function resolveMergeConflicts(filePath) {}
         content = content.replace(/        content = content.replace(/\n/g, '');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         content = content.replace(/        
+=======
+=======
+        content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/=======\n?/g, '');
+        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Clean up any duplicate content
 =======
         // Check if file has merge conflicts'
@@ -201,12 +221,21 @@ function getConflictFiles() {}
     try {'
         const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });'
         return result.trim().split('\n').filter(file => file.length > 0);
+<<<<<<< HEAD
     } catch (error) {}
         // If git command fails, use grep to find files with conflict markers'
         const { execSync } = require('child_process');
 <<<<<<< HEAD
+=======
+    } catch (error) {
+        // If git command fails, use grep to find files with conflict markers
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {
-            const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0);
+<<<<<<< HEAD
+=======
+            const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+            return result.trim().split('\n').filter(file => file.length > 0);
         } catch (e) {
 =======
         try {'

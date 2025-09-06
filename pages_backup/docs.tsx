@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ import MainLayout from '../components/layout/MainLayout';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -270,6 +273,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const Page = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 <<<<<<< HEAD
     <MainLayout 
@@ -299,6 +303,8 @@ export default Page;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
@@ -311,6 +317,7 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -343,6 +350,14 @@ export default function DocsPage() {
 <<<<<<< HEAD
 ;
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function DocsPage() {
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react',
 import Head from 'next / head',
@@ -411,6 +426,7 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,12 +464,17 @@ export default function DocsPage() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -511,6 +532,12 @@ export default Page;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>
       <Head>
@@ -748,9 +775,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/docs.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -35,6 +35,7 @@ function MilestoneActivities() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -71,6 +72,24 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {};
+=======
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+
+}
+;
+
+
+  projectId: string
+
+interface MilestoneActivitiesProps {;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <div>Activity will be shown here</div>;
 }
 ;
@@ -82,6 +101,7 @@ interface MilestoneActivitiesProps {;
   projectId:string;
 }
 ;
+<<<<<<< HEAD
 export function MilestoneActivities() { return null; }
 } '
 import React from 'react';
@@ -102,10 +122,35 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {};
+=======
+export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
+  return <div>Activity will be shown here</div>,;
+} 
+import React from 'react';
+interface MilestoneActivitiesProps {
+
+  projectId: string;
+
+import React from "react";
+interface MilestoneActivitiesProps {
+  projectId: string;
+
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+}
+interface MilestoneActivitiesProps {
+  projectId: string
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <div>Activity will be shown here</div>;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,3 +171,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {};
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

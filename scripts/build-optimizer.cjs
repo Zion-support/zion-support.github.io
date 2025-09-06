@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -36,6 +37,8 @@ const fs = require('fs')
 =======
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     console.error(' Build optimization "failed")
 
@@ -128,4 +131,18 @@ module.exports = BuildOptimizer;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+const { execSync } = require('child_process')
+const fs = require('fs')
+// console.log(' Build Optimizer Starting...')
+    console.log('🧹 Cleaning previous builds...')
+    if (fs.existsSync('.next')
+        execSync('rm -rf .next', { "stdio"})
+        execSync('rm -rf out', { "stdio"})
+    execSync('npm run build', { "stdio"})
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

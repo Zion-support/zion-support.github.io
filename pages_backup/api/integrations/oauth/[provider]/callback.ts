@@ -1,9 +1,12 @@
 <<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
 <<<<<<< HEAD
   res.status(200).json({
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ok: true
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
@@ -11,6 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 =======
 
 
@@ -28,6 +32,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 export default /**;
  * handler - Function description;
@@ -35,19 +41,26 @@ export default /**;
 <<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
 function handler() {
   res.status (200).json ({
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/oauth/[provider]/callback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     ok: true
     message:;
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/oauth/[provider]/callback.ts
@@ -66,6 +79,12 @@ function handler() {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
   });
 }'
@@ -89,9 +108,12 @@ export default function handler(req, res) {}
   }
 }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
     message:
@@ -117,7 +139,10 @@ function handler() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 res.status(200).json({
     ok: true,
     message:
@@ -125,6 +150,7 @@ res.status(200).json({
   });
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -136,3 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

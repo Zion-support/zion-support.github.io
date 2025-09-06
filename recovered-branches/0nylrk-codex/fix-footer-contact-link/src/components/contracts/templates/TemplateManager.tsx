@@ -25,6 +25,7 @@ interface TemplateManagerProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TemplateManager({
   isOpen,
   onClose,
@@ -34,6 +35,12 @@ export function TemplateManager({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
@@ -95,6 +102,7 @@ interface TemplateManagerProps {}
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -102,6 +110,10 @@ interface TemplateManagerProps {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
@@ -110,12 +122,16 @@ import { Button } from "@/components/ui/button",
 import { TemplateList } from "./TemplateList",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TemplateSaveForm } from "./TemplateSaveForm",
 <<<<<<< HEAD
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 import { useToast } from "@/hooks/use-toast";
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { TemplateSaveForm } from "./TemplateSaveForm",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -125,15 +141,19 @@ interface TemplateManagerProps {
   currentValues?: ContractFormValues
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { TemplateList } from "./TemplateList",
+<<<<<<< HEAD
 =======
 
 "
@@ -173,6 +193,16 @@ interface TemplateManagerProps {};
   onClose: () => void;
   onSelectTemplate: (template: ContractFormValues) => void;
   currentValues?: ContractFormValues;
+=======
+import { TemplateSaveForm } from "./TemplateSaveForm",
+interface TemplateManagerProps {
+
+  isOpen: boolean
+  onClose: () => void
+  onSelectTemplate: (template: ContractFormValues) => void
+
+  currentValues?: ContractFormValues
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 interface TemplateManagerProps {;
   isOpen: boolean,;
@@ -180,6 +210,7 @@ interface TemplateManagerProps {;
   onSelectTemplate: (template: ContractFormValues) => void,;
   currentValues?: ContractFormValues;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function TemplateManager() { return null; }
@@ -188,10 +219,36 @@ export function TemplateManager() { return null; }
 
 
 <<<<<<< HEAD
+=======
+
+export function TemplateManager({;
+  isOpen;
+  onClose;
+  onSelectTemplate;
+export function TemplateManager({
+  isOpen,
+  onClose,
+  onSelectTemplate,
+  currentValues
+}: TemplateManagerProps) {
+  const [mode, setMode] = useState<"list" | "save">("list"),
+  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
+  const { templates, isLoading } = useContractTemplates();
+  const { toast } = useToast();
+
+  const handleSelectTemplate = (template: ContractTemplate) => {
+    if (template && template.template_data) {
+      onSelectTemplate(template.template_data);
+      onClose()
+  const { templates, isLoading } = useContractTemplates(),
+  const { toast } = useToast(),
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSelectTemplate = (template: ContractTemplate) => {
     if (template && template.template_data) {
       onSelectTemplate(template.template_data),
       onClose(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -215,21 +272,48 @@ export function TemplateManager() { return null; }
       onClose(),;
       toast({;"
         title: "Template loaded",;"`
+=======
+
+
+      toast({
+        title: "Template loaded"
+        description: `Template "${template.title}" has been loaded.`})
+    }
+
+      onClose(),;
+      toast({;
+        title: "Template loaded",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: `Template "${template && template.title}" has been loaded.`});
     }
   };
 
+<<<<<<< HEAD
   const handleSaveComplete = () => {;"
+=======
+  const handleSaveComplete = () => {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setMode("list");
     setSelectedTemplate(null);
   };
 
+<<<<<<< HEAD
     <Dialog open={isOpen} onOpenChange={onClose}>;"
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
 
 <<<<<<< HEAD
+=======
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle>;
+            {mode === "list" ? "Contract Templates" : "Save Template"}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
 
@@ -241,6 +325,7 @@ export function TemplateManager() { return null; }
   },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   }
@@ -318,6 +403,29 @@ export function TemplateManager({;
             {mode === "list" ? "Contract Templates" : "Save Template"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>
+            {mode === "list" ? "Contract Templates" : "Save Template"}
+
+          </DialogTitle>
+        </DialogHeader>
+        {mode === "list" ? (
+          <div className="space-y-4">
+            <div className="flex justify-end">
+
+  const handleSelectTemplate = (template: ContractTemplate) => {;
+    if (template && template.template_data) {;
+      onSelectTemplate(template.template_data);
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle>;
+            {mode === "list" ? "Contract Templates" : "Save Template"}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </DialogTitle>;
         </DialogHeader>;
         {mode === "list" ? (;
@@ -325,6 +433,7 @@ export function TemplateManager({;
             <div className="flex justify-end">;
               <Button;
                 variant="outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onClick={() => setMode("save")}
@@ -334,6 +443,8 @@ export function TemplateManager({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               <Button 
                 variant="outline" 
@@ -343,6 +454,7 @@ export function TemplateManager({;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -402,18 +514,44 @@ export function TemplateManager({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                onClick={() => setMode("save")}
+                onClick={() => setMode("save")}
+                disabled={!currentValues}
+              >
+                Save Current as Template
+              </Button>
+            </div>
+
+          </DialogTitle>;
+        </DialogHeader>;
+
+        {mode === "list" ? (;
+          <div className="space-y-4">;
+            <div className="flex justify-end">;
+              <Button
+                variant="outline" 
+                onClick={() => setMode("save")}
+                disabled={!currentValues}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >;
                 Save Current as Template;
               </Button>;
             </div>;
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+            <TemplateList 
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               setMode("list");
@@ -517,6 +655,57 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
                 setMode("save");
               }}            <TemplateList;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              onEdit={(template) => {;
+                setSelectedTemplate(template);
+                setMode("save");
+              }}
+
+            />;
+          </div>;
+        ) : (;
+          <TemplateSaveForm
+            onCancel={() => {;
+              setMode("list");
+              setSelectedTemplate(null);
+
+
+              setMode("list"),
+              setSelectedTemplate(null)
+
+            }}
+            onComplete={handleSaveComplete}
+            }}
+            onComplete={handleSaveComplete}
+            ;
+            <TemplateList ;
+              templates={templates}
+              isLoading={isLoading}
+              onSelect={handleSelectTemplate}
+              onEdit={(template) => {;
+                setSelectedTemplate(template),;
+                setMode("save"),;
+              }}
+            />;
+          </div>;
+        ) :(;
+          <TemplateSaveForm ;
+            onCancel={() => {;
+              setMode("list"),;
+              setSelectedTemplate(null),;
+            }}            onComplete={handleSaveComplete}
+            editTemplate={selectedTemplate}
+            currentValues={currentValues}
+          />;
+        )}
+
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+            <TemplateList;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               templates={templates}
               is_loading={is_loading}
               on_select={handleSelectTemplate}
@@ -537,6 +726,7 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
           />)}
       </DialogContent>;
     </Dialog>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -568,6 +758,11 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
 
   ),; interface TemplateManagerProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+  ),; interface TemplateManagerProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isOpen: boolean;
 onClose: () => void;
 onSelectTemplate: (template: ContractFormValues) => void;
@@ -584,6 +779,7 @@ currentValues;
 onClose ();
 toast ({}
 }
+;
 
 <<<<<<< HEAD
 };
@@ -637,6 +833,7 @@ return (<Dialog open= {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -650,3 +847,5 @@ return (<Dialog open= {
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

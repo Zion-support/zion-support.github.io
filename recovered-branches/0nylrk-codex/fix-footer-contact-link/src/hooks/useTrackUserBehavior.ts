@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,14 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -57,6 +62,17 @@ export function useTrackUserBehavior() { return null; }
     // Track button clicks
     const trackButtonClicks = (e: Event) => {
 <<<<<<< HEAD
+=======
+
+  const { trackEvent } = useAnalytics();
+
+  const componentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const component = componentRef && componentRef.current;
+    if (!component) return;
+    // Track button clicks
+    const trackButtonClicks = (e: Event) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       const target = e && e.target as HTMLElement;
       if (target && target.tagName === 'BUTTON' || target && target.closest('button')) {
@@ -65,6 +81,7 @@ export function useTrackUserBehavior() { return null; }
         const buttonText = button?.textContent || '',
         
 
+<<<<<<< HEAD
 =======
     const component = componentRef.current;
     if (!component) return;
@@ -82,6 +99,8 @@ export function useTrackUserBehavior() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         trackEvent('button_click', {
 =======
     // Track button clicks;
@@ -99,15 +118,20 @@ export function useTrackUserBehavior() { return null; }
     // Track form submissions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const trackFormSubmits = (e: Event) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    const trackFormSubmits = (e: Event) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       const target = e && e.target as HTMLFormElement;
       if (target && target.tagName === 'FORM') {
         const formId = target && target.id || '',
         
 
+<<<<<<< HEAD
 =======
       const target = e && e.target as HTMLFormElement;
       if (target && target.tagName === 'FORM') {
@@ -170,6 +194,36 @@ function useTrackUserBehavior() {}
     component && component.addEventListener('submit', trackFormSubmits, true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        trackEvent('form_submit', {
+          component: componentName
+          elementId: formId
+        })
+      }
+
+    };
+
+    component && component.addEventListener('click', trackButtonClicks);
+    component && component.addEventListener('submit', trackFormSubmits, true);
+
+
+    return () => {
+      component && component.removeEventListener('click', trackButtonClicks);
+      component && component.removeEventListener('submit', trackFormSubmits, true)
+    }
+  }, [trackEvent, componentName]);
+
+  return componentRef
+
+import {useRef, useEffect} from 'react';
+import {use_analytics} from '@/context / AnalyticsContext';
+export /**
+ * useTrackUserBehavior - Function description
+ */
+function useTrackUserBehavior() {
+  const { track_event } = use_analytics ();
+  const component_ref = useRef < HTMLDivElement>(null);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return () => {
       component && component.removeEventListener('click', trackButtonClicks);
       component && component.removeEventListener('submit', trackFormSubmits, true)
@@ -185,6 +239,9 @@ function useTrackUserBehavior() {
   const { track_event } = use_analytics ();
   const component_ref = useRef < HTMLDivElement>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     }
@@ -198,6 +255,7 @@ function useTrackUserBehavior() {
 
   return componentRef
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -210,6 +268,10 @@ import { useAnalytics } from '@/context/AnalyticsContext',;
 =======
     const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useRef, useEffect } from 'react',;
+import { useAnalytics } from '@/context/AnalyticsContext',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useTrackUserBehavior(componentName: string) {;
 =======
 '
@@ -264,7 +326,11 @@ export function useTrackUserBehavior() { return null; }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -273,6 +339,9 @@ export function useTrackUserBehavior() { return null; }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect (() => {
     const component = component_ref.current;
     // Check condition
@@ -322,9 +391,13 @@ if ( {) {
 ;
   return component_ref;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 =======
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
@@ -389,6 +462,7 @@ return componentRef
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -405,3 +479,5 @@ return componentRef
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

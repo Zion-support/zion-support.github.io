@@ -34,6 +34,7 @@ class ErrorBoundary extends React.Component {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +45,9 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -55,6 +59,7 @@ import {PageViewsChart} from "@/components/analytics/PageViewsChart";
 import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [timeRange, setTimeRange] = useState('30d');
@@ -71,6 +76,10 @@ export default function Analytics() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const [timeRange, setTimeRange] = useState('30d');
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -80,6 +89,7 @@ import { PageViewsTable } from "@/components/analytics/PageViewsTable",
 import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
 import { PageViewsChart } from "@/components/analytics/PageViewsChart",
 import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
+<<<<<<< HEAD
 =======
 
 
@@ -211,11 +221,30 @@ export default function Analytics() { return null; }
 import React, { useState } from "react",;
 =======
   const [timeRange, setTimeRange] = useState('30d');    queryKey: ['page-views-trend', timeRange],
+=======
+import { ExportPanel } from "@/components/analytics/ExportPanel";
+export default function Analytics() {
+  const [timeRange, setTimeRange] = useState('30d');
+import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
+import { ExportPanel } from "@/components/analytics/ExportPanel",
+export default function Analytics() {
+  const [timeRange, setTimeRange] = useState('30d'),
+  
+  const { data: pageViewTrends } = useQuery({
+    queryKey: ['page-views-trend', timeRange],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     queryFn: async () => {
       // Get daily page views for trend chart
+
+      const days = parseInt(timeRange.replace('d', '')),
+      const startDate = new Date(),
+      startDate.setDate(startDate.getDate() - days),
+      
+
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
+<<<<<<< HEAD
         .eq('event_typepage_view')import React, { useState } from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -227,6 +256,38 @@ import React, { useState } from "react",;
         .select('created_at, path')
         .eq('event_typepage_view')import React, { useState } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        .eq('event_typepage_view')
+
+        .gte('created_at', startDate.toISOString()),
+        
+      if (error) throw error,
+      
+      // Group by date
+      const viewsByDate = {},
+      data?.forEach(view => {
+        const date = new Date(view.created_at).toISOString().split('T')[0],
+        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },
+        viewsByDate[date].views++
+      }),
+      
+
+      // Fill in missing dates
+      const result = [],
+      for (let i = 0, i < days, i++) {
+
+        const date = new Date(),
+        date.setDate(date.getDate() - i),
+        const dateStr = date.toISOString().split('T')[0],
+        
+
+        if (viewsByDate[dateStr]) {
+          result.push(viewsByDate[dateStr])
+        } else {
+          result.push({ date: dateStr, views: 0 })
+
+import React, { useState } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
@@ -238,6 +299,7 @@ import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalys
 import { ExportPanel } from "@/components/analytics/ExportPanel",;
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d'),;
+
   const { data: pageViewTrends } = useQuery({;
 =======
 
@@ -269,6 +331,7 @@ export default function Analytics() { return null; }
         .select('created_at, path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -281,6 +344,13 @@ export default function Analytics() { return null; }
 
 
 <<<<<<< HEAD
+=======
+        .eq('event_typepage_view');
+        .gte('created_at', startDate && startDate.toISOString());
+
+      if (error) throw error;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Group by date;
       const viewsByDate = {};
       data?.forEach(view => {;
@@ -290,6 +360,7 @@ export default function Analytics() { return null; }
       });
 
       // Fill in missing dates;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -306,6 +377,27 @@ export default function Analytics() { return null; }
 =======
         .eq('event_typepage_view');        const date = new Date(),;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+
+        .gte('created_at', startDate.toISOString()),;
+      if (error) throw error,;
+      // Group by date;
+      const viewsByDate = {},;
+      data?.forEach(view => {;
+        const date = new Date(view.created_at).toISOString().split('T')[0],;
+        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },;
+        viewsByDate[date].views++;
+      }),;
+      // Fill in missing dates;
+      const result = [],;
+      for (let i = 0, i < days, i++) {;
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+
+        const date = new Date(),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         date.setDate(date.getDate() - i),;
 =======
         date.setDate(date.getDate() - i),;'
@@ -314,6 +406,7 @@ export default function Analytics() { return null; }
         if (viewsByDate[dateStr]) {;
           result.push(viewsByDate[dateStr]);
         } else {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           result.push({ date: dateStr, views: 0 });
@@ -402,12 +495,37 @@ export default function Analytics() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
           result.push({ date: dateStr, views: 0 });        }
+=======
+          result.push({ date: dateStr, views: 0 });
+
+
+        }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
-    }    queryKey: ['conversion-data', timeRange];
+    }
+
+        date && date.setDate(date && date.getDate() - i);
+        const dateStr = date && date.toISOString().split('T')[0];
+
+        if (viewsByDate[dateStr]) {;
+          result && result.push(viewsByDate[dateStr]);
+        } else {;
+          result && result.push({ date: dateStr, views: 0 });
+        }
+      }
+
+      return result && result.sort((a, b) => a && a.date.localeCompare(b && b.date));
+    }
+  });
+
+  const { data: conversionData } = useQuery({;
+
+    queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           result.push({ date: dateStr, views: 0 });        }
@@ -418,11 +536,37 @@ export default function Analytics() { return null; }
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }),;
+  const { data: conversionData } = useQuery({;
+    queryKey: ['conversion-data', timeRange],;
+    queryFn: async () => {;
+      const days = parseInt(timeRange.replace('d', '')),;
+      const startDate = new Date(),;
+      startDate.setDate(startDate.getDate() - days),;
+      const { data, error } = await supabase;
+        .from('analytics_events');
+        .select('created_at, metadata');
+        .eq('event_typeconversion');
+        .gte('created_at', startDate.toISOString()),;
+      if (error) throw error,;
+      // Group by conversion type and date;
+      const conversionsByType = {},;
+      data?.forEach(item => {;
+        const date = new Date(item.created_at).toISOString().split('T')[0],;
+        const conversionType = item.metadata?.conversionType || 'unknown',;
+        if (!conversionsByType[conversionType]) {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +586,12 @@ export default function Analytics() { return null; }
         
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -476,27 +626,11 @@ export default function Analytics() { return null; }
 
         
 
+
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
-      const dates = [];
-      for (let i = 0, i < days, i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])
-      }
-      dates.sort();
-      // Format data for chart
-      return dates.map(date => {
-        const result = { date }
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0
-        });
-        return result
-      })
-    }
-  });
-;      const { data, error } = await supabase;
+      const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, metadata');
         .eq('event_typeconversion');
@@ -517,6 +651,7 @@ export default function Analytics() { return null; }
         if (!conversionsByType[conversionType][date]) {;
           conversionsByType[conversionType][date] = 0;
         }
+<<<<<<< HEAD
 =======
 
           conversionsByType[conversionType] = {}
@@ -558,6 +693,10 @@ export default function Analytics() { return null; }
 ;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conversionsByType[conversionType][date]++;
       });
 
@@ -570,6 +709,7 @@ export default function Analytics() { return null; }
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
   });
 
   return (      dates && dates.sort();
@@ -577,6 +717,10 @@ export default function Analytics() { return null; }
 
       dates && dates.sort();
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      dates && dates.sort();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       // Format data for chart;
       return dates && dates.map(date => {;
@@ -615,6 +759,7 @@ export default function Analytics() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -624,6 +769,11 @@ export default function Analytics() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
     <AnalyticsContainer>;
@@ -652,6 +802,25 @@ export default function Analytics() { return null; }
 
   });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+        />;
+        <PageViewsTable />;
+      </div>;
+
+      <div className="mb-6">;
+        <UserBehaviorStats />;
+      </div>;
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
+        <ConversionAnalysisChart
+          data={conversionData || []} 
+
+
+
+  return (
+
+    }
+  });
 
   return (
         <PageViewsChart;
@@ -750,6 +919,7 @@ export default function Analytics() { return null; }
           data={conversionData || []} ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           timeRange={timeRange}
 =======
@@ -765,6 +935,10 @@ import React, { useState } from './react';
 =======
           timeRange={timeRange}import React, { useState } from './react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          timeRange={timeRange}
+import React, { useState } from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { AnalyticsContainer } from '@/components / analytics / AnalyticsContainer';
@@ -906,16 +1080,21 @@ if ( {) {}
     <AnalyticsContainer>;
 <<<<<<< HEAD
       <AnalyticsSummary />;
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb-6">;
 =======
       <AnalyticsSummary />;"
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <PageViewsChart;
           data={pageViewTrends || []}
           time_range={time_range}
           onTimeRangeChange={setTimeRange}
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -924,11 +1103,19 @@ if ( {) {}
       <div className="mb - 6">;
         <UserBehaviorStats />;
       </div>;"
+=======
+        <PageViewsTable />;
+      </div>;
+      <div className="mb - 6">;
+        <UserBehaviorStats />;
+      </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
         <ConversionAnalysisChart;
           data={conversion_data || []}
           time_range={time_range}
 
+<<<<<<< HEAD
 
 
 
@@ -941,10 +1128,24 @@ if ( {) {}
       </div>;
 
 
+=======
+          onTimeRangeChange={setTimeRange}
+        />;
+        <ExportPanel />;
+      </div>;
+
+
+
+
+}
+    </AnalyticsContainer>);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </AnalyticsContainer>);
         <ExportPanel />;
       </div>;
     </AnalyticsContainer>;
+<<<<<<< HEAD
   ),; export default function Analytics() { return null; }
 }= useQuery ({'
   queryKey: ['page-views-trend', timeRange], queryFn: async () => {}
@@ -961,12 +1162,34 @@ const {}
 if (error) throw error;
 //Group by conversion type and date if (!conversionsByType[conversionType]) {}
   conversionsByType[conversionType] = {}
+=======
+  ),; export default function Analytics () {
+  const [timeRange, setTimeRange] = useState ('30d');
+data: pageViewTrends 
+}= useQuery ({
+  queryKey: ['page-views-trend', timeRange], queryFn: async () => {
+  //Get daily page views for trend chart const {
+  data, error 
+}= await supabase .from ('analytics events') .select ('created at, path') .eq ('event typepage view') .gte ('created at', startDate.toISOString () );
+if (error) throw error;
+//Group by date 
+}
+});
+const {
+  data, error 
+}= await supabase .from ('analytics events') .select ('created at, metadata') .eq ('event typeconversion') .gte ('created at', startDate.toISOString () );
+if (error) throw error;
+//Group by conversion type and date if (!conversionsByType[conversionType]) {
+  conversionsByType[conversionType] = {
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }conversionsByType[conversionType][date]++ 
 });
 //Get all dates in range return result;
 }) 
 }
+<<<<<<< HEAD
 });"
 return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" > <PageViewsChart data= {}
   pageViewTrends || [] 
@@ -980,19 +1203,38 @@ return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols
   timeRange;
 }onTimeRangeChange= {}
   setTimeRange;
+=======
+});
+return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" > <PageViewsChart data= {
+  pageViewTrends || [] 
+}timeRange= {
+  timeRange 
+}onTimeRangeChange= {
+  setTimeRange 
+}/> <PageViewsTable /> </div> <div className="mb-6" > <UserBehaviorStats /> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" > <ConversionAnalysisChart data= {
+  conversionData || [] 
+}timeRange= {
+  timeRange 
+}onTimeRangeChange= {
+  setTimeRange 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> <ExportPanel /> </div> </AnalyticsContainer>) 
 }
 }
 ;
 }
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </AnalyticsContainer>;
   );
         />;
         <ExportPanel />;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1006,3 +1248,5 @@ return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

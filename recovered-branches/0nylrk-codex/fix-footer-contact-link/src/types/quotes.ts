@@ -26,6 +26,7 @@ export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -39,6 +40,9 @@ export type BudgetType = "fixed" | "hourly" | "range";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ListingItem {
   id: string;
   title: string;
@@ -70,6 +74,7 @@ export interface ContactInfo {;
 export interface ListingItem {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -83,6 +88,9 @@ export interface ListingItem {};
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface ListingItem {;
 
@@ -90,11 +98,15 @@ export interface ListingItem {;
   title: string;
   category: string;
   image?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 export interface ContactInfo {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -102,6 +114,8 @@ export interface ContactInfo {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   email: string;
   phone: string;
@@ -111,6 +125,7 @@ export interface ContactInfo {;
   phone: string,
   company: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,6 +183,9 @@ export interface Budget {
 =======
 export interface Budget {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface Budget {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -179,6 +197,7 @@ export interface QuoteFormData {
 export interface QuoteFormData {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+
 
 export interface QuoteFormData {;
 
@@ -213,13 +232,18 @@ export interface QuoteFormData {;
   startDate?: Date;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   endDate?: Date;
 
+=======
+  endDate?: Date;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   timeline: TimelineType;
   budget: Budget;
   contactInfo: ContactInfo;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,12 +263,15 @@ export interface QuoteRequest {
 =======
 ;
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type QuoteStatus =
   | "new"
   | "in_review"
   | "accepted"
   | "responded"
   | "closed"
+<<<<<<< HEAD
 =======
 export type QuoteStatus ="
   | "new""
@@ -291,6 +318,20 @@ export interface QuoteRequest {
 
 export interface QuoteRequest {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  | "archived";
+
+export interface QuoteRequest {
+
+
+export interface QuoteRequest {;
+
+  timeline: TimelineType;
+export interface QuoteRequest {
+
+export interface QuoteRequest {;
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -308,6 +349,7 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -419,3 +461,8 @@ export interface QuoteRequest {;
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  created_at: string;
+  updated_at: string;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

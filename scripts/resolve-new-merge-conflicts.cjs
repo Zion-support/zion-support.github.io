@@ -4,6 +4,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🔧 Resolving New Merge Conflicts');
+<<<<<<< HEAD
 console.log('=================================');
 
 :scripts/resolve-new-merge-conflicts.cjs
@@ -11,14 +12,21 @@ console.log('=================================');
 function resolveMergeConflicts(content) {
   return content
     .replace(/[a-f0-9]+/g, '');
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
 // Function to fix all remaining critical syntax errors
 function fixCriticalSyntax(content) {
 :backup-problematic-files/scripts/final-critical-fix.cjs
 :scripts/resolve-new-merge-conflicts.cjs
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return content
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
@@ -91,6 +99,7 @@ for (const file of conflictFiles) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
     const originalContent = content;
     
     content = fixCriticalSyntax(content);
@@ -146,3 +155,6 @@ console.log('\n🎉 Final critical fix completed!');
 
     // Check for merge conflict markers
 :scripts/resolve-new-merge-conflicts.cjs
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

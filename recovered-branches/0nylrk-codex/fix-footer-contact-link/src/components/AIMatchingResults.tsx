@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -16,6 +17,9 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -24,6 +28,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -40,12 +45,19 @@ import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";"
 import {Skeleton} from "@/components/ui/skeleton";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {cn} from "@/lib/utils";
+=======
+import {cn} from "@/lib/utils";
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
 
+<<<<<<< HEAD
   matches;
   onSelectMatch;
 
@@ -60,6 +72,19 @@ import {cn} from "@/lib/utils";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export function AIMatchingResults(): any ({;
+
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -67,6 +92,7 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Skeleton } from "@/components/ui/skeleton";
@@ -85,6 +111,16 @@ import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {}
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void;
+=======
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isLoading?: boolean;
   projectDescription?: string;
 interface AIMatchingResultsProps {;
@@ -98,14 +134,22 @@ interface AIMatchingResultsProps {;
   matches;
   onSelectMatch;
 
+<<<<<<< HEAD
   isLoading = false;"
   projectDescription = "";"
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;"
+=======
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [activeTab, setActiveTab] = useState("all");
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -114,11 +158,15 @@ interface AIMatchingResultsProps {
 
 interface AIMatchingResultsProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface AIMatchingResultsProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
 
+<<<<<<< HEAD
 
 export function AIMatchingResults() { return null; }
 }: AIMatchingResultsProps) {"
@@ -136,11 +184,48 @@ export function AIMatchingResults() { return null; }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  serviceType?: string
+}
+
+
+
+
+  serviceType?: string
+}
+
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+export function AIMatchingResults({
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all"),
+  
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
+<<<<<<< HEAD
 =======
 
   // Group matches by category;
@@ -163,6 +248,11 @@ export function AIMatchingResults() { return null; }
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
@@ -170,8 +260,12 @@ export function AIMatchingResults() { return null; }
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   
   // Get the icon for a category
@@ -183,10 +277,14 @@ export function AIMatchingResults() { return null; }
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -194,6 +292,7 @@ export function AIMatchingResults() { return null; }
         <div className="space-y-3">
           <Skeleton className="h-[120px] w-full" />
           <Skeleton className="h-[120px] w-full" />
+<<<<<<< HEAD
 =======
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {}
@@ -209,11 +308,14 @@ export function AIMatchingResults() { return null; }
           <Skeleton className="h-[120px] w-full" />"
           <Skeleton className="h-[120px] w-full" />"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
     )
   }
+<<<<<<< HEAD
   if (matches.length === 0) {}
     return ("
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">"
@@ -237,6 +339,23 @@ export function AIMatchingResults() { return null; }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (matches.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
+        <CardContent className="pt-6">
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />
+          <p className="text-white font-medium mb-2">No matches found</p>
+          <p className="text-zion-slate-light text-sm mb-4">
+            Try adjusting your search criteria or description for better results.
+          </p>
+          {projectDescription && (
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
+              <p className="text-xs text-zion-slate-light">Your search:</p>
+              <p className="text-sm text-white">{projectDescription}</p>
+            </div>
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -245,6 +364,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;
 import { Skeleton } from "@/components/ui/skeleton",;
+<<<<<<< HEAD
 =======
 "
 import { useState } from "react",;"
@@ -256,6 +376,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;"
 import { Skeleton } from "@/components/ui/skeleton",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils",;
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
@@ -265,18 +387,42 @@ interface AIMatchingResultsProps {;
   serviceType?: string;
 }
 ;
+<<<<<<< HEAD
 export function AIMatchingResults() { return null; }
+=======
+export function AIMatchingResults({;
+  matches,;
+  onSelectMatch,;
+  isLoading = false,;
+  projectDescription = "",;
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all"),;
+
+  // Group matches by category;
+  const categories = {;
+    all: matches,;
+    talent: matches && matches.filter(match => match && match.category.toLowerCase().includes("talent")),;
+    services: matches && matches.filter(match => match && match.category.toLowerCase().includes("service")),;
+    equipment: matches && matches.filter(match => match && match.category.toLowerCase().includes("equipment"));
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
+<<<<<<< HEAD
     const lowerCategory = category && category.toLowerCase();"
     if (lowerCategory && lowerCategory.includes("talent")) return User;"
+=======
+    const lowerCategory = category && category.toLowerCase();
+    if (lowerCategory && lowerCategory.includes("talent")) return User;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
 
   if (isLoading) {;
+<<<<<<< HEAD
 
     return (
 
@@ -291,6 +437,11 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
 =======
 import {cn} from "@/lib/utils";      <div className="space-y-4">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return (
+    return (
+      <div className="space-y-4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
           <Skeleton className="h-[120px] w-full" />;
@@ -307,8 +458,19 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 
+=======
+      </div>;
+    );
+  }
+
+
+  if (matches && matches.length === 0) {;
+
+    return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (matches && matches.length === 0) {;
     return (
     ),;
@@ -318,6 +480,7 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
     return (;
     );
   }
+<<<<<<< HEAD
 "
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;"
         <CardContent className="pt-6">;"
@@ -351,12 +514,33 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+  if (matches.length === 0) {;
+    return (;
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
+        <CardContent className="pt-6">;
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
+          <p className="text-white font-medium mb-2">No matches found</p>;
+          <p className="text-zion-slate-light text-sm mb-4">;
+            Try adjusting your search criteria or description for better results.;
+          </p>;
+          {projectDescription && (;
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">;
+              <p className="text-xs text-zion-slate-light">Your search:</p>;
+              <p className="text-sm text-white">{projectDescription}</p>;
+            </div>;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           )}
         </CardContent>;
       </Card>;
     );
   }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -378,10 +562,17 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
+<<<<<<< HEAD
 =======
   return ("
     <div className="space-y-4">"
@@ -397,10 +588,22 @@ import {cn} from "@/lib/utils";      <div className="space-y-4">;
           <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
             Services ({categories.services.length})
           </TabsTrigger>"
+=======
+          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
+            All ({categories.all.length})
+          </TabsTrigger>
+          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
+            Talent ({categories.talent.length})
+          </TabsTrigger>
+          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
+            Services ({categories.services.length})
+          </TabsTrigger>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
         {Object.entries(categories).map(([tab, items]) => ("
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
 <<<<<<< HEAD
@@ -420,6 +623,11 @@ import { useState } from './react';
 =======
       </div>;import { useState } from './react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {Object.entries(categories).map(([tab, items]) => (
+          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+import { useState } from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -477,6 +685,7 @@ if ( {) {}
 }
 <<<<<<< HEAD
     return (
+<<<<<<< HEAD
       <div className="space-y-4">;
         <Skeleton className="h - 10 w-full" />;
         <div className="space-y-3">;
@@ -492,6 +701,14 @@ if ( {) {}
           <Skeleton className="h-[120px] w - full" />;"
           <Skeleton className="h-[120px] w - full" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="space - y-4">;
+        <Skeleton className="h - 10 w - full" />;
+        <div className="space - y-3">;
+          <Skeleton className="h-[120px] w - full" />;
+          <Skeleton className="h-[120px] w - full" />;
+          <Skeleton className="h-[120px] w - full" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </div>);
   }
@@ -501,14 +718,15 @@ if ( {) {}
 }
 <<<<<<< HEAD
     return (
-      <Card className="bg - zion - blue - dark border - zion - blue - light text - center p-6">;
-        <CardContent className="pt-6">;
-          <BarChart3 className="h - 12 w - 12 mx - auto text - zion - slate - light mb-3" />;
-          <p className="text - white font - medium mb-2">No matches found</p>;
-          <p className="text - zion - slate - light text - sm mb-4">;
+      <Card className="bg - zion - blue - dark border - zion - blue - light text - center p - 6">;
+        <CardContent className="pt - 6">;
+          <BarChart3 className="h - 12 w - 12 mx - auto text - zion - slate - light mb - 3" />;
+          <p className="text - white font - medium mb - 2">No matches found</p>;
+          <p className="text - zion - slate - light text - sm mb - 4">;
             Try adjusting your search criteria or description for better results.;
           </p>;
           {project_description && (
+<<<<<<< HEAD
             <div className="bg - zion - blue - light / 20 p - 3 rounded - md text-left">;
               <p className="text - xs text - zion - slate-light">Your search:</p>;
               <p className="text - sm text-white">{project_description}</p>;
@@ -526,29 +744,35 @@ if ( {) {}
               <p className="text - xs text - zion - slate - light">Your search:</p>;"
               <p className="text - sm text - white">{project_description}</p>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <div className="bg - zion - blue - light / 20 p - 3 rounded - md text - left">;
+              <p className="text - xs text - zion - slate - light">Your search:</p>;
+              <p className="text - sm text - white">{project_description}</p>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>)}
         </CardContent>;
       </Card>);
   }
 <<<<<<< HEAD
   return (
-    <div className="space-y-4">;
-      <Tabs default_value="all" value={active_tab} onValueChange={setActiveTab} className="w-full">;
-        <TabsList className="bg - zion - blue - dark border border - zion - blue - light grid grid - cols - 4 w-full">;
-          <TabsTrigger value="all" className="data-[state = active]:bg - zion-purple / 20">;
+    <div className="space - y-4">;
+      <Tabs default_value="all" value={active_tab} onValueChange={setActiveTab} className="w - full">;
+        <TabsList className="bg - zion - blue - dark border border - zion - blue - light grid grid - cols - 4 w - full">;
+          <TabsTrigger value="all" className="data-[state = active]:bg - zion - purple / 20">;
             All ({categories.all.length});
           </TabsTrigger>;
-          <TabsTrigger value="talent" className="data-[state = active]:bg - zion-purple / 20">;
+          <TabsTrigger value="talent" className="data-[state = active]:bg - zion - purple / 20">;
             Talent ({categories.talent.length});
           </TabsTrigger>;
-          <TabsTrigger value="services" className="data-[state = active]:bg - zion-purple / 20">;
+          <TabsTrigger value="services" className="data-[state = active]:bg - zion - purple / 20">;
             Services ({categories.services.length});
           </TabsTrigger>;
-          <TabsTrigger value="equipment" className="data-[state = active]:bg - zion-purple / 20">;
+          <TabsTrigger value="equipment" className="data-[state = active]:bg - zion - purple / 20">;
             Equipment ({categories.equipment.length});
           </TabsTrigger>;
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -579,13 +803,18 @@ if ( {) {}
 =======
           <TabsContent key={tab} value={tab} className="mt - 4 space-y-3">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {items.length > 0 ? (
               items.map ((match) => {}
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
 <<<<<<< HEAD
 
-  return (    <div className="space-y-4">;
+
+  return (
+    <div className="space-y-4">;
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">;
           <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">;
@@ -613,14 +842,20 @@ if ( {) {}
                         "bg-green-500"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "bg-green-500"                        "bg-green-500"
+=======
+                        "bg-green-500"
+                        "bg-green-500"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
                             {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
-                            ) : (;                            {match && match.image ? (;
+                            ) : (;
+                            {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
                             ) : (;
                               <AvatarFallback className="bg-zion-purple/20">;
@@ -654,10 +889,15 @@ if ( {) {}
                                 <div className="text-right ml-2">;
                                   <div className="font-medium text-white">${match && match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
+<<<<<<< HEAD
                                     {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}                                  </div>;
 =======
                                   </div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                                    {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}
+                                  </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 </div>;
                               )}
                             </div>;
@@ -666,6 +906,7 @@ if ( {) {}
 <<<<<<< HEAD
                                   {skill}
                                 </Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                               ))}
@@ -723,6 +964,10 @@ if ( {) {}
 =======
                               ))}                            ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                              ))}
+                            ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             <div className="mt-2 flex flex-wrap gap-1">;
 =======
                             ;"
@@ -736,6 +981,7 @@ if ( {) {}
                                   {skill}
                                 </Badge>;
                               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -754,12 +1000,18 @@ if ( {) {}
                               ))}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                                  {skill}
+                                </Badge>;
+                              ))}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -829,3 +1081,15 @@ if ( {) {}
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  </Card>);
+              })) : (
+              <div className="text - center py - 8 text - zion - slate - light">;
+                No {tab} matches found.;
+              </div>)}
+          </TabsContent>))}
+      </Tabs>;
+    </div>);
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

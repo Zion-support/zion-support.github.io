@@ -20,7 +20,12 @@ const benefits = [;
   {
     title: "AI - Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
-    icon: <Bot className="w - 8 h-8" />},
+    icon: <Bot className="w - 8 h - 8" />},
+
+  {
+    title: "Global Availability"
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
+
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +94,7 @@ import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -106,6 +112,11 @@ import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -130,6 +141,7 @@ const benefits = []
     title: "Global Availability","
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
     icon: <Globe className="w-8 h-8" />},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,12 +261,47 @@ export function BenefitsSection() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+  {
+    title: "24/7 Support"
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
+    icon: <Clock className="w-8 h-8" />}
+  {
+    title: "Cost Reduction"
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
+    icon: <TrendingDown className="w-8 h-8" />}]
+const benefits = [;
+  {;
+    title: "AI-Powered Matchmaking",;
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
+    icon: <Bot className="w-8 h-8" />},;
+  {;
+    title: "Global Availability",;
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
+    icon: <Globe className="w-8 h-8" />},;
+  {;
+    title: "24/7 Support",;
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",;
+    icon: <Clock className="w-8 h-8" />},;
+  {;
+    title: "Cost Reduction",;
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
+    icon: <TrendingDown className="w-8 h-8" />}],;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function BenefitsSection() {;
   return (
-            <FeatureCard}
+
+            <FeatureCard
+
+};
+
+
+            <FeatureCard
 }
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 export function BenefitsSection() {;
@@ -264,25 +311,29 @@ export function BenefitsSection() {;
 };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
 const benefits = [;
   {;
-    title: "AI-Powered Matchmaking",,
-  description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
+    title: "AI-Powered Matchmaking",;
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
     icon: <Bot className="w-8 h-8" />},;
   {;
-    title: "Global Availability",,
-  description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",;
+    title: "Global Availability",;
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",;
     icon: <Globe className="w-8 h-8" />},;
   {;
-    title: "24/7 Support",,
-  description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",;
+    title: "24/7 Support",;
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",;
     icon: <Clock className="w-8 h-8" />},;
   {;
-    title: "Cost Reduction",,
-  description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
+    title: "Cost Reduction",;
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
     icon: <TrendingDown className="w-8 h-8" />}];
 export function BenefitsSection() {;
   return (;
@@ -294,11 +345,16 @@ export function BenefitsSection() {;
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>;
-        </div>;        </div>;
+        </div>;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+
+        </div>;
       </div>;
     </section>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,27 +381,32 @@ export function BenefitsSection() {;
 =======
     icon: <Globe className="w - 8 h-8" />},
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    icon: <Globe className="w - 8 h - 8" />},
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     title: "24 / 7 Support",
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
-    icon: <Clock className="w - 8 h-8" />},
+    icon: <Clock className="w - 8 h - 8" />},
   {
     title: "Cost Reduction",
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
-    icon: <TrendingDown className="w - 8 h-8" />}],
+    icon: <TrendingDown className="w - 8 h - 8" />}],
 export /**
  * BenefitsSection - Function description
  */
 function BenefitsSection() {
   return (
-    <section className="py - 20 bg - zion - blue-light">;
-      <div className="container mx - auto px-4">;
-        <div className="text - center mb-16">;
+    <section className="py - 20 bg - zion - blue - light">;
+      <div className="container mx - auto px - 4">;
+        <div className="text - center mb - 16">;
           <GradientHeading > Why Zion?</GradientHeading>;
-          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx-auto">;
+          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx-auto">;
 =======
 "
@@ -398,6 +459,9 @@ function BenefitsSection() {}
         </div>;"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {benefits.map ((benefit, index) => (
             <FeatureCard;
               key={index}
@@ -405,15 +469,20 @@ function BenefitsSection() {}
               description={benefit.description}
 <<<<<<< HEAD
               icon={benefit.icon}
+<<<<<<< HEAD
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration-300";
 =======
               icon={benefit.icon}"
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />))}
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }            <FeatureCard;
 }
@@ -445,3 +514,52 @@ function BenefitsSection() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+          {benefits.map((benefit, index) => (;
+            <FeatureCard;
+}
+
+
+;
+        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+          {benefits.map((benefit, index) => (;
+            <FeatureCard;              key={index}
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300";
+            />;
+          ))}
+        </div>;
+      </div>;
+    </section>;
+  ),;}
+ const benefits = [ {
+  title: "AI-Powered Matchmaking";
+description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
+icon: <Bot className="w-8 h-8" /> 
+};
+{
+  title: "Global Availability";
+description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
+icon: <Globe className="w-8 h-8" /> 
+};
+{
+  title: "24/7 Support";
+description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.";
+icon: <Clock className="w-8 h-8" /> 
+};
+{
+  export function BenefitsSection () {
+  return (<section className="py-20 bg-zion-blue-light" > <div className="container mx-auto px-4" > <div className="text-center mb-16" > text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto" > Experience the next generation of tech marketplace with features designed to maximize efficiency and value </p> </div> />) ) 
+}</div> </div> </section>) 
+}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+          {benefits.map((benefit, index) => (;
+            <FeatureCard;
+}
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

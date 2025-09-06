@@ -3,9 +3,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface DateRange {
+<<<<<<< HEAD
 =======
 export interface DateRange {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  from?: Date;
+  to?: Date;
+}
+
+  to?: Date;
+
+}
+
+
+export interface DateRange {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   from?: Date;
   to?: Date
 }
@@ -50,6 +63,7 @@ export interface DateRange {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -63,6 +77,9 @@ export interface DateRange {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface DateRange {
 =======
 export interface DateRange {
@@ -74,8 +91,6 @@ export interface DateRange {};
 }export interface DateRange {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   from?: Date;
-}export interface DateRange {
-  from?: Date;
 }
 <<<<<<< HEAD
 export interface DateRange {;
@@ -85,6 +100,7 @@ export interface DateRange {;
   to?: Date;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -100,3 +116,5 @@ export interface DateRange {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

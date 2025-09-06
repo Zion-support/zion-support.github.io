@@ -8,6 +8,8 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
+
 import {
 
 import {;
@@ -16,6 +18,7 @@ import {;
   Home,;
   Mail,;
   Search,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Settings,;
@@ -67,6 +70,10 @@ import {
 =======
   Settings,;  Bell,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  Settings,;
+  Bell,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FileText,
   Home,
   Mail,
@@ -75,6 +82,7 @@ import {
 
 <<<<<<< HEAD
   Users,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 } from "lucide-react";
@@ -94,6 +102,10 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 =======
 } from "lucide-react";  Bell,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+} from "lucide-react";
+  Bell,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FileText,
   Home,
   Mail,
@@ -131,23 +143,34 @@ import {;
   SidebarGroupContent,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
         
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (
@@ -197,16 +220,20 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         
 
 
         
         
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -217,6 +244,8 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -226,6 +255,7 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
+<<<<<<< HEAD
                   </Link>                  </Link>
 =======
 "
@@ -239,6 +269,10 @@ export function AppSidebar() { return null; }
                   </Link>
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  </a>
+                  </Link>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -247,6 +281,7 @@ export function AppSidebar() { return null; }
                     <Search size={16} />
                     <span>Analytics</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>                  </Link>
 =======
 
@@ -254,10 +289,15 @@ export function AppSidebar() { return null; }
                   </Link>
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  </a>
+                  </Link>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </SidebarGroup>
@@ -271,11 +311,15 @@ export function AppSidebar() { return null; }
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        </SidebarGroup>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
         
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -291,11 +335,16 @@ export function AppSidebar() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
+<<<<<<< HEAD
                 <SidebarMenuButton asChild>"
                   <a href="/profile">
                     <Users size={16} />
@@ -311,12 +360,22 @@ export function AppSidebar() { return null; }
 =======
         </SidebarGroup>                </SidebarMenuButton>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <SidebarMenuButton asChild>
+                  <a href="/profile">
+                    <Users size={16} />
+                    <span>Profile</span>
+                  </a>
+                  </Link>
+                </SidebarMenuButton>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>"
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </Link>                  </Link>
 =======
@@ -325,12 +384,17 @@ export function AppSidebar() { return null; }
                   </Link>
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  </a>
+                  </Link>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +415,9 @@ export function AppSidebar() { return null; }
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )"
@@ -368,18 +435,25 @@ import {;
 export function AppSidebar() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   SidebarGroupContent} from "@/components/ui/sidebar",;
 ;
 export function AppSidebar() {;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -388,6 +462,7 @@ export function AppSidebar() {;
             <SidebarMenu>;
               <SidebarMenuItem>;
                 <SidebarMenuButton asChild>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
@@ -659,3 +734,122 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  <a href="/creator-dashboard">;
+                    <Home size={16} />;
+                    <span>Home</span>;
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                <SidebarMenuButton as_child>;
+                  <a href="/messaging">;
+                    <Mail size={16} />;
+                    <span > Messages</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                <SidebarMenuButton as_child>;
+                  <a href="/notifications">;
+                    <Bell size={16} />;
+                    <span > Notifications</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+
+        <SidebarGroup>;
+          <SidebarGroupLabel > Content</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/publish">;
+                    <FileText size={16} />;
+                    <span > My Content</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                <SidebarMenuButton as_child>;
+                  <a href="/analytics">;
+                    <Search size={16} />;
+                    <span > Analytics</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+
+        <SidebarGroup>;
+          <SidebarGroupLabel > Settings</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/profile">;
+                    <Users size={16} />;
+                    <span > Profile</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                <SidebarMenuButton as_child>;
+                  <a href="/settings">;
+                    <Settings size={16} />;
+                    <span > Settings</span>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+      </SidebarContent>;
+
+
+    </Sidebar>
+
+
+    </Sidebar>;
+  );
+}
+    </Sidebar>);
+}
+    </Sidebar>);
+}
+    </Sidebar>;
+  ),;}
+ import {
+  Sidebar;
+SidebarContent;
+SidebarGroup;
+SidebarMenu;
+SidebarMenuItem;
+SidebarMenuButton;
+SidebarGroupLabel;
+return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <a href="/creator-dashboard" > <Home size= {
+  16 
+}/> <span>Home</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Messages</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Notifications</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Content</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>My Content</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Analytics</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Settings</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Profile</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Settings</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> </SidebarContent> </Sidebar>) 
+}
+    </Sidebar>;
+  );
+}
+;
+  );
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -13,6 +14,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -22,6 +27,7 @@ interface JobApplicationsTableProps {;
   jobId: string;
 }
 
+<<<<<<< HEAD
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
 =======
 import {useState} from "react";"
@@ -32,6 +38,11 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 
   const { ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+  const { ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     applications, ;
     isLoading, ;
     error, ;
@@ -61,6 +72,7 @@ interface JobApplicationsTableProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
   const {
     applications
     isLoading
@@ -74,6 +86,8 @@ interface JobApplicationsTableProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -96,14 +110,19 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {}
     error, 
     updateApplicationStatus, ;
 
+<<<<<<< HEAD
 
   const {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const { 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     applications, 
     isLoading, 
     error, 
     updateApplicationStatus, ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -117,10 +136,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {}
 
 
 
+=======
+    markApplicationAsViewed;
+    refetch;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,12 +177,15 @@ import {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
     setProcessingId(applicationId),;
     try {;
 
+<<<<<<< HEAD
 
 
 
@@ -170,10 +197,15 @@ import {
 =======
     refetch;      // If it's not already viewed, mark it as viewed;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      await updateApplicationStatus(applicationId, newStatus);
+      // If it's not already viewed, mark it as viewed;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -193,10 +225,16 @@ import {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     } finally {;
       setProcessingId(null);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   };
@@ -308,10 +346,35 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleViewApplication = async (applicationId: string) => {;
+=======
+
+
+  };
+
+
+
+  const handleViewScore = (application: JobApplication) => {
+    setSelectedApplication(application)
+    setShowScoreDialog(true)
+  }
+  const handleViewApplication = async (applicationId: string) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     await markApplicationAsViewed(applicationId)
-};
+  }
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {
+    refetch()
+  }
+  const handleViewScore = (application: JobApplication) => {;
+    setSelectedApplication(application),;
+    setShowScoreDialog(true);
+  };
+
+  const handleViewApplication = async (applicationId: string) => {;
+    await markApplicationAsViewed(applicationId);
+  };
 
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     refetch();
@@ -378,10 +441,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
     refetch()
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    refetch();
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (isLoading) {;
     return <LoadingState />;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (isLoading) {;
@@ -408,6 +476,45 @@ export /**;
  */
 function JobApplicationsTable() {}
   const {}
+=======
+
+
+  }
+
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+
+
+
+  if (isLoading) {;
+    return <LoadingState />;
+
+  if (isLoading) {;
+    return <LoadingState />;
+  }
+  }
+  return (
+    <>;
+      <ApplicationsTable
+import { useState } from './react';
+import { JobApplication, ApplicationStatus } from '@/types / jobs';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog } from './applications';
+;
+interface JobApplicationsTableProps {
+  job_id: string;
+}
+export /**
+ * JobApplicationsTable - Function description
+ */
+function JobApplicationsTable() {
+  const {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     applications,
     is_loading,
     error,
@@ -420,6 +527,7 @@ function JobApplicationsTable() {}
   const [selected_application, setSelectedApplication] = useState < JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState (false);
 ;
+<<<<<<< HEAD
   const handleStatusChange = async (application_id: string, new_status: ApplicationStatus) => {}
     setProcessingId (application_id),
     try {}
@@ -449,6 +557,59 @@ if ( {) {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const handleStatusChange = async (application_id: string, new_status: ApplicationStatus) => {
+    setProcessingId (application_id),
+    try {
+      await updateApplicationStatus (application_id, new_status);
+      // If it's not already viewed, mark it as viewed;
+      const application = applications.find (app => app.id === application_id);
+      // Check condition
+if ( {) {
+  $2
+}
+        await markApplicationAsViewed (application_id);
+      }
+    } finally {
+      setProcessingId (null);
+    }
+  }
+;
+  const handleViewScore = (application: JobApplication) =>: any {
+    setSelectedApplication (application),
+    setShowScoreDialog (true);
+  }
+;
+  const handleViewApplication = async (application_id: string) => {
+    await markApplicationAsViewed (application_id);
+  }
+;
+  const handleScoreUpdated = (updated_application: JobApplication) =>: any {
+    refetch ();
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <LoadingState />;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <ErrorState error={error} />;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <EmptyState />;
+  }
+  return (
+    <>;
+      <ApplicationsTable;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         applications={applications}
         processing_id={processing_id}
         onViewApplication={handleViewApplication}
@@ -456,10 +617,14 @@ if ( {) {}
         onViewScore={handleViewScore}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />;
 
 
       <ScoreDialog
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -484,6 +649,10 @@ if ( {) {}
 
       <ScoreDialog;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <ScoreDialog;
+      <ScoreDialog
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
@@ -494,7 +663,10 @@ if ( {) {}
     </>;
   );
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       />;
     </>;
@@ -502,22 +674,36 @@ if ( {) {}
     </>);
 }
   ),;}
+<<<<<<< HEAD
  import {};
+=======
+ import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ApplicationsTable;
 EmptyState;
 ErrorState;
 LoadingState;
+<<<<<<< HEAD
 ScoreDialog interface JobApplicationsTableProps {}
   jobId: string;
 }export function JobApplicationsTable ({};
   jobId;
 }: JobApplicationsTableProps) {}
   const {}
+=======
+ScoreDialog interface JobApplicationsTableProps {
+  jobId: string 
+}export function JobApplicationsTable ({
+  jobId 
+}: JobApplicationsTableProps) {
+  const {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   applications;
 isLoading;
 error;
 updateApplicationStatus;
 markApplicationAsViewed;
+<<<<<<< HEAD
 refetch;
 }= useJobApplications (jobId);
 const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
@@ -540,19 +726,51 @@ return (<> <ApplicationsTable applications= {}
   selectedApplication;
 }onScoreUpdated= {}
   handleScoreUpdated;
+=======
+refetch 
+}= useJobApplications (jobId);
+const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
+const [showScoreDialog, setShowScoreDialog] = useState (false);
+return (<> <ApplicationsTable applications= {
+  applications 
+}processingId= {
+  processingId 
+}onViewApplication= {
+  handleViewApplication 
+}onStatusChange= {
+  handleStatusChange 
+}onViewScore= {
+  handleViewScore 
+}/> <ScoreDialog open= {
+  showScoreDialog 
+}onOpenChange= {
+  setShowScoreDialog 
+}application= {
+  selectedApplication 
+}onScoreUpdated= {
+  handleScoreUpdated 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> </>) 
 }
 
   return (
     <>
+<<<<<<< HEAD
       <ApplicationsTable;
+=======
+      <ApplicationsTable
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         applications={applications}
         processingId={processingId}
         onViewApplication={handleViewApplication}
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
       />
+<<<<<<< HEAD
       <ScoreDialog;
+=======
+      <ScoreDialog
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selectedApplication}
@@ -561,8 +779,11 @@ return (<> <ApplicationsTable applications= {}
     </>
   )
 }
+<<<<<<< HEAD
 
 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

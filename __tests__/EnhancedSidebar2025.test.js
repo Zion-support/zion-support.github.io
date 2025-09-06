@@ -49,6 +49,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -73,6 +74,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 <<<<<<< HEAD

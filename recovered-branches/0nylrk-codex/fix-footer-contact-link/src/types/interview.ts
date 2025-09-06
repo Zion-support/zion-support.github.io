@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -93,14 +94,18 @@ export type InterviewType = 'video' | 'phone' | 'in - person';
 export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in - app';
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export type InterviewStatus =
+  | "requested"
+  | "confirmed"
+  | "declined"
+  | "rescheduled"
+  | "completed"
+  | "cancelled";
 
-export interface Interview {
-export type InterviewStatus = 
-  | 'requested' 
-  | 'confirmed' 
-  | 'declined' 
-  | 'rescheduled' 
-  | 'completed' ;
+export type InterviewType = "video" | "phone" | "in-person";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 export type MeetingPlatform =
   | "zoom"
   | "google-meet"
@@ -115,8 +120,10 @@ export type MeetingPlatform ="
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "in-app";
 
+
 export interface Interview {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +138,9 @@ export interface Interview {  | 'cancelled';
 =======
 export interface Interview {  | 'cancelled';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  | 'cancelled';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
 export interface Interview {
@@ -203,6 +213,7 @@ export interface InterviewRequest {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+
 export interface InterviewRequest {;
 
 <<<<<<< HEAD
@@ -212,6 +223,7 @@ export interface InterviewRequest {;
 export interface InterviewRequest {
 
 export interface InterviewRequest {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +246,10 @@ export interface InterviewRequest {};
 export interface InterviewRequest {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export interface InterviewRequest {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -241,6 +257,7 @@ export interface InterviewRequest {;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,10 +289,16 @@ export interface InterviewResponse {
   interview_type: InterviewType
   title?: string
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  interview_type: InterviewType;
+  title?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-export interface InterviewResponse {
 
-export interface InterviewResponse {;  interview_id: string;
+
+export interface InterviewResponse {;
+
+  interview_id: string;
   status: InterviewStatus;
 <<<<<<< HEAD
 
@@ -357,6 +380,7 @@ export interface InterviewResponse {;
   message?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -405,3 +429,5 @@ export interface InterviewResponse {
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

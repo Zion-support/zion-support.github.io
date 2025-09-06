@@ -1,23 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
 =======
 
 <<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
     return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) })
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
   if (req && req.method === "GET") {}
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/overrides.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
     });
 <<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
     return res && res.status(200).json({
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/overrides.ts
 <<<<<<< HEAD
 =======
@@ -45,6 +53,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/overrides.ts
+=======
+      ok: true
+      override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -106,6 +119,7 @@ if (state.overrides[idx] = entry) {}
     });
 <<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/overrides.ts
 <<<<<<< HEAD
 =======
@@ -197,3 +211,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/overrides.ts
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

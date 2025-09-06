@@ -37,6 +37,7 @@ import React from 'react';
 interface HelpProps {
   // Add props here as needed
 
+
 }
 
 <<<<<<< HEAD
@@ -77,7 +78,10 @@ export default function Basic.spec({ }: Basic.specProps) {}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,6 +91,9 @@ export default function Basic.spec({ }: Basic.specProps) {}
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src.pages.disabled/Help.jsx
 }
 }
@@ -120,12 +127,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 :temp_exclude/src.pages.disabled/Help.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 :temp_exclude/src.pages.disabled/Help.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
@@ -134,6 +144,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 :src.pages.disabled/Help.jsx
+<<<<<<< HEAD
 =======
 
 
@@ -142,11 +153,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/e2e/basic.spec.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/Help.jsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -161,3 +175,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/e2e/basic.spec.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

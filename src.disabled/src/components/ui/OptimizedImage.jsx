@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '@/lib/utils';'; import { motion,AnimatePresence } from 'framer-motion';'; export function OptimizedImage({ src,alt,width,height,className,placeholder = '/images/placeholder.svg',fallback = '/images/fallback.svg',priority = false,sizes = '100vw',loading = 'lazy',onLoad,onError,aspectRatio = 'auto',objectFit = 'cover',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React,{ useState,useRef,useEffect } from \'react\';\'; import { cn } from \'@/lib/utils\';\'; import { motion,AnimatePresence } from \'framer-motion\';\'; export function OptimizedImage({ src,alt,width,height,className,placeholder = \'/images/placeholder && placeholder.svg\',fallback = \'/images/fallback && fallback.svg\',priority = false,sizes = \'100vw\',loading = \'lazy\',onLoad,onError,aspectRatio = \'auto\',objectFit = \'cover\',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
 =======
 import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '@/lib/utils';'; import { motion,AnimatePresence } from 'framer-motion';'; export function OptimizedImage({ src,alt,width,height,className,placeholder = '/images/placeholder.svg',fallback = '/images/fallback.svg',priority = false,sizes = '100vw',loading = 'lazy',onLoad,onError,aspectRatio = 'auto',objectFit = 'cover',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}import React,{ useState,useRef,useEffect } from \'react\';\'; import { cn } from \'@/lib/utils\';\'; import { motion,AnimatePresence } from \'framer-motion\';\'; export function OptimizedImage({ src,alt,width,height,className,placeholder = \'/images/placeholder && placeholder.svg\',fallback = \'/images/fallback && fallback.svg\',priority = false,sizes = \'100vw\',loading = \'lazy\',onLoad,onError,aspectRatio = \'auto\',objectFit = \'cover\',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
@@ -30,6 +34,7 @@ const React,{ useState,useRef,useEffect } from "react";"; import { cn } from "@/
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +79,9 @@ import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '@/lib/utils';'; import { motion,AnimatePresence } from 'framer-motion';'; export function OptimizedImage({ src,alt,width,height,className,placeholder = '/images/placeholder.svg',fallback = '/images/fallback.svg',priority = false,sizes = '100vw',loading = 'lazy',onLoad,onError,aspectRatio = 'auto',objectFit = 'cover',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React,{ useState,useRef,useEffect } from \'react\';\'; import { cn } from \'@/lib/utils\';\'; import { motion,AnimatePresence } from \'framer-motion\';\'; export function OptimizedImage({ src,alt,width,height,className,placeholder = \'/images/placeholder.svg\',fallback = \'/images/fallback.svg\',priority = false,sizes = \'100vw\',loading = \'lazy\',onLoad,onError,aspectRatio = \'auto\',objectFit = \'cover\',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
 const React,{ useState,useRef,useEffect } from "react";"; import { cn } from "@/lib/utils";"; import { motion,AnimatePresence } from "framer-motion";"; export function OptimizedImage({ src,alt,width,height,className,placeholder = "/images/placeholder.svg",fallback = "/images/fallback.svg",priority = false,sizes = "100vw",loading = "lazy",onLoad,onError,aspectRatio = "auto",objectFit = "cover",blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}""
 import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '@/lib/utils';'; import { motion,AnimatePresence } from 'framer-motion';'; export function OptimizedImage({ src,alt,width,height,className,placeholder = '/images/placeholder.svg',fallback = '/images/fallback.svg',priority = false,sizes = '100vw',loading = 'lazy',onLoad,onError,aspectRatio = 'auto',objectFit = 'cover',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 // Define RequestInit if not available
@@ -446,8 +447,15 @@ export type { ApiResponse, RequestOptions }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+export interface ApiResponse<T = any> {
+  data: T;
+  message?: string;
+  success: boolean;
 }
+<<<<<<< HEAD
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
@@ -468,6 +476,8 @@ class ApiClient {
   private baseURL: string;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface RequestOptions {};
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -507,10 +517,12 @@ class ApiClient {}
         success: false,'
         message: error instanceof Error ? error.message : 'Unknown error'
       };
-    }  }
+    }
+  }
 }
 
 export const apiClient = new ApiClient();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -547,3 +559,5 @@ export type { ApiResponse, RequestOptions }
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

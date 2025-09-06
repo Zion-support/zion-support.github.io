@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/quantum-logistics.tsx
 <<<<<<< HEAD:pages/quantum-logistics.tsx
 <<<<<<< HEAD
@@ -149,6 +150,8 @@ export default function QuantumLogisticsPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Phone,
   Mail,
@@ -168,12 +171,16 @@ export default function QuantumLogisticsPage() {
   );
   if (!service) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-logistics.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>
       <Head>
@@ -360,6 +367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.rating.toFixed(1)}
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-logistics.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -381,6 +389,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -401,18 +411,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-logistics.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/quantum-logistics.tsx
 <<<<<<< HEAD
   )
@@ -557,3 +572,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-logistics.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

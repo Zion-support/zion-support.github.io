@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
@@ -6,6 +7,7 @@ export interface Innovative2025Service {
 
   {
 
+<<<<<<< HEAD
     id: 'ai-multimodal-fusion-platform'
     name: 'AI Multimodal Fusion Platform'
     tagline: 'Unified AI processing across text, image, video, and audio'
@@ -17,10 +19,14 @@ export interface Innovative2025Service {
 
       'Real-time emotion detection',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
     price: '$1, 799',
+<<<<<<< HEAD
 =======
     id: 'ai - emotional - intelligence - platform','
     name: 'AI Emotional Intelligence Platform','
@@ -35,6 +41,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    period: '/month',
+    description:;
+      'Cutting - edge platform that understands, analyzes, and responds to human emotions in real - time, enabling more empathetic and effective AI interactions.',
+    features: [;
+      'Real - time emotion detection',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Sentiment analysis & mood tracking',
       'Emotional response generation',
       'Cultural context awareness',
@@ -42,6 +56,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - language support',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💝',
 
     color: 'from - pink - 500 to - rose - 600',
@@ -73,6 +88,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Mental health monitoring',
       'Customer sentiment analysis',
       'Educational engagement',
@@ -102,6 +123,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -123,6 +150,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Quantum-classical hybrid algorithms',
       'Real-time quantum resource allocation',
@@ -138,12 +166,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time quantum resource allocation',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Advanced optimization solvers',
       'Quantum machine learning',
       'Secure quantum communications',
       'Scalable quantum infrastructure',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⚛️',
 
     color: 'from - cyan - 500 to - blue - 600',
@@ -174,6 +209,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Portfolio optimization',
       'Drug discovery',
       'Supply chain optimization',
@@ -203,6 +244,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -240,12 +287,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered fraud detection',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Market trend analysis',
       'Smart contract auditing',
       'DeFi risk assessment',
       'NFT market insights',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔗',
 
     color: 'from - green - 500 to - emerald - 600',
@@ -277,6 +331,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Fraud detection',
       'Market analysis',
       'Compliance monitoring',
@@ -303,9 +363,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '220% annual growth',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: 'cyberpunk',
     contact_info: {'
       mobile: '+1 302 464 0950','
@@ -322,12 +388,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 89,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Production financial AI platform with real-time trading and comprehensive risk management.'
     launchDate: '2025-01-15'
     customers: 45
     rating: 4.8
     reviews: 32
   }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       'AI-generated 3D environments',
   // Metaverse & Virtual Reality Innovation Services;
@@ -629,6 +698,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Financial Technology Innovation Services;
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      'Production financial AI platform with real-time trading and comprehensive risk management.'
+    launchDate: '2025-01-15'
+    customers: 45
+    rating: 4.8
+    reviews: 32
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'ai - financial - trading - platform',
     name: 'AI Financial Trading Platform',
     tagline: 'Intelligent algorithmic trading and portfolio management',
@@ -660,6 +741,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Production financial AI platform with real-time trading and comprehensive risk management.',
 =======
 '
@@ -678,6 +765,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
 =======
@@ -725,6 +818,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -750,9 +849,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;'
@@ -760,10 +865,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2025 - 01 - 15';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
   }
 ];
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 45;
 
     rating: 4 && 4.8,
@@ -773,7 +881,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1004,6 +1119,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '260% annual growth', variant: 'quantum-cyberpunk',
 <<<<<<< HEAD
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -1015,10 +1131,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
     contactInfo: {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+    },
+    realImplementation: true, implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.',
+    launchDate: '2025-01-15', customers: 45,
+    rating: 4.8,
+    reviews: 32;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
   id: string,;
@@ -1449,6 +1576,10 @@ export const innovative2025Services: Innovative2025Service[] = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
@@ -1879,6 +2010,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
   }
@@ -1886,3 +2018,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

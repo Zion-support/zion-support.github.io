@@ -53,16 +53,41 @@ import { SortDesc, ChevronDown } from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
+<<<<<<< HEAD
 =======
 import { SortDesc, ChevronDown  } from './lucide-react';import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { SortDesc, ChevronDown  } from './lucide-react';import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+
+
+
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {SortDesc, ChevronDown} from "lucide-react";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 } from '@/components / ui / dropdown - menu';
@@ -74,6 +99,10 @@ import { SortDesc, ChevronDown  } from './lucide-react';import {
 =======
 } from "@/components/ui/dropdown-menu";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+} from '@/components / ui / dropdown - menu';
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
@@ -94,6 +123,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </DropdownMenuTrigger>
@@ -139,6 +169,35 @@ import {}
                 ? "bg-zion-purple/20 text-zion-purple""
                 : ""`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="start"
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
+      >
+        {SORT_OPTIONS.map((option) => (
+          <DropdownMenuItem
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+              sortOption === option.value
+                ? "bg-zion-purple/20 text-zion-purple"
+                : ""
+            }`}
+          >
+            {option.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+;
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             }`}
           >
             {option.label}
@@ -199,8 +258,10 @@ interface SortDropdownProps {;
   setSortOption: (option: string) => void;
   );
 
+
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,3 +284,5 @@ interface SortDropdownProps {;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

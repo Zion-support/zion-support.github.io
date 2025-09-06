@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/automation/innovation-radar.tsx
 <<<<<<< HEAD:pages/automation/innovation-radar.tsx
 <<<<<<< HEAD
@@ -20,6 +21,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/innovation-radar.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const items: any[] = (data?.items || []).slice(0, 50);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -39,6 +42,7 @@
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/innovation-radar.tsx
 <<<<<<< HEAD
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
@@ -48,6 +52,9 @@
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/innovation-radar.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>
@@ -55,6 +62,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/automation/innovation-radar.tsx
 <<<<<<< HEAD
   );
@@ -197,3 +205,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/innovation-radar.tsx
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

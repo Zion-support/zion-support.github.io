@@ -42,6 +42,7 @@ ursor/add-new-services-and-deploy-updates-0462
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/useSecurityCompliance.js.jsx
 =======
 <<<<<<< HEAD
@@ -70,3 +71,6 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

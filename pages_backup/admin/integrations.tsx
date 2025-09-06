@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,11 +123,14 @@ export default function AdminIntegrationsPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import Head from 'next/head';
   [key: string]: boolean;
 
 const AdminIntegrationsPage: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -203,10 +207,14 @@ export default function AdminIntegrationsPage() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 =======
 
@@ -223,6 +231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [syncRules, setSyncRules] = useState<any>({
     autoCreateContacts: true,
     pushNotesMode: 'auto',
@@ -255,6 +265,7 @@ window.open(
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ providerId, syncRules })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -263,10 +274,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       await refresh();
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
     }  }
@@ -288,6 +303,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -313,6 +330,7 @@ await fetch('/api/integrations/resync', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ providerId }),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -321,6 +339,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       await refresh();
     } finally {;
@@ -501,6 +522,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div>
               <div className="font-semibold">{p.name}</div>
@@ -515,10 +537,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+            <div>
+              <div className='font-semibold'>{p.name}</div>
+              <div className='text-xs text-gray-500'>{p.description}</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           </div>
           <StatusIcon status={conn.status} />
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
         <div className="flex items-center gap-2">
@@ -554,6 +583,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex items-center gap-2'>
           {!isConnected && (
             <button
@@ -593,12 +624,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -674,6 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -728,6 +764,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
           <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
@@ -757,16 +795,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         checked={syncRules.pushNotesMode === 'auto'}
                         onChange={() =>
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         }
                       />{' '}
                       Auto;
                     </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -833,6 +876,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'manual'}
+                        on_change={() =>;
+                          setSyncRules ({
+                            ...sync_rules,
+                            pushNotesMode: 'manual',
+                          });
+                        }
+                      />{' '}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       Manual only
                     </label>
                   </div>
@@ -849,12 +906,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ...syncRules
                         autoSyncApplicants: e.target.checked
                       })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     }
 =======
                         }'
@@ -868,6 +929,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <label className='flex items-center gap-2'>;
                   <input'
                     type='checkbox'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
@@ -1014,6 +1076,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     checked={!!syncRules.autoUploadResumes}
                     onChange={e =>
                       setSyncRules({
@@ -1156,6 +1220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section>
 <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
           <ManualOverrideForm />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1166,10 +1231,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
@@ -1214,6 +1283,12 @@ function ManualOverrideForm() {
 function ManualOverrideForm() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+);
+
+function ManualOverrideForm() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
@@ -1273,6 +1348,7 @@ function ManualOverrideForm() {
   const [disableAtsSync, setDisableAtsSync] = useState(false),
   const [message, setMessage] = useState(''),
   async function save() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
 =======
@@ -1315,6 +1391,8 @@ function ManualOverrideForm() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setMessage('');
 const res = await fetch('/api/integrations/overrides', {
       method: 'POST',
@@ -1400,6 +1478,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1589,3 +1668,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

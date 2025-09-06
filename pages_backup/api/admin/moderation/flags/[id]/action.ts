@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/moderation/flags/[id]/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,10 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { NextApiRequest, NextApiResponse } from 'next';
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/moderation/flags/[id]/action.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
 import type { ModerationStatus } from '../../../../../../types/moderation',;
@@ -25,6 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/moderation/flags/[id]/action.ts
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -33,6 +39,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/moderation/flags/[id]/action.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
   try {
@@ -191,6 +200,7 @@ ban: 'banned'}
   res.setHeader('AllowPOST'),
   return res.status(405).end('Method Not Allowed');
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/moderation/flags/[id]/action.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -206,6 +216,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -235,7 +247,10 @@ main
   return res.status(405).end('Method Not Allowed');
 };
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/moderation/flags/[id]/action.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
   const user = parseUserFromRequest(req);
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
@@ -260,9 +275,13 @@ ban: 'banned',
 
   return res.status(405).end('Method Not Allowed');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/moderation/flags/[id]/action.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/moderation/flags/[id]/action.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

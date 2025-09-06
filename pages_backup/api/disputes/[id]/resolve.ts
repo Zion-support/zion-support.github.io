@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
@@ -50,6 +51,9 @@ export default async function handler(;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 ========
 
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export default async function handler(
@@ -59,11 +63,15 @@ export default async function handler(
   const { id } = req && req.query;
 
 
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
@@ -75,6 +83,10 @@ export default async function handler(
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -153,9 +165,16 @@ export default async function handler() { return null; }
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
 
+<<<<<<< HEAD
 "
   if (req && req.method === "POST") {}
     try {}
+=======
+
+  if (req && req.method === "POST") {
+
+    try {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ensureAdmin(user);
     } catch (e: any) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/resolve.ts
@@ -164,6 +183,7 @@ export default async function handler() { return null; }
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
@@ -174,11 +194,16 @@ export default async function handler() { return null; }
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const now = new Date().toISOString();
 ;
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {;
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
@@ -220,6 +245,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 "
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {"
       return res && res.status(400).json({ error: "Invalid status" });
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     }
@@ -325,6 +352,7 @@ if ( {) {}
   res.set_header ("Allow", "POST");"
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======;
@@ -334,6 +362,12 @@ if ( {) {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======;
 ========
+=======
+    return res.status(200).json({ dispute });
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(200).json({ dispute });
 
 
@@ -404,6 +438,7 @@ req: NextApiRequest;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -414,6 +449,10 @@ req: NextApiRequest;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
@@ -634,6 +673,7 @@ function handler() {}
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
@@ -648,6 +688,8 @@ if ( {) {
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
 =======
 =======;
@@ -702,6 +744,7 @@ if ( {) {}
     return res.status(200).json({ dispute });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -723,6 +766,10 @@ if ( {) {}
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById, upsertDispute } from '[^']*';
 import { parseUserFromRequest, ensureAdmin } from '[^']*';
@@ -733,6 +780,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = null;
   return res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/resolve.ts
@@ -744,3 +792,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/resolve.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

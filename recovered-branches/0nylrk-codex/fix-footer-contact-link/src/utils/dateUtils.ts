@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { format } from "date-fns";
@@ -52,6 +53,10 @@ import { format } from "date-fns",/**
 import {format} from "date-fns";
 import { format } from "date-fns",/**
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { format } from "date-fns";
+/**
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * Formats a date string into a readable format
  * @param dateString ISO date string to format
  * @returns Formatted date string
@@ -102,6 +107,7 @@ export const format_date = (date_string: string): string => {}
     return format(new Date(dateString), "PP");
 <<<<<<< HEAD
   } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,3 +186,9 @@ export const formatDate = (dateString: string): string => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return dateString;
+  }
+};
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

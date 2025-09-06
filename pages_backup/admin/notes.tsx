@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/notes.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,10 +22,15 @@ type Note = any;
 type Note = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
+=======
+type Note = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/notes.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +140,8 @@ export default function AdminNotesConsole(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
@@ -157,12 +165,16 @@ const res = await fetch('/api/admin/notes-all', {
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/notes.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -197,6 +209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='opacity-70'>No notes found.</div>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/notes.tsx
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -440,6 +453,8 @@ export default function AdminNotesConsole(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           {notes.map(n => (
             <div key={n.id} className='rounded border p-3 text-sm'>
@@ -556,9 +571,13 @@ export default function AdminNotesConsole(req, res) {
       </main>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/notes.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

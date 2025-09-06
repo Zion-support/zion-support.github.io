@@ -31,6 +31,7 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -49,19 +50,28 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
-  return completeSitemap.find(route => route.path === path)
-};// Find a route by path in the complete sitemap
+  return completeSitemap.find(route => route.path === path);
+};
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+
+// Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
+
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
-  return route?.requiredAuth === true
+  return route?.requiredAuth === true;
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -129,15 +139,24 @@ export const canAccessRoute = (
   isAuthenticated: boolean,
 },
 
+
+return completeSitemap && completeSitemap.find(route => route && route.path === path)
+};
+// Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
+
 
   const route = findRouteByPath(path),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -145,23 +164,30 @@ export const isProtectedRoute = (path: string): boolean => {
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (route && route.requiredAuth && !isAuthenticated) return false;
   
 
+<<<<<<< HEAD
 =======
   if (route && route.requiredAuth && !isAuthenticated) return false;
   
 
   if (route && route.requiredAuth && !isAuthenticated) return false;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // If route requires specific roles and user doesn't have one
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -170,10 +196,13 @@ export const isProtectedRoute = (path: string): boolean => {
   
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -185,17 +214,24 @@ export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return true
 }
 // Get breadcrumb items for a path
-export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;  const breadcrumbs = [{label: 'Home', path: '/'}];
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+  const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
-  const segments = path && path.split('/').filter(Boolean);export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const segments = path && path.split('/').filter(Boolean);
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
   const segments = path.split('/').filter(Boolean);
+  const segments = path && path.split('/').filter(Boolean);
+  let currentPath = '';
   for (const segment of segments) {
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
@@ -203,6 +239,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -214,12 +251,18 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       breadcrumbs && breadcrumbs.push({
         label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
         path: currentPath
@@ -229,16 +272,20 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   return breadcrumbs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
 
 import { complete_sitemap, SitemapItem } from '@/config / sitemap';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -357,6 +404,9 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (route.requiredAuth && !isAuthenticated) return false,
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -366,6 +416,7 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -419,6 +470,9 @@ import { complete_sitemap, SitemapItem } from '@/config / sitemap';
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -503,10 +557,14 @@ if ( {) {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return breadcrumbs;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -566,3 +624,9 @@ if ( {) {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+};
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

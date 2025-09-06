@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export function getRequestUserEmail(req: NextApiRequest): string | null {;
   const emailHeader = req.headers['x-user-email'];
@@ -19,6 +20,8 @@ export function isAdminEmail(email: string | null | undefined): boolean {;
 import type { NextApiRequest, NextApiResponse } from "next";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -57,6 +60,27 @@ export function parseUserFromRequest(req: NextApiRequest): User {};
   role: string;
   isAdmin: boolean;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+
+
+// Authentication utilities
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export interface User {
+  id: string;
+  email: string;
+  role: "admin" | "user" | "guest";
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic;
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface User {;
@@ -69,6 +93,7 @@ export interface User {;
 export function parseUserFromRequest(req: NextApiRequest): User {    return { allowed: true }
 =======
 export function parseUserFromRequest(req: NextApiRequest): User {
+<<<<<<< HEAD
   // Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
@@ -84,6 +109,8 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
   try {;
@@ -92,8 +119,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ensureAdmin(user);
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -121,6 +151,7 @@ if ( {) {
     throw error;
   }
 }
+<<<<<<< HEAD
 
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
@@ -139,6 +170,12 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
 
 main
+=======
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const authHeader = req.headers.authorization;
   if (!authHeader) {"
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -155,9 +192,17 @@ main
 
 main
 =======
+<<<<<<< HEAD
 "
   return { id: "user-1", email: "user@zion.os", role: "user" };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export function ensureAdmin(user: User): void {"
@@ -189,6 +234,21 @@ export async function ensureAdminFromApi(
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    ensureAdmin(user);
+
+export async function ensureAdminFromApi(
+  req: NextApiRequest,
+): Promise<{ allowed: boolean }> {
+  try {
+    const user = parseUserFromRequest (req);
+    ensure_admin (user);
+}
+
+  try {
+    ensureAdmin(user);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return { allowed: true }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {
@@ -200,6 +260,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { allowed: false }
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -209,9 +270,14 @@ export interface DemoUser {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;"
   role: "admin" | "user" | "guest";
@@ -273,11 +339,20 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -321,10 +396,17 @@ if (return null) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
 =======
   try {}
@@ -336,6 +418,7 @@ main
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +431,8 @@ main
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     user,
@@ -372,7 +457,14 @@ main
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+}
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -384,15 +476,20 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function hasRole(session: AuthSession | null, role: string): boolean {
     if (!session || !isAuthenticated(session)) return false;
 
 
   }
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -401,6 +498,7 @@ export function isModerator(session: AuthSession | null): boolean {
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -421,6 +519,8 @@ export function isModerator(session: AuthSession | null): boolean {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -488,7 +588,12 @@ export function getUserFromRequest(req: NextApiRequest): User | null {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

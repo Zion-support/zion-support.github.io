@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -159,6 +160,19 @@ import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";"
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
 const MobileLaunchPage: React.FC = () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout";
+import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero";
+import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase";
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";
+import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture";
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
+import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";
+import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
+const MobileLaunchPage: React.FC = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <AppLayout>
       <SEO"
@@ -168,6 +182,9 @@ const MobileLaunchPage: React.FC = () => {}
         canonical="/mobile-launch"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />
 
       <MobileLaunchHero />
@@ -184,6 +201,7 @@ const MobileLaunchPage: React.FC = () => {}
 
       <AppStoreBanner />
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 =======
@@ -204,6 +222,46 @@ export default MobileLaunchPage;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default MobileLaunchPage,
+=======
+  );
+};
+
+
+export default MobileLaunchPage;
+
+import React from './react';
+import { SEO } from '@/components / SEO';
+import { AppLayout } from '@/layout / AppLayout';
+import { MobileLaunchHero } from '@/components / mobile - app / MobileLaunchHero';
+import { MobileFeatureShowcase } from '@/components / mobile - app / MobileFeatureShowcase';
+import { AppTestimonials } from '@/components / mobile - app / AppTestimonials';
+import { MobileEmailCapture } from '@/components / mobile - app / MobileEmailCapture';
+import { AppStoreBanner } from '@/components / mobile - app / AppStoreBanner';
+import { QrCodeDownload } from '@/components / mobile - app / QrCodeDownload';
+import { CommunityTrust } from '@/components / mobile - app / CommunityTrust';
+const MobileLaunchPage: React.FC = () => {
+  return (
+    <AppLayout>;
+      <SEO;
+        title="Get the Zion App - AI Marketplace in Your Pocket";
+        description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.";
+        keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app";
+      />;
+      <MobileLaunchHero />;
+      <MobileFeatureShowcase />;
+      <QrCodeDownload />;
+      <CommunityTrust />;
+      <AppTestimonials />;
+      <MobileEmailCapture />;
+      <AppStoreBanner />;
+
+},
+
+
+export default MobileLaunchPage;
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { SEO } from "@/components/SEO",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -214,6 +272,7 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
+<<<<<<< HEAD
 const MobileLaunchPage: React.FC = () => {;
 <<<<<<< HEAD
   return (;
@@ -312,6 +371,8 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 const MobileLaunchPage:React.FC = () => {;
   return (;
@@ -346,6 +407,7 @@ export default MobileLaunchPage,; const MobileLaunchPage: React.FC = () => {
   );
 },;
 export default MobileLaunchPage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -362,3 +424,5 @@ const MobileLaunchPage: React.FC = () => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

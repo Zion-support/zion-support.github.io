@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +125,8 @@ export default function ComprehensiveServicesOverviewPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Check,
   Star,
@@ -267,18 +270,23 @@ const [sortBy, setSortBy] = useState<
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
         .length,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ];
 
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 =======
@@ -493,6 +501,8 @@ export default function ComprehensiveServicesOverviewPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const matchesCategory =
         selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch =
@@ -542,12 +552,16 @@ return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
     0
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -595,6 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           href='https://ziontechgroup.com/comprehensive-services-overview-2025'
         />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -769,6 +784,8 @@ function ComprehensiveServicesOverviewPage() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
         {/* Hero Section */}
@@ -817,6 +834,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
               {/* Key Benefits */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -883,6 +901,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30'>
                   <div className='text-4xl mb-4'>🚀</div>
@@ -913,17 +933,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Military-grade security with quantum-resistant encryption
                     and AI threat detection
                   </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             >;"
@@ -1552,6 +1577,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Search and Filters */}
 <section className='px-6 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -1696,6 +1723,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 
@@ -1784,6 +1812,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                     {category.count}
                   </span>
@@ -1817,6 +1847,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
@@ -2130,6 +2161,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                     >
                       {/* Popular Badge */}
@@ -2196,6 +2229,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className='text-xs text-white/60'>Trial</div>
                           </div>
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2320,6 +2354,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         {/* CTA */}
                         <a
                           href={service.link}
@@ -2350,6 +2386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       animate={{ opacity: 1, coordinate_x: 0 }}
                       exit={{ opacity: 0, coordinate_x: 30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
@@ -2377,6 +2414,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
                     >
                       <div className='flex flex-col lg:flex-row gap-6'>
@@ -2392,6 +2431,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           )}
                         </div>
                         {/* Center - Service Details */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 =======
@@ -2514,6 +2554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex-1'>
                           <div className='flex items-start justify-between mb-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2537,6 +2579,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                             </div>
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2630,6 +2673,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           {/* Features Grid */}
 <div className='grid grid-cols-2 gap-2 mb-4'>
                             {service.features
@@ -2665,6 +2710,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>
                           </div>
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
@@ -2710,6 +2756,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         {/* Right Side - CTA and Category */}
 <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                           <div className='text-right'>
@@ -2727,6 +2775,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
                           <a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2844,6 +2893,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             href={service.link}
 target='_blank'
                             rel='noopener noreferrer'
@@ -2859,6 +2910,7 @@ target='_blank'
                 </AnimatePresence>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2868,6 +2920,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-overview-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
@@ -2926,6 +2981,7 @@ className='text-center py-20'
                 </p>
               </motion.div>
         {/* Contact CTA */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3042,6 +3098,8 @@ className='text-center py-20'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-overview-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='px-6 pb-20'>
           <div className='max-w-4xl mx-auto'>
             <motion.div
@@ -3083,6 +3141,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-overview-2025.tsx
 <<<<<<< HEAD
@@ -3221,3 +3280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-overview-2025.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

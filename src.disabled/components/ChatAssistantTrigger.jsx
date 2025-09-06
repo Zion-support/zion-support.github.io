@@ -19,6 +19,7 @@
 <<<<<<< HEAD
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 <<<<<<< HEAD
@@ -26,6 +27,10 @@
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -69,6 +74,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""

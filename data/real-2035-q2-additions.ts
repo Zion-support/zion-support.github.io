@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
@@ -29,11 +30,47 @@
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+      'Intent classification + prioritization'
+      'On-brand response drafting'
+      'Automatic polite follow-ups'
+      'Lead/contact enrichment'
+      'Analytics and response SLAs'
+    ]
+    popular: true
+    icon: '📧'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-responder'
+    marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs'
+    targetAudience: 'Sales, support, founder-led teams'
+    trialDays: 14
+    setupTime: '30 minutes'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
+    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
+    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
+    roi: 'Cuts manual email time by 60–80%'
+    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
+    marketSize: '$10B+ email productivity'
+    growthRate: '15% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
       'Lead/contact enrichment',
 
+<<<<<<< HEAD
       'Intent classification + prioritization',
       'On - brand response drafting',
       'Automatic polite follow - ups',
@@ -48,6 +85,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Intent classification + prioritization',
+      'On - brand response drafting',
+      'Automatic polite follow - ups',
+      'Lead / contact enrichment',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Analytics and response SLAs',
     ],
     popular: true,'
@@ -63,9 +110,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '30 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Gmail / Outlook APIs', 'LLM', 'Webhook'],'
@@ -93,9 +146,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
   {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -122,9 +181,15 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Webhooks + API',
     ],
     popular: false,'
@@ -143,6 +208,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Twilio', 'Next.js', 'Vercel / Netlify'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['HubSpot', 'Sheets', 'Slack'],
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],
     roi: '24x higher completion on mobile',
@@ -170,6 +241,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
@@ -182,6 +254,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Industry templates',
       'Calendar + task sync',
       'Benchmark KPIs',
@@ -189,6 +267,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Role - based views',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🗂️',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -206,6 +285,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Agency ops', 'Clinic ops', 'Boutique retail'],
     roi: 'Saves 3–5 hrs / week per user',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     competitors: ['Notion templates', 'ClickUp'],
     market_size: '$3B productivity niche',
     growth_rate: '8% CAGR',
@@ -235,6 +320,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'QR tickets + check-in',
       'Email/SMS reminders',
@@ -250,11 +336,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Email / SMS reminders',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Agenda builder',
       'Feedback forms',
       'Post - event reports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🎟️',
 
     color: 'from - pink - 600 to - rose - 700',
@@ -269,6 +362,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Stripe', 'Twilio'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Zoom', 'Google Calendar', 'Slack'],
     use_cases: ['Webinars', 'Town halls', 'Customer training'],
     roi: 'Saves 50% ops time per event',
@@ -302,6 +401,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
@@ -313,6 +413,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Custom referral links',
       'UTM attribution',
       'Rule - based commissions',
@@ -320,6 +426,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Fraud checks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔗',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -334,6 +441,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Postgres'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Stripe', 'Paddle', 'Shopify'],
     use_cases: ['SaaS referrals', 'Course affiliates', 'Partner programs'],
     roi: '+15–25% new revenue from partners',
@@ -369,6 +482,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
@@ -380,6 +494,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Page + event analytics',
       'Funnels + cohorts',
       'Weekly email summaries',
@@ -387,6 +507,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'No cookies mode',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - sky - 600 to - indigo - 700',
@@ -401,6 +522,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Edge analytics'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Shopify', 'WordPress'],
     use_cases: ['Website analytics', 'Campaign tracking'],
     roi: 'Clarity on what converts; 10–20% lift',
@@ -436,6 +563,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
@@ -449,12 +577,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Email - to - ticket',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'KB + article templates',
       'SLAs + escalations',
       'Client portal',
       'Reports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🆘',
 
     color: 'from - blue - 600 to - indigo - 700',
@@ -469,6 +604,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'Postgres'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Okta', 'Google', 'Slack'],
     use_cases: ['IT support', 'Asset requests', 'Approvals'],
     roi: '25–40% faster resolution time',
@@ -503,6 +644,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager',
@@ -516,12 +658,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Self - serve returns portal',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Label generation',
       'Return reasons analytics',
       'Inventory sync',
       'Notifications',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📦',
 
     color: 'from - violet - 600 to - fuchsia - 700',
@@ -536,6 +685,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Shopify API', 'Next.js'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Shopify', 'Shippo'],
     use_cases: ['RMAs', 'Return analytics'],
     roi: 'Reduce returns costs by 10–20%',
@@ -570,6 +725,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
@@ -581,6 +737,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Sequences + delays',
       'Inbox integration',
       'Smart stop on reply',
@@ -588,6 +750,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytics',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📨',
 
     color: 'from - cyan - 600 to - teal - 700',
@@ -599,6 +762,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '20 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -611,6 +775,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Email APIs', 'LLM'],'
@@ -631,6 +800,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'podcast - transcription - service',
     name: 'Podcast Transcription Service',
@@ -642,6 +812,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Fast transcripts',
       'Timestamps + chapters',
       'Summaries + highlights',
@@ -649,6 +825,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Glossary',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🎙️',
 
     color: 'from - indigo - 600 to - blue - 700',
@@ -663,6 +840,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Whisper / ASR', 'Next.js'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['RSS', 'YouTube'],
     use_cases: ['Accessibility', 'SEO content'],
     roi: 'Saves 2–4 hrs / episode',
@@ -698,6 +881,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
       'On-page audits',
     id: 'ai - seo - content - optimizer',
@@ -711,12 +895,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'On - page audits',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Topic clustering',
       'SERP intent match',
       'Internal link hints',
       'Rewrite suggestions',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔎',
 
     color: 'from - emerald - 600 to - green - 700',
@@ -728,6 +919,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '20 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -739,6 +931,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Crawler', 'LLM'],'
@@ -759,6 +956,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
@@ -770,6 +968,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Content repurposing',
       'Calendar + auto - times',
       'Hashtag + emoji assistant',
@@ -777,6 +981,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Client approvals',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📆',
 
     color: 'from - fuchsia - 600 to - pink - 700',
@@ -788,6 +993,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '15 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -800,6 +1006,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Scheduler', 'LLM'],'
@@ -820,6 +1031,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
@@ -831,6 +1043,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Firmographics',
       'Role detection',
       'Validated email signals',
@@ -838,6 +1056,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Usage dashboards',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧩',
 
     color: 'from - blue - 600 to - sky - 700',
@@ -849,6 +1068,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 hour',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -861,6 +1081,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Crawler', 'Graph', 'API'],'
@@ -881,6 +1106,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
@@ -892,6 +1118,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Geo rules',
       'IAB TCF',
       'Preference center',
@@ -899,6 +1131,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - brand themes',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '✅',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -910,6 +1143,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 hour',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -922,6 +1156,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     technology: ['JS widget', 'API'],'
@@ -942,6 +1181,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'cookie - scanner - pro',
     name: 'Cookie Scanner Pro',
@@ -953,6 +1193,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Site scan',
       'Tracker classification',
       'Policy generator',
@@ -960,6 +1206,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CI hook',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🍪',
 
     color: 'from - amber - 600 to - yellow - 700',
@@ -971,6 +1218,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '10 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -983,6 +1231,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     technology: ['Crawler', 'Classifier'],'
@@ -1003,6 +1256,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'statuspage - sla - tracker',
     name: 'StatusPage SLA Tracker',
@@ -1014,6 +1268,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Incident log',
       'Public status page',
       'SLA calculator',
@@ -1021,6 +1281,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Exports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📈',
 
     color: 'from - sky - 600 to - cyan - 700',
@@ -1035,6 +1296,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'CRON'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Pingdom', 'UptimeRobot'],
     use_cases: ['SLA reports', 'Status page'],
     roi: 'Reduce support tickets ~20%',
@@ -1081,6 +1348,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Qualifying flows',
       'Calendar booking',
       'CRM routing',
@@ -1114,6 +1387,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
@@ -1125,6 +1399,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Request intake',
       'Identity check',
       'Triage + workflow',
@@ -1157,6 +1437,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'feature - flag - auditor',
     name: 'Feature Flag Auditor',
@@ -1170,6 +1451,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -1177,6 +1464,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CI integration',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🚩',
 
     color: 'from - rose - 600 to - pink - 700',
@@ -1218,11 +1506,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  {
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1242,6 +1542,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Slow query capture',
       'Index suggestions',
       'Risk scoring',
@@ -1249,6 +1555,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Rollback assist',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🗄️',
 
     color: 'from - blue - 700 to - indigo - 800',
@@ -1260,6 +1567,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 day',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
       'Slow query capture','
@@ -1271,6 +1579,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['pg_stat_statements', 'Advisor'],'
@@ -1291,6 +1604,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 's3 - lifecycle - optimizer',
     name: 'S3 Lifecycle Optimizer',
@@ -1302,6 +1616,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Usage analysis',
       'Rule suggestions',
       'Cost simulator',
@@ -1309,6 +1629,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Alerting',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🗂️',
 
     color: 'from - emerald - 700 to - teal - 800',
@@ -1320,6 +1641,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 hour',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1332,6 +1654,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Cloud & FinOps',
     real_service: true,'
     technology: ['AWS S3', 'Cost models'],'
@@ -1352,6 +1679,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'pii - discovery - scanner',
     name: 'PII Discovery Scanner',
@@ -1363,6 +1691,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Connectors',
       'Sensitive entity detection',
       'Sampling with redaction',
@@ -1370,6 +1704,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Alerting',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🕵️',
 
     color: 'from - red - 700 to - rose - 800',
@@ -1381,6 +1716,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–2 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1393,6 +1729,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Quality & Monitoring',
     real_service: true,'
     technology: ['DLP', 'Connectors'],'
@@ -1413,9 +1754,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'api-breaking-change-watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1432,13 +1780,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:;'
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     features: [
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     features: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+    features: [
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'api - breaking - change - watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1474,9 +1833,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 hour',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['OpenAPI', 'GraphQL'],'
@@ -1495,6 +1860,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.5,
     reviews: 3,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 
@@ -1625,20 +1991,165 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 5
   }
   {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+=======
+  {
+
+  {
+    id: 'postgres-index-advisor-pro'
+    name: 'Postgres Index Advisor Pro'
+    tagline: 'Index recommendations and controlled PR rollouts'
+    price: '$79'
+    period: '/month'
+    description:
+      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
+    features: [
+      'Slow query capture'
+      'Index suggestions'
+      'Risk scoring'
+      'PR generation'
+      'Rollback assist'
+    ]
+    popular: true
+    icon: '🗄️'
+    color: 'from-blue-700 to-indigo-800'
+    textColor: 'text-blue-300'
+    link: 'https://ziontechgroup.com/services/postgres-index-advisor-pro'
+    marketPosition: 'Productized tuning for small teams'
+    targetAudience: 'Data + platform teams'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['pg_stat_statements', 'Advisor']
+    integrations: ['GitHub Actions']
+    useCases: ['DB tuning', 'Perf boosts']
+    roi: 'Cut query costs 20–50%'
+    competitors: ['pganalyze (adjacent)']
+    marketSize: '$2B DB tuning'
+    growthRate: '9% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Collector + advisor + PRs'
+    launchDate: '2025-08-20'
+    customers: 15
+    rating: 4.6
+    reviews: 5
+  }
+  {
+    id: 's3-lifecycle-optimizer'
+    name: 'S3 Lifecycle Optimizer'
+    tagline: 'Move objects between storage classes to cut costs'
+    price: '$59'
+    period: '/month'
+    description:
+      'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
+    features: [
+      'Usage analysis'
+      'Rule suggestions'
+      'Cost simulator'
+      'Change sets'
+      'Alerting'
+    ]
+    popular: false
+    icon: '🗂️'
+    color: 'from-emerald-700 to-teal-800'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer'
+    marketPosition: 'No-friction cost hygiene'
+    targetAudience: 'Cloud + finops'
+    trialDays: 7
+    setupTime: '1 hour'
+    category: 'Cloud & FinOps'
+    realService: true
+    technology: ['AWS S3', 'Cost models']
+    integrations: ['AWS']
+    useCases: ['Storage hygiene', 'Cost cuts']
+    roi: 'Save 10–30% storage spend'
+    competitors: ['Kubecost (adjacent)']
+    marketSize: '$3B cloud cost'
+    growthRate: '12% CAGR'
+    variant: 'holographic-matrix'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Analyzer + simulator + rule export'
+    launchDate: '2025-08-20'
+    customers: 17
+    rating: 4.5
+    reviews: 4
+  }
+  {
+    id: 'pii-discovery-scanner'
+    name: 'PII Discovery Scanner'
+    tagline: 'Scan buckets and DBs for PII/PHI with evidence exports'
+    price: '$89'
+    period: '/month'
+    description:
+      'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
+    features: [
+      'Connectors'
+      'Sensitive entity detection'
+      'Sampling with redaction'
+      'Findings export'
+      'Alerting'
+    ]
+    popular: true
+    icon: '🕵️'
+    color: 'from-red-700 to-rose-800'
+    textColor: 'text-red-300'
+    link: 'https://ziontechgroup.com/services/pii-discovery-scanner'
+    marketPosition: 'Compliance-first discovery'
+    targetAudience: 'Security, compliance'
+    trialDays: 7
+    setupTime: '1–2 days'
+    category: 'Quality & Monitoring'
+    realService: true
+    technology: ['DLP', 'Connectors']
+    integrations: ['AWS', 'GCP', 'Snowflake']
+    useCases: ['Compliance audits', 'Risk reduction']
+    roi: 'Avoid incidents and fines'
+    competitors: ['Google DLP', 'AWS Macie']
+    marketSize: '$5B data security'
+    growthRate: '15% CAGR'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Connectors + scan jobs + exports'
+    launchDate: '2025-08-20'
+    customers: 13
+    rating: 4.6
+    reviews: 5
+  }
+  {
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
     price: '$39',
     period: '/month',
     description:;
+<<<<<<< HEAD
       'Browser - based recorder creates resilient journeys; run on a schedule and alert on SLO errors or latency.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Recorder',
       'Selector healing',
       'Schedules',
@@ -1674,9 +2185,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '30 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Observability',
     real_service: true,'
     technology: ['Playwright'],'
@@ -1697,6 +2214,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
@@ -1709,6 +2227,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Policy inventory',
       'Usage analysis',
       'Recommendations',
@@ -1716,6 +2240,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Alerting',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔐',
 
     color: 'from - blue - 700 to - slate - 800',
@@ -1727,6 +2252,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–2 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1739,6 +2265,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Cloud & FinOps',
     real_service: true,'
     technology: ['AWS / GCP / IAM'],'
@@ -1759,6 +2290,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'warehouse - cost - optimizer',
     name: 'Data Warehouse Cost Optimizer',
@@ -1770,6 +2302,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Query profiling',
       'Size / schedule proposals',
       'Cost simulator',
@@ -1777,6 +2315,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Alerts',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🧱',
 
     color: 'from - indigo - 700 to - violet - 800',
@@ -1788,6 +2327,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–3 days',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1800,6 +2340,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Cloud & FinOps',
     real_service: true,'
     technology: ['Snowflake / BigQuery APIs'],'
@@ -1820,6 +2365,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'email - warmup - monitor',
     name: 'Email Warmup & Reputation Monitor',
@@ -1831,6 +2377,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Warmup campaigns',
       'Seed inbox tests',
       'Domain / auth checks',
@@ -1838,6 +2390,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔥',
 
     color: 'from - orange - 600 to - rose - 700',
@@ -1849,6 +2402,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '20 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1861,6 +2415,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: false,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Developer Tools',
     real_service: true,'
     technology: ['Email', 'Seeds'],'
@@ -1881,6 +2440,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 
     id: 'ai - meeting - to - ticket',
     name: 'AI Meeting‑to‑Ticket Copilot',
@@ -1892,6 +2452,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Transcription',
       'Action extraction',
       'Ticket creation',
@@ -1899,6 +2465,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Summaries',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📝',
 
     color: 'from - cyan - 700 to - blue - 800',
@@ -1910,6 +2477,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '30 minutes',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
   {}
 '
@@ -1922,6 +2490,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'AI & Data',
     real_service: true,'
     technology: ['ASR', 'LLM'],'
@@ -1942,6 +2515,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 <<<<<<< HEAD
 ];	{
+<<<<<<< HEAD
 
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1957,10 +2531,16 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     features: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 ];	{}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
 		popular: true;'
@@ -1972,6 +2552,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs';
 =======
 '
@@ -1995,11 +2581,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';'
 		launchDate: '2025-08-20';
 		customers: 48;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 12
 =======
 		reviews: 12;
@@ -2024,6 +2617,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Faster than legacy survey tools, better mobile UX';
 =======
 '
@@ -2047,11 +2646,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Survey builder + delivery channels + analytics + export';'
 		launchDate: '2025-08-20';
 		customers: 22;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 9
 =======
 		reviews: 9;
@@ -2091,11 +2697,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Templates + KPI widgets + export';'
 		launchDate: '2025-08-20';
 		customers: 18;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 7
 =======
 		reviews: 7;
@@ -2121,9 +2734,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Lightweight alternative to enterprise suites',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Marketing, HR, community teams';
 		trialDays: 14;'
 		setupTime: '1 hour';'
@@ -2142,11 +2761,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Ticketing + agenda + comms + analytics';'
 		launchDate: '2025-08-20';
 		customers: 31;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 11
 =======
 		reviews: 11;
@@ -2170,9 +2796,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Simple and affordable affiliate ops',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'SaaS, courses, marketplaces';
 		trialDays: 7;'
 		setupTime: '45 minutes';'
@@ -2191,11 +2823,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Link generator + rules + exports';'
 		launchDate: '2025-08-20';
 		customers: 12;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -2218,6 +2857,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/smb-analytics-lite',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Simpler than GA4, clearer funnels for SMBs';
 =======
 '
@@ -2241,11 +2886,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Tracker script + dashboard';'
 		launchDate: '2025-08-20';
 		customers: 40;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 8
 =======
 		reviews: 8;
@@ -2269,9 +2921,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Modern alternative to legacy ITSM for SMBs',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'MSPs, internal IT';
 		trialDays: 14;'
 		setupTime: '1–3 days';'
@@ -2290,11 +2948,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Ticketing + KB + SLAs + reports';'
 		launchDate: '2025-08-20';
 		customers: 16;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 6
 =======
 		reviews: 6;
@@ -2318,9 +2983,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Affordable alternative to enterprise returns suites',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'DTC brands, Shopify stores';
 		trialDays: 14;'
 		setupTime: '2 hours';'
@@ -2339,11 +3010,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Portal + labels + analytics';'
 		launchDate: '2025-08-20';
 		customers: 14;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -2367,9 +3045,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Lightweight + affordable outreach',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Sales, success, support';
 		trialDays: 7;'
 		setupTime: '20 minutes';'
@@ -2388,11 +3072,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Sequencer + inbox + analytics';'
 		launchDate: '2025-08-20';
 		customers: 28;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 8
 =======
 		reviews: 8;
@@ -2416,9 +3107,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Affordable + content-ready outputs',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Podcasters, media teams';
 		trialDays: 7;'
 		setupTime: '10 minutes';'
@@ -2437,11 +3134,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Uploader + ASR + export';'
 		launchDate: '2025-08-20';
 		customers: 20;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 6
 =======
 		reviews: 6;
@@ -2465,9 +3169,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Content-focused vs technical SEO suites',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Content teams, agencies';
 		trialDays: 7;'
 		setupTime: '20 minutes';'
@@ -2486,11 +3196,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Crawler + editor plugin + suggestions';'
 		launchDate: '2025-08-20';
 		customers: 33;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 10
 =======
 		reviews: 10;
@@ -2514,9 +3231,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Repurpose-first for SMBs',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Agencies, creators';
 		trialDays: 7;'
 		setupTime: '15 minutes';'
@@ -2535,11 +3258,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Calendar + generator + queue';'
 		launchDate: '2025-08-20';
 		customers: 26;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 7
 =======
 		reviews: 7;
@@ -2563,9 +3293,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Usage-based simple pricing',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'B2B SaaS, sales ops';
 		trialDays: 14;'
 		setupTime: '1 hour';'
@@ -2584,11 +3320,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'REST + dashboard + quotas';'
 		launchDate: '2025-08-20';
 		customers: 9;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -2611,6 +3354,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/consent-management-cmp',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Fast to implement, compliant defaults';
 =======
 '
@@ -2634,11 +3383,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Banner + preferences + logs';'
 		launchDate: '2025-08-20';
 		customers: 37;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 10
 =======
 		reviews: 10;
@@ -2662,9 +3418,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Affordable compliance hygiene',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Websites, agencies';
 		trialDays: 7;'
 		setupTime: '10 minutes';'
@@ -2683,11 +3445,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Scanner + policy generator';'
 		launchDate: '2025-08-20';
 		customers: 19;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -2725,11 +3494,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Monitors + incidents + pages';'
 		launchDate: '2025-08-20';
 		customers: 11;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -2753,9 +3529,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Focused on B2B lead capture',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'B2B SaaS, agencies';
 		trialDays: 14;'
 		setupTime: '30 minutes';'
@@ -2774,11 +3556,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Widget + flows + routing';'
 		launchDate: '2025-08-20';
 		customers: 23;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 7
 =======
 		reviews: 7;
@@ -2816,11 +3605,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Portal + workflow + exports';'
 		launchDate: '2025-08-20';
 		customers: 10;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -2858,11 +3654,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Scanner + PR bot';'
 		launchDate: '2025-08-20';
 		customers: 8;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -2900,11 +3703,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Collector + advisor + PRs';'
 		launchDate: '2025-08-20';
 		customers: 15;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -2942,11 +3752,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Analyzer + simulator + rule export';'
 		launchDate: '2025-08-20';
 		customers: 17;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -2970,9 +3787,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Compliance-first discovery',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Security, compliance';
 		trialDays: 7;'
 		setupTime: '1–2 days';'
@@ -2991,11 +3814,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Connectors + scan jobs + exports';'
 		launchDate: '2025-08-20';
 		customers: 13;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 5
 =======
 		reviews: 5;
@@ -3033,11 +3863,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Registry + diff engine + CI';'
 		launchDate: '2025-08-20';
 		customers: 12;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -3061,9 +3898,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Affordable synthetic monitoring',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'QA, SRE, growth';
 		trialDays: 7;'
 		setupTime: '30 minutes';'
@@ -3082,11 +3925,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Recorder + runner + alerts';'
 		launchDate: '2025-08-20';
 		customers: 21;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 6
 =======
 		reviews: 6;
@@ -3124,11 +3974,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Collector + analyzer + PRs';'
 		launchDate: '2025-08-20';
 		customers: 9;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -3166,11 +4023,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Analyzer + simulator + PRs';'
 		launchDate: '2025-08-20';
 		customers: 7;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 3
 =======
 		reviews: 3;
@@ -3208,11 +4072,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Warmup + tests + alerts';'
 		launchDate: '2025-08-20';
 		customers: 16;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 4
 =======
 		reviews: 4;
@@ -3236,9 +4107,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		marketPosition: 'Bridges meetings to delivery',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Engineering, product, CX';
 		trialDays: 7;'
 		setupTime: '30 minutes';'
@@ -3258,18 +4135,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		launchDate: '2025-08-20';
 		customers: 24;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 ;
 
 	}
 ];
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 		rating: 4 && 4.6,
 
 		reviews: 6
+<<<<<<< HEAD
 	}
 ];
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+;
+
+	}
+];
+
+	}
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4270,6 +5165,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		rating: 4.6
 		reviews: 6
 
@@ -5278,6 +6175,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 	}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -5285,12 +6186,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 
+<<<<<<< HEAD
 	}
 
 ];
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;'
 	mobile: '+1 302 464 0950',;'
@@ -6287,6 +7195,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.6;
 		reviews: 6;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -6294,12 +7203,25 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 	}
 ];
 
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

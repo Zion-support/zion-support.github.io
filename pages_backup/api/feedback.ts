@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data }) }
 function bad(res: NextApiResponse, msg: string, code;
@@ -29,7 +32,10 @@ function bad(res: NextApiResponse, msg: string, code = 400) {}
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {}
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     process.env as Record<string, string | undefined>;
   if (!FIREBASE_PROJECT_ID |!FIREBASE_CLIENT_EMAIL |!FIREBASE_PRIVATE_KEY)
     return false;
@@ -48,6 +54,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const db = admin.firestore();
     await db.collection('interaction_feedback').doc(doc.id).set(doc);
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 
 
@@ -59,6 +66,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return true;
   } catch (e) {}
     return false;
@@ -113,6 +122,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback.ts
   const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/feedback.ts
 <<<<<<< HEAD
   return ok(res, { id: doc && doc.id });
@@ -261,13 +271,18 @@ async function tryWriteToFirestore(req, res) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false
   try {
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const admin = require("firebase-admin")
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID
           clientEmail: FIREBASE_CLIENT_EMAIL
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
@@ -481,13 +496,19 @@ async function tryWriteToFirestore(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return ok(res, { id: doc.id });
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

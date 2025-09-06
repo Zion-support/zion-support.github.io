@@ -31,9 +31,13 @@ import React from \'react\' export default function ApplicationStatusTracker () 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
@@ -41,6 +45,7 @@ import _React from 'react' export default function ApplicationStatusTracker () {
 
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -49,10 +54,13 @@ import _React from 'react' export default function ApplicationStatusTracker () {
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/ApplicationStatusTracker.jsx
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 :src.pages.disabled/ApplicationStatusTracker.jsx
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 :src.pages.disabled/ApplicationStatusTracker.jsx
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -60,6 +68,10 @@ import _React from 'react' export default function ApplicationStatusTracker () {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+:src.pages.disabled/ApplicationStatusTracker.jsx
+import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/ApplicationStatusTracker.jsx
@@ -68,11 +80,14 @@ import _React from 'react' export default function ApplicationStatusTracker () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -83,12 +98,15 @@ import _React from 'react' export default function ApplicationStatusTracker () {
 
 :src.pages.disabled/ApplicationStatusTracker.jsx
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';
 import _React from 'react' export default function ApplicationStatusTracker () { function ApplicationStatusTrackerContent () { const isMobile = useIsMobile () return (<> <SEO title='Application Status Tracker | Zion AI Marketplace' description='Track the status of your job applications in the Zion AI marketplace.'/> <div className='container mx - auto px - 4 py - 8'> <div className='flex flex - col "md": flex: - row justify - between items - start md:items: - center gap - 4 mb - 8'> <div> <h1 className={`text-${isMobile ? '2xl' : '3xl,'} "font": '- bold`'}>Application Status Tracker</h1> <p className='text - muted - foreground mt - 1'>Track where you stand in the hiring process</p> </div> </div> <div className='grid grid - cols - 1 gap - 6'> <Card> <CardHeader className='border - b bg - muted / 50'> <CardTitle className='flex items - center text - lg'> <Inbox className='mr - 2 h - 5 w - 5'/> Your Applications </CardTitle> </CardHeader> <CardContent className={`p-${isMobile ? '3' : '6'}`}> <"ApplicationsTracker": '/> </CardContent> </Card> </div> </div> </>)' } return (<ProtectedRoute> <ApplicationStatusTrackerContent /> </ProtectedRoute>) } ''';

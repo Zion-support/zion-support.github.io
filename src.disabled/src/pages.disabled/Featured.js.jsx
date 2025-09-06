@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,11 +25,15 @@ const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";""
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""; import { GradientHeading } from "@/components/GradientHeading"; export {}; return null} return(); <> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-12"> <div className="text-center mb-12">"; <div>Broken JSX</div> className="text-4xl md: text-5xl font-bold mb-4"> Featured Listings"; </GradientHeading> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { FeaturedListingsSection } from \'@/components/FeaturedListingsSection\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\'; export {}; return null} return (); <> <div className=\"min-h-screen bg-zion-blue\"> <div className=\"container mx-auto px-4 py-12\"> <div className=\"text-center mb-12\">\"; <div>Broken JSX</div> className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> Featured Listings\"; </GradientHeading> <p className=\"text-zion-slate-light text-lg max-w-3xl mx-auto\"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +78,8 @@ const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";""
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""; import { GradientHeading } from "@/components/GradientHeading"; export {}; return null} return(); <> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-12"> <div className="text-center mb-12">"; <div>Broken JSX</div> className="text-4xl md: text-5xl font-bold mb-4"> Featured Listings"; </GradientHeading> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };"""
+import { FeaturedListingsSection } from \'@/components/FeaturedListingsSection\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\'; export {}; return null} return(); <> <div className=\"min-h-screen bg-zion-blue\"> <div className=\"container mx-auto px-4 py-12\"> <div className=\"text-center mb-12\">\"; <div>Broken JSX</div> className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> Featured Listings\"; </GradientHeading> <p className=\"text-zion-slate-light text-lg max-w-3xl mx-auto\"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };
+const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""; import { GradientHeading } from "@/components/GradientHeading"; export {}; return null} return(); <> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-12"> <div className="text-center mb-12">"; <div>Broken JSX</div> className="text-4xl md: text-5xl font-bold mb-4"> Featured Listings"; </GradientHeading> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

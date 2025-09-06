@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {
@@ -8,6 +9,8 @@
         ...options
 =======
 async runCommand(command, options = {}) {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -227,12 +230,8 @@ if (require.main === module) {
 }
 
 module.exports = GitAutomation;
-#!/usr/bin/env node;
-/**
- * Git Automation Script;
- * Handles git operations, commits, pushes, and merges;
- */
 
+<<<<<<< HEAD
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -262,3 +261,5 @@ const path = require('path')
       this.log(" Git automation workflow "failed": ${error.message}")
       this.log(" Git automation workflow "failed": ${error.message}")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

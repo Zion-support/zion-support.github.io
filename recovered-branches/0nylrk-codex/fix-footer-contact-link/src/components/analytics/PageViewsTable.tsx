@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -13,6 +14,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -20,6 +25,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,12 +45,16 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Skeleton } from '@/components / ui / skeleton';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
 import { useState } from './react';
+<<<<<<< HEAD
 =======
 import {useQuery} from "@tanstack/react-query";"
 import {supabase} from "@/integrations/supabase/client";"
@@ -72,11 +82,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton","
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
 import { useState } from "react",'
+=======
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
+;
+
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { useState } from "react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -87,6 +109,9 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -94,6 +119,7 @@ const timeRangeToInterval = {
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -188,6 +214,9 @@ const timeRangeToInterval = {'
   '365d': { days: 365, interval: 'month' }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     {formatPathName(page.path)}
                   </div>"
                   <div className="flex items-center gap-3">"
@@ -230,6 +259,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
+<<<<<<< HEAD
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;                          style={{ width: `${percentage}%` }}
 =======
 }";
@@ -252,6 +282,18 @@ const timeRangeToInterval = {;'
 `
                           style={{ width: `${percentage}%` }}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
+
+const timeRangeToInterval = {;
+  '1d': { days: 1, interval: 'hour' },;
+  '7d': { days: 7, interval: 'day' },;
+  '30d': { days: 30, interval: 'day' },;
+  '90d': { days: 90, interval: 'week' },;
+  '365d': { days: 365, interval: 'month' }
+
+                          style={{ width: `${percentage}%` }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         />;
                       </div>;"
                       <span className="text-xs text-zion-slate">{percentage}%</span>;
@@ -267,6 +309,7 @@ const timeRangeToInterval = {;'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -274,12 +317,18 @@ const timeRangeToInterval = {;'
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -293,8 +342,9 @@ const timeRangeToInterval = {;'
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-;}
 ;
 export /**;
  * PageViewsTable - Function description;
@@ -335,18 +385,18 @@ if (return 'Home Page', ) {}
 ;
 <<<<<<< HEAD
   return (
-    <Card className="bg - zion - blue - dark border - zion - blue-light">;
-      <CardHeader className="pb-2">;
-        <div className="flex flex - col sm:flex - row justify - between sm:items-center">;
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardHeader className="pb - 2">;
+        <div className="flex flex - col sm:flex - row justify - between sm:items - center">;
           <div>;
-            <CardTitle className="text - white text-lg">Top Pages</CardTitle>;
-            <CardDescription className="text - zion - slate-light">Most viewed pages on your platform</CardDescription>;
+            <CardTitle className="text - white text - lg">Top Pages</CardTitle>;
+            <CardDescription className="text - zion - slate - light">Most viewed pages on your platform</CardDescription>;
           </div>;
           <Select value={time_range} onValueChange={(value: TimeRange) => setTimeRange (value)}>;
-            <SelectTrigger className="w - 28 mt - 2 sm:mt - 0 bg - zion - blue border - zion - blue - light text - zion - slate-light">;
+            <SelectTrigger className="w - 28 mt - 2 sm:mt - 0 bg - zion - blue border - zion - blue - light text - zion - slate - light">;
               <SelectValue placeholder="Time Range" />;
             </SelectTrigger>;
-            <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
+            <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
               <SelectItem value="1d">Last 24h</SelectItem>;
               <SelectItem value="7d">Last 7 days</SelectItem>;
               <SelectItem value="30d">Last 30 days</SelectItem>;
@@ -377,9 +427,10 @@ if (return 'Home Page', ) {}
       </CardHeader>;
 <<<<<<< HEAD
       <CardContent>;
-        <div className="space-y-4">;
+        <div className="space - y-4">;
           {is_loading ? (
             Array (5).fill (0).map ((_, i) => (
+<<<<<<< HEAD
               <div key={i} className="flex items - center justify-between">;
                 <Skeleton className="h - 4 w - 40 bg - zion - blue-light" />;
                 <div className="flex items - center gap-2">;
@@ -396,6 +447,13 @@ if (return 'Home Page', ) {}
                   <Skeleton className="h - 4 w - 10 bg - zion - blue - light" />;"
                   <Skeleton className="h - 6 w - 32 bg - zion - blue - light" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <div key={i} className="flex items - center justify - between">;
+                <Skeleton className="h - 4 w - 40 bg - zion - blue - light" />;
+                <div className="flex items - center gap - 2">;
+                  <Skeleton className="h - 4 w - 10 bg - zion - blue - light" />;
+                  <Skeleton className="h - 6 w - 32 bg - zion - blue - light" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
               </div>))) : page_views && page_views.length > 0 ? (
             page_views.map ((page, index) => {'
@@ -403,24 +461,25 @@ if (return 'Home Page', ) {}
 ;
 <<<<<<< HEAD
               return (
-                <div key={index} className="flex items - center justify-between">;
-                  <div className="text - zion - slate - light font-medium">;
+                <div key={index} className="flex items - center justify - between">;
+                  <div className="text - zion - slate - light font - medium">;
                     {formatPathName (page.path)}
                   </div>;
-                  <div className="flex items - center gap-3">;
-                    <span className="text - white font-medium">{page.count}</span>;
-                    <div className="w - 32 flex items - center gap-2">;
-                      <div className="flex - 1 h - 2 bg - zion - blue - light rounded - full overflow-hidden">;
+                  <div className="flex items - center gap - 3">;
+                    <span className="text - white font - medium">{page.count}</span>;
+                    <div className="w - 32 flex items - center gap - 2">;
+                      <div className="flex - 1 h - 2 bg - zion - blue - light rounded - full overflow - hidden">;
                         <div;
-                          className="h - full bg - gradient - to - r from - zion - purple to - zion-cyan";
+                          className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
-                      <span className="text - xs text - zion-slate">{percentage}%</span>;
+                      <span className="text - xs text - zion - slate">{percentage}%</span>;
                     </div>;
                   </div>;
                 </div>);
             })) : (
+<<<<<<< HEAD
             <div className="text - center py - 8 text - zion-slate">;
 =======
               return ("
@@ -444,6 +503,9 @@ if (return 'Home Page', ) {}
             })) : ("
             <div className="text - center py - 8 text - zion - slate">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <div className="text - center py - 8 text - zion - slate">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               No page view data available for this time period;
             </div>)}
         </div>;
@@ -455,6 +517,28 @@ if (return 'Home Page', ) {}
 return data || [] 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+});
+//Format path names for better display <div> <CardTitle className="text-white text-lg" >Top Pages</CardTitle> <CardDescription className="text-zion-slate-light" >Most viewed pages on your platform</CardDescription> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light" > <SelectItem value="1d" >Last 24h</SelectItem> <SelectItem value="7d" >Last 7 days</SelectItem> <SelectItem value="30d" >Last 30 days</SelectItem> <SelectItem value="90d" >Last 3 months</SelectItem> <SelectItem value="365d" >Last year</SelectItem> </SelectContent> </Select> </div> </CardHeader> <CardContent> </div> </div> </div>) 
+}) ) : (<div className="text-center py-8 text-zion-slate" > No page view data available for this time period </div>) 
+}</div> </CardContent> </Card>) 
+}
+              );
+            });
+          ) : (;
+            <div className="text-center py-8 text-zion-slate">;
+              No page view data available for this time period;
+            </div>;
+          )}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+;
+          )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 <<<<<<< HEAD

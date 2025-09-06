@@ -13,6 +13,7 @@ import {useEffect, useMemo, useState} from 'react';
 <<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 '
@@ -29,6 +30,8 @@ type Member = {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Link from 'next/link';
 type Member = any;
 type Member = {
@@ -46,6 +49,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -92,6 +96,8 @@ export default function CompanyAdmin() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   status: string;
 };
 
@@ -107,12 +113,16 @@ const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
   useEffect(() => {
 fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(r => r.json())
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .then(setMembers);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
       .then(r => r.json())
@@ -199,6 +209,7 @@ export default function CompanyAdmin() {
   return (
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -292,6 +303,8 @@ export default function CompanyAdmin() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <header
         style={{
           marginBottom: 16
@@ -307,12 +320,16 @@ export default function CompanyAdmin() { return null; }
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
 {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <button
             key={t}
 =======
@@ -334,6 +351,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           >;
             {t}
+<<<<<<< HEAD
           </button>        ))}
 <<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
@@ -349,6 +367,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           >;
             {t}
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </button>
         ))}
       </nav>
@@ -377,6 +397,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
   const add = async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,10 +424,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, role }),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -416,6 +440,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     });
     const created = await r && r.json();
     setMembers([created, ...members]);'
@@ -571,6 +598,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;'
       { method: 'DELETE' }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
     setMembers(members && members.filter(m => m && m.id !== id));
@@ -725,6 +753,8 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setMembers(members.filter(m => m.id !== id));
   }
   const changeRole = async (id: string, newRole: Member['role']) => {
@@ -1035,6 +1065,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             >
 <<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
               Actions
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
             </th>          </tr>
@@ -1067,10 +1098,16 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
           </tr>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+            </th>
+          </tr>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1106,6 +1143,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 {m.name}
               </td>
@@ -1140,16 +1179,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </td>
             </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ))}
         </tbody>
       </table>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
@@ -1157,6 +1201,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 
 function UsageTab({
@@ -1185,12 +1231,16 @@ function UsageTab({
     <section>
       <h2>Usage limits</h2>
 <div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <section>
       <h2>Usage limits</h2>
@@ -1346,6 +1396,7 @@ function ActivityTab({ events }: { events: any[] }) {}
         ))}
       </ul>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
@@ -1420,6 +1471,10 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
 
 <<<<<<< HEAD
   );
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 function ActivityTab({ events }: { events: any[] }) {
   return (
@@ -1485,6 +1540,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1500,6 +1556,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <th
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               style={{
@@ -1546,6 +1604,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
             >
               Actions
 <<<<<<< HEAD
+<<<<<<< HEAD
             </th>          </tr>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1555,6 +1614,10 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
             <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+=======
+            </th>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </tr>
 <<<<<<< HEAD
 
@@ -1589,6 +1652,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
@@ -1618,10 +1682,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 {inv.number}
               </td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1630,6 +1697,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -1761,6 +1831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
                   href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv && inv.id}`}
                   target='_blank'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
@@ -1836,23 +1907,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   rel='noreferrer'
                 >
                   Download PDF
                 </a>
               </td>
             </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ))}
         </tbody>
       </table>
     </section>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
@@ -1941,3 +2019,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

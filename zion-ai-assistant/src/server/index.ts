@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
@@ -119,6 +124,7 @@ app.post("/api/ai/milestones", async (req, res) => {;
     if (error instanceof z.ZodError) {;"
       return res.status(400).json({ error: "Invalid input", details: error.issues });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -131,12 +137,21 @@ app.post("/api/ai/milestones", async (req, res) => {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    }
+    console.error (error),
+    res.status (500).json ({ error: "Failed to generate milestones" });
+  }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 });});
 =======
@@ -150,3 +165,11 @@ app.listen(port, () => {;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+});
+});
+
+
+});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

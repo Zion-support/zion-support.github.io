@@ -117,8 +117,49 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+<<<<<<< HEAD
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export /**
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
+
+
+
+import { Badge } from "@/components/ui/badge",
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+
+
+  let message = "This item has an open dispute";
+  switch (status) {
+    case 'under_review':
+
+import {Badge} from "@/components/ui/badge";
+import {ShieldAlert} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+
+  switch (status) {;
+    case 'under_review':;
+
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+export /**
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * DisputeStatusBadge - Function description
  */
 function DisputeStatusBadge() {
@@ -138,6 +179,7 @@ function DisputeStatusBadge() {
       message = "This dispute has been closed";
       break;
 
+      variant = "secondary",
       message = "This dispute is under review by our team",
       break,
     case 'resolved':
@@ -149,6 +191,7 @@ function DisputeStatusBadge() {
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -190,6 +233,17 @@ function DisputeStatusBadge() { return null; }
     <Tooltip>
       <TooltipTrigger asChild>"
         <Badge variant={variant} className="flex items-center gap-1">"
+=======
+
+
+    default:
+      break
+  }
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Badge variant={variant} className="flex items-center gap-1">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ShieldAlert className="h-3 w-3" />
           <span>Under Dispute</span>
         </Badge>
@@ -200,6 +254,7 @@ function DisputeStatusBadge() { return null; }
     </Tooltip>
   )
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -214,6 +269,8 @@ function DisputeStatusBadge() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 =======
@@ -249,19 +306,26 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       variant = "outline",;
       message = "This dispute has been closed";
       break;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     default:;
       break;
   }
 
   return (
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Tooltip>;
       <TooltipTrigger asChild>;"
         <Badge variant={variant} className="flex items-center gap-1">;"
           <ShieldAlert className="h-3 w-3" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <span>Under Dispute</span>;
@@ -290,11 +354,15 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <span>Under Dispute</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Tooltip>;
   );
@@ -309,6 +377,15 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 
 
 
+=======
+
+
+
+
+}
+    </Tooltip>);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     </Tooltip>);
 }
@@ -316,6 +393,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 }
     </Tooltip>;
   ),;}
+<<<<<<< HEAD
  interface DisputeStatusBadgeProps {'
   status: 'open' | 'under review' | 'resolved' | 'closed' 
 }export function DisputeStatusBadge ({};
@@ -332,18 +410,40 @@ case 'closed': variant = "outline";"
 message = "This dispute has been closed";
 break;
 message;
+=======
+ interface DisputeStatusBadgeProps {
+  status: 'open' | 'under review' | 'resolved' | 'closed' 
+}export function DisputeStatusBadge ({
+  status 
+}: DisputeStatusBadgeProps) {
+  switch (status) {
+  case 'under review': variant = "secondary";
+message = "This dispute is under review by our team";
+break;
+case 'resolved': variant = "outline";
+message = "This dispute has been resolved";
+break;
+case 'closed': variant = "outline";
+message = "This dispute has been closed";
+break;
+message 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</p> </TooltipContent> </Tooltip>) 
 }
     </Tooltip>;
   );
 }
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </Tooltip>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -357,3 +457,5 @@ message;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

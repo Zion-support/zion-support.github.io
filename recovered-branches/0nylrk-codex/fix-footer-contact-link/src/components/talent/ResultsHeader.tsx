@@ -56,6 +56,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           {resultCount === 0
@@ -183,6 +184,14 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          {resultCount === 0
+            ? "No talents found. Try adjusting your filters."
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+        </span>
+      )}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
 
   )
@@ -204,8 +213,9 @@ export /**;
 <<<<<<< HEAD
 function ResultsHeader() {
   return (
-    <div className="flex items - center mb - 6 text - zion - slate-light">;
+    <div className="flex items - center mb - 6 text - zion - slate - light">;
       {is_loading ? (
+<<<<<<< HEAD
         <div className="flex items-center">;
           <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
 =======
@@ -216,6 +226,10 @@ function ResultsHeader() {}
         <div className="flex items - center">;"
           <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="flex items - center">;
+          <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <span > Loading talents...</span>;
         </div>) : (
         <span>;
@@ -226,9 +240,14 @@ function ResultsHeader() {}
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
+=======
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
   );
 }
@@ -236,14 +255,21 @@ function ResultsHeader() {}
 
       ) :(;
         <span>;
+<<<<<<< HEAD
           {resultCount === 0 ? (;"
             "No talents found. Try adjusting your filters.";
           ) :(;'`
+=======
+          {resultCount === 0 ? (;
+            "No talents found. Try adjusting your filters.";
+          ) :(;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             `Found ${resultCount} talent${resultCount !== 1 ? 's' :''}`;          )}
         </span>;
       )}
     </div>;
   ),;}
+<<<<<<< HEAD
  interface ResultsHeaderProps {}
   isLoading: boolean;
 resultCount: number;
@@ -252,6 +278,19 @@ resultCount: number;
   resultCount;
 }talent$ {'
   resultCount !== 1 ? 's' : '' `
+=======
+ interface ResultsHeaderProps {
+  isLoading: boolean;
+resultCount: number 
+}export function ResultsHeader ({
+  isLoading, resultCount 
+}: ResultsHeaderProps) {
+  return (<div className="flex items-center mb-6 text-zion-slate-light" > isLoading ? (<div className="flex items-center" > <Loader2 className="h-4 w-4 animate-spin mr-2" /> <span>Loading talents...</span> </div>) : (<span> {
+  resultCount === 0 ? ("No talents found. Try adjusting your filters.") : (`Found $ {
+  resultCount 
+}talent$ {
+  resultCount !== 1 ? 's' : '' 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }`) 
 }</span>) 
 }</div>) 
@@ -271,6 +310,7 @@ resultCount: number;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -287,3 +327,5 @@ resultCount: number;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

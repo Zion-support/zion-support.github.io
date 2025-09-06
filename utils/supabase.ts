@@ -4,10 +4,15 @@ export const supabase = {};
   auth: {}
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>
-};
+    signOut: () => Promise<any>;
+  };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -153,7 +158,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
-  })
+  });
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,7 +174,8 @@ export const supabase = createSupabaseClient(supabaseConfig);
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-  })
+
+  });
 };
 
 <<<<<<< HEAD

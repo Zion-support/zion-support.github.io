@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
 const openai = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -18,16 +21,22 @@ export default async function handler(
 pr-12243
 =======
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: string;
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -65,6 +74,7 @@ name,
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : [],
     });
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e.message |'OpenAI error' });
   }      name;
       title: parsed.title |title |'Professional';
@@ -77,6 +87,10 @@ name,
     skills?: string
 pr-12243
 =======
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
@@ -88,9 +102,17 @@ pr-12243
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
+=======
+=======
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      messages: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 pr-12243
@@ -118,6 +140,12 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   if (return res.status (400).json ({ error: 'Name is required' })) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
 =======
 '
@@ -130,6 +158,16 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     temperature: 0.6;
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+    const content = completion && completion.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON && JSON.parse(content);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 pr-12243
 =======
@@ -180,10 +218,25 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     });
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
+<<<<<<< HEAD
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
 pr-12243
+=======
+<<<<<<< HEAD
+
+    const content = completion && completion.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON && JSON.parse(content);
+
+
+
+=======
+    const content = completion && completion.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON && JSON.parse(content);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }      name;
 =======
   }      name;'
@@ -205,6 +258,7 @@ pr-12243
 }
 
 
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -219,6 +273,12 @@ pr-12243
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {'
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
@@ -233,6 +293,11 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
@@ -245,6 +310,7 @@ pr-12243
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -252,3 +318,10 @@ pr-12243
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

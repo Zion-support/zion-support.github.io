@@ -3,10 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return (; <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return (; <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return (; <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return (; <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -91,3 +95,7 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; con
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return (; <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return (; <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

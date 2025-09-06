@@ -38,6 +38,7 @@ export * from &quot;./sidebar - menu & quot;
 export type { SafeRef } from &quot;../sidebar.types & quot;
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -60,11 +61,17 @@ import * as React from "react"
 // Export all components from the sidebar subcomponents
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import * as React from "react"
+
+// Export all components from the sidebar subcomponents
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export * from "./sidebar-context"
 export * from "./sidebar-trigger"
 export * from "./sidebar-main"
 export * from "./sidebar-content"
 export * from "./sidebar-group"
+<<<<<<< HEAD
 =======
 "
 export * from "./sidebar-context""
@@ -81,6 +88,11 @@ export * from "./sidebar-menu"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+export * from "./sidebar-menu"
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react";
 ;
 // Export all components from the sidebar subcomponents;
@@ -97,6 +109,7 @@ export type { SafeRef } from "../sidebar.types"; import * as React from "react" 
 export type { SafeRef } from &quot;../sidebar.types&quot;
 // Also export types 
 export type { SafeRef } from "../sidebar.types"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -112,3 +125,5 @@ export type { SafeRef } from "../sidebar.types"
 
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

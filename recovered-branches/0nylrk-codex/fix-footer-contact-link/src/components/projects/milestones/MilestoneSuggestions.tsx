@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -33,6 +34,9 @@ interface MilestoneSuggestionsProps {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -47,6 +51,7 @@ import React, { useState } from 'react';
   scopeSummary;
   startDate;
   endDate;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   projectType;
@@ -72,6 +77,11 @@ import React, { useState } from 'react',;
 =======
   projectType;import React, { useState } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  projectType;
+
+import React, { useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -104,6 +114,7 @@ interface MilestoneSuggestionsProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -121,18 +132,41 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 export function MilestoneSuggestions() { return null; }
+=======
+
+  projectName: string
+  scopeSummary: string
+  startDate: Date
+  endDate?: Date;
+  projectType: string
+
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+export function MilestoneSuggestions({
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectName,
   scopeSummary,
   startDate,
   endDate,
   projectType,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -147,10 +181,24 @@ export function MilestoneSuggestions() { return null; }
       scope: `${projectName}: ${scopeSummary}`
       startDate: startDate.toISOString()
       endDate: endDate ? endDate.toISOString() : null;
+=======
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
+  const [showSuggestions, setShowSuggestions] = useState(false),
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       projectType: projectType |"Other"
     }
     const milestones = await generateMilestones(input);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -163,6 +211,8 @@ export function MilestoneSuggestions() { return null; }
 
 `
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,"
@@ -170,6 +220,7 @@ export function MilestoneSuggestions() { return null; }
     },
 
     const milestones = await generateMilestones(input),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -192,9 +243,23 @@ export function MilestoneSuggestions() { return null; }
 =======
         if (milestones.length > 0) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    
+
+    if (milestones.length > 0) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones);
+        onMilestonesGenerated(milestones)
+
+  };
+
+  }
+  };
+
+  };
+
+;
 export function MilestoneSuggestions({;
   projectName,;
   scopeSummary,;
@@ -205,6 +270,7 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
+<<<<<<< HEAD
 =======
 
 
@@ -229,12 +295,16 @@ export function MilestoneSuggestions() { return null; }
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;`
       scope: `${projectName}: ${scopeSummary}`,;
       startDate: startDate && startDate.toISOString(),;
 <<<<<<< HEAD
       endDate: endDate ? endDate && endDate.toISOString() : null,;
+<<<<<<< HEAD
       projectType: projectType || "Other"
 };
 =======
@@ -242,6 +312,10 @@ export function MilestoneSuggestions() { return null; }
       projectType: projectType || "Other";
     };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      projectType: projectType || "Other";
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onMilestonesGenerated;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
@@ -260,7 +334,12 @@ export function MilestoneSuggestions() { return null; }
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }import {Button} from '@/components / ui / button';
+=======
+
+import {Button} from '@/components / ui / button';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
 import {Loader2, Sparkles, Check} from 'lucide-react';
@@ -319,9 +398,13 @@ if ( {) {}
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
+<<<<<<< HEAD
 =======
   const format_date = (date_string: string) =>: any {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
   const formatDate = (dateString: string) => {;
@@ -342,6 +425,7 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -349,17 +433,25 @@ if ( {) {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
     }
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   return (
@@ -375,9 +467,16 @@ if ( {) {}
           variant="outline"
           onClick={handleGenerateMilestones}
 <<<<<<< HEAD
+<<<<<<< HEAD
           )}
         </Button>
       )}          {isGenerating ? (;
+=======
+
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full">;
+          {isGenerating ? (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating milestones...;
@@ -391,6 +490,10 @@ if ( {) {}
           )}
         </Button>;
       )}
+
+
+
+
 
           )}
         </Button>
@@ -457,7 +560,9 @@ if ( {) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;        <Card>;
+
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+        <Card>;
           <CardHeader className="pb-3">;
             <CardTitle className="text-lg flex items-center">;
 =======
@@ -477,11 +582,16 @@ if ( {) {}
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">;
                   <div className="flex items-center justify-between mb-1">;
                     <div className="font-medium flex items-center">;
+<<<<<<< HEAD
                       {milestone && milestone.title}                      <Badge variant="secondary" className="ml-2 text-xs">;
 =======
 "
                       <Badge variant="secondary" className="ml-2 text-xs">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                      {milestone && milestone.title}
+                      <Badge variant="secondary" className="ml-2 text-xs">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         AI Suggested;
                       </Badge>;
                     </div>;"
@@ -498,11 +608,16 @@ if ( {) {}
               ))}
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
+<<<<<<< HEAD
                 <Check className="h-4 w-4 mr-1 text-green-500" />;                These milestones will be added to your contract;
 =======
 
                 These milestones will be added to your contract;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                <Check className="h-4 w-4 mr-1 text-green-500" />;
+                These milestones will be added to your contract;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </div>;
           </CardContent>;
@@ -511,9 +626,13 @@ if ( {) {}
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>;
   );
 }
@@ -522,8 +641,11 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Card>;
       )}
     </div>;
@@ -547,6 +669,7 @@ endDate: endDate ? endDate.toISOString () : null;
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -560,3 +683,5 @@ endDate: endDate ? endDate.toISOString () : null;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

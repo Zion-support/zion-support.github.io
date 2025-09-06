@@ -25,6 +25,7 @@ export type AdminActionType =
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AdminAction {
 =======
@@ -124,6 +125,19 @@ export interface AdminAction {  id: string;
 =======
 export interface AdminAction {  id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface AdminAction {
+
+
+export interface AdminAction {;
+export interface AdminAction {
+
+
+
+export interface AdminAction {;
+
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   case_id: string;
   type: AdminActionType;
   adminId: string;
@@ -132,6 +146,7 @@ export interface AdminAction {  id: string;
   createdAt: string;
   executedAt?: string;"
   status: "pending" | "executed" | "failed";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,12 +182,23 @@ export interface FraudDetectionResult {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface FraudDetectionResult {
+  is_fraud: boolean;
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface FraudDetectionResult {;
 <<<<<<< HEAD
   isFraud: boolean;
   confidence: number;
-  reasons: string[];  confidence: number;
+  reasons: string[];
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+  confidence: number;
   reasons: string[];
 
   suggested_actions: AdminActionType[],
@@ -182,33 +208,52 @@ export interface FraudDetectionResult {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
+<<<<<<< HEAD
 export interface FraudDetectionConfig {}
 
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface FraudDetectionConfig {
-};
+}
+
+
+export interface FraudDetectionConfig {;
+
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
+
+
+      threshold: number,
+    }
+    fake_profile: {
+      enabled: boolean;
+      threshold: number;
+    };
     fakeProfile: {
       enabled: boolean;
-      threshold: number
-};
+      threshold: number;
+    };
     paymentFraud: {
       enabled: boolean;
-      threshold: number
-};
+      threshold: number;
+    };
     spam: {
       enabled: boolean;
-      threshold: number
-};
+      threshold: number;
+    };
   };
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidenceThreshold: number
-};
+    confidenceThreshold: number;
+  };
     confidenceThreshold: number,
   };
 
-}}
+}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

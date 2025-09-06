@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,6 +62,8 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -72,6 +75,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
+<<<<<<< HEAD
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -85,6 +89,11 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights",export d
 =======
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+export default function Home() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 =======
 import React from "react";"
@@ -327,6 +336,7 @@ export default function Home() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+<<<<<<< HEAD
 import React from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -379,11 +389,16 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </div>);
 }
     </div>;
   );
+<<<<<<< HEAD
 } export default function Home() { return null; }
 }
 ;
@@ -399,10 +414,19 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+} export default function Home () {
+  return (<div className="min-h-screen bg-background" > 
+    </div>;
+  );
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -414,3 +438,5 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

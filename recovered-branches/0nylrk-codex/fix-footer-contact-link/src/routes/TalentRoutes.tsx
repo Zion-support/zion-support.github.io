@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,10 +46,15 @@ import {ProtectedRoute} from "../components/ProtectedRoute";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
 import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -59,14 +65,13 @@ import TalentsPage from "../pages/TalentsPage",
 import TalentProfilePage from "../pages/TalentProfilePage",
 import SavedTalentsPage from "../pages/SavedTalentsPage",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
-
-import CreateTalentProfile from "../pages/CreateTalentProfile",
-import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
+const TalentRoutes = () => {;
   return (
-    <Routes>  return (
     <Routes>;
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
@@ -95,6 +100,7 @@ const TalentRoutes = () => {
       />"
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,6 +225,13 @@ const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
+=======
+  );
+};
+
+
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -273,8 +286,11 @@ export default TalentRoutes;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 },;
 ;export default TalentRoutes,
@@ -296,6 +312,7 @@ export default TalentRoutes;
   );
 },;
 export default TalentRoutes;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -310,3 +327,5 @@ export default TalentRoutes;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

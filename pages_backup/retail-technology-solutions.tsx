@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/retail-technology-solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +69,8 @@ export default function RetailTechnologySolutions() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/retail-technology-solutions.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
@@ -234,6 +237,7 @@ return (
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/retail-technology-solutions.tsx
 <<<<<<< HEAD
 =======
@@ -292,3 +296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/retail-technology-solutions.tsx
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

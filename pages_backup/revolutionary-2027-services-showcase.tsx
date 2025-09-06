@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
@@ -332,6 +333,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -966,6 +969,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 
@@ -982,6 +986,10 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+<h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Revolutionary 2027
             </h1>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -1076,6 +1084,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>"
               <motion.div className="flex items-center gap-2 text-purple-400"
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1228,6 +1237,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <MapPin className='w-5 h-5' />
                 <span className='text-sm font-semibold'>
                   {contactInfo.address}
@@ -1269,6 +1283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
@@ -1318,6 +1333,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Search and Filters */}
 <section className='py-8 px-4'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1326,6 +1343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Search Bar */}
             <div className='relative mb-6'>
               <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1393,6 +1411,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
@@ -1506,12 +1527,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium text-gray-300 mb-2'>
                   Price Range
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
@@ -1663,6 +1688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className='font-semibold text-purple-400'>
                     {allServices.length}
                   </span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
                   <span className='text-sm'> services</span>                </div>
@@ -1739,6 +1765,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2027-services-showcase.tsx
                   <span className="text-sm"> services</span>
 <<<<<<< HEAD
+=======
+                  <span className='text-sm'> services</span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>
 
 
@@ -1762,6 +1792,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
@@ -1789,18 +1820,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Services Grid */}
 <section className='py-12 px-4'>
         <div className='max-w-7xl mx-auto'>
           <AnimatePresence mode='wait'>
             {filteredServices.length > 0 ? (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -1896,6 +1933,7 @@ whileHover={{ y: -10, scale: 1.02 }}
                     {allServices && allServices.length}
                   </span>;'
                   <span className='text-sm'> services</span>                </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2153,6 +2191,8 @@ whileHover={{ y: -10, scale: 1.02 }}
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           {service.popular && (
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>
                               POPULAR
@@ -2205,6 +2245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service && service.description}
                         </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {/* Features */}
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
@@ -2254,6 +2295,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+                        {/* Features */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mb-4'>
                           <h4 className='text-sm font-semibold text-gray-200 mb-2'>
                             Key Features:
@@ -2276,12 +2320,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         {/* Stats */}
 <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <div>
                             <div className="text-lg font-bold text-cyan-400">{service.customers}</div>
 =======
@@ -2297,6 +2345,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
                           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 =======
@@ -2383,6 +2432,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             <div className='text-lg font-bold text-green-400'>
                               {service.reviews}
                             </div>
@@ -2421,6 +2472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </a>;
                           <a
                             href='/contact'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 =======
@@ -2474,6 +2526,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'
                           >
                             <MessageSquare className='w-4 h-4' />
@@ -2484,6 +2538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
@@ -2493,6 +2548,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </div>
             ) : (
@@ -2512,6 +2569,7 @@ animate={{ opacity: 1 }}
                 <p className='text-gray-400 mb-6'>
                   Try adjusting your search criteria or filters
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 =======
@@ -2523,6 +2581,9 @@ animate={{ opacity: 1 }}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <button
                   onClick={() => {
                     setSearchTerm('');
@@ -2530,6 +2591,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setSelectedPriceRange('all');
                   }}
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
                 >                  Clear Filters
@@ -2548,6 +2610,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Clear Filters
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+                >
+                  Clear Filters
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </button>
               </motion.div>
             )}
@@ -2893,6 +2960,7 @@ viewport={{ once: true }}
 
                 Start Your Transformation
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
 =======
@@ -2924,6 +2992,8 @@ viewport={{ once: true }}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2027-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <a
                 href='/services'
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
@@ -2938,6 +3008,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD:pages/revolutionary-2027-services-showcase.tsx
 <<<<<<< HEAD
@@ -3119,3 +3190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2027-services-showcase.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

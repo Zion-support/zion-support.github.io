@@ -73,6 +73,7 @@ export const QrCodeDownload: React.FC = () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +91,8 @@ export const QrCodeDownload: React.FC = () => {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <AppStoreButtons 
                 className="mb-8" 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD
@@ -147,6 +150,7 @@ export const QrCodeDownload: React.FC = () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,8 +171,12 @@ import {AppStoreButtons} from "./AppStoreButtons";
 =======
   )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
-  )
+
+  );
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -176,6 +184,7 @@ import {AppStoreButtons} from "./AppStoreButtons";
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -192,6 +201,10 @@ import {AppStoreButtons} from "./AppStoreButtons";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  )
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 },
 import React from "react",;
 import { QrCode } from "lucide-react",;
@@ -210,7 +223,12 @@ export const QrCodeDownload: React.FC = () => {;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+=======
+  return (
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="container mx-auto px-4">;
         <div className="max-w-5xl mx-auto">;
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
@@ -239,6 +257,7 @@ export const QrCodeDownload: React.FC = () => {;
                 <span>Compatible with iOS 14+ and Android 8 && 8.0+</span>;
               </div>;
             </div>;
+<<<<<<< HEAD
 =======
 "
             <div className="flex-shrink-0">;"
@@ -253,6 +272,16 @@ export const QrCodeDownload: React.FC = () => {;
 
 
 
+=======
+
+            <div className="flex-shrink-0">;
+              <div className="bg-white p-6 rounded-xl shadow-lg">;
+                <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">;
+                  <QrCode className="w-full h-full p-4" />;
+                  {/* This would be replaced with an actual QR code in production */}
+                </div>;
+                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Scan to download;
                 </p>;
               </div>;
@@ -261,6 +290,7 @@ export const QrCodeDownload: React.FC = () => {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 }
 };
@@ -273,3 +303,8 @@ export const QrCodeDownload: React.FC = () => {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

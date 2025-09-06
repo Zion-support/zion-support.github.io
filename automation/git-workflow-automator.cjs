@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 =======
@@ -24,12 +25,17 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class GitWorkflowAutomator {
   constructor() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
@@ -56,11 +62,17 @@ class GitWorkflowAutomator {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    this.ensureLogDirectory();
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -223,11 +235,17 @@ class GitWorkflowAutomator {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      return false;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
   async getCurrentBranch() {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -591,3 +609,13 @@ module.exports = GitWorkflowAutomator;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+// CLI interface
+
+if (require.main === module) {
+
+  const automator = new GitWorkflowAutomator();
+  const command = process.argv[2];
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -106,14 +106,23 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
+
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";} from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+} from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,10 +163,14 @@ interface ProjectDetailsFieldsProps {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   form: UseFormReturn<ContractFormValues>;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
 =======
@@ -170,6 +183,13 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+
+  form: UseFormReturn<ContractFormValues>;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>;
       <FormField;
@@ -199,6 +219,9 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       />;
 
@@ -230,8 +253,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         control={form && form.control}
         name="scopeSummary"      <FormField
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        control={form && form.control}
-        name="scopeSummary"      <FormField
         control={form && form.control}
         name="scopeSummary"
 <<<<<<< HEAD
@@ -312,11 +333,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </FormItem>)}
       />;
       <FormField;
@@ -329,6 +354,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
+<<<<<<< HEAD
                 className="min-h-[120px]";                {...field}
 =======
               <Textarea;"
@@ -339,6 +365,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
                 {...field}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                className="min - h-[120px]";
+
+                {...field}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               />;
             </FormControl>;
             <FormDescription>;
@@ -346,18 +377,26 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             </FormDescription>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormMessage />;
 
                 {...field}
               />
             </FormControl>
             <FormDescription>
+<<<<<<< HEAD
               Be specific about what is included and any limitations;
+=======
+              Be specific about what is included and any limitations
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </FormDescription>
             <FormMessage />
           </FormItem>
         )}
       />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -407,11 +446,34 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
           render={({ field }) => (;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      
+
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FormField
+          control={form && form.control}
+          name="startDate"
+          </FormItem>;
+        )}
+      />;
+      ;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="startDate";
+        <FormField
+          control={form && form.control}
+          name="startDate"
+          render={({ field }) => (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -425,6 +487,14 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <span>Pick a date</span>;
                       )}"
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -436,11 +506,16 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   <Calendar
                     mode="single"
                     selected={field && field.value}
+<<<<<<< HEAD
                     onSelect={field && field.onChange}                    disabled={(date) => date < new Date()}
 =======
 
                     disabled={(date) => date < new Date()}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    onSelect={field && field.onChange}
+                    disabled={(date) => date < new Date()}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     initialFocus;
                   />;
                 </PopoverContent>;
@@ -458,6 +533,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -466,8 +542,12 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         />;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <FormField
           control={form && form.control}
+
         />;
         <FormField;
 <<<<<<< HEAD
@@ -490,6 +570,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={form.control}
+<<<<<<< HEAD
           name="endDate"                  <Calendar
 =======
 
@@ -501,6 +582,18 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
                   <Calendar"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          name="endDate"
+          control={form.control}
+          name="endDate"
+            </FormItem>;          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="endDate";
+                  <Calendar
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     mode="single"
           control={form.control}
         <FormField;
@@ -518,6 +611,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverTrigger asChild>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                     <Button"
@@ -530,6 +624,14 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <span>Pick a date</span>;
                       )}"
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -632,12 +734,17 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Calendar
+<<<<<<< HEAD
                     mode="single"                  <Calendar
 =======
 
 
                   <Calendar"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    mode="single"
+                  <Calendar
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     mode="single"
     </>
         />;
@@ -655,21 +762,29 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           </FormItem>)}
 <<<<<<< HEAD
       />;
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
 =======
       />;"
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <FormField;
           control={form.control}"
           name="start_date";
 <<<<<<< HEAD
           render={({ field }) => (
+<<<<<<< HEAD
             <FormItem className="flex flex-col">;
 =======
           render={({ field }) => ("
             <FormItem className="flex flex - col">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <FormItem className="flex flex - col">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <FormLabel > Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -682,11 +797,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                         format (field.value, "PPP")) : (
 <<<<<<< HEAD
                         <span > Pick a date</span>)}
-                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
-                <PopoverContent className="w - auto p-0" align="start">;
+                <PopoverContent className="w - auto p - 0" align="start">;
                   <Calendar;
 =======
                         <span > Pick a date</span>)}"
@@ -713,11 +828,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           name="end_date";
 <<<<<<< HEAD
           render={({ field }) => (
+<<<<<<< HEAD
             <FormItem className="flex flex-col">;
 =======
           render={({ field }) => ("
             <FormItem className="flex flex - col">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <FormItem className="flex flex - col">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <FormLabel > End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -730,11 +849,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                         format (field.value, "PPP")) : (
 <<<<<<< HEAD
                         <span > Pick a date</span>)}
-                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
-                <PopoverContent className="w - auto p-0" align="start">;
+                <PopoverContent className="w - auto p - 0" align="start">;
                   <Calendar;
 =======
                         <span > Pick a date</span>)}"
@@ -755,10 +874,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
                   />;
@@ -775,14 +897,19 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         />;
       </div>;
     </>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </FormItem>)}
         />;
       </div>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -833,3 +960,5 @@ FormMessage interface ProjectDetailsFieldsProps {
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

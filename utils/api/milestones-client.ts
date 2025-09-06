@@ -16,7 +16,7 @@ export async function fetchMilestones(projectId: string) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Milestone {
   id: string;
-  title: string,
+  title: string;
   description: string;
   status: 'pending' | 'in-progress' | 'completed';
   dueDate: string;
@@ -24,7 +24,7 @@ export interface Milestone {
 }
 
 export interface CreateMilestonePayload {
-  title: string,
+  title: string;
   description: string;
   dueDate: string;
 }
@@ -65,6 +65,7 @@ export async function updateMilestoneStatus(
   return res.json();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -102,6 +103,10 @@ export async function createMilestone(projectId: string, payload: any) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export async function createMilestone() { return null; }
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -146,6 +151,7 @@ export async function fetchMilestones(projectId: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 <<<<<<< HEAD
@@ -182,11 +188,41 @@ function updateMilestoneStatus() {}`
     body: JSON.stringify (body)}),
   if (throw new Error (await res.text ())) {}
   $2;
+=======
+  }
+}
+export async /**
+ * create_milestone - Function description
+ */
+function create_milestone() {
+  const res = await fetch (`/api / projects/${project_id}/milestones`, {
+    method: 'POST',
+    headers: { 'Content - Type': 'application / json' },
+    credentials: 'include',
+    body: JSON.stringify (payload)}),
+  if (throw new Error (await res.text ()), ) {
+  $2
+}
+  return res.json ();
+}
+export async /**
+ * updateMilestoneStatus - Function description
+ */
+function updateMilestoneStatus() {
+  const res = await fetch (`/api / projects/${project_id}/milestones/${milestone_id}`, {
+    method: 'PATCH',
+    headers: { 'Content - Type': 'application / json' },
+    credentials: 'include',
+    body: JSON.stringify (body)}),
+  if (throw new Error (await res.text ())) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   return res.json ();
 }
 
 
+<<<<<<< HEAD
 
 export async function fetchMilestones() { return null; }`
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;'
@@ -214,12 +250,25 @@ export async function createMilestone() { return null; }`
     method: 'POST',;'
     headers: { 'Content-Type': 'application/json' },;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export async function fetchMilestones(projectId: string) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    headers: { 'Content-Type': 'application/json' },;
+
+}
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     credentials: 'include',;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -260,6 +309,9 @@ export async function fetchMilestones(projectId: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }}
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;

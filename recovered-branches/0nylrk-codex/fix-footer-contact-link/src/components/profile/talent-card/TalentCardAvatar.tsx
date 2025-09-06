@@ -33,15 +33,38 @@ interface TalentCardAvatarProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+export function TalentCardAvatar({
+  profilePicture,
+  fullName,
+}: TalentCardAvatarProps) {
+  // Get initials for avatar fallback
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase();
+  };
 
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+  return (
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
+      <AvatarImage src={profilePicture || undefined} alt={fullName} />
+      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
+        {getInitials(fullName)}
+      </AvatarFallback>
+    </Avatar>
+  );
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -187,6 +210,9 @@ interface TalentCardAvatarProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======}
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 =======
 
@@ -223,8 +249,11 @@ function TalentCardAvatar() {}
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
       <AvatarImage src={profile_picture || undefined} alt={full_name} />;
@@ -254,6 +283,7 @@ fullName: string
 }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -270,3 +300,5 @@ fullName: string
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

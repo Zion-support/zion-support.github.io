@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,18 +28,24 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -50,6 +57,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;,"});,"})
 const { execSync } = // // require(,;,"});,"})
   child_process');,"});,"})
@@ -149,6 +158,7 @@ startAutomation().catch(error => {;,"});,"})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -157,10 +167,13 @@ startAutomation().catch(error => {;,"});,"})
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -263,17 +276,23 @@ startAutomation().catch(error => {;,"});,"})"
 });,"});,"})"
 ;,"});,"})
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,6 +319,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node,"}),"})
 const { execSync } = require(,,"}),"})
   child_process'),"}),"})
@@ -392,6 +413,7 @@ startAutomation().catch(error => {,"}),"})
   process.exit(1),"}),"})
 }),"}),"})
 ,"}),"})
+<<<<<<< HEAD
 =======
 
 
@@ -510,10 +532,22 @@ startAutomation().catch(error => {,"}),"})"
   process.exit(1)}
 // Function to start automation processes;
 async function startAutomation() { return null; }
+=======
+  '❌ PM2 is not installed. Please install it "first": npm install -g pm2);
+  process.exit(1)}
+// Function to start automation processes;
+async function startAutomation() {;
+  try {;
+    // Start the main application;
+    console.log(,;
+  📱 Starting main application...');
+    execSync(',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'pm2 start ecosystem.config.cjs --only apps', { "stdio": 'inherit });
     // Wait a moment for apps to start;
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Start automation processes;
+<<<<<<< HEAD
     console.log(,;'
   🤖 Starting automation processes...');'
     execSync(','"
@@ -551,11 +585,24 @@ async function startAutomation() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    console.log(,;
+  🤖 Starting automation processes...');
+    execSync(',
+      'pm2 start ecosystem.config.cjs --only automation', { "stdio": 'inherit });
+    // Save PM2 configuration;
+    console.log(,;
+  💾 Saving PM2 configuration...');
+    execSync(',
+      'pm2 save', { "stdio": 'inherit });
+    // Show status;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(,;
@@ -609,6 +656,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    console.log(,;
+  📊 PM2 Status: ');
+
+
+
+
+
+    console.log(,;
+  📊 PM2 Status: ');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log(,
   📊 PM2 "Status": ');
     execSync(',
@@ -622,6 +680,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     console.log(',
       '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {
     console.error(',
+<<<<<<< HEAD
 =======
 
 
@@ -705,20 +764,48 @@ startAutomation().catch(error => {'
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      '❌ Failed to start PM2 "processes": ', error.message);
+    process.exit(1)}
+}
+// Handle graceful shutdown;
+process.on(',
+  'SIGINT', () => {
+  console.log(',
+      '🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0)})
+process.on('
+  'SIGTERM', () => {
+  console.log(',
+      '🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0)});
+// Start automation;
+startAutomation().catch(error => {
+  console.error('
+  '❌ Failed to start "automation": ', error);
+  process.exit(1)})
+#!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
 
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+#!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
 
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
 
 
 
+<<<<<<< HEAD
 =======
   process.exit(1)})'"
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
@@ -793,3 +880,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+#!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
+#!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) console.log(,"}),"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) console.log(,,"}),"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) console.log(,,"}),"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) console.log(,,"}),"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) console.log(,,"}),"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) console.log(,"}),"}) '✅ All PM2 processes started successfully!'),"}),"}) console.log(,"}),"}) '📝 Use "pm2 logs" to view logs'),"}),"}) console.log(,"}),"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) console.log(,"}),"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) console.log(,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {; console.log(,📱 Starting main application...'); execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000)); console.log(,🤖 Starting automation processes...'); execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }); console.log(,💾 Saving PM2 configuration...'); execSync(','pm2 save',{ stdio: 'inherit }); console.log(,📊 PM2 Status: '); execSync(','pm2 list,{ stdio:';inherit' }); console.log(','✅ All PM2 processes started successfully!'); console.log(' '📝 Use 'pm2 logs' to view logs'); console.log(','📊 Use 'pm2 monit' to monitor processes'); console.log(','🛑 Use 'pm2 stop all' to stop all processes')} catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => { console.log(','🛑 Received SIGINT,shutting down gracefully...'); process.exit(0)}) process.on(' 'SIGTERM',() => { console.log(','🛑 Received SIGTERM,shutting down gracefully...'); process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

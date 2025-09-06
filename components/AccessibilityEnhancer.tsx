@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
       }
@@ -87,6 +88,8 @@ export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 
 pr-12243
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -251,6 +254,7 @@ export default function AccessibilityEnhancer() {
     </div>
   );
 }
+<<<<<<< HEAD
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -340,3 +344,5 @@ export default AccessibilityEnhancer;
 pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

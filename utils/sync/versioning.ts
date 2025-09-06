@@ -7,9 +7,13 @@ export function nextVersionFor(state: MultiverseState, entityKey: string): numbe
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface Version {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface Version {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   major: number;
   minor: number;
   patch: number;
@@ -26,7 +30,7 @@ export function parseVersion(versionString: string): Version {};
   };
 }
 
-=======}
+}
 export function nextVersionFor(
   state: MultiverseState,;
   entityKey: string;
@@ -34,6 +38,7 @@ export function nextVersionFor(
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Versioning utilities;
 export const versioning = {
@@ -61,11 +66,33 @@ export function nextVersionFor(
     case "patch":
     default:
       return versionToString({}
+=======
+
+export function nextVersionFor(
+  currentVersion: string,
+  type: "major" | "minor" | "patch" = "patch",
+): string {
+  const version = parseVersion(currentVersion);
+
+  switch (type) {
+    case "major":
+      return versionToString({ major: version.major + 1, minor: 0, patch: 0 });
+    case "minor":
+      return versionToString({
+        major: version.major,
+        minor: version.minor + 1,
+        patch: 0,
+      });
+    case "patch":
+    default:
+      return versionToString({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         major: version.major,
         minor: version.minor,
         patch: version.patch + 1,
       });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
@@ -122,3 +149,29 @@ export const versioning = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+export function isVersionGreater(a: string, b: string): boolean {
+  return compareVersions(parseVersion(a), parseVersion(b)) > 0;
+}
+
+export function isVersionEqual(a: string, b: string): boolean {
+  return compareVersions(parseVersion(a), parseVersion(b)) === 0;
+}
+export interface Version {
+  major: number;
+  minor: number;
+  patch: number;
+  build?: number;
+}
+
+
+}
+  getVersion: () => '1.0.0',
+  compareVersions: (v1: string, v2: string) => 0,
+  incrementVersion: (version: string) => version;
+};
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

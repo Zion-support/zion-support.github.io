@@ -28,6 +28,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
 console.log('==================');
 
 <<<<<<< HEAD
@@ -40,7 +41,13 @@ console.log('==================');
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -129,13 +136,19 @@ let totalFixed = 0;
 
 let totalFixed = 0;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -172,6 +185,7 @@ console.log('🎉 Final syntax fix completed!');
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
+<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
 <<<<<<< HEAD
 =======
@@ -182,4 +196,9 @@ console.log('🎉 Final syntax fix completed!');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

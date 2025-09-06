@@ -21,6 +21,9 @@ module.exports = {
     es2021: true
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -45,6 +48,7 @@ module.exports = {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
+<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
@@ -637,6 +641,8 @@ module.exports = {;
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   root: true,
   env: {
     browser: true,
@@ -671,6 +677,9 @@ module.exports = {;
   },
 }
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

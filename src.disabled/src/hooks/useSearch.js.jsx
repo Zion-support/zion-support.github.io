@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,11 +25,15 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +78,8 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

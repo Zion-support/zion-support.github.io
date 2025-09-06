@@ -122,6 +122,7 @@ export default function ProfilePage() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -149,6 +150,15 @@ export default function ProfilePage() {};
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -157,6 +167,7 @@ export default function ProfilePage() {};
   useEffect(() => {
     const fetchProfile = async () => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -176,17 +187,36 @@ export default function ProfilePage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(true),
       setIsError(false),
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
-          .eq("id", profileId)        setProfileData(data);
+          .eq("id", profileId)
+
+          .single(),
+
+
+        if (error) {
+          throw error;
+        }
+
+      } finally {
+        setIsLoading (false);
+      }
+        if (error) {;
+          throw error;
+        }
+        setProfileData(data);
       } catch (error) {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -490,16 +520,22 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          title: "Error",
+          description: "Failed to load profile. Please try again later.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  useEffect(() => {;
-    const fetchProfile = async () => {;
-      setIsLoading(true);
-      setIsError(false);
-      try {;
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
+    if (profileId) {
+      fetchProfile();
+    }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -515,7 +551,30 @@ export default function ProfilePage() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (isError || !profileData) {;    <>;
+=======
+
+  if (isError || !profileData) {;
+
+    return (
+      <div className="min-h-screen flex items-center justify-center">;
+        <p className="text-red-500">Failed to load profile.</p>;
+      </div>;
+    );
+  }
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    );
+  }
+
+
+
+  return (
+    <>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
@@ -558,6 +617,7 @@ export default function ProfilePage() {;
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,9 +724,54 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <SEO      />;
+=======
+      />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
+  return (
+    <>;
+      <SEO
+          {/* Main Content Area */}
+          <div className="col-span-12 lg:col-span-8">;
+            {/* Profile Header */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <div className="flex items-start">;
+                {/* Avatar */}
+                <div className="relative mr-4">
+                  <Avatar className="w-24 h-24">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage
+                        src={profileData.profile_picture_url}
+                        alt={profileData.full_name}
+                      />
+                    ) : (
+                      <AvatarFallback>
+                        {profileData.full_name?.charAt(0)}
+                      </AvatarFallback>
+                    )}
+                  </Avatar>;
+                  {profileData && profileData.is_verified && (;
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+                    </div>;
+                  )}
+                </div>
+
+                </div>;
+                    {profileData.profile_picture_url ? (;
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />;
+                    ) :(;
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>;
+                    )}
+                  </Avatar>;
+                  {profileData.is_verified && (;
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+                    </div>;                  )}
+                </div>;
+                ;
                 {/* Main Info */}
                 <div className="flex-1">
 =======
@@ -828,6 +933,7 @@ export default function ProfilePage() {;
                       </Badge>
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>;
             {/* Bio Section */}
 <<<<<<< HEAD
@@ -926,6 +1032,22 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  </div>;
+                </div>;
+              )}
+            </div>
+
+            {/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+              <p className="text-zion-slate-light">
+                {profileData.bio || "No bio provided."}
+              </p>
+            </div>
+
+            {/* Portfolio Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
@@ -937,12 +1059,17 @@ export default function ProfilePage() {;
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< HEAD
               </div>;
             </div>;                      <LinkIcon className="h-4 w-4 mr-2" />;
 =======
 "
                       <LinkIcon className="h-4 w-4 mr-2" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors">;
+                      <LinkIcon className="h-4 w-4 mr-2" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {link}
                     </a>
                   ))
@@ -986,6 +1113,10 @@ export default function ProfilePage() {;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;"
               <div className="flex space-x-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                {profileData && profileData.github_link && (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <a
                     href={profileData && profileData.github_link}
                     target="_blank"
@@ -994,6 +1125,7 @@ export default function ProfilePage() {;
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1020,6 +1152,15 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                  </Link>
+
+
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Github className="h-6 w-6" />;
+                  </a>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -1048,6 +1189,7 @@ export default function ProfilePage() {;
                   </Link>
 
 
+<<<<<<< HEAD
 "
                     className="text-zion-cyan hover:text-white transition-colors">;"
                     <Github className="h-6 w-6" />;
@@ -1096,11 +1238,14 @@ export default function ProfilePage() {;
                   </Link>
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
               </div>
             </div>
           </div>
 
+                    className="text-zion-cyan hover:text-white transition-colors">;
                     <Linkedin className="h-6 w-6" />;
                   </a>;
                 )}
@@ -1109,13 +1254,17 @@ export default function ProfilePage() {;
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1359,6 +1508,12 @@ if ( {) {
                 professional_title: profileData?.professional_title || "",
                 hourly_rate: profileData?.hourly_rate || 0,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+                id: profileData?.id || "",
+                full_name: profileData?.full_name || "",
+                professional_title: profileData?.professional_title || "",
+                hourly_rate: profileData?.hourly_rate || 0,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }}
             />;
             {/* Placeholder for other sidebar elements */}
@@ -1367,6 +1522,7 @@ if ( {) {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -1468,17 +1624,80 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
   ),; import {};
+=======
+  );
+}
+
+    </>;
+  ),; import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Star;
 MapPin;
 Clock;
 Link as LinkIcon;
 Github;
 Twitter;
+<<<<<<< HEAD
 Linkedin;"
 CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
 }finally {}
   setIsLoading (false) 
 }
+=======
+Linkedin;
+CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
+}finally {
+  setIsLoading (false) 
+}
+;
+
+
+;
+
+};
+if (profileId) {
+  fetchProfile () 
+}
+}, [profileId]);
+if (isLoading) {
+  return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>) 
+}if (isError || !profileData) {
+  return (<div className="min-h-screen flex items-center justify-center" > <p className="text-red-500" >Failed to load profile.</p> </div>) 
+}profileData.full name?.charAt (0) 
+}</AvatarFallback>) 
+}</Avatar> </div>) 
+}</div> </div> {
+  /* Add Save/Unsave Button Here */ 
+}</div> <span> {
+  profileData.availability 
+}</span> </div>) 
+}</div> </div> </div>) ) 
+}</div> </div>) 
+}</div>) ) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
+}</div> </div> <a href= {
+  profileData.github link 
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Github className="h-6 w-6" /> </Link>) 
+}{
+  profileData.twitter link && (<a href= {
+  profileData.twitter link 
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Twitter className="h-6 w-6" /> </Link>) 
+}{
+  profileData.linkedin link && (<a href= {
+  profileData.linkedin link 
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Linkedin className="h-6 w-6" /> </Link>) 
+}</div> </div> </div> <HireNowCTA talentProfile= {
+  {
+  id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
+}
+}/> {
+  /* Placeholder for other sidebar elements */ 
+}</div> </div> </div> <Footer /> </>) 
+}
+    </>;
+  );
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 

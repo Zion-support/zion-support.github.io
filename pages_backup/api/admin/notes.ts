@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/notes.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,10 +39,24 @@ const notesStore: Note[] = []
 =======
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { randomUUID } from 'crypto',;
+type Note = {
+  id: string
+  targetType: string
+  targetId: string
+  text: string
+  authorId: string
+  createdAt: number
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
   id: string;
   targetType: string;
   targetId: string;
@@ -56,6 +71,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/api/admin/notes.ts
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   targetType: string;
   targetId: string;
@@ -64,6 +81,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   createdAt: number;
 };
 
+<<<<<<< HEAD
 const notesStore: Note[] = [];
 =======
 <<<<<<< HEAD
@@ -186,6 +204,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -257,11 +279,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .sort((a, b) => b.createdAt - a.createdAt),
     return res.status(200).json({ notes })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/notes.ts
 <<<<<<< HEAD
 =======
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
+=======
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin'),
@@ -278,6 +304,7 @@ main
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/notes.ts
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -291,6 +318,9 @@ export function getAllNotes(): Note[] {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
@@ -326,9 +356,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/notes.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

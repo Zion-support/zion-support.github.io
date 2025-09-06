@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -35,6 +36,10 @@ import {useEffect} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const NotFound = () => {
 =======
 import { useLocation } from "react-router-dom";"
@@ -42,8 +47,7 @@ import { useEffect } from "react";
 const NotFound = () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const location = useLocation();
-import { useLocation } from "react-router-dom",
-import { useEffect } from "react",
+
 
 <<<<<<< HEAD
 import { useLocation } from "react-router-dom",
@@ -52,6 +56,7 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,14 +90,14 @@ const NotFound = () => {}
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const NotFound = () => {
   const location = useLocation(),
 
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:"
-      location.pathname
-    )const NotFound = () => {
+const NotFound = () => {
   const location = useLocation(),
 
 <<<<<<< HEAD
@@ -145,16 +150,21 @@ const NotFound = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, [location.pathname]);
   }, [location.pathname]),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
           Return to Home
+<<<<<<< HEAD
         </Link>      </div>
 <<<<<<< HEAD
     </div>
@@ -277,11 +287,19 @@ export default NotFound;
 };
 
 =======
+=======
+        </a>
+      </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
-  )
+  );
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { use_location } from './react-router-dom';
 =======
 
@@ -301,6 +319,7 @@ const NotFound = () =>: any {}
 ;
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
     <div className="min - h-screen flex items - center justify - center bg - gray-100">;
       <div className="text-center">;
         <h1 className="text - 4xl font - bold mb-4">404</h1>;
@@ -314,6 +333,13 @@ const NotFound = () =>: any {}
         <p className="text - xl text - gray - 600 mb - 4">Oops! Page not found</p>;"
         <a href="/" className="text - blue - 500 hover: text - blue - 700 underline">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <div className="min - h-screen flex items - center justify - center bg - gray - 100">;
+      <div className="text - center">;
+        <h1 className="text - 4xl font - bold mb - 4">404</h1>;
+        <p className="text - xl text - gray - 600 mb - 4">Oops! Page not found</p>;
+        <a href="/" className="text - blue - 500 hover: text - blue - 700 underline">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Return to Home;
         </a>;
       </div>;
@@ -326,8 +352,11 @@ export default NotFound;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 },;
 ;export default NotFound,
  const NotFound = () => {
@@ -340,6 +369,7 @@ location.pathname)
 export default NotFound;
 },;
 export default NotFound;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -354,3 +384,5 @@ export default NotFound;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -15,6 +15,7 @@ import React from 'react';
 }
 <<<<<<< HEAD
 
+
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -24,6 +25,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   adminOnly = false;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,6 +58,9 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   children;
 
   adminOnly = false;
@@ -63,19 +68,26 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   requiredUserType
 }) => {
   const { user, isLoading } = useAuth();
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
   const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -93,12 +105,18 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
   children;
 
   adminOnly = false;
+
+
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
@@ -139,6 +157,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -149,14 +168,15 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   tenantAdminAllowed = false,
 =======
   tenantAdminAllowed = false,
   requiredUserType
 }) => {  tenantAdminAllowed = false,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  requiredUserType
-}) => {  tenantAdminAllowed = false,
   requiredUserType
 }) => {
 =======
@@ -171,6 +191,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
 
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +216,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -227,6 +253,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
   if (requiredUserType && user.userType !== requiredUserType) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Check for specific user type if required;
   if (requiredUserType && user.userType !== requiredUserType) {"
@@ -244,11 +271,16 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
 }
 export default ProtectedRoute;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return <Navigate to="/unauthorized" />
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+<<<<<<< HEAD
 =======
 '
 import React from 'react',;'
@@ -256,10 +288,13 @@ import { Navigate } from 'react-router-dom',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useWhitelabel } from '@/context/WhitelabelContext',;
 export interface ProtectedRouteProps {;
   children: React.ReactNode,;
   adminOnly?: boolean,;
+<<<<<<< HEAD
   tenantAdminAllowed?: boolean,;"
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
@@ -276,6 +311,24 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
 <<<<<<< HEAD
+=======
+  tenantAdminAllowed?: boolean,;
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
+}
+;
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
+  children,;
+  adminOnly = false,;
+
+
+
+
+
+
+export default ProtectedRoute;
+
+import {use_auth} from '@/hooks / use_auth';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 =======
 
@@ -314,6 +367,7 @@ export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({};
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return <div className="flex h - screen w - full items - center justify-center">;
       <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
 =======
@@ -324,6 +378,10 @@ if ( {) {}
     return <div className="flex h - screen w - full items - center justify - center">;"
       <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return <div className="flex h - screen w - full items - center justify - center">;
+      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>;
   }
   // Redirect to login if not authenticated;
@@ -363,8 +421,11 @@ export default ProtectedRoute;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -418,6 +479,7 @@ export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
 };
 export default ProtectedRoute;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -434,3 +496,5 @@ export default ProtectedRoute;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

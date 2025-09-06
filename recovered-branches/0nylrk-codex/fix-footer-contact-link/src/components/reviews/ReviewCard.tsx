@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,11 +49,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from "lucide-react";
 import { Review } from "@/types/reviews";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -76,6 +80,12 @@ import { Badge } from "@/components/ui/badge";
 import {}
   Dialog,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Dialog,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -155,8 +165,14 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     )
 };
+=======
+    );
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const renderStars = (rating?: number) => {
 =======
     );
@@ -181,6 +197,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       </div>
     )
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   
@@ -345,6 +362,20 @@ if (return null) {
 =======
       <div className="border rounded-lg p-4 bg-card">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2);
+  };
+
+  return (
+    <div className="border rounded-lg p-4 bg-card">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="flex justify-between items-start mb-3">
 =======
   return ("
@@ -367,6 +398,7 @@ if (return null) {
                 />
               ) : (
                 <AvatarFallback>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,6 +497,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
                 </AvatarFallback>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
+                </AvatarFallback>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               )}
             </Avatar>;
           )}
@@ -497,6 +535,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
               {review.is_anonymous
                 ? "Anonymous"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,11 +582,18 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             </div>"
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), {}
+=======
+                : review.reviewer_profile?.display_name || "User"}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {formatDistanceToNow(new Date(review.created_at), {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 addSuffix: true,
               })}
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -574,6 +620,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           {renderStars(review.rating)}
         </div>        <div className="flex">{renderStars(review.rating)}</div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        <div className="flex">{renderStars(review.rating)}</div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
@@ -690,6 +740,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {review.quality_rating && (
 =======
             {review.quality_rating && ("
@@ -698,30 +749,53 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 Quality"
                 <span className="ml-1 text-yellow-500">
                   {review.quality_rating}/5;
+=======
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">
+                  {review.quality_rating}/5
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </span>
               </Badge>
             )}
 
+<<<<<<< HEAD
             {review.timeliness_rating && ("
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness"
                 <span className="ml-1 text-yellow-500">
                   {review.timeliness_rating}/5;
+=======
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">
+                  {review.timeliness_rating}/5
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </span>
               </Badge>
             )}
 
             {review.would_work_again !== undefined && (
+<<<<<<< HEAD
               <Badge"
                 variant={review.would_work_again ? "default" : "secondary"}"`
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
 <<<<<<< HEAD
+=======
+              <Badge
+                variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+              >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {review.would_work_again
                   ? "Would work again"
                   : "Would not work again"}
               </Badge>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -743,6 +817,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -908,13 +985,19 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
             )}
 
+
           </div>;
         </div>;
+<<<<<<< HEAD
 =======
 
           </div>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
+
 
       )}
 "
@@ -1022,6 +1105,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1030,10 +1114,14 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -1063,3 +1151,10 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+;
+;
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

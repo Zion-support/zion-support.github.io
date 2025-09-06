@@ -35,7 +35,11 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+#!/usr/bin/env node;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -154,6 +158,7 @@ fixer.run().catch(console.error)
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -193,6 +198,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -235,6 +242,7 @@ export const sanitizeHtml = ("html")
 <<<<<<< HEAD
 =======
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
@@ -300,6 +308,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

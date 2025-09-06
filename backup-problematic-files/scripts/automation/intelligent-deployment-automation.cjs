@@ -4,6 +4,7 @@
  * Advanced deployment system with blue-green, canary, and rollback capabilities;
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
+
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -111,9 +112,13 @@ const http = require('http')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

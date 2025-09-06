@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -76,41 +77,19 @@ import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
 import HelpCenter from "@/components/support/HelpCenter",
 import { SEO } from "@/components/SEO",
+=======
+import React from "react";
+import HelpCenter from "@/components/support/HelpCenter";
+import { SEO } from "@/components/SEO";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function HelpCenterPage() {
   return (
     <>
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import HelpCenter from "@/components/support/HelpCenter";
-import {SEO} from "@/components/SEO";
-export default function HelpCenterPage() {;
-  return (
-    <>;      <SEO
+      <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,13 +136,15 @@ export default function HelpCenterPage() {;
   );
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      />
+      <HelpCenter />
+    </>
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-import React from "react",;
-import HelpCenter from "@/components/support/HelpCenter",;
-import { SEO } from "@/components/SEO";
-export default function HelpCenterPage() {;
-  return (;
 
+<<<<<<< HEAD
       />;
       <HelpCenter />;
     </>;  );
@@ -173,6 +154,14 @@ export default function HelpCenterPage() {;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======import React from './react';
+=======
+
+
+
+
+
+import React from './react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import HelpCenter from "@/components / support / HelpCenter";
 =======
 import React from "react";"
@@ -233,16 +222,25 @@ function HelpCenterPage() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+}
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   ),;
 } export default function HelpCenterPage () {
@@ -250,11 +248,15 @@ function HelpCenterPage() {}
 }
     </>;
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -275,3 +277,7 @@ function HelpCenterPage() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </>);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

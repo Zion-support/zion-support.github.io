@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,9 @@ import React, { useState } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -29,12 +33,16 @@ import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface MilestonesListProps {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+interface MilestonesListProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -43,6 +51,7 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import {Plus} from '@/components/icons';
+<<<<<<< HEAD
 =======
 
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';'
@@ -67,6 +76,10 @@ import {Plus} from '@/components/icons';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {EmptyState} from '@/components/ui/empty-state';
 interface MilestonesListProps {}
+=======
+import {EmptyState} from '@/components/ui/empty-state';
+interface MilestonesListProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean,
@@ -92,6 +105,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   isSubmitting;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -112,6 +126,10 @@ interface MilestonesListProps {import React, { useState } from 'react',;
 =======
 interface MilestonesListProps {import React, { useState } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React, { useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MilestoneCard } from './MilestoneCard',;
@@ -155,6 +173,7 @@ interface MilestonesListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -168,15 +187,27 @@ interface MilestonesListProps {;
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean;
   isClient: boolean;
+=======
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean
+  isClient: boolean
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onCreateMilestone: (data: any) => Promise<Milestone | null>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
   onDeleteMilestone: (id: string) => Promise<boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>
+<<<<<<< HEAD
   isSubmitting: boolean;
+=======
+  isSubmitting: boolean
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onApprove?: (id: string) => Promise<void>
 
   onReject?: (id: string) => Promise<void>
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 <<<<<<< HEAD
@@ -186,6 +217,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+export const MilestonesList: React.FC<MilestonesListProps> = ({
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -211,9 +246,12 @@ interface MilestonesListProps {;
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import {use_auth} from '@/hooks / use_auth';
 import {MilestoneCard} from './MilestoneCard';
@@ -222,6 +260,7 @@ import {Button} from '@/components / ui / button';
 import {Card, CardContent} from '@/components / ui / card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import {Plus} from '@/components / icons';
+<<<<<<< HEAD
 =======
 export const MilestonesList: React.FC<MilestonesListProps> = ({}
 ';
@@ -236,6 +275,10 @@ import {Plus} from '@/components / icons';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {EmptyState} from '@/components / ui / empty - state';
 interface MilestonesListProps {}
+=======
+import {EmptyState} from '@/components / ui / empty - state';
+interface MilestonesListProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones: Milestone[],
   activities: Record < string, MilestoneActivity[]>;
   is_loading: boolean,
@@ -249,6 +292,7 @@ interface MilestonesListProps {}
   on_reject?: (id: string) => Promise < void>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const MilestonesList: React.FC < MilestonesListProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -261,6 +305,9 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 =======
 export const MilestonesList: React.FC < MilestonesListProps> = ({};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export const MilestonesList: React.FC < MilestonesListProps> = ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones;
   activities;
   is_loading;
@@ -276,8 +323,14 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
   onDeleteMilestone;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   onUploadDeliverable;
 
+=======
+  onUploadDeliverable;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones,
   activities,
   isLoading,
@@ -289,6 +342,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
   isSubmitting,
 
   onApprove,
+<<<<<<< HEAD
   onReject;
 }) => {}
   const [showAddForm, setShowAddForm] = useState(false),
@@ -324,11 +378,25 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+  onReject
+}) => {
+  const [showAddForm, setShowAddForm] = useState(false),
+  
+
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data)
+    setShowAddForm(false)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
 
 
+<<<<<<< HEAD
   if (isLoading) {}
+=======
+  if (isLoading) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onApprove,;
   onReject;
 }) => {;
@@ -339,6 +407,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
     setShowAddForm(false);
   };
 
+<<<<<<< HEAD
 
   if (isLoading) {;
 
@@ -351,15 +420,36 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
             <CardContent className="p-6">;"
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;"
               <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;"
+=======
+  if (isLoading) {;
+    return (
+    return (;
+    return (
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+          <Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
         ))}
       </div>;
+<<<<<<< HEAD
+=======
+    );
+  }
+
+
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     );
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -408,17 +498,50 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
           "No milestones have been created for this project yet."}
         action={isClient ? ;
           {;"
+=======
+  if (milestones.length === 0 && !showAddForm) {
+    return (
+      <EmptyState
+        icon={<span className="text-3xl">📊</span>}
+        title="No Milestones Yet"
+        description={isClient ?
+          "Break down the project into manageable milestones to track progress and payments." :
+          "No milestones have been created for this project yet."}
+        action={isClient ?
+          {
+            text: "Create First Milestone"
+            onClick: () => setShowAddForm(true)
+          } : undefined
+
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon={<span className="text-3xl">📊</span>}
+        title="No Milestones Yet";
+        description={isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet."}
+        action={isClient ? ;
+          {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             text: "Create First Milestone",;
             onClick: () => setShowAddForm(true);
           } : undefined;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       />;
     );
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       />
     )
@@ -427,10 +550,14 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     ),;
   }
@@ -454,6 +581,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
   }
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return (
@@ -469,6 +597,9 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
   return (
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-6">;
       {isClient && !showAddForm && (;"
         <div className="flex justify-end">;
@@ -477,6 +608,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
             Add Milestone;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -534,6 +666,22 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 =======
       )}              onSubmit={handleSubmit}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      )}
+
+
+      {showAddForm && (;
+        <Card>;
+          <CardContent className="pt-6">;
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
+
+            <AddMilestoneForm
+
+            <AddMilestoneForm 
+
+            <AddMilestoneForm ;
+              onSubmit={handleSubmit}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
             />;
@@ -573,17 +721,23 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onApprove={onApprove}
             onReject={onReject}
           />;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
       </div>;
@@ -595,12 +749,15 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -630,18 +787,24 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({};
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
       </div>;
     </div>;
   );
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   is_submitting;
   on_approve,
@@ -827,6 +990,8 @@ if ( {) {}
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   is_submitting;
   on_approve,
   on_reject;
@@ -843,13 +1008,13 @@ if ( {) {
   $2
 }
     return (
-      <div className="space-y-4">;
+      <div className="space - y-4">;
         {[1, 2, 3].map ((i) => (
           <Card key={i}>;
-            <CardContent className="p-6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb-4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb-2"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w-3/4"></div>;
+            <CardContent className="p - 6">;
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
             </CardContent>;
           </Card>))}
       </div>);
@@ -860,7 +1025,7 @@ if ( {) {
 }
     return (
       <EmptyState;
-        icon={<span className="text-3xl">📊</span>}
+        icon={<span className="text - 3xl">📊</span>}
         title="No Milestones Yet";
         description={is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -874,18 +1039,18 @@ if ( {) {
       />);
   }
   return (
-    <div className="space-y-6">;
+    <div className="space - y-6">;
       {is_client && !showAddForm && (
-        <div className="flex justify-end">;
+        <div className="flex justify - end">;
           <Button on_click={() => setShowAddForm (true)}>;
-            <Plus className="h - 4 w - 4 mr-2" />;
+            <Plus className="h - 4 w - 4 mr - 2" />;
             Add Milestone;
           </Button>;
         </div>)}
       {showAddForm && (
         <Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text - lg font - medium mb-4">Create New Milestone</h3>;
+          <CardContent className="pt - 6">;
+            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
             <AddMilestoneForm;
               on_submit={handle_submit}
               is_submitting={is_submitting}
@@ -893,7 +1058,7 @@ if ( {) {
             />;
           </CardContent>;
         </Card>)}
-      <div className="space-y-4">;
+      <div className="space - y-4">;
         {milestones.map ((milestone) => (
           <MilestoneCard;
             key={milestone.id}
@@ -910,6 +1075,7 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -948,3 +1114,60 @@ if ( {) {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+  ),;
+},; <Card key= {
+  i 
+}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) 
+}</div>) 
+}
+}/>) 
+}<Button onClick= {
+  () => setShowAddForm (true) 
+}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) 
+}<AddMilestoneForm onSubmit= {
+  handleSubmit 
+}isSubmitting= {
+  isSubmitting 
+}onCancel= {
+  () => setShowAddForm (false) 
+}/> </CardContent> </Card>) 
+}<MilestoneCard key= {
+  milestone.id 
+}id= {
+  milestone.id 
+}projectId= {
+  milestone.project id 
+}title= {
+  milestone.title 
+}description= {
+  milestone.description 
+}amount= {
+  parseFloat (milestone.amount.toString () ) 
+}status= {
+  milestone.status 
+}dueDate= {
+  milestone.due date 
+}onApprove= {
+  onApprove 
+}onReject= {
+  onReject 
+}/>) ) 
+}</div> </div>) 
+};
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

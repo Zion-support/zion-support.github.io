@@ -77,6 +77,7 @@ import {
 } from "./preview";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void;
@@ -101,6 +102,14 @@ interface PreviewResumeProps {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onBack: () => void;import { Resume } from "@/types/resume";
+=======
+interface PreviewResumeProps {
+  resume: Resume;
+  onBack: () => void;
+}
+
+import { Resume } from "@/types/resume";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   PreviewHeader,
   ResumeBasicInfoSection,
@@ -117,6 +126,7 @@ interface PreviewResumeProps {
 
 }
 
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
 =======
 import {}
@@ -174,6 +184,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
       </div>
 <<<<<<< HEAD
     </div>
+<<<<<<< HEAD
 }  );
 =======
     </div>;
@@ -184,6 +195,12 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
 
   );
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+}
+
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
     </div>;
@@ -201,6 +218,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
 }
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,3 +241,6 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

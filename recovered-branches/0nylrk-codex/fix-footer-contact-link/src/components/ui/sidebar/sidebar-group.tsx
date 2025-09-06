@@ -8,13 +8,10 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { forwardRef } from "react";
-import {ChevronDown} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {SafeRef} from "@/types/ref-types";
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",  title?: string;
 =======
@@ -25,6 +22,10 @@ import { SafeRef } from "@/types/ref-types";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
   title?: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean;
@@ -51,6 +52,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -61,6 +63,15 @@ import { ChevronDown  } from './lucide-react';'
 import { cn  } from '@/lib / utils';'
 import { SafeRef  } from '@/types / ref - types';
 interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {}
+=======
+
+
+import React, { forward_ref } from './react';
+import { ChevronDown  } from './lucide-react';
+import { cn  } from '@/lib / utils';
+import { SafeRef  } from '@/types / ref - types';
+interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title?: string;
   icon?: React.ReactNode;
   default_expanded?: boolean;
@@ -68,7 +79,11 @@ interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {}
 }
 const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
   (
+<<<<<<< HEAD
     {}
+=======
+    {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title,
       icon,
       default_expanded = true,
@@ -78,12 +93,20 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
       ...props;
     },
     ref,
+<<<<<<< HEAD
   ) => {}
+=======
+  ) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const [expanded, set_expanded] = React.useState (default_expanded);
 ;
     return (
       <div;
+<<<<<<< HEAD
         ref={ref as SafeRef < HTMLDivElement>}"
+=======
+        ref={ref as SafeRef < HTMLDivElement>}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         className={cn ("px - 3 py - 2", class_name)}
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
@@ -93,14 +116,18 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -109,14 +136,15 @@ import { SafeRef } from "@/types/ref-types",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
-}
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -137,6 +165,8 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     const [expanded, setExpanded] = React.useState(defaultExpanded);
     return (
       <div
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 import React, { forwardRef } from "react",;
@@ -233,10 +263,38 @@ SidebarGroup.displayName = "SidebarGroup",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 );
 
+<<<<<<< HEAD
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";        ref={ref as SafeRef<HTMLDivElement>}
 =======
         ref={ref as SafeRef<HTMLDivElement>}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
+
+                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
+              />;
+            )}
+
+import React, { forwardRef } from "react",;
+import { ChevronDown } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { SafeRef } from "@/types/ref-types",;
+;
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
+  title?:string,;
+  icon?:React.ReactNode,;
+  defaultExpanded?:boolean,;
+  showChevron?:boolean,;
+}
+;
+const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
+  ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
+    const [expanded, setExpanded] = React.useState(defaultExpanded),;
+;
+    return (;
+      <div;
+        ref={ref as SafeRef<HTMLDivElement>}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         className={cn("px-3 py-2", className)}
         {...props}
       >;
@@ -285,11 +343,42 @@ export { SidebarGroup }
   }
 ),
 
+
+
 export { SidebarGroup };
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        {title && (
+          <button;
+            type="button";
+            className="flex w - full items - center justify - between rounded - md px - 2 py - 1 text - sm font - medium text - muted - foreground hover:bg - secondary / 30";
+            on_click={() => set_expanded (!expanded)}
+          >;
+            <div className="flex items - center gap - 2">;
+              {icon}
+              <span>{title}</span>;
+            </div>;
+            {show_chevron && (
+              <ChevronDown;
+                className={cn (
+                  "h - 4 w - 4 transition - transform",
+                  expanded ? "rotate - 0" : "-rotate - 90",
+                )}
+              />)}
+          </button>)}
+        <div className={cn ("mt - 1", !expanded && "hidden")}>{children}</div>;
+      </div>);
+  },
+);
+;
+SidebarGroup.display_name = "SidebarGroup";
+export { SidebarGroup }
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ),;
   }
 ),;
@@ -333,6 +422,7 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -360,3 +450,8 @@ export { SidebarGroup };
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+export { SidebarGroup };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

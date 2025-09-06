@@ -9,9 +9,13 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -26,6 +30,7 @@ import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community"
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -36,6 +41,8 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -53,6 +60,7 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ReputationDisplay from "@/components/community/ReputationDisplay",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -65,12 +73,16 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import ReputationDisplay from "@/components/community/ReputationDisplay",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock user data
 
 const mockUser: CommunityUser = {
   id: "user1"
   name: "Alex Johnson"
   avatar: "https://i.pravatar.cc/150?img=3"
+<<<<<<< HEAD
 =======
 
 import { useState, useEffect } from "react","
@@ -140,10 +152,30 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
 =======
 import ReputationDisplay from "@/components/community/ReputationDisplay",    {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  role: "Verified Talent"
+  reputation: 325
+  postCount: 14
+  replyCount: 47
+  badges: [
+    {
+      id: "badge1"
+      name: "Answer Hero"
+      description: "Provided 10 accepted answers"
+      icon: "Award"
+      color: "#10B981"
+
+
+    },
+
+
+    {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "badge2"
       name: "Top Contributor"
       description: "Among the top 5% of contributors"
       icon: "Trophy"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: "#F59E0B"
@@ -174,11 +206,20 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      color: "#F59E0B"
+
+
+    },
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
       id: "badge3"
       name: "First Post"
       description: "Created your first forum post"
       icon: "Star"
+<<<<<<< HEAD
 =======
     {"
       id: "badge3""
@@ -194,6 +235,11 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+      color: "#6366F1"
+    }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from './react';
 import { use_params, Link } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -263,6 +309,7 @@ const user_posts: ForumPost[] = [;
     reply_count: 12,
     is_answered: true,
     is_featured: true;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -275,6 +322,10 @@ const user_posts: ForumPost[] = [;
 =======
       color: "#F59E0B"  }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "11"
     title: "How to structure an AI prompt for best results"
@@ -290,6 +341,7 @@ const user_posts: ForumPost[] = [;
     updatedAt: "2025-03-12T09:30:00Z"
     upvotes: 24
     downvotes: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     replyCount: 6
@@ -314,6 +366,21 @@ const user_posts: ForumPost[] = [;
   }
 
 <<<<<<< HEAD
+=======
+    replyCount: 6
+  }
+];
+export default function CommunityProfilePage() {
+  const { userId } = useParams();
+  const [user, setUser] = useState<CommunityUser | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [posts, setPosts] = useState<ForumPost[]>([]);
+  ],
+  isVerified: true,
+  isModerator: false
+},
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock posts by this user
 const userPosts: ForumPost[] = [
   {
@@ -369,6 +436,7 @@ const userPosts: ForumPost[] = [
 ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export default function CommunityProfilePage() {;
@@ -392,10 +460,17 @@ export default function CommunityProfilePage() {
     // In a real app, we would fetch the user data here'
     // For now, we'll just use the mock data;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  useEffect(() => {
+    // In a real app, we would fetch the user data here
+    // For now, we'll just use the mock data
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setUser(mockUser),
     setPosts(userPosts),
     setIsLoading(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [userId]),
   
@@ -422,23 +497,43 @@ export default function CommunityProfilePage() {
       <AppLayout>"
         <div className="container py-8">"
           <div className="flex justify-center items-center h-64">"
+=======
+  }, [userId]),
+  
+
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <div className="container py-8">
+          <div className="flex justify-center items-center h-64">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>
       </AppLayout>
     )
   }
+<<<<<<< HEAD
   if (!user) {}
     return (
       <AppLayout>"
         <div className="container py-8">
           <h1>User not found</h1>"
           <Button asChild className="mt-4">"
+=======
+  if (!user) {
+    return (
+      <AppLayout>
+        <div className="container py-8">
+          <h1>User not found</h1>
+          <Button asChild className="mt-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Link to="/community">Back to Community</Link>
           </Button>
         </div>
       </AppLayout>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -462,11 +557,17 @@ export default function CommunityProfilePage() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+      <SEO 
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <SEO
       <SEO 
 
       <SEO 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",;
@@ -476,6 +577,9 @@ import { useState, useEffect } from "react",;
 =======
     replyCount: 6import { useState, useEffect } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useState, useEffect } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -489,6 +593,7 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",;
 import UserBadges from "@/components/community/UserBadges",;
 import ReputationDisplay from "@/components/community/ReputationDisplay",;
+<<<<<<< HEAD
 =======
       <SEO;
       <SEO;
@@ -513,10 +618,15 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock user data;
 const mockUser: CommunityUser = {;"
   id: "user1",;"
   name: "Alex Johnson",;
+<<<<<<< HEAD
 <<<<<<< HEAD
   avatar: "https://i && i.pravatar.cc/150?img=3",;  avatar: "https://i && i.pravatar.cc/150?img=3",;
 =======
@@ -525,6 +635,10 @@ const mockUser: CommunityUser = {;"
   avatar: "https://i && i.pravatar.cc/150?img=3",;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  avatar: "https://i && i.pravatar.cc/150?img=3",;
+  avatar: "https://i && i.pravatar.cc/150?img=3",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   role: "Verified Talent",;
   reputation: 325,;
   postCount: 14,;
@@ -533,25 +647,28 @@ const mockUser: CommunityUser = {;"
 <<<<<<< HEAD
     {;
       id: "badge1",;
-      name: "Answer Hero",,
-  description: "Provided 10 accepted answers",;
+      name: "Answer Hero",;
+      description: "Provided 10 accepted answers",;
       icon: "Award",;
-      color: "#10B981"
-};    };
+      color: "#10B981";
+    };
+    };
     {;
       id: "badge2",;
-      name: "Top Contributor",,
-  description: "Among the top 5% of contributors",;
+      name: "Top Contributor",;
+      description: "Among the top 5% of contributors",;
       icon: "Trophy",;
-      color: "#F59E0B"
-};    };
+      color: "#F59E0B";
+    };
+    };
     {;
       id: "badge3",;
-      name: "First Post",,
-  description: "Created your first forum post",;
+      name: "First Post",;
+      description: "Created your first forum post",;
       icon: "Star",;
       color: "#6366F1";
     }
+<<<<<<< HEAD
 =======
     {;"
       id: "badge1",;"
@@ -581,15 +698,20 @@ const mockUser: CommunityUser = {;"
       color: "#6366F1";
     }
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ];
   isVerified: true,;
   isModerator: false;
 };
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock posts by this user;
 const userPosts: ForumPost[] = [;
   {;"
@@ -599,6 +721,13 @@ const userPosts: ForumPost[] = [;
     authorId: "user1",;"
     authorName: "Alex Johnson",;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
+    authorRole: "Verified Talent",;
+    categoryId: "ai-tools",;
+    tags: ["machine-learning", "fine-tuning", "gpt"];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     createdAt: "2025-04-01T12:00:00Z",;
 =======
 "
@@ -618,18 +747,37 @@ const userPosts: ForumPost[] = [;
     isAnswered: true,;
     isFeatured: true;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  };
+  {;
+    id: "11",;
+    title: "How to structure an AI prompt for best results",;
+    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
+    authorId: "user1",;
+    authorName: "Alex Johnson",;
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
+    authorRole: "Verified Talent",;
+    categoryId: "ai-tools",;
+    tags: ["prompts", "techniques", "optimization"];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     createdAt: "2025-03-20T14:25:00Z",;
     updatedAt: "2025-03-20T14:25:00Z",;
     upvotes: 36,;
     downvotes: 1,;
-    replyCount: 8
-};  };
+    replyCount: 8;
+  };
+  };
   {;
     id: "12",;
     title: "Setting up effective monitoring for AI systems",;
     content: "Here's my approach to monitoring AI systems in production environments...",;
     authorId: "user1",;
     authorName: "Alex Johnson",;
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
+    authorRole: "Verified Talent",;
+    categoryId: "project-help",;
+    tags: ["monitoring", "production", "devops"];
     createdAt: "2025-03-12T09:30:00Z",;
 =======
 
@@ -682,6 +830,7 @@ const userPosts: ForumPost[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
@@ -698,12 +847,18 @@ export default function CommunityProfilePage() {;
 
 export default function CommunityProfilePage() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+];
+
+export default function CommunityProfilePage() {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -732,6 +887,24 @@ export default function CommunityProfilePage() { return null; }
       <AppLayout>;"
         <div className="container py-8">;"
           <div className="flex justify-center items-center h-64">;"
+=======
+  useEffect(() => {;
+    // In a real app, we would fetch the user data here;
+    // For now, we'll just use the mock data;
+
+    setUser(mockUser);
+    setPosts(userPosts);
+    setIsLoading(false);
+  }, [userId]);
+
+
+  if (isLoading) {;
+
+    return (
+      <AppLayout>;
+        <div className="container py-8">;
+          <div className="flex justify-center items-center h-64">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
           </div>;
         </div>;
@@ -740,9 +913,16 @@ export default function CommunityProfilePage() { return null; }
   }
 
 
+<<<<<<< HEAD
 
       <AppLayout>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  if (!user) {;
+
+    return (
+      <AppLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="container py-8">;
           <h1>User not found</h1>;"
           <Button asChild className="mt-4">;"
@@ -753,12 +933,16 @@ export default function CommunityProfilePage() { return null; }
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
 ;
   return (;
     <AppLayout>;
       <SEO;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -797,10 +981,35 @@ export default function CommunityProfilePage() { return null; }
             <Card>"
               <CardHeader className="text-center">"
                 <div className="flex justify-center mb-4">"
+=======
+
+
+
+        title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
+        description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
+        keywords={`community, forum, profile, user profile, ${user.name}`}
+      />
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+            Forum
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium">Profile</span>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium">{user.name}</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="md:col-span-1">
+            <Card>
+              <CardHeader className="text-center">
+                <div className="flex justify-center mb-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Avatar className="h-24 w-24">
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
                   </Avatar>
+<<<<<<< HEAD
                 </div>"
                 <CardTitle className="text-2xl flex items-center justify-center gap-2">
                   {user.name}
@@ -831,11 +1040,25 @@ export default function CommunityProfilePage() { return null; }
 =======
   }    <AppLayout>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                </div>
+                <CardTitle className="text-2xl flex items-center justify-center gap-2">
+                  {user.name}
+                  {user.isVerified && (
+                    <span className="text-blue-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+  return (
+    <AppLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <SEO
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user && user.name}`}
       />;
+
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
 =======
@@ -859,6 +1082,10 @@ export default function CommunityProfilePage() { return null; }
           <span className="text-sm font-medium">{user && user.name}</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
 =======
 
@@ -888,6 +1115,7 @@ export default function CommunityProfilePage() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -904,10 +1132,17 @@ export default function CommunityProfilePage() { return null; }
                   )}
                 </CardTitle>;
                 {user && user.role && (;"
+=======
+  return (
+                  )}
+                </CardTitle>;
+                {user && user.role && (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Badge variant="outline" className="mt-1">;
                     {user && user.role}
                   </Badge>;
                 )}
+<<<<<<< HEAD
                 {user && user.isModerator && (;"
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
@@ -978,10 +1213,22 @@ export default function CommunityProfilePage() { return null; }
                 ) : (
                   <Card>"
                     <CardContent className="p-6 text-center">'"
+=======
+                {user && user.isModerator && (;
+                  <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
+                )}
+
+                    ))}
+                  </div>
+                ) : (
+                  <Card>
+                    <CardContent className="p-6 text-center">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
                     </CardContent>
                   </Card>
                 )}
+<<<<<<< HEAD
               </TabsContent>"
               <TabsContent value="activity" className="mt-6">"
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
@@ -1025,6 +1272,51 @@ export default function CommunityProfilePage() { return null; }
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
                         </div>
                         <div>"
+=======
+              </TabsContent>
+              <TabsContent value="activity" className="mt-6">
+                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
+                <Card>
+                  <CardContent className="p-6">
+                    <ul className="space-y-4">
+                      <li className="flex items-start gap-4">
+                        <div className="min-w-fit text-sm text-muted-foreground">
+                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+                        </div>
+                        <div>
+                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <div className="min-w-fit text-sm text-muted-foreground">
+                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
+                        </div>
+                        <div>
+                          <p>Earned badge <span className="font-medium">Top Contributor</span></p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <div className="min-w-fit text-sm text-muted-foreground">
+                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
+                        </div>
+                        <div>
+                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <div className="min-w-fit text-sm text-muted-foreground">
+                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
+                        </div>
+                        <div>
+                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-4">
+                        <div className="min-w-fit text-sm text-muted-foreground">
+                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
+                        </div>
+                        <div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
                         </div>
                       </li>
@@ -1034,6 +1326,7 @@ export default function CommunityProfilePage() { return null; }
               </TabsContent>
             </Tabs>
           </div>
+<<<<<<< HEAD
 
 
         </div>
@@ -1072,6 +1365,42 @@ export default function CommunityProfilePage() { return null; }
 
 "
                       <p className="text-sm text-muted-foreground">Posts</p>;
+=======
+        </div>
+      </div>
+    </AppLayout>
+  )
+
+
+                {user.isModerator && (;
+                  <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
+                )}
+
+              </CardHeader>;
+
+              <CardContent className="space-y-6">;
+                <div>;
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>;
+                  <ReputationDisplay reputation={user && user.reputation} size="lg" />;
+                </div>;
+
+                <div>;
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>;
+                  <UserBadges badges={user && user.badges} />;
+                </div>;
+
+                <div className="grid grid-cols-2 gap-4">;
+                  <Card>;
+                    <CardContent className="p-4 text-center">;
+                      <div className="text-2xl font-bold">{user && user.postCount}</div>;
+                      <p className="text-sm text-muted-foreground">Posts</p>;
+                    </CardContent>;
+                  </Card>;
+                  <Card>;
+                    <CardContent className="p-4 text-center">;
+                      <div className="text-2xl font-bold">{user && user.replyCount}</div>;
+                      <p className="text-sm text-muted-foreground">Replies</p>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </CardContent>;
                   </Card>;
                   <Card>;"
@@ -1097,21 +1426,33 @@ export default function CommunityProfilePage() { return null; }
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               </TabsList>;
 
 
 <<<<<<< HEAD
+=======
+              </TabsList>;
+
+              <TabsContent value="posts" className="mt-6">;
+                <h2 className="text-xl font-bold mb-4">Posts by {user && user.name}</h2>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {posts && posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts && posts.map((post) => (;
                       <PostCard key={post && post.id} post={post} />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>;
                 {posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts.map((post) => (;
                       <PostCard key={post.id} post={post} />;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1124,12 +1465,20 @@ export default function CommunityProfilePage() { return null; }
                 ) : (;
                   <Card>;"
                     <CardContent className="p-6 text-center">;'"
+=======
+                    ))}
+                  </div>;
+                ) : (;
+                  <Card>;
+                    <CardContent className="p-6 text-center">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <p className="text-muted-foreground">This user hasn't created any posts yet.</p>;
                     </CardContent>;
                   </Card>;
                 )}
 
               </TabsContent>;
+<<<<<<< HEAD
 "
               <TabsContent value="activity" className="mt-6">;"
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>;
@@ -1149,6 +1498,19 @@ export default function CommunityProfilePage() { return null; }
 =======
               </TabsList>;                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              <TabsContent value="activity" className="mt-6">;
+                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>;
+
+                <Card>;
+                  <CardContent className="p-6">;
+                    <ul className="space-y-4">;
+                      <li className="flex items-start gap-4">;
+                        <div className="min-w-fit text-sm text-muted-foreground">;
+
+                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </div>;
                         <div>;"
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>;
@@ -1182,134 +1544,221 @@ export default function CommunityProfilePage() { return null; }
                         <div className="min-w-fit text-sm text-muted-foreground">;"
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                        </div>;
+                        <div>;
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
+    author_id: "user1",
+    author_name: "Alex Johnson",
+    author_avatar: "https://i.pravatar.cc / 150?img = 3",
+    author_role: "Verified Talent",
+    category_id: "ai - tools",
+    tags: ["prompts", "techniques", "optimization"];
+    created_at: "2025 - 03 - 20T14:25:00Z",
+    updated_at: "2025 - 03 - 20T14:25:00Z",
+    upvotes: 36,
+    downvotes: 1,
+    reply_count: 8;
+  }
+  {
+    id: "12",
+    title: "Setting up effective monitoring for AI systems",
+    content: "Here's my approach to monitoring AI systems in production environments...",
+    author_id: "user1",
+    author_name: "Alex Johnson",
+    author_avatar: "https://i.pravatar.cc / 150?img = 3",
+    author_role: "Verified Talent",
+    category_id: "project - help",
+    tags: ["monitoring", "production", "devops"];
+    created_at: "2025 - 03 - 12T09:30:00Z",
+    updated_at: "2025 - 03 - 12T09:30:00Z",
+    upvotes: 24,
+    downvotes: 0,
+    reply_count: 6;
+  }
+];
+;
+export default /**
+ * CommunityProfilePage - Function description
+ */
+function CommunityProfilePage() {
+  const { user_id } = use_params ();
+  const [user, set_user] = useState < CommunityUser | null>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [posts, set_posts] = useState < ForumPost[]>([]);
+;
+  useEffect (() => {
+    // In a real app, we would fetch the user data here;
+    // For now, we'll just use the mock data;
+    set_user (mock_user);
+    set_posts (user_posts);
+    setIsLoading (false);
+  }, [user_id]);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <AppLayout>;
+        <div className="container py - 8">;
+          <div className="flex justify - center items - center h - 64">;
+            <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>;
+          </div>;
+        </div>;
+      </AppLayout>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <AppLayout>;
+        <div className="container py - 8">;
+          <h1 > User not found</h1>;
+          <Button as_child className="mt - 4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>);
+  }
+  return (
+    <AppLayout>;
+      <SEO;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />;
-      <div className="container py-8">;
-        <div className="flex items - center gap - 3 mb-6">;
-          <Link to="/community" className="text - sm text - muted - foreground hover:text-foreground">;
+      <div className="container py - 8">;
+        <div className="flex items - center gap - 3 mb - 6">;
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
             Forum;
           </Link>;
-          <span className="text - muted-foreground">/</span>;
-          <span className="text - sm font-medium">Profile</span>;
-          <span className="text - muted-foreground">/</span>;
-          <span className="text - sm font-medium">{user.name}</span>;
+          <span className="text - muted - foreground">/</span>;
+          <span className="text - sm font - medium">Profile</span>;
+          <span className="text - muted - foreground">/</span>;
+          <span className="text - sm font - medium">{user.name}</span>;
         </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">;
-          <div className="md:col - span-1">;
+        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+          <div className="md:col - span - 1">;
             <Card>;
-              <CardHeader className="text-center">;
-                <div className="flex justify - center mb-4">;
-                  <Avatar className="h - 24 w-24">;
+              <CardHeader className="text - center">;
+                <div className="flex justify - center mb - 4">;
+                  <Avatar className="h - 24 w - 24">;
                     <AvatarImage src={user.avatar} />;
                     <AvatarFallback>{user.name.char_at (0)}</AvatarFallback>;
                   </Avatar>;
                 </div>;
-                <CardTitle className="text - 2xl flex items - center justify - center gap-2">;
+                <CardTitle className="text - 2xl flex items - center justify - center gap - 2">;
                   {user.name}
                   {user.is_verified && (
-                    <span className="text - blue-500">;
-                      <svg xmlns="http://www.w3.org / 2000 / svg" viewBox="0 0 24 24" fill="current_color" className="w - 5 h-5">;
+                    <span className="text - blue - 500">;
+                      <svg xmlns="http://www.w3.org / 2000 / svg" view_box="0 0 24 24" fill="current_color" className="w - 5 h - 5">;
                         <path fill_rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01 - 1.549 3.397 4.491 4.491 0 01 - 1.307 3.497 4.491 4.491 0 01 - 3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01 - 3.397 - 1.549 4.49 4.49 0 01 - 3.498 - 1.306 4.491 4.491 0 01 - 1.307 - 3.498A4.49 4.49 0 012.25 12c0 - 1.357.6 - 2.573 1.549 - 3.397a4.49 4.49 0 011.307 - 3.497 4.49 4.49 0 013.497 - 1.307zm7.007 6.387a.75.75 0 10 - 1.22-.872l - 3.236 4.53L9.53 12.22a.75.75 0 00 - 1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75 - 5.25z" clip_rule="evenodd" />;
                       </svg>;
                     </span>)}
                 </CardTitle>;
                 {user.role && (
-                  <Badge variant="outline" className="mt-1">;
+                  <Badge variant="outline" className="mt - 1">;
                     {user.role}
                   </Badge>)}
                 {user.is_moderator && (
-                  <Badge className="mt - 2 bg - blue-500">Moderator</Badge>)}
+                  <Badge className="mt - 2 bg - blue - 500">Moderator</Badge>)}
               </CardHeader>;
-              <CardContent className="space-y-6">;
+              <CardContent className="space - y-6">;
                 <div>;
-                  <h3 className="text - sm font - medium text - muted - foreground mb-2">Reputation</h3>;
+                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Reputation</h3>;
                   <ReputationDisplay reputation={user.reputation} size="lg" />;
                 </div>;
                 <div>;
-                  <h3 className="text - sm font - medium text - muted - foreground mb-2">Badges</h3>;
+                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Badges</h3>;
                   <UserBadges badges={user.badges} />;
                 </div>;
-                <div className="grid grid - cols - 2 gap-4">;
+                <div className="grid grid - cols - 2 gap - 4">;
                   <Card>;
-                    <CardContent className="p - 4 text-center">;
-                      <div className="text - 2xl font-bold">{user.post_count}</div>;
-                      <p className="text - sm text - muted-foreground">Posts</p>;
+                    <CardContent className="p - 4 text - center">;
+                      <div className="text - 2xl font - bold">{user.post_count}</div>;
+                      <p className="text - sm text - muted - foreground">Posts</p>;
                     </CardContent>;
                   </Card>;
                   <Card>;
-                    <CardContent className="p - 4 text-center">;
-                      <div className="text - 2xl font-bold">{user.reply_count}</div>;
-                      <p className="text - sm text - muted-foreground">Replies</p>;
+                    <CardContent className="p - 4 text - center">;
+                      <div className="text - 2xl font - bold">{user.reply_count}</div>;
+                      <p className="text - sm text - muted - foreground">Replies</p>;
                     </CardContent>;
                   </Card>;
                 </div>;
-                <div className="text - sm text - muted-foreground">;
-                  <p > Member since April 2025</p>;                </div>;
+                <div className="text - sm text - muted - foreground">;
+                  <p > Member since April 2025</p>;
+                </div>;
               </CardContent>;
             </Card>;
           </div>;
-          <div className="md:col - span-2">;
-            <Tabs default_value="posts">;              <TabsList>;
+          <div className="md:col - span - 2">;
+            <Tabs default_value="posts">;
+              <TabsList>;
                 <TabsTrigger value="posts">Posts</TabsTrigger>;
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
               </TabsList>;
-              <TabsContent value="posts" className="mt-6">;
-                <h2 className="text - xl font - bold mb-4">Posts by {user.name}</h2>;
+              <TabsContent value="posts" className="mt - 6">;
+                <h2 className="text - xl font - bold mb - 4">Posts by {user.name}</h2>;
                 {posts.length > 0 ? (
-                  <div className="space-y-4">;
+                  <div className="space - y-4">;
                     {posts.map ((post) => (
                       <PostCard key={post.id} post={post} />))}
                   </div>) : (
                   <Card>;
-                    <CardContent className="p - 6 text-center">;
-                      <p className="text - muted-foreground">This user hasn't created any posts yet.</p>;
+                    <CardContent className="p - 6 text - center">;
+                      <p className="text - muted - foreground">This user hasn't created any posts yet.</p>;
                     </CardContent>;
                   </Card>)}
               </TabsContent>;
-              <TabsContent value="activity" className="mt-6">;
-                <h2 className="text - xl font - bold mb-4">Recent Activity</h2>;
+              <TabsContent value="activity" className="mt - 6">;
+                <h2 className="text - xl font - bold mb - 4">Recent Activity</h2>;
                 <Card>;
-                  <CardContent className="p-6">;
-                    <ul className="space-y-4">;
-                      <li className="flex items - start gap-4">;
-                        <div className="min - w-fit text - sm text - muted-foreground">;
+                  <CardContent className="p - 6">;
+                    <ul className="space - y-4">;
+                      <li className="flex items - start gap - 4">;
+                        <div className="min - w-fit text - sm text - muted - foreground">;
                           {formatDistanceToNow (new Date ("2025 - 04 - 10T14:30:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
-                          <p > Replied to <Link to="/community / post / 3" className="text - zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>;
+                          <p > Replied to <Link to="/community / post / 3" className="text - zion - purple hover:underline">Looking for feedback on my automated testing approach</Link></p>;
                         </div>;
                       </li>;
-                      <li className="flex items - start gap-4">;
-                        <div className="min - w-fit text - sm text - muted-foreground">;
+                      <li className="flex items - start gap - 4">;
+                        <div className="min - w-fit text - sm text - muted - foreground">;
                           {formatDistanceToNow (new Date ("2025 - 04 - 08T09:15:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
-                          <p > Earned badge <span className="font-medium">Top Contributor</span></p>;
+                          <p > Earned badge <span className="font - medium">Top Contributor</span></p>;
                         </div>;
                       </li>;
-                      <li className="flex items - start gap-4">;
-                        <div className="min - w-fit text - sm text - muted-foreground">;
+                      <li className="flex items - start gap - 4">;
+                        <div className="min - w-fit text - sm text - muted - foreground">;
                           {formatDistanceToNow (new Date ("2025 - 04 - 05T16:40:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
-                          <p > Replied to <Link to="/community / post / 7" className="text - zion-purple hover:underline">Comparing different vector embedding models</Link></p>;
+                          <p > Replied to <Link to="/community / post / 7" className="text - zion - purple hover:underline">Comparing different vector embedding models</Link></p>;
                         </div>;
                       </li>;
-                      <li className="flex items - start gap-4">;
-                        <div className="min - w-fit text - sm text - muted-foreground">;
+                      <li className="flex items - start gap - 4">;
+                        <div className="min - w-fit text - sm text - muted - foreground">;
                           {formatDistanceToNow (new Date ("2025 - 04 - 01T12:00:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
-                          <p > Created post <Link to="/community / post / 1" className="text - zion-purple hover:underline">Best practices for AI model fine - tuning</Link></p>;
+                          <p > Created post <Link to="/community / post / 1" className="text - zion - purple hover:underline">Best practices for AI model fine - tuning</Link></p>;
                         </div>;
                       </li>;
-                      <li className="flex items - start gap-4">;
-                        <div className="min - w-fit text - sm text - muted-foreground">;
+                      <li className="flex items - start gap - 4">;
+                        <div className="min - w-fit text - sm text - muted - foreground">;
                           {formatDistanceToNow (new Date ("2025 - 03 - 25T08:20:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>;
@@ -1422,6 +1871,11 @@ if ( {) {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </div>;
+=======
+                          <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion - purple hover: underline">How to optimize RAG systems for better results</Link></p>;
+
+                        </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </li>;
                     </ul>;
                   </CardContent>;
@@ -1432,12 +1886,15 @@ if ( {) {}
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </AppLayout>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -1445,11 +1902,18 @@ if ( {) {}
 }
     </AppLayout>);
 }
+<<<<<<< HEAD
+=======
+}
+    </AppLayout>);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </AppLayout>);
 }
     </AppLayout>;
   );}
  isVerified: true;
+<<<<<<< HEAD
 isModerator: false;
 };
 //Mock posts by this user const userPosts: ForumPost[] = [ if (isLoading) {"
@@ -1475,10 +1939,38 @@ isModerator: false;
   post;
 }/>) ) '"
 }</div>) : (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground" >This user hasn't created any posts yet.</p> </CardContent> </Card>) "
+=======
+isModerator: false 
+};
+//Mock posts by this user const userPosts: ForumPost[] = [ if (isLoading) {
+  return (<AppLayout> <div className="container py-8" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple" ></div> </div> </div> </AppLayout> if (!user) {
+  return (<AppLayout> <div className="container py-8" > <h1>User not found</h1> <Button asChild className="mt-4" > <Link to="/community" >Back to Community</Link> </Button> </div> </AppLayout> return (<AppLayout> <SEO title= {
+  `$ {
+  user.name 
+}'s Profile | Community Forum | Zion AI Marketplace` 
+}description= {
+  `View $ {
+  user.name 
+}'s profile, posts, and contributions in the Zion AI Marketplace community.` 
+}keywords= {
+  `community, forum, profile, user profile, $ {
+  user.name 
+}` 
+}/> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <div className="md:col-span-1" > <Card> </svg> </span>) 
+}</CardTitle>) 
+}</CardHeader> <CardContent className="space-y-6" > <div> </div> <div className="grid grid-cols-2 gap-4" > <Card> </CardContent> </Card> </div> <div className="text-sm text-muted-foreground" > <p>Member since April 2025</p> </div> </CardContent> </Card> </div> <div className="md:col-span-2" > <Tabs defaultValue="posts" > <TabsList> <TabsTrigger value="posts" >Posts</TabsTrigger> <TabsTrigger value="activity" >Recent Activity</TabsTrigger> </TabsList> {
+  posts.map ( (post) => (<PostCard key= {
+  post.id 
+}post= {
+  post 
+}/>) ) 
+}</div>) : (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground" >This user hasn't created any posts yet.</p> </CardContent> </Card>) 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</TabsContent> <TabsContent value="activity" className="mt-6" > <h2 className="text-xl font-bold mb-4" >Recent Activity</h2> <Card> </div> <div> <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline" >Looking for feedback on my automated testing approach</Link></p> </div> </li> </div> <div> <p>Earned badge <span className="font-medium" >Top Contributor</span></p> </div> </li> </div> <div> <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline" >Comparing different vector embedding models</Link></p> </div> </li> </div> <div> <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline" >Best practices for AI model fine-tuning</Link></p> </div> </li> </div> <div> </div> </li> </ul> </CardContent> </Card> </TabsContent> </Tabs> </div> </div> </div> </AppLayout>) 
 }
     </AppLayout>;
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1495,10 +1987,15 @@ isModerator: false;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </AppLayout>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1512,3 +2009,5 @@ isModerator: false;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

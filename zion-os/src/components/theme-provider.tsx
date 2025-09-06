@@ -37,15 +37,20 @@ function ThemeProvider() {}
 if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   $2
 =======
 <<<<<<< HEAD
+=======
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
 type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 =======
@@ -54,6 +59,9 @@ type ThemeProviderProps = {children: React.ReactNode;
 =======
   $2}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -131,9 +139,16 @@ export const use_theme = () =>: any {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
   return context;
+<<<<<<< HEAD
 }"use client",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+"use client",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createContext, useContext, useEffect, useState } from "react",;
 =======
     // Check condition;
@@ -202,6 +217,7 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return context;
 <<<<<<< HEAD
 };
@@ -212,6 +228,9 @@ export const useTheme = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   return context
+=======
+  return context;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

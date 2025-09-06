@@ -66,6 +66,7 @@ it ('converts slug back to title', () => {
 it ('handles custom separator when unslugifying', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -132,3 +133,24 @@ it('handles custom separator when unslugifying', () => {'
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');
+
+import { slugify } from '@/lib/slugify',;
+import { unslugify } from '@/lib/slugify',;
+it('removes accents from strings', () => {
+  expect(slugify('Crème Brûlée')).toBe('creme-brulee')
+});
+it('treats underscores as spaces', () => {
+  expect(slugify('AI_Tools')).toBe('ai-tools')
+it('removes special characters', () => {
+  expect(slugify('R&D Tools!')).toBe('rd-tools')
+it('allows custom separators', () => {
+  expect(slugify('Multi Word Title_')).toBe('multi_word_title')
+it('converts slug back to title', () => {
+  expect(unslugify('multi-word-title')).toBe('Multi Word Title')
+it('handles custom separator when unslugifying', () => {
+  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
+}),
+  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -328,6 +329,11 @@ export default async function handler(req, res) {
   const state = readState()
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!state.config.optIn || state.config.paused) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return res.status(403).json({ error: "Sync disabled for this instance" })
@@ -440,6 +446,7 @@ export default async function handler(req, res) {
     const computed = computeMerkleRootFromVotes(votes);
 <<<<<<< HEAD:pages_backup/api/sync/publish.ts
     if (computed !== providedRoot) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
 
@@ -460,6 +467,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  if (scope;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 }
@@ -515,6 +526,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const localBody = { ...event, propagate: false };
 const baseSignature = require('../../../utils/sync/signature');
     const sig = baseSignature.signPayload(localBody);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
     if (sig) headers["x-zion-signature"] = sig;
@@ -591,11 +603,14 @@ const baseSignature = require('../../../utils/sync/signature');
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature")
     const sig = baseSignature.signPayload(localBody)
     if (sig) headers["x-zion-signature"] = sig
+<<<<<<< HEAD
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
 =======
@@ -618,6 +633,15 @@ const baseSignature = require('../../../utils/sync/signature');
 
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+
+    await Promise.all(
+      currentState.config.peers
+        .filter((p) => !p.paused)
+        .map(async (peer) => {
+
+          const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           try {
 <<<<<<< HEAD
@@ -742,6 +766,7 @@ if (headers["x - zion - signature"] = sig) {}
           }
         }));
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
@@ -829,6 +854,8 @@ if (headers["x - zion - signature"] = sig) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (sig) headers['x-zion-signature'] = sig;
 
     await Promise.all(
@@ -850,6 +877,7 @@ if (headers["x - zion - signature"] = sig) {}
   return res.status(200).json({ status: 'accepted', entityId });
 
 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/publish.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -862,3 +890,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

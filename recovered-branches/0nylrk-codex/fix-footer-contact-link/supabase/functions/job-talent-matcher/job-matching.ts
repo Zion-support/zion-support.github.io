@@ -27,6 +27,11 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {JobData, MatchResult} from "./types ;
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
+
+
 
 "
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;"
@@ -34,7 +39,11 @@ import {JobData, MatchResult} from "./types.ts";"
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+=======
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {JobData, MatchResult} from "./types.ts";
 =======
 "
@@ -51,6 +60,7 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 <<<<<<< HEAD
 
@@ -58,6 +68,9 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {JobData, MatchResult} from "./types ;
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
@@ -68,6 +81,7 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
@@ -103,10 +117,13 @@ const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+<<<<<<< HEAD
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
@@ -146,10 +163,28 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     
     // Prepare job details for matching prompt;
     const jobDetails = {}
+=======
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+/**
+ * Main function to process job-talent matching
+ * @param job The job data to find matches for
+ * @param talents Array of talent profiles
+ * @returns Array of matches with talent IDs, scores, and reasons
+ */
+export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
+  try {
+
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
+    
+    // Prepare job details for matching prompt
+    const jobDetails = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: job && job.title;
       description: job && job.description;
       category: job && job.category;
       skills: jobSkillsNormalized,
+<<<<<<< HEAD
       budget: job && job.budget;
     };
 
@@ -220,6 +255,27 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Us
   } catch (error) {
     console && console.error("Error in processJobMatching:", error);  }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      budget: job && job.budget
+    };
+    
+
+
+    // Normalize job skills and generate embeddings via OpenAI
+
+    // Use OpenAI to find best matches
+    const bestMatches = await findBestMatches(jobDetails, talents);
+    return bestMatches
+  } catch (error) {
+    console && console.error("Error in processJobMatching:", error);
+    // Use OpenAI to find best matches
+    const bestMatches = await findBestMatches(jobDetails, talents),
+    return bestMatches
+  } catch (error) {
+    console.error("Error in processJobMatching:", error),
+    throw error
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 /**
  * Stores match results in the database and creates notifications;
@@ -229,13 +285,18 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Us
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const matchInsertPromises = matchedTalents && matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
       .from("job_talent_matches")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -264,12 +325,26 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 =======
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {    if (matchError) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        talent_id: match && match.talentId;
+        match_score: match && match.score;
+        matched_skills: match && match.matchedSkills,
+        reason: match && match.reason
+
+      });
+      });
+
+      .insert({
+
+    if (matchError) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
 
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         _title: "New Job Match",
@@ -323,10 +398,18 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         _type: "job_match"
         _related_id: jobId;
+=======
+        _title: "New Job Match",
+
+        _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
+        _type: "job_match"
+        _related_id: jobId
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       })
     }
   });
 
+<<<<<<< HEAD
         _user_id: match.talentId,"
         _title: "New Job Match","`
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`,"
@@ -353,6 +436,23 @@ import { JobData, MatchResult } from "./types.ts",;"
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
 // Initialize the Supabase client;"
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;"
+=======
+        _user_id: match.talentId,
+        _title: "New Job Match",
+        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,
+        _type: "job_match",
+        _related_id: jobId
+      })
+    }
+  });
+  
+  await Promise.all(matchInsertPromises)
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { JobData, MatchResult } from "./types.ts",;
+import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
+// Initialize the Supabase client;
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
 /**;
@@ -376,7 +476,11 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     // Use OpenAI to find best matches;
     const bestMatches = await findBestMatches(jobDetails, talents),;
     return bestMatches;
+<<<<<<< HEAD
   } catch (error) {;"
+=======
+  } catch (error) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error in processJobMatching:", error),;
     throw error;
   }
@@ -389,7 +493,11 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
  */;
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
   const matchInsertPromises = matchedTalents.map(async (match) => {;
+<<<<<<< HEAD
     const { error: matchError } = await supabase;"
+=======
+    const { error: matchError } = await supabase;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .from("job_talent_matches");
       .insert({;
         job_id: jobId,;
@@ -398,19 +506,30 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         matched_skills: match.matchedSkills,;
         reason: match.reason;
       }),;
+<<<<<<< HEAD
     if (matchError) {;`
+=======
+    if (matchError) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error(`Error storing match for talent ${match.talentId}:`, matchError);
     } else {;
       // Create notifications for each matched talent;
       await supabase.rpc('create_notification', {;
+<<<<<<< HEAD
         _user_id: match.talentId,;"
         _title: "New Job Match",;"`
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`,;"
+=======
+        _user_id: match.talentId,;
+        _title: "New Job Match",;
+        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         _type: "job_match";
         _related_id: jobId;
       });
     }
   });
+<<<<<<< HEAD
 
 
   await Promise.all(matchInsertPromises);
@@ -422,6 +541,12 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _title: "New Job Match",  
   await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  await Promise && Promise.all(matchInsertPromises)
+}
+
+  await Promise.all(matchInsertPromises);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 <<<<<<< HEAD
@@ -452,6 +577,7 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
     // Prepare job details for matching prompt;
 <<<<<<< HEAD
     const job_details = {
+<<<<<<< HEAD
       title: job.title,
   description: job.description;
 =======
@@ -459,6 +585,10 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
       title: job.title;
       description: job.description;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      title: job.title;
+      description: job.description;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       category: job.category;
       skills: jobSkillsNormalized,
       budget: job.budget;
@@ -505,7 +635,17 @@ if ( {) {}
       });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   });/**;
+=======
+  });
+;
+  await Promise.all (matchInsertPromises);
+}
+}
+;
+/**;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * Stores match results in the database and creates notifications;
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
@@ -564,8 +704,8 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
     ;
     // Prepare job details for matching prompt;
     const jobDetails = {;
-      title:job.title,,
-  description:job.description,;
+      title:job.title,;
+      description:job.description,;
       category:job.category,;
       skills:jobSkillsNormalized,;
       budget:job.budget;
@@ -626,6 +766,7 @@ await Promise.all (matchInsertPromises)
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   await Promise.all (matchInsertPromises);
@@ -650,3 +791,8 @@ await Promise.all (matchInsertPromises)
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  await Promise.all (matchInsertPromises);
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

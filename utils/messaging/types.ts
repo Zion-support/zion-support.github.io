@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
   id: string;
@@ -120,6 +121,18 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
+=======
+export type UserRole = "admin" | "user" | "guest";
+export type UserRole = "admin" | "user" | "guest";
+
+
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

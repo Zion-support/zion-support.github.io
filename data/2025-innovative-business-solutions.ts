@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,7 +7,11 @@ import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeBusinessSolution {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   tagline: string;
@@ -93,7 +98,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface InnovativeBusinessSolution {
 =======
 
@@ -119,10 +129,17 @@ export interface InnovativeBusinessSolution {}
 <<<<<<< HEAD
   rating: number,
   reviews: number
+<<<<<<< HEAD
 =======
   rating: number,;
   reviews: number;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 '
@@ -131,6 +148,10 @@ export interface InnovativeBusinessSolution {}
 <<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
     launch_date: '2025 - 05 - 01';
@@ -139,7 +160,11 @@ export interface InnovativeBusinessSolution {}
     reviews: 26;
 
 ];
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     realImplementation: true
     implementationDetails:
@@ -558,18 +583,33 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
     realImplementation: true;
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launchDate: '2025-05-01'
     customers: 38
     rating: 4.7
     reviews: 26
   }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
     customers: 38,
     rating: 4.7,
     reviews: 26,
   },;
+<<<<<<< HEAD
+=======
+
+=======
+      'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
+    launchDate: '2025-05-01'
+    customers: 38
+    rating: 4.7
+    reviews: 26
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -589,6 +629,7 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
     rating: 4.7
 
     reviews: 26
+<<<<<<< HEAD
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -597,6 +638,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 26;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -900,6 +951,11 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7,
     reviews: 26;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   }
 ;
@@ -1400,6 +1456,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
   }
@@ -1408,3 +1465,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

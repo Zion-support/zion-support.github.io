@@ -1,6 +1,5 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
+
+
 const { execSync } = require("child_process");
 class AutoFixer {}
   constructor() {}
@@ -154,11 +153,14 @@ class AutoFixer {}
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
@@ -187,9 +189,13 @@ if (require.main === module) {}
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = AutoFixer;
 module.exports = AutoFixer;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

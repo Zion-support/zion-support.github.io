@@ -48,17 +48,25 @@ export interface Job {};
 
 export interface Job {;
 
-export interface Job {export interface Job {;
+
+export interface Job {;
+
 
 export interface Job {
 export interface Job {;
+<<<<<<< HEAD
   title: string,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  id: string;
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   company_name?: string;
   budget?: string;
   client_id: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,12 +93,18 @@ export interface ApplyToJobModalProps {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,9 +127,13 @@ export interface ApplyToJobModalProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Job {;
   id: string,;
-  title: string,,
+  title: string,;
   description: string,;
   company_name?: string,;
   budget?: string,;
@@ -124,6 +142,7 @@ export interface Job {;
 ;
 export interface ApplyToJobModalProps {;
   job: Job,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   isOpen: boolean,;
@@ -169,10 +188,16 @@ export interface ApplyToJobModalProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   isOpen: boolean,;  onClose: () => void;
+=======
+  isOpen: boolean,;
+
+  onClose: () => void;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ApplyToJobModalProps {
   job: Job;
@@ -191,3 +216,17 @@ export interface ApplyToJobModalProps {};
   job: Job;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  is_open: boolean;
+  on_close: () => void;
+  onApplySuccess?: (job_id: string) => Promise < void>;
+}
+
+;
+
+;
+;
+export interface ApplyToJobModalProps {
+  job: Job;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

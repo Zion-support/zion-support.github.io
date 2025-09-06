@@ -10,6 +10,7 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card
 import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
 import {format} from 'date - fns';
 import {Skeleton} from '@/components / ui / skeleton';
+
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -50,6 +51,7 @@ interface Activity {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   milestone: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +59,11 @@ interface Activity {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  milestone: {
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
@@ -64,10 +71,32 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
     title: string
+=======
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    async function fetchActivities() {
+      try {
+        setIsLoading(true);
+        const { data, error } = await supabase
+          .from('milestone_activities')
+          .select(`
+
+            *;
+            milestone: milestone_id(title)
+            created_by_profile:profiles!user_id(display_name, avatar_url)
+          `)
+          .eq('project_id', projectId)
+          .order('created_at', { ascending: false })
+        if (error) throw error;
+        setActivities(data |[])
+
+    title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   created_by_profile: {
 
@@ -214,18 +243,29 @@ if (throw error) {}
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '
 import {supabase} from '@/integrations/supabase/client';'
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';'
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';'
 import {format} from 'date-fns';'
+=======
+
+import {supabase} from '@/integrations/supabase/client';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+import {format} from 'date-fns';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Skeleton} from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {;
   projectId: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -237,6 +277,7 @@ interface Activity {;
   created_at: string,;
   milestone: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: string
 };  created_by_profile: {;
 =======
@@ -244,6 +285,11 @@ interface Activity {;
 
   created_by_profile: {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    title: string;
+  };
+  created_by_profile: {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     display_name: string,;
     avatar_url: string | null;
   }
@@ -258,6 +304,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     async function fetchActivities() {;
       try {;
         setIsLoading(true);
+
         const { data, error } = await supabase;
           .from('milestone_activities');
 =======
@@ -283,16 +330,26 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
       }
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (projectId) {;
       fetchActivities();
     }
+
+
 
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case 'created':;
         return 'created a new milestone',;
       case 'status_changed':;
@@ -309,6 +366,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       } catch (err) {;'
         console.error('Error fetching milestone activities:', err);
       } finally {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         setIsLoading(false);
@@ -329,6 +387,13 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
         setIsLoading(false);      }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Error fetching milestone activities:', err)
+      } finally {
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     if (projectId) {}
       fetchActivities()
@@ -358,6 +423,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -365,6 +431,10 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -394,10 +464,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
   if (isLoading) {;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -417,6 +492,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
             </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </Card>
 
   if (isLoading) {;
@@ -427,12 +503,18 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     }
   }
 '
+=======
+          </Card>
+  if (isLoading) {;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return activity.action.replace(/_/g, ' ');
 
 
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return activity.action.replace(/_/g, ' ');
 =======
@@ -445,6 +527,10 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
           </Card>    }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        return activity.action.replace(/_/g, ' ');
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   if (isLoading) {
@@ -509,13 +595,18 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     ),;
   }
 
+
+
   if (activities.length === 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -525,6 +616,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 <Skeleton className="h-10 w-10 rounded-full" />;
                 <div className="space-y-2">;
                   <Skeleton className="h-4 w-40" />;
+<<<<<<< HEAD
 =======
           <Card key={i}>;"
             <CardContent className="p-6">;"
@@ -533,6 +625,8 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 <div className="space-y-2">;"
                   <Skeleton className="h-4 w-40" />;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Skeleton className="h-4 w-60" />;
                 </div>;
               </div>;
@@ -540,6 +634,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
           </Card>;
         ))}
       </div>;
+<<<<<<< HEAD
 
 
 
@@ -556,6 +651,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    );
+  }
+
+
+  if (activities && activities.length === 0) {;
+
+    return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Card>;
         <CardContent className="p-6 text-center">;
 =======
@@ -566,12 +670,21 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         </CardContent>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </Card>;
 "
+=======
+      </Card>;
+    );
+  }
+  return (
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-4">;
       <Card>;
         <CardHeader>;
           <CardTitle>Project Activity</CardTitle>;
+<<<<<<< HEAD
         </CardHeader>;"
         <CardContent className="p-6">;"
           <div className="space-y-6">;
@@ -594,11 +707,40 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+=======
+        </CardHeader>;
+        <CardContent className="p-6">;
+          <div className="space-y-6">;
+            {activities && activities.map((activity) => (;
+              <div key={activity && activity.id} className="flex items-start space-x-4">;
+                <Avatar className="h-10 w-10">;
+                  <AvatarImage src={activity && activity.created_by_profile?.avatar_url || ''} alt="User" />;
+                  <AvatarFallback>;
+                    {activity && activity.created_by_profile?.display_name?.charAt(0) || '?'}
+                  </AvatarFallback>;
+                </Avatar>;
+                <div className="space-y-1">;
+                  <div className="flex items-center space-x-2">;
+                    <span className="font-medium">{activity && activity.created_by_profile?.display_name}</span>;
+                    <span className="text-muted-foreground text-sm">;
+
+                      {getActivityDescription(activity)}
+                    </span>;
+                    <span className="text-muted-foreground text-xs">;
+                      {format(new Date(activity && activity.created_at), 'MMM d, yyyy h:mm a')}
+                    </span>;
+                  </div>;
+                  <p className="text-sm">;
+                    <span className="font-medium">{activity && activity.milestone?.title}</span>;
+                    {activity && activity.comment && (;
+                      <span className="ml-2 text-muted-foreground">"{activity && activity.comment}"</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     )}
                   </p>;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -617,6 +759,11 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 =======
       </Card>;        </CardContent>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          </div>;
+        </CardContent>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Card>;
     </div>;
 <<<<<<< HEAD
@@ -637,10 +784,14 @@ if ( {) {}
   }, [project_id]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   function getActivityDescription (activity: Activity): string {
@@ -768,3 +919,5 @@ default: return activity.action.replace (/ /g, ' ')
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

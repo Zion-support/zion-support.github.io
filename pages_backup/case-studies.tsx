@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/case-studies.tsx
 <<<<<<< HEAD:pages/case-studies.tsx
 <<<<<<< HEAD
@@ -37,6 +38,12 @@ export default Page;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+export default Page;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
   ArrowRight
@@ -497,6 +504,7 @@ import Head from 'next/head';
 
 import Head from 'next/head';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies.tsx
 <<<<<<< HEAD
 =======
@@ -516,6 +524,8 @@ import Head from 'next/head';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -640,6 +650,7 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
@@ -887,11 +898,18 @@ export default Page;
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Case Studies */}
         <section id="case-studies" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -1076,6 +1094,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1106,3 +1125,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

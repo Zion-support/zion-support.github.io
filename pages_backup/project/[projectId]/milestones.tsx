@@ -39,6 +39,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
 
@@ -121,6 +122,8 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Milestone  } from '../../../utils/types/milestones';
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
@@ -129,6 +132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
 
   if (typeof window === 'undefined') return 'client';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -173,6 +177,8 @@ export default function ProjectMilestonesPage() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const url = new URL(window.location.href);
   const r = url.searchParams.get('role');
   if (r === 'talent' || r === 'admin') return r;
@@ -189,6 +195,7 @@ const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -300,6 +307,8 @@ export default function ProjectMilestonesPage() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
 setRole(getRoleFromEnvOrQuery());
   }, []);
@@ -369,6 +378,7 @@ import { Milestone } from '../../../utils/types/milestones';
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/project/[projectId]/milestones.tsx
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
@@ -482,6 +492,8 @@ if (return) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       try {
         const data = await fetchMilestones(projectId as string);
 if (!cancelled) setMilestones(data.milestones || []);
@@ -489,6 +501,7 @@ if (!cancelled) setMilestones(data.milestones || []);
         if (!cancelled) setError(e?.message |'Failed to load milestones');
       } finally {
         if (!cancelled) setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -498,6 +511,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId]/milestones.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     })();
     return () => {;
@@ -622,6 +638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {}
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/project/[projectId]/milestones.tsx
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
@@ -657,6 +674,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+    setMilestones(prev => [res.milestone, ...prev]);
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -706,6 +729,7 @@ paid: 'Paid',
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {}
       status;
     });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/project/[projectId]/milestones.tsx
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
@@ -788,6 +812,8 @@ paid: 'Paid',
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
     );
@@ -812,6 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
         {role !== 'talent' && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -860,6 +887,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className='mb-8 p-4 rounded bg-gray-50 border'>
             <div className='flex items-center justify-between mb-3'>
               <h2 className='text-lg font-semibold'>Add Milestone</h2>
@@ -870,6 +899,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
         {loading && <div>Loading milestones...</div>}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
   }, [project_id]);
@@ -931,6 +961,8 @@ if (return, ) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {error && <div className='text-red-600'>{error}</div>}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -1094,6 +1126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
             {milestones.map((m) => (
@@ -1128,6 +1161,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {milestones.map(m => (
               <MilestoneCard
                 key={m.id}
@@ -1141,6 +1176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 <<<<<<< HEAD
 }
@@ -1239,6 +1275,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/project/[projectId]/milestones.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mt-12 text-xs text-gray-500'>
           Integration hooks ready: on Approved &rarr; trigger payout intent; on
           Paid &rarr; capture via Stripe/PayPal/Escrow.
@@ -1246,6 +1284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/project/[projectId]/milestones.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1257,3 +1296,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId]/milestones.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

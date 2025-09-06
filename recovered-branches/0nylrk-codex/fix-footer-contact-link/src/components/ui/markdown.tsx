@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -53,6 +54,12 @@ import ReactMarkdown from "react-markdown";"
 import { cn } from "@/lib/utils";
 interface MarkdownProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { cn } from "@/lib/utils";
+interface MarkdownProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   content: string;
   className?: string;
 }
@@ -62,6 +69,7 @@ export function Markdown({ content, className }: MarkdownProps) {}
       <ReactMarkdown>{content}</ReactMarkdown>
 <<<<<<< HEAD
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +117,10 @@ interface MarkdownProps {;
 =======
   className?: string;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
   return ("
@@ -118,6 +130,7 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
   );
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +152,9 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import ReactMarkdown from './react - markdown';
 =======
@@ -161,6 +177,14 @@ function Markdown() {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  )
+
+  )
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 =======
 
@@ -175,7 +199,9 @@ function Markdown() {}
 
 <<<<<<< HEAD
 ;
+
 ;
+
 
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
@@ -210,6 +236,7 @@ export function Markdown({ content, className }: MarkdownProps) {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
@@ -226,3 +253,6 @@ export function Markdown({ content, className }: MarkdownProps) {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -253,7 +253,10 @@ const Header = () => {}
 
 export default Header;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -399,6 +402,7 @@ export default function Header() {
     </header>
   );
 }
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -482,3 +486,5 @@ pr-12243
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
@@ -40,10 +41,13 @@ import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 } from "../../../utils/sync/storage";
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -70,10 +74,18 @@ import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -96,6 +108,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/manifesto-day.ts
 =======
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
@@ -136,6 +150,7 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
@@ -172,6 +187,8 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -210,6 +227,7 @@ export default async function handler(req, res) {;
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
 
+<<<<<<< HEAD
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
@@ -260,12 +278,22 @@ origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-382a
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
       id: milestoneId
       subjectId: milestoneId
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import {;
   read_state;
@@ -283,6 +311,7 @@ function handler() {;
   if (;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 =======;
   if (!state.config.optIn || state.config.paused) {;
@@ -307,6 +336,13 @@ function handler() {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+  if (!state.config.optIn || state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -341,6 +377,7 @@ function handler() {;
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
       subject_id: milestone_id
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
       score: 0;
@@ -350,6 +387,8 @@ function handler() {;
     payload: {
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       score: 0
       category: `milestone:${title}`
@@ -358,6 +397,7 @@ function handler() {;
       rank: undefined
     }
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -367,6 +407,9 @@ function handler() {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     eventId: uuidv4()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
@@ -374,9 +417,15 @@ function handler() {;
     originInstanceId: state.config.instanceId;
     version;
     timestamp: timestamp || Date.now()
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 ========
+=======
+
+  };
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
   };
@@ -432,6 +481,7 @@ export default async function handler(req, res) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -458,6 +508,15 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-382a
+
+  };
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
@@ -488,23 +547,30 @@ type: 'leaderboard_entry' as const, // reuse as a generic announcement carrier w
     timestamp: timestamp || Date.now(),
   };
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/manifesto-day.ts
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId;
     version;
@@ -515,6 +581,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -529,6 +596,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
   await Promise && Promise.all(;
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   await Promise.all(
@@ -536,7 +605,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     state && state.config.peers
       .filter((p) => !p && p.paused)
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -545,11 +617,14 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 =======
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
         try {;
@@ -559,6 +634,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       .filter((p) => !p.paused)
       .map(async (peer) => {;
 const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
         try {;
@@ -566,6 +642,8 @@ const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (sig) headers['x-zion-signature'] = sig;
 
   await Promise.all(
@@ -584,6 +662,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res
     .status(200)
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD
 
@@ -611,6 +690,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+      .map(async (peer) => {
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 ;
   upsert_event (state, event);
@@ -637,6 +721,7 @@ if (headers["x - zion - signature"] = sig) {
   return res;
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 <<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 =======
@@ -650,6 +735,9 @@ if (headers["x - zion - signature"] = sig) {
 =======
 ========
 
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   } catch (error) {
@@ -657,7 +745,10 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 ursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
@@ -715,6 +806,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -770,3 +862,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
+=======
+
+
+
+    .json({ status: 'created', version, eventId: event.eventId });
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

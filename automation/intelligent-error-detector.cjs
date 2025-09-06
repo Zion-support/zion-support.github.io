@@ -8,11 +8,15 @@ class IntelligentErrorDetector {
   constructor() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
@@ -171,6 +175,7 @@ class IntelligentErrorDetector {
     
     // Generate report
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
+<<<<<<< HEAD
     this.log('=====================================');
     this.log(`Files scanned: ${allFiles.length}`);
     this.log(`Files with issues: ${this.errors.length}`);
@@ -597,6 +602,9 @@ class IntelligentErrorDetector {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    this.log('
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   }
 }
@@ -607,6 +615,7 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentErrorDetector;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -880,3 +889,6 @@ module.exports = IntelligentErrorDetector;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

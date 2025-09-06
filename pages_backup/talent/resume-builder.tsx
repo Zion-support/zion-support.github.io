@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 <<<<<<< HEAD
 
@@ -57,11 +58,14 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/resume-builder.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 const ResumeBuilder: NextPage;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -72,11 +76,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/resume-builder.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/talent/resume-builder.tsx
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 <<<<<<< HEAD
@@ -158,6 +166,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/resume-builder.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <h1 className='text-2xl font-semibold mb-4'>Resume Builder</h1>
 
@@ -206,6 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-lg font-semibold'>Summary</h2>
           <div className='flex gap-2'>
             <AIAssistant
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 <<<<<<< HEAD
               buttonLabel="Generate with AI"
@@ -285,6 +296,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/resume-builder.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               buttonLabel='Generate with AI'
               title='Generate Resume Summary'
               defaultPrompt={generateSummaryPrompt}
@@ -601,6 +614,7 @@ export default ResumeBuilder,
         />
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 <<<<<<< HEAD
   )
@@ -638,10 +652,13 @@ export default ResumeBuilder,
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/talent/resume-builder.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 };
 
 export default ResumeBuilder;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/talent/resume-builder.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -652,3 +669,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '";`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/resume-builder.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

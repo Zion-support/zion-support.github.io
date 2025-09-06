@@ -6,6 +6,7 @@ declare module 'vitest / config' {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,10 +26,14 @@ declare module 'vitest/config' {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite';
   export default function reactSWC(): Plugin
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 declare module 'path' {
@@ -37,6 +42,19 @@ declare module 'path' {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+declare module 'path' {
+
+declare module '@vitejs/plugin-react-swc' {;
+import {Plugin} from 'vite';
+  export default function reactSWC(): Plugin
+}
+
+declare module 'path' {;
+
+
+  export function resolve(...paths: string[]): string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 declare module '@vitejs/plugin-react-swc' {;
 =======
@@ -59,6 +77,7 @@ declare module 'path' {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -99,12 +118,16 @@ declare module 'path' {  export function resolve(...paths: string[]): string;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module 'lovable-tagger' {;
 '
 import {Plugin} from 'vite';
   export default function reactSWC (): Plugin;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -137,6 +160,11 @@ import {Plugin} from 'vite';
 =======
 ;;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module '@vitejs/plugin-react-swc' {;
 =======
 
@@ -163,6 +191,7 @@ declare module 'lovable-tagger' {;'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -181,3 +210,9 @@ declare module 'lovable-tagger' {;'
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -305,17 +306,23 @@ const features = [
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 const contactInfo = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const pricingPlans = [
   {
     name: 'Starter',
@@ -323,6 +330,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
       'Basic market analysis and insights',
@@ -337,6 +345,10 @@ const pricingPlans = [
 'Basic market analysis and insights',
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+'Basic market analysis and insights',
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Portfolio tracking and monitoring',
       'Risk assessment and management',
       'Email support',
@@ -346,6 +358,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     popular: false,
+<<<<<<< HEAD
     color: 'from-gray-500 to-gray-600'
   };
   {
@@ -393,6 +406,8 @@ const integrations = [;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from-gray-500 to-gray-600',
   },
   {
@@ -530,17 +545,22 @@ const integrations = [;
 ];
 
 const integrations = [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
   { name: 'TradingView', logo: '📊', category: 'Charting' },
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -778,11 +798,17 @@ const integrations = [;'
   }
 }
 ],
+=======
+{ name: 'TD Ameritrade', logo: '💼', category: 'Broker' },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const NeuralFinanceAI: React.FC = () => {
   return (
     <Layout>
       <Head>
+<<<<<<< HEAD
 
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
@@ -834,6 +860,8 @@ const NeuralFinanceAI: React.FC = () => {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <title>
           Neural Finance AI - Advanced AI-Powered Financial Analysis Platform |
           Zion Tech Group
@@ -939,12 +967,16 @@ const NeuralFinanceAI: React.FC = () => {;
               </div>
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Neural Finance AI
                 </span>
                 <br />
@@ -1085,6 +1117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Real-time Risk Assessment</span>
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
                 <div className="flex items-center space-x-2">
@@ -1107,6 +1140,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <CheckCircle className='w-4 h-4 text-green-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+                <div className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-green-400' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span>Multi-Asset Support</span>
                 </div>
               </div>
@@ -1125,6 +1163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -1151,6 +1190,10 @@ className='relative'
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='relative'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
               <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
@@ -1215,6 +1258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-gray-300">Trading Automation</span>"
                       <span className="text-pink-400 font-semibold">Enabled</span>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1226,12 +1270,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
                       <span className='text-gray-300'>Trading Automation</span>
                       <span className='text-pink-400 font-semibold'>
                         Enabled
                       </span>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1242,6 +1289,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>
                 </div>
               </div>
@@ -1249,6 +1299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1305,10 +1356,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1317,10 +1371,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1340,6 +1398,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
@@ -1355,6 +1417,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Leverage cutting-edge AI and neural network technology to gain unprecedented insights into financial markets.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1364,6 +1427,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1395,6 +1460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1405,11 +1471,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1464,11 +1534,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                   <feature.icon className="w-8 h-8 text-white" />
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
@@ -1532,6 +1607,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
@@ -1547,6 +1624,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1565,10 +1643,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto">
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -1592,6 +1674,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
@@ -1606,6 +1692,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Discover how Neural Finance AI transforms various aspects of financial trading and investment management.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1615,6 +1702,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1646,6 +1735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1656,11 +1746,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1712,6 +1806,10 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1803,6 +1901,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -1827,6 +1926,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </div>
       </section>
@@ -1834,6 +1935,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1842,10 +1944,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -1864,6 +1970,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
@@ -1878,6 +1988,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Choose the perfect plan for your trading needs. All plans include our core AI-powered features.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -1886,6 +1997,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
             className='text-center mb-16'>;
@@ -1914,6 +2027,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1924,6 +2038,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1931,6 +2048,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
                 viewport={{ once: true }}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2047,6 +2165,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 plan.popular
                     ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10'
                     : 'border-gray-700/50'
@@ -2074,12 +2194,16 @@ plan.popular
                   </div>
                 </div>
                 <ul className='space-y-4 mb-8'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
@@ -2198,6 +2322,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
       {/* Integrations Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
@@ -2242,10 +2367,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto">
           <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+<section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -2273,6 +2405,10 @@ className='text-center mb-16'
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
@@ -2289,6 +2425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Connect with your existing trading platforms and tools for a unified trading experience.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -2310,10 +2447,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2322,11 +2462,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -2344,6 +2488,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105'
               >
                 <div className='text-4xl mb-3'>{integration.logo}</div>
@@ -2352,12 +2498,16 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
                 </h3>
                 <p className='text-xs text-gray-400'>{integration.category}</p>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -2471,6 +2621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <Link
                 href='/contact'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2559,11 +2710,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+                className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 Start Free Trial;
               </Link>
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
               <Link
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 
@@ -2586,10 +2742,16 @@ href='/contact'
                 className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+href='/contact'
+                className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 Schedule Demo;
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/neural-finance-ai.tsx
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
@@ -2626,6 +2788,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/neural-finance-ai.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='text-sm text-gray-400'>
               <p>
                 ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant
@@ -2660,6 +2824,7 @@ export default NeuralFinanceAI;
 };
 
 export default NeuralFinanceAI;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/neural-finance-ai.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2848,3 +3013,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/neural-finance-ai.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

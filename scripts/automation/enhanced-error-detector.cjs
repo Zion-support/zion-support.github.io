@@ -18,7 +18,9 @@ const path = require("path");
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
     // 1. Detect TypeScript errors
@@ -299,6 +301,10 @@ module.exports = { detectAllErrors };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -445,10 +451,16 @@ function checkSyntaxErrors(content")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
   console.error(" Error detection "failed": ")
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

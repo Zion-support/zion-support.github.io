@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import React, { useEffect, useMemo, useState } from 'react',;
 ;
@@ -7,10 +8,13 @@ import React, { useEffect, useMemo, useState } from 'react';
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -19,6 +23,8 @@ interface FraudItem {
 =======
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface FraudItem {
 id: string;
   userId: string | null;
@@ -30,12 +36,16 @@ id: string;
 
   status: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/fraud.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/fraud.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function FraudAdminPage() {
 =======
 interface FraudItem {}
@@ -136,14 +146,20 @@ export default function FraudAdminPage() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
+<<<<<<< HEAD
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
+=======
+    const saved = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const fetchItems = async () => {
     setLoading(true)
     setError(null)
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
       const json = await res.json()
       if (!res.ok) throw new Error(json.error |'Failed to load')
@@ -228,6 +244,8 @@ export default function FraudAdminPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/fraud.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const res = await fetch('/api/fraud/admin/list', {
         headers: adminToken ? { 'x-admin-token': adminToken } : {},
       });
@@ -404,6 +422,7 @@ const FraudPage: React.FC = () => {
                     >
                       Ignore
                     </button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/fraud.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -419,6 +438,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       method: 'POST'
       headers: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="p-6 max-w-7xl mx-auto">"
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>"
@@ -630,6 +652,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </table>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD:pages/admin/fraud.tsx
 <<<<<<< HEAD
@@ -686,3 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

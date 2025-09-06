@@ -5,8 +5,11 @@
 =======
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -21,13 +24,18 @@ async function analyzeBundle() {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
+<<<<<<< HEAD
     
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
@@ -35,3 +43,6 @@ analyzeBundle();
 analyzeBundle();
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

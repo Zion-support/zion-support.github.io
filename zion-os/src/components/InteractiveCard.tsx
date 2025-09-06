@@ -68,6 +68,7 @@ import Link from 'next/link',;
 interface InteractiveCardProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: string,;
 =======
   title: string,,
@@ -75,6 +76,9 @@ interface InteractiveCardProps {;
 =======
   title: string,,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  title: string,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string,;
   icon: string,;
   href: string,;
@@ -93,6 +97,7 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [isHovered, setIsHovered] = useState(false),;
@@ -123,6 +128,17 @@ export default function InteractiveCard() { return null; }
 =======
   const [isHovered, setIsHovered] = useState(false),;    <Link;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const [isHovered, setIsHovered] = useState(false),;
+  return (;
+    <Link;
+      href={href}
+      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={`Navigate to ${title} page`}
+    <Link;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
       onMouseEnter={() => setIsHovered (true)}
@@ -210,6 +226,7 @@ export default function InteractiveCard() { return null; }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
@@ -219,6 +236,7 @@ export default function InteractiveCard() { return null; }
 <<<<<<< HEAD
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+<<<<<<< HEAD
 =======
 =======
           {children || (
@@ -248,6 +266,9 @@ export default function InteractiveCard() { return null; }
           {children || (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
+=======
+              <span>Learn More</span>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
 =======
@@ -390,10 +411,20 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
+          <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
+            {stats.map ((stat, index) => (
+              <div key={index} className=&quot;text - center & quot;>;
+                <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
+                <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
+              </div>))}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>)}
     </InteractiveCard>);
@@ -470,6 +501,7 @@ export function TestimonialCard({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
 =======
@@ -504,6 +536,15 @@ export function TestimonialCard({;
 =======
       </blockquote>      </blockquote>      </blockquote>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      </blockquote>
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+      </blockquote>
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+      </blockquote>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>
@@ -518,6 +559,7 @@ export function TestimonialCard({;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,3 +585,7 @@ export function TestimonialCard({;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

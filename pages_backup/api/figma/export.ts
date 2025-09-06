@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/figma/export.ts
 <<<<<<< HEAD:pages/api/figma/export.ts
 <<<<<<< HEAD
@@ -31,6 +32,8 @@ import {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/export.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import JSZip from 'jszip';
 import {
@@ -207,6 +210,7 @@ export default async function handler(req, res) {}
     const uikit = buildUIKit(kind);"
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/figma/export.ts
 <<<<<<< HEAD
       uiFolder && uiFolder.file(path, content),
@@ -216,12 +220,17 @@ export default async function handler(req, res) {}
       uiFolder && uiFolder.file(path, content)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/export.ts
+=======
+      uiFolder && uiFolder.file(path, content)
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     );
 <<<<<<< HEAD:pages_backup/api/figma/export.ts
     // README
 
     zip && zip.file(
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/figma/export.ts
 <<<<<<< HEAD
       "README && README.md",
@@ -239,6 +248,11 @@ export default async function handler(req, res) {}
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/export.ts
+=======
+      "README && README.md"
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
 
     );
@@ -269,6 +283,7 @@ export default async function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/figma/export.ts
 <<<<<<< HEAD
 }
@@ -317,3 +332,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/export.ts
+=======
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

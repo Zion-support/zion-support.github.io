@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
@@ -82,11 +83,18 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/enterprise/companies.ts
+=======
+}
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status (201).json (created);
   }"
   res.set_header ("Allow", "GET, POST");"
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
@@ -99,6 +107,13 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 ========
 =======
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -222,6 +237,7 @@ export default function handler(req, res) {}
 }
   } catch (error) {;
     console.error("Error:", error);
+<<<<<<< HEAD
 =======
     } catch (error) {"
     console.error("Error:", error);"
@@ -262,10 +278,22 @@ export default function handler(req, res) {}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
+=======
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return res.status(405).json({ error: 'method_not_allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {;
     console.error("Error:", error);
 =======
@@ -280,10 +308,15 @@ export default function handler(req, res) {}
   } catch (error) {"
     console.error("Error:", error);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/enterprise/companies.ts
+=======
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
@@ -292,6 +325,8 @@ export default function handler(req, res) {}
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
@@ -303,6 +338,7 @@ export default function handler(req, res) {}
 }
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
@@ -323,6 +359,10 @@ export default function handler(req, res) {}
 
 <<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method;
     return res.status(201).json(created)
@@ -332,6 +372,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   return res.status(405).json({ error: 'method_not_allowed' });
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies.ts
@@ -342,3 +383,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/enterprise/companies.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

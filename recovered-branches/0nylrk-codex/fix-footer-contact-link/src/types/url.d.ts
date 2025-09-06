@@ -1,5 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }declare module 'url' {
+=======
+declare module "url" {
+  export function fileURLToPath(url: string | URL): string;
+}
+
+}
+
+declare module 'url' {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   export function fileURLToPath (url: string | URL): string;
 }
 

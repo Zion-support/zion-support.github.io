@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -19,10 +20,17 @@ export type ProjectStatus =
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type ProjectStatus =
-export type ProjectStatus = 
-export type ProjectStatus = 
+  | "offer_sent"
+  | "offer_accepted"
+  | "changes_requested"
+  | "in_progress"
+  | "completed"
+  | "canceled";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -94,6 +102,10 @@ export interface Project {  id: string;
 export interface Project {};
   id: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface Project {
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   client_id: string;
   talent_id: string;
   job_id: string;
@@ -106,19 +118,21 @@ export interface Project {};
   updated_at: string;
 <<<<<<< HEAD
   job?: {
-    title: string,
-  description: string
-};
+    title: string;
+    description: string;
+  };
   talent_profile?: {
     full_name: string;
     professional_title?: string;
-    profile_picture_url?: string
-};
+    profile_picture_url?: string;
+  };
   client_profile?: {
     display_name: string;
-    avatar_url?: string
-};
+    avatar_url?: string;
+  };
 }
+
+
 
 export interface ProjectNote {;
 <<<<<<< HEAD
@@ -130,6 +144,7 @@ export interface ProjectNote {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 export interface ProjectNote {export interface ProjectNote {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -163,6 +178,10 @@ export interface ProjectNote {;
 
 export interface ProjectNote {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export interface ProjectNote {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   project_id: string;
   user_id: string;
@@ -170,6 +189,7 @@ export interface ProjectNote {};
   created_at: string;
 <<<<<<< HEAD
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,10 +266,13 @@ export interface ProjectNote {;
 =======
   created_by_profile?: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     display_name: string;
     avatar_url?: string;
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -263,3 +286,5 @@ export interface ProjectNote {;
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

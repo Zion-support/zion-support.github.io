@@ -17,6 +17,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
 supabase
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+      supabase
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         .from('profile_views')
         .select('id, talent_id')
 =======
@@ -52,6 +57,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'ai', value: 1 }
       ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 
     });
@@ -60,6 +66,8 @@ pr-12243
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 }
@@ -68,7 +76,19 @@ pr-12243
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+    });
+
+
+  }
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
@@ -78,12 +98,20 @@ pr-12243
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**;
@@ -170,6 +198,7 @@ function handler() {}
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -178,3 +207,12 @@ pr-12243
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

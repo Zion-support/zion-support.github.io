@@ -5,8 +5,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+=======
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+      };
+    }
+    return config;
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
@@ -93,6 +125,7 @@ module.exports = next_config;
   distDir: '.next',
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,6 +313,8 @@ module.exports = nextConfig;
 =======
 module.exports = nextConfig;
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -308,6 +343,32 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+      };
+    }
+    return config;
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },

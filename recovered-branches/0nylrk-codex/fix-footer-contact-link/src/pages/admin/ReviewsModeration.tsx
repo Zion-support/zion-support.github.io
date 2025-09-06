@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -41,12 +42,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 =======
 import { AppHeader } from "@/layout/AppHeader";"
 import { Footer } from "@/components/Footer";"
@@ -57,10 +61,15 @@ import { useState, useEffect } from "react";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {}
+=======
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardTitle,
 } from "@/components/ui/card";
@@ -72,12 +81,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Star, AlertTriangle } from "lucide-react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  CardTitle,
+} from "@/components/ui/card";
+import { Star, AlertTriangle } from "lucide-react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +162,33 @@ function ReviewsModerationContent() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const fetchReviews = async () => {
     setIsLoading(true),
+=======
+  const fetchReviews = async () => {
+  const fetchReviews = async () => {
+    setIsLoading(true),
+    try {
+      // In a real application, you would fetch reviews from an API
+      // For now, let's simulate a delay and return empty data
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      setReviews([]),
+      setIsLoading(false)
+    } catch (error) {
+      console.error("Error fetching reviews:", error),
+      toast({
+        title: "Error"
+        description: "Failed to load reviews. Please try again later."
+        variant: "destructive"})
+      setIsLoading(false)
+    }
+  
+
+  const fetchReviews = async () => {
+  const [activeTab, setActiveTab] = useState("pending");
+  const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const fetchReviews = async () => {;
+    setIsLoading(true);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
@@ -196,6 +238,18 @@ function ReviewsModerationContent() { return null; }
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  useEffect(() => {
+    fetchReviews();
+  }, [activeTab]);
+
+  const handleRefresh = () => {;
+    fetchReviews();
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   useEffect(() => {
     fetchReviews()
@@ -205,9 +259,14 @@ function ReviewsModerationContent() { return null; }
   }
 
   },
-  
+
+  useEffect(() => {
+    fetchReviews()
+  }, [activeTab]),
+
 
   const handleRefresh = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +293,10 @@ function ReviewsModerationContent() { return null; }
 =======
     fetchReviews()
 };
+=======
+    fetchReviews();
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -308,6 +371,30 @@ function ReviewsModerationContent() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                />
+              </TabsContent>
+
+              <TabsContent value="reported" className="mt-0">
+                <div className="text-center py-12 border rounded-lg">
+                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
+                  <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
+                  <p className="text-muted-foreground">
+                    This section will show reviews that have been reported by
+                    users.
+                  </p>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </CardContent>
+        </Card>
+      </main>
+      <Footer />
+    </>
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 
@@ -475,6 +562,7 @@ function ReviewsModerationContent() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 export default function ReviewsModeration() {;
   return (;
@@ -587,6 +675,11 @@ function ReviewsModerationContent() {;
 
   const fetch_reviews = async () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+;
+  const fetch_reviews = async () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setIsLoading (true);
     try {}
       // In a real application, you would fetch reviews from an API;'
@@ -620,15 +713,16 @@ function ReviewsModerationContent() {;
       />;
 <<<<<<< HEAD
       <AppHeader />;
-      <main className="container mx - auto px - 4 py-8">;
-        <div className="flex justify - between items - center mb-8">;
+      <main className="container mx - auto px - 4 py - 8">;
+        <div className="flex justify - between items - center mb - 8">;
           <div>;
-            <h1 className="text - 3xl font-bold">Review Moderation</h1>;
-            <p className="text - muted - foreground mt-1">Manage, approve, or reject reviews</p>;
+            <h1 className="text - 3xl font - bold">Review Moderation</h1>;
+            <p className="text - muted - foreground mt - 1">Manage, approve, or reject reviews</p>;
           </div>;
         </div>;
         <Card>;
           <CardHeader>;
+<<<<<<< HEAD
             <CardTitle className="flex items - center gap-2">;
               <Star className="h - 5 w-5" />;
 =======
@@ -645,6 +739,10 @@ function ReviewsModerationContent() {;
             <CardTitle className="flex items - center gap - 2">;"
               <Star className="h - 5 w - 5" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <CardTitle className="flex items - center gap - 2">;
+              <Star className="h - 5 w - 5" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Review Management;
             </CardTitle>;
             <CardDescription>;
@@ -654,10 +752,11 @@ function ReviewsModerationContent() {;
 <<<<<<< HEAD
           <CardContent>;
             <Tabs default_value="pending" value={active_tab} onValueChange={setActiveTab}>;
-              <TabsList className="mb-6">;
+              <TabsList className="mb - 6">;
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
               <TabsContent value="pending" className="mt-0">;
 =======
           <CardContent>;"
@@ -668,6 +767,9 @@ function ReviewsModerationContent() {;
               </TabsList>;"
               <TabsContent value="pending" className="mt - 0">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <TabsContent value="pending" className="mt - 0">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <ReviewsModerationTable;
                   reviews={reviews}
                   is_loading={is_loading}
@@ -675,6 +777,7 @@ function ReviewsModerationContent() {;
                 />;
 <<<<<<< HEAD
               </TabsContent>;
+<<<<<<< HEAD
               <TabsContent value="reported" className="mt-0">;
                 <div className="text - center py - 12 border rounded-lg">;
                   <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb-2" />;
@@ -688,6 +791,13 @@ function ReviewsModerationContent() {;
                   <h3 className="text - lg font - medium mb - 2">Reported Reviews</h3>;"
                   <p className="text - muted - foreground">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <TabsContent value="reported" className="mt - 0">;
+                <div className="text - center py - 12 border rounded - lg">;
+                  <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb - 2" />;
+                  <h3 className="text - lg font - medium mb - 2">Reported Reviews</h3>;
+                  <p className="text - muted - foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     This section will show reviews that have been reported by users.;
                   </p>;
                 </div>;
@@ -698,38 +808,15 @@ function ReviewsModerationContent() {;
       </main>;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </>);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </>);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { ReviewsModerationTable } from '@/components / admin / reviews / ReviewsModerationTable';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useState, useEffect } from './react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Star, AlertTriangle } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-/**
- * ReviewsModerationContent - Function description
- */
-function ReviewsModerationContent() {
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [reviews, set_reviews] = useState ([]);
-  const [is_loading, setIsLoading] = useState (true);
-
-}
-
-export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
-  )
-}
 ;
 <<<<<<< HEAD
 =======
@@ -746,12 +833,16 @@ function ReviewsModeration() {}
     </ProtectedRoute>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 }
 ;
@@ -781,6 +872,7 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }export default function ReviewsModeration () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> 
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -797,3 +889,5 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -34,10 +35,15 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export type FraudSeverity = "safe" | "suspicious" | "dangerous";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface FraudFlag {
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
 export interface FraudFlag {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +75,10 @@ export interface FraudFlag {;
 
 export interface FraudFlag {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export interface FraudFlag {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   user_id: string;
   user_email?: string;"
@@ -108,6 +118,7 @@ export interface FraudStats {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+
 export interface FraudStats {;
 
 <<<<<<< HEAD
@@ -118,6 +129,7 @@ export interface FraudStats {;
 export interface FraudStats {
 
 export interface FraudStats {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,10 +156,15 @@ export interface FraudStats {};
 export interface FraudStats {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export interface FraudStats {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,3 +240,8 @@ export interface FraudStats {;
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  false_positives: number;
+  actioned_count: number;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,12 +81,15 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function ProjectMilestones() {
 =======
@@ -103,6 +107,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";"
 import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
 function ProjectMilestones() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+function ProjectMilestones() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>
       <>
@@ -170,6 +177,41 @@ function ProjectMilestones() {}
         <SEO;"
           title="Payment Milestones | Zion AI Marketplace";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          description="Manage project payment milestones and deliverables";
+        />;
+        <AppHeader />;
+        <ProjectMilestonesContent />;
+        <Footer />;
+      </>;
+
+
+
+;
+
+
+export default ProjectMilestones;
+
+export default ProjectMilestones;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+export default ProjectMilestones;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </ProtectedRoute>);
 }
 <<<<<<< HEAD

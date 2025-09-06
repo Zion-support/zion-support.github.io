@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Infobox = {;
 =======
 <<<<<<< HEAD
@@ -16,21 +17,30 @@ export type Infobox = {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
   token: string,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   protocolType: string;
 }
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 },;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+},;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type WikiContent = {;
   title: string,;
   intro: string,;
@@ -40,6 +50,7 @@ export type WikiContent = {;
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,20 +65,28 @@ export type Infobox = {
 
 export type Infobox = {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export type Infobox = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   founder: string;
   launchYear: string;
   token: string;
   protocolType: string;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WikiSection = {;
 =======
 export type WikiSection = {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export type WikiSection = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   title: string;
   paragraphs: string[];
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type WikiContent = {;
 =======
@@ -85,10 +104,15 @@ export type WikiContent = {};
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export type WikiContent = {
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,10 +242,13 @@ export function buildMarkdownFromWiki (wiki: WikiContent): string {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 |---|---|;
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -277,6 +304,8 @@ if ( {) {
   return lines.join ('\n');
 }
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
   const sections = [;
     docs.product_overview,
@@ -298,6 +327,7 @@ export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 export type DocsContent = {;
@@ -318,10 +348,17 @@ export type DocsContent = {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+};
+export type DocsContent = {
+  productOverview: WikiSection;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   publicRoadmap: WikiSection;
@@ -360,12 +397,24 @@ export function generateZionWiki(): WikiContent {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  publicRoadmap: WikiSection;
+};
+export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
+export function generateZionWiki(): WikiContent {;
+  const title = 'Zion OS';
+  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.',;
+  const infobox: Infobox = {;
+    founder: 'Zion Holdings';
+    launchYear: '2025';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
     {;
       id: 'history-launch',;
       id: 'history-launch';
+<<<<<<< HEAD
 =======
 
     token: 'ZION$',;'
@@ -425,10 +474,51 @@ export function generateZionWiki(): WikiContent {;
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
   const references = [;  } catch (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+      title: 'History and Launch',;
+      paragraphs: [;
+        'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.The mainnet-ready architecture was announced in 2025 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.']},;
+    {;
+      id: 'architecture',;
+      title: 'Architecture',;
+      paragraphs: [;
+        'Zion OS is a modular, protocol-first system with the following layers: (1) Identity and Reputation, (2) Task and Marketplace, (3) AI Model and Agent Registry, (4) Payments and Tokenomics, and (5) Governance. Modules interoperate via open interfaces.ZionGPT provides an orchestration layer for agent-to-agent collaboration, policy enforcement, and quality control. Each module can be upgraded independently and governed by token holders and working groups.']},;
+    {;
+      id: 'token',;
+      title: 'Token (ZION$)',;
+      paragraphs: [;
+        'ZION$ is a utility and governance token used for staking, curation, and fee distribution. Participants stake to signal quality, earn rewards for verified contributions, and secure the marketplace against spam and fraud.Fees collected from marketplace activity are distributed to contributors, validators, and the protocol treasury subject to DAO-approved policies.']},;
+    {;
+      id: 'zion-gpt',;
+      title: 'ZionGPT and the AI Layer',;
+      paragraphs: [;
+        'ZionGPT is an AI meta-orchestrator that coordinates tasks across registered agents, models, and human contributors. It enforces standards, evaluates outputs, and routes work to the most reliable providers.The AI layer supports verifiable prompts, reproducible runs, and audit trails to attribute value and enable on-chain or off-chain settlement.']},;
+    {;
+      id: 'dao-governance',;
+      title: 'DAO and Governance',;
+      paragraphs: [;
+        'Zion DAO governs protocol parameters, module upgrades, and treasury allocations. Proposals are submitted by contributors and subject to stake-weighted voting with safeguards against concentration and collusion.Working groups steward core domains such as protocol engineering, AI ecosystem partnerships, safety, and growth. Transparency reports and on-chain metrics inform policy updates.']},;
+    {;
+      id: 'use-cases',;
+      title: 'Use Cases',;
+      paragraphs: [;
+        'AI marketplaces for task fulfillment, model evaluation, and fine-tuning bounties.Talent reputation networks that verify contributions and enable portable work graphs.Enterprise agent orchestration for workflows that require auditability and compliance.Open research funding where results and attributions are verifiable and programmable.']},;
+    {;
+      id: 'adoption',;
+      title: 'Adoption',;
+      paragraphs: [;
+        'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
+  const references = [;
+    '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
+  return { title, intro, infobox, sections, references   } catch (error) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -479,16 +569,34 @@ export function slugify (input: string): string {};
     .replace (/[^a - z0 - 9\s-]/g, '');
     .trim ();'
     .replace (/\s+/g, '-');'
+=======
+    .toLowerCase();
+    .replace(/[^a-z0-9\s-]/g, '');
+    .trim();
+    .replace(/\s+/g, '-');
+    .replace(/-+/g, '-');
+
+export function slugify (input: string): string {
+  return input;
+    .toLowerCase ();
+    .replace (/[^a - z0 - 9\s-]/g, '');
+    .trim ();
+    .replace (/\s+/g, '-');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     .replace (/-+/g, '-');
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -501,6 +609,9 @@ export function slugify (input: string): string {};
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export function generateZionDocs(): DocsContent {;
   const wiki = generateZionWiki();
@@ -508,6 +619,7 @@ export function generateZionDocs(): DocsContent {;
     productOverview: {;
       id: 'product-overview';
       title: 'Product Overview';
+<<<<<<< HEAD
       paragraphs: [wiki.intro, 'Key modules: Identity & Reputation, Marketplace, AI/Agent Registry, Payments & Tokenomics, Governance.']};
     developerApi: {;
       id: 'developer-api';
@@ -534,6 +646,42 @@ export function generateZionDocs(): DocsContent {;
       title: 'Public Roadmap';
       paragraphs: [;
         'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}}
+=======
+      paragraphs: [wiki.intro, 'Key modules: Identity & Reputation, Marketplace, AI/Agent Registry, Payments & Tokenomics, Governance.']},;
+    developerApi: {;
+      id: 'developer-api',;
+      title: 'Developer API',;
+      paragraphs: [;
+        'Developers register agents, publish capabilities, and consume marketplace tasks via open interfaces.Core resources: Agent Registry, Task Graph, Reputation Signals, and Settlement Hooks.']},;
+    governanceGuide: {;
+      id: 'governance-guide',;
+      title: 'Governance Guide',;
+      paragraphs: [;
+        'Zion DAO manages protocol upgrades and treasury allocations. Proposals, quorum, and safeguards are documented for transparency.']},;
+    tokenomics: {;
+      id: 'tokenomics',;
+      title: 'Tokenomics',;
+      paragraphs: [;
+        'ZION$ powers staking, curation, and rewards. Fees from marketplace activity flow to contributors and the treasury under DAO policy.']},;
+    team: {;
+      id: 'team',;
+      title: 'Team',;
+      paragraphs: [;
+        'Zion Holdings and community contributors maintain core modules and standards, with decentralized working groups over time.']},;
+    publicRoadmap: {;
+      id: 'public-roadmap',;
+      title: 'Public Roadmap',;
+      paragraphs: [;
+        'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function buildMarkdownFromWiki(wiki: WikiContent): string {;
@@ -554,12 +702,33 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {;
     lines.push(`## ${s.title}`);
     for (const p of s.paragraphs) lines.push(p);
     lines.push('');
+<<<<<<< HEAD
   }
   if (wiki.references.length) {;
     lines.push('## References');
     wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
   }
   return lines.join('\n');
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (wiki.references.length) {;
+    lines.push('## References');
+    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return lines.join('\n');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function buildWikitextFromWiki(wiki: WikiContent): string {;
@@ -578,12 +747,33 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {;
     lines.push(`== ${s.title} ==`);
     for (const p of s.paragraphs) lines.push(p);
     lines.push('');
+<<<<<<< HEAD
   }
   if (wiki.references.length) {;
     lines.push('== References ==');
     wiki.references.forEach((r) => lines.push(`* ${r}`));
   }
   return lines.join('\n');
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (wiki.references.length) {;
+    lines.push('== References ==');
+    wiki.references.forEach((r) => lines.push(`* ${r}`));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return lines.join('\n');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
@@ -592,8 +782,13 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     docs.developerApi;
     docs.governanceGuide;
     docs.tokenomics;
+<<<<<<< HEAD
     docs.team;
     docs.publicRoadmap];
+=======
+    docs.team,;
+    docs.publicRoadmap],;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const lines: string[] = [];
   lines.push('# Zion OS — Internal Documentation');
   lines.push('');
@@ -601,8 +796,21 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     lines.push(`## ${s.title}`);
     for (const p of s.paragraphs) lines.push(p);
     lines.push('');
+<<<<<<< HEAD
   }
   return lines.join('\n');
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return lines.join('\n');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function slugify(input: string): string {;
@@ -613,12 +821,16 @@ export function slugify(input: string): string {;
     .replace(/\s+/g, '-');
     .replace(/-+/g, '-');
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -648,3 +860,7 @@ export function slugify(input: string): string {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

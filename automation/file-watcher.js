@@ -459,6 +459,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -490,6 +491,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
@@ -1873,6 +1877,7 @@ try {}
 <<<<<<< HEAD
 }
 }
+<<<<<<< HEAD
 
 =======
 
@@ -1904,6 +1909,8 @@ try {}
 =======
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();

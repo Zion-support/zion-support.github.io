@@ -22,14 +22,19 @@ export function useResumeBasic() {
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // From useFetchResume
 <<<<<<< HEAD
+=======
+    // From useFetchResume
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
     error: fetchResumeOperations.error |resumeActions.error;
     resume: fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations.fetchResume;
     // From useResumeActions
     createResume: resumeActions.createResume;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     updateBasicInfo: resumeActions.updateBasicInfo
@@ -39,6 +44,11 @@ export function useResumeBasic() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    updateBasicInfo: resumeActions.updateBasicInfo
+
+    updateBasicInfo: resumeActions.updateBasicInfo,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -53,6 +63,7 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -97,6 +108,15 @@ export function useResumeBasic() { return null; }
 =======
     // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+    setActiveResume: resumeActions.setActiveResume}
+}
+    isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
+    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     

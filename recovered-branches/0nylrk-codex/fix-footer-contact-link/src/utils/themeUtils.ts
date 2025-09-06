@@ -8,6 +8,7 @@ export interface ThemeColors {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,10 +30,17 @@ export interface ThemeColors {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export interface ThemeColors {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
   accentColor: string;
+<<<<<<< HEAD
   buttonColor: string;
   cardBackground: string;
 }
@@ -99,6 +107,16 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 ;
 export interface ThemeColors {};
+=======
+  buttonColor: string
+  cardBackground: string
+}
+// Define theme presets
+export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+;
+export interface ThemeColors {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   primary_color: string;
   background_color: string;
   text_color: string;
@@ -107,6 +125,7 @@ export interface ThemeColors {};
   card_background: string;
 }
 // Define theme presets;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
 <<<<<<< HEAD
@@ -163,6 +182,32 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
+  switch (preset) {
+// Define theme presets;
+export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
+  switch (preset) {
+    case 'dark':;
+      return {
+
+
+  const root = document.documentElement,;
+
+
+  root.style.setProperty('--primary-color', colors.primaryColor);
+  root.style.setProperty('--background-color', colors.backgroundColor);
+  root.style.setProperty('--text-color', colors.textColor);
+  root.style.setProperty('--accent-color', colors.accentColor);
+  root.style.setProperty('--button-color', colors.buttonColor);
+  root.style.setProperty('--card-background', colors.cardBackground);
+  // Set background and text colors on body
+  document.body.style.backgroundColor = colors.backgroundColor;
+
+  document.body.style.color = colors.textColor
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -185,10 +230,14 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 <<<<<<< HEAD
   document && document.body.style && style.color = colors && colors.textColor
 
+<<<<<<< HEAD
 =======
   document && document.body.style && style.color = colors && colors.textColor;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -198,9 +247,71 @@ export interface ThemeColors {;
   buttonColor: string,;
   cardBackground: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   switch (preset) {
     case 'dark':;
-      return {}
+      return {
+        primary_color;
+        background_color: '#0f172a';
+        text_color: '#e2e8f0';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#1e293b'}
+    case 'neon':;
+      return {
+        primary_color;
+        background_color: '#030712';
+        text_color: '#f8fafc';
+        accent_color: '#00ffbb';
+        button_color: primary_color,
+        card_background: '#0f172a'}
+    case 'corporate':;
+      return {
+        primary_color;
+        background_color: '#f8fafc';
+        text_color: '#334155';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#ffffff'}
+    case 'startup':;
+      return {
+        primary_color;
+        background_color: '#16181d';
+        text_color: '#fafafa';
+        accent_color: '#ff7f50';
+        button_color: primary_color,
+        card_background: '#1e2127'}
+    case 'light':;
+    default: return {
+        primary_color;
+        background_color: '#ffffff';
+        text_color: '#0f172a';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#f8fafc'}
+  }
+}
+// Apply theme colors to document CSS variables;
+
+export function applyThemeColors(colors: ThemeColors) {;
+  const root = document.documentElement,;
+  root.style.setProperty('--primary-color', colors.primaryColor),;
+  root.style.setProperty('--background-color', colors.backgroundColor),;
+  root.style.setProperty('--text-color', colors.textColor),;
+  root.style.setProperty('--accent-color', colors.accentColor),;
+  root.style.setProperty('--button-color', colors.buttonColor),;
+  root.style.setProperty('--card-background', colors.cardBackground),;
+  // Set background and text colors on body;
+  document.body.style.backgroundColor = colors.backgroundColor;
+  document.body.style.color = colors.textColor;
+
+
+
+}
 export /**
  * applyThemeColors - Function description
 =======
@@ -273,6 +384,7 @@ function applyThemeColors() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -281,6 +393,11 @@ export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ThemeColors {;
   primaryColor:string,;
   backgroundColor:string,;
@@ -356,6 +473,7 @@ export function applyThemeColors(colors:ThemeColors) {;
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -370,3 +488,5 @@ export function applyThemeColors(colors:ThemeColors) {;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

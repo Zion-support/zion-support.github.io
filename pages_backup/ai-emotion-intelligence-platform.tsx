@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
@@ -133,6 +134,8 @@ const contactInfo = {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CheckCircle,
   ArrowRight,
   Star,
@@ -248,6 +251,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Train custom emotion recognition models for your specific use case',
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -287,6 +291,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: Shield,
     title: 'Real-time Alerts',
     description:
@@ -315,6 +321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: MessageCircle,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -341,6 +348,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'Employee Wellbeing',
     description:
       'Monitor employee emotional states to support mental health and productivity',
@@ -348,12 +357,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const pricing = [
   {
     name: 'Starter'
@@ -361,6 +374,7 @@ const pricing = [
     period: '/month'
     description: 'Perfect for small teams getting started with emotion AI'
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 =======
@@ -585,6 +599,8 @@ const pricing = [;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Up to 1,000 emotion analyses per month',
       'Basic emotion detection (7 core emotions)',
       'Email support',
@@ -675,12 +691,16 @@ export default function AIEmotionIntelligencePlatform() {
                 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'
               >
                 <Sparkles className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function AIEmotionIntelligencePlatform() {
 =======
 
@@ -846,6 +866,7 @@ function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -935,22 +956,34 @@ function AIEmotionIntelligencePlatform() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                AI & Customer Experience
+              </motion.div>
+              <motion.h1
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8, delay: 0.4 }}
                 className='text-5xl md:text-7xl font-bold mb-6'
               >
                 <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
               <motion.p
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 =======
@@ -1145,6 +1178,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8, delay: 0.6 }}
@@ -1214,6 +1249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <div className='text-gray-400 text-sm'>Accuracy Rate</div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
               <div className="text-center">
@@ -1380,6 +1416,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
                   &lt;100ms
@@ -1420,6 +1458,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1536,6 +1575,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1552,6 +1593,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                   <p className='text-gray-400'>{feature.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 
@@ -1642,6 +1684,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
             </div>
           </div>
@@ -1705,6 +1749,7 @@ viewport={{ once: true }}
                   </h3>
                   <p className='text-gray-400 text-lg'>{useCase.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 
@@ -1740,6 +1785,8 @@ viewport={{ once: true }}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
             </div>
           </div>
@@ -1765,6 +1812,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1772,6 +1820,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {pricing.map((plan, index) => (
                 <motion.div
 <<<<<<< HEAD
@@ -1824,6 +1876,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }`}
                 >;
                   {plan.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
@@ -1935,6 +1988,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full'>
                         Most Popular
@@ -1974,6 +2029,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }`}
                   >;
                     {plan.cta}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2056,6 +2112,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </Link>
                 </motion.div>
               ))}
@@ -2065,12 +2123,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Contact Section */}
 <section className='py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <motion.div
 =======
 
@@ -2083,6 +2145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
@@ -2222,6 +2285,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-emotion-intelligence-platform.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -2284,6 +2349,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {contactInfo.website.replace('https://', '')}
                   </a>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2306,6 +2372,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-emotion-intelligence-platform.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>
               </div>
             </motion.div>
@@ -2328,6 +2397,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-emotion-intelligence-platform.tsx
 <<<<<<< HEAD
   )
@@ -2440,3 +2510,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-emotion-intelligence-platform.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

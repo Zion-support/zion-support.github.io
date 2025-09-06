@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,10 +31,13 @@ const STEPS = [
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -82,6 +86,9 @@ const STEPS = [;
   { key: 'skills', label: 'Skills added' },;
   { key: 'availability', label: 'Availability set' },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -119,6 +126,7 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
+<<<<<<< HEAD
 =======
   useEffect(() => {
     try {
@@ -199,6 +207,8 @@ export default function TalentDashboard() {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (raw) setCompleted(JSON.parse(raw));
     } catch {}
   }, []);
@@ -207,12 +217,16 @@ try {
       window.localStorage.setItem(
         'onboarding.talent'
         JSON.stringify(completed)
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       );
     } catch {}
   }, [completed]);
@@ -224,6 +238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const toggle = (key: StepKey) =>;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 <<<<<<< HEAD
 
@@ -275,6 +290,9 @@ export default function TalentDashboard(req, res) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -291,6 +309,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 <<<<<<< HEAD
 =======
@@ -312,6 +331,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           />
         </div>
       </EnhancedCard>
@@ -321,12 +342,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {STEPS.map(s => (
             <li key={s.key} className='flex items-center justify-between'>
               <div className='flex items-center gap-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -598,6 +623,7 @@ function TalentDashboard() {}
                   className='text - xs py - 1 px - 2';
                 >;'
                   {s.key === 'skills' ? 'Add skills' : 'Mark done'}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 <<<<<<< HEAD
 =======
@@ -637,6 +663,8 @@ function TalentDashboard() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/talent.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </EnhancedButton>
               )}
             </li>
@@ -645,6 +673,7 @@ function TalentDashboard() {}
       </EnhancedCard>
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/dashboard/talent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -666,3 +695,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/talent.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -13,6 +14,9 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -20,6 +24,7 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
@@ -122,6 +127,8 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ProfileRatingsProps {
   userId: string;
   averageRating?: number;
@@ -129,18 +136,29 @@ interface ProfileRatingsProps {
 }
 
 export function ProfileRatings({
+<<<<<<< HEAD
 userId
   averageRating = 0
   ratingCount = 0
+=======
+  userId,
+  averageRating = 0,
+  ratingCount = 0,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: ProfileRatingsProps) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<
     Record<number, number>
   >({});
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Calculate rating distribution
   useEffect(() => {
     if (reviews.length > 0) {
       const distribution: Record<number, number> = {
+<<<<<<< HEAD
         1: 0
         2: 0
         3: 0
@@ -226,6 +244,8 @@ export function ProfileRatings({}
   useEffect(() => {}
     if (reviews.length > 0) {}
       const distribution: Record<number, number> = {}
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         1: 0,
         2: 0,
         3: 0,
@@ -233,8 +253,13 @@ export function ProfileRatings({}
         5: 0,
       };
 
+<<<<<<< HEAD
       reviews.forEach((review) => {}
         if (review.rating >= 1 && review.rating <= 5) {}
+=======
+      reviews.forEach((review) => {
+        if (review.rating >= 1 && review.rating <= 5) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
       });
@@ -242,6 +267,7 @@ export function ProfileRatings({}
       setRatingDistribution(distribution);
     }
   }, [reviews]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from "react",;
@@ -301,11 +327,29 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
           <ReviewStats;
+=======
+
+  // Fetch reviews when component mounts
+  useEffect(() => {
+    fetchUserReviews(userId);
+  }, [userId]);
+
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex-col md:flex-row gap-6">;
+        <div className="md:w-1/3">;
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="md:w-1/3">
+          <ReviewStats
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
           />
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="md:w-2/3">
@@ -313,6 +357,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        <div className="md:w-2/3">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
 =======
@@ -334,6 +382,13 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 isLoading={isLoading}
                 onReportReview={reportReview}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              />
+            </TabsContent>
+
+            <TabsContent value="positive">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <ReviewsList
 =======
               />
@@ -379,6 +434,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -505,6 +561,13 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;    </div>;
+=======
+
+
+}
+
+    </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),; interface ProfileRatingsProps {
 =======
 

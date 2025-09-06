@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -32,6 +33,9 @@ interface NotificationListProps {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -44,6 +48,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAsRead;
@@ -69,6 +74,11 @@ import React from 'react',;
 =======
   onMarkAsRead;import React from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  onMarkAsRead;
+
+import React from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
@@ -99,6 +109,7 @@ interface NotificationListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -110,10 +121,16 @@ interface NotificationListProps {;
 
   loading: boolean;
   error: string | null;
+=======
+
+  loading: boolean
+  error: string | null
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   notifications: Notification[]
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   onRetry: () => void
 }
@@ -127,6 +144,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  onRetry: () => void
+}
+export const NotificationList: React.FC<NotificationListProps> = ({
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {ScrollArea} from '@/components/ui/scroll-area';
 import {Skeleton} from '@/components/ui/skeleton';
 import {Button} from '@/components/ui/button';
@@ -138,6 +161,7 @@ interface NotificationListProps {;
   notifications: Notification[],;
   onMarkAsRead: (id: string) => Promise<void>,;
   onDismiss: (id: string) => Promise<void>,;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onRetry: () => void;
@@ -150,6 +174,19 @@ import {Button} from '@/components / ui / button';'
 import {NotificationItem} from './NotificationItem';'
 import {Notification} from '@/context / notifications';
 interface NotificationListProps {}
+=======
+  onRetry: () => void;
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+
+import {ScrollArea} from '@/components / ui / scroll - area';
+import {Skeleton} from '@/components / ui / skeleton';
+import {Button} from '@/components / ui / button';
+import {NotificationItem} from './NotificationItem';
+import {Notification} from '@/context / notifications';
+interface NotificationListProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -157,6 +194,7 @@ interface NotificationListProps {}
   on_dismiss: (id: string) => Promise < void>,
   on_retry: () => void;
 }
+<<<<<<< HEAD
 export const NotificationList: React.FC < NotificationListProps> = ({};
   loading;
 =======
@@ -168,6 +206,26 @@ export const NotificationList: React.FC < NotificationListProps> = ({};
   notifications;
 <<<<<<< HEAD
   onMarkAsRead;  on_dismiss,
+=======
+export const NotificationList: React.FC < NotificationListProps> = ({
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+
+
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+
+  onDismiss,
+
+  onRetry
+  on_dismiss,
+  on_retry;
+  on_dismiss,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   on_retry;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -410,6 +468,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({};
 =======
 }) => {
   return (
+<<<<<<< HEAD
     <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
       {error ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -425,3 +484,146 @@ export const NotificationList: React.FC < NotificationListProps> = ({};
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
+      {error ? (
+
+  onDismiss,;
+  onRetry;
+}) => {;
+  return (
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+      {error ? (;
+        <div className="p-8 text-center text-amber-500">;
+          <p>{error}</p>;
+          <Button
+            variant="outline" 
+            size="sm" 
+
+            className="mt-2"
+            onClick={onRetry}>;
+            Try Again;
+          </Button>;
+        </div>;
+      ) : loading ? (;
+        <div className="p-4 space-y-4">;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+        </div>;
+      ) : notifications && notifications.length === 0 ? (;
+        <div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) : (;
+        notifications && notifications.map((notification) => (;
+          <NotificationItem
+            key={notification && notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            onDismiss={onDismiss}
+          />;
+        ));
+      )}
+}
+
+    </ScrollArea>;
+  );
+
+    </ScrollArea>;
+  );
+
+
+};
+        <div className="p - 8 text - center text - amber - 500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt - 2";
+            on_click={on_retry}
+          >;
+            Try Again;
+          </Button>;
+        </div>) : loading ? (
+        <div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (
+        <div className="p - 8 text - center text - zion - slate - light">;
+          <p > No notifications yet</p>;
+        </div>) : (
+        notifications.map ((notification) => (
+          <NotificationItem;
+            key={notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            on_dismiss={on_dismiss}
+          />)))}
+    </ScrollArea>);
+}
+;
+    </ScrollArea>;
+  ),;
+},; {
+  error ? (<div className="p-8 text-center text-amber-500" > <p> {
+  error 
+}</p> <Button > Try Again </Button> </div>) : loading ? (<div className="p-4 space-y-4" > <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> </div>) : notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light" > <p>No notifications yet</p> </div>) : (notifications.map ( (notification) => (<NotificationItem key= {
+  notification.id 
+}notification= {
+  notification 
+}onMarkAsRead= {
+  onMarkAsRead 
+}onDismiss= {
+  onDismiss 
+}/>) ) ) 
+}</ScrollArea>) 
+};
+  onDismiss,
+  onRetry
+}) => {
+  return (
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+      {error ? (
+        <div className="p-8 text-center text-amber-500">
+          <p>{error}</p>
+          <Button
+            variant="outline"
+            size="sm"
+            className="mt-2"
+            onClick={onRetry}
+          >
+            Try Again
+          </Button>
+        </div>
+      ) : loading ? (
+        <div className="p-4 space-y-4">
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        </div>
+      ) : notifications.length === 0 ? (
+        <div className="p-8 text-center text-zion-slate-light">
+          <p>No notifications yet</p>
+        </div>
+      ) : (
+        notifications.map((notification) => (
+          <NotificationItem
+            key={notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            onDismiss={onDismiss}
+          />
+        ))
+      )}
+    </ScrollArea>
+  )
+}
+
+    </ScrollArea>;
+  );
+    </ScrollArea>;
+  );
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

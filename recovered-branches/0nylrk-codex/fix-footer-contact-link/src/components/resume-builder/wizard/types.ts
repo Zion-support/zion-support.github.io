@@ -50,6 +50,7 @@ import {Resume} from "@/types/resume";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -61,10 +62,15 @@ export interface StepProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface StepProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   label: string
 
+
 export interface NavigationButtonsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,10 +87,13 @@ export interface StepProps {};
 export interface NavigationButtonsProps {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   onBack?: () => void;
   onNext?: () => void;
   isNextDisabled?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   backLabel?: string;
@@ -117,6 +126,11 @@ export interface EmptyResumeProps {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  backLabel?: string;
+  nextLabel?: string;
+  isLoading?: boolean;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export interface ResumeProgressProps {
@@ -210,11 +224,13 @@ export interface NavigationButtonsProps {;
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
-  progress: number
+  progress: number;
 }
-export interface CreateResumeFormProps {
+
+export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
+<<<<<<< HEAD
   isLoading: boolean
 <<<<<<< HEAD
 =======
@@ -223,8 +239,13 @@ export interface CreateResumeFormProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  isLoading: boolean;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
 ;
+<<<<<<< HEAD
 export interface ResumeProgressProps {;
   resume: Resume | null,;
 <<<<<<< HEAD
@@ -267,11 +288,14 @@ export interface ResumeProgressProps {;
   progress: number
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -279,9 +303,14 @@ export interface CreateResumeFormProps {;
 
   onCancel: () => void;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  onCancel: () => void;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isLoading: boolean;
 }
 
+
 }
 export interface EmptyResumeProps {};
   onCreateClick: () => void;
@@ -294,6 +323,7 @@ export interface EmptyResumeProps {};
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -320,10 +350,24 @@ export interface EmptyResumeProps {};
 export interface EmptyResumeProps {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+export interface EmptyResumeProps {
+  onCreateClick: () => void;
+}
+  onCreateClick: () => void
+}
+;
+
+}
+export interface EmptyResumeProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onCreateClick: () => void;
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -341,3 +385,5 @@ export interface EmptyResumeProps {};
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

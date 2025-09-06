@@ -3,6 +3,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+import {Certification} from '@/types / resume';
+import {format} from 'date - fns';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 <<<<<<< HEAD
@@ -21,6 +34,7 @@ interface CertificationsSectionProps {
 }
 
 
+<<<<<<< HEAD
 import {Certification} from '@/types/resume';'
 import {format} from 'date-fns';
 interface CertificationsSectionProps {}
@@ -63,6 +77,14 @@ interface CertificationsSectionProps {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
@@ -73,6 +95,7 @@ interface CertificationsSectionProps {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -101,6 +124,9 @@ interface CertificationsSectionProps {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -108,6 +134,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -137,6 +164,16 @@ export function CertificationsSection() { return null; }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+    }
+
+    return format(date, 'MMM yyyy')
+  },
+
+
+  if (certifications.length === 0) return null,
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return format(date, 'MMM yyyy');
   };
     return format(date, 'MMM yyyy')
@@ -144,6 +181,7 @@ export function CertificationsSection() { return null; }
 
   if (certifications.length === 0) return null,
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -159,10 +197,22 @@ export function CertificationsSection() { return null; }
             <div className="flex justify-between">"
               <h3 className="text-sm font-medium">{cert.name}</h3>
               {cert.issue_date && ("
+=======
+  return (
+    <div>
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
+      <div className="space-y-2">
+        {certifications.map((cert, index) => (
+          <div key={cert.id |index} className="space-y-1">
+            <div className="flex justify-between">
+              <h3 className="text-sm font-medium">{cert.name}</h3>
+              {cert.issue_date && (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <span className="text-sm">
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -209,6 +259,13 @@ export function CertificationsSection(): any ({ certifications }: Certifications
             <p className="text-sm">{cert && cert.issuing_organization}</p>;
             {cert && cert.credential_url && (;"
               <p className="text-sm">;"
+=======
+              )}
+            </div>;
+            <p className="text-sm">{cert && cert.issuing_organization}</p>;
+            {cert && cert.credential_url && (;
+              <p className="text-sm">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
@@ -223,23 +280,37 @@ export function CertificationsSection(): any ({ certifications }: Certifications
 }
 
 
+<<<<<<< HEAD
 
 '
 import { Certification } from '@/types/resume',;'
+=======
+import { Certification } from '@/types/resume',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from 'date-fns',;
 ;
 interface CertificationsSectionProps {;
   certifications:Certification[];
 }
 ;
+<<<<<<< HEAD
 export function CertificationsSection() { return null; }
     }'
+=======
+export function CertificationsSection({ certifications } CertificationsSectionProps) {;
+  const formatDate = (date:Date | string | undefined) => {;
+    if (!date) return '',;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM yyyy'),;
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return format(date, 'MMM yyyy'),;
   },;
 ;
   if (certifications.length === 0) return null,;
   ;
   return (;
+<<<<<<< HEAD
     <div>;"
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;"
       <div className="space-y-2">;
@@ -266,6 +337,25 @@ interface CertificationsSectionProps {}
 =======
     }              )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <div>;
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;
+      <div className="space-y-2">;
+        {certifications.map((cert, index) => (;
+          <div key={cert.id || index} className="space-y-1">;
+            <div className="flex justify-between">;
+              <h3 className="text-sm font-medium">{cert.name}</h3>;
+              {cert.issue_date && (;
+                <span className="text-sm">;
+                  {formatDate(cert.issue_date)}
+                  {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
+                </span>;
+                </span>;
+interface CertificationsSectionProps {
+  certifications: Certification[];
+}
+              )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
 =======
             </div>;"
@@ -282,6 +372,54 @@ interface CertificationsSectionProps {}
         ))}
       </div>;
     </div>;
+export /**
+ * CertificationsSection - Function description
+ */
+function CertificationsSection() {
+  const format_date = (date: Date | string | undefined) =>: any {
+    // Check condition
+if (return '', ) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      return format (new Date (date), 'MMM yyyy');
+    }
+    return format (date, 'MMM yyyy');
+  }
+;
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div>;
+      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;
+      <div className="space - y-2">;
+        {certifications.map ((cert, index) => (
+          <div key={cert.id || index} className="space - y-1">;
+            <div className="flex justify - between">;
+              <h3 className="text - sm font - medium">{cert.name}</h3>;
+              {cert.issue_date && (
+                <span className="text - sm">;
+                  {format_date (cert.issue_date)}
+                  {cert.expiration_date && ` - ${format_date (cert.expiration_date)}`}
+                </span>)}
+            </div>;
+            <p className="text - sm">{cert.issuing_organization}</p>;
+            {cert.credential_url && (
+              <p className="text - sm">;
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;
+                  View Credential;
+                </a>;
+              </p>)}
+          </div>))}
+      </div>;
+    </div>);
+}
+  ),;}
  if (certifications.length === 0) return null;
 {
   formatDate (cert.issue date) 
@@ -310,6 +448,7 @@ interface CertificationsSectionProps {}
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -365,3 +504,5 @@ if (return null) {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 
 <<<<<<< HEAD:pages/api-disabled/api/design-map.ts
@@ -71,6 +72,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -112,11 +118,16 @@ export default async function handler(req, res) {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 ========
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req, res) {
   try {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/design-map.ts
@@ -174,6 +185,7 @@ import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils
 <<<<<<< HEAD:pages/api/design-map.ts
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 <<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 <<<<<<< HEAD
@@ -213,11 +225,16 @@ export default async function handler(req, res) {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -229,22 +246,30 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/design-map.ts
 ========
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 <<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
       colors: { ...localTokens.colors, ...(cmsTokens?.colors |{}) }
@@ -253,6 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography: {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 =======
 
@@ -261,6 +287,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;
     res.status(200).json({ route: base.route, products: base.products, tokens });
@@ -273,6 +303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 <<<<<<< HEAD
 }
@@ -323,10 +354,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/design-map.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 <<<<<<< HEAD:pages/api/design-map.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -335,10 +369,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/design-map.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -376,3 +415,14 @@ main
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/design-map.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

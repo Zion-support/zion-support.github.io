@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-all-corrupted-files.cjs
 =======
 <<<<<<< HEAD
@@ -16,6 +17,10 @@
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-all-corrupted-files.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -42,5 +47,8 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
         <meta name="description" content="
+<<<<<<< HEAD
         <meta name="description" content="
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

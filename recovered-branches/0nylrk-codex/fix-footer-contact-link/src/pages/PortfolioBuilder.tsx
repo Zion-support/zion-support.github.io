@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -95,12 +96,15 @@ function PortfolioBuilderContent() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+<<<<<<< HEAD
 =======
 import { useState } from "react";"
 import { AppHeader } from "@/layout/AppHeader";"
@@ -147,6 +151,18 @@ function PortfolioBuilderContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
+import {
+  PortfolioBuilder,
+  as,
+  PortfolioSection,
+} from "@/components/resume-builder/portfolio/PortfolioBuilder";
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState("resume");
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
@@ -229,6 +245,7 @@ function PortfolioBuilderContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -242,6 +259,10 @@ function PortfolioBuilderContent() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 export default function PortfolioBuilder() {;
@@ -251,6 +272,7 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -278,6 +300,14 @@ export default function PortfolioBuilder() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+;
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -312,16 +342,17 @@ function PortfolioBuilderContent() {
         description="Create and customize your resume and portfolio to showcase your skills and experience.";
       />;
       <AppHeader />;
-      <main className="container mx - auto px - 4 py-8">;
-        <h1 className="text - 3xl font - bold mb-8">Resume & Portfolio Builder</h1>;
-        <Tabs value={active_tab} onValueChange={setActiveTab} className="space-y-6">;
-          <TabsList className="bg - muted / 60 p-0">;
-            <TabsTrigger value="resume" className="data-[state = active]:bg-background">Resume</TabsTrigger>;
-            <TabsTrigger value="portfolio" className="data-[state = active]:bg-background">Portfolio</TabsTrigger>;
+      <main className="container mx - auto px - 4 py - 8">;
+        <h1 className="text - 3xl font - bold mb - 8">Resume & Portfolio Builder</h1>;
+        <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-6">;
+          <TabsList className="bg - muted / 60 p - 0">;
+            <TabsTrigger value="resume" className="data-[state = active]:bg - background">Resume</TabsTrigger>;
+            <TabsTrigger value="portfolio" className="data-[state = active]:bg - background">Portfolio</TabsTrigger>;
           </TabsList>;
-          <TabsContent value="resume" className="space-y-6">;
+          <TabsContent value="resume" className="space - y-6">;
             <ResumeWizard />;
           </TabsContent>;
+<<<<<<< HEAD
           <TabsContent value="portfolio" className="space-y-6">;
 =======
 function PortfolioBuilderContent() { return null; }
@@ -335,6 +366,9 @@ function PortfolioBuilderContent() { return null; }
           </TabsContent>;"
           <TabsContent value="portfolio" className="space - y-6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <TabsContent value="portfolio" className="space - y-6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <PortfolioSection />;
           </TabsContent>;
         </Tabs>;
@@ -356,8 +390,11 @@ function PortfolioBuilder() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 }
 export default function PortfolioBuilder() {
@@ -377,6 +414,7 @@ export default function PortfolioBuilder() {;
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -391,3 +429,5 @@ export default function PortfolioBuilder() {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

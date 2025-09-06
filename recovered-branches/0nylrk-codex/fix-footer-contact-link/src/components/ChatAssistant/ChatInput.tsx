@@ -26,6 +26,10 @@ import React, {;
   KeyboardEvent,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, {
 =======
 
@@ -41,6 +45,10 @@ import React, {}
 } from "react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button";
 =======
 
@@ -56,6 +64,13 @@ interface ChatInputProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState("");
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   useEffect(() => {;
@@ -65,21 +80,33 @@ interface ChatInputProps {;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();
+<<<<<<< HEAD
     if (message && message.trim() && !disabled) {;"
+=======
+    if (message && message.trim() && !disabled) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       (onSend(message), setMessage(""));
     }
   };
 
+<<<<<<< HEAD
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;"
     if (e && e.key === "Enter" && !e && e.shiftKey) {;
       e && e.preventDefault();
       if (message && message.trim() && !disabled) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e && e.key === "Enter" && !e && e.shiftKey) {;
+      e && e.preventDefault();
+      if (message && message.trim() && !disabled) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         (onSend(message), setMessage(""));
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   };
@@ -105,6 +132,12 @@ interface ChatInputProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 =======
@@ -145,6 +178,7 @@ export function ChatInput() { return null; }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -159,8 +193,14 @@ export function ChatInput() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
   return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
+    <form onSubmit={handleSubmit} className="flex items-end gap-2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
       <textarea
         ref={inputRef}
@@ -178,12 +218,70 @@ export function ChatInput() { return null; }
         placeholder="Type your message..."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         value={message}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         onChange={(e) => setMessage(e && e.target.value)}
 <<<<<<< HEAD
+=======
+        value={message}
+        onChange={(e) => setMessage(e && e.target.value)}
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+  );
+}
+
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from "lucide-react",;
+;
+interface ChatInputProps {;
+  onSend:(message:string) => void,;
+  disabled?:boolean;
+}
+;
+export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
+  const [message, setMessage] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+;
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef.current?.focus(),;
+  }, []),;
+;
+  const handleSubmit = (e:FormEvent<HTMLFormElement>) => {;
+    e.preventDefault(),;
+    if (message.trim() && !disabled) {;
+      onSend(message),;
+      setMessage('');
+    }
+  },;
+;
+  const handleKeyPress = (e:KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      if (message.trim() && !disabled) {;
+        onSend(message),;
+        setMessage('');
+      }
+    }
+  },;
+;
+  return (;
+    <form onSubmit={handleSubmit} className="flex items-end gap-2">;
+      <textarea;
+        ref={inputRef}
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light";
+        placeholder="Type your message...";        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+        onChange={(e) => setMessage(e.target.value)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -191,11 +289,16 @@ export function ChatInput() { return null; }
       <Button 
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+<<<<<<< HEAD
         disabled={!message.trim() |disabled}
+=======
+        disabled={!message.trim() || disabled}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
+<<<<<<< HEAD
   );
 );
 =======
@@ -286,6 +389,9 @@ if (&& !disabled) {) {
 =======
 =======
         value={message}});
+=======
+);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -293,9 +399,11 @@ if (&& !disabled) {) {
   )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+  );
 }
   )
 }
+<<<<<<< HEAD
 =======
 
 }
@@ -371,3 +479,8 @@ export function ChatInput() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+  )
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

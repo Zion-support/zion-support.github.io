@@ -27,6 +27,7 @@ const jobOpenings = [{
       "Experience with cloud platforms (AWS, Azure, GCP)"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 <<<<<<< HEAD
 =======
@@ -38,6 +39,9 @@ import Layout from '../components/Layout';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import Layout from '../components/Layout';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const jobOpenings = [
   {
     id: 1,
@@ -52,6 +56,7 @@ const jobOpenings = [
       "5+ years experience in AI/ML development",
       "Proficiency in Python, TensorFlow, PyTorch",
       "Experience with cloud platforms (AWS, Azure, GCP)",
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -225,6 +230,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 import Layout from '../components/Layout';    ],
+=======
+      "Strong problem-solving and communication skills"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
@@ -257,6 +266,7 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -342,6 +352,13 @@ import Layout from '../components/Layout';    ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       "Experience with databases (PostgreSQL, MongoDB)",    ],
+=======
+      "Experience with databases (PostgreSQL, MongoDB)",
+
+
+      "Knowledge of cloud deployment and DevOps"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
@@ -374,6 +391,7 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Experience with containerization (Docker, Kubernetes)",
@@ -459,6 +477,13 @@ import Layout from '../components/Layout';    ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       "Experience with containerization (Docker, Kubernetes)",    ],
+=======
+      "Experience with containerization (Docker, Kubernetes)",
+
+
+      "Strong understanding of security best practices"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
@@ -491,6 +516,7 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Experience with security tools and frameworks",
@@ -576,6 +602,13 @@ import Layout from '../components/Layout';    ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       "Experience with security tools and frameworks",    ],
+=======
+      "Experience with security tools and frameworks",
+
+
+      "Knowledge of compliance standards (SOC 2, ISO 27001)"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
@@ -608,6 +641,7 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -693,6 +727,13 @@ import Layout from '../components/Layout';    ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       "Experience with infrastructure as code (Terraform, CloudFormation)",    ],
+=======
+      "Experience with infrastructure as code (Terraform, CloudFormation)",
+
+
+      "Knowledge of monitoring and logging tools"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
@@ -725,6 +766,7 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "Experience with user research and testing",
@@ -810,6 +852,13 @@ import Layout from '../components/Layout';    ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       "Experience with user research and testing",    ],
+=======
+      "Experience with user research and testing",
+
+
+      "Strong portfolio demonstrating design skills"
+    ],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
@@ -839,6 +888,7 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1142,6 +1192,10 @@ const benefits = [;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  }
+];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const values = ["Innovation and creativity"
   "Collaboration and teamwork"
   "Continuous learning"
@@ -1175,6 +1229,7 @@ const values = [
   "Continuous learning",
   "Work-life balance",
   "Diversity and inclusion",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1217,6 +1272,11 @@ const values = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -1232,6 +1292,7 @@ const values = [;
 export default function TalentPage() {;
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1280,6 +1341,10 @@ export default function TalentPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <MainLayout,
+    title="Careers - Zion Tech Group"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -1322,6 +1387,7 @@ export default function TalentPage() {;
     <Layout 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       title="Careers - Zion Tech Group"
 =======
 >>>>>>> origin/main
@@ -1334,6 +1400,9 @@ export default function TalentPage() {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+      title="Careers - Zion Tech Group"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
@@ -1345,8 +1414,11 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
@@ -1355,6 +1427,7 @@ export default function TalentPage() {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -1368,6 +1441,8 @@ export default function TalentPage() {;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen bg-gray-50">;
       <Head>;
         <title>Join Our Team - Zion Tech Group</title>;
@@ -1400,6 +1475,7 @@ export default function TalentPage() {;
                   key={job && job.id}
     <Layout 
       title="Careers - Zion Tech Group"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1492,12 +1568,22 @@ export default function TalentPage() {;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+            <motion.div,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1547,6 +1633,9 @@ export default function TalentPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.8 }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -1645,6 +1734,21 @@ export default function TalentPage() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div,
+    className="text-center mb-16"
+              initial={{ "opacity": 0, "y": 30 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 }}
+              viewport={{ "once": true }}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+        {/* Benefits Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div,
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -1705,7 +1809,8 @@ export default function TalentPage() {;
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}                  >
+                    viewport={{ once: true }}
+                  >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
@@ -1731,8 +1836,11 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -1743,6 +1851,7 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -1796,6 +1905,11 @@ export default function TalentPage() {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}=======            >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
@@ -1865,6 +1979,7 @@ export default function TalentPage() {;
         </section>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Values Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1910,6 +2025,11 @@ export default function TalentPage() {;
 =======
         {/* Values Section */}    className="text-center mb-16"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {/* Values Section */}
+            <motion.div,
+    className="text-center mb-16"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1939,6 +2059,7 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
+    key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -2007,8 +2128,11 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -2019,6 +2143,7 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2072,6 +2197,11 @@ export default function TalentPage() {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}=======            >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
@@ -2163,6 +2293,7 @@ export default function TalentPage() {;
         </section>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Job Openings Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2208,6 +2339,11 @@ export default function TalentPage() {;
 =======
         {/* Job Openings Section */}    className="text-center mb-16"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {/* Job Openings Section */}
+            <motion.div,
+    className="text-center mb-16"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -2379,7 +2515,16 @@ export default function TalentPage() {;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+            <motion.div,
+    initial={{ "opacity": 0, "y": 30 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 }}
+              viewport={{ "once": true }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -2398,6 +2543,9 @@ export default function TalentPage() {;
 =======
 =======
 >>>>>>> main
+=======
+              viewport={{ once: true }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -2410,6 +2558,7 @@ export default function TalentPage() {;
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0 && 0.8 }}
@@ -2419,6 +2568,9 @@ export default function TalentPage() {;
 =======
               viewport={{ once: true }}=======              transition={{ duration: 0 && 0.8 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Open Positions;
@@ -2528,6 +2680,7 @@ export default function TalentPage() {;
         </section>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2573,12 +2726,18 @@ export default function TalentPage() {;
 =======
         {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {/* CTA Section */}
+            <motion.div,
+    initial={{ "opacity": 0, "y": 30 }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
               viewport={{ "once": true }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2632,6 +2791,11 @@ export default function TalentPage() {;
 =======
               viewport={{ once: true }}            >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
               </h2>
@@ -2647,6 +2811,7 @@ export default function TalentPage() {;
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2682,3 +2847,6 @@ export default function TalentPage() {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
@@ -117,6 +118,16 @@ import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { SkillCategoryProps } from "./types";
+import { SkillItem } from "./SkillItem";
+export const SkillCategory = ({
+  category,
+  skills,
+  onDelete,
+}: SkillCategoryProps) => {
+  if (!skills || skills.length === 0) return null;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <div className="space-y-2">
@@ -132,6 +143,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,6 +165,12 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+};
+  );
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
             on_delete={on_delete}
           />))}
@@ -160,10 +178,41 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+  ),;
+},; <SkillItem key= {
+  skill.id 
+}skill= {
+  skill 
+}category= {
+  category 
+}onDelete= {
+  onDelete 
+}/>) ) 
+}</div> </div>) 
+};
+import { SkillCategoryProps } from "./types";
+import { SkillItem } from "./SkillItem";
+export const SkillCategory = ({
+category
+  skills
+  onDelete
+}: SkillCategoryProps) => {
+
+  if (!skills |skills.length === 0) return null;
+
+  category,
+  skills,
+  onDelete,
+}: SkillCategoryProps) => {
+  if (!skills || skills.length === 0) return null;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   
   return (
     <div className="space-y-2">
@@ -182,11 +231,18 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
   );
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
+=======
+  )
+      </div>;
+    </div>;
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 =======
 "

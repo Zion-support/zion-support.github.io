@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD:pages/api.tsx
 <<<<<<< HEAD
@@ -60,6 +61,8 @@ const apiFeatures = [
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function API() {
   const apiEndpoints = [
     {
@@ -235,6 +238,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             ))}
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +257,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* API Endpoints */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -456,6 +462,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api.tsx
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -468,6 +475,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Code,
   Check,
   Globe,
@@ -1162,6 +1172,7 @@ export default function APIPage() {}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api.tsx
 <<<<<<< HEAD
 
@@ -1255,11 +1266,16 @@ export default function APIPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </main>
 </>
   );
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

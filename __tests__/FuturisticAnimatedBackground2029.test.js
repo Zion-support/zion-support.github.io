@@ -49,6 +49,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -73,6 +74,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react"  import '@testing-library/jest-dom import FuturisticAnimatedBackground2029 from '../components/FuturisticAnimatedBackground2029" describe('FuturisticAnimatedBackground2029',() => {' test('renders without crashing',() => {' render(<FuturisticAnimatedBackground2029 / / />) expect( screen.getByTestId('futuristicanimatedbackground2029')' ).toBeInTheDocument() }) test('displays correct content',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('handles user interactions',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('applies correct styling',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import FuturisticAnimatedBackground2029 from '../components/FuturisticAnimatedBackground2029" describe('FuturisticAnimatedBackground2029',() => {' test('renders without crashing',() => {' render(<FuturisticAnimatedBackground2029 / / />) expect( screen.getByTestId('futuristicanimatedbackground2029')' ).toBeInTheDocument() }) test('displays correct content',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('handles user interactions',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) test('applies correct styling',() => {' render(<FuturisticAnimatedBackground2029 / / />) }) })
 <<<<<<< HEAD

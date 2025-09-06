@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,16 +41,26 @@ import Head from 'next/head';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-assistant.tsx
+=======
+
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
 import Layout from '../components/layout/Layout';
 const AIAssistant: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-assistant.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-assistant.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>;
       <Head>;
@@ -351,6 +362,7 @@ export default function AIAssistantPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-assistant.tsx
 <<<<<<< HEAD
       </div>
@@ -365,6 +377,8 @@ export default function AIAssistantPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-assistant.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -382,6 +396,7 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-assistant.tsx
 <<<<<<< HEAD
 
@@ -553,3 +568,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

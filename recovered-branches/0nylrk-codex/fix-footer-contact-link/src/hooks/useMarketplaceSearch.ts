@@ -48,12 +48,18 @@ export function useMarketplaceSearch() {}
     [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search",
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  );
+import { SearchSuggestion, FilterOptions } from "@/types/search",
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function useMarketplaceSearch() {
   // Search state
@@ -72,16 +78,23 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -129,6 +142,20 @@ export function useMarketplaceSearch() {
 =======
   );      const matchesSearch = !searchQuery || 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+      // Product type filter
+      const matchesProductType = selectedProductTypes.length === 0 |
+        selectedProductTypes.includes(listing.category);
+      // Location filter
+      const matchesLocation = selectedLocations.length === 0 |
+        (listing.location && selectedLocations.includes(listing.location));
+      // Availability filter
+      const matchesAvailability = selectedAvailability.length === 0 |
+        (listing.availability && selectedAvailability.includes(listing.availability));
+      const matchesSearch = !searchQuery || 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -147,6 +174,7 @@ export function useMarketplaceSearch() {
       
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -168,6 +196,9 @@ export function useMarketplaceSearch() {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Rating filter
 =======
       // Availability filter;
@@ -179,6 +210,7 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
 <<<<<<< HEAD
+<<<<<<< HEAD
         matchesAvailability &&        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
 =======
         matchesAvailability &&
@@ -189,6 +221,12 @@ const matchesSearch = !searchQuery ||
 
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        matchesAvailability &&
+      const matchesSearch = !searchQuery || 
+const matchesSearch = !searchQuery || 
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       // Product type filter;
@@ -220,6 +258,7 @@ const matchesSearch = !searchQuery ||
 =======
         matchesRating
     })
+<<<<<<< HEAD
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
@@ -231,11 +270,31 @@ const matchesSearch = !searchQuery ||
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
+  
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
-        setSelectedProductTypes((prev: string[]) =>import { useState, useMemo } from './react';
+        setSelectedProductTypes((prev: string[]) =>
+          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
+        );
+        break;
+      case 'locations':
+        setSelectedLocations((prev: string[]) =>
+          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability((prev: string[]) =>
+
+import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
 =======
@@ -320,6 +379,7 @@ function useMarketplaceSearch() {}
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
 <<<<<<< HEAD
+<<<<<<< HEAD
         break;
       default: break;
     }
@@ -331,11 +391,21 @@ function useMarketplaceSearch() {}
         break;
       default: break;
     }
+=======
+
+        break;
+      default: break;
+    }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
 ;
   // Clear all filters;
+<<<<<<< HEAD
   const clearAllFilters = () =>: any {"
+=======
+  const clearAllFilters = () =>: any {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSearchQuery ("");
     setSelectedProductTypes ([]);
     setSelectedLocations ([]);
@@ -344,10 +414,14 @@ function useMarketplaceSearch() {}
   }
 ;
 
+<<<<<<< HEAD
 
 
   return {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -362,6 +436,7 @@ function useMarketplaceSearch() {}
 
 <<<<<<< HEAD
     filter_options;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -386,6 +461,9 @@ function useMarketplaceSearch() {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
@@ -395,6 +473,7 @@ function useMarketplaceSearch() {}
 <<<<<<< HEAD
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -411,6 +490,9 @@ function useMarketplaceSearch() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Clear all filters
   const clearAllFilters = () => {
 =======
@@ -422,6 +504,7 @@ function useMarketplaceSearch() {}
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -454,6 +537,9 @@ function useMarketplaceSearch() {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   
   return {}
@@ -493,8 +579,13 @@ import { useState, useMemo } from "react",;
 =======
 
   }
+<<<<<<< HEAD
 }import { useState, useMemo } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+import { useState, useMemo } from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
 =======
@@ -574,6 +665,7 @@ export function useMarketplaceSearch() { return null; }
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -591,3 +683,5 @@ export function useMarketplaceSearch() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

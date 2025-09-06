@@ -14,6 +14,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     globals: true}});
 =======
@@ -29,6 +30,10 @@ export default defineConfig({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      '@': path ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   test: {
     environment: 'jsdom';
 =======
@@ -80,6 +85,7 @@ export default define_config ({
       '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
+<<<<<<< HEAD
     setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
 =======
 
@@ -108,6 +114,18 @@ export default define_config ({}
 '
 import { defineConfig } from 'vitest/config',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    setup_files: './tests / setup.ts',
+
+  resolve: {;
+    alias: {;
+      '@': path.resolve(__dirname, './src')}};
+  test: {
+    environment: 'jsdom';
+    setupFiles: './tests/setup.ts',
+
+import { defineConfig } from 'vitest/config',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
@@ -116,6 +134,7 @@ export default defineConfig({;
   test: {;'
     environment: 'jsdom',;'
     setupFiles: './tests/setup.ts';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     globals: true}});
@@ -143,3 +162,9 @@ export default defineConfig({;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    globals: true}});
+;
+    globals: true}});
+    globals: true}});
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

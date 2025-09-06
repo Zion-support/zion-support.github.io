@@ -4,6 +4,7 @@
     "lib": [
       "dom",
       "dom.iterable",
+<<<<<<< HEAD
       "es6",
       "es2017",
       "es2018",
@@ -11,6 +12,9 @@
       "es2020",
       "es2021",
       "es2022"
+=======
+      "esnext"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,12 +22,17 @@
     "noEmit": true,
     "esModuleInterop": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "module": "esnext",
     "moduleResolution": "bundler",
 =======
     "module": "ESNext",
     "moduleResolution": "node",
 >>>>>>> pr-12243
+=======
+    "module": "ESNext",
+    "moduleResolution": "node",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -35,6 +44,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
@@ -58,6 +68,33 @@
       "@/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/styles/*": ["./styles/*"]
+    },
+    "target": "es5",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   "include": [
     "next-env.d.ts",
@@ -66,7 +103,40 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*",
+    "api-backup",
+    "contracts",
+    "hardhat"
   ]
+<<<<<<< HEAD
 >>>>>>> pr-12243
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }

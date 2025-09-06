@@ -12,10 +12,16 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
 export function LoadingContentSkeleton() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return (
+export function LoadingContentSkeleton() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 =======
 import React from "react",
@@ -33,6 +39,7 @@ export function LoadingContentSkeleton() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 export function LoadingContentSkeleton() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
@@ -79,8 +86,14 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function LoadingContentSkeleton() {;
   return (;
+
+  return (
+    <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
       <CardHeader>;
         <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
       </CardHeader>;
@@ -130,6 +143,7 @@ export function LoadingContentSkeleton() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -160,11 +174,39 @@ function LoadingContentSkeleton() {}
         <Skeleton className="h - 8 w - 1/3 bg - zion - blue - light / 20" />;"
         <div className="space - y-2">;
           {[...Array (3)].map ((_, i) => ("
+=======
+
+
+
+  );
+import React from './react';
+import { Skeleton  } from '@/components / ui / skeleton';
+import { Card, CardContent, CardHeader  } from '@/components / ui / card';
+export /**
+ * LoadingContentSkeleton - Function description
+ */
+function LoadingContentSkeleton() {
+  return (
+    <Card className="border border - zion - blue - light bg - zion - blue - dark overflow - hidden">;
+      <CardHeader>;
+        <Skeleton className="h - 8 w - 3/4 bg - zion - blue - light / 20" />;
+      </CardHeader>;
+      <CardContent className="space - y-4">;
+        <Skeleton className="h - 32 w - full bg - zion - blue - light / 20" />;
+        <div className="flex flex - wrap gap - 2">;
+          {[...Array (5)].map ((_, i) => (
+            <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue - light / 20" />))}
+        </div>;
+        <Skeleton className="h - 8 w - 1/3 bg - zion - blue - light / 20" />;
+        <div className="space - y-2">;
+          {[...Array (3)].map ((_, i) => (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />))}
         </div>;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,3 +236,5 @@ function LoadingContentSkeleton() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -21,6 +21,7 @@ const fs = require("fs").promises;const path = require("path")"
           .replace("/", ")
           .replace(/-/g, " ")
           .replace(/\s+/g, ")
+<<<<<<< HEAD
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
 <<<<<<< HEAD
 
@@ -29,3 +30,6 @@ const fs = require("fs").promises;const path = require("path")"
     console.error("Error identifying missing "pages")
     console.error("Error identifying missing "pages")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

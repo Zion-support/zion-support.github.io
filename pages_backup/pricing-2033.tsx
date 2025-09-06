@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Check,
   Star,
   Zap,
@@ -84,6 +87,7 @@ import {}
 } from 'lucide-react',;'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;'
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/pricing-2033.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -118,6 +122,9 @@ export default function Pricing2033Page() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+const contactInfo = {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -128,12 +135,16 @@ export default function Pricing2033Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
 <<<<<<< HEAD:pages_backup/pricing-2033.tsx
@@ -175,6 +186,7 @@ function Pricing2033Page() {
   const service_categories = [;
 
     {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
   ]
@@ -201,6 +213,8 @@ function Pricing2033Page() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
 services: [
@@ -285,12 +299,16 @@ services: [
       color: 'from-orange-500 to-red-500',
     },
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricingTiers = []
@@ -302,6 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
 <<<<<<< HEAD:pages_backup/pricing-2033.tsx
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -331,6 +350,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to 100+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
@@ -345,12 +366,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       popular: false,
       color: 'from-gray-500 to-gray-600',
     },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -358,6 +383,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -394,6 +420,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to 200+ Advanced Services',
         'Advanced AI Integration',
         'Priority Support (24/7)',
@@ -410,12 +438,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       popular: true,
       color: 'from-purple-500 to-cyan-500',
     },
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -423,6 +455,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -484,6 +517,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to All 500+ Services',
         'Full AI & Quantum Integration',
         'Premium Support (24/7)',
@@ -547,6 +582,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: 'Save 80% vs. competitors',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -780,6 +816,8 @@ export default function Pricing2033Page(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: 'AI Business Intelligence Suite',
       price: '$299/month',
       description:
@@ -854,6 +892,7 @@ export default function Pricing2033Page(req, res) {}
               >
                 <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
                   <Crown className='w-4 h-4' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -867,6 +906,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -917,6 +959,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -957,10 +1000,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.6 }} className="mb-6">"
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
+=======
+                transition={{ duration: 0.6 }} className="mb-6">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Crown className="w-4 h-4" />
                   <span>2033 Revolutionary Pricing</span>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/pricing-2033.tsx
               <motion.h1
 <<<<<<< HEAD:pages/pricing-2033.tsx
@@ -1031,6 +1079,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+              <motion.h1
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: 0.1 }}
@@ -1044,6 +1095,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Pricing</span>
               </motion.h1>
               <motion.p
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1333,6 +1385,8 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: 0.2 }}
@@ -1365,6 +1419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
@@ -1566,6 +1621,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       billingCycle === 'yearly'
                         ? 'translate-x-8'
                         : 'translate-x-0'
@@ -1640,6 +1697,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Check className='w-5 h-5 text-green-400 flex-shrink-0 mt-0.5' />
                           <span className='text-gray-300'>{feature}</span>
                         </li>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1736,6 +1794,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       ))}
                     </ul>
                     <button
@@ -1772,6 +1832,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {serviceCategories.map((category, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1848,6 +1909,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1917,6 +1980,7 @@ href='/services'
                     className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'
                   >
                     <span>Learn More</span>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
                     <ArrowRight className="w-4 h-4" />
@@ -1992,6 +2056,8 @@ href='/services'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <ArrowRight className='w-4 h-4' />
                   </a>
                 </motion.div>
@@ -2017,6 +2083,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {popularServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2085,6 +2152,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -2199,6 +2268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </a>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2308,6 +2378,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
             </div>
           </div>
@@ -2347,6 +2419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Call Now
                 </a>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2403,6 +2476,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {/* Contact Info */}
 <div className='mt-12 pt-8 border-t border-purple-500/20'>
                 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300'>
@@ -2427,6 +2502,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/pricing-2033.tsx
 <<<<<<< HEAD:pages/pricing-2033.tsx
 <<<<<<< HEAD
@@ -2570,3 +2646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

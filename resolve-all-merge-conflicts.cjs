@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/
 
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ function resolveMergeConflicts(filePath) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve modify/delete conflicts by removing the files
@@ -129,6 +132,7 @@ function resolveContentConflicts() {
         // Clean up any remaining conflict markers
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/
         content = content.replace(/
 
@@ -137,6 +141,15 @@ function resolveContentConflicts() {
         content = content.replace(/
         content = content.replace(/
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+        content = content.replace(/
+        
+        // Clean up any remaining conflict markers
+        content = content.replace(/
+        content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         // Write the cleaned content
@@ -175,6 +188,7 @@ function resolveAddAddConflicts() {
         // Remove conflict markers and keep both versions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/
           const parts = match.split('
 =======
@@ -186,10 +200,13 @@ function resolveAddAddConflicts() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           if (parts.length === 2) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
         content = content.replace(/
@@ -198,3 +215,9 @@ function resolveAddAddConflicts() {
             const headPart = parts[0].replace(/
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+        content = content.replace(/
+          const parts = match.split('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

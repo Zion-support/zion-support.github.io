@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -46,10 +47,24 @@ export interface CreateNotificationParams {
 =======
 export interface CreateNotificationParams {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export type NotificationType =
+  | "message"
+  | "quote_request"
+  | "booking_confirmation"
+  | "hire_request"
+  | "onboarding"
+  | "system";
+
+export interface CreateNotificationParams {
+  user_id: string;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface CreateNotificationParams {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   userId: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,11 +93,17 @@ export interface CreateNotificationParams {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
+=======
+  title: string;
+  message: string;
+  type: NotificationType;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null;
   actionText?: string | null;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
@@ -91,6 +112,10 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface CreateNotificationParams {;
   userId: string;
@@ -102,17 +127,21 @@ export interface CreateNotificationParams {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface CreateNotificationResult {;
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface CreateNotificationResult {;
@@ -128,6 +157,8 @@ export interface CreateNotificationResult {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   success: boolean;
   notificationId?: string;
   error?: any;
@@ -140,8 +171,11 @@ export interface HireRequestNotificationParams {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+
+
 export interface HireRequestNotificationParams {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,6 +195,9 @@ export interface HireRequestNotificationParams {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -168,6 +205,7 @@ export interface HireRequestNotificationParams {;
   projectType?: string;
   projectSummary?: string;
   hireRequestId: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -185,18 +223,29 @@ export interface OnboardingNotificationParams {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
   action_text?: string | null;
 }
+<<<<<<< HEAD
 export interface CreateNotificationResult {};
+=======
+export interface CreateNotificationResult {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   success: boolean;
   notification_id?: string,
   error?: any;
 }
+<<<<<<< HEAD
 export interface HireRequestNotificationParams {};
+=======
+export interface HireRequestNotificationParams {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent_id: string;
   admin_id?: string;
   requester_name: string;
@@ -205,6 +254,7 @@ export interface HireRequestNotificationParams {};
   project_summary?: string,
   hireRequestId: string;
 }
+<<<<<<< HEAD
 export interface OnboardingNotificationParams {};
   user_id: string;
   missing_milestone: string,'
@@ -248,6 +298,21 @@ export interface SystemNotificationParams {;
 
 =======
 }  userId: string;
+=======
+export interface OnboardingNotificationParams {
+  user_id: string;
+  missing_milestone: string,
+  user_role: 'talent' | 'client';
+
+}
+export interface SystemNotificationParams {
+  user_id: string;
+
+
+export interface OnboardingNotificationParams {;
+
+  userId: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   missingMilestone: string;
   userRole: "talent" | "client";
 }
@@ -283,6 +348,7 @@ export interface SystemNotificationParams {;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 export interface SystemNotificationParams {;
 
   userId: string;
@@ -292,6 +358,7 @@ export interface SystemNotificationParams {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   message: string;
+<<<<<<< HEAD
 
 export interface CreateNotificationParams {
 <<<<<<< HEAD
@@ -384,3 +451,9 @@ export interface SystemNotificationParams {
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  actionUrl?: string | null;
+  actionText?: string | null;
+  sendEmail?: boolean;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

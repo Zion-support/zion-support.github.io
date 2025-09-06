@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -26,6 +27,31 @@ export default function SignUpPage() {;
     setError(""),;
     if (password !== confirmPassword) {;
       setError("Passwords do not match"),;
+=======
+  return (;
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
+      <div className="max-w-md w-full space-y-8 p-8">;
+        <div className="text-center">;
+          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
+          <p className="text-zinc-400 mb-4">;
+            Start your free trial and launch sovereign AI-powered digital economies;
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+export default function SignUpPage() {const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { register } = useAuth();
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    if (password !== confirmPassword) {;
+      setError("Passwords do not match");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(false);
       return;
     }
@@ -140,6 +166,7 @@ export default function SignUpPage() {const [name, setName] = useState("");
           <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
           <p className="text - zinc - 400 mb - 4">;
             Start your free trial and launch sovereign AI - powered digital economies;
+<<<<<<< HEAD
 =======
 =======
 "use client",;
@@ -190,6 +217,9 @@ export default function SignUpPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
         <div className="text-center">;
@@ -207,6 +237,7 @@ export default function SignUpPage() {;
 =======
           </p>;
           {/* Free Trial Badge */}
+<<<<<<< HEAD
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded-full">;
             <span className="text - green - 400 text - sm font-medium">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -232,12 +263,17 @@ export default function SignUpPage() {;
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;"
             <span className="text - green - 400 text - sm font - medium">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
+            <span className="text - green - 400 text - sm font - medium">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               🚀 Free Trial Available;
             </span>;
           </div>;
         </div>;
 <<<<<<< HEAD
         {/* What You Get Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30">;
@@ -298,21 +334,29 @@ export default function SignUpPage() {;
           <ul className="space - y-2 text - sm text - zinc-400">;
             <li className="flex items - center gap-2">;
               <span className="text - green-400">✓</span>;
+=======
+        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc - 700 / 30">;
+          <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
+          <ul className="space - y-2 text - sm text - zinc - 400">;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Launch new instances in minutes;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Access to marketplace templates;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Governance and identity tools;
             </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
+            <li className="flex items - center gap - 2">;
+              <span className="text - green - 400">✓</span>;
               Full admin dashboard access;
             </li>;
           </ul>;
+<<<<<<< HEAD
         </div>;            <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb-2">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -344,6 +388,11 @@ export default function SignUpPage() {;
             <div>;"
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        </div>;
+            <div>;
+              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Full Name;
               </label>;
               <input;"
@@ -357,15 +406,20 @@ export default function SignUpPage() {;
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
 =======
                 on_change={(e) => set_name (e.target.value)}
+<<<<<<< HEAD
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 placeholder="Enter your full name";
               />;
             </div>;
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
@@ -384,6 +438,9 @@ export default function SignUpPage() {;
             <div>;"
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Email Address;
               </label>;
               <input;"
@@ -397,15 +454,20 @@ export default function SignUpPage() {;
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
 =======
                 on_change={(e) => set_email (e.target.value)}
+<<<<<<< HEAD
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 placeholder="Enter your email address";
               />;
             </div>;
             <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">;
@@ -424,6 +486,9 @@ export default function SignUpPage() {;
             <div>;"
               <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Password;
               </label>;
               <input;"
@@ -453,12 +518,13 @@ export default function SignUpPage() {;
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
 =======
                 on_change={(e) => set_password (e.target.value)}
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
+                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
                 placeholder="Create a strong password";
               />;
-              <p className="text - xs text - zinc - 500 mt-1">Must be at least 8 characters</p>;
+              <p className="text - xs text - zinc - 500 mt - 1">Must be at least 8 characters</p>;
             </div>;
             <div>;
+<<<<<<< HEAD
 =======
                 on_change={(e) => set_password (e.target.value)}
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
@@ -479,6 +545,9 @@ export default function SignUpPage() {;
             <div>;"
               <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Confirm Password;
               </label>;
               <input;"
@@ -488,6 +557,7 @@ export default function SignUpPage() {;
                 value={confirm_password}
 <<<<<<< HEAD
                 on_change={(e) => setConfirmPassword (e.target.value)}
+<<<<<<< HEAD
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -497,6 +567,9 @@ export default function SignUpPage() {;
                 on_change={(e) => setConfirmPassword (e.target.value)}"
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 placeholder="Confirm your password";
               />;
             </div>;
@@ -516,14 +589,15 @@ export default function SignUpPage() {;
               <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">;
 =======
               disabled={is_loading}
-              className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration-200";
+              className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration - 200";
             >;
               {is_loading ? "Creating Account..." : "Start Free Trial"}
             </button>;
           </form>;
-          <div className="mt - 6 text-center">;
-            <p className="text - zinc - 400 text-sm">;
+          <div className="mt - 6 text - center">;
+            <p className="text - zinc - 400 text - sm">;
               Already have an account?{" "}
+<<<<<<< HEAD
               <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font-medium">;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -541,12 +615,16 @@ export default function SignUpPage() {;
               Already have an account?{" "}"
               <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Sign in;
               </Link>;
             </p>;
           </div>;
 <<<<<<< HEAD
         </div>;
+<<<<<<< HEAD
         <div className="text-center">;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -559,11 +637,16 @@ export default function SignUpPage() {;
             <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">;
 =======
           <p className="text - zinc - 500 text-xs">;
+=======
+        <div className="text - center">;
+          <p className="text - zinc - 500 text - xs">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             By signing up, you agree to our{" "}
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc-300">;
+            <Link href="/terms" className="text - zinc - 400 hover:text - zinc - 300">;
               Terms of Service;
             </Link>{" "}
             and{" "}
+<<<<<<< HEAD
             <Link href="/privacy" className="text - zinc - 400 hover: text - zinc-300">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -586,6 +669,9 @@ export default function SignUpPage() {;
             and{" "}"
             <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Privacy Policy;
             </Link>;
           </p>;

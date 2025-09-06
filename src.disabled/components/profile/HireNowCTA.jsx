@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 "export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+=======
+'"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

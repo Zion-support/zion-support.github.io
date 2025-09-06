@@ -26,7 +26,7 @@ import { execSync, spawn } from;
         case';TS2339': // Property: does not exist'
         case';TS2345': // Argument: type not assignable'
         case';TS2322': // Type: not assignable'
-  TS7006': // Parameter: implicitly has', ',any: type'
+  TS7006': // Parameter: implicitly has';';any: type'
         fs.writeFileSync(file +';.backup', originalContent)'
   '\\n')'
       console.error(')
@@ -38,9 +38,13 @@ import { execSync, spawn } from;
         useRef: "
         FC: "
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
         ReactNode: "
         ReactNode: "
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -32,6 +33,9 @@ interface ImportMetaEnv {
   readonly VITE_SUPABASE_URL: string,
   readonly VITE_SUPABASE_ANON_KEY: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -54,6 +58,7 @@ declare module 'path' {
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 // Add Node.js globals;
@@ -91,6 +96,12 @@ interface ImportMetaEnv {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+// Add Node.js globals;
+
+interface ImportMetaEnv {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
   readonly VITE_SUPABASE_ANON_KEY: string,;
@@ -132,6 +143,7 @@ declare module 'lovable-tagger' {;
 // Add Node.js globals
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -162,11 +174,23 @@ declare let process: {}
     [key: string]: string | undefined,'
     NODE_ENV: 'development' | 'production' | 'test',
     PORT?: string;
+=======
+
+
+
+declare let __dirname: string,
+declare let process: {
+  env: {
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 // Add Node.js globals;
 declare let __dirname: string,;
 declare let process: {;
   env: {;
+<<<<<<< HEAD
     [key: string]: string | undefined,;'
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
@@ -215,3 +239,20 @@ declare let process: {;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    [key: string]: string | undefined,;
+    NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+
+
+  }
+}
+  }
+}
+  }
+};
+  }
+};
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -67,6 +67,7 @@ export function BackToDirectoryButton() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
@@ -152,7 +153,11 @@ function BackToDirectoryButton() {
         </Link>;
       </Button>;
     </div>);
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
 
   )
   )
@@ -162,6 +167,7 @@ function BackToDirectoryButton() {
 }
 ;
 
+<<<<<<< HEAD
 =======
 
 
@@ -184,6 +190,9 @@ function BackToDirectoryButton() {
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } <Button variant="outline" asChild className="my-8"> <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"> <ArrowLeft className="mr-2 h-4 w-4" /> 
   );
 }
@@ -193,8 +202,11 @@ function BackToDirectoryButton() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

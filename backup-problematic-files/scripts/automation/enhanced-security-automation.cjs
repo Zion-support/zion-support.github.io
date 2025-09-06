@@ -3,9 +3,11 @@
  * Enhanced Security Automation;
  * Comprehensive security scanning and monitoring;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -30,6 +32,7 @@ class EnhancedSecurityAutomation {}
         console.log(message)};
     runSecurityAudit() {}
         this.log('Running security audit...');
+        
         try {}
             const auditResult = execSync('npm audit --json', { })
 <<<<<<< HEAD
@@ -40,8 +43,10 @@ class EnhancedSecurityAutomation {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
@@ -54,17 +59,21 @@ class EnhancedSecurityAutomation {}
     };
     checkForSecrets() {}
         this.log('Checking for exposed secrets...');
+        
         const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
             /secret\s*=\s*['"][^'"]+['"]/gi,
             /token\s*=\s*['"][^'"]+['"]/gi,
             /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
        ];
+        
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
+        
         for (const file of filesToCheck) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
+                
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
@@ -95,13 +104,16 @@ class EnhancedSecurityAutomation {}
     findSourceFiles() {}
         const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js'];
         const files = [];
+        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
+            
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+                
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -116,15 +128,19 @@ class EnhancedSecurityAutomation {}
         return files};
     checkDependencies() {}
         this.log('Checking dependency security...');
+        
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
+            
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
+            
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -135,13 +151,16 @@ class EnhancedSecurityAutomation {}
     };
     checkFilePermissions() {}
         this.log('Checking file permissions...');
+        
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
             '.env.local',
             '.env.production'
         ];
+        
         const permissionIssues = [];
+        
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
             if () {}
@@ -152,6 +171,7 @@ class EnhancedSecurityAutomation {}
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
+                
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
@@ -177,6 +197,7 @@ class EnhancedSecurityAutomation {}
         }};
     generateSecurityReport() {}
         this.log('Generating security automation report...');
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -188,8 +209,10 @@ class EnhancedSecurityAutomation {}
             },
             "recommendations": this.generateSecurityRecommendations();
        };
+
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
+        
         return report};
     generateSecurityRecommendations() {}
         return [;]
@@ -206,6 +229,7 @@ class EnhancedSecurityAutomation {}
         ]};
     async run() {}
         this.log('Enhanced Security Automation started');
+        
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
@@ -221,9 +245,13 @@ if ( {})
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 module.exports = EnhancedSecurityAutomation;
 module.exports = EnhancedSecurityAutomation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

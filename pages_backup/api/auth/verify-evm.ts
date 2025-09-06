@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -29,6 +30,8 @@ export default async function handler(;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
 import { ethers } from 'ethers';
@@ -47,6 +50,7 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address);
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -69,6 +73,10 @@ export default async function handler(
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
 =======
 =======
@@ -81,6 +89,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {;
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -110,6 +119,8 @@ export default async function handler(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
@@ -129,6 +140,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -142,6 +154,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
 =======
 ========
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -164,6 +178,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       "Set-Cookie"
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD
     return res && res.status(200).json({ ok: true });
@@ -178,6 +193,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+    return res.status(200).json({ ok: true });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e: any) {
 <<<<<<< HEAD
 =======
@@ -192,6 +211,7 @@ export default async function handler(req, res) {;
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
@@ -208,6 +228,10 @@ export default async function handler(req, res) {;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -262,6 +286,7 @@ function handler() {;
     return res.status (200).json ({ ok: true });
   } catch (e: any) {;
     return res.status (500).json ({ error: e?.message || "Verify failed" });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -286,12 +311,17 @@ function handler() {;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -314,6 +344,10 @@ function handler() {;
   }
 }
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
@@ -355,6 +389,7 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -380,3 +415,11 @@ export default async function handler(req, res) {;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+=======
+
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

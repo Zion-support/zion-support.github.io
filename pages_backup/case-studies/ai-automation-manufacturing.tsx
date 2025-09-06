@@ -4,6 +4,7 @@
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   };
@@ -14,6 +15,11 @@
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
@@ -36,6 +42,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='AI automation, manufacturing, case study, predictive maintenance, quality control'
         />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -63,6 +70,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900'>
         <main className='pt-20 pb-16'>
@@ -95,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -375,6 +385,8 @@ function CaseStudyPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Challenge */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-red-400'>
@@ -432,6 +444,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -493,6 +506,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </div>
             </section>
@@ -510,6 +525,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -571,6 +587,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     href='/contact'
                     className='bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
                   >
@@ -579,12 +597,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link
                     href='/case-studies'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/ai-automation-manufacturing.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   >
                     View More Case Studies;
                   </Link>
@@ -595,6 +617,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD:pages/case-studies/ai-automation-manufacturing.tsx
 <<<<<<< HEAD
@@ -829,3 +852,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/ai-automation-manufacturing.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

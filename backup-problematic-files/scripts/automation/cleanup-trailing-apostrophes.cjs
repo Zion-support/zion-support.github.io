@@ -2,6 +2,7 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
+
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 /**;
  * Returns true if the file should be processed;
@@ -22,6 +23,7 @@ function cleanContent(content) {}
       .replace(/>\s*"\s*$/u, ">");
       .replace(/^"\s*$/u, "");
   );
+
   let out = lines.join("\n");
   // In-line fixes across the whole file;
   out = out;
@@ -30,6 +32,7 @@ function cleanContent(content) {}
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
+
   // In-line fixes across the whole file;
   out = out;
     // Comma followed by stray apostrophe (e.g., Shield,"");
@@ -38,6 +41,7 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
     .replace(/>\s*"\s*</g, "><");
+
   return out};
 ;
 function walk(dir, files = []) {}
@@ -64,6 +68,7 @@ function $1() {}
         changed += 1};
     } catch (e) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -71,6 +76,9 @@ function $1() {}
   
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -79,9 +87,13 @@ function $1() {}
 ;
 if (require.main === module) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
   main()};
   main()};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -10,6 +10,7 @@ pr-12243
 import type { AppProps } from 'next / app',
 =======
 
+<<<<<<< HEAD
 import type { AppProps } from 'next / app','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import '../styles / globals.css',
@@ -36,3 +37,7 @@ pr-12243
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export default MyApp;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

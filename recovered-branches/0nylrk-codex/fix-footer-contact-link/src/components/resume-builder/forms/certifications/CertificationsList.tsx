@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -130,11 +131,14 @@ import { Button  } from '@/components / ui / button';
 import { Edit, Trash2  } from './lucide-react';
 import { format  } from './date - fns';
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
   certifications: Certification[];
@@ -253,28 +257,83 @@ interface CertificationsListProps {;
                     </>
                   )}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface CertificationsListProps {
+  certifications: Certification[];
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
+}
+
+export function CertificationsList({
+  certifications,
+  onEdit,
+  onDelete,
+}: CertificationsListProps) {
+  if (certifications.length === 0) {
+    return null;
+  }
+
+
+
+
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Certifications</h3>
+      {certifications.map((cert) => (
+        <Card key={cert.id} className="bg-muted/40">
+          <CardContent className="pt-6">
+            <div className="flex justify-between">
+              <div>
+                <h4 className="font-medium">{cert.name}</h4>
+                <p className="text-sm text-muted-foreground">
+                  {cert.issuing_organization}
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Issued:{" "}
+                  {cert.issue_date
+                    ? typeof cert.issue_date === "string"
+                      ? cert.issue_date
+                      : format(cert.issue_date, "MMM yyyy")
+                    : "N/A"}
+                  {cert.expiration_date && (
+                    <>
+                      {" "}
+                      · Expires:{" "}
+                      {typeof cert.expiration_date === "string"
+                        ? cert.expiration_date
+                        : format(cert.expiration_date, "MMM yyyy")}
+                    </>
+                  )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </p>;
               </div>;"
               <div className="flex gap-2">;
 <<<<<<< HEAD
                 <Button
                   variant="ghost"
-                  size="icon"                  onClick={() => onEdit(cert)}
+                  size="icon"
+                  onClick={() => onEdit(cert)}
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
-            {cert.credential_url && (                      {typeof cert.expiration_date === "string";
+                <Button
+                  variant="ghost"
+                  size="icon"
+
+                      {typeof cert.expiration_date === "string";
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
                     </>)}
                 </p>;
               </div>;
-              <div className="flex gap-2">;
+              <div className="flex gap - 2">;
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_edit (cert)}
                 >;
+<<<<<<< HEAD
                   <Edit className="h - 4 w-4" />;
 =======
 
@@ -283,6 +342,9 @@ interface CertificationsListProps {;
                   onClick={() => onEdit(cert)}
                 >;"
                   <Edit className="h-4 w-4" />;
+=======
+                  <Edit className="h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </Button>;
 "
                       {typeof cert.expiration_date === "string";
@@ -306,11 +368,15 @@ interface CertificationsListProps {;
                   on_click={() => on_delete (cert.id!)}
 <<<<<<< HEAD
                 >;
+<<<<<<< HEAD
                   <Trash2 className="h - 4 w-4" />;
 =======
                 >;"
                   <Trash2 className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  <Trash2 className="h - 4 w - 4" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </Button>;
               </div>;
             </div>;
@@ -373,6 +439,7 @@ interface CertificationsListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -390,3 +457,5 @@ interface CertificationsListProps {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

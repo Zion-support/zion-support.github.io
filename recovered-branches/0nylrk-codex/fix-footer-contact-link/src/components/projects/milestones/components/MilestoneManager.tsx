@@ -20,6 +20,7 @@
 
 
 
+<<<<<<< HEAD
 import {MilestonesList} from '../MilestonesList';'
 import {PaymentSummary} from '../PaymentSummary';
 
@@ -48,6 +49,13 @@ interface MilestoneManagerProps {
 =======
   projectId: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
+
+
+  projectId: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean;
@@ -64,6 +72,7 @@ interface MilestoneManagerProps {
 import {MilestonesList} from '../MilestonesList';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {PaymentSummary} from '../PaymentSummary';
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
@@ -73,11 +82,17 @@ import {toast} from "sonner";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import {PaymentSummary} from '../PaymentSummary';
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {toast} from "sonner";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -117,6 +132,12 @@ import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps
 =======
 interface MilestoneManagerProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+interface MilestoneManagerProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectId: string,
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,
@@ -153,12 +174,22 @@ export function MilestoneManager({;
   projectId;
 =======
   refetch: () => Promise<void>
+<<<<<<< HEAD
 }  projectId;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   refetch: () => Promise<void>
 }  projectId;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+
+
+
+export function MilestoneManager({;
+  projectId;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones;
   activities;
   isLoading;
@@ -184,6 +215,7 @@ export function MilestoneManager({}
   onDeleteMilestone,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   onUploadDeliverable,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,11 +225,17 @@ export function MilestoneManager({}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  onUploadDeliverable,
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -221,15 +259,42 @@ export function MilestoneManager({}
       await refetch();
     } catch (error) {;"
       console && console.error("Error rejecting milestone:", error);"
+=======
+
+  refetch;
+}: MilestoneManagerProps) {;
+  const handleMilestoneApproved = async (milestoneId: string) => {;
+    try {;
+
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
+      toast && toast.success("Milestone approved");
+      await refetch();
+    } catch (error) {;
+      console && console.error("Error approving milestone:", error);
+      toast && toast.error("Failed to approve milestone");
+    }
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
+      toast && toast.success("Milestone rejected");
+      await refetch();
+    } catch (error) {;
+      console && console.error("Error rejecting milestone:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast && toast.error("Failed to reject milestone");
     }
   }
 
   return (
+<<<<<<< HEAD
         <MilestonesList'
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';'
 import { toast } from './sonner';
 interface MilestoneManagerProps {}
+=======
+        <MilestonesList
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
+import { toast } from './sonner';
+interface MilestoneManagerProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   project_id: string,
   milestones: Milestone[],
   activities: Record < string, MilestoneActivity[]>;
@@ -244,6 +309,7 @@ interface MilestoneManagerProps {}
   onUploadDeliverable: (id: string, file: File) => Promise < any>,
   refetch: () => Promise < void>;
 }
+<<<<<<< HEAD
 export /**;
  * MilestoneManager - Function description;
  */
@@ -255,10 +321,24 @@ function MilestoneManager() {}
       await refetch ();
     } catch (error) {"
       console.error ("Error approving milestone:", error);"
+=======
+export /**
+ * MilestoneManager - Function description
+ */
+function MilestoneManager() {
+  const handleMilestoneApproved = async (milestone_id: string) => {
+    try {
+      await onUpdateStatus (milestone_id, "completed" as MilestoneStatus);
+      toast.success ("Milestone approved");
+      await refetch ();
+    } catch (error) {
+      console.error ("Error approving milestone:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error ("Failed to approve milestone");
     }
   }
 ;
+<<<<<<< HEAD
   const handleMilestoneRejected = async (milestone_id: string) => {}
     try {"
       await onUpdateStatus (milestone_id, "rejected" as MilestoneStatus);"
@@ -266,10 +346,20 @@ function MilestoneManager() {}
       await refetch ();
     } catch (error) {"
       console.error ("Error rejecting milestone:", error);"
+=======
+  const handleMilestoneRejected = async (milestone_id: string) => {
+    try {
+      await onUpdateStatus (milestone_id, "rejected" as MilestoneStatus);
+      toast.success ("Milestone rejected");
+      await refetch ();
+    } catch (error) {
+      console.error ("Error rejecting milestone:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error ("Failed to reject milestone");
     }
   }
 ;
+<<<<<<< HEAD
   return ("
     <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;"
       <div className="lg:col - span - 2">;
@@ -295,6 +385,13 @@ function MilestoneManager() {}
 "
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return (
+    <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+      <div className="lg:col - span - 2">;
+        <MilestonesList;
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.success("Milestone approved"),
       await refetch()
     } catch (error) {"
@@ -380,6 +477,7 @@ import React from 'react',;
 =======
 
   },
+<<<<<<< HEAD
   import React from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -387,6 +485,35 @@ import React from 'react',;
   },
   import React from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  
+
+  const handleMilestoneRejected = async (milestoneId: string) => {
+    try {
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
+      toast.success("Milestone rejected"),
+      await refetch()
+    } catch (error) {
+      console.error("Error rejecting milestone:", error),
+      toast.error("Failed to reject milestone")
+    }
+
+  },
+
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+
+        <MilestonesList 
+
+        <MilestonesList
+        <MilestonesList 
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+import React from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -470,6 +597,7 @@ export function MilestoneManager() { return null; }
   return (;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
+<<<<<<< HEAD
         <MilestonesList ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -483,6 +611,38 @@ export function MilestoneManager() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <MilestonesList;
+
+} MilestoneManagerProps) {;
+  const handleMilestoneApproved = async (milestoneId:string) => {;
+    try {;
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),;
+      toast.success("Milestone approved"),;
+      await refetch(),;
+    } catch (error) {;
+      console.error("Error approving milestone:", error),;
+      toast.error("Failed to approve milestone"),;
+    }
+  },;
+  ;
+  const handleMilestoneRejected = async (milestoneId:string) => {;
+    try {;
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
+      toast.success("Milestone rejected"),;
+      await refetch(),;
+    } catch (error) {;
+      console.error("Error rejecting milestone:", error),;
+      toast.error("Failed to reject milestone"),;
+    }
+  },;
+;
+  return (;
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+      <div className="lg:col-span-2">;
+        <MilestonesList ;
+          milestones={milestones}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
@@ -495,6 +655,7 @@ export function MilestoneManager() { return null; }
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           onUploadDeliverable={onUploadDeliverable}
@@ -535,17 +696,31 @@ export function MilestoneManager() { return null; }
 =======
           onUploadDeliverable={onUploadDeliverable}          paymentTerms={paymentTerms}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          onUploadDeliverable={onUploadDeliverable}
+
+        />;
+      </div>;
+      <div>;
+        <PaymentSummary
+          milestones={milestones} 
+          paymentTerms={paymentTerms}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />;
       </div>;
     </div>;
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -559,6 +734,7 @@ export function MilestoneManager() { return null; }
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }  ),; interface MilestoneManagerProps {
 =======
 
@@ -567,6 +743,11 @@ export function MilestoneManager() { return null; }
 
   ),; interface MilestoneManagerProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+  ),; interface MilestoneManagerProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectId: string;
 milestones: Milestone[];
 activities: Record<string MilestoneActivity[]>;
@@ -585,6 +766,7 @@ refetch: () => Promise<void>
   const handleMilestoneApproved = async (milestoneId: string) => {}
   try {}
 }
+;
 
 <<<<<<< HEAD
 };
@@ -634,6 +816,7 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -647,3 +830,5 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

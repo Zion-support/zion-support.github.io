@@ -26,13 +26,25 @@ export type { ExportOptions } from './pdf/pdfExport',; // This file now re-expor
 
 // This file now re-exports from the refactored PDF export utility;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+
+// This file now re - exports from the refactored PDF export utility;
+export { exportResumeToPDF } from './pdf / pdf_export',
+export type { ExportOptions } from './pdf / pdf_export';
+
+
+// This file now re-exports from the refactored PDF export utility;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { exportResumeToPDF } from './pdf/pdfExport';
 export type { ExportOptions } from './pdf/pdfExport';
 export { exportResumeToPDF } from './pdf/pdfExport',;
 export type { ExportOptions } from './pdf/pdfExport';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -47,3 +59,6 @@ export type { ExportOptions } from './pdf/pdfExport';
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

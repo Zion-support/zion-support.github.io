@@ -19,6 +19,12 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  const analysis = analyzeContent(messageContent);
+  // Determine severity based on number and type of issues
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -37,8 +43,13 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       : 'suspicious'
   }
   return {
@@ -98,6 +109,7 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -155,6 +167,9 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -184,6 +199,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
 <<<<<<< HEAD
+<<<<<<< HEAD
     severity;  }
 };
   }
@@ -198,6 +214,15 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 =======
   }
 };
+=======
+    severity;
+
+
+  }
+};
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 /**;
  * Check message for suspicious content;
@@ -216,6 +241,7 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
   ;
   return {;
     ...analysis,;
+<<<<<<< HEAD
 =======
   }
 };
@@ -241,3 +267,11 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+};
+    severity;
+  }
+};
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

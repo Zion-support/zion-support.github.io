@@ -21,10 +21,12 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function SidebarGroupLabel({
@@ -45,6 +47,16 @@ export function SidebarGroupLabel({}
   return (
     <div;
       className={cn("
+=======
+export function SidebarGroupLabel({
+  className,
+  children,
+  ...props
+}: SidebarGroupLabelProps) {
+  return (
+    <div
+      className={cn(
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider",
         className,
       )}
@@ -52,6 +64,7 @@ export function SidebarGroupLabel({}
     >
       {children}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -83,6 +96,8 @@ interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivEl
 =======
 import React from "react",
 import { cn } from "@/lib/utils",
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
@@ -163,8 +178,11 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -199,6 +217,7 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -213,3 +232,5 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -44,10 +44,19 @@ export function useTalentData() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+import {useState} from 'react';
+import {TALENT_PROFILES} from '@/data/talentData';
+import {TalentProfile} from '@/types/talent';
+export function useTalentData() {;
+
+
+  const [isLoading, setIsLoading] = useState(false);
+
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
 
   // In a real app, we would fetch data from an API here
   // For now, we'll just return our mock data
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +85,9 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {useState} from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {TALENT_PROFILES} from '@/data / talent_data';
 =======
 
@@ -100,14 +112,18 @@ function useTalentData() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return {
     talents;
 
     isLoading;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -136,5 +152,18 @@ function useTalentData() {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+  // In a real app, we would fetch data from an API here;
+  // For now, we'll just return our mock data;
+  return {;
+    talents;
+    isLoading;
+  return {
+    talents;
+    is_loading;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }'

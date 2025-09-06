@@ -13,6 +13,10 @@ import { ThemeProvider } from "./components/ThemeProvider","
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
 =======
@@ -43,6 +47,7 @@ class ErrorBoundary extends React.Component {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
@@ -174,6 +179,9 @@ import { Routes, Route  } from 'react-router-dom';
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -323,16 +331,19 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
-        <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -343,6 +354,7 @@ const App = () =>: any {
             <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;
             <Route path="/community/*" element={<CommunityRoutes />} />;
             <Route path="/developers/*" element={<DeveloperRoutes />} />;
+<<<<<<< HEAD
 =======
 ";
             <Route path="/auth/*" element={<AuthRoutes />} />;"
@@ -356,11 +368,14 @@ const App = () =>: any {
             <Route path="/community/*" element={<CommunityRoutes />} />;"
             <Route path="/developers/*" element={<DeveloperRoutes />} />;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Route path="*" element={<ErrorRoutes />} />;
           </Routes>;
         </Suspense>;
         <Toaster />;
 
+<<<<<<< HEAD
 "
 import { Toaster } from "./components/ui/toaster";
 "
@@ -373,11 +388,29 @@ import './App.css',"
 import { ThemeProvider } from "./components/ThemeProvider","
 import { WhitelabelProvider } from "./context/WhitelabelContext","
 import { Toaster } from "./components/ui/toaster","
+=======
+
+import { Toaster } from "./components/ui/toaster";
+
+import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
+
+
+import React, { Suspense } from 'react',
+import { Routes, Route } from 'react-router-dom',
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
+import { Toaster } from "./components/ui/toaster",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 
 
+<<<<<<< HEAD
 import {}
+=======
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -389,6 +422,7 @@ import {}
   EnterpriseRoutes,
   CommunityRoutes,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -418,6 +452,9 @@ const ContactPage = React.lazy(() => import("./pages/Contact"));
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  DeveloperRoutes
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -434,6 +471,7 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +502,9 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -480,6 +521,7 @@ const baseRoutes = [
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -524,10 +566,19 @@ const App = () => {}
   return (
     <WhitelabelProvider>"
       <ThemeProvider defaultTheme="dark">"
+=======
+  { path: '/contact', element: <ContactPage /> }],
+
+const App = () => {
+  return (
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
+<<<<<<< HEAD
             ))}"
             <Route path="/auth/*" element={<AuthRoutes />} />"
             <Route path="/dashboard/*" element={<DashboardRoutes />} />"
@@ -543,10 +594,28 @@ const App = () => {}
           </Routes>
         </Suspense>
         <Toaster />"
+=======
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -843,6 +912,8 @@ export default App;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -904,6 +975,38 @@ const App = () => {;
             {baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+<<<<<<< HEAD
+=======
+const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));
+const ContactPage = React.lazy (() => import ("./pages / Contact"));
+;
+const base_routes = [;
+  { path: "/", element: <Home /> },
+  { path: "/match", element: <AIMatcherPage /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/talent", element: <TalentDirectory /> },
+  { path: "/talents", element: <TalentsPage /> },
+  { path: "/services", element: <ServicesPage /> },
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },
+  { path: "/categories", element: <Categories /> },
+  { path: "/equipment", element: <EquipmentPage /> },
+  { path: "/analytics", element: <Analytics /> },
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },
+  { path: "/open - app", element: <OpenAppRedirect /> },
+  { path: "/community", element: <CommunityPage /> },
+  { path: "/contact", element: <ContactPage /> },
+];
+;
+const App = () =>: any {
+  return (
+    <WhitelabelProvider>;
+      <ThemeProvider default_theme="dark">;
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+          <Routes>;
+            {base_routes.map (({ path, element }) => (
+              <Route key={path} path={path} element={element} />))}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -923,10 +1026,29 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default App;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  )
+},
+
+
+export default App;
+
+        <SonnerToaster position="top - right" />;
+      </ThemeProvider>;
+    </WhitelabelProvider>);
+}
+;
+export default App;
+;
+export default App;
+export default App;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default App;
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

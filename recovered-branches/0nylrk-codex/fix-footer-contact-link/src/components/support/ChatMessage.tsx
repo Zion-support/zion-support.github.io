@@ -22,7 +22,17 @@ import {useTheme} from "@/hooks/useTheme";
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from "react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {cn} from "@/lib/utils";
+import {format} from "date-fns";
+import {useTheme} from "@/hooks/useTheme";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -33,9 +43,34 @@ import { useTheme } from "@/hooks/useTheme",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
+=======
+interface ChatMessageProps {
+
+  message: string
+  isUser: boolean
+
+  timestamp: Date
+}
+
+
+
+
+
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+  const { theme } = useTheme();
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+  const { theme } = useTheme();
+  const { theme } = useTheme(),
+  
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -108,6 +143,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
         ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,16 +194,23 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
   ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
             <AvatarFallback>U</AvatarFallback>;
           </>;
         ) : (;
           <>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <AvatarImage
 =======
@@ -180,12 +223,34 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"            <AvatarImage
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <AvatarImage
+              src="https://placehold && placehold.co/40x40?text=AI"
+              alt="Zion Support"
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />;
+            <AvatarFallback>U</AvatarFallback>;
+          </>;
+        ) :(;
+          <>;
+            <AvatarImage;
+              src="https://placehold.co/40x40?text=AI";
+              alt="Zion Support";
+            <AvatarImage
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
-        )}          : theme === "dark"
+        )}
+
+
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        isUser 
+          ? "bg-zion-purple text-white" 
+
+
+          : theme === "dark"
             ? "bg-zion-blue-light text-white"
 =======
 "
@@ -231,9 +296,13 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
           isUser 
             ? "text-white/70" 
 
+<<<<<<< HEAD
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           "text-xs mt-1",
           isUser "
             ? "text-white/70" 
@@ -243,8 +312,12 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
               ? "text-gray-300"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               : "text-gray-500"
 =======
+=======
+              : "text-gray-500"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -265,6 +338,7 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
             :theme === "dark";
               ? "text-gray-300";
               :"text-gray-500";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         )}>;
           {format(timestamp, "h:mm a")}
@@ -291,12 +365,27 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               : "text-gray-500"
         )}>"
+=======
+        )}>;
+          {format(timestamp, "h:mm a")}
+          "text-xs mt-1";
+          isUser
+            ? "text-white/70"
+          "text-xs mt-1",
+          isUser 
+            ? "text-white/70" 
+            : theme === "dark"
+              ? "text-gray-300"
+              : "text-gray-500"
+        )}>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {format(timestamp, "h:mm a")}
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(message: string): string {}
   // Replace URLs;
@@ -307,6 +396,15 @@ function formatMessageWithLinks(message: string): string {}
 <<<<<<< HEAD
 
 =======
+=======
+// Function to convert URLs and help links to actual clickable links
+function formatMessageWithLinks(message: string): string {
+  // Replace URLs
+  const urlRegex = /(https?:\/\/[^\s]+)/g
+  let formattedMessage = message.replace(
+    urlRegex
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </div>;
     </div>;
@@ -318,6 +416,7 @@ function formatMessageWithLinks(message: string): string {}
   
 
 
+<<<<<<< HEAD
 
 "
             : theme === "dark""
@@ -369,6 +468,26 @@ import React from "react",;
               : "text-gray-500"        )}>;
           {format(timestamp, "h:mm a")}import React from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            : theme === "dark"
+              ? "text-gray-300"
+              : "text-gray-500"
+        )}>;
+          {format(timestamp, "h:mm a")}
+  // Replace help center references like [Getting Started]
+  const helpCenterRegex = /\[([^\]]+)\]/g
+  formattedMessage = formattedMessage.replace(
+    helpCenterRegex
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+  )
+
+  return formattedMessage
+
+
+
+
+import React from "react",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
 import { format } from "date-fns",;
@@ -455,6 +574,7 @@ function formatMessageWithLinks(): any (message: string): string {;
 
   return formattedMessage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         </div>;
@@ -485,6 +605,12 @@ function formatMessageWithLinks(): any (message: string): string {;
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -516,7 +642,7 @@ function ChatMessage() {}
 <<<<<<< HEAD
   return (
     <div className={cn ("flex items - start gap - 3", is_user && "flex - row - reverse")}>;
-      <Avatar className="h - 8 w-8">;
+      <Avatar className="h - 8 w - 8">;
         {is_user ? (
           <>;
             <AvatarImage src="https://i.pravatar.cc / 40?img = 1" alt="User" />;
@@ -527,7 +653,7 @@ function ChatMessage() {}
               src="https://placehold.co / 40x40?text = AI";
               alt="Zion Support";
             />;
-            <AvatarFallback className="bg - zion - purple text-white">Z</AvatarFallback>;
+            <AvatarFallback className="bg - zion - purple text - white">Z</AvatarFallback>;
           </>)}
       </Avatar>;
       <div className={cn (
@@ -568,8 +694,11 @@ function formatMessageWithLinks (message: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 }
 ;
@@ -623,6 +752,7 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -637,3 +767,5 @@ function formatMessageWithLinks(message: string): string {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/training.tsx
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ import React from 'react';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -46,10 +49,13 @@ import React from 'react';
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </MainLayout>
   );
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Training() {
 import {
   GraduationCap,
@@ -1023,6 +1029,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/training.tsx
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1045,6 +1052,8 @@ export default Page;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 };
 }
@@ -1141,6 +1150,7 @@ export default Training,
 }
 ;
 export default Training;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/training.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1185,6 +1195,10 @@ export default Page;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
     </Layout>
 );
@@ -1243,9 +1257,13 @@ export default Training;
 };export default Training;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/training.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

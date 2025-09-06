@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,7 +7,11 @@ import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025 {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   tagline: string;
@@ -61,6 +66,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -73,9 +84,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '📦',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
 =======
@@ -121,8 +139,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       variant: 'logistics',
 <<<<<<< HEAD
       contact_info: {
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -145,6 +170,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
 <<<<<<< HEAD
     {
+<<<<<<< HEAD
 
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
@@ -156,6 +182,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -168,6 +200,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance analytics',
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '⚛️',
 
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
@@ -200,6 +233,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -235,6 +274,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
 <<<<<<< HEAD
     {
+<<<<<<< HEAD
 
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
@@ -248,6 +288,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real - time tracking',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -259,6 +305,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🚛',
 
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
@@ -291,6 +338,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -325,6 +378,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
 <<<<<<< HEAD
     {
+<<<<<<< HEAD
 
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
@@ -338,6 +392,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'End - to - end traceability',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -349,6 +409,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance monitoring',
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '⛓️',
 
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
@@ -381,6 +442,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -415,6 +482,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
 <<<<<<< HEAD
     {
+<<<<<<< HEAD
 
       id: 'ai - powered - warehouse - automation',
       name: 'AI - Powered Warehouse Automation Platform',
@@ -426,6 +494,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -438,6 +512,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🏭',
 
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
@@ -470,6 +545,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -500,17 +581,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.','
       launch_date: '2025 - 02 - 18',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
@@ -519,7 +609,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   ];    features: [
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface AdvancedLogisticsSupplyChainSolution2025 {
 =======
   ];    features: []
@@ -540,9 +637,13 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {}
   growthRate: string, variant: ServiceVariant,
 <<<<<<< HEAD
   contactInfo: {
+<<<<<<< HEAD
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
     ];
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     mobile: string, email: string,
     address: string,
     website: string
@@ -828,6 +929,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 
+<<<<<<< HEAD
 '
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth''
     variant: 'ai-supply-chain-enterprise'
@@ -835,6 +937,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 112;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
+    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
+    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
+    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
+    competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
+    marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
+    variant: 'logistics'
+    contactInfo: {
+;
+    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
+    variant: 'ai-supply-chain-enterprise'
+    contactInfo: {
+    reviews: 112
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -915,8 +1039,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1098,18 +1226,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 112;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
 ];
 
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

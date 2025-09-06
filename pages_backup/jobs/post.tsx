@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/jobs/post.tsx
 <<<<<<< HEAD:pages/jobs/post.tsx
 <<<<<<< HEAD
@@ -32,17 +33,23 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/post.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 const PostJob: NextPage;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/post.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/post.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
 import type { NextPage } from 'next',
@@ -329,6 +336,7 @@ export default PostJob;
 };
 
 export default PostJob;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/jobs/post.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -518,3 +526,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/post.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

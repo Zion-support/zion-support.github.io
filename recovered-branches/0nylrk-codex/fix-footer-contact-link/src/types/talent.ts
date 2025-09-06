@@ -33,7 +33,20 @@ export interface TalentProfile {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: string,
+=======
+  skills?: string[];
+  hourly_rate?: number;
+  years_experience?: number;
+  availability_type?: string;
+  timezone?: string;
+  average_rating?: number;
+  rating_count?: number;
+  is_verified?: boolean;
+  key_projects?: {
+    title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     description: string;
   }[];
 }
@@ -44,6 +57,7 @@ export interface TalentProfileFilters {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   search?: string;
   skills?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
   availabilities?: string[];
   regions?: string[];
@@ -129,21 +143,29 @@ export interface TalentProfileFilters {};
 <<<<<<< HEAD
 <<<<<<< HEAD
   skills?: string[];
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   availabilities?: string[];
   regions?: string[];
   priceRange?: [number, number];
   experienceRange?: [number, number];
 }
 
+<<<<<<< HEAD
 
 
 }
 export interface HireRequest {};
+=======
+}
+export interface HireRequest {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   client_id: string;
   talent_id: string;
   project_title: string;
   project_description: string;
+<<<<<<< HEAD
   budget: {}
     min: number;
     max: number;
@@ -202,6 +224,14 @@ export interface HireRequest {;
 =======
   timeline: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  budget: {
+    min: number;
+    max: number;
+    currency: string;
+  };
+  timeline: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     startDate: string;
     endDate?: string;
     estimatedDuration?: string;
@@ -212,6 +242,7 @@ export interface HireRequest {;
 
 
 export interface TalentProfile {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
@@ -228,6 +259,11 @@ export interface TalentProfile {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export interface TalentProfile {;
@@ -286,6 +322,7 @@ export interface HireRequest {;
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -304,3 +341,6 @@ export interface HireRequest {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

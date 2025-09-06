@@ -107,7 +107,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 'const FloatingActionButton = ({ className = \' }) => {\' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { \"icon\": \'MessageCircl\',e,\"label\": \'Live: Chat,\',\' \"action\": () => window && window.open: (\'https:\''\'"\",;
 "const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window && window.open: ("https:""""",;'"'"
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+<<<<<<< HEAD
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -122,3 +124,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -87,9 +87,35 @@ import {use_auth} from '@/hooks / use_auth';        .select()
 =======
 
 
+import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
+<<<<<<< HEAD
 import {use_auth} from '@/hooks / use_auth';        .select()
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {use_auth} from '@/hooks / use_auth';
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {Milestone} from './types';
+import {useRecordActivity} from './useRecordActivity';
+
+          project_id: projectId,
+          created_by: user && user.id})
+
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+import {toast} from 'sonner';
+import {Milestone} from './types';
+import {useRecordActivity} from './useRecordActivity';
+        .select()
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .single();
       if (error) throw error;
 <<<<<<< HEAD
@@ -104,6 +130,7 @@ import {use_auth} from '@/hooks / use_auth';        .select()
       console && console.error("Error creating milestone:", err);
       toast && toast.error("Failed to create milestone: " + err && err.message),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       return null
@@ -122,6 +149,10 @@ import {use_auth} from '@/hooks / use_auth';        .select()
 =======
       return null      return null
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      return null
+      return null
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -150,12 +181,19 @@ if (return null) {}
       setIsSubmitting (false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
+=======
+    }
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,6 +213,10 @@ import { useState } from 'react',
 =======
     }import { useState } from 'react',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { useState } from 'react',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
@@ -193,6 +235,7 @@ import { useRecordActivity } from './useRecordActivity',
 export const useCreateMilestone = (projectId?: string) => {}
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const { recordMilestoneActivity } = useRecordActivity(),
@@ -214,6 +257,12 @@ export const useCreateMilestone = (projectId?: string) => {}
 =======
   const { recordMilestoneActivity } = useRecordActivity(),    
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const { recordMilestoneActivity } = useRecordActivity(),
+
+  
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
 
@@ -274,15 +323,19 @@ export const useCreateMilestone = (projectId?: string) => {}
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   };
   
   return {
     createMilestone;
     isSubmitting
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -291,6 +344,8 @@ export const useCreateMilestone = (projectId?: string) => {}
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -362,7 +417,12 @@ export const useCreateMilestone = (projectId?: string) => {;
     is_submitting;
   }
 }
-
+;
+  }
+};
+  }
+};
+  }
 };
 <<<<<<< HEAD
 <<<<<<< HEAD

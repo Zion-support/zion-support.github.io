@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
@@ -164,6 +165,8 @@ import React, { useState } from 'react';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -175,16 +178,21 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = null;
 export default function ComprehensiveServicesShowcase2025() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
 =======
@@ -196,6 +204,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'popularity'
   >('popularity');
@@ -204,12 +214,16 @@ const [sortBy, setSortBy] = useState<
     const categoryMatch =
       selectedCategory === 'All Services' |
       service.category.includes(selectedCategory);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
 =======
@@ -237,6 +251,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           break;'
         case '$800+':;
           priceMatch = price > 800;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
@@ -246,6 +261,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 break;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
@@ -295,12 +312,16 @@ default:
         return 0;
     }
   });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
@@ -324,6 +345,7 @@ return '$800+';
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
@@ -501,10 +523,17 @@ import Link from 'next/link';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
 =======
@@ -536,6 +565,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <meta
           name='description'
           content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.'
@@ -561,12 +592,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           rel='canonical'
           href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
         />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Head>
         {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -1509,6 +1544,7 @@ if (return '$500 - $800') {
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
                           <span className='text - white font - semibold'>;
                             {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
@@ -2024,6 +2060,8 @@ if (return '$500 - $800') {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           </span>
                           <span className='text-gray-400'>
                             ({service.reviews})
@@ -2079,6 +2117,7 @@ if (return '$500 - $800') {
                       <Link
                         href={service.link}
                         className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2088,6 +2127,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       >
                         Learn More"
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -2310,6 +2352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
 <<<<<<< HEAD
 );
@@ -3126,3 +3169,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a;
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
+=======
+  );
+
+export default ComprehensiveServicesShowcase2025;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

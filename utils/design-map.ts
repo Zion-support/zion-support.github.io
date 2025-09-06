@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DesignMapSection = {;
   id: string;
   title: string;
@@ -238,6 +239,8 @@ export interface TokenSet {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type DesignMapSection = {
   id: string;
   title: string;
@@ -510,6 +513,13 @@ export function getZionDesignMap(): DesignMap {
 
 export type TokenSet = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type UIKitKind = "ios" | "android" | "web";
+export type UIKitKind = "ios" | "android" | "web";
+export interface TokenSet {
+
+export interface TokenSet {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -527,6 +537,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -536,6 +547,8 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   tokens: TokenSet;
@@ -561,6 +574,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -663,11 +678,16 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======    };
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     };
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
@@ -712,9 +732,12 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   return {
 =======
     return null;
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -777,18 +800,36 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     };
   };
 }
 
+<<<<<<< HEAD
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
   const tokens = await buildTokenSet(fileId);
   return {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  getDesignSystem(id: string): DesignSystem | null {
+    return this.designSystems.get(id) || null;
+  }
+
+  addComponent(designSystemId: string, component: DesignElement): boolean {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return false;
+  const tokens = await buildTokenSet(fileId);
+  return {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -972,6 +1013,7 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -984,6 +1026,12 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -1014,6 +1062,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       xl: 32,
 =======
 <<<<<<< HEAD
@@ -1021,6 +1070,8 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {};
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       xl: 32;
     }
   }
@@ -1036,6 +1087,14 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+      xl: 32,
+      xl: 32,
+}
+  };
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     },
 <<<<<<< HEAD
     tokens;
@@ -1079,6 +1138,7 @@ export async function buildUIKit(
         primary: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return {}
     components: {}
@@ -1110,6 +1170,8 @@ export async function buildUIKit(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1175,6 +1237,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -1182,3 +1245,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+          backgroundColor: tokens.colors.primary,
+          padding: tokens.spacing.md,
+        },
+      },
+    },
+    tokens,
+  };
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

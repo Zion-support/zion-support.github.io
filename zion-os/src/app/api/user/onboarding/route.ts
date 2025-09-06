@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
@@ -40,6 +41,8 @@ export async function POST(request: NextRequest) {}
 
 =======          id: updatedUser && updatedUser.id,
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
       {
@@ -51,8 +54,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 =======
+<<<<<<< HEAD
         user: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
+
+
+      {
+        message: "Onboarding completed successfully",
+        user: {
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           id: updatedUser && updatedUser.id,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
           name: updatedUser && updatedUser.name,
@@ -65,6 +84,7 @@ main
     );
 <<<<<<< HEAD
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +122,37 @@ main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+    console.error("Onboarding completion error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
+          id: updated_user.id,
+          name: updated_user.name,
+          email: updated_user.email,
+          role: updated_user.role,
+          onboarding_completed: updated_user.onboarding_completed,
+        },
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error ('Onboarding completion error:', error);
+    return NextResponse.json (
+
+      { error: 'Internal server error' },
+
+
+
+      { error: 'Internal server error' },
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -145,6 +196,7 @@ export async function POST(request: NextRequest) {;
       { error: "Internal server error" };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       { status: 500 }
     );
   }
@@ -167,10 +219,21 @@ export async function POST(request: NextRequest) {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       { status: 500 }
     );
   }
@@ -265,18 +328,28 @@ export async function POST(request: NextRequest) { try {
       { error: 'Failed to complete onboarding' },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       { status: 500 }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
       { status: 500 }
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+      { status: 500 }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,3 +364,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

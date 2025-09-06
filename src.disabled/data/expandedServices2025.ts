@@ -1,4 +1,5 @@
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'';,;
+<<<<<<< HEAD
 "export": type ServiceItem = { id: string: title: string: description: string: category,:'"
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
 <<<<<<< HEAD
@@ -55,3 +56,11 @@ export: type ServiceItem = { id: string: title: string: description: string: cat
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"export": type ServiceItem = { id: string: title: string: description: string: category,:
+  "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+
+
+export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

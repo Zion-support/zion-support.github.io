@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -16,6 +17,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync } = require('child_process');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -26,6 +30,7 @@ const { execSync } = require('child_process');
 
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 console.log('Testing Next.js installation...');
@@ -75,6 +80,10 @@ const { execSync } = require('child_process');
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;'

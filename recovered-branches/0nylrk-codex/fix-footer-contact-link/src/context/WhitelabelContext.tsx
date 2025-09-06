@@ -1,31 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     headline: string
     subtitle: string
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-    cta: string
-  }
-    headline: string,
-    subtitle: string,
-    cta: string
-};
-  tenant: WhitelabelTenant | null
-}
-
-const defaultContext: WhitelabelContextType = {
-  isWhitelabel: false
-  primaryColor: '#9b87f5', // Default Zion purple
-  logoUrl: null
-  brandName: 'Zion AI Marketplace'
-  themePreset: 'light'
-  landingPageCopy: {
-    headline: 'AI Talent Marketplace'
-    subtitle: 'Find the best AI talent for your projects'
-    cta: 'Get Started'}
-  tenant: null}
-// The context may be undefined if the provider is not mounted.  By declaring
-// the generic as `WhitelabelContextType | null` we get proper type checking
-// without falling back to an empty object which triggers TS2740 errors.
-const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -81,8 +60,8 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string;
     subtitle: string;
-    cta: string
-};
+    cta: string;
+  };
   tenant: WhitelabelTenant | null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
@@ -173,7 +152,7 @@ export const useWhitelabel = (): WhitelabelContextType => {
   }
   // Cast is used here because the context default is `null` until provided by
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.
-  return context as WhitelabelContextType
+  return context as WhitelabelContextType;
 };
 
 interface WhitelabelProviderProps {
@@ -182,6 +161,7 @@ interface WhitelabelProviderProps {
 <<<<<<< HEAD
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const useWhitelabel = (): WhitelabelContextType => {;
@@ -217,6 +197,12 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
+  const [contextValue, setContextValue] =
+    useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     if (!isLoading && tenant) {
       setContextValue({
@@ -231,6 +217,9 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
     } else if (!isLoading) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
@@ -239,6 +228,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
     <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -383,22 +373,41 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+};
+
+interface WhitelabelProviderProps {;
+  children: ReactNode;
+}
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {;
     if (!isLoading && tenant) {;
       setContextValue({;
         isWhitelabel: true,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         primaryColor: tenant && tenant.primary_color,;
         logoUrl: tenant && tenant.logo_url,;
         brandName: tenant && tenant.brand_name,;
         themePreset: tenant && tenant.theme_preset,;
         landingPageCopy: tenant && tenant.landing_page_copy,;
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         tenant: tenant});
     } else if (!isLoading) {;
       setContextValue(defaultContext);
@@ -416,6 +425,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
 <<<<<<< HEAD
     </WhitelabelContext && WhitelabelContext.Provider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -452,10 +462,30 @@ export interface WhitelabelContextType {}
   landingPageCopy: {}
     headline: string,
     subtitle: string,;
+=======
+  );
+};
+
+  return (
+    <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
+      {children}
+import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
+export interface WhitelabelContextType {
+  is_whitelabel: boolean,
+  primary_color: string,
+  logo_url: string | null,
+  brand_name: string,
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
+  landingPageCopy: {
+    headline: string,
+    subtitle: string,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     cta: string;
   }
   tenant: WhitelabelTenant | null;
 }
+<<<<<<< HEAD
 const default_context: WhitelabelContextType = {}
   is_whitelabel: false,'
   primary_color: '#9b87f5', // Default Zion purple;
@@ -465,6 +495,17 @@ const default_context: WhitelabelContextType = {}
   landingPageCopy: {'
     headline: 'AI Talent Marketplace','
     subtitle: 'Find the best AI talent for your projects','
+=======
+const default_context: WhitelabelContextType = {
+  is_whitelabel: false,
+  primary_color: '#9b87f5', // Default Zion purple;
+  logo_url: null,
+  brand_name: 'Zion AI Marketplace',
+  theme_preset: 'light',
+  landingPageCopy: {
+    headline: 'AI Talent Marketplace',
+    subtitle: 'Find the best AI talent for your projects',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     cta: 'Get Started'},
   tenant: null},
 // The context may be undefined if the provider is not mounted.  By declaring;
@@ -472,6 +513,7 @@ const default_context: WhitelabelContextType = {}
 // without falling back to an empty object which triggers TS2740 errors.;
 const WhitelabelContext = create_context < WhitelabelContextType | null>(null);
 ;
+<<<<<<< HEAD
 export const use_whitelabel = (): WhitelabelContextType => {};
   const context = useContext (WhitelabelContext);
   // Check condition;
@@ -481,10 +523,22 @@ if ( {) {}
     throw new Error ('use_whitelabel must be used within a WhitelabelProvider');
   }`
   // Cast is used here because the context default is `null` until provided by;'`
+=======
+export const use_whitelabel = (): WhitelabelContextType => {
+  const context = useContext (WhitelabelContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('use_whitelabel must be used within a WhitelabelProvider');
+  }
+  // Cast is used here because the context default is `null` until provided by;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType;
 }
 ;
+<<<<<<< HEAD
 interface WhitelabelProviderProps {}
   children: ReactNode;
 }
@@ -498,6 +552,21 @@ if ( {) {}
   $2;
 }
       setContextValue ({}
+=======
+interface WhitelabelProviderProps {
+  children: ReactNode;
+}
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) =>: any {
+  const [context_value, setContextValue] = useState < WhitelabelContextType>(default_context);
+  const { tenant, is_loading } = useWhitelabelTenant ();
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setContextValue ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         is_whitelabel: true,
         primary_color: tenant.primary_color,
         logo_url: tenant.logo_url,
@@ -505,9 +574,15 @@ if ( {) {}
         theme_preset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
         tenant: tenant});
+<<<<<<< HEAD
     } else // Check condition;
 if ( {) {}
   $2;
+=======
+    } else // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       setContextValue (default_context);
     }
@@ -517,12 +592,24 @@ if ( {) {}
     <WhitelabelContext.Provider value={context_value}>;
       {children}
 
+<<<<<<< HEAD
+=======
+    </WhitelabelContext.Provider>;
+  );
+};
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </WhitelabelContext.Provider>);
 }
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
 ;
@@ -596,6 +683,7 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     </WhitelabelContext.Provider>);
@@ -614,3 +702,8 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </WhitelabelContext.Provider>);
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

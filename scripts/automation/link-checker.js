@@ -58,6 +58,7 @@ const __dirname = path.dirname(__filename),"}),"})
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Get automation interval from environment variable ("default": 30 minutes),"}),"})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -76,6 +77,11 @@ const __dirname = path.dirname(__filename),"}),"})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+// // // console.log(,"}),"})
+  '🔗 Starting continuous link checker automation...'),"}),"})
+// Get automation interval from environment variable ("default": 30 minutes),"}),"})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes,"}),"})
 <<<<<<< HEAD
 =======
@@ -298,7 +304,12 @@ function files = [],"}),"})
 function files = [],"}),"})
   const items = fs.readdirSync(dir),"}),"})
   for (const item of items) {,"}),"})
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  const items = fs.readdirSync(dir),"}),"})
+  for (const item of items) {,"}),"})
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const fullPath = path.join(dir, item),"}),"})
     const stat = fs.statSync(fullPath),"}),"})
     if (stat.isDirectory()) {,"}),"})
@@ -665,6 +676,7 @@ async function checkLinks() { return null; }`
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -677,6 +689,8 @@ async function checkLinks() { return null; }`
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // // // console.log(
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -81,6 +81,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   );
@@ -160,6 +161,12 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 
 =======
           <SelectItem value="experience">Most Experienced</SelectItem>;  );
+=======
+  );
+}
+
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
@@ -185,15 +192,15 @@ export /**;
 <<<<<<< HEAD
 function SortFilter() {
   return (
-    <div className="mb-6">;
-      <label className="text - sm font - medium text - zion - slate - light mb-2 block">;
+    <div className="mb - 6">;
+      <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;
         Sort by;
       </label>;
       <Select value={sort_option} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg - zion - blue border - zion - blue - light text-white">;
+        <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
           <SelectValue placeholder="Sort by" />;
         </SelectTrigger>;
-        <SelectContent className="bg - zion - blue border - zion - blue - light text-white">;
+        <SelectContent className="bg - zion - blue border - zion - blue - light text - white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
@@ -221,6 +228,13 @@ function SortFilter() {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  )
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
@@ -254,12 +268,16 @@ function SortFilter() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   )
 
 import {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -275,3 +293,5 @@ import {
 import {}
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

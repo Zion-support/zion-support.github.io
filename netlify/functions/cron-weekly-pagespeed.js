@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,12 +13,17 @@ const endpoint = new URL(
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 async function psi(url, strategy = 'mobile', key) {
 
   const endpoint = new URL(
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+const endpoint = new URL(
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
@@ -45,11 +51,16 @@ exports && exports.handler = async function () {}
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];`
     ${p}`;
@@ -60,6 +71,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
       } catch (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/expand-services-advertise-and-build-project-4b36
@@ -67,6 +79,12 @@ ursor/expand-services-advertise-and-build-project-4b36
       } catch (e) {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { upsert_file } = require ('./_lib / github');
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
@@ -108,16 +126,22 @@ exports.handler = async function () {}
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -126,6 +150,12 @@ ursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         results && results.push({ url, error: e && e.message || String(e) });
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
@@ -156,7 +186,12 @@ if ( {) {}
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         content,
 =======
 
@@ -170,9 +205,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   endpoint.searchParams.set('url', url),
@@ -204,18 +244,24 @@ function psi() {
   endpoint.search_params.set ('strategy', strategy),
   if (endpoint.search_params.set ('key', key), ) {
   $2
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 function psi() { return null; }
   if (endpoint.search_params.set ('key', key), ) {}
   $2;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   const resp = await fetch (endpoint.to_string ()),`
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {}
@@ -241,12 +287,19 @@ exports.handler = async function () {}
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const owner = process.env.GITHUB_OWNER,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const repo = process.env.GITHUB_REPO,
@@ -261,10 +314,13 @@ if ( {) {}
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }      statusCode: 200,
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -272,8 +328,15 @@ if ( {) {}
 
 ursor/expand-services-advertise-and-build-project-4b36
 =======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       statusCode: 200,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
@@ -284,6 +347,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 };async function psi() { return null; }`
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),
   return resp && resp.json()
+<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -311,7 +375,18 @@ exports && exports.handler = async function() {
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+}
+exports && exports.handler = async function() {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const key = process && process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
 =======
@@ -332,7 +407,10 @@ exports && exports.handler = async function() {}
 <<<<<<< HEAD
       try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/expand-services-advertise-and-build-project-4b36
         const mobile = await psi(url, 'mobile', key),
@@ -350,6 +428,11 @@ ursor/expand-services-advertise-and-build-project-4b36
         const desktop = await psi(url, 'desktop', key);
         results.push({ url, mobile, desktop })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       } catch (e) {
 =======
       try {}
@@ -362,6 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         results && results.push({ url, error: e && e.message || String(e) })
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const owner = process && process.env.GITHUB_OWNER,
@@ -379,6 +463,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -398,13 +484,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   } catch (e) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -416,6 +515,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
   } catch (e) {}
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
@@ -425,3 +525,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,0 +1,44 @@
+{
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  "timestamp": "2025-09-05T00:20:16.317Z",
+  "memory": {
+    "rss": 48967680,
+    "heapTotal": 5570560,
+    "heapUsed": 4386112,
+    "external": 1472832,
+    "arrayBuffers": 10515
+  },
+  "uptime": 0.016888379,
+  "platform": "linux",
+  "nodeVersion": "v22.16.0",
+  "bundleSize": {
+    ".next": {
+      "size": 28534499,
+      "sizeMB": "27.21"
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T22:43:35.522Z",
+  "bundleSize": {
+    ".next": {
+      "size": 29182248,
+      "sizeMB": "27.83"
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+    },
+    "node_modules": {
+      "size": 0,
+      "sizeMB": "0.00"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 25,
+    ".ts": 0,
+    ".jsx": 0,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  }
+}

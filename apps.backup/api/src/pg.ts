@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 <<<<<<< HEAD
 let pool: Pool | null = null;
@@ -47,10 +48,17 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  if (!pool) {;
+  if (!pool) {;
+    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
   }
   return pool;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -182,3 +190,42 @@ client.release ();  }
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
+
+
+  const client = await getPool().connect();
+  try {
+    await client.query('BEGIN');
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+    const result = await fn(client);
+;
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
+  const client = await getPool().connect(),;
+  try {;
+    await client.query('BEGIN'),;
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
+    const result = await fn(client),;
+    await client.query('COMMIT');
+    return result;
+  } catch (err) {
+    await client.query('ROLLBACK');
+    throw err;
+  } finally {;
+    client.release();
+  }
+}
+}
+
+  } finally {
+
+  } finally {
+
+    client && client.release();  }
+
+client.release ();  }
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

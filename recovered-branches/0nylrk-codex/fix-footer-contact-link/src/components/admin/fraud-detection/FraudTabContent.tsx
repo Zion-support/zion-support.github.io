@@ -8,6 +8,7 @@ import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -33,6 +34,9 @@ import React from "react";
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
@@ -76,12 +80,16 @@ interface FraudTabContentProps {}
             This tab will show fraud flags that are still pending admin review.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+          </p>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
@@ -92,10 +100,15 @@ import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface FraudTabContentProps {
   tab_value: string;
 }
@@ -111,6 +124,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'pending':;
       return (
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -153,10 +167,33 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;"
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;"
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;"
+=======
+          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>;
+          <p className="text-muted-foreground">;
+            This tab will show fraud flags that are still pending admin review.;
+          </p>;
+        </div>;
+      );
+
+    case 'dangerous':;
+
+      return (
+        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <p className="text-muted-foreground">;
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+      );
+
+
+        </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         </div>;
       );
@@ -164,6 +201,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       );
       ),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -178,6 +216,10 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 =======
           </p>      return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    case 'dangerous':
+      return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>
@@ -193,6 +235,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,14 +283,23 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       );
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ),
-          ),
     
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      );
+      ),
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     case 'actioned':
       return ("
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">"
@@ -265,6 +317,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -297,6 +350,11 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 =======
       return null;
@@ -334,9 +392,17 @@ interface FraudTabContentProps {}
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       );
   }
 };        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
+=======
+      ),;
+
+    case 'actioned':;
+      return (
+        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
 =======
@@ -355,12 +421,20 @@ interface FraudTabContentProps {}
     default:;
       return null;
 
+
+
+
+
+
+
+  }
 }
 
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value }) => {
   switch (tab_value) {
     case 'pending':;
       return (
+<<<<<<< HEAD
         <div className="bg - amber - 50 dark: bg - amber - 950 / 20 p - 8 rounded - lg text-center">;
           <AlertTriangle className="mx - auto h - 12 w - 12 text - amber - 500 mb-4" />;
           <h3 className="text - xl font - medium mb-4">Pending Review Flags</h3>;
@@ -380,6 +454,12 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
           <h3 className="text - xl font - medium mb - 4">Pending Review Flags</h3>;"
           <p className="text - muted - foreground">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="bg - amber - 50 dark: bg - amber - 950 / 20 p - 8 rounded - lg text - center">;
+          <AlertTriangle className="mx - auto h - 12 w - 12 text - amber - 500 mb - 4" />;
+          <h3 className="text - xl font - medium mb - 4">Pending Review Flags</h3>;
+          <p className="text - muted - foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             This tab will show fraud flags that are still pending admin review.;
           </p>;
         </div>);
@@ -387,6 +467,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
     case 'dangerous':;
 <<<<<<< HEAD
       return (
+<<<<<<< HEAD
         <div className="bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text-center">;
           <AlertCircle className="mx - auto h - 12 w - 12 text - red - 500 mb-4" />;
           <h3 className="text - xl font - medium mb-4">Dangerous Flags</h3>;
@@ -398,6 +479,12 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
           <h3 className="text - xl font - medium mb - 4">Dangerous Flags</h3>;"
           <p className="text - muted - foreground">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center">;
+          <AlertCircle className="mx - auto h - 12 w - 12 text - red - 500 mb - 4" />;
+          <h3 className="text - xl font - medium mb - 4">Dangerous Flags</h3>;
+          <p className="text - muted - foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             This tab shows high - priority dangerous flags requiring immediate attention.;
           </p>;
         </div>);
@@ -405,6 +492,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
     case 'actioned':;
 <<<<<<< HEAD
       return (
+<<<<<<< HEAD
         <div className="bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text-center">;
           <CheckCircle className="mx - auto h - 12 w - 12 text - green - 500 mb-4" />;
           <h3 className="text - xl font - medium mb-4">Actioned Flags</h3>;
@@ -416,6 +504,12 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
           <h3 className="text - xl font - medium mb - 4">Actioned Flags</h3>;"
           <p className="text - muted - foreground">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <div className="bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center">;
+          <CheckCircle className="mx - auto h - 12 w - 12 text - green - 500 mb - 4" />;
+          <h3 className="text - xl font - medium mb - 4">Actioned Flags</h3>;
+          <p className="text - muted - foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             This tab shows flags where action has already been taken.;
           </p>;
         </div>),
@@ -424,6 +518,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 };
@@ -451,3 +546,21 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    ;
+    default:;
+      return null;
+  }
+},; interface FraudTabContentProps {
+  tabValue: string 
+}tabValue 
+}) => {
+  switch (tabValue) {
+  case 'pending': return (This tab will show fraud flags that are still pending admin review. </p> </div>);
+case 'dangerous': return (<div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center" > <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" /> <h3 className="text-xl font-medium mb-4" >Dangerous Flags</h3> <p className="text-muted-foreground" > This tab shows high-priority dangerous flags requiring immediate attention. </p> </div>);
+case 'actioned': return (<div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center" > <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" /> <h3 className="text-xl font-medium mb-4" >Actioned Flags</h3> <p className="text-muted-foreground" > This tab shows flags where action has already been taken. </p> </div>);
+default: 
+      );
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

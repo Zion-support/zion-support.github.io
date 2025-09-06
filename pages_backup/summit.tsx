@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
@@ -26,6 +27,12 @@ import React from 'react';
 type Speaker = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+import Head from 'next/head';
+import React from 'react';
+type Speaker = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {
   name: 'Venture Partner'
 }
@@ -177,6 +184,7 @@ export default function SummitPage() { return null; }
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
@@ -339,10 +347,15 @@ export default function SummitPage() { return null; }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
     avatarUrl: '/favicon.svg',
@@ -624,6 +637,8 @@ export default function SummitPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
@@ -706,6 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
     } catch (err: any) {;
@@ -737,6 +753,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
@@ -765,12 +783,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -851,6 +873,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
             </a>;
             <a'
               href='#agenda'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
@@ -887,6 +910,8 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
@@ -903,6 +928,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -912,12 +938,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
@@ -1072,6 +1102,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
           <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
           <ul className='space-y-2'>
@@ -1175,6 +1207,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
@@ -1228,6 +1261,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
                 {s.twitter && (
@@ -1257,12 +1292,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 <section
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
@@ -1458,6 +1497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div;
 <<<<<<< HEAD:pages_backup/summit.tsx
               key={p.name}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 =======
@@ -1492,6 +1532,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
             >
               {p.logoUrl ? (
@@ -1783,6 +1825,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {submitting ? 'Submitting...' : 'Submit Registration'}
 <<<<<<< HEAD:pages_backup/summit.tsx
             </button>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
@@ -1798,6 +1841,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {result?.ok && (
               <span className='text-green-600'>
                 Thank you! You are registered.
@@ -1806,16 +1851,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </form>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 =======
@@ -2112,6 +2162,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -2122,6 +2174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2131,3 +2184,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

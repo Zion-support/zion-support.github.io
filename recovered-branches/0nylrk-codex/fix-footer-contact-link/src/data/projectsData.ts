@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
@@ -22,14 +23,21 @@ export const PROJECTS: Project[] = [
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -74,6 +82,11 @@ import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 
 
+=======
+    talent_profile: {
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -91,6 +104,7 @@ export const PROJECTS: Project[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -101,12 +115,19 @@ export const PROJECTS: Project[] = [
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [';
 import { Project } from '@/types/projects';"
 import { Project } from "@/types/projects",
 <<<<<<< HEAD
 export const PROJECTS: Project[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -116,6 +137,11 @@ export const PROJECTS: Project[] = [
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "project-1",
     client_id: "client-1",
@@ -148,6 +174,7 @@ export const PROJECTS: Project[] = []
     talent_profile: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +185,12 @@ export const PROJECTS: Project[] = []
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -169,7 +202,10 @@ export const PROJECTS: Project[] = []
     talent_profile: {
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 =======
@@ -201,12 +237,21 @@ export const PROJECTS: Project[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 =======
 ];    }
@@ -214,6 +259,7 @@ export const PROJECTS: Project[] = [;
   }
 ];
 
+<<<<<<< HEAD
 =======
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -223,6 +269,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
+=======
+<<<<<<< HEAD
+=======
+
+;
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 ];
@@ -250,6 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -265,3 +322,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

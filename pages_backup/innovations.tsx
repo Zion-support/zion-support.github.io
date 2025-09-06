@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Brain,
   Rocket,
@@ -36,16 +39,21 @@ import {
   ExternalLink,
   Sparkles,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +191,8 @@ export default function InnovationsPage() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 };
 
@@ -192,6 +202,7 @@ export default function InnovationsPage() {
     <UltraFuturisticBackground2029>
 <div className='min-h-screen bg-black/90'>
         <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -502,6 +513,8 @@ function InnovationsPage() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <title>
             2029 Innovations - Zion Tech Group | AI, Quantum, Space Tech
             Breakthroughs
@@ -582,6 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Breakthrough</span>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </motion.h1>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/innovations.tsx
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
@@ -782,6 +796,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -824,6 +840,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -972,6 +989,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+        {/* Innovation Categories Overview */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
@@ -988,6 +1008,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Categories
                 </span>
               </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1079,6 +1100,8 @@ description: 'Next - generation space exploration and metaverse digital reality'
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our innovations span across four revolutionary domains, each
                 pushing the boundaries of what's possible in technology and
@@ -1306,6 +1329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
 =======
@@ -1433,6 +1457,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -1442,6 +1468,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Impact
                 </span>
               </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1509,6 +1536,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our innovations are already transforming industries and creating
                 unprecedented value for businesses worldwide.
@@ -1541,20 +1570,27 @@ description:
                 },
 origin/cursor/automate-test-improve-and-merge-code-2533
                   stats: '2029+ Future-ready'
+<<<<<<< HEAD
 =======
               {[]
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }
 
               ].map ((item, index) => (
                 <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1682,6 +1718,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Partner with Zion Tech Group to access the most advanced innovations of 2029.
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500'
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6'>
@@ -1719,6 +1757,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Future?
                   </span>
                 </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -1801,6 +1840,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
                   Partner with Zion Tech Group to access the most advanced
                   innovations of 2029. Transform your business and lead your
@@ -1835,6 +1876,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1920,11 +1962,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Enhanced Footer */}
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/innovations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1942,3 +1987,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

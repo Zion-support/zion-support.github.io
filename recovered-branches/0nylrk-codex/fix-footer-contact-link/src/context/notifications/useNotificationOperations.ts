@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -21,6 +22,11 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -70,6 +76,7 @@ import {Notification, FilterType, NotificationContextType} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const filteredNotifications = notifications && notifications.filter(notification => {
 
@@ -97,10 +104,29 @@ import {Notification, FilterType, NotificationContextType} from './types';
       case 'system':'
         return notification && notification.type === 'system';
       default: return true;
+=======
+
+  const filteredNotifications = notifications && notifications.filter(notification => {
+
+    } finally {
+      set_loading (false);
+    }
+    switch (filter) {
+      case 'unread':
+        return !notification && notification.read;
+      case 'messages':
+        return notification && notification.type === 'message';
+      case 'onboarding':
+        return notification && notification.type === 'onboarding';
+      case 'system':
+        return notification && notification.type === 'system';
+      default: return true
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   });
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -134,10 +160,36 @@ if (throw error) {}
 }
       await fetch_notifications ();
     } catch (err) {'
+=======
+  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
+
+
+  }, [user_id]);
+;
+  const markAsRead = useCallback (async (id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .update ({ read: true });
+        .eq ('id', id);
+        .eq ('user_id', user_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ('Error marking notification as read:', err);
     }
   }, [user_id, fetch_notifications]);
 ;
+<<<<<<< HEAD
   const markAllAsRead = useCallback (async () => {}
     // Check condition;
 if (return) {}
@@ -156,10 +208,31 @@ if (throw error) {}
 }
       await fetch_notifications ();
     } catch (err) {'
+=======
+  const markAllAsRead = useCallback (async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .update ({ read: true });
+        .eq ('user_id', user_id);
+        .eq ('read', false);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ('Error marking all notifications as read:', err);
     }
   }, [user_id, fetch_notifications]);
 ;
+<<<<<<< HEAD
   const dismiss_notification = useCallback (async (id: string) => {}
     // Check condition;
 if (return, ) {}
@@ -178,10 +251,31 @@ if (throw error) {}
 }
       await fetch_notifications ();
     } catch (err) {'
+=======
+  const dismiss_notification = useCallback (async (id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .delete ();
+        .eq ('id', id);
+        .eq ('user_id', user_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ('Error dismissing notification:', err);
     }
   }, [user_id, fetch_notifications]);
 ;
+<<<<<<< HEAD
   const filtered_notifications = notifications.filter (notification => {}
     switch (filter) {'
       case 'unread':;
@@ -191,6 +285,17 @@ if (throw error) {}
       case 'onboarding':;'
         return notification.type === 'onboarding';'
       case 'system':;'
+=======
+  const filtered_notifications = notifications.filter (notification => {
+    switch (filter) {
+      case 'unread':;
+        return !notification.read;
+      case 'messages':;
+        return notification.type === 'message';
+      case 'onboarding':;
+        return notification.type === 'onboarding';
+      case 'system':;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return notification.type === 'system';
       default: return true;
     }
@@ -198,6 +303,7 @@ if (throw error) {}
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
@@ -238,6 +344,19 @@ import { useState, useCallback } from 'react',;
     markAsRead;
     markAllAsRead;import { useState, useCallback } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return {
+    notifications;
+    filtered_notifications;
+    unread_count;
+    loading;
+    filter;
+    markAsRead;
+    markAllAsRead;
+
+    dismissNotification;
+import { useState, useCallback } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
 =======
 
@@ -333,10 +452,14 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     dismissNotification,;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -346,10 +469,13 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setFilter;
     fetchNotifications}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -372,6 +498,9 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 =======
     dismissNotification,;    dismiss_notification;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    dismiss_notification;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     set_filter;
     fetch_notifications}
 }
@@ -381,8 +510,11 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -516,6 +648,7 @@ const filteredNotifications = notifications.filter (notification => {
 case 'messages': return notification.type === 'message';
 case 'onboarding': return notification.type === 'onboarding';
 case 'system': 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -530,3 +663,5 @@ case 'system':
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

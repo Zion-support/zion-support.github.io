@@ -9,6 +9,7 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,6 +26,12 @@ import {ApplicationScoreCard} from "../ApplicationScoreCard";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 =======
 
@@ -39,6 +46,7 @@ import { JobApplication } from "@/types/jobs";"
 import { ApplicationScoreCard } from "../ApplicationScoreCard";"
 import { JobApplication } from "@/types/jobs","
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +117,20 @@ import {JobApplication} from "@/types/jobs";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+interface ScoreDialogProps {
+
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  application: JobApplication | null
+
+  onScoreUpdated: (updatedApplication: JobApplication) => void
+}
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -128,6 +150,7 @@ export function ScoreDialog(): any ({;
 
 
 
+<<<<<<< HEAD
   onScoreUpdated;
 }: ScoreDialogProps) {}
   return (
@@ -136,6 +159,13 @@ export function ScoreDialog(): any ({;
 
 
     <Dialog open={open} onOpenChange={onOpenChange}>"
+=======
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
+
+    <Dialog open={open} onOpenChange={onOpenChange}>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
@@ -143,6 +173,7 @@ export function ScoreDialog(): any ({;
         {application && (
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -150,6 +181,8 @@ export function ScoreDialog(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Dialog open={open} onOpenChange={onOpenChange}>;
 =======
 
@@ -178,6 +211,7 @@ export function ScoreDialog(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
           <ApplicationScoreCard
@@ -193,6 +227,10 @@ export function ScoreDialog(): any ({;
 =======
           <ApplicationScoreCard;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <ApplicationScoreCard
+          <ApplicationScoreCard ;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
@@ -202,6 +240,7 @@ export function ScoreDialog(): any ({;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -225,17 +264,34 @@ import { JobApplication } from '@/types / jobs';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
 interface ScoreDialogProps {}
+=======
+}
+
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
+import { JobApplication } from '@/types / jobs';
+import { ApplicationScoreCard } from '../ApplicationScoreCard';
+interface ScoreDialogProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   open: boolean,
   onOpenChange: (open: boolean) => void,
   application: JobApplication | null,
   onScoreUpdated: (updated_application: JobApplication) => void;
 }
+<<<<<<< HEAD
 export /**;
  * ScoreDialog - Function description;
  */
 function ScoreDialog() {}
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>;"
+=======
+export /**
+ * ScoreDialog - Function description
+ */
+function ScoreDialog() {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <DialogContent className="sm:max - w-md">;
         <DialogHeader>;
           <DialogTitle > Application Match Score</DialogTitle>;
@@ -251,8 +307,11 @@ function ScoreDialog() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  interface ScoreDialogProps {
   open: boolean;
@@ -285,6 +344,7 @@ onScoreUpdated
     </Dialog>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -301,3 +361,5 @@ onScoreUpdated
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

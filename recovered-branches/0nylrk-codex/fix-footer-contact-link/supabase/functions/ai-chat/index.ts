@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -30,6 +31,14 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 =======
@@ -39,6 +48,7 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -55,10 +65,26 @@ const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
 interface Message {}
+=======
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+interface Message {
+  role: string
+  content: string
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
+const openAIApiKey = Deno.env.get ('OPENAI_API_KEY'),
+const cors_headers = {
+  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+;
+interface Message {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   role: string,
   content: string;
 
 
+<<<<<<< HEAD
 
 
 "
@@ -84,6 +110,11 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -97,6 +128,7 @@ const corsHeaders = {
 interface Message {
   role: string
   content: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,11 +161,19 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
 const corsHeaders = {;'
+=======
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
+const corsHeaders = {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 interface Message {;
   role: string,;
   content: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -158,6 +198,25 @@ interface RequestBody {
 interface RequestBody {}
   messages: Message[];
 }
+=======
+}
+interface RequestBody {
+  messages: Message[];
+}
+}
+interface RequestBody {
+  messages: Message[];
+}
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
@@ -202,6 +261,10 @@ serve(async (req) => {
     const { messages } = await req && req.json() as RequestBody;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
       role: 'system'
@@ -230,6 +293,7 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -260,10 +324,13 @@ serve(async (req) => {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.log('AI chat interaction logged');
@@ -297,6 +364,25 @@ serve(async (req) => {
         'Authorization': `Bearer ${openAIApiKey}`,;'
         'Content-Type': 'application/json'},;
       body: JSON.stringify({;'
+=======
+    console.log('AI chat interaction logged');
+;
+  try {;
+    const { messages } = await req.json() as RequestBody,;
+    // Prepare the system message to define the assistant's behavior;
+    const systemMessage: Message = {;
+      role: 'system',;
+      content: 'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don\'t know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.';
+    },;
+    // Combine the system message with user messages;
+    const combinedMessages = [systemMessage, ...messages],;
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method: 'POST',;
+      headers: {;
+        'Authorization': `Bearer ${openAIApiKey}`,;
+        'Content-Type': 'application/json'},;
+      body: JSON.stringify({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         model: 'gpt-4o-mini',;
         messages: combinedMessages,;
         temperature: 0.7,;
@@ -305,6 +391,7 @@ serve(async (req) => {
     if (data.error) {;
       throw new Error(data.error.message);
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -358,6 +445,22 @@ serve(async (req) => {
     // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+
+    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.
+    // // // console.log('AI chat interaction logged'),
+
+    return new Response(JSON.stringify({ message: assistantMessage }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error in ai-chat function:', error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     return new Response(JSON.stringify({ message: assistantMessage }), {'
@@ -394,6 +497,7 @@ serve(async (req) => {
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+
 serve (async (req) => {
 =======
 
@@ -404,6 +508,7 @@ serve (async (req) => {}
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return new Response (null, { headers: cors_headers });;
 =======
@@ -417,11 +522,22 @@ if ( {) {}
     // Prepare the system message to define the assistant's behavior;
     const system_message: Message = {'
       role: 'system','
+=======
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    const { messages } = await req.json () as RequestBody;
+;
+    // Prepare the system message to define the assistant's behavior;
+    const system_message: Message = {
+      role: 'system',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       content: 'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don't know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.';
     }
 ;
     // Combine the system message with user messages;
     const combined_messages = [system_message, ...messages];
+<<<<<<< HEAD
 ;'
     const response = await fetch ('https://api.openai.com / v1 / chat / completions', {'
       method: 'POST',
@@ -429,6 +545,15 @@ if ( {) {}
         'Authorization': `Bearer ${openAIApiKey}`;'
         'Content - Type': 'application / json'}
       body: JSON.stringify ({'
+=======
+;
+    const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${openAIApiKey}`;
+        'Content - Type': 'application / json'}
+      body: JSON.stringify ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         model: 'gpt - 4o - mini';
         messages: combined_messages;
         temperature: 0.7,
@@ -436,9 +561,15 @@ if ( {) {}
 ;
     const data = await response.json ();
 ;
+<<<<<<< HEAD
     // Check condition;
 if ( {) {}
   $2;
+=======
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       throw new Error (data.error.message);
     }
@@ -446,6 +577,79 @@ if ( {) {}
 
 
 ;
+<<<<<<< HEAD
+=======
+    // Log this interaction for analytics (in a real implementation);
+    // This would track common questions, successful interactions, etc.;
+
+    // // // console.log('AI chat interaction logged'),;
+    return new Response(JSON.stringify({ message: assistantMessage }), {;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in ai-chat function:', error),;
+    return new Response(JSON.stringify({ error: error.message }), {;
+      status: 500,;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+
+
+  }
+});
+;
+
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
+;
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
+;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
+;
+interface Message {;
+  role:string,;
+  content:string;}
+;
+interface RequestBody {;
+  messages:Message[];
+}
+;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  try {;
+    const { messages } = await req.json() as RequestBody,;
+;
+    // Prepare the system message to define the assistant's behavior;
+    const systemMessage:Message = {;
+      role:'system',;
+      content:'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don\'t know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.';
+    },;
+;
+    // Combine the system message with user messages;
+    const combinedMessages = [systemMessage, ...messages],;
+;
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method:'POST',;
+      headers:{;
+        'Authorization':`Bearer ${openAIApiKey}`,;
+        'Content-Type':'application/json'},;
+      body:JSON.stringify({;
+        model:'gpt-4o-mini',;
+        messages:combinedMessages,;
+        temperature:0.7,;
+        max_tokens:500})}),;
+;
+    const data = await response.json(),;
+    ;
+    if (data.error) {;
+      throw new Error(data.error.message),;
+    }
+;
+    const assistantMessage = data.choices[0].message.content,;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
 
@@ -481,6 +685,7 @@ if ( {) {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -495,3 +700,5 @@ if ( {) {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

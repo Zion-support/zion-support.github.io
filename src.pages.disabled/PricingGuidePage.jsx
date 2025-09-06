@@ -52,6 +52,7 @@ import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 
+
 }
 
 <<<<<<< HEAD
@@ -85,7 +86,10 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -155,6 +159,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >
 
 <<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 :src.pages.disabled/PricingGuidePage.jsx
 }
@@ -168,7 +174,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js
+=======
+}
+
+
+
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
@@ -36,6 +37,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
@@ -55,9 +60,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req && req.query as { providerId?: string };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+
+  const state = readState();
+  const logs = providerId
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
 =======
@@ -83,6 +94,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const state = readState();
   const logs = providerId;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
@@ -115,10 +127,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
@@ -143,6 +160,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });
@@ -161,6 +181,7 @@ export default function handler() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +201,12 @@ export default function handler() { return null; }
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 =======
 
@@ -205,6 +232,7 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,11 +285,16 @@ export default function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,11 +322,16 @@ export default function handler(req, res) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -302,6 +340,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = null;
   res.status(200).json({ logs })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -337,3 +376,6 @@ function handler() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

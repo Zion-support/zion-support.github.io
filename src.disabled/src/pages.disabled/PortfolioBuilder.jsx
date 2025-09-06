@@ -36,6 +36,7 @@ interface PortfolioBuilderProps {
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -43,6 +44,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }'
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 interface PortfolioBuilderProps {}
   // Add props here as needed;
@@ -53,6 +56,7 @@ import React from 'react';
 interface PortfolioBuilderProps {}
   // Add props here as needed;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +86,9 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
 
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <h1>PortfolioBuilder</h1>
@@ -126,6 +133,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -149,6 +157,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 
+=======
+}
+
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 :src.pages.disabled/PortfolioBuilder.jsx
 <<<<<<< HEAD
@@ -183,6 +198,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 
+}
+
 
 
 
@@ -198,6 +215,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,3 +272,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

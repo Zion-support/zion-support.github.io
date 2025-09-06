@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/ai-automation-trends-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,6 +644,8 @@ import React from 'react',
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/ai-automation-trends-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 export default function AIAutomationTrends2025() {
   return (
@@ -877,9 +880,13 @@ export default function AIAutomationTrends2025() {
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/ai-automation-trends-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/ai-automation-trends-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

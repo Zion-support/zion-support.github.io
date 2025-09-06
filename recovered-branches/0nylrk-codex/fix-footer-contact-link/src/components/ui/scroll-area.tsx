@@ -7,6 +7,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import * as React from &quot;react&quot;
@@ -29,16 +30,25 @@ import * as React from "react"
 
 import * as React from "react""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import * as React from "react"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 "
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   <ScrollAreaPrimitive.Root
@@ -47,6 +57,12 @@ const ScrollArea = React.forwardRef<
     className={cn("relative overflow-hidden", className)}
     {...props}
 
+=======
+  <ScrollAreaPrimitive.Root
+    ref={ref}
+    className={cn (&quot;relative overflow - hidden & quot;, class_name)}
+    {...props}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -62,6 +78,7 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -99,12 +116,36 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
+=======
+import * as React from &quot;react & quot;
+import * as ScrollAreaPrimitive from &quot;@radix - ui / react - scroll - area & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+;
+const ScrollArea = React.forward_ref<;
+  React.ElementRef < typeof ScrollAreaPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof ScrollAreaPrimitive.Root>;
+>(({ class_name, children, ...props }, ref) => (
+  <ScrollAreaPrimitive.Root;
+    ref={ref}
+    className={cn (&quot;relative overflow - hidden & quot;, class_name)}
+    {...props}
+
+
+  >
+    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+
+
+      {children}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       &quot;flex touch-none select-none transition-colors&quot;
       orientation === &quot;vertical&quot; &&
         &quot;h-full w-2.5 border-l border-l-transparent p-[1px]&quot;
       orientation === &quot;horizontal&quot; &&
         &quot;h-2.5 flex-col border-t border-t-transparent p-[1px]&quot;
+<<<<<<< HEAD
 "
       "flex touch-none select-none transition-colors","
       orientation === "vertical" &&"
@@ -123,6 +164,10 @@ const ScrollBar = React.forwardRef<
 <<<<<<< HEAD
 =======
   <ScrollAreaPrimitive.Root      orientation === "vertical" &&
+=======
+      "flex touch-none select-none transition-colors",
+      orientation === "vertical" &&
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "h-full w-2.5 border-l border-l-transparent p-[1px]",
       orientation === "horizontal" &&
         "h-2.5 flex-col border-t border-t-transparent p-[1px]",
@@ -134,15 +179,18 @@ const ScrollBar = React.forwardRef<
         "h-2.5 flex-col border-t border-t-transparent p-[1px]",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
       className
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
+    <ScrollAreaPrimitive.ScrollAreaThumb className=&quot;relative flex-1 rounded-full bg-border&quot; />
+    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +213,8 @@ ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </ScrollAreaPrimitive.Viewport>;
     <ScrollBar />;
     <ScrollAreaPrimitive.Corner />;
@@ -190,6 +240,7 @@ const ScrollBar = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>));
 ScrollBar.display_name = ScrollAreaPrimitive.ScrollAreaScrollbar.display_name;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export { ScrollArea, ScrollBar }
 
@@ -222,6 +273,18 @@ export { ScrollArea, ScrollBar };
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export { ScrollArea, ScrollBar }
+
+
+export { ScrollArea, ScrollBar }
+;
+export { ScrollArea, ScrollBar };
+
+export { ScrollArea, ScrollBar }
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >;
     <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;
       {children}
@@ -276,6 +339,7 @@ React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -290,3 +354,5 @@ React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>)
 
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

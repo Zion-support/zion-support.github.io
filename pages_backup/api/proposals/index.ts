@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/proposals/index.ts
 <<<<<<< HEAD:pages/api/proposals/index.ts
 =======
@@ -18,6 +19,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -30,6 +33,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -107,6 +111,32 @@ async function ensureStore() { return null; }
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
+async function ensureStore() {
+  await fs && fs.ensureFile(FILE_PATH);
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
+async function ensureStore() {;
+  await fs.ensureFile(FILE_PATH);
+  try {
+    const raw = await fs.readFile(FILE_PATH, 'utf8');
+    if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
 async function ensureStore() {
@@ -114,12 +144,16 @@ async function ensureStore() {
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
 if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -191,6 +225,7 @@ function ensure_store() {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
@@ -378,6 +413,8 @@ function ensure_store() {}
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async /**
  * handler - Function description
 =======
@@ -406,6 +443,7 @@ if ( {) {}
     const data = await fs.read_json (FILE_PATH);
 <<<<<<< HEAD:pages_backup/api/proposals/index.ts
     const item = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 <<<<<<< HEAD
 =======
@@ -464,6 +502,10 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
@@ -503,6 +545,7 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {
     console.error("Error:", error);
+<<<<<<< HEAD
 =======
     } catch (error) {"
     console.error("Error:", error);"
@@ -535,6 +578,21 @@ export default async function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -548,6 +606,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -575,6 +634,11 @@ export default async function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,
@@ -590,6 +654,7 @@ id: body.id,
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/proposals/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -622,3 +687,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

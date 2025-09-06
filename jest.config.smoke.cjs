@@ -9,12 +9,16 @@ const createJestConfig = nextJest({
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const config = {
   testEnvironment: 'jsdom',
 =======
 const customJestConfig = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -44,10 +48,8 @@ const customJestConfig = {
     '<rootDir>/temp_components/',
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
-    '<rootDir>/backup*/',
-    '<rootDir>/corrupted_backup/',
-    '<rootDir>/temp_*/',
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +94,9 @@ const customJestConfig = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   coverageThreshold: {
     global: {
       branches: 70,
@@ -101,10 +106,14 @@ const customJestConfig = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
+=======
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 <<<<<<< HEAD
@@ -125,6 +134,7 @@ module.exports = createJestConfig(customJestConfig);
 };
 
 module.exports = createJestConfig(config);
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -134,3 +144,6 @@ module.exports = createJestConfig(config);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

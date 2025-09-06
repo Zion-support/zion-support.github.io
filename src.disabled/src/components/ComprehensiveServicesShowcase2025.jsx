@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+=======
+import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -89,6 +93,7 @@ import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
@@ -100,3 +105,9 @@ import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
+const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

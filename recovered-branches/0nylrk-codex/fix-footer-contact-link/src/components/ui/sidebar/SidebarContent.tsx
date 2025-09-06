@@ -63,6 +63,7 @@ import { cn } from "@/lib/utils";
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   className?: string,
   children?: React.ReactNode
 <<<<<<< HEAD
@@ -87,9 +88,25 @@ interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivEleme
   className?: string;
   children?: React && React.ReactNode;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+
+export function SidebarContent({
+  className,
+  children,
+  ...props
+}: SidebarContentProps) {
+  return (
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>
+      {children}
+    </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -158,16 +175,33 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
+  return (;
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
 import React from './react';'
@@ -189,6 +223,7 @@ function SidebarContent() {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -203,3 +238,5 @@ function SidebarContent() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

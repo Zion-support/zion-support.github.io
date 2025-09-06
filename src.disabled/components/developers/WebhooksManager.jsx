@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ' \' \' \' \' \' \' \' \' \''\';\'";\";
 " " " " " " " " " """;"";";"""
+=======
+' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -89,6 +93,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 ' \' \' \' \' \' \' \' \' \''\';\'";\";
 " " " " " " " " " """;"";";"""
 ' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ' \' \' \' \' \' \' \' \' \''\';\'";\";
@@ -100,3 +105,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""
+' \' \' \' \' \' \' \' \' \''\';\'";\";
+" " " " " " " " " """;"";";"""
+' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

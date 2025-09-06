@@ -100,7 +100,9 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+<<<<<<< HEAD
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -128,3 +130,6 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

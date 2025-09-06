@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -15,6 +16,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   };
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', text,
   className = '', }) => {
@@ -28,6 +31,25 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     lg: 'h-12 w-12'
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <div className={`inline-block ${className}`}>
       <div 
@@ -38,10 +60,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
         <span className="sr-only">Loading...</span>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default LoadingSpinner;
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 React from, react''
 import { Loader2  } from 'lucide-react'';interface LoadingSpinnerProps {'
@@ -158,4 +184,14 @@ export default function LoadingSpinner() {
 pr-12243
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

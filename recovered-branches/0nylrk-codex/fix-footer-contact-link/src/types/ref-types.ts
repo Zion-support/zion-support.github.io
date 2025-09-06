@@ -31,6 +31,7 @@ import { LegacyRef, Ref } from "react";
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -41,6 +42,13 @@ import {LegacyRef, Ref} from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "
+=======
+import { LegacyRef, Ref } from './react';
+// A type that safely handles all possible reference types;
+export type SafeRef < T> = LegacyRef < T> | Ref < T>;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types;
 "
@@ -51,6 +59,7 @@ import { LegacyRef, Ref } from "react",
 export type SafeRef<T> = LegacyRef<T> | Ref<T>,";
 import { LegacyRef, Ref } from "react",;
 // A type that safely handles all possible reference types;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,3 +94,12 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;export type SafeRef<T> = LegacyRe
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

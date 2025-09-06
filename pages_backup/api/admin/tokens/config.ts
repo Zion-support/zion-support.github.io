@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/tokens/config.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,12 +25,15 @@ import { tokenStore } from "../../../../utils/token/storage",;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/config.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     return res.status(200).json(getConfig())
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/tokens/config.ts
 <<<<<<< HEAD
   if (req.method === "POST") {
@@ -147,6 +151,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const body = req.body || {}
     const current = tokenStore.getConfig()
     const updated = { ...current, ...body }
@@ -157,7 +163,10 @@ main
   return res.status(405).json({ error: "Method not allowed" })
 };
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/config.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   
   if (req.method === 'POST') {
     const { updated } = req.body || {};
@@ -169,9 +178,13 @@ main
   
   return res.status(405).json({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/tokens/config.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/config.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

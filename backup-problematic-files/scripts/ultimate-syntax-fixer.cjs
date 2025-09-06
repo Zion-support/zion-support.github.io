@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -16,6 +17,10 @@
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/ultimate-syntax-fixer.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -47,5 +52,8 @@ const filesToFix = ['pages/api/health.ts']
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+<<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

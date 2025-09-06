@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ interface FeatureCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   key?: string | number; // Added key prop;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -54,6 +58,7 @@ import React from "react",
 =======
 
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div;
@@ -106,6 +111,12 @@ interface FeatureCardProps {
 =======
 interface FeatureCardProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      className={cn(
+
+
+interface FeatureCardProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -140,7 +151,36 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
-      </div>        className,
+      </div>
+
+  );
+}
+  )
+import { cn } from "@/lib/utils",;
+import React from "react",;
+interface FeatureCardProps {;
+  title: string,;
+  description: string,;
+  icon: React.ReactNode,;
+  className?: string,;
+  key?: string | number, // Added key prop;
+}
+;
+export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {;
+  return (;
+    <div className={cn(;
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300";
+      className;
+    )}>;
+      <div className="mr-4 text-zion-cyan p-2">;
+        {icon}
+      </div>;
+  return (
+    <div
+      className={cn(
+
+        "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
+        className,
       )}>;
       <div className="mr-4 text-zion-cyan p-2">{icon}</div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -182,6 +222,7 @@ export function FeatureCard() { return null; }
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light">{description}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
@@ -226,6 +267,20 @@ import React from './react';
 interface FeatureCardProps {}
   title: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </div>;
+
+    </div>
+
+
+    </div>;
+  );
+
+import { cn  } from '@/lib / utils';
+import React from './react';
+interface FeatureCardProps {
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   icon: React.ReactNode;
   class_name?: string;
@@ -243,10 +298,10 @@ function FeatureCard() {}
       )}
 <<<<<<< HEAD
     >;
-      <div className="mr - 4 text - zion - cyan p-2">{icon}</div>;
+      <div className="mr - 4 text - zion - cyan p - 2">{icon}</div>;
       <div>;
-        <h3 className="text - lg font - bold mb - 2 text-white">{title}</h3>;
-        <p className="text - zion - slate-light">{description}</p>;
+        <h3 className="text - lg font - bold mb - 2 text - white">{title}</h3>;
+        <p className="text - zion - slate - light">{description}</p>;
       </div>;
     </div>);
 
@@ -263,6 +318,7 @@ function FeatureCard() {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
 }
 
 
@@ -272,7 +328,7 @@ import { cn } from "@/lib/utils",;"
 import React from "react",;
 ;
 interface FeatureCardProps {;
-  title:string,,
+  title:string,;
   description:string,;
   icon:React.ReactNode,;
   className?:string,;
@@ -292,6 +348,7 @@ export function FeatureCard() { return null; }
   ),;}
 <<<<<<< HEAD
  interface FeatureCardProps {
+<<<<<<< HEAD
   title: string,
   description: string;
 =======
@@ -299,6 +356,10 @@ export function FeatureCard() { return null; }
   title: string;
 description: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  title: string;
+description: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 icon: React.ReactNode;
 className?: string;
 key?: string | number, //Added key prop;
@@ -311,6 +372,7 @@ key?: string | number, //Added key prop;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,3 +392,6 @@ key?: string | number, //Added key prop;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

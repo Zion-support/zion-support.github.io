@@ -3,11 +3,29 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
 =======
 
 
 
+=======
+const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
+</p>'
+</p>'
+</p>'
+
+
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 </p>'
 
 
@@ -82,6 +100,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -141,3 +160,10 @@ const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "l
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+</p>'
+</p>'
+</p>'
+</p>'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

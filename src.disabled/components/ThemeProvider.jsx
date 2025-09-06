@@ -44,6 +44,7 @@ ursor/add-new-services-and-deploy-updates-0462"
 ursor/add-new-services-and-deploy-updates-0462
 "use client"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +54,11 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"use client"
+:temp_exclude/src.disabled/components/ThemeProvider.jsx
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client"
 "use client"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

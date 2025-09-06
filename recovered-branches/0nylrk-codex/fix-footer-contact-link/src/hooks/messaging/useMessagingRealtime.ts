@@ -61,6 +61,7 @@ import {toast} from '@/hooks/use-toast';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -101,12 +102,26 @@ export function useMessagingRealtime(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+// Allow either UserProfile or UserDetails
+
+
+export function useMessagingRealtime(;
+
+  user: UserWithProfile;
+  active_conversation: Conversation | null;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+
+        'postgres_changes', 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { 
           event: 'INSERT', 
           schema: 'public', 
           table: 'messages', 
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
+
         (payload) => {
           // Update messages if the conversation is selected
           if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
@@ -134,18 +149,28 @@ export function useMessagingRealtime(;
           fetchConversations();
 <<<<<<< HEAD
           // Show toast notification for new message
+<<<<<<< HEAD
           toast({          })
 =======
           // Show toast notification for new message;
           toast({}
           })
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          toast({
+
+            title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
+            description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
+
+          })
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       )
       .subscribe();
 
 <<<<<<< HEAD
     return () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,6 +211,19 @@ export function useMessagingRealtime(;
     }
 <<<<<<< HEAD
   }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
+=======
+      supabase && supabase.removeChannel(subscription)
+    }
+  }, [user, activeConversation, fetchConversations, setActiveMessages])
+  fetch_conversations: () => Promise < void>) {
+  // Setup real - time subscription when user is logged in;
+  useEffect (() => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    // Subscribe to new messages;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const subscription = supabase;
 =======
   }, [user, activeConversation, fetchConversations, setActiveMessages])
@@ -225,6 +263,7 @@ if ( {) {}
           // Show toast notification for new message;
 <<<<<<< HEAD
           toast ({
+<<<<<<< HEAD
             title: `New message from ${payload.new.sender_name || 'Someone'}`,
   description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
 =======
@@ -232,6 +271,10 @@ if ( {) {}
             title: `New message from ${payload.new.sender_name || 'Someone'}`;'
             description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            title: `New message from ${payload.new.sender_name || 'Someone'}`;
+            description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           });
         }
       );
@@ -242,7 +285,11 @@ if ( {) {}
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 import { useEffect } from 'react',;
@@ -285,8 +332,8 @@ export function useMessagingRealtime(;
           fetchConversations(),;
           // Show toast notification for new message;
           toast({;
-            title: `New message from ${payload.new.sender_name || 'Someone'}`,
-  description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
+            title: `New message from ${payload.new.sender_name || 'Someone'}`;
+            description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
           });
         }
       );

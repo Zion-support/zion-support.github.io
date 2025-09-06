@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/partners/brand-kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +89,8 @@ export default function BrandKit() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners/brand-kit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function BrandKit() {
   return (
 <div className='space-y-4'>
@@ -102,9 +105,13 @@ export default function BrandKit() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/partners/brand-kit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners/brand-kit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

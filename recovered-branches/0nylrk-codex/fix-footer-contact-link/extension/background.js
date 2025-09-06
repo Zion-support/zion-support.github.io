@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 const BASE_URL = 'https: //zionai && zionai.com',
+<<<<<<< HEAD
 =======
 
 
@@ -27,6 +28,31 @@ if (return { answer: 'Model key missing' }, ) {}
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+const BASE_URL = 'https: //zionai.com'
+async function askZionGPT(prompt) {
+  if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
+
+  try {
+
+    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
+const OPENAI_API_KEY = '',
+// Base URL for opening Zion pages in a new tab;
+const BASE_URL = 'https: //zionai.com',
+async /**
+ * askZionGPT - Function description
+ */
+function askZionGPT() {
+  // Check condition
+if (return { answer: 'Model key missing' }, ) {
+  $2
+}
+  try {
+    const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',
       headers: {'
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -97,9 +123,14 @@ if ( {) {}
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
+=======
+  }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -141,6 +172,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 }),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -186,3 +218,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}),
+;
+}),;
+}),
+;
+}),;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

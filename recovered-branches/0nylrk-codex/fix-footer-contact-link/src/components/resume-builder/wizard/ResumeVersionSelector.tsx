@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -65,19 +66,32 @@ import {useResume} from '@/hooks/useResume';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useState } from "react";
 import {}
+=======
+import { useState } from "react";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+<<<<<<< HEAD
   DropdownMenuTrigger,";
 } from "@/components/ui/dropdown-menu";"
 import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";
 import {}
+=======
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,";
 } from "@/components/ui/dialog";"
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";"
@@ -94,6 +108,14 @@ import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps
 =======
 interface ResumeVersionSelectorProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
+import { Resume } from "@/types/resume";
+import { useResume } from "@/hooks/useResume";
+interface ResumeVersionSelectorProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
@@ -157,6 +179,7 @@ export function ResumeVersionSelector({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         setSaveDialogOpen(false);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -168,10 +191,14 @@ export function ResumeVersionSelector({}
 =======
         setNewResumeTitle("");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+        setNewResumeTitle("");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
       setIsLoading(false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         setNewResumeTitle('')
@@ -218,6 +245,24 @@ import { useState } from 'react',;
 
         setNewResumeTitle('')
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        setNewResumeTitle('')
+
+  const handleCreateNewVersion = async () => {
+    if (newResumeTitle.trim()) {
+      setIsLoading(true);
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
+      if (resumeId) {
+        await fetchResume(resumeId);
+        onResumeChange(resumeId);
+        setSaveDialogOpen(false);
+        setNewResumeTitle('')
+
+
+        setNewResumeTitle('')
+import { useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -253,6 +298,7 @@ export function ResumeVersionSelector() { return null; }
         setSaveDialogOpen(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         setNewResumeTitle('');
 <<<<<<< HEAD
       }
@@ -279,12 +325,75 @@ export function ResumeVersionSelector() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
+=======
+        setNewResumeTitle('');
+
+
+      }
+      setIsLoading(false);
+    }
+
+
+
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-sm text-muted-foreground">Resume:</span>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="sm" className="gap-2">
+            {currentResume?.basic_info?.title || "My Resume"}
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+              className="cursor-pointer"
+            >
+              {resume.basic_info.title}
+            </DropdownMenuItem>
+          ))}
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            onClick={() => setSaveDialogOpen(true)}
+            className="cursor-pointer"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            Save as new version
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Save as new resume version</DialogTitle>
+          </DialogHeader>
+          <div className="py-4">
+            <Input
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+              placeholder="Enter resume title (e.g. DevOps Resume)"
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         setNewResumeTitle("");
       }
       setIsLoading(false);
     }
   };
   },
+<<<<<<< HEAD
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>"
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -313,6 +422,38 @@ export function ResumeVersionSelector() { return null; }
 =======
         setNewResumeTitle('');              className="gap-2"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Save as new resume version</DialogTitle>
+          </DialogHeader>
+          <div className="py-4">
+            <Input
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+              placeholder="Enter resume title (e.g. DevOps Resume)"
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() |isLoading}
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+
+              className="gap-2"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 =======
@@ -328,6 +469,7 @@ export function ResumeVersionSelector() { return null; }
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -360,6 +502,13 @@ export function ResumeVersionSelector() { return null; }
 > {}
   resume.basic info.title;
 }</DropdownMenuItem>) ) "
+=======
+
+};
+> {
+  resume.basic info.title 
+}</DropdownMenuItem>) ) 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
 }
   );
@@ -367,13 +516,21 @@ export function ResumeVersionSelector() { return null; }
 }
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )
 }
 
+<<<<<<< HEAD
 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

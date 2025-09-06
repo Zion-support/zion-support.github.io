@@ -4,6 +4,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -23,6 +26,7 @@ try {
 // Check for sensitive data in files
 console.log('\n🔍 Scanning for sensitive data...');
 const sensitivePatterns = [/password\s*=\s*["'][^"']+["']/gi,
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 <<<<<<< HEAD
@@ -36,6 +40,9 @@ const sensitivePatterns = [/password\s*=\s*["'][^"']+["']/gi,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (auditData && auditData.vulnerabilities && Object && Object.keys(auditData && auditData.vulnerabilities).length > 0) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -84,11 +91,18 @@ try {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   console && console.log('❌ Failed to run npm audit:', error && error.message);
 }const scanDirectory = (dir, results = []) => {
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  console && console.log('❌ Failed to run npm audit:', error && error.message);
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Check for sensitive data in files
 =======
 
@@ -194,10 +208,26 @@ const securityReport = {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+if (sensitiveResults && sensitiveResults.length > 0) {
+  console && console.log('⚠️  Potential sensitive data found: '),
+  sensitiveResults && sensitiveResults.forEach(result => {
+    console && console.log(`   - ${result && result.file}`);
+    result && result.matches.forEach(match => {
+      console && console.log(`     ${match && match.substring(0, 50)}...`);
+    });
+  });
+} else {
+  console && console.log('✅ No sensitive data patterns found');
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Check for outdated dependencies
 =======
           if (matches) {}
@@ -250,12 +280,22 @@ try {'
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
+
+  if (Object && Object.keys(outdatedData).length > 0) {
+    console && console.log('⚠️  Outdated dependencies found: '),
+    Object && Object.entries(outdatedData).forEach(([pkg, info]) => {
+      console && console.log(`   - ${pkg}: ${info && info.current} → ${info && info.latest}`);
+
     });
   } else {
     console.log('✅ All dependencies are up to date');
   }
 } catch (error) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+  console && console.log('✅ All dependencies are up to date');
+}
+
 
 // Generate security report
 const securityReport = {
@@ -284,6 +324,7 @@ const securityReport = {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -309,6 +350,10 @@ console.log('🔒 Security audit completed!');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('🔒 Security audit completed!');
 
 
@@ -364,6 +409,7 @@ console.log('✅ Security audit completed');
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -412,6 +458,8 @@ function log(msg, level = "INFO")
   log(" Security audit completed")
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -609,6 +657,7 @@ console.log('✅ Security audit completed');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -631,6 +680,9 @@ origin/automation-improvements-final
 =======
 console.log('🔒 Security audit completed!');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/main
 origin/automation-improvements-final
 console.log('🔒 Security audit completed!');

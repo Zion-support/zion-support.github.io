@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 =======
@@ -74,10 +75,20 @@ export const metadata = {
   description:
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise technology'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export default function AboutPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,6 +302,10 @@ function AboutPage() {
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 >>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Zion Tech Group
@@ -298,6 +313,7 @@ function AboutPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             We are a leading technology solutions provider specializing in AI, 
@@ -395,54 +411,48 @@ function AboutPage() {
             cybersecurity, cloud infrastructure, and digital transformation;
             services.
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            Pioneering the future of technology through innovative solutions and exceptional service.
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </p>
         </div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-6">
               To democratize access to enterprise-grade technology solutions, making AI, 
               cloud infrastructure, and software development accessible to businesses of all sizes.
+=======
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-6">Our Mission</h2>
+            <p className="text-gray-300 mb-6">
+              We are dedicated to transforming businesses through cutting-edge AI, micro SaaS solutions, 
+              and comprehensive IT services. Our mission is to make advanced technology accessible and 
+              practical for companies of all sizes.
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </p>
-            <p className="text-lg text-gray-600">
-              We believe that every company, regardless of size, should have access to 
-              the same powerful tools and technologies that drive innovation at the world's 
-              largest enterprises.
+            <p className="text-gray-300">
+              By combining deep technical expertise with a client-first approach, we deliver solutions 
+              that not only meet today's challenges but position our clients for tomorrow's opportunities.
             </p>
           </div>
-          <div className="bg-gray-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                </div>
-                <span className="text-gray-700">Innovation through simplicity</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                </div>
-                <span className="text-gray-700">Client success is our success</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                </div>
-                <span className="text-gray-700">Transparency in everything we do</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                </div>
-                <span className="text-gray-700">Continuous learning and improvement</span>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-              </li>
-            </ul>
+
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-6">Our Vision</h2>
+            <p className="text-gray-300 mb-6">
+              To be the leading provider of AI-powered business solutions, enabling organizations to 
+              achieve unprecedented efficiency, innovation, and growth through technology.
+            </p>
+            <p className="text-gray-300">
+              We envision a future where every business, regardless of size, can leverage the power of 
+              artificial intelligence and modern technology to compete and thrive in the digital economy.
+            </p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -493,8 +503,38 @@ function AboutPage() {
               committed to delivering solutions that make a real difference for;
               our clients.
             </p>
+=======
+
+        <div className="bg-slate-800 p-8 rounded-lg mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
+              <p className="text-gray-300">We constantly push the boundaries of what's possible with technology.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🤝</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Partnership</h3>
+              <p className="text-gray-300">We work closely with our clients as trusted technology partners.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⭐</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Excellence</h3>
+              <p className="text-gray-300">We deliver exceptional quality in everything we do.</p>
+            </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
 
+<<<<<<< HEAD
           <div>"
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>"
             <p className="text-gray-300 text-lg mb-6">'
@@ -624,14 +664,29 @@ function AboutPage() {
               Let's discuss how we can help you achieve your goals with our 
               comprehensive technology solutions.
             </p>
+=======
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our expertise can help transform your business and drive real results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <a
               href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Contact Us Today
+              Get in Touch
+            </a>
+            <a
+              href="/services"
+              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              View Our Services
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 =======
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
@@ -661,6 +716,8 @@ function AboutPage() {
           </p>
         </div>
 >>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
     </div>
   );

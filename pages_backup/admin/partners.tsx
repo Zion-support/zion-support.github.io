@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
@@ -19,6 +20,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
@@ -29,12 +32,16 @@ export default function AdminPartners() {
       try {
         const res = null;
     setFlags(json.flags || [])
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from 'react';
 '
 import Head from 'next / head';
@@ -214,6 +221,7 @@ export default function AdminPartners(req, res) {
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
 =======
@@ -249,6 +257,8 @@ export default function AdminPartners(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }, 1000);
   }, []);
 
@@ -271,12 +281,16 @@ const res = await fetch(
     );
     const json = await res.json();
     setFlags(json.flags |[]);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 ;
@@ -556,6 +570,7 @@ useEffect(() => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />
                 </td>
+<<<<<<< HEAD
 =======
                   />
                 </td>
@@ -647,6 +662,8 @@ useEffect(() => {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <td className='py-2 pr-4 space-x-2'>
                   <button
                     className='px-2 py-1 rounded border'
@@ -710,12 +727,16 @@ useEffect(() => {
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
 =======
@@ -1008,6 +1029,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1100,3 +1122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

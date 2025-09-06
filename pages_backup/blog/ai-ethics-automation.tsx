@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD:pages/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
@@ -22,6 +23,10 @@ import React from 'react';
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/ai-ethics-automation.tsx
+=======
+import React from 'react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function AIEthicsAutomation() {
   return (
     <>
@@ -267,6 +272,7 @@ export default function AIEthicsAutomation() {
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 =======
@@ -854,3 +860,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

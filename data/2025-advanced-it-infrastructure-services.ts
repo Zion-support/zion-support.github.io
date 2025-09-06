@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
@@ -28,11 +29,18 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Hybrid quantum - classical computing',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Quantum algorithm optimization',
         'Advanced AI model training',
         'Real - time quantum simulation',
         'Multi - cloud orchestration',
         'Quantum - secure encryption',
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedITInfrastructureService {
   id: string;
@@ -692,12 +700,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Multi-cloud orchestration',
         'Quantum-secure encryption',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Autonomous resource scaling',
         'Performance monitoring',
         'Cost optimization',
         'Global edge computing network',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '☁️',
 
         'Quantum computing, Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis',
@@ -755,6 +766,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
         'Quantum algorithm optimization','
         'Advanced AI model training','
@@ -765,6 +777,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance monitoring','
         'Cost optimization','
         'Global edge computing network',
+=======
+
+=======
+      integrations: [
+        'AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum'
+      ]
+      useCases: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -786,6 +808,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -858,6 +886,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Autonomous edge node management',
         'Real-time data processing',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Autonomous edge node management',
+        'Real - time data processing',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Intelligent load balancing',
         'Edge AI inference',
         '5G network optimization',
@@ -868,6 +900,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Global edge presence',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🌐',
 
         'Kubernetes, Docker, React, Node && Node.js, PostgreSQL, Redis, TensorFlow',
@@ -945,6 +978,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      integrations: [
+        'AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices'
+      ]
+      useCases: [
+        'IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing'
+      ]
+      roi: 'Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs.'
+      competitors: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1031,6 +1078,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced zero-trust security architecture that continuously verifies every user, device, and network connection, providing comprehensive protection against modern cyber threats.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Continuous identity verification',
         'Device trust scoring',
         'Network segmentation',
@@ -1043,6 +1092,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security reporting',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🔒',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
@@ -1102,6 +1152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '
         'Continuous identity verification','
         'Device trust scoring','
@@ -1113,6 +1164,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security monitoring','
         'Incident response','
         'Security reporting',
+=======
+      integrations: [
+        'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'
+      ]
+      useCases: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'Identity management, Network security, Access control, Threat detection, Compliance',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -1134,12 +1193,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com',
       },
       features: [;
+<<<<<<< HEAD
       marketSize: '$22.5B cybersecurity market',
       growthRate: '40% annual growth',
       variant: 'zero-trust-enterprise',
@@ -1151,6 +1217,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Continuous identity verification',
         'Device trust scoring',
         'Network segmentation',
@@ -1163,6 +1231,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security reporting',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🔒',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
@@ -1222,6 +1291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
@@ -1239,6 +1309,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security monitoring','
         'Incident response','
         'Security reporting',
+=======
+      integrations: [
+        'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'
+      ]
+      useCases: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'Identity management, Network security, Access control, Threat detection, Compliance',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -1260,6 +1338,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1325,6 +1409,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'AI-powered infrastructure management',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Automated capacity planning',
         'Intelligent power management',
         'Predictive maintenance',
@@ -1333,9 +1419,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security automation',
         'Disaster recovery',
         'Compliance monitoring',
+<<<<<<< HEAD
         'Real - time analytics',
       ],
       popular: true,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🏢',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
@@ -1384,6 +1474,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '
         'Automated capacity planning','
         'Intelligent power management','
@@ -1394,6 +1485,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Disaster recovery','
         'Compliance monitoring','
         'Real - time analytics',
+=======
+        'Real - time analytics',
+      ],
+      popular: true,
+      ],
+      integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
+      use_cases: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'Infrastructure management, Capacity planning, Performance optimization, Cost optimization, Disaster recovery',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -1413,6 +1514,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1420,6 +1527,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       features: [;
         'AI - powered infrastructure management',
+<<<<<<< HEAD
       marketSize: '$35.8B data center market',
       growthRate: '35% annual growth',
       variant: 'data-center-enterprise',
@@ -1432,6 +1540,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'AI-powered infrastructure management',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Automated capacity planning',
         'Intelligent power management',
         'Predictive maintenance',
@@ -1440,9 +1550,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security automation',
         'Disaster recovery',
         'Compliance monitoring',
+<<<<<<< HEAD
         'Real - time analytics',
       ],
       popular: true,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🏢',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
@@ -1491,6 +1605,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
@@ -1508,6 +1623,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Disaster recovery','
         'Compliance monitoring','
         'Real - time analytics',
+=======
+        'Real - time analytics',
+      ],
+      popular: true,
+      ],
+      integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
+      use_cases: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'Infrastructure management, Capacity planning, Performance optimization, Cost optimization, Disaster recovery',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -1527,6 +1652,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1591,6 +1722,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced quantum networking platform that provides unbreakable encryption, quantum key distribution, and intelligent network optimization for ultra-secure communications.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Quantum key distribution',
         'Unbreakable encryption',
         'Intelligent routing',
@@ -1599,10 +1732,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance analytics',
         'Compliance automation',
         'Global network presence',
+<<<<<<< HEAD
         'Real - time monitoring',
         'Advanced reporting',
       ],
       popular: true,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🌐',
 
         'Quantum computing, Python, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
@@ -2281,11 +2418,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+        'Real - time monitoring',
+        'Advanced reporting',
+      ],
+      popular: true,
+      integrations: [
+        'Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers'
+      ]
+      useCases: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Quantum key distribution (QKD)',
         'Quantum - secured communication channels',
         'Post - quantum cryptography implementation',
         'Quantum network infrastructure management',
         'Real - time quantum network monitoring',
+<<<<<<< HEAD
       marketSize: '$25B+ potential market',
       growthRate: '500%+ annual growth',
       variant: 'autonomous-infrastructure',
@@ -2320,13 +2472,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Quantum network infrastructure management',
         'Real-time quantum network monitoring',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Advanced quantum security protocols',
         'Integration with existing networks',
         'Custom quantum network deployment',
         'Quantum network performance analytics',
+<<<<<<< HEAD
         '24 / 7 quantum network operations',
       ],
       popular: true,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🌐',
 
       color: 'from - cyan - 500 to - blue - 600',
@@ -2492,6 +2650,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'AI-powered infrastructure automation',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        '24 / 7 quantum network operations',
+      ],
+      popular: true,
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Enterprise - grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',
+      launch_date: '2025 - 04 - 01',
+      customers: 4,
+      rating: 5 && 5.0,
+      reviews: 3,
+    },
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Intelligent resource provisioning',
         'Automated scaling and optimization',
         'Infrastructure monitoring and analytics',
@@ -2503,6 +2679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Comprehensive infrastructure management',
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '🤖',
 
       color: 'from - purple - 500 to - pink - 600',
@@ -2560,6 +2737,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Infrastructure automation',
         'Resource provisioning',
         'Scaling optimization',
@@ -2595,6 +2774,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2715,7 +2900,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launchDate: '2025-05-01',
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      id: 'hybrid - cloud - orchestration - platform',
+      name: 'Hybrid Cloud Orchestration Platform',
+      tagline: 'Seamless multi - cloud and hybrid cloud management',
+      price: '$9, 500',
+      period: '/month',
+      description:;
+        'Advanced hybrid cloud orchestration platform that provides seamless management, optimization, and integration across multiple cloud providers and on - premises infrastructure.',
+      features: [;
+        'Multi - cloud orchestration and management',
+
+        'Hybrid cloud integration and optimization',
+        'Intelligent workload placement',
+        'Cross - cloud resource optimization',
+        'Unified monitoring and analytics',
+        'Automated cloud migration',
+        'Custom cloud workflows',
+        'Integration with cloud platforms',
+        'Advanced cloud analytics',
+        'Comprehensive cloud management',
+      ],
+      popular: true,
+      icon: '☁️',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
@@ -2769,6 +2980,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       tagline: 'Seamless multi-cloud and hybrid cloud management'
       price: '$9,500'
       period: '/month'
+<<<<<<< HEAD
       marketSize: '$12.8B infrastructure management market',
       growthRate: '32% annual growth',
       variant: 'ai-infrastructure',
@@ -2923,6 +3135,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      description:
+        'Advanced hybrid cloud orchestration platform that provides seamless management, optimization, and integration across multiple cloud providers and on-premises infrastructure.'
+      features: [
+        'Multi-cloud orchestration and management'
+        'Hybrid cloud integration and optimization'
+        'Intelligent workload placement'
+        'Cross-cloud resource optimization'
+        'Unified monitoring and analytics'
+        'Automated cloud migration'
+        'Custom cloud workflows'
+        'Integration with cloud platforms'
+        'Advanced cloud analytics'
+        'Comprehensive cloud management'
+      ]
+      popular: true
+      icon: '☁️'
+      color: 'from-blue-500 to-indigo-600'
+      textColor: 'text-blue-400'
+      link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform'
+      marketPosition:
+        'Advanced hybrid cloud orchestration platform with seamless multi-cloud management and comprehensive optimization capabilities.'
+      targetAudience: [
+        'Cloud architects'
+        'DevOps teams'
+        'IT operations'
+        'Technology companies'
+        'Multi-cloud organizations'
+      ]
+      trialDays: 30
+      setupTime: '6-8 weeks'
+      category: 'Hybrid Cloud Management'
+      realService: true
+      technology: [
+        'Cloud Computing'
+        'Multi-Cloud Management'
+        'Container Orchestration'
+        'Kubernetes'
+        'Python'
+        'Terraform'
+        'React'
+      ]
+      integrations: [
+        'AWS'
+        'Azure'
+        'Google Cloud'
+        'IBM Cloud'
+        'Oracle Cloud'
+        'On-premises systems'
+      ]
+      useCases: [
+        'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
+      launchDate: '2025-05-01'
+      customers: 32
+      rating: 4.7
+      reviews: 24
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
 =======
 
@@ -2964,11 +3234,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       customers: 32,
       rating: 4.7,
       reviews: 24,
+<<<<<<< HEAD
     },;
 <<<<<<< HEAD
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
+=======
+<<<<<<< HEAD
+
+
+=======
+    },;
+  ];    features: [
+      'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
+      'Advanced cloud analyticsComprehensive cloud management'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
@@ -3252,6 +3534,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709','
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     popular: true, icon: '☁️',
@@ -3278,6 +3561,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
   ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     reviews: 24
 =======
     reviews: 24;
@@ -3314,6 +3599,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     use_cases: ['Multi - cloud management_hybrid cloud integration_workload optimization_cloud migration_resource optimization'];'
     roi: 'Multi - cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.';'
     competitors: ['TerraformKubernetesCloud FoundryOpenShift'];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     market_size: '$15.2B hybrid cloud market';
@@ -3329,16 +3615,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     realImplementation: true;
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.';
     launchDate: '2025-05-01';
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
+<<<<<<< HEAD
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
     realImplementation: true;'
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.';'
@@ -3348,6 +3642,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 24;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -3429,9 +3728,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;'
@@ -3441,9 +3746,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7;
     reviews: 24;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   }
 ;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -3462,9 +3770,20 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 ;
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+  }
+;
+];
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -4094,18 +4413,31 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7;
     reviews: 24;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
 ];
 
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

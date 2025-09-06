@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
 import type { Application } from '../../utils/types',;
@@ -42,6 +48,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return,
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
   if (req.method === 'GET') {
@@ -60,6 +67,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const FILE = 'applications.json'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+const FILE = 'applications.json'
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
     const application: Application = {
       id: uuidv4(),
@@ -81,6 +92,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
 
   if (req.method === 'GET') {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
     const { jobId, talentSlug } = req.query
@@ -94,6 +106,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const { jobId, talentSlug } = req.query;
     let apps = readJsonFile<Application[]>(FILE, []);
 if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
@@ -105,6 +119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   if (req.method === 'POST') {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,6 +141,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const { jobId, talentSlug, action } = req.body || {}
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' })
@@ -142,7 +159,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       res.status(200).json({ application: existing })
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return
     }
 
@@ -172,6 +192,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
       createdAtIso: now},
@@ -239,6 +260,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const app: Application = {
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: uuidv4()
       jobId: String(jobId)
       talentSlug: String(talentSlug)
@@ -247,6 +270,7 @@ createdAtIso: now}
     apps.push(app)
     writeJsonFile<Application[]>(FILE, apps)
     res.status(201).json({ application: app })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 =======
 
@@ -254,10 +278,14 @@ createdAtIso: now}
 =======
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return
   }
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 <<<<<<< HEAD
 }
@@ -368,6 +396,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       createdAtIso: now,
     };
     apps.push(app);
@@ -380,9 +412,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/applications.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/applications.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

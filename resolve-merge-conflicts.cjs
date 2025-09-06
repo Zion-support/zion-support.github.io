@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const fs = require('fs');
@@ -13,6 +14,8 @@ const { execSync } = require('child_process');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -123,7 +126,14 @@ const path = require('path');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync } = require('child_process');
 
 console.log('Resolving merge conflicts...');
@@ -398,6 +408,7 @@ contentConflicts.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (resolveMergeConflicts()) {
     console.log('Ready to commit merge resolution');
 } else {
@@ -422,6 +433,8 @@ console.log('Run "git status" to check remaining conflicts.');
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (resolveMergeConflicts()) {
     console.log('Ready to commit merge resolution');
 } else {
@@ -444,4 +457,9 @@ console.log('\n🎉 Merge conflict resolution completed!');
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

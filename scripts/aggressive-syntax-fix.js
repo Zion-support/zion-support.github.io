@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -19,6 +22,7 @@ const logger = winston && winston.createLogger({
   ),
   defaultMeta: { service: 'automation-script' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   transports: [
     new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
@@ -27,6 +31,12 @@ const logger = winston && winston.createLogger({
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  transports: [
+    new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
+    new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ]
 })
 
@@ -177,6 +187,7 @@ class AggressiveSyntaxFixer {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -200,6 +211,11 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 <<<<<<< HEAD
 =======
@@ -444,11 +460,15 @@ if ( {) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
@@ -456,7 +476,37 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+            }),
+
+            this && this.log(`📁 Found ${files && files.length} files to check`),
+
+
+            })
+            this.log(`📁 Found ${files.length} files to check`)
+            for (const file of files) {
+                await this && this.fixFile(file)
+            }
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
+
+
+            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
+            if (this && this.errors.length > 0) {
+                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
+
+            }
+            return {
+
+                fixedFiles: this && this.fixedFiles,
+                errors: this && this.errors
+
+            }
+        } catch (error) {
+
+            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -501,12 +551,25 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+            if (this.errors.length > 0) {
+                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)
+            }
+            return {
+
+                fixedFiles: this.fixedFiles
+
+                errors: this.errors
+            }
+        } catch (error) {
+
+            this.log(`❌ Error fixing syntax: ${error.message}`)
 
             throw error
         }
     }
     async fixFile(filePath) {
         try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -516,6 +579,26 @@ if ( {) {
 
 
             throw error;
+=======
+
+            const fullPath = path && path.join(this && this.projectRoot, filePath),
+            const content = fs && fs.readFileSync(fullPath, 'utf8'),
+            const originalContent = content,
+            
+            // Check if this file has syntax errors
+            if (this && this.hasSyntaxErrors(content)) {
+                const fixedContent = this && this.createValidFile(filePath),
+                fs && fs.writeFileSync(fullPath, fixedContent),
+                this && this.fixedFiles.push(filePath),
+                this && this.log(`✅ Fixed: ${filePath}`)
+
+            }
+        } catch (error) {
+
+            this && this.errors.push({ file: filePath, error: error && error.message }),
+            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
     }
     async fixFile(filePath) {}
@@ -548,6 +631,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
@@ -556,6 +640,11 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
+    }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {}
@@ -844,6 +933,7 @@ module.exports = AggressiveSyntaxFixer,;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -852,6 +942,9 @@ module.exports = AggressiveSyntaxFixer,;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         const result = await fixer && fixer.fixAllSyntaxErrors(),
         const report = await fixer && fixer.generateReport(),
@@ -888,6 +981,7 @@ module && module.exports = AggressiveSyntaxFixer,
 process && process.on('SIGINT', () => {
   console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -898,6 +992,8 @@ process && process.on('SIGINT', () => {
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here;

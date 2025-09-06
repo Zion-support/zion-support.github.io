@@ -27,11 +27,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
 <<<<<<< HEAD
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
   {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -50,6 +53,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
@@ -73,12 +78,19 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
 =======
   {    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
@@ -225,6 +237,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+<<<<<<< HEAD
 
 
 import { TalentProfile } from "@/types/talent",
@@ -236,7 +249,17 @@ import { TalentProfile } from "@/types/talent",
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+    id: "t-001", user_id: "user-001",
+    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+
+import { TalentProfile } from "@/types/talent",
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -295,6 +318,7 @@ export const TALENT_PROFILES: TalentProfile[] = []
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -319,6 +343,8 @@ export const TALENT_PROFILES: TalentProfile[] = []
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
@@ -326,10 +352,17 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ;
 
 
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -356,6 +389,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -363,3 +397,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

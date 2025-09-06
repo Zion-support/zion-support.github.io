@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -10,18 +11,24 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useCallback, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps  } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = any;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -83,6 +90,7 @@ export default function PitchGenerator() {
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -135,6 +143,12 @@ export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+}
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     mission: '',
     fundingStage: '',
     vision: '',
@@ -147,6 +161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roundType: '','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
     targetRaise: '',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
     assets: [],;
@@ -215,6 +230,8 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     assets: [],
   });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -250,12 +267,16 @@ e.stopPropagation();
   );
 
   const autoFetchMetrics = useCallback(async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
@@ -299,12 +320,16 @@ return data;
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, []);
 
   const prevent = (e: React.DragEvent) => {}
@@ -377,6 +402,7 @@ if (return result) {}
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -388,6 +414,8 @@ if (return result) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -406,6 +434,7 @@ operatorPrompt,
 setHistory(h => [
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -415,6 +444,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ]);
     } catch (e) {;
       // noop;
@@ -525,6 +557,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -693,6 +726,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }
               : s
           )
@@ -733,12 +768,16 @@ const res = await fetch('/api/admin/pitch/export', {
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
       });
       const blob = await res.blob();
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const url = URL.createObjectURL(blob);
 =======
 
@@ -748,6 +787,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       a.href = url;'`
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 
@@ -808,6 +848,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
@@ -908,6 +950,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
+<<<<<<< HEAD
 
 
     return (
@@ -950,6 +993,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mt-3'>
         <div className='text-xs text-gray-500 dark:text-gray-400'>
           Chart preview: {type}
@@ -964,16 +1009,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 title={`${d.label}: ${d.value}`}
               />
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1309,6 +1359,8 @@ if (return null, ) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
@@ -1330,6 +1382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
     )
@@ -1375,6 +1428,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
   };
 
@@ -1414,6 +1469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1445,6 +1501,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -1505,16 +1563,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1534,6 +1597,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -1542,6 +1607,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Refresh
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
 =======
@@ -1552,6 +1618,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
+=======
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <li>Active users (30d)</li>
 =======
 =======
@@ -1604,6 +1674,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -1632,6 +1703,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
@@ -1687,6 +1760,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {history && history.map(h => (;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1762,6 +1836,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+                  <li
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     key={h.id}
                     className='flex justify-between border rounded px-2 py-1'
                   >
@@ -1785,12 +1862,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
                 {slides.map((s, i) => (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <SlidePreview
 =======
                   <SlidePreview;
@@ -2402,6 +2483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         },
                       });
                     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -2524,6 +2606,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     className='border rounded px-2 py-1'
                   >
                     Timeline
@@ -2536,6 +2620,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </main>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2557,3 +2642,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -61,6 +61,7 @@ import _React from 'react';'''; import SEO from '@/components/SEO';'''; import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -111,3 +112,6 @@ import _React from 'react';'''; import SEO from '@/components/SEO';'''; import {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'; function ProjectMilestones() {} return null} return (<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/> <ProjectMilestonesContent /> ></div> </ProtectedRoute>)} export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

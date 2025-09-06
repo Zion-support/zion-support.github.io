@@ -130,6 +130,7 @@ async function post() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
@@ -144,6 +145,10 @@ async function post() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
@@ -208,6 +213,13 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 
 
 
+      fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2));
+      console && console.log('Generated', gen && gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+main().catch((e) => { console && console.error(e), process && process.exit(1) });
 ;
 import fs from 'fs';
 import path from 'path';
@@ -269,6 +281,11 @@ main().catch((e) => { console.error(e), process.exit(1) });
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+main().catch((e) => { console.error(e), process.exit(1) });
+
+
+
 
 /* eslint-disable no-console */;
 import fs from 'fs',;

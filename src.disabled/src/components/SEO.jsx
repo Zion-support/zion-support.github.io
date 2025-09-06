@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,9 +28,13 @@ const Component = () => {}}; import _React from "react"; <link rel="canonical" h
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const Component = () => {}}; import _React from "react"; <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;"https": ' keywords = &apos;AI',cybersecurity,cloud,devops,consulting,Zion Tech Group&apos}) {}; return (&apos} <Helmet> <title>{title}</title>"; <meta name="&apos;description&apos;" content="{description}" />&apos;"; <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;"; <link rel="&apos;canonical&apos;" href="{canonical}" />&apos; ></div> );} ); export default SEO; keywords = "AI,cybersecurity,cloud,devops,consulting,Zion Tech Group"}) {}; <title>{title}</title>"; <meta name="description" content="{description}" / >"; <meta name="keywords" content="{keywords}" / >"; <link rel="canonical" href="{canonical}" / >"; </Helmet> )}'; export default SEO; "
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,3 +79,9 @@ const Component = () => {}}; import _React from "react"; <link rel="canonical" h
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const Component = () => {}}; import _React from "react"; <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;"https": ' keywords = &apos;AI',cybersecurity,cloud,devops,consulting,Zion Tech Group&apos}) {}; return (&apos} <Helmet> <title>{title}</title>"; <meta name="&apos;description&apos;" content="{description}" />&apos;"; <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;"; <link rel="&apos;canonical&apos;" href="{canonical}" />&apos; ></div> );} ); export default SEO; keywords = "AI,cybersecurity,cloud,devops,consulting,Zion Tech Group"}) {}; <title>{title}</title>"; <meta name="description" content="{description}" / >"; <meta name="keywords" content="{keywords}" / >"; <link rel="canonical" href="{canonical}" / >"; </Helmet> )}'; export default SEO; "
+const Component = () => {}}; import React from \"react\"; <link rel=\"canonical\" href=\"{canonical}\" /\">import { Helmet } from &apos;react-helmet-async\";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;\"https\": \' keywords = &apos;AI\',cybersecurity,cloud,devops,consulting,Zion Tech Group&apos}) {}; return (&apos} <Helmet> <title>{title}</title>\"; <meta name=\"&apos;description&apos;\" content=\"{description}\" />&apos;\"; <meta name=\"&apos;keywords&apos;\" content=\"{keywords}\" />&apos;\"; <link rel=\"&apos;canonical&apos;\" href=\"{canonical}\" />&apos; ></div> );} ); export default SEO; keywords = \"AI,cybersecurity,cloud,devops,consulting,Zion Tech Group\"}) {}; <title>{title}</title>\"; <meta name=\"description\" content=\"{description}\" / >\"; <meta name=\"keywords\" content=\"{keywords}\" / >\"; <link rel=\"canonical\" href=\"{canonical}\" / >\"; </Helmet> )}\'; export default SEO; \"
+const Component = () => {}}; import React from "react"; <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;https: " keywords = &apos;AI",cybersecurity,cloud,devops,consulting,Zion Tech Group&apos}) {}; return (&apos} <Helmet> <title>{title}</title>"; <meta name="&apos;description&apos;" content="{description}" />&apos;"; <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;"; <link rel="&apos;canonical&apos;" href="{canonical}" />&apos; ></div> );} ); export default SEO; keywords = "AI,cybersecurity,cloud,devops,consulting,Zion Tech Group"}) {}; <title>{title}</title>"; <meta name="description" content="{description}" / >"; <meta name="keywords" content="{keywords}" / >"; <link rel="canonical" href="{canonical}" / >"; </Helmet> )}"; export default SEO; """"
+const Component = () => {}}; import _React from "react"; <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;"https": ' keywords = &apos;AI',cybersecurity,cloud,devops,consulting,Zion Tech Group&apos}) {}; return (&apos} <Helmet> <title>{title}</title>"; <meta name="&apos;description&apos;" content="{description}" />&apos;"; <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;"; <link rel="&apos;canonical&apos;" href="{canonical}" />&apos; ></div> );} ); export default SEO; keywords = "AI,cybersecurity,cloud,devops,consulting,Zion Tech Group"}) {}; <title>{title}</title>"; <meta name="description" content="{description}" / >"; <meta name="keywords" content="{keywords}" / >"; <link rel="canonical" href="{canonical}" / >"; </Helmet> )}'; export default SEO; "
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

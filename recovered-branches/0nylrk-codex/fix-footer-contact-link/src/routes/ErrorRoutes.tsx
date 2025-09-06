@@ -2,8 +2,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
+import Unauthorized from "@/pages/Unauthorized";
+const ErrorRoutes = () => {
+const ErrorRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Error Routes */}
+      <Route path="/unauthorized" element={<Unauthorized />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
@@ -41,6 +60,7 @@ import Unauthorized from "@/pages/Unauthorized",;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -136,16 +156,22 @@ import NotFound from "@/pages/NotFound",;"
 import Unauthorized from "@/pages/Unauthorized",;
 
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />;
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />;
 };
+
+
+
 },
 
+<<<<<<< HEAD
 =======
 
 
@@ -184,6 +210,21 @@ export default ErrorRoutes;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+export default ErrorRoutes;
+
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import NotFound from "@/pages / NotFound";
+import Unauthorized from "@/pages / Unauthorized";
+const ErrorRoutes = () =>: any {
+  return (
+    <Routes>;
+      {/* Error Routes */}
+export default ErrorRoutes;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 },;
 ;
@@ -207,6 +248,7 @@ const ErrorRoutes = () => {;
   );
 },;
 export default ErrorRoutes;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -223,3 +265,5 @@ export default ErrorRoutes;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,10 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as Sentry from '@sentry/react';
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '';
+=======
+
+if (typeof window !== 'undefined') {Sentry.init({;
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     tracesSampleRate: 0.1;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
@@ -36,6 +42,7 @@ import * as Sentry from '@sentry/react',;'
 import * as Sentry from '@sentry/react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -47,6 +54,15 @@ if ( {) {}
   $2;
 }
   Sentry.init ({'
+=======
+
+import * as Sentry from '@sentry / react',
+// Check condition
+if ( {) {
+  $2
+}
+  Sentry.init ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',
     tracesSampleRate: 0.1,
 
@@ -55,6 +71,7 @@ if ( {) {}
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -62,11 +79,24 @@ if ( {) {}
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import * as Sentry from '@sentry/react';
+if (typeof window !== 'undefined') {Sentry.init({;
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
+    tracesSampleRate: 0.1;
+    integrations: [];
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+import * as Sentry from '@sentry/react',;
+import * as Sentry from '@sentry/react';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (typeof window !== 'undefined') {;
   Sentry.init({;'
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
@@ -78,11 +108,20 @@ if (typeof window !== 'undefined') {;
 
   } catch (error) {}
     console.error("Error:", error);"
+=======
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
     integrations: [];
     enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -105,3 +144,7 @@ if (typeof window !== 'undefined') {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 module.exports = {
   content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,12 +10,26 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+=======
+        primary: {
+          50: '#eff6ff',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         blue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -41,9 +56,13 @@ module.exports = {
           900: '#111827',
           950: '#030712',
         },
+<<<<<<< HEAD
+=======
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -56,21 +75,14 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
       },
     },
-=======
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {},
->>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
   },
 <<<<<<< HEAD
   plugins: [],
+<<<<<<< HEAD
 =======
   plugins: [
     require('@tailwindcss/forms'),
@@ -78,4 +90,6 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };

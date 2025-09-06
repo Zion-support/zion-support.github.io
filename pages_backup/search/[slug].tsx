@@ -23,6 +23,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,16 +37,22 @@ import { Input } from '@/components/ui/input';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -81,6 +88,7 @@ import { useAuth } from '@/context/auth/AuthProvider';
   description?: string;
   slug: string;
   image?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -118,6 +126,8 @@ import { useAuth } from '@/context/auth/AuthProvider';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   author?: {
     name: string;
     avatar?: string
@@ -127,16 +137,21 @@ import { useAuth } from '@/context/auth/AuthProvider';
   date?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -462,6 +477,8 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface TalentSearchResult extends BaseSearchResult {
   type: 'talent';
@@ -497,6 +514,7 @@ const hasRating = (
   result.type === 'talent';
 
 interface SearchResultsPageProps {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -506,6 +524,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   initialResults: SearchResult[];
   query: string;
   slug: string;
@@ -540,6 +561,7 @@ interface OfflineFilters {
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -766,6 +788,8 @@ function offlineSearch() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 minRating?: number;
 
 function offlineSearch(
@@ -886,6 +910,7 @@ const aRating =
             a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
             b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -897,12 +922,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           return bRating - aRating;
         });
         break;
       default:;
         break;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
   } else {;
@@ -1087,6 +1116,8 @@ export default function SearchResultsPage(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } else {
     all.sort((a, b) => a.title.localeCompare(b.title));
   }
@@ -1124,6 +1155,7 @@ export default function SearchResultsPage(req, res) {}
   const [maxPrice, setMaxPrice] = useState('');'
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -1138,6 +1170,8 @@ export default function SearchResultsPage(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
@@ -1173,16 +1207,21 @@ logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
 sort: sortBy,
       });
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1341,6 +1380,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (!response.ok) {
 throw new Error(`Search API error: ${response.status}`);
       }
@@ -1401,6 +1442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 fetchResults(searchQuery, nextPage);
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1432,10 +1474,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const categories = Array.from(
+    new Set(results.map((r) => r.category).filter(Boolean));
+  );
+
+  const filteredResults = results.filter(r => {
+    if (
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1770,6 +1823,8 @@ if ( {) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 return false;
     }
     if (minPrice && r.type === 'product') {
@@ -1790,17 +1845,22 @@ return false;
     return true;
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
       return false;
@@ -1905,17 +1965,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 return acc;
     },
     {} as Record<string, SearchResult[]>
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
@@ -1970,6 +2036,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'equipment':;
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
         return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
@@ -2066,6 +2133,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               product={{}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+<div key={result.id} data-testid='result-card'>
+            <ProductCard
+              product={{
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 id: result.id,
                 name: result.title,
                 title: result.title,'
@@ -2073,6 +2146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 price: result.price || 0,
                 images: result.image ? [result.image] : [],
                 rating: result.rating || 0,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -2155,6 +2229,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 reviewCount: 0,
                 tags: result.tags || [],
                 category: result.category || '',
@@ -2172,6 +2248,7 @@ in_stock: ((result as any).stock || 0) > 0,
 <div key={result.id} data-testid='result-card'>
             <TalentCard
               talent={{
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2182,6 +2259,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,'
@@ -2193,6 +2273,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -2239,6 +2320,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 availability_type: 'available',
               }}
               onViewProfile={(id: string) => {
@@ -2248,12 +2331,16 @@ availability_type: 'available',
                 router.push(`/talent/${talent.id}?action=hire`);
               }}
               isAuthenticated={isAuthenticated}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />
           </div>
         ),
@@ -2302,6 +2389,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {result.description}
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -2460,6 +2548,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         );
     }
   };
@@ -2505,6 +2595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
       />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -2564,6 +2655,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -2618,6 +2714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h1>
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
                 <p
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -2805,6 +2902,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className='text-gray-600 dark:text-gray-200'
                   data-testid='results-count'
                 >
@@ -2828,18 +2927,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Controls */}
 <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
                   data-testid="filter-button"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3135,6 +3239,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Filter className='h-4 w-4' />
                   Filters
                 </Button>
@@ -3165,12 +3271,16 @@ onChange={e => setCategoryFilter(e.target.value)}
                 </select>
 
 <div className='flex items-center gap-1'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <input
                     type="number"
                     placeholder="Min $"
@@ -3234,6 +3344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input"
                     type="number""
                     placeholder="Max $"
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3258,6 +3369,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     value={maxPrice}
                     onChange={e => setMaxPrice(e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
@@ -3266,6 +3379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <select
                   value={minRating}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 
@@ -3304,6 +3418,11 @@ onChange={e => setMinRating(e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+onChange={e => setMinRating(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >
                   <option value="">All Ratings</option>
                   <option value="4">4★ & up</option>
@@ -3577,18 +3696,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('list')}
                   data-testid='view-mode-list'
                   className={viewMode === 'list' ? 'active' : ''}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
                   <List className='h-4 w-4' />                </Button>
@@ -3600,11 +3723,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <List className='h-4 w-4' />
                 </Button>
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+                  <List className='h-4 w-4' />
+                </Button>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </div>
           </div>
           {/* Loading State */}
           {loading && results.length === 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
             <div className='flex justify-center py-12'>
@@ -3692,6 +3820,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex justify-center py-12'>
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
             </div>
@@ -3710,12 +3840,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>
                     {type}s ({typeResults.length})
                   </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div
                     className={
                       viewMode === 'grid'
@@ -3785,6 +3919,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               ))}
               {/* Load More Button */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -3800,6 +3935,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {results.length < totalResults && (
 <div className='flex justify-center py-8'>
                   <Button
@@ -3814,6 +3951,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </>
                     ) : (
                       'Load More Results'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3823,12 +3961,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -3853,6 +3995,8 @@ export const getServerSideProps: GetServerSideProps<
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
       </div>
     </>
@@ -4018,6 +4162,7 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4098,11 +4243,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       totalCount = offline.totalCount;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+      totalCount = offline.totalCount;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     return {}
       props: {}
         initialResults: results,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -4142,17 +4292,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 query,
         slug,
         totalCount,
       },
     };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
 =======
@@ -4379,6 +4535,7 @@ totalCount: offline.totalCount,
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -4419,6 +4576,8 @@ totalCount: offline.totalCount,
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return {
       props: {
         initialResults: offline.results,
@@ -4429,6 +4588,7 @@ totalCount: offline.totalCount,
     };
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/search/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -4440,3 +4600,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

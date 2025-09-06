@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -36,6 +37,12 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Input } from "@/components/ui/input",
 import { SearchIcon } from "lucide-react",
 import { SearchFilterProps } from "@/types/filters",
@@ -43,6 +50,7 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -97,6 +105,9 @@ import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="mb-6">;
       <div className="relative">;
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
@@ -109,6 +120,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,6 +227,22 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
+        />
+      </div>
+    </div>
+  );
+}
+
+  );
+}
+
+}
+
+import { Input  } from '@/components / ui / input';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { SearchIcon  } from './lucide-react';
 =======
 
@@ -228,14 +256,15 @@ export /**;
 <<<<<<< HEAD
 function SearchFilter() {
   return (
-    <div className="mb-6">;
+    <div className="mb - 6">;
       <div className="relative">;
-        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate-light" />;
+        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" />;
         <Input;
           type="text";
           placeholder="Search talents...";
           value={search_term}
           on_change={(e) => setSearchTerm (e.target.value)}
+<<<<<<< HEAD
           className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate-light";
 =======
 function SearchFilter() {}
@@ -250,16 +279,26 @@ function SearchFilter() {}
           on_change={(e) => setSearchTerm (e.target.value)}"
           className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  )
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 
   ),;}
@@ -275,6 +314,7 @@ function SearchFilter() {}
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,3 +338,8 @@ function SearchFilter() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  )
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

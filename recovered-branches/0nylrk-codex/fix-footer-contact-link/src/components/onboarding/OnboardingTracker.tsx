@@ -15,10 +15,14 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
+
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import {Link} from "react-router-dom";
@@ -32,18 +36,63 @@ import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
 
+=======
+import {Link} from "react-router-dom";
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+export interface OnboardingStep {
+
+  id: string
+  label: string
+  completed: boolean
+  link: string
+
+  action?: string
+}
+interface OnboardingTrackerProps {
+
+  steps: OnboardingStep[]
+
+  title?: string;
+  className?: string
+}
+export function OnboardingTracker({
+  steps;
+
+  title = "Complete Your Profile"
+  className
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
   action?: string
+<<<<<<< HEAD
 
+=======
+}
+
+interface OnboardingTrackerProps {
+  steps: OnboardingStep[],;
+  title?: string;
+  className?: string
+}
+
+export function OnboardingTracker({ ;
+  steps;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,6 +154,11 @@ import { Button } from "@/components/ui/button",;"
 import { Link } from "react-router-dom",;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -113,6 +167,7 @@ export interface OnboardingStep {;
   action?: string;
 }
 
+<<<<<<< HEAD
 export interface OnboardingStep {}
   id: string,
   label: string,
@@ -174,6 +229,44 @@ import {Link} from "react-router-dom";;
 =======
 import {Link} from "react-router-dom";;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface OnboardingTrackerProps {;
+  steps: OnboardingStep[],;
+
+  title?: string;
+  className?: string;
+}
+
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string
+
+
+  title = "Complete Your Profile", 
+  className 
+
+}: OnboardingTrackerProps) {
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
+}: OnboardingTrackerProps) {
+  const completedSteps = steps.filter(step => step.completed).length,
+  const progress = Math.round((completedSteps / steps.length) * 100),
+
+  return (
+    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white">{title}</h3>
+        <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
+      </div>
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function OnboardingTracker({;
   steps,;"
   title = "Complete Your Profile",;
@@ -189,6 +282,8 @@ export function OnboardingTracker({;
   title?: string;
   className?: string;
 }
+
+export function OnboardingTracker(): any ({ ;
   steps;
 =======
 
@@ -204,12 +299,14 @@ export function OnboardingTracker(): any ({ ;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
 <<<<<<< HEAD
 
-  return (  return (
+  return (
+  return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,6 +338,12 @@ export function OnboardingTracker(): any ({ ;
 
         <div"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
+        <div
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
       </div>;
@@ -250,10 +353,13 @@ export function OnboardingTracker(): any ({ ;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -261,6 +367,7 @@ export function OnboardingTracker(): any ({ ;
           style={{ width: `${progress}%` }}
         ></div>
       </div>
+<<<<<<< HEAD
 =======
 
         <div "
@@ -277,6 +384,12 @@ export function OnboardingTracker(): any ({ ;
 
       {/* Steps list */}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  title?: string;
+  className?: string;
+}
+      {/* Steps list */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="space-y-3">;
         {steps && steps.map((step) => (;"
           <div key={step && step.id} className="flex items-center">;"
@@ -289,11 +402,14 @@ export function OnboardingTracker(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Circle className="h-5 w-5 text-zion-slate-light" />;
               )}
             )}
@@ -301,13 +417,17 @@ export function OnboardingTracker(): any ({ ;
         ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 =======
 import React from './react';'
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';'
@@ -323,20 +443,39 @@ export interface OnboardingStep {}
   action?: string;
 }
 interface OnboardingTrackerProps {}
+=======
+import { Link } from './react-router-dom';
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string;
+}
+interface OnboardingTrackerProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   steps: OnboardingStep[],
   title?: string;
   class_name?: string;
 }
+<<<<<<< HEAD
 export /**;
  * OnboardingTracker - Function description;
  */
 function OnboardingTracker() {}
+=======
+export /**
+ * OnboardingTracker - Function description
+ */
+function OnboardingTracker() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       ;
@@ -520,3 +659,5 @@ return (<div className= {
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

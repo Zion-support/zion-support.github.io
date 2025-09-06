@@ -1,9 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+    return JSON && JSON.parse(raw || '[]')
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e) {
 <<<<<<< HEAD
 =======
@@ -86,6 +92,7 @@ function readAll() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -105,6 +112,9 @@ function readAll() { return null; }
 }
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 
@@ -195,6 +205,9 @@ async function main() {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -212,12 +225,15 @@ async function main() {}
 
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
@@ -245,6 +261,7 @@ async function main() {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 
 
@@ -255,6 +272,9 @@ async function main() {}
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 `
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -298,6 +318,7 @@ async function main() {}
   // Append to prompt improvements
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -308,6 +329,9 @@ async function main() {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
 <<<<<<< HEAD
 =======
@@ -447,6 +471,7 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -458,6 +483,39 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
 <<<<<<< HEAD
+=======
+const fs = require('fs'),;
+const path = require('path'),;
+const { OpenAI } = require('openai'),;
+;
+const DATA_DIR = path.join(process.cwd(), 'data'),;
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;
+const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),;
+;
+function readAll() {;
+  try {;
+    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),;
+    return JSON.parse(raw || '[]'),;
+  } catch (e) {;
+    return [],;
+  }
+}
+;
+function lastNDays(days) {;
+  const now = Date.now(),;
+  const cutoff = now - days * 24 * 60 * 60 * 1000,;
+  return (x) => x.ts >= cutoff,;
+}
+;
+async function main() {;
+  if (!process.env.OPENAI_API_KEY) {;
+    console.error('Missing OPENAI_API_KEY'),;
+    process.exit(1),;
+  }
+main().catch((e) => { console.error(e), process.exit(1) });
+
+  // // // console.log('Analysis written to', summaryPath)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const all = readAll(),;
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

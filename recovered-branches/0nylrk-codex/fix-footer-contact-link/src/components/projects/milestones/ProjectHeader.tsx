@@ -53,6 +53,7 @@ function ProjectHeader() {
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { Button } from '@/components/ui/button',;
@@ -118,6 +119,7 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
@@ -126,6 +128,20 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
           variant="ghost"
           size="sm"
           className="mr-2"
+          onClick={() => navigate(-1)}
+}
+
+  
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
+      <div className="flex items-center">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="mr-2"
+<<<<<<< HEAD
 =======
 export function ProjectHeader() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -189,6 +205,51 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {}
           <ArrowLeft className="h-4 w-4 mr-1" />;
           Back;
         </Button>"
+=======
+
+import React from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft } from 'lucide-react',;
+;
+interface ProjectHeaderProps {;
+  title:string;
+}
+;
+export function ProjectHeader({ title } ProjectHeaderProps) {;
+  const navigate = useNavigate(),;
+  ;
+  return (;
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
+      <div className="flex items-center">;
+        <Button ;
+          variant="ghost" ;
+          size="sm" ;
+          className="mr-2";
+          onClick={() => navigate(-1)}
+        >;
+          <ArrowLeft className="h-4 w-4 mr-1" />;
+          Back;
+        </Button>;
+        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>;
+      </div>;
+    </div>;
+export function ProjectHeader({ title }: ProjectHeaderProps) {
+  const navigate = useNavigate(),
+  
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
+      <div className="flex items-center">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="mr-2"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft className="h-4 w-4 mr-1" />
+          Back
+        </Button>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">
           {title}
         </h1>
@@ -198,11 +259,17 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {}
 }
 ;
 
+<<<<<<< HEAD
 
 
   ),;}"
  <Button variant="ghost" size="sm" className="mr-2" onClick= {}
   () => navigate (-1) "
+=======
+  ),;}
+ <Button variant="ghost" size="sm" className="mr-2" onClick= {
+  () => navigate (-1) 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
 }
   );
@@ -215,8 +282,11 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {}
   )
 }
 ;
+<<<<<<< HEAD
 
 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

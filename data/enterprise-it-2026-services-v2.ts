@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface EnterpriseIt2026ServiceV2 {};
@@ -10,10 +13,16 @@ export interface EnterpriseIt2026ServiceV2 {;
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface EnterpriseIt2026ServiceV2 {
+
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 export interface EnterpriseIt2026ServiceV2 {
@@ -25,9 +34,13 @@ export interface EnterpriseIT2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   name: string;
   tagline: string;
@@ -114,7 +127,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface EnterpriseIT2026ServiceV2 {
 =======
 
@@ -135,17 +153,25 @@ export interface EnterpriseIT2026ServiceV2 {}
   growthRate: string, variant: ServiceVariant,
 <<<<<<< HEAD
   contactInfo: {
+<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
     website: string
   
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
@@ -153,6 +179,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
     reviews: 180
   }
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Seamlessly manage and orchestrate across all cloud providers',
@@ -797,11 +826,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
     implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
+    launchDate: '2026-05-01'
+    customers: 280
+    rating: 4.9
+    reviews: 180
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
     reviews: 180,
+<<<<<<< HEAD
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -824,6 +863,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   rating: number,;
   reviews: number;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.';
+    launchDate: '2026-05-01';
+    customers: 280;
+    rating: 4.9
+
+    reviews: 180
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
@@ -854,11 +913,20 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180'
       website: 'https://ziontechgroup.com';
@@ -870,17 +938,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9,
     reviews: 180;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 ];
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1320,6 +1397,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.9;
     reviews: 180;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 ];
   }
@@ -1332,6 +1414,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
   }
@@ -1341,3 +1424,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+  }
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

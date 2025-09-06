@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,10 +46,15 @@ interface EmailautomationProps {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -64,20 +70,38 @@ interface EmailautomationProps {}
   // Add props here as needed;
 export default function Emailautomation({ }: EmailautomationProps) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from 'react';
+interface EmailautomationProps {
+  // Add props here as needed
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Emailautomation({ }: EmailautomationProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <h1>Emailautomation</h1>
       <p>This component is currently under development.</p>
+<<<<<<< HEAD
     </div>;
   );
 <<<<<<< HEAD
 =======
 =======
 
+=======
+    </div>
+  );
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -119,3 +143,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

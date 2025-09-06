@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 =======
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
     this.log(`Errors: ${this.results.errors.length}`);
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -49,9 +53,13 @@ suite.runComprehensiveSuite().catch(console.error);
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-test-deploy.cjs
 =======
 suite.runComprehensiveSuite().catch(console.error);
+
 #!/usr/bin/env node;
+<<<<<<< HEAD
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -98,5 +106,8 @@ console.log('=')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     this.log('\\n� Comprehensive test & deploy suite completed!')
+<<<<<<< HEAD
     this.log('\\n� Comprehensive test & deploy suite completed!')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -5,6 +5,7 @@ import { cn } from &quot;@/lib / utils & quot;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -60,13 +61,21 @@ export interface BadgeProps
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+import * as React from "react"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils"
 
 import { badgeVariants } from "@/components/ui/badge-variants"
 
+
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   variant?:
     | "default"
     | "secondary"
@@ -78,6 +87,7 @@ export interface BadgeProps
 
 }
 
+<<<<<<< HEAD
 =======
 
 
@@ -91,12 +101,16 @@ export interface BadgeProps
     | "info"
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 ;
 
 ;
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -104,6 +118,9 @@ export interface BadgeProps
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 function Badge({ className, variant, ...props }: BadgeProps) {return (;
     <span className={cn(badgeVariants({ variant }), className)} {...props} />;
@@ -121,6 +138,7 @@ export { Badge, badgeVariants };
 export { Badge, badgeVariants }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -135,3 +153,5 @@ export { Badge, badgeVariants }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

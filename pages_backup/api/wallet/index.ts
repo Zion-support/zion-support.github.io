@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/wallet/index.ts
 <<<<<<< HEAD:pages/api/wallet/index.ts
 <<<<<<< HEAD
@@ -15,6 +16,12 @@
 
 <<<<<<< HEAD:pages/api/wallet/index.ts
 =======
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
@@ -57,6 +64,7 @@ import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/wallet/index.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
@@ -73,6 +81,17 @@ export default function handler() { return null; }
 '
     return res.status(500).json({ error: err.message |'Unknown error' });
 <<<<<<< HEAD:pages_backup/api/wallet/index.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {getWalletSummary} from '../../../utils/token/service';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { userId } = req.query;
+
+  if (!userId |typeof userId !== 'string') {
+    return res.status(400).json({ error: 'Missing userId' });
+
+    return res.status(500).json({ error: err.message |'Unknown error' });
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!userId || typeof userId !== "string") {
     return res.status(400).json({ error: "Missing userId" })
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -130,6 +149,7 @@ if ( {) {}
     const summary = getWalletSummary(userId)
     return res.status(200).json(summary)
   } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/wallet/index.ts
 <<<<<<< HEAD
   }
@@ -138,18 +158,24 @@ if ( {) {}
 
 }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/wallet/index.ts
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     return res.status(500).json({ error: err.message |'Unknown error' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/wallet/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -178,3 +204,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/wallet/index.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

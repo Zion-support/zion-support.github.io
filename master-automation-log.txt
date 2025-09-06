@@ -78,6 +78,7 @@
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 <<<<<<< HEAD
@@ -105,6 +106,8 @@
 
 
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 ^^
@@ -304,6 +307,7 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 
+<<<<<<< HEAD
 
 
 
@@ -334,3 +338,5 @@ Node.js v22.16.0
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,12 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface CompanyRecord {
   id: string;
   name: string;
@@ -21,8 +24,13 @@ export interface CompanyRecord {
     seatsUsed: number;
     usageLimits: {
       monthlyJobPosts: number;
+<<<<<<< HEAD
       budgetCapUsd: number
 };
+=======
+      budgetCapUsd: number;
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
   members: Array<{
     id: string;
@@ -44,6 +52,7 @@ export interface CompanyRecord {
     dueDate: string;
   }>;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -51,6 +60,32 @@ export interface CompanyRecord {
 
 
 <<<<<<< HEAD
+=======
+
+function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
+}
+
+const companiesById: Record<string, CompanyRecord> = {};
+const companiesBySlug: Record<string, CompanyRecord> = {};
+
+export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
+  const { id, slug } = record;
+  
+  const fullRecord: CompanyRecord = {
+    ...record,
+    members: [],
+    activity: [],
+    invoices: []
+  };
+  
+  companiesById[id] = fullRecord;
+  companiesBySlug[slug] = fullRecord;
+  
+  return fullRecord;
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function getCompanyById(id: string): CompanyRecord | undefined {
   return companiesById[id];
 }
@@ -69,6 +104,7 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
   
   return updated;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -123,6 +159,19 @@ const seedCompany: CompanyRecord = {;
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import {
+  CompanyRecord,
+  CompanyMember,
+  EnterpriseRole,
+  InvoiceRecord,
+} from '../types/enterprise';
+
+
+const generateId = () => Math.random().toString(36).slice(2, 10);
+const seedCompany: CompanyRecord = {id: 'cmp_acme';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: 'Acme Corporation';
   slug: 'acme';
   logoUrl: '/logo-acme.svg';
@@ -133,6 +182,7 @@ const seedCompany: CompanyRecord = {id: 'cmp_acme';
     seatsUsed: 3;
     usageLimits: {;
       monthlyJobPosts: 50;
+<<<<<<< HEAD
       budgetCapUsd: 10000}};
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' };
@@ -148,6 +198,17 @@ const seedCompany: CompanyRecord = {id: 'cmp_acme';
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany };
 =======
+=======
+      budgetCapUsd: 10000}}
+  members: [;
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }
+    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }
+    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }];
+  activity: [;
+    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }
+    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }];
+  invoices: [;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]}
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
@@ -225,6 +286,7 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
+<<<<<<< HEAD
   logoUrl: '/logo-acme.svg',;
 =======
 
@@ -239,12 +301,19 @@ const generateId = () => Math.random().toString(36).slice(2, 10);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   brandColor: '#4F46E5',;
   plan: {;'
+=======
+  slug: 'acme',;
+  logoUrl: '/logo-acme.svg',;
+  brandColor: '#4F46E5',;
+  plan: {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     tier: 'business',;
     seatsPurchased: 25,;
     seatsUsed: 3,;
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
+<<<<<<< HEAD
 <<<<<<< HEAD
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
@@ -265,6 +334,21 @@ const generateId = () => Math.random().toString(36).slice(2, 10);
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
 
+=======
+  members: [;
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
+    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
+    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
+  activity: [;
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
+  invoices: [;
+
+    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
+    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -280,16 +364,28 @@ const generateId = () => Math.random().toString(36).slice(2, 10);
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 
@@ -298,6 +394,7 @@ const generateId = () => Math.random().toString(36).slice(2, 10);
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+<<<<<<< HEAD
   }}const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 =======
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
@@ -339,6 +436,28 @@ export const store = {;
       logoUrl: input.logoUrl;'
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;'
+=======
+  }}
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
+export const store = {;
+  getCompanyBySlug(slug: string) {;
+    return companiesBySlug[slug] || null;
+  };
+  getCompanyById(id: string) {;
+    return companiesById[id] || null;
+  };
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
+    const id = `cmp_${generateId()}`;
+    const slug = input.slug || `co-${generateId()}`;
+    const record: CompanyRecord = {;
+      id;
+      name: input.name || 'New Company';
+      slug;
+      logoUrl: input.logoUrl;
+      brandColor: input.brandColor || '#111827',;
+      plan: input.plan || {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         tier: 'teams',;
         seatsPurchased: 10,;
         seatsUsed: 0,;
@@ -348,6 +467,7 @@ export const store = {;
       invoices: []},;
     companiesById[id] = record,;
     companiesBySlug[slug] = record,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return record;
   };
@@ -395,11 +515,32 @@ export const store = {;
       company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
       } catch (error) {}
     console.error("Error:", error);"
+=======
+    return record;
+  },;
+  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
+    company.members.push(member);
+    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
+    return member;
+  },;
+  removeMember(companyId: string, memberId: string): boolean {;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
+      } catch (error) {
+    console.error("Error:", error);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     return changed;
   },;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
 <<<<<<< HEAD
@@ -466,10 +607,31 @@ export const store = {;
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    member.role = role;
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
+    return true;
+  },;
+  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
+    const company = companiesById[companyId],;
+    if (!company) return false,;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+
+    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
+
+    return true;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   },
@@ -489,3 +651,7 @@ export const store = {;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }};
+  }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

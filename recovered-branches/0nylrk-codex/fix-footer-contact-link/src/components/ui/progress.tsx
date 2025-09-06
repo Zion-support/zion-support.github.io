@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -24,6 +25,11 @@ import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import {cn} from '@/lib/utils';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
@@ -33,8 +39,11 @@ import * as ProgressPrimitive from "@radix-ui/react-progress"
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+
+
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -55,6 +64,8 @@ import { cn } from "@/lib/utils"
 
 import { cn } from "@/lib/utils"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -72,6 +83,7 @@ const Progress = React && React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -79,9 +91,14 @@ const Progress = React && React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
+
 import { cn } from "@/lib/utils"
+
 
 import * as React from "react";
 =======
@@ -120,11 +137,15 @@ const Progress = React.forwardRef<;
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils"
 
 const Progress = React.forwardRef<
@@ -167,8 +188,10 @@ const Progress = React && React.forwardRef<;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
 export { Progress };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +214,10 @@ export { Progress };
 export { Progress };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      className="h-full w-full flex-1 bg-primary transition-all"
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />;
   </ProgressPrimitive && ProgressPrimitive.Root>;
@@ -256,6 +283,7 @@ export { Progress }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -267,6 +295,11 @@ export { Progress }
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       className="h-full w-full flex-1 bg-primary transition-all"
 
     className={cn(;
@@ -289,6 +322,7 @@ export { Progress }
 Progress.displayName = ProgressPrimitive.Root.displayName;
 export { Progress }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { Progress };
@@ -312,3 +346,14 @@ export { Progress };
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export { Progress };
+      className="h-full w-full flex-1 bg-primary transition-all"
+      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+    />;
+  </ProgressPrimitive.Root>;
+));
+Progress.displayName = ProgressPrimitive.Root.displayName;
+export { Progress }
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

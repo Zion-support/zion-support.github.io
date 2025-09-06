@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -32,11 +33,14 @@ function LayoutWrapper() {
   return (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 import { useWalkthroughTarget } from "./OnboardingWalkthrough";
 import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
+<<<<<<< HEAD
 =======
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
@@ -64,18 +68,22 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
               <Link href="/admin/instances" className="text-sm opacity-80 hover:opacity-100 transition-opacity">;
 =======
   return (;  return (;
+=======
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
-      <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop-blur" {...useWalkthroughTarget ("nav - menu")}>;
-        <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify-between">;
-          <div className="flex items - center gap-6">;
-            <Link href="/" className="font - semibold text-lg">Zion OS</Link>;
-            <div className="hidden md:flex items - center gap-4">;
-              <Link href="/multiverse / launch" className="text - sm opacity - 80 hover:opacity - 100 transition-opacity">;
+      <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
+        <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;
+          <div className="flex items - center gap - 6">;
+            <Link href="/" className="font - semibold text - lg">Zion OS</Link>;
+            <div className="hidden md:flex items - center gap - 4">;
+              <Link href="/multiverse / launch" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
                 Launch;
               </Link>;
-              <Link href="/admin / os - deploy" className="text - sm opacity - 80 hover:opacity - 100 transition-opacity">;
+              <Link href="/admin / os - deploy" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
                 Admin Deploy;
               </Link>;
+<<<<<<< HEAD
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition-opacity">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -94,10 +102,14 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
               </Link>;
               <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition-opacity">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <Link href="/admin / instances" className="text - sm opacity - 80 hover:opacity - 100 transition - opacity">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Instances;
               </Link>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex items-center gap-4">;
@@ -161,11 +173,14 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                     className="text-sm text-zinc-400 hover:text-white transition-colors";
 =======
           <div className="flex items - center gap-4">;
+=======
+          <div className="flex items - center gap - 4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {is_authenticated ? (
               <>;
                 <Link;
                   href="/dashboard";
-                  className="text - sm text - zinc - 300 hover:text - white transition-colors";
+                  className="text - sm text - zinc - 300 hover:text - white transition - colors";
                 >;
                   Dashboard;
                 </Link>;
@@ -183,6 +198,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                   </span>;
                   <button;
                     on_click={logout}
+<<<<<<< HEAD
                     className="text - sm text - zinc - 400 hover:text - white transition-colors";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -192,6 +208,9 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                     on_click={logout}"
                     className="text - sm text - zinc - 400 hover:text - white transition - colors";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    className="text - sm text - zinc - 400 hover:text - white transition - colors";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   >;
                     Sign Out;
                   </button>;
@@ -206,14 +225,18 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                   className="text-sm text-zinc-400 hover:text-white transition-colors";
 =======
               </>) : (
-              <div className="flex items - center gap-3">;
+              <div className="flex items - center gap - 3">;
                 <Link;
                   href="/auth / signin";
+<<<<<<< HEAD
                   className="text - sm text - zinc - 400 hover:text - white transition-colors";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  className="text - sm text - zinc - 400 hover:text - white transition - colors";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >;
                   Sign In;
                 </Link>;
@@ -228,6 +251,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
             )}
 =======
                   href="/auth / signup";
+<<<<<<< HEAD
                   className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition-colors";
 =======
               </>) : ("
@@ -242,6 +266,9 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                   href="/auth / signup";"
                   className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >;
                   Start Free Trial;
                 </Link>;

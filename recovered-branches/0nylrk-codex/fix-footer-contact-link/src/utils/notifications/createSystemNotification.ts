@@ -34,9 +34,11 @@ import {SystemNotificationParams} from './types';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -45,9 +47,13 @@ import {SystemNotificationParams} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**
  * Creates a system notification for a user;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export async function createSystemNotification({  title;
 =======
@@ -56,6 +62,20 @@ export async function createSystemNotification({;
   userId;
   title;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export async function createSystemNotification({
+
+import { createNotification  } from './createNotification';
+import { SystemNotificationParams } from './types';
+import {createNotification} from './createNotification';
+import {SystemNotificationParams} from './types';
+/**
+ * Creates a system notification for a user
+ */
+export async function createSystemNotification({;
+  userId;
+  title;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   message;
 
   actionUrl = null;
@@ -63,6 +83,7 @@ export async function createSystemNotification({;
 <<<<<<< HEAD
   sendEmail = false
 }: SystemNotificationParams) {
+<<<<<<< HEAD
   try {  return createNotification({
 =======
   sendEmail = false;
@@ -70,6 +91,11 @@ export async function createSystemNotification({;
   try {}
   return createNotification({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  try {
+  try {
+  return createNotification({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     userId;
     title;
     message;'
@@ -96,11 +122,13 @@ export async function createSystemNotification({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
+
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
 =======
 
 
+<<<<<<< HEAD
 '
 import {create_notification} from './create_notification';'
 import {SystemNotificationParams} from './types';
@@ -109,6 +137,9 @@ import {SystemNotificationParams} from './types';
 
 '
 import { createNotification } from './createNotification',;'
+=======
+import { createNotification } from './createNotification',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { SystemNotificationParams } from './types',;
 
 /**;
@@ -129,6 +160,12 @@ function createSystemNotification() {}
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 <<<<<<< HEAD
@@ -177,6 +214,7 @@ export async function createSystemNotification({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -199,3 +237,8 @@ export async function createSystemNotification({;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

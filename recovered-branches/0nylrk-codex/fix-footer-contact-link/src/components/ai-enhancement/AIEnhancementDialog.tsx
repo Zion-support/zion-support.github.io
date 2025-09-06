@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -33,6 +34,9 @@ interface AIEnhancementDialogProps {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -47,6 +51,7 @@ import React from 'react';
   isOpen;
   onClose;
   onApply;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   defaultOptions;
@@ -78,6 +83,11 @@ import React from 'react',;
 =======
   defaultOptions;import React from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  defaultOptions;
+
+import React from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {;
   Dialog,;
   DialogContent,;
@@ -194,12 +204,47 @@ export function AIEnhancementDialog({};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+
+  title: string
+  isOpen: boolean
+  onClose: () => void
+  onApply: (content: string) => void
+  defaultOptions: AIEnhancementOptions
+
+  initialContent?: string
+}
+export function AIEnhancementDialog({
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
+
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
+  initialContent
+}: AIEnhancementDialogProps) {
+
+  const handleApply = (content: string) => {
+    onApply(content)
+    onClose()
+  initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
     onApply(content),;
+<<<<<<< HEAD
     onClose()
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    onClose();
+  };
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
   return (
@@ -234,6 +279,7 @@ export function AIEnhancementDialog({};
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -243,6 +289,14 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / u
 import {AIEnhancementPanel} from './AIEnhancementPanel';'
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
 interface AIEnhancementDialogProps {}
+=======
+}
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
+import {AIEnhancementPanel} from './AIEnhancementPanel';
+import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementDialogProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,
   is_open: boolean,
   on_close: () => void,
@@ -250,17 +304,29 @@ interface AIEnhancementDialogProps {}
   default_options: AIEnhancementOptions,
   initial_content?: string;
 }
+<<<<<<< HEAD
 export /**;
  * AIEnhancementDialog - Function description;
  */
 function AIEnhancementDialog() {}
   const handle_apply = (content: string) =>: any {}
+=======
+export /**
+ * AIEnhancementDialog - Function description
+ */
+function AIEnhancementDialog() {
+  const handle_apply = (content: string) =>: any {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     on_apply (content),
     on_close ();
   }
 ;
   return (
+<<<<<<< HEAD
     <Dialog open={is_open} onOpenChange={() => on_close ()}>;"
+=======
+    <Dialog open={is_open} onOpenChange={() => on_close ()}>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <DialogContent className="max - w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
@@ -277,8 +343,11 @@ function AIEnhancementDialog() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
@@ -297,6 +366,7 @@ function AIEnhancementDialog() {}
     </Dialog>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -313,3 +383,5 @@ function AIEnhancementDialog() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

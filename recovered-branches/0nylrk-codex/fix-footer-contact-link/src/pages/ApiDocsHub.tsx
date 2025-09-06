@@ -21,12 +21,22 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
@@ -202,6 +212,81 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+export function ApiDocsHub() {
+
+  const sections = [
+    {
+      title: "Getting Started"
+      description: "Learn how to authenticate and make your first API request"
+      icon: BookOpen
+      path: "/developers/docs/getting-started"
+      color: "from-blue-500 to-cyan-500"}
+    {
+      title: "API Reference"
+      description: "Detailed documentation for all available endpoints"
+      icon: Code
+      path: "/developers/docs/reference"
+      color: "from-purple-500 to-pink-500"}
+    {
+      title: "Webhooks"
+      description: "Subscribe to events and receive real-time updates"
+      icon: Webhook
+      path: "/developers/docs/webhooks"
+      color: "from-green-500 to-emerald-500"}
+    {
+      title: "Sample Code"
+      description: "Examples in JavaScript, Python, and Node.js";
+      icon: Zap
+      path: "/developers/docs/samples"
+      color: "from-yellow-500 to-orange-500"}
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node.js";
+      title: "Getting Started",
+      description: "Learn how to authenticate and make your first API request",
+      icon: BookOpen,
+      path: "/developers / docs / getting - started",
+      color: "from - blue - 500 to - cyan - 500"},
+    {
+      title: "API Reference",
+      description: "Detailed documentation for all available endpoints",
+      icon: Code,
+      path: "/developers / docs / reference",
+      color: "from - purple - 500 to - pink - 500"},
+    {
+      title: "Webhooks",
+      description: "Subscribe to events and receive real - time updates",
+      icon: Webhook,
+      path: "/developers / docs / webhooks",
+      color: "from - green - 500 to - emerald - 500"},
+    {
+
+
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node.js";
+
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
+    {
+      title: "Sample Code"
+      description: "Examples in JavaScript, Python, and Node.js";
+      icon: Zap
+      path: "/developers/docs/samples"
+      color: "from-yellow-500 to-orange-500"}
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node.js";
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
+    {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: "Error Codes & Rate Limits"
 =======
 
@@ -244,14 +329,22 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",      title: "
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </p>
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
+=======
+          </p>
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     super(props);
     this.state = { hasError: false };
   }
   
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
@@ -262,12 +355,25 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 "
 import React from "react";"
 import {Link} from "react-router-dom";"
@@ -279,6 +385,18 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
           >
             Go to Developer Portal"
+=======
+
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+          <Link
+            to="/developers/portal"
+            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
+          >
+            Go to Developer Portal
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
@@ -287,6 +405,7 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
   )
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -339,16 +458,49 @@ export function ApiDocsHub() { return null; }
 =======
           </p>      icon: Zap,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react",;
+import { Link } from "react-router-dom",;
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+
+
+export function ApiDocsHub() {;
+  const sections = [;
+    {;
+      title: "Getting Started",;
+      description: "Learn how to authenticate and make your first API request",;
+      icon: BookOpen,;
+      path: "/developers/docs/getting-started",;
+      color: "from-blue-500 to-cyan-500"},;
+    {;
+      title: "API Reference",;
+      description: "Detailed documentation for all available endpoints",;
+      icon: Code,;
+      path: "/developers/docs/reference",;
+      color: "from-purple-500 to-pink-500"},;
+    {;
+      title: "Webhooks",;
+      description: "Subscribe to events and receive real-time updates",;
+      icon: Webhook,;
+      path: "/developers/docs/webhooks",;
+      color: "from-green-500 to-emerald-500"},;
+    {;
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node && Node.js";
+      icon: Zap,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       path: "/developers/docs/samples",;
       color: "from-yellow-500 to-orange-500"},;
     {;
-      title: "Error Codes & Rate Limits",,
-  description: "Understanding API errors and rate limiting",;
+      title: "Error Codes & Rate Limits",;
+      description: "Understanding API errors and rate limiting",;
       icon: AlertCircle,;
       path: "/developers/docs/errors",;
       color: "from-red-500 to-rose-500"}],;
 
-  return (    <ApiDocsLayout>;
+  return (
+    <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;
         <p className="text-zinc-400 text-lg mb-12">;
@@ -356,6 +508,7 @@ export function ApiDocsHub() { return null; }
         </p>;
 
         <div className="grid gap-6 md:grid-cols-2">;
+
       icon: Zap,
       path: "/developers / docs / samples",
 =======
@@ -377,6 +530,7 @@ export function ApiDocsHub() { return null; }
         <p className="text-zinc-400 text-lg mb-12">;'
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
+<<<<<<< HEAD
 
       icon: Zap,"
       path: "/developers / docs / samples","
@@ -397,34 +551,37 @@ export function ApiDocsHub() { return null; }
         </p>;
 <<<<<<< HEAD
         <div className="grid gap - 6 md:grid - cols-2">;
+=======
+        <div className="grid gap - 6 md:grid - cols - 2">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {sections.map ((section) => (
             <Link;
               key={section.path}
               to={section.path}
-              className="block p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800 hover:border - zinc - 700 transition-all";
+              className="block p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800 hover:border - zinc - 700 transition - all";
             >;
               <div className={`w - 12 h - 12 rounded - full bg - gradient - to - r ${section.color} flex items - center justify - center mb - 4`}>;
-                <section.icon className="h - 6 w - 6 text-white" />;
+                <section.icon className="h - 6 w - 6 text - white" />;
               </div>;
-              <h2 className="text - xl font - semibold text - white mb-2">{section.title}</h2>;
-              <p className="text - zinc - 400 mb-4">{section.description}</p>;
-              <div className="flex items - center text - zion-cyan">;
-                <span className="mr-2">View documentation</span>;
-                <ArrowRight className="h - 4 w-4" />;
+              <h2 className="text - xl font - semibold text - white mb - 2">{section.title}</h2>;
+              <p className="text - zinc - 400 mb - 4">{section.description}</p>;
+              <div className="flex items - center text - zion - cyan">;
+                <span className="mr - 2">View documentation</span>;
+                <ArrowRight className="h - 4 w - 4" />;
               </div>;
             </Link>))}
         </div>;
-        <div className="mt - 12 p - 6 rounded - lg bg - zinc - 900 border border - zinc-800">;
-          <h2 className="text - xl font - semibold text - white mb-4">Ready to get started?</h2>;
-          <p className="text - zinc - 400 mb-6">;
+        <div className="mt - 12 p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800">;
+          <h2 className="text - xl font - semibold text - white mb - 4">Ready to get started?</h2>;
+          <p className="text - zinc - 400 mb - 6">;
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.;
           </p>;
           <Link;
             to="/developers / portal";
-            className="inline - flex items - center px - 4 py - 2 rounded - md bg - zion - purple text - white hover: bg - zion - purple / 90 transition-colors";
+            className="inline - flex items - center px - 4 py - 2 rounded - md bg - zion - purple text - white hover: bg - zion - purple / 90 transition - colors";
           >;
             Go to Developer Portal;
-            <ArrowRight className="ml - 2 h - 4 w-4" />;
+            <ArrowRight className="ml - 2 h - 4 w - 4" />;
           </Link>;
         </div>;
       </div>;
@@ -432,6 +589,7 @@ export function ApiDocsHub() { return null; }
 }
 export default ApiDocsHub;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,10 +626,25 @@ export default ApiDocsHub;
               <h2 className="text-xl font-semibold text-white mb-2">{section && section.title}</h2>;"
               <p className="text-zinc-400 mb-4">{section && section.description}</p>;
 ;"
+=======
+
+          {sections && sections.map((section) => (;
+            <Link
+              key={section && section.path} 
+              to={section && section.path}
+              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all">;
+              <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section && section.color} flex items-center justify-center mb-4`}>;
+                <section && section.icon className="h-6 w-6 text-white" />;
+              </div>;
+              <h2 className="text-xl font-semibold text-white mb-2">{section && section.title}</h2>;
+              <p className="text-zinc-400 mb-4">{section && section.description}</p>;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="grid gap-6 md:grid-cols-2">;
           {sections.map((section) => (;
             <Link ;
               key={section.path} ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -485,6 +658,9 @@ export default ApiDocsHub;
 
               to={section.path}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              to={section.path}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all";
             >;`
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>;"
@@ -520,41 +696,42 @@ export default ApiDocsHub;
             <Link;
               key={section.path} ;
 
+
   );}
 ;
 export default ApiDocsHub,;
  export function ApiDocsHub () {
   const sections = [ {
-  title: "Getting Started",
-  description: "Learn how to authenticate and make your first API request";
+  title: "Getting Started";
+description: "Learn how to authenticate and make your first API request";
 icon: BookOpen;
 path: "/developers/docs/getting-started";
 color: "from-blue-500 to-cyan-500" 
 };
 {
-  title: "API Reference",
-  description: "Detailed documentation for all available endpoints";
+  title: "API Reference";
+description: "Detailed documentation for all available endpoints";
 icon: Code;
 path: "/developers/docs/reference";
 color: "from-purple-500 to-pink-500" 
 };
 {
-  title: "Webhooks",
-  description: "Subscribe to events and receive real-time updates";
+  title: "Webhooks";
+description: "Subscribe to events and receive real-time updates";
 icon: Webhook;
 path: "/developers/docs/webhooks";
 color: "from-green-500 to-emerald-500" 
 };
 {
-  title: "Sample Code",
-  description: "Examples in JavaScript, Python, and Node.js";
+  title: "Sample Code";
+description: "Examples in JavaScript, Python, and Node.js";
 icon: Zap;
 path: "/developers/docs/samples";
 color: "from-yellow-500 to-orange-500" 
 };
 {
-  title: "Error Codes & Rate Limits",
-  description: "Understanding API errors and rate limiting";
+  title: "Error Codes & Rate Limits";
+description: "Understanding API errors and rate limiting";
 icon: AlertCircle;
 return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl font-bold text-white mb-6" >Zion AI Marketplace API</h1> <p className="text-zinc-400 text-lg mb-12" > Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible. </p> <div className="grid gap-6 md:grid-cols-2" > {
   sections.map ( (section) => (<Link key= {
@@ -578,6 +755,7 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
               key={section.path} ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -592,3 +770,5 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

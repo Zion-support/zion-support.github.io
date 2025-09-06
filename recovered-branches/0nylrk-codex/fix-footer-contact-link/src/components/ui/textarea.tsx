@@ -45,8 +45,11 @@ import { cn } from "@/lib/utils"
 =======
 
 
+import * as React from "react"
+
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -54,10 +57,18 @@ import { cn } from "@/lib/utils"
 import { cn } from "@/lib/utils"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
+export type TextareaProps = React.ComponentProps<"textarea">
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         className={cn(
@@ -90,13 +101,29 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
           className;
         )}
 
+=======
+        className={cn(
+
+
+          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+
+
+          className
+        )}
+          className
+        )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 ;
 export type TextareaProps = React.ComponentProps<&quot;textarea & quot;>;
 const Textarea = React.forward_ref < HTMLTextAreaElement TextareaProps>(
+<<<<<<< HEAD
   ({ class_name, ...props }, ref) => {}
+=======
+  ({ class_name, ...props }, ref) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <textarea;
         className={cn (
@@ -105,8 +132,11 @@ const Textarea = React.forward_ref < HTMLTextAreaElement TextareaProps>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react";
 ;
 import { cn } from "@/lib/utils";
@@ -121,6 +151,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
           "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",;
           className;
         )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -130,10 +161,13 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ref={ref}
         {...props}
       />);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 )
@@ -182,3 +216,47 @@ export { Textarea };
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+);
+Textarea.display_name = &quot;Textarea & quot;
+
+
+export { Textarea };
+
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+;
+export { Textarea }
+Textarea.displayName = "Textarea";
+;
+export { Textarea }import * as React from "react" export type TextareaProps = React.ComponentProps<"textarea" >) 
+}ref= {
+  ref 
+}{
+  ...props 
+}/>) 
+}) Textarea.displayName = "Textarea" export {
+  Textarea 
+}
+          &quot;flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
+          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        ref={ref}
+        {...props}
+      />;
+    );
+  }
+)
+Textarea.displayName = &quot;Textarea&quot;
+export { Textarea }
+export { Textarea };
+
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

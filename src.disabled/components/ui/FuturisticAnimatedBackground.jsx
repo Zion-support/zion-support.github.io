@@ -107,7 +107,9 @@ import _React,{ useEffect,useRef } from';react'; import { motion } from';';frame
 import React,{ useEffect,useRef } from\';react\'; import { motion } from\';\';framer-motion\'; \"export\": const FuturisticAnimatedBackground = ({ variant =\';\';cyberpunk\',intensity =\';\';medium\',\"className\": = \'';\'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return\'; const ctx = canvas && canvas.getContext(\'';2d\') \"if\": (!ctx) return\'';\';
 const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-motion"; export: const FuturisticAnimatedBackground = ({ variant =";";cyberpunk",intensity =";";medium",className: = "";"}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return"; const ctx = canvas && canvas.getContext("";2d") if: (!ctx) return"";";"""
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
+
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
+<<<<<<< HEAD
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -122,3 +124,6 @@ import _React,{ useEffect,useRef } from';react'; import { motion } from';';frame
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

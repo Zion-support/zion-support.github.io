@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -32,6 +33,13 @@ import { SEO } from "@/components/SEO";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button";
 import {}
+=======
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ArrowLeft,
   Calendar,
   Clock,
@@ -40,6 +48,7 @@ import {}
   Share2,
   Facebook,
   Twitter,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Linkedin,
 } from "lucide-react";
@@ -63,37 +72,29 @@ import type { BlogPost as BlogPostType } from "@/types/blog",import { Separator 
 import type { BlogPost as BlogPostType } from "@/types/blog";"
 import { Separator } from "@/components/ui/separator";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  Linkedin,
+} from "lucide-react";
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import { Separator } from "@/components/ui/separator";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API"
 import { BLOG_POSTS } from "@/data/blog-posts";
 <<<<<<< HEAD
 export default function BlogPost() {
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import {BLOG_POSTS} from "@/data/blog-posts";
-export default function BlogPost() {;
-  const { slug } = useParams() as { slug: string },;
+  const { slug } = useParams() as { slug: string };
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-export default function BlogPost() {
-  const { slug } = useParams() as { slug: string },;
-  const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-  const { slug } = useParams() as { slug: string },
-  const navigate = useNavigate(),
-  const [post, setPost] = useState<BlogPostType | null>(null),
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
-  const [showShareMenu, setShowShareMenu] = useState(false),
-    useEffect(() => {
+
+  useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
 
     if (currentPost) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       setPost(currentPost);
@@ -214,11 +215,26 @@ export default function BlogPost() {};
 =======
       setRelatedPosts(related)    } else {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      setPost(currentPost);
+
+      // Find related posts (same category, excluding current post)
+      const related = BLOG_POSTS.filter(
+        (p) =>
+          p.id !== currentPost.id &&
+          (p.category === currentPost.category ||
+            p.tags.some((tag) => currentPost.tags.includes(tag))),
+      ).slice(0, 3);
+
+      setRelatedPosts(related);
+    } else {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Post not found
       navigate("/blog", { replace: true });
     }
 
     // Scroll to top when post changes
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,6 +256,10 @@ export default function BlogPost() {};
     window.scrollTo(0, 0);
   }, [slug, navigate]);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+    window.scrollTo(0, 0);
+  }, [slug, navigate]);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (!post) {
 
@@ -268,6 +288,7 @@ export default function BlogPost() {};
   }, [slug, navigate]);
 
   if (!post) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
@@ -287,6 +308,10 @@ export default function BlogPost() {};
 =======
     window.scrollTo(0, 0)    return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return (
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
 
       <AppLayout>
@@ -303,6 +328,7 @@ export default function BlogPost() {};
           <div className="animate-pulse">Loading article...</div>
         </div>
       </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,6 +549,29 @@ export default function BlogPost() {;
   }
     return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    );
+  }
+
+  // Helper function to get share URL
+  const getShareUrl = (platform: string) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title);
+
+    switch (platform) {
+      case "facebook":
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      case "twitter":
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      case "linkedin":
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+      default:
+        return "#";
+    }
+  };
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <AppLayout>
       <SEO
         title={post.title}
@@ -724,6 +773,9 @@ export default function BlogPost() {;
                   }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -764,16 +816,20 @@ export default function BlogPost() {;
                         <Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </a>
                       <a
                         href={getShareUrl("twitter")}
                         target="_blank"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Link>
@@ -795,10 +851,14 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                        rel="noopener noreferrer"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -813,10 +873,13 @@ export default function BlogPost() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </a>
                       <a
                         href={getShareUrl("linkedin")}
                         target="_blank"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Link>
@@ -858,6 +921,17 @@ export default function BlogPost() {;
 "
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                      >
+                        <Linkedin className="h-4 w-4 mr-2" />
+                        <span>LinkedIn</span>
+                      </Link>
+                    </div>
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="flex items-center mb-4 sm:mb-0">;
                 <img;
                   src={post.author.avatarUrl} ;
@@ -867,6 +941,7 @@ export default function BlogPost() {;
                     const target = e.target as HTMLImageElement,;"
                     target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -893,6 +968,30 @@ export default function BlogPost() {;
                     className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+                />;
+                <div>;
+                  <p className="text-white font-medium">{post && post.author.name}</p>;
+                  <p className="text-sm text-zion-slate-light">{post && post.author.title}</p>;
+                </div>;
+              </div>;
+
+              <div className="flex items-center space-x-4">;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Calendar className="h-4 w-4 mr-1" />;
+                  <span className="text-sm">{post && post.publishedDate}</span>;
+                </div>;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Clock className="h-4 w-4 mr-1" />;
+                  <span className="text-sm">{post && post.readTime}</span>;
+                </div>;
+                <div className="relative">;
+                  <Button
+                    variant="ghost" 
+                    size="sm"
+                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >;"
                     <Share2 className="h-4 w-4 mr-1" />;"
@@ -906,11 +1005,16 @@ export default function BlogPost() {;
                         href={getShareUrl('facebook')} 
                         target="_blank" 
                         rel="noopener noreferrer"
+<<<<<<< HEAD
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;                        <Facebook className="h-4 w-4 mr-2" />;
 =======
 "
                         <Facebook className="h-4 w-4 mr-2" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
+                        <Facebook className="h-4 w-4 mr-2" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <span>Facebook</span>;
                       </a>;
                       <a;
@@ -927,7 +1031,14 @@ export default function BlogPost() {;
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
+                      <a;
+                        href={getShareUrl('linkedin')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
 =======
 
@@ -952,6 +1063,7 @@ export default function BlogPost() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -963,6 +1075,8 @@ export default function BlogPost() {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   )}
 <<<<<<< HEAD
 
@@ -1052,6 +1166,7 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
+<<<<<<< HEAD
 
                 className="object-cover w-full h-full"
                 onError={(e) => {
@@ -1143,12 +1258,85 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <img
+                src={post.featuredImage}
+                alt={post.title}
+                className="object-cover w-full h-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src =
+                    "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }}
+              />
+            </div>
+          </div>
+
+          {/* Article content */}
+          <div className="max-w-4xl mx-auto">
+            <div
+              className="prose prose-lg prose-invert max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-12">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                >
                   #{tag}
                 </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </div>
+=======
+              ))}
+            </div>
+
+            <Separator className="my-12 bg-zion-blue-light" />
+
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Related Articles
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {relatedPosts.map((relatedPost) => (
+                    <Link
+                      key={relatedPost.id}
+                      to={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <img
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.title}
+                          className="object-cover w-full h-full"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src =
+                              "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+                          }}
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">
+                          {relatedPost.category}
+                        </span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">
+                          {relatedPost.title}
+                        </h4>
+                      </div>
+                    </Link>
+
+
+            </div>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             <Separator className="my-12 bg-zion-blue-light" />
 
@@ -1250,6 +1438,50 @@ export default function BlogPost() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
+          ;
+          {/* Article content */}
+          <div className="max-w-4xl mx-auto">;
+            <div ;
+              className="prose prose-lg prose-invert max-w-none";
+              dangerouslySetInnerHTML={{ __html:post.content }}
+            />;
+            ;
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-12">;
+              {post.tags.map(tag => (;
+                <span ;
+                  key={tag} ;
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full";
+                >;                  #{tag}
+                </span>;
+              ))}
+            </div>;
+            ;
+            <Separator className="my-12 bg-zion-blue-light" />;
+            ;
+            {/* Related articles */}
+            </div>;
+            <Separator className="my-12 bg-zion-blue-light" />;
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (;
+              <div className="mt-12">;
+                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>;
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+                  {relatedPosts.map(relatedPost => (;
+                    <Link;
+                      key={relatedPost.id}
+                      to={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300";
+                    >;
+                      <div className="aspect-[16/9] relative">;
+                        <img;
+                          src={relatedPost.featuredImage} ;
+                          alt={relatedPost.title}
+                          className="object-cover w-full h-full";
+                          onError={(e) => {;
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+                  #{tag}
                 </span>;
               ))}
 <<<<<<< HEAD
@@ -1305,6 +1537,7 @@ export default function BlogPost() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
@@ -1319,11 +1552,18 @@ export default function BlogPost() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                        <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
+                      </div>;
+                    </Link>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
                 </div>;
               </div>;
             )}
 
+<<<<<<< HEAD
             {/* Navigation */}"
             <div className="flex justify-between items-center mt-12">;
               <Button"
@@ -1674,6 +1914,265 @@ if ( {) {}
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-12">;
+              <Button
+                variant="outline"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+                asChild
+              >
+                <Link to="/blog">
+                  <ChevronLeft className="mr-2 h-4 w-4" />
+                  All Articles
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </AppLayout>
+  );
+}
+      set_post (current_post);
+;
+      // Find related posts (same category, excluding current post);
+      const related = BLOG_POSTS.filter (p =>;
+        p.id !== current_post.id &&;
+        (p.category === current_post.category ||;
+        p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
+;
+      setRelatedPosts (related);
+    } else {
+      // Post not found;
+      navigate ("/blog", { replace: true });
+    }
+    // Scroll to top when post changes;
+    window.scroll_to (0, 0);
+  }, [slug, navigate]);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <AppLayout>;
+        <div className="min - h-screen bg - zion - blue text - white p - 8 flex justify - center items - center">;
+          <div className="animate - pulse">Loading article...</div>;
+        </div>;
+      </AppLayout>);
+  }
+  // Helper function to get share URL;
+  const getShareUrl = (platform: string) =>: any {
+    const url = encodeURIComponent (window.location.href);
+    const title = encodeURIComponent (post.title),
+    switch (platform) {
+      case 'facebook':;
+        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'twitter':;
+        return `https://twitter.com / intent / tweet?url=${url}&text=${title}`;
+      case 'linkedin':;
+        return `https://www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`;
+      default: return '#';
+    }
+  }
+;
+  return (
+    <AppLayout>;
+      <SEO;
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join (", ")}
+        og_image={post.featured_image}
+        canonical={`https://app.ziontechgroup.com / blog/${post.slug}`}
+      />;
+      <div className="min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4">;
+        <div className="container mx - auto">;
+          {/* Back to blog button */}
+          <div className="mb - 8">;
+            <Button;
+              variant="outline";
+              className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
+              as_child;
+            >;
+              <Link to="/blog">;
+                <ArrowLeft className="mr - 2 h - 4 w - 4" />;
+                Back to all articles;
+              </Link>;
+            </Button>;
+          </div>;
+          {/* Article header */}
+          <div className="mb - 8 max - w-4xl mx - auto">;
+            <span className="text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4">;
+              {post.category}
+            </span>;
+            <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+              {post.title}
+            </h1>;
+            <p className="text - xl text - zion - slate - light mb - 8">;
+              {post.excerpt}
+            </p>;
+            {/* Author and metadata */}
+            <div className="flex flex - col sm:flex - row sm:items - center justify - between mb - 8">;
+              <div className="flex items - center mb - 4 sm:mb - 0">;
+                <img;
+                  src={post.author.avatar_url}
+                  alt={post.author.name}
+                  className="w - 12 h - 12 rounded - full mr - 3";
+                  on_error={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https: //images.unsplash.com / photo - 1472099645785 - 5658abf4ff4e?auto = format & fit = facearea & facepad = 2&w = 100 & h=100 & q=80";
+                  }}
+                />;
+                <div>;
+                  <p className="text - white font - medium">{post.author.name}</p>;
+                  <p className="text - sm text - zion - slate - light">{post.author.title}</p>;
+                </div>;
+              </div>;
+              <div className="flex items - center space - x-4">;
+                <div className="flex items - center text - zion - slate - light">;
+                  <Calendar className="h - 4 w - 4 mr - 1" />;
+                  <span className="text - sm">{post.published_date}</span>;
+                </div>;
+                <div className="flex items - center text - zion - slate - light">;
+                  <Clock className="h - 4 w - 4 mr - 1" />;
+                  <span className="text - sm">{post.read_time}</span>;
+                </div>;
+                <div className="relative">;
+                  <Button;
+                    variant="ghost";
+                    size="sm";
+                    className="text - zion - slate - light hover:text - white hover:bg - zion - blue - dark";
+                    on_click={() => setShowShareMenu (!showShareMenu)}
+                  >;
+                    <Share2 className="h - 4 w - 4 mr - 1" />;
+                    <span className="text - sm">Share</span>;
+                  </Button>;
+                  {showShareMenu && (
+                    <div className="absolute right - 0 top - full mt - 2 bg - zion - blue - dark border border - zion - blue - light rounded - md p - 2 z - 10">;
+                      <a;
+                        href={getShareUrl ('facebook')}
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white";
+                      >;
+                        <Facebook className="h - 4 w - 4 mr - 2" />;
+                        <span > Facebook</span>;
+                      </a>;
+                      <a;
+                        href={getShareUrl ('twitter')}
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white";
+                      >;
+                        <Twitter className="h - 4 w - 4 mr - 2" />;
+                        <span > Twitter</span>;
+                      </a>;
+                      <a;
+                        href={getShareUrl ('linkedin')}
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white";
+                      >;
+                        <Linkedin className="h - 4 w - 4 mr - 2" />;
+                        <span > LinkedIn</span>;
+                      </a>;
+                    </div>)}
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Featured image */}
+          <div className="mb - 12 max - w-5xl mx - auto">;
+            <div className="aspect-[21 / 9] rounded - lg overflow - hidden">;
+              <img;
+                src={post.featured_image}
+                alt={post.title}
+                className="object - cover w - full h - full";
+                on_error={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com / photo - 1581089778245 - 3ce67677f718?auto = format & fit = crop & q=80 & w=2070 & ixlib = rb - 4.0.3";
+                }}
+              />;
+            </div>;
+          </div>;
+          {/* Article content */}
+          <div className="max - w-4xl mx - auto">;
+            <div;
+              className="prose prose - lg prose - invert max - w-none";
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />;
+            {/* Tags */}
+            <div className="flex flex - wrap gap - 2 mt - 12">;
+              {post.tags.map (tag => (
+                <span;
+                  key={tag}
+                  className="text - xs text - zion - slate - light bg - zion - blue - dark px - 3 py - 1 rounded - full";
+                >;
+                  #{tag}
+                </span>))}
+            </div>;
+            <Separator className="my - 12 bg - zion - blue - light" />;
+            {/* Related articles */}
+            {related_posts.length > 0 && (
+              <div className="mt - 12">;
+                <h3 className="text - 2xl font - bold text - white mb - 6">Related Articles</h3>;
+                <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+                  {related_posts.map (related_post => (
+                    <Link;
+                      key={related_post.id}
+                      to={`/blog/${related_post.slug}`}
+                      className="bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden hover:border - zion - purple transition - all duration - 300";
+                    >;
+                      <div className="aspect-[16 / 9] relative">;
+                        <img;
+                          src={related_post.featured_image}
+                          alt={related_post.title}
+                          className="object - cover w - full h - full";
+                          on_error={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https: //images.unsplash.com / photo - 1581089778245 - 3ce67677f718?auto = format & fit = crop & q=80 & w=2070 & ixlib = rb - 4.0.3";
+                          }}
+                        />;
+                      </div>;
+                      <div className="p - 4">;
+                        <span className="text - xs text - zion - cyan">{related_post.category}</span>;
+                        <h4 className="text - white font - bold mt - 1 line - clamp - 2">{related_post.title}</h4>;
+                      </div>;
+                    </Link>))}
+                </div>;
+              </div>)}
+            {/* Navigation */}
+            <div className="flex justify - between items - center mt - 12">;
+              <Button;
+                variant="outline";
+                className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
+                as_child;
+              >;
+                <Link to="/blog">;
+                  <ChevronLeft className="mr - 2 h - 4 w - 4" />;
+              <Button;
+                variant="outline";
+                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+                asChild;
+              >;
+                <Link to="/blog">;
+                  <ChevronLeft className="mr-2 h-4 w-4" />;
+                <Link to="/blog">;
+                  <ChevronLeft className="mr-2 h-4 w-4" />;
+                  All Articles;
+                </Link>;
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </AppLayout>);
+}
+
+    </AppLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ); export default function BlogPost () {
   const {
   slug 
@@ -1707,6 +2206,7 @@ if (!post) {"
 }`;'
 case 'twitter': 
 }
+;
 
 };"
 return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link to="/blog" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to all articles </Link> </Button> </div> 
@@ -1745,6 +2245,7 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1761,3 +2262,5 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

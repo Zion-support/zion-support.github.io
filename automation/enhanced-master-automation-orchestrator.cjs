@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -13,6 +14,9 @@
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -21,6 +25,7 @@ class EnhancedMasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     this.results = {};
@@ -44,6 +49,9 @@ orchestrator.run().catch(console.error);
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.results = {
       "dependencyFix": { success: false, duration: 0, errors: [] },
       "mergeConflictFix": { success: false, duration: 0, errors: [] },
@@ -60,8 +68,12 @@ orchestrator.run().catch(console.error);
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Write to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
@@ -98,6 +110,7 @@ orchestrator.run().catch(console.error);
 
   async runDependencyFix() {
     this.log('\n🔧 PHASE 1: DEPENDENCY FIXING');
+<<<<<<< HEAD
     this.log('=============================');
     
     const result = await this.runScript('Dependency Fixer', 'automation/dependency-fixer.cjs');
@@ -298,5 +311,8 @@ orchestrator.run().catch(console.error);
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    this.log('
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 module.exports = EnhancedMasterAutomationOrchestrator;

@@ -7,9 +7,14 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -18,6 +23,7 @@ interface AIListingFormProps {
     keyFeatures: string
     targetAudience: string
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -30,6 +36,9 @@ import React, { useState } from "react";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useState } from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -37,8 +46,11 @@ import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -48,6 +60,7 @@ import { Sparkles } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -55,6 +68,8 @@ import { Sparkles } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -63,14 +78,18 @@ interface AIListingFormProps {
     keyFeatures: string
     targetAudience: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }) => void;
   isLoading: boolean
 
   }) => void,
   isLoading: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -149,11 +168,26 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string
+  }
+}
+
+
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
+<<<<<<< HEAD
 =======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {}
   const handleSubmit = () => {}
@@ -193,6 +227,22 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        variant: "destructive"
+      }),
+      return
+    }
+    onSubmit({
+      title,
+      category,
+      keyFeatures,
+      targetAudience
+    })
+
+  },
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -252,6 +302,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 
+<<<<<<< HEAD
 =======
 =======
       <Button 
@@ -270,10 +321,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,11 +344,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      <Button 
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,12 +374,17 @@ import { Sparkles } from "lucide-react",;
 
 
 
+=======
+import { Sparkles } from "lucide-react",;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
     category: string,;
     keyFeatures: string,;
     targetAudience: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -344,6 +409,13 @@ import { Sparkles } from "lucide-react",;    category?: string;
 =======
 import { Sparkles } from "lucide-react",;    category?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  }) => void;
+  isLoading: boolean,;
+  initialValues?: {;
+    title?: string;
+    category?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     keyFeatures?: string;
     targetAudience?: string;
   }
@@ -351,7 +423,68 @@ import { Sparkles } from "lucide-react",;    category?: string;
 
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
+=======
+  const { toast } = useToast();
+
+  const [title, setTitle] = useState(initialValues && initialValues.title || "");
+  const [category, setCategory] = useState(initialValues && initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
+
+  const handleSubmit = () => {;
+    if (!title || !category) {;
+      toast({;
+        title: "Missing required fields",;
+        description: "Please provide at least a title and category.",;
+        variant: "destructive";
+
+      });
+      return;
+    }
+
+
+    onSubmit({;
+      title;
+      category;
+      keyFeatures;
+      targetAudience;
+    });
+  };
+
+
+  return (
+    <div className="space-y-4">;
+      <div className="space-y-2">;
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+        <Input
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e && e.target.value)}
+          placeholder="Enter your product or service title";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+        <Input;
+          id="category";
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder="e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+        <Textarea;
+          id="keyFeatures";
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e.target.value)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           placeholder="Briefly describe the main features or benefits";
 =======
   const { toast } = useToast();
@@ -428,6 +561,43 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       <div className="space-y-2">;"
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <Input;
+          id="targetAudience";
+          value={targetAudience}
+          onChange={(e) => setTargetAudience(e.target.value)}
+          placeholder="e.g. Developers, Marketers, Startups";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+        <Input
+          id="category"
+          value={category}
+          onChange={(e) => setCategory(e && e.target.value)}
+          placeholder="e && e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+        <Textarea
+          id="keyFeatures"
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e && e.target.value)}
+          placeholder="Briefly describe the main features or benefits";
+          className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+        <Input
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e && e.target.value)}
@@ -437,6 +607,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
         />;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <Button;
@@ -455,10 +626,14 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           value={targetAudience}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <Button;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -479,6 +654,9 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
         <Input"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        <Input
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           id="targetAudience"
           value={targetAudience}
         onClick={handleSubmit}
@@ -509,6 +687,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -520,10 +699,19 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       <Button;
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}"
+=======
+
+        />;
+      </div>;
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
         {isLoading ? (;
           <>Generating Optimized Content...</>;
         ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -546,6 +734,8 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <>;
 =======
 
@@ -555,6 +745,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content;
           </>;
         )}
+
 
       </Button>;
     </div>;
@@ -601,10 +792,14 @@ function AIListingForm() {}
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handle_submit = () =>: any {
@@ -720,3 +915,5 @@ if ( {) {
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

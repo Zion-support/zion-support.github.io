@@ -75,6 +75,7 @@ export interface Application {;
   updatedAt?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -83,6 +84,14 @@ export interface Application {;
 
 
 
+=======
+}
+
+
+export interface Application {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   jobId: string;
   talentSlug: string;
@@ -91,15 +100,24 @@ export interface Application {;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+export type UserRole = "admin" | "user" | "guest";
+export type UserRole = "admin" | "user" | "guest";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface Application {
   id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   email: string;
   position: string;
@@ -110,12 +128,18 @@ export interface Application {
 }
 
 export type UserRole = 'admin' | 'user' | 'guest';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
 
   job_id: string;
@@ -125,6 +149,7 @@ export type UserRole = 'admin' | 'user' | 'guest';
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -216,3 +241,8 @@ export type UserRole = 'admin' | 'user' | 'guest';
 export type UserRole = "admin" | "user" | "guest";
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

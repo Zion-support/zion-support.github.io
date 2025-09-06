@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -21,6 +22,9 @@ import type { Wallet, TokenTransaction } from '@/types/tokens';
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useWallet() {;
 =======
 import type { Wallet, TokenTransaction } from '@/types/tokens';
@@ -42,6 +46,7 @@ export function useWallet() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -53,6 +58,9 @@ import {useEffect, useState} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {useEffect, useState} from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 =======
@@ -104,6 +112,7 @@ if ( {) {}
     } catch (err: any) {'
       console.error ('Error fetching wallet:', err);
 <<<<<<< HEAD
+<<<<<<< HEAD
       set_error (err.message);        amount;
 =======
       set_error (err.message);
@@ -111,10 +120,16 @@ if ( {) {}
 
 
     } finally {}
+=======
+      set_error (err.message);
+
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD
 
 
     setTransactions(prev => []
@@ -126,6 +141,15 @@ if ( {) {}
 
         amount;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
+
+    setTransactions(prev => [
+      {
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
+        amount;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         transaction_type: 'earn';
         reason: reason |null;
         created_at: new Date().toISOString()}
@@ -135,6 +159,15 @@ if ( {) {}
     if (!user?.id) return;
     setWallet(prev =>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
+    );
+    setTransactions(prev => [
+      {
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         amount;
 =======
 
@@ -234,16 +267,22 @@ if (return) {}
   }, [user?.id]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 
 
   return {}
+=======
+;
+  return {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     wallet;
     transactions;
     loading;
     error;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -262,6 +301,9 @@ import { useEffect, useState } from 'react',;
 =======
 ;import { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useEffect, useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 =======
@@ -354,6 +396,7 @@ export function useWallet() { return null; }
     error,;
     fetchWallet,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -525,3 +568,125 @@ export function useWallet() {;
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+    fetchTransactions;
+    earnTokens;
+
+    spendTokens}
+    fetch_wallet;
+    fetch_transactions;
+    earn_tokens;
+    spend_tokens}
+}
+}
+
+import { useEffect, useState } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import type { Wallet, TokenTransaction } from '@/types/tokens',;
+;
+export function useWallet() {;
+  const { user } = useAuth(),;
+  const [wallet, setWallet] = useState<Wallet | null>(null),;
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  async function fetchWallet() {;
+    if (!user?.id) {;
+      setWallet(null),;
+      setLoading(false),;
+      return,;
+    }
+;
+    try {;
+      setLoading(true),;
+      const { data, error } = await supabase;
+        .from('wallets');
+        .select('*');
+        .eq('user_id', user.id);
+        .single(),;
+;
+      if (error) {;
+        throw error,;
+      }
+;
+      setWallet(data),;
+    } catch (err:any) {;
+      console.error('Error fetching wallet:', err),;
+      setError(err.message),;
+    } finally {;
+      setLoading(false),;
+    }
+  }
+;
+  async function fetchTransactions() {;
+    if (!user?.id) {;
+      setTransactions([]),;
+      return,;
+    }
+    try {;
+      const { data, error } = await supabase;
+        .from('token_transactions');
+        .select('*');
+        .eq('user_id', user.id);
+        .order('created_at', { ascending:false }),;
+;
+      if (error) throw error,;
+      setTransactions((data || []) as TokenTransaction[]),;
+    } catch (err:any) {;
+      console.error('Error fetching transactions:', err),;
+    }
+  }
+;
+  async function earnTokens(amount:number, reason?:string) {;
+    if (!user?.id) return,;
+    setWallet(prev => prev ? { ...prev, balance:prev.balance + amount } prev),;
+    setTransactions(prev => [;
+      {;
+        id:crypto.randomUUID(),;
+        user_id:user.id,;
+        amount,;
+        transaction_type:'earn',;
+        reason:reason || null,;
+        created_at:new Date().toISOString()},;
+      ...prev]),;
+  }
+;
+  async function spendTokens(amount:number, reason?:string) {;
+    if (!user?.id) return,;
+    setWallet(prev =>;
+      prev ? { ...prev, balance:Math.max(0, prev.balance - amount) } prev;
+    ),;
+    setTransactions(prev => [;
+      {;
+        id:crypto.randomUUID(),;
+        user_id:user.id,;
+        amount,;
+        transaction_type:'burn',;
+        reason:reason || null,;
+        created_at:new Date().toISOString()},;
+      ...prev]),;
+  }
+;
+  useEffect(() => {;
+    fetchWallet(),;
+    fetchTransactions(),;
+  }, [user?.id]),;
+;
+  return {;
+    wallet,;
+    transactions,;
+    loading,;
+    error,;
+    fetchWallet,;
+    fetchTransactions,;
+    earnTokens,;
+    spendTokens},;
+} .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
+}
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -78,12 +79,20 @@ export function Toaster() {}
   return (
     <SonnerToaster"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import * as React from "react";
+import { Toaster, as, SonnerToaster } from "sonner";
+export function Toaster() {
+  return (
+    <SonnerToaster
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       position="top-right"
       toastOptions={{}
         className:"
           "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
 <<<<<<< HEAD
         style: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,10 +186,13 @@ function Toaster() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           background: "#0a1429",
           color: "#fff",
           border: "1px solid #1e3a6f",
         },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -211,8 +223,22 @@ function Toaster() {
 =======
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        duration: 4000,
+        descriptionClassName: "text-zion-slate-light",
+      }}
+    />
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
+
+
+}
+
+;
+
 
     />;
   );

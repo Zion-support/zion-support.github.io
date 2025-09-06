@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -50,6 +51,18 @@ import {supabase} from '@/integrations / supabase / client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { supabase } from "@/integrations/supabase/client";
+export type MilestoneStatus =
+  | "pending"
+  | "in_progress"
+  | "submitted"
+  | "completed"
+  | "rejected"
+  | "paid"
+  | "approved";
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Milestone {
 import {supabase} from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
@@ -63,6 +76,7 @@ export interface Milestone {;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -87,6 +101,9 @@ export interface Milestone {;
 
 export interface Milestone {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface Milestone {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   project_id: string;
   title: string;
@@ -95,6 +112,7 @@ export interface Milestone {};
   amount: number;
   status: MilestoneStatus;
   created_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   updated_at: string;
@@ -117,11 +135,17 @@ export interface MilestoneActivity {
   created_by: string;
   deliverables?: any[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  updated_at: string;
+  created_by: string;
+  deliverables?: any[];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 
 export interface MilestoneActivity {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -135,12 +159,16 @@ export interface MilestoneActivity {;
 =======
   updated_at: string;  created_by: string
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  created_by: string
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   deliverables?: any[]
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +195,10 @@ export interface MilestoneActivity {};
 export interface MilestoneActivity {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export interface MilestoneActivity {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   milestone_id: string;
   user_id: string;
@@ -177,6 +209,7 @@ export interface MilestoneActivity {;
   created_at: string;
 <<<<<<< HEAD
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,10 +271,13 @@ export interface MilestoneActivity {;
 =======
   created_by_profile?: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     display_name: string;
     avatar_url?: string;
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -255,3 +291,5 @@ export interface MilestoneActivity {;
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

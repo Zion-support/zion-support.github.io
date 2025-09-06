@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -53,6 +54,25 @@ import { SEO } from "@/components/SEO",
 <<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+=======
+import { Header } from "@/components/header";
+import { Footer } from "@/components/Footer";
+import { JobPostingForm } from "@/components/jobs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
+export default function PostJob() {
+  const { isAuthenticated, isLoading } = useAuth();
+  const isMobile = useIsMobile();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (isLoading) {
     return (
@@ -295,11 +315,22 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
     return (
-      <div className="flex items - center justify - center min-h-screen">;
-        <div className="animate-pulse">Loading...</div>;
+      <div className="flex items - center justify - center min - h-screen">;
+        <div className="animate - pulse">Loading...</div>;
       </div>);
   }
   return (
+    <>;
+      <SEO;
+        title="Post a Job | Zion AI Marketplace";
+        description="Post a job to find the perfect AI talent for your project.";
+      />;
+      <Header />;
+      <main className={`container mx - auto px-${is_mobile ? '2' : '4'} py-${is_mobile ? '6' : '12'} max - w-4xl`}>;
+        <Card className="border shadow - md">;
+          <CardHeader>;
+            <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
+
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -323,6 +354,9 @@ export default function PostJob() {;
   ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (;
     <>;
       <SEO ;
@@ -338,6 +372,7 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -353,6 +388,8 @@ export default function PostJob() {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -365,15 +402,19 @@ export default function PostJob() {;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {isMobile && <div className="h-16"></div>}
     </>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 
 
 }"
@@ -429,6 +470,43 @@ if (isLoading) {"
 =======
   return (;;
       {is_mobile && <div className="h-16"></div>}
+=======
+}
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+}
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+      {isMobile && <div className="h-16"></div>}
+    </>;
+  ),;}
+ export default function PostJob () {
+  const {
+  isAuthenticated, isLoading 
+}= useAuth ();
+const isMobile = useIsMobile ();
+if (isLoading) {
+  return (<div className="flex items-center justify-center min-h-screen" > <div className="animate-pulse" >Loading...</div> </div>) 
+}Post a Job | Zion AI Marketplace"description=" Post a job to find the perfect AI talent for your project." /> <Header /> <CardHeader> <CardTitle className= {
+  `text-$ {
+  isMobile ? '2xl' : '3xl' 
+}font-bold` 
+}>Post a Job</CardTitle> <CardDescription> Fill out the form below to post your job and find the perfect talent. </CardDescription> </CardHeader> <CardContent> <JobPostingForm /> </CardContent> </Card> </main> <Footer /> </>) 
+}
+      {isMobile && <div className="h-16"></div>}
+    </>;
+  );
+}
+;
+}
+;
+      {is_mobile && <div className="h - 16"></div>}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

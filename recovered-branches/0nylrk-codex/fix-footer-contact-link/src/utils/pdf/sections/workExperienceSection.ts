@@ -54,15 +54,65 @@ import {PdfThemeColors} from '../themeConfig';'
 import {formatDate} from '../formatters';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function addWorkExperienceSection(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export function addWorkExperienceSection(;
+
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
+
+  if (workExperience && workExperience.length === 0) return startY;
+  
+
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+
+    doc && doc.addPage(),
+    yPos = 20
+  }
+  
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
+  if (workExperience && workExperience.length === 0) return startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+    doc && doc.addPage(),
+    yPos = 20
+  }
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading);
+  doc && doc.text('Professional Experience', 20, yPos);
+  yPos += 8;
+  
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.line(20, yPos, 100, yPos);
+
+  yPos += 8;
+  // Sort work experience by date (newest first)
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+
+    if (a && a.is_current && !b && b.is_current) return -1;
+    if (!a && a.is_current && b && b.is_current) return 1;
+    
+    const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
+    const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
+    return dateB && dateB.getTime() - dateA && dateA.getTime()
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
   startY: number
 ): number {
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -81,10 +131,14 @@ export function addWorkExperienceSection(;
   colors: PdfThemeColors;
   startY: number;
 ): number {}
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
   let yPos = startY;
+<<<<<<< HEAD
   // Check if we need to add a new page;
   if (yPos > 250) {}
   yPos += 8;
@@ -99,6 +153,20 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 =======
 export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Check if we need to add a new page
+  if (yPos > 250) {
+  yPos += 8;
+  // Sort work experience by date (newest first)
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+    if (a.is_current && !b.is_current) return -1;
+    if (!a.is_current && b.is_current) return 1;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
+    return dateB.getTime() - dateA.getTime()
+  });
+  for (const work of sortedWorkExperience) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
@@ -124,7 +192,8 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
     if (work && work.location) {
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
-        if (work && work.description) {
+    
+    if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
@@ -133,6 +202,7 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 
     } else {
       yPos += 20
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -180,6 +250,9 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -257,30 +330,51 @@ export function addWorkExperienceSection(;
       yPos += 20;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     }
   }
+<<<<<<< HEAD
   return yPos + 5;
   start_y: number): number {}
   // Check condition;
 if (return start_y) {}
   $2;
+=======
+  return yPos + 5
+  start_y: number): number {
+  // Check condition
+if (return start_y) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   let y_pos = start_y;
 ;
   // Check if we need to add a new page;
+<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
+=======
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     doc.add_page (),
     y_pos = 20;
   }
   doc.setFontSize (16);
+<<<<<<< HEAD
   doc.setTextColor (colors.heading);'
+=======
+  doc.setTextColor (colors.heading);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   doc.text ('Professional Experience', 20, y_pos);
   y_pos += 8;
 ;
@@ -289,6 +383,7 @@ if ( {) {}
   y_pos += 8;
 ;
   // Sort work experience by date (newest first);
+<<<<<<< HEAD
   const sortedWorkExperience = [...work_experience].sort ((a, b) => {}
     // Check condition;
 if (return -1) {}
@@ -297,17 +392,35 @@ if (return -1) {}
     // Check condition;
 if (return 1) {}
   $2;
+=======
+  const sortedWorkExperience = [...work_experience].sort ((a, b) => {
+    // Check condition
+if (return -1) {
+  $2
+}
+    // Check condition
+if (return 1) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     const date_a = a.start_date instanceof Date ? a.start_date : new Date (a.start_date);
     const date_b = b.start_date instanceof Date ? b.start_date : new Date (b.start_date);
     return date_b.get_time () - date_a.get_time ();
   });
 ;
+<<<<<<< HEAD
   for (const work of sortedWorkExperience) {}
     // Check if we need to add a new page;
     // Check condition;
 if ( {) {}
   $2;
+=======
+  for (const work of sortedWorkExperience) {
+    // Check if we need to add a new page;
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       doc.add_page ();
       y_pos = 20;
@@ -319,14 +432,20 @@ if ( {) {}
     doc.setFontSize (12);
     doc.text (work.company_name, 20, y_pos + 5);
 ;
+<<<<<<< HEAD
     const start_date = format_date (work.start_date);'
     const end_date = work.is_current ? 'Present' : format_date (work.end_date);`
+=======
+    const start_date = format_date (work.start_date);
+    const end_date = work.is_current ? 'Present' : format_date (work.end_date);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const date_text = `${start_date} - ${end_date}`;
 ;
     doc.setFontSize (10);
     doc.setTextColor (colors.text);
     doc.text (date_text, 20, y_pos + 10);
 ;
+<<<<<<< HEAD
     // Check condition;
 if ( {) {}
   $2;
@@ -336,22 +455,43 @@ if ( {) {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      doc.text (work.location, 70, y_pos + 10);
+    }
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       doc.setFontSize (10);
       const description_lines = doc.splitTextToSize (work.description, 170);
       doc.text (description_lines, 20, y_pos + 16);
 ;
       y_pos += (description_lines.length * 5) + 20;
+<<<<<<< HEAD
     } else {}
+=======
+    } else {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       y_pos += 20;
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
 
 
 }
 
 <<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -453,6 +593,7 @@ doc.text (dateText, 20, yPos + 10);
   }
   return yPos + 5
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -465,3 +606,6 @@ doc.text (dateText, 20, yPos + 10);
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

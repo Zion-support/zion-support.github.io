@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -69,11 +70,19 @@ import { use_theme } from '@/hooks / use_theme';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";
+import { useTheme } from "@/hooks/useTheme";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface MobileThemeProviderProps {
   children: React.ReactNode;
 }
 
+
+
+
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+
 
   const { theme } = useTheme();
 
@@ -93,6 +102,7 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -104,6 +114,11 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 =======
 
@@ -124,6 +139,7 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 <<<<<<< HEAD
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -151,12 +167,26 @@ function MobileThemeProvider() {}
   const { theme } = use_theme ();
 ;
   return ('`
+=======
+}
+
+export /**
+ * MobileThemeProvider - Function description
+ */
+function MobileThemeProvider() {
+  const { theme } = use_theme ();
+;
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
       {children}
     </div>);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 ;
@@ -198,6 +228,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -213,3 +244,5 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -23,12 +23,13 @@ export interface JobData {
 export interface JobData {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string,
+  title: string;
   description: string;
   skills: string[];
   category: string;
 <<<<<<< HEAD
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +71,11 @@ export interface TalentProfile {;
     min: number,    max: number
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    min: number;
+    max: number;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   deadline: string;
 }
 
@@ -109,6 +115,7 @@ export interface TalentProfile {};
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   hourly_rate?: number;
@@ -152,6 +159,17 @@ export interface TalentMatch {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  hourly_rate?: number;
+  availability_type?: string;
+}
+
+  hourly_rate?: number,
+  availability_type?: string;
+
+}
+export interface TalentMatch {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -163,10 +181,14 @@ export interface MatchResult {};
   talentId: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   score: number;
   matchedSkills: string[];
   reason?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -202,13 +224,27 @@ export interface MatchResult {;
   talentId: string;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  matched_skills: string[]
+
+  created_at: string
+}
+export interface MatchResult {
+
+export interface MatchResult {;
+  talentId: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent_id: string;
   job_id: string;
   match_score: number;
 }
+<<<<<<< HEAD
 
   score: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  score: number;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,;
   title: string,;
   description: string,;
@@ -244,6 +280,7 @@ export interface MatchResult {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
+<<<<<<< HEAD
 
   reason?: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -257,11 +294,22 @@ export interface MatchResult {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+export interface MatchResult {
+  talent_id: string;
+  score: number;
+
+  matched_skills: string[],
+  reason?: string;
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 
 export interface JobData {;
 
+<<<<<<< HEAD
 
 
 }
@@ -281,3 +329,9 @@ export interface JobData {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  reason?: string;
+}
+;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

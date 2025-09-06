@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
 <<<<<<< HEAD
 =======
@@ -232,18 +233,13 @@ try {
 	process.exit(1);
 }
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");function run(cmd) {console.log(`$ ${cmd}`);"return execSync(cmd, { stdio: "inherit" })}try {/ Lint (non-fatal), Type-check, Build"try { run("npm run lint")} catch {}"run("npm run type-check");"run("npm run build");/ Restart preview app if running"try { run("pm2 reload bolt-zion-app")} catch {}"console.log("Auto-fix run completed successfully.")} catch (e) {""console.error("Auto-fix run failed: ", e.message);process.exit(1)}""`"`
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
-function run(cmd) {
-	return execSync(cmd, { "stdio": 'inherit' })}
-try {
-	// Lint (non-fatal), Type-check, Build
-	try { run('npm run lint')} catch {}
-	run('npm run type-check');
-	run('npm run build');
-	// Restart preview app if running
-	try { run('pm2 reload bolt-zion-app')} catch {}
-	} catch (e) {
+
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -257,6 +253,10 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

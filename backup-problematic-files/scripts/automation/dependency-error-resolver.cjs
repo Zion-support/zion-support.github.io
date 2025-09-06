@@ -521,8 +521,12 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 module.exports = DependencyErrorResolver
 <<<<<<< HEAD
 =======
 module.exports = DependencyErrorResolver
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -38,6 +38,7 @@ export interface EducationFormProps {};
   onBack: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,6 +65,12 @@ export interface EducationFormProps {};
 =======
 }  resumeId: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
+  resumeId: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void;
@@ -80,10 +87,16 @@ export interface EducationItemProps {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+export interface EducationItemProps {;
+
+
   education: Education;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   education: Education;
   onEdit: (education: Education) => void;
@@ -92,6 +105,15 @@ export interface EducationItemProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface EducationFormFieldsProps {
 =======
+=======
+
+
+
+export interface EducationFormFieldsProps {;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -130,6 +152,7 @@ export interface EducationFormFieldsProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -148,11 +171,15 @@ export interface EducationFormFieldsProps {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {};
   resume_id: string;
   education_entries: Education[];
   on_complete: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   on_back: () => void;
@@ -167,6 +194,10 @@ export interface EducationFormProps {};
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  on_back: () => void;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Education } from '@/types/resume',;
 export interface EducationFormProps {;
   resumeId: string,;
@@ -174,6 +205,20 @@ export interface EducationFormProps {;
   onComplete: () => void,;
   onBack: () => void;
 
+<<<<<<< HEAD
+=======
+}
+export interface EducationItemProps {
+  education: Education;
+  on_edit: (education: Education) => void;
+  on_delete: (id: string) => void;
+}
+export interface EducationFormFieldsProps {
+  is_editing: boolean;
+  on_submit: (data: any) => Promise < void>;
+  on_cancel: () => void;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
 
@@ -182,10 +227,13 @@ export interface EducationFormProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 ;
@@ -201,6 +249,7 @@ export interface EducationFormFieldsProps {;
   onCancel: () => void;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -217,3 +266,5 @@ export interface EducationFormFieldsProps {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

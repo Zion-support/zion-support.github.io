@@ -81,6 +81,14 @@ interface Jest.setupProps {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
+<<<<<<< HEAD
+=======
+interface Jest.setupProps {
+  // Add props here as needed
+}
+import React from 'react';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface Jest.setupProps {
   // Add props here as needed
 }
@@ -136,6 +144,7 @@ export default function Jest.setup({ }: Jest.setupProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -145,6 +154,9 @@ export default function Jest.setup({ }: Jest.setupProps) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }}
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ursor/add-new-services-and-deploy-updates-0462
 }}};
@@ -159,6 +171,7 @@ origin/automation-improvements-final
 }}},;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -171,6 +184,8 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }}};
 }}}
 }}}
@@ -231,6 +246,7 @@ origin/automation-improvements-final
 }
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+}
 }
 }
 }

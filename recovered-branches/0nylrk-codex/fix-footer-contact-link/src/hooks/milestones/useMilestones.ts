@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -22,12 +23,16 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
 import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -56,6 +61,10 @@ import {MilestoneStatus} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+import {MilestoneStatus} from './types';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
   const { create_milestone, is_submitting: is_creating } = useCreateMilestone (project_id);
@@ -75,6 +84,10 @@ if (return null, ) {
     return await upload_deliverable (milestone_id, project_id, file);
   }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return {
     milestones;
     activities;
@@ -83,6 +96,7 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+<<<<<<< HEAD
 export const useMilestones = (projectId?: string) => {;
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId);
   const { createMilestone, isSubmitting: isCreating } = useCreateMilestone(projectId);
@@ -124,6 +138,8 @@ export const useMilestones = (projectId?: string) => {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     update_milestone;
     delete_milestone;
@@ -131,6 +147,7 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -144,6 +161,9 @@ import {MilestoneStatus} from './types';import { useState } from 'react',;
 =======
 import {MilestoneStatus} from './types';import { useState } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useState } from 'react',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
 import { useUpdateMilestone } from './useUpdateMilestone',;
@@ -190,6 +210,7 @@ export const useMilestones = (projectId?: string) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
@@ -205,6 +226,14 @@ export const useMilestones = (projectId?: string) => {;
   }
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+}
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -249,6 +278,7 @@ export const useMilestones = (projectId?:string) => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -267,3 +297,7 @@ export const useMilestones = (projectId?:string) => {;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

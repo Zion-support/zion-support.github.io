@@ -8,6 +8,7 @@
 
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
+<<<<<<< HEAD
 =======
 
 
@@ -27,6 +28,9 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -34,6 +38,7 @@ import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +85,19 @@ interface AnalyticsContainerProps {
 
 
 <<<<<<< HEAD
+=======
+import { useAuth } from "@/hooks/useAuth",
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
+
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
   const { isAuthenticated, isLoading, user } = useAuth(),
@@ -89,6 +107,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
@@ -126,6 +145,21 @@ import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 =======
 import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
+
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
+
+  const { isAuthenticated, isLoading, user } = useAuth(),
+  
+  // Check if user is admin (using either role or userType)
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
+  
+  // If still loading auth status, show loading
+  if (isLoading) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
 =======
@@ -138,6 +172,7 @@ import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -162,10 +197,17 @@ import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+
+  
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -232,6 +274,31 @@ import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  
+
+  // If not admin, redirect
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">
+      <SEO 
+        title="Analytics Dashboard" 
+        description="Track user behavior, page views, and conversion rates to improve your platform performance"
+        noindex
+      />
+      <Header />
+      <main className="flex-1 p-6 md:p-8 container mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>
+          <p className="text-zion-slate-light">
+            Track user behavior, page views, and conversion rates
+          </p>
+        </div>
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -240,10 +307,14 @@ import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 interface AnalyticsContainerProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   children: React.ReactNode;
 }
 ;
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -268,25 +339,42 @@ interface AnalyticsContainerProps {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
   // Check if user is admin (using either role or userType);"
+=======
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+  // Check if user is admin (using either role or userType);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isAdmin = user?.role === "admin" || user?.userType === "admin";
 
   // If still loading auth status, show loading;
   if (isLoading) {;
+<<<<<<< HEAD
     return ("
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+=======
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
       </div>;
     );
   }
 
+<<<<<<< HEAD
   // If not authenticated, redirect;
   if (!isAuthenticated) {;"
+=======
+
+  // If not authenticated, redirect;
+  if (!isAuthenticated) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
   }
 
   // If not admin, redirect;
   if (!isAdmin) {;
 
+<<<<<<< HEAD
 
 "
     return <Navigate to="/unauthorized" replace />;
@@ -308,11 +396,30 @@ interface AnalyticsContainerProps {;
           <p className="text-zion-slate-light">;
 <<<<<<< HEAD
 =======
+=======
+    return <Navigate to="/unauthorized" replace />;
+  }
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+      <SEO
+        title="Analytics Dashboard"
+        description="Track user behavior, page views, and conversion rates to improve your platform performance"
+        noindex
+      />;
+      <Header />;
+      <main className="flex-1 p-6 md:p-8 container mx-auto">;
+        <div className="mb-8">;
+          <h1 className="text-3xl font-bold text-white mb-2">;
+            Analytics Dashboard;
+          </h1>;
+          <p className="text-zion-slate-light">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { Header  } from '@/components / Header';
 import { Footer  } from '@/components / Footer';
 import { SEO  } from '@/components / SEO';
 import { Navigate  } from './react-router-dom';
+<<<<<<< HEAD
 =======
           </h1>;"
           <p className="text-zion-slate-light">;'
@@ -342,10 +449,33 @@ if ( {) {}
 }
     return ("
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
+=======
+import { use_auth  } from '@/hooks / use_auth';
+interface AnalyticsContainerProps {
+  children: React.ReactNode;
+}
+export /**
+ * AnalyticsContainer - Function description
+ */
+function AnalyticsContainer() {
+  const { is_authenticated, is_loading, user } = use_auth ();
+;
+  // Check if user is admin (using either role or user_type);
+  const is_admin = user?.role === "admin" || user?.user_type === "admin";
+;
+  // If still loading auth status, show loading;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="animate - pulse text - zion - purple text - lg">Loading...</div>;
       </div>);
   }
   // If not authenticated, redirect;
+<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
@@ -374,6 +504,35 @@ if ( {) {}
           </h1>;"
           <p className="text - zion - slate - light">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
+  }
+  // If not admin, redirect;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" replace />;
+  }
+  return (
+    <div className="min - h-screen flex flex - col bg - zion - blue">;
+      <SEO;
+        title="Analytics Dashboard";
+        description="Track user behavior, page views, and conversion rates to improve your platform performance";
+        noindex;
+      />;
+      <Header />;
+      <main className="flex - 1 p - 6 md:p - 8 container mx - auto">;
+        <div className="mb - 8">;
+          <h1 className="text - 3xl font - bold text - white mb - 2">;
+            Analytics Dashboard;
+          </h1>;
+          <p className="text - zion - slate - light">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             Track user behavior, page views, and conversion rates;
           </p>;
         </div>;
@@ -381,6 +540,7 @@ if ( {) {}
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -394,22 +554,37 @@ if ( {) {}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+    </div>);
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 
     </div>);
+<<<<<<< HEAD
 "
 import React from "react",;"
 import { Header } from "@/components/Header",;"
 import { Footer } from "@/components/Footer",;"
 import { SEO } from "@/components/SEO",;"
 import { Navigate } from "react-router-dom",;"
+=======
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { Navigate } from "react-router-dom",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from "@/hooks/useAuth",;
 ;
 interface AnalyticsContainerProps {;
   children:React.ReactNode;
 }
 ;
+<<<<<<< HEAD
 export function AnalyticsContainer() { return null; }
   const { isAuthenticated, isLoading, user } = useAuth(),;
   ;
@@ -423,17 +598,37 @@ export function AnalyticsContainer() { return null; }
   if (isLoading) {;
     return (;"
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+=======
+export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
+  const { isAuthenticated, isLoading, user } = useAuth(),;
+  ;
+  // Check if user is admin (using either role or userType);
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',;
+  ;
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType);
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin';
+  // If still loading auth status, show loading;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
       </div>;
     );
   }
 ;
   // If not authenticated, redirect;
+<<<<<<< HEAD
   if (!isAuthenticated) {;'"
+=======
+  if (!isAuthenticated) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />;
   }
 ;
   // If not admin, redirect;
+<<<<<<< HEAD
   if (!isAdmin) {;"
     return <Navigate to="/unauthorized" replace />;
   }
@@ -449,6 +644,23 @@ export function AnalyticsContainer() { return null; }
       <main className="flex-1 p-6 md:p-8 container mx-auto">;"
         <div className="mb-8">;"
           <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>;"
+=======
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" replace />;
+  }
+;
+  return (;
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+      <SEO;
+        title="Analytics Dashboard";
+        description="Track user behavior, page views, and conversion rates to improve your platform performance";
+        noindex;
+      />;
+      <Header />;
+      <main className="flex-1 p-6 md:p-8 container mx-auto">;
+        <div className="mb-8">;
+          <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <p className="text-zion-slate-light">;
             Track user behavior, page views, and conversion rates;
           </p>;
@@ -460,6 +672,7 @@ export function AnalyticsContainer() { return null; }
   );
 }
 ;
+<<<<<<< HEAD
 
 
 }
@@ -476,3 +689,6 @@ export function AnalyticsContainer() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

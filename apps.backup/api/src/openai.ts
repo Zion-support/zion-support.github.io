@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import OpenAI from 'openai';
 <<<<<<< HEAD
 type OpenAIClient = OpenAI;
@@ -14,6 +15,8 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
@@ -25,6 +28,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini'
     input: prompt
 });
+<<<<<<< HEAD
 =======
 
 
@@ -56,6 +60,30 @@ Location: ${opts.location || 'Remote'}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import OpenAI from 'openai',;
+type OpenAIClient = OpenAI,;
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+
+
+}
+;
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+import OpenAI from 'openai',;
+type OpenAIClient = OpenAI,;
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+}
+;
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Key skills: ${(opts.tags || []).join() || 'N/A'};
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
@@ -63,6 +91,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     input: prompt
 });
 Key skills: ${(opts.tags || []).join() || 'N/A'}
+<<<<<<< HEAD
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({;
     model: 'gpt-4o-mini';
@@ -142,11 +171,14 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Key skills: ${(opts.tags || []).join() || 'N/A'}
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Add responsibilities, requirements, and benefits in bullet points.`,;
   const completion = await openai.responses.create({;
     model: 'gpt-4o-mini';
     input: prompt;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,6 +203,10 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
+=======
+  return completion.output_text;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
@@ -186,6 +222,7 @@ export async function generateJobPost(openai: OpenAIClient, role: string, opts: 
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join() || 'N/A'}
+<<<<<<< HEAD
 =======
     input: prompt;
 });
@@ -195,14 +232,25 @@ Key skills: ${(opts.tags || []).join() || 'N/A'}`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Add responsibilities, requirements, and benefits in bullet points.`,;
   const completion = await openai.responses.create({;'
+=======
+Add responsibilities, requirements, and benefits in bullet points.`,;
+  const completion = await openai.responses.create({;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     model: 'gpt-4o-mini';
     input: prompt;
   });
 
+<<<<<<< HEAD
   return completion.output_text;
 }
 
 <<<<<<< HEAD
+=======
+
+  return completion.output_text;
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
 Key skills: ${(opts && opts.tags || []).join() || 'N/A'}
@@ -231,6 +279,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   return completion.output_text;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -247,3 +296,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

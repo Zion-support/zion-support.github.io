@@ -32,9 +32,13 @@ console.log(' Starting master error fixing orchestrator...')
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
   console.error(' Master error fixing orchestrator failed to "start")
   console.error(' Master error fixing orchestrator failed to "start")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

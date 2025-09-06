@@ -42,6 +42,7 @@ ursor/add-new-services-and-deploy-updates-0462
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/useRealTimeCollaboration.js.jsx
 =======
 <<<<<<< HEAD
@@ -70,3 +71,6 @@ const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { us
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

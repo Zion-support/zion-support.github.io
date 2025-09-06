@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -30,20 +31,33 @@ import { Link } from "react-router-dom",
 =======
 import React from "react";
 import {}
+=======
+import React from "react";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardContent,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
   CardDescription,";
 } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
 import { Badge } from "@/components/ui/badge";
 import {}
+=======
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ChevronRight,
   FileText,
   Image,
   Clock,
   Zap,
+<<<<<<< HEAD
   BookOpen,";
 } from "lucide-react";"
 import { Link } from "react-router-dom";
@@ -58,6 +72,12 @@ import { Link } from "react-router-dom",export function TalentDashboard() {
 =======
 import { Link } from "react-router-dom",export function TalentDashboard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  BookOpen,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+export function TalentDashboard() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 =======
 export function TalentDashboard() {}
@@ -360,6 +380,7 @@ export function TalentDashboard() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
@@ -574,20 +595,15 @@ function TalentDashboard() {
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+}
 
-import React from "react";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
-import {Link} from "react-router-dom";
-import React from "react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
-import { Link } from "react-router-dom";
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -660,3 +676,5 @@ import { Link } from "react-router-dom";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

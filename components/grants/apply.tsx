@@ -10,12 +10,14 @@ import { useRouter  } from 'next/router';
 
 import {useState} from 'react';
 
+<<<<<<< HEAD
 
 '
 import EnhancedLayout from '../../components/layout/EnhancedLayout';'
 import { useRouter  } from 'next/router';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 
 const categories: GrantCategory[] = ['
   'Ecosystem Tools','
@@ -28,6 +30,22 @@ export default function ApplyGrantPage() {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
+=======
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+
+const categories: GrantCategory[] = [
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -40,11 +58,22 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -53,7 +82,15 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -61,6 +98,7 @@ pr-12243
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -73,13 +111,25 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -143,10 +193,22 @@ function ApplyGrantPage() {
 }
       router.push (`/grants/${data.id}`);
 
+<<<<<<< HEAD
 pr-12243
     } catch (e: any) {
       set_error (e.message);
     } finally {
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+    } catch (e: any) {
+      set_error (e.message);
+    } finally {
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -191,18 +253,33 @@ export default function ApplyGrantPage() { return null; }
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),
+<<<<<<< HEAD
 pr-12243
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           budgetCurrency;
           supportingLinks: supportingLinks;'
             .split('\n');
@@ -235,7 +312,15 @@ pr-12243
 pr-12243
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -277,6 +362,7 @@ pr-12243
           <button;
             disabled={loading}
             onClick={() => save(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >;
@@ -354,10 +440,106 @@ program,
 
   };
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
+          >;
+            Submit for Review;
+          </button>        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+
+  const _save = async (_submit: boolean) => {
+    try {
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+  const save = async (submit: boolean) => {
+    try {
+      setLoading(true);
+      setError(null)
+      const resp = await fetch('/api/grants', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          program
+          projectName
+          teamInfo
+          proposalSummary
+          timeline
+          budgetAmount: Number(budgetAmount |0)
+          budgetCurrency
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map(s => s.trim())
+            .filter(Boolean)
+          pitchDeckUrl
+          region
+          sector: (sector as any) |undefined
+          submit
+        })
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`);
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
+          budgetCurrency;
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean);
+          pitchDeckUrl;
+          region;
+          sector: (sector as any) |undefined
+          submit})});
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`)
+    } catch (e: any) {
+      setError(e.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <EnhancedLayout>
-<h1 className='text-2xl font-semibold mb-4'>
+      <h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
       <div className='grid gap-4 max-w-3xl'>
@@ -471,7 +653,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
     }
 
@@ -482,8 +671,15 @@ pr-12243
   return (
 
 
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {error && <div className='text-sm text-red-600'>{error}</div>}
 =======
 '
@@ -504,12 +700,16 @@ pr-12243
           >
 <<<<<<< HEAD
             Submit for Review
+<<<<<<< HEAD
           </button>
         </div>
 =======
             Submit for Review;
           </button>        </div>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          </button>        </div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
     </EnhancedLayout>
   );
@@ -540,24 +740,48 @@ pr-12243
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 
 );
 }
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   );
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+}
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cutting-edge-services-2025.tsx
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
@@ -108,6 +109,8 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shie
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   CheckCircle,
   ArrowRight,
@@ -138,17 +141,22 @@ import {
   Clock,
   ExternalLink,;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,6 +193,12 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+
+};
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const serviceCategories = [
 import React from 'react',
 import Head from 'next / head',
@@ -238,6 +252,7 @@ const service_categories = [;
 <<<<<<< HEAD:pages_backup/cutting-edge-services-2025.tsx
   {
     title: 'AI & Consciousness',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 =======
@@ -326,6 +341,8 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 description:
       'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
@@ -379,6 +396,7 @@ borderColor: 'border-indigo-500/30',
 borderColor: 'border-blue-500/30',
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
     title: 'Micro SAAS'
@@ -457,6 +475,8 @@ const serviceCategories = [;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
@@ -467,12 +487,16 @@ borderColor: 'border-teal-500/30',
   },
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function CuttingEdgeServices2025() {
   return (
     <Layout>
@@ -522,6 +546,7 @@ export default function CuttingEdgeServices2025() {
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -588,6 +613,8 @@ export default function CuttingEdgeServices2025() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <section className='relative py-20 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
@@ -664,6 +691,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -674,6 +702,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/cutting-edge-services-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -755,6 +786,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cutting-edge-services-2025.tsx
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
@@ -839,6 +871,8 @@ function CuttingEdgeServices2025() {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Service Categories */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -993,6 +1027,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1427,6 +1462,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   ))}
                 </div>
               </motion.div>
@@ -1457,6 +1494,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 
@@ -1728,6 +1766,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={plan}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1797,6 +1837,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300'
                   >
                     Get Started
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -1922,6 +1963,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <ArrowRight className='ml-2 w-4 h-4' />
                   </a>
                 </div>
@@ -1933,12 +1976,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Contact Section */}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20'>
         <div className='max-w-4xl mx-auto text-center px-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <motion.div
 =======
               Contact our team of experts to learn how our cutting-edge services can transform your business;
@@ -1951,6 +1998,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cutting-edge-services-2025.tsx
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
@@ -2053,6 +2101,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
 <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
               Ready to Experience the Future?
@@ -2086,6 +2136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <motion.a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
                 href="/contact"
@@ -2126,6 +2177,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -2136,6 +2189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ArrowRight className='ml-2 w-5 h-5' />
               </motion.a>
               <motion.a
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2176,6 +2230,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cutting-edge-services-2025.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 href='tel:+13024640950'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -2194,6 +2250,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/cutting-edge-services-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2368,3 +2425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/cutting-edge-services-2025.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -35,6 +35,7 @@ export interface TenantInfo {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     subtitle: string
 
@@ -154,6 +155,11 @@ export interface TenantResponse {;
   tenant: TenantInfo | null;
     subtitle: string,    cta: string
 };
+=======
+    subtitle: string;
+    cta: string;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   is_active: boolean;
 }
 <<<<<<< HEAD
@@ -167,6 +173,7 @@ export interface TenantResponse {;
 export interface TenantResponse {
   tenant: TenantInfo | null;
   error?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   error?: string;
@@ -175,3 +182,29 @@ export interface TenantResponse {
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+}
+
+
+export interface TenantInfo {;
+
+    cta: string;
+  },;
+  is_active: boolean;
+}
+;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+  error?: string;
+}
+;
+}
+
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string
+}
+;
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

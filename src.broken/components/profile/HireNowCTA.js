@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -88,6 +89,9 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 =======
 
@@ -101,12 +105,16 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
         startDate: '','
         message: ''
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {        e.preventDefault();
+=======
+        e.preventDefault();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         if (onHire) {
 =======
 
@@ -120,6 +128,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
             projectDescription: '','
             budget: '','
             startDate: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
             message: ''}
@@ -143,6 +152,14 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
         }));
     };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
         <CardTitle className="text-white flex items-center gap-2">"
@@ -206,7 +223,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
     </Card>);
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -21,6 +21,7 @@ export function MobileHome() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
 <<<<<<< HEAD
 =======
@@ -56,6 +57,12 @@ import React from "react",
 =======
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";
+
+
+import React from "react",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
@@ -84,12 +91,16 @@ export function MobileHome() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 =======
 "
@@ -101,11 +112,16 @@ export function MobileHome() {}
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen">
       <MobileHeader
         title={isClient ? "Client Dashboard" : "Talent Dashboard"}
         showNotifications
         showSettings
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       />
@@ -158,6 +174,11 @@ export function MobileHome() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+      />
+
+      <main className="py-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>
 
@@ -166,8 +187,11 @@ export function MobileHome() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -195,8 +219,11 @@ function MobileHome() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -243,6 +270,7 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -267,3 +295,5 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

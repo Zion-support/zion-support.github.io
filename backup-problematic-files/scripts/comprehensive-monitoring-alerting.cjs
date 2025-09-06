@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-monitoring-alerting.cjs
 =======
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-monitoring-alerting.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -73,6 +77,7 @@
     process.exit(1)}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-monitoring-alerting.cjs
 main();#!/usr/bin/env node;
@@ -95,6 +100,12 @@ main();
 
 main();#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+main();
+
+#!/usr/bin/env node;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -154,5 +165,8 @@ console.log('')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       log('info', 'Monitoring "Recommendations")
+<<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

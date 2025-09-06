@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -60,14 +61,16 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { supabase } from "@/integrations/supabase/client",
+=======
+import { supabase } from "@/integrations/supabase/client";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cleanupAuthState } from "@/utils/authUtils";
 import type { UserProfile } from "@/types/auth";
-
-import { cleanupAuthState } from "@/utils/authUtils",
-import type { UserProfile } from "@/types/auth",export const useLogout = (setUser: (user: UserProfile | null) => void) => {
+export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
       // Clean up existing auth state
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import type { UserProfile } from "@/types/auth",export const useLogout = (setUser: (user: UserProfile | null) => void) => {
@@ -281,6 +284,14 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      (cleanupAuthState(),
+        // Sign out
+        await supabase.auth.signOut({ scope: "global" }));
+
+      // Update state
+      setUser(null);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       console.error("Error during logout:", error);
 <<<<<<< HEAD
@@ -299,9 +310,10 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
     }
   };
 
-  return { logout }
+  return { logout };
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,10 +334,17 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    }
+  }
+    }
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return { logout }
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,3 +370,5 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

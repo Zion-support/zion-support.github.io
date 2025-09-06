@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 const DATA_ROOT = path.join(process.cwd(), 'datamarketplace');
@@ -16,6 +17,8 @@ function ensureDataDir(): void {;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 import path from 'path';
 function getFilePath(fileName: string): string {
@@ -71,15 +74,28 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+  }
+  return default_value;
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+}
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -92,7 +108,10 @@ export interface DatabaseConfig {
 }export interface QueryResult<T = any> {
 =======
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface QueryResult<T = any> {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -138,11 +157,16 @@ export class DatabaseManager {};
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======  }
   return defaultValue;
 }
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (fs.existsSync(filePath)) {;
 =======
 
@@ -153,6 +177,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   } catch (error) {'
     console.error('Error reading file:', error);
+<<<<<<< HEAD
 
   }
   return defaultValue;
@@ -161,6 +186,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+  }
+  return defaultValue;
+}
+
+// Default database configuration
+const defaultConfig: DatabaseConfig = {
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '5432'),
+  database: process.env.DB_NAME || 'zion_tech_group',
+  username: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || 'password',
+  ssl: process.env.DB_SSL === 'true'
+};
+// Singleton database instance
+export const db = new DatabaseManager(defaultConfig);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function writeJsonFile < T>(file_name: string, data: T): void {
 =======
 
@@ -187,12 +230,18 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -208,6 +257,7 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 =======
@@ -215,6 +265,9 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs';
 =======
 }import fs from 'fs';
@@ -257,7 +310,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+}
+import fs from 'fs';
+import path from 'path';
+
+}
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -94,16 +94,24 @@ export function get_state (): IntegrationState {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   connections: [],
   logs: [],
-  overrides: [],}
+  overrides: [],
+  connections: [],
+  logs: [],
+  overrides: [],
 export function getState(): IntegrationState {
+}
+;
+export function get_state (): IntegrationState {
   return { ...state }
 }
-export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
+  updater (state);
 };
 
 export function getState(): IntegrationState {;
   return { ...state };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -240,3 +248,48 @@ export function reset_state (): void {}
     overrides: [],
   };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+  updater(state);
+  return { ...state }
+}
+export function resetState(): void {
+  state = {
+
+  connections: [],
+  logs: [],
+  overrides: [];
+}
+;
+export function get_state (): IntegrationState {
+  return { ...state }
+}
+  updater(state);
+  return { ...state }
+}
+export function reset_state (): void {
+  state = {
+  }
+    connections: [],
+    logs: [],
+    overrides: [];
+    connections: []
+    logs: []
+    overrides: []
+  }
+}
+
+
+    connections: [],
+    logs: [],
+    overrides: [],
+  };
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

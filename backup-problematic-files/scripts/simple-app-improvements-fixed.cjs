@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
 =======
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
     this.log(`Duration: ${duration}ms`);
 
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -61,9 +65,13 @@ improvements.runAllImprovements().catch(console.error);
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/simple-app-improvements-fixed.cjs
 =======
 improvements.runAllImprovements().catch(console.error);
+
 #!/usr/bin/env node;
+<<<<<<< HEAD
 improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -94,5 +102,8 @@ console.log('=====')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     this.log('\\n� App improvements completed!')
+<<<<<<< HEAD
     this.log('\\n� App improvements completed!')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

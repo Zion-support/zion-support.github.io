@@ -8,7 +8,14 @@ import type { GetServerSideProps, NextPage } from 'next';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -26,8 +33,14 @@ import { listPublishedPosts } from '@/utils/data/blogStore';'
 import BlogCard from '@/components/blog/BlogCard';
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -40,11 +53,16 @@ type Props = { topic: string; posts: BlogPost[] }type Props = { topic: string, p
 const TopicPage: NextPage < Props> = ({ topic, posts }) => {
   return (
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -55,6 +73,13 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;'
@@ -68,8 +93,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 pr-12243
+=======
+
+=======
+
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
@@ -103,11 +137,18 @@ pr-12243
               }).catch(() => {});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             }
           />;
         </div>;'
@@ -158,15 +199,41 @@ pr-12243
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
+=======
+
+<<<<<<< HEAD
+=======
+
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+    <div>
+      <Head>
+        <title>{topic} - Zion Blog</title>
+        <meta name="description" content={`Articles about ${topic}`} />
+        <meta property="og:title" content={`${topic} - Zion Blog`} />
+        <meta property="og:description" content={`Articles about ${topic}`} />
+        <meta property="og:image" content="/images/og/topic-default.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
+        <meta name="twitter:description" content={`Articles about ${topic}`} />
+        <meta name="twitter:image" content="/images/og/topic-default.jpg" />
+      </Head>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
+        <div className="mb-6">
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -196,6 +263,10 @@ pr-12243
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
@@ -245,6 +316,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;'
@@ -255,7 +333,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;'
 
 '
   const topic = String(ctx.params?.topic || '');
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
@@ -269,7 +354,12 @@ export default TopicPage;
 export default TopicPage;
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>);
 }
 ;
@@ -309,9 +399,15 @@ export default TopicPage;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
@@ -352,12 +448,14 @@ type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, 
 <<<<<<< HEAD
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-<meta name='description' content={`Articles about ${topic}`} />
+        <meta name='description' content={`Articles about ${topic}`} />
         <meta property='og:title' content={`${topic} - Zion Blog`} />
         <meta property='og:description' content={`Articles about ${topic}`} />
         <meta property='og:image' content='/images/og/topic-default.jpg' />
@@ -431,11 +529,15 @@ export const getServerSideProps: GetServerSideProps = async ctx => {';
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
   const topic = String(ctx.params?.topic || '');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+<<<<<<< HEAD
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>"
@@ -443,6 +545,18 @@ export default TopicPage;      </Head>"
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>"
         <div className="mb-6">
 };
+=======
+=======
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+  return { props: { topic, posts } }
+}
+export default TopicPage;      </Head>
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
+        <div className="mb-6">
+};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
   const topic = String(ctx && ctx.params?.topic || '');
@@ -450,6 +564,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;'
   return { props: { topic, posts } };
 };
 
+<<<<<<< HEAD
 export default TopicPage;      </Head>;"
       <div className="mx-auto max-w-6xl">;"
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;"
@@ -476,14 +591,47 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;'
 }
 export default TopicPage;
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
   return { props: { topic, posts } };
 };
 
 export default TopicPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+export default TopicPage;      </Head>;
+      <div className="mx-auto max-w-6xl">;
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
+        <div className="mb-6">;
+          <PageShareButtons
+            title={`${topic} - Zion Blog`}
+            url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
+            description={`Articles about ${topic}`}
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const topic = String(ctx.params?.topic |'');
+};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+  const topic = String(ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
+  return { props: { topic, posts } }
+}
+export default TopicPage;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

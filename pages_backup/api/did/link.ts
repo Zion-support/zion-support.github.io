@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/did/link.ts
 <<<<<<< HEAD:pages/api/did/link.ts
 <<<<<<< HEAD
@@ -29,11 +30,17 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 =======
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 (global as any).__ZION_DID_STORE__ = store
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/link.ts
 
@@ -48,6 +55,7 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 (global as any).__ZION_DID_STORE__ = store
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -89,6 +97,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+  if (req.method !== 'POST') return res.status(405).end()
+  const { payload, message, signature } = req.body |{}
+  if (!payload |!payload.address) return res.status(400).json({ error: 'Missing payload' })
+  const key = `${payload.address}`
+  store[key] = { payload, message, signature, updatedAt: Date.now() }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== 'POST') return res.status(405).end()
   const { payload, message, signature } = req.body || {}
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' })
@@ -102,7 +118,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const key = `${payload.address}`
   store[key] = { payload, message, signature, updatedAt: Date.now() }
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/link.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return res.status(200).json({ ok: true });
 };
 
@@ -143,6 +162,7 @@ export default function handler(req, res) {}
 <<<<<<< HEAD:pages_backup/api/did/link.ts
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/link.ts
 <<<<<<< HEAD
 }
@@ -181,6 +201,8 @@ export default function handler(req, res) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/did/link.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 (global as any).__ZION_DID_STORE__ = store;
@@ -196,6 +218,7 @@ if (!payload || !payload.address)
 
   return res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/did/link.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -208,3 +231,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/did/link.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

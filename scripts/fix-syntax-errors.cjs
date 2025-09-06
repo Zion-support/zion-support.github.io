@@ -7,10 +7,14 @@ main
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   }
 
@@ -93,6 +97,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   fixCommonErrors(content) {
     // Fix unterminated strings
@@ -117,11 +122,38 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     content = content.replace(/
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
     
+=======
+<<<<<<< HEAD
+  fixCommonErrors(content) {
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith("'")) {
+        return match + "'";
+      }
+      return match;
+    });
+    
+    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith('"')) {
+        return match + '"';
+      }
+      return match;
+    });
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
+    
+    // Fix merge conflict markers
+    content = content.replace(/
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     

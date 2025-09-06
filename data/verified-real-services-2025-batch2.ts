@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface VerifiedRealService2025Batch2 {
 export interface VerifiedRealService2025Batch2 {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -10,6 +13,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export interface VerifiedRealService2025Batch2 {
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -22,6 +29,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
 
+<<<<<<< HEAD
 
     address: string;
 <<<<<<< HEAD
@@ -30,6 +38,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     address: string;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -67,8 +81,11 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 ];      mobile: "+1 302 464 0950";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 "
@@ -99,13 +116,28 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      email: "kleber@ziontechgroup.com";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -119,6 +151,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
+<<<<<<< HEAD
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control", price: "$79/month",
     description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
@@ -129,6 +162,9 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     description:
       'AI-powered quality assurance platform that automates testing and ensures software quality.'
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     address: string
   }
 }
@@ -141,10 +177,22 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     price: "$79/month";
     description: "AI-powered quality assurance platform that automates testing and ensures software quality.";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
+    tagline: "Automated testing and quality control", price: "$79/month",
+    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
+    id: 'ai-quality-assurance'
+    name: 'AI Quality Assurance Platform'
+    tagline: 'Automated testing and quality control'
+    price: '$79/month'
+    description:
+      'AI-powered quality assurance platform that automates testing and ensures software quality.'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     features: [
       "Automated testing";
       "AI defect detection";
       "Performance monitoring";
+<<<<<<< HEAD
       "Quality metrics";
 =======
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = []
@@ -161,6 +209,8 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     realImplementation: true,
     contactInfo: {"
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
       "Quality metrics",
       "Continuous integration"
@@ -215,14 +265,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com",
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      "Quality metrics";
+      "Continuous integration"
+    ];
+    link: "/services/ai-quality-assurance", category: "Verified Services 2025",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -230,3 +291,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+<<<<<<< HEAD
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

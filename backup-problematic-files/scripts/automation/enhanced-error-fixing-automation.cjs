@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -41,6 +42,10 @@ class EnhancedErrorFixingAutomation {
       try {
         const content = fs.readFileSync(file, "utf8");
         if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           this.log(`Fixing merge conflicts in ${file}`);
           
           // Simple merge conflict resolution - keep the HEAD version
@@ -49,12 +54,16 @@ class EnhancedErrorFixingAutomation {
           let inConflict = false;
           
           for (const line of lines) {
+<<<<<<< HEAD
             if (line.includes("<<<<<<< HEAD")) {
               inConflict = true;
               continue;
             } else if (line.includes("=======")) {
               continue;
             } else if (line.includes(">>>>>>> ")) {
+=======
+            if (line.includes("
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -141,11 +150,15 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -318,9 +331,13 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
+<<<<<<< HEAD
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

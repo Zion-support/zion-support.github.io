@@ -7,6 +7,7 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";"
 import { Link } from "react-router-dom";
 "
@@ -35,6 +36,20 @@ import { X } from "lucide-react";
 
     const handleScroll = () => {
 =======
+=======
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
+
+export function FloatingCTA() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { useState, useEffect } from "react",
@@ -50,6 +65,10 @@ export function FloatingCTA() {}
   const [isClosed, setIsClosed] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
 
     const handleScroll = () => {
@@ -58,6 +77,7 @@ export function FloatingCTA() {}
       const threshold = 600, // Show CTA after scrolling 600px
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
       if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
 =======
 
@@ -143,12 +163,37 @@ export function FloatingCTA() {}
   return (
 =======
       }    setIsClosed(true);
+=======
+
+
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isClosed]);
+
+  const handleClose = () => {;
+
+    setIsClosed(true);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setIsVisible(false);
   }
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
 "
     window.addEventListener("scroll", handleScroll),
@@ -163,6 +208,7 @@ export function FloatingCTA() {}
   },
 
   if (!isVisible) return null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,11 +254,37 @@ export function FloatingCTA() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             aria-label="Close"
           >"
+=======
+
+
+  return (
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
+        <div className="mr-4">
+          <p className="text-white font-medium">Ready to explore Zion?</p>
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+            asChild
+          >
+            <Link to="/signup">Register Now</Link>
+          </Button>
+          <button 
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close"
+          >
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <X className="w-5 h-5" />
           </button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -230,14 +302,97 @@ export function FloatingCTA() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { useState, useEffect } from "react",;
-import { X } from "lucide-react",;          </button>;
+import { X } from "lucide-react",;
+export function FloatingCTA() {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isClosed, setIsClosed] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY,;
+      const threshold = 600, // Show CTA after scrolling 600px;
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    },;
+    window.addEventListener("scroll", handleScroll),;
+    return () => {;
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isClosed]),;
+  const handleClose = () => {;
+    setIsClosed(true),;
+    setIsVisible(false);
+  };
+  if (!isVisible) return null;
+  return (;
+;
+      if (scrollPosition > threshold && !isClosed) {;
+        setIsVisible(true),;
+      } else {;
+        setIsVisible(false),;
+      }
+    },;
+;
+    window.addEventListener("scroll", handleScroll),;
+    return () => {;
+      window.removeEventListener("scroll", handleScroll),;
+    },;
+  }, [isClosed]),;
+;
+  const handleClose = () => {;
+    setIsClosed(true),;
+    setIsVisible(false),;
+  },;
+;
+  if (!isVisible) return null,;
+;
+  return (;
+
+  return (
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
+        <div className="mr-4">;
+          <p className="text-white font-medium">Ready to explore Zion?</p>;
+          <p className="text-zion-slate-light text-sm">;
+            Register today to access all features!;
+          </p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button
+            variant="default"
+            size="sm"
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+            asChild>;
+            <Link to="/signup">Register Now</Link>;
+          </Button>;
+          <button
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close">;
+            <Link to="/signup">Register Now</Link>;
+          </Button>;
+          <button;
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1";
+            aria-label="Close";
+          >;
+            <X className="w-5 h-5" />;
+          </button>;
         </div>;
       </div>;
-    </div>;import { Button  } from '@/components / ui / button';
+    </div>;
+  );
+
+import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
 =======
@@ -333,18 +488,19 @@ if (return null) {}
 }
 <<<<<<< HEAD
   return (
-    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade-in">;
-      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify-between">;
-        <div className="mr-4">;
-          <p className="text - white font-medium">Ready to explore Zion?</p>;
-          <p className="text - zion - slate - light text-sm">;
+    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in">;
+      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between">;
+        <div className="mr - 4">;
+          <p className="text - white font - medium">Ready to explore Zion?</p>;
+          <p className="text - zion - slate - light text - sm">;
             Register today to access all features!;
           </p>;
         </div>;
-        <div className="flex items - center gap-2">;
+        <div className="flex items - center gap - 2">;
           <Button;
             variant="default";
             size="sm";
+<<<<<<< HEAD
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
 =======
   return ("
@@ -362,6 +518,9 @@ if (return null) {}
             size="sm";"
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             as_child;
           >;"
             <Link to="/signup">Register Now</Link>;
@@ -369,9 +528,10 @@ if (return null) {}
           <button;
 <<<<<<< HEAD
             on_click={handle_close}
-            className="text - zion - slate hover: text - white p-1";
+            className="text - zion - slate hover: text - white p - 1";
             aria - label="Close";
           >;
+<<<<<<< HEAD
             <X className="w - 5 h-5" />;
 =======
             on_click={handle_close}"
@@ -380,6 +540,9 @@ if (return null) {}
           >;"
             <X className="w - 5 h - 5" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <X className="w - 5 h - 5" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </button>;
         </div>;
       </div>;
@@ -387,6 +550,7 @@ if (return null) {}
 
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -417,11 +581,30 @@ const threshold = 600, //Show CTA after scrolling 600px if (scrollPosition > thr
 }
 };
 }, [isClosed]);"
+=======
+}
+;
+
+  ); export function FloatingCTA () {
+  const [isVisible, setIsVisible] = useState (false);
+const [isClosed, setIsClosed] = useState (false);
+useEffect ( () => {
+  const handleScroll = () => {
+  const scrollPosition = window.scrollY;
+const threshold = 600, //Show CTA after scrolling 600px if (scrollPosition > threshold && !isClosed) {
+  setIsVisible (true) 
+}else {
+  setIsVisible (false) 
+}
+};
+}, [isClosed]);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link to="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) 
 }
   );
 }
 ;
+<<<<<<< HEAD
 
 
 }
@@ -436,3 +619,6 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

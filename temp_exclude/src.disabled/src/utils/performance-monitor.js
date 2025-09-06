@@ -58,6 +58,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
 <<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
+<<<<<<< HEAD:temp_exclude/src.disabled/src/utils/performance-monitor.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -95,3 +96,8 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/utils/performance-monitor.js
+=======
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:src.disabled/src/utils/performance-monitor.js

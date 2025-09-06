@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -72,6 +73,13 @@ import {AuthContext} from '@/context/auth/AuthContext';
 import type { AuthContextType } from '@/types/auth';
 export const useAuth = (): AuthContextType => {;  const context = useContext(AuthContext);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useContext } from "react";
+import { AuthContext } from "@/context/auth/AuthContext";
+import type { AuthContextType } from "@/types/auth";
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (context === undefined) {
 =======
 import { useContext } from "react";"
@@ -86,6 +94,7 @@ export const useAuth = (): AuthContextType => {};
   // TypeScript can sometimes lose the narrowing performed above and;
   // assume `context` might still be `{}`. Casting here ensures the;`
   // returned value matches `AuthContextType` exactly.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +190,13 @@ export const useAuth = ():AuthContextType => {;
   // TypeScript can sometimes lose the narrowing performed above and;
   // assume `context` might still be `{}`. Casting here ensures the;
   // returned value matches `AuthContextType` exactly.
+=======
+  return context as AuthContextType;
+};
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -195,8 +211,9 @@ export const useAuth = ():AuthContextType => {;
 },; // TypeScript can sometimes lose the narrowing performed above and // assume `context` might still be ` {}`
 }`. Casting here ensures the // returned value matches `AuthContextType` exactly. return context as AuthContextType;
 };
-  return context as AuthContextType
+  return context as AuthContextType;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,3 +232,5 @@ export const useAuth = ():AuthContextType => {;
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,9 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 
 '
@@ -12,19 +18,30 @@ import Link from 'next/link';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
@@ -65,7 +82,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+=======
+
+          <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {[;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {
                 title: 'Controls Library'
 =======
@@ -93,6 +121,7 @@ pr-12243
               }
 <<<<<<< HEAD
               {
+<<<<<<< HEAD
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
@@ -123,10 +152,47 @@ pr-12243
             ].map(f => (;
 
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 title: 'Audit Room'
                 desc: 'Share evidence securely with auditors; immutable logs.'
               }
             ].map(f => (
+<<<<<<< HEAD
+=======
+=======
+
+          <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {[;
+              {;
+                title: 'Controls Library',;
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',;
+              },;
+              {;
+                title: 'Evidence Automation',;
+                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',;
+              },;
+              {;
+                title: 'Vendor Risk',;
+                desc: 'Automated questionnaires, tracking, and remediation workflows.',;
+              },;
+              {;
+                title: 'Asset Inventory',;
+                desc: 'Infrastructure and device inventory with configuration checks.',;
+              },;
+              {;
+                title: 'Workflow & Tasks',;
+                desc: 'Assign remediation tasks, SLAs, and approvals.',;
+              },;
+              {;
+                title: 'Audit Room',;
+                desc: 'Share evidence securely with auditors; immutable logs.',;
+              },;
+            ].map(f => (;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div
                 key={f.title}
 =======
@@ -226,8 +292,15 @@ pr-12243
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 pr-12243
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 =======
@@ -243,7 +316,11 @@ pr-12243
 	)
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 pr-12243
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           </div>;
 
@@ -342,6 +419,10 @@ pr-12243
               .;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 }
@@ -382,11 +463,19 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -397,3 +486,12 @@ pr-12243
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

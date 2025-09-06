@@ -19,8 +19,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -49,13 +51,50 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function ReferralGuide() {
 
   const steps = [
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description
+ */
+function ReferralGuide() {
+  const steps = [;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+export function ReferralGuide() {
+
+  const steps = [
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description
+ */
+function ReferralGuide() {
+  const steps = [;
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     {
@@ -64,10 +103,15 @@ export function ReferralGuide() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+    {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 
+<<<<<<< HEAD
 =======
 =======
       title: "They sign up",;
@@ -154,10 +198,30 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]      title: "They sign up"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      title: "They sign up",
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"},
+
+    {
+      title: "They complete onboarding",
+      description: "Once they complete their profile setup, your referral is confirmed"},
+    {
+      title: "You earn rewards"
+      description: "Rewards are issued based on the type of user who completes onboarding"}]
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+
+    {
+      title: "You earn rewards"
+      description: "Rewards are issued based on the type of user who completes onboarding"}]
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+
+      title: "They sign up"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
       title: "They complete onboarding"
       description: "Once they complete their profile setup, your referral is confirmed"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: "They sign up",;
@@ -169,6 +233,10 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
       title: "They sign up",,
   description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
@@ -204,6 +272,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
+<<<<<<< HEAD
 =======
     {"
       title: "You earn rewards""
@@ -211,6 +280,11 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Card>
       <CardHeader>
@@ -232,6 +306,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,17 +338,26 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function ReferralGuide() {;
   const steps = [;
     {;
-      title: "Share your referral link",,
-  description: "Copy your unique referral link and share it with potential clients or talent"},;
+      title: "Share your referral link",;
+      description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: "They sign up",;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      title: "They sign up",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
     {;
       title: "They complete onboarding",;
@@ -281,6 +365,7 @@ export function ReferralGuide() {;
     {;
       title: "You earn rewards",;
       description: "Rewards are issued based on the type of user who completes onboarding"}],;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -296,11 +381,45 @@ export function ReferralGuide() { return null; }
 
   return (
 
+=======
+
+  return (
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+;
+export function ReferralGuide() {;
+  const steps = [;
+    {;
+      title:"Share your referral link",;
+      description:"Copy your unique referral link and share it with potential clients or talent"},;
+    {;
+      title:"They sign up",;
+      description:"When someone clicks your link and creates an account, they're tagged as your referral"},;
+    {;
+      title:"They complete onboarding",;
+      description:"Once they complete their profile setup, your referral is confirmed"},;
+    {;
+      title:"You earn rewards",;
+      description:"Rewards are issued based on the type of user who completes onboarding"}],;
+;
+  return (;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"},;
+    {;
+      title: "They complete onboarding",;
+      description: "Once they complete their profile setup, your referral is confirmed"},;
+    {;
+      title: "You earn rewards";
+      description: "Rewards are issued based on the type of user who completes onboarding"}];
+  return (;
+
+  return (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card>;
       <CardHeader>;
         <CardTitle>How Referrals Work</CardTitle>;
         <CardDescription>Follow these steps to earn rewards through referrals</CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent>;"
         <div className="space-y-4">;
 <<<<<<< HEAD
@@ -315,10 +434,18 @@ export function ReferralGuide() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <CardContent>;
+        <div className="space-y-4">;
+          {steps && steps.map((step, index) => (;
+            <div key={index} className="flex gap-4">;
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -340,6 +467,13 @@ export function ReferralGuide() { return null; }
 =======
       title: "They sign up",;}}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
                 {index + 1}
               </div>;"
@@ -386,12 +520,13 @@ export function ReferralGuide() { return null; }
       </CardHeader>;
 <<<<<<< HEAD
       <CardContent>;
-        <div className="space-y-4">;
+        <div className="space - y-4">;
           {steps.map ((step, index) => (
-            <div key={index} className="flex gap-4">;
-              <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary-foreground">;
+            <div key={index} className="flex gap - 4">;
+              <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary - foreground">;
                 {index + 1}
               </div>;
+<<<<<<< HEAD
               <div className="space-y-1">;
                 <h4 className="font-medium">{step.title}</h4>;
                 <p className="text - sm text - muted-foreground">{step.description}</p>;
@@ -407,11 +542,17 @@ export function ReferralGuide() { return null; }
                 <h4 className="font - medium">{step.title}</h4>;"
                 <p className="text - sm text - muted - foreground">{step.description}</p>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <div className="space - y-1">;
+                <h4 className="font - medium">{step.title}</h4>;
+                <p className="text - sm text - muted - foreground">{step.description}</p>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -424,6 +565,9 @@ export function ReferralGuide() { return null; }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
@@ -448,6 +592,7 @@ export function ReferralGuide() { return null; }
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -464,3 +609,5 @@ export function ReferralGuide() { return null; }
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -9,6 +9,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const endpoints = [
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const endpoints = [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       '/'
       '/learn'
       '/dao'
@@ -36,11 +43,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
       } catch (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/expand-services-advertise-and-build-project-4b36
         const ms = Date && Date.now() - t0;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+        const ms = Date && Date.now() - t0;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         results && results.push({
 =======
       } catch (e) {}
@@ -70,6 +81,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (owner && repo && token) {
 =======
     if (owner && repo && token) {'
@@ -106,6 +119,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/expand-services-advertise-and-build-project-4b36
@@ -114,6 +128,9 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       statusCode: 200,
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+      statusCode: 200,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
     };
   } catch (e) {}
@@ -122,10 +139,16 @@ ursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 exports.handler = async function() {
   try {
+<<<<<<< HEAD
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',    const endpoints = [
 =======
 
@@ -135,10 +158,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const endpoints = [
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+    const endpoints = [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -157,6 +185,9 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const url = `${baseUrl}${ep}`,
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+      const url = `${baseUrl}${ep}`,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       const t0 = Date && Date.now(),
       try {}
         const resp = await fetch(url),
@@ -170,6 +201,8 @@ ursor/expand-services-advertise-and-build-project-4b36
         const ms = Date.now() - t0,
         results.push({ path: ep, status: resp.status, ms })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       } catch (e) {
 =======
       } catch (e) {}
@@ -180,6 +213,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
@@ -205,6 +241,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 },const { upsert_file } = require ('./_lib / github');
 =======
 
@@ -223,6 +260,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { upsert_file } = require ('./_lib / github');
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+},
+const { upsert_file } = require ('./_lib / github');
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ;
 exports.handler = async function () {}
   try {'
@@ -375,5 +416,9 @@ if ( {) {}
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

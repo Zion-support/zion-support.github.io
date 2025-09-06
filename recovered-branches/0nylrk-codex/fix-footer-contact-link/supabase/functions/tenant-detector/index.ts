@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -17,11 +18,17 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
+import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,12 +60,22 @@ interface TenantInfo {
 
 interface TenantInfo {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
+
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
+
+interface TenantInfo {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
 
+<<<<<<< HEAD
 
 '
   throw new Error('Required environment variables are not set')
@@ -68,16 +85,26 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7'; 
 =======
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+
+if (!supabaseUrl || !supabaseServiceKey) {
+
+  throw new Error('Required environment variables are not set')
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 <<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
+<<<<<<< HEAD
   try {    if (!hostname && !subdomainParam) {
 =======
 serve(async (req) => {}
@@ -96,13 +123,28 @@ serve(async (req) => {}
     // Get hostname from parameters or headers'
     const forwardedHost = req && req.headers.get('x-forwarded-host');
     const hostname = hostnameParam || '
+=======
+  try {
+
+    const url = new URL(req && req.url);
+    const hostnameParam = url && url.searchParams.get('host');
+    const subdomainParam = url && url.searchParams.get('subdomain');
+    
+    // Get hostname from parameters or headers
+    const forwardedHost = req && req.headers.get('x-forwarded-host');
+    const hostname = hostnameParam || 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
       url && url.hostname;
 
 
+<<<<<<< HEAD
 
     if (!hostname && !subdomainParam) {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    if (!hostname && !subdomainParam) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info;
@@ -122,7 +164,8 @@ serve(async (req) => {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         console && console.error('Database error:', error);
-        throw new Error(`Database error: ${error && error.message}`)        console && console.error('Database error:', error);
+        throw new Error(`Database error: ${error && error.message}`)
+        console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
 <<<<<<< HEAD
 =======
@@ -141,7 +184,8 @@ serve(async (req) => {}
 <<<<<<< HEAD
       // If no match on custom domain, try subdomain
       if (!data && !error) {
-        const subdomain = hostname && hostname.split('.')[0];        const subdomain = hostname && hostname.split('.')[0];
+        const subdomain = hostname && hostname.split('.')[0];
+        const subdomain = hostname && hostname.split('.')[0];
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
@@ -160,6 +204,7 @@ serve(async (req) => {}
             .eq('subdomain', subdomain)'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             .eq('is_active', true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             .single();
@@ -202,6 +247,16 @@ interface TenantInfo {;
 =======
             .single();  theme_preset: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            .single();
+
+
+          if (!subdomainResult && subdomainResult.error) {
+            tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
+
+  logo_url: string | null,
+  theme_preset: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -277,7 +332,27 @@ if ( {) {}
         .single ();
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
       // If no match on custom domain, try subdomain;      // Check condition
+=======
+      // If no match on custom domain, try subdomain;
+
+      if (!data && !error) {;
+        const subdomain = hostname.split('.')[0],;
+        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {;
+          const subdomainResult = await supabase;
+            .from('whitelabel_tenants');
+            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq('subdomain', subdomain);
+            .eq('is_active', true);
+            .single(),;
+          if (!subdomainResult.error) {;
+            tenantInfo = subdomainResult.data as TenantInfo;
+
+
+
+      // Check condition
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if ( {) {
   $2
 }
@@ -320,6 +395,7 @@ if ( {) {}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             tenant_info = subdomain_result.data as TenantInfo;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -335,10 +411,19 @@ if ( {) {}
       } else // Check condition;
 if ( {) {}
   $2;
+=======
+            tenant_info = subdomain_result.data as TenantInfo;
+          }
+        }
+      } else // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
         tenant_info = data as TenantInfo;
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -346,12 +431,15 @@ if ( {) {}
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -387,6 +475,29 @@ if ( {) {}
 =======
             tenant_info = subdomain_result.data as TenantInfo;    return new Response (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return new Response(
+
+      JSON && JSON.stringify({
+        tenant: tenantInfo,
+
+        status: 'success'
+      });
+      {
+        headers: {
+          'Content-Type': 'application/json'
+          ...corsHeaders}}
+    )
+  } catch (error) {
+    console && console.error('Tenant detector error:', error);
+    return new Response(
+
+      JSON && JSON.stringify({ 
+        error: error && error.message || 'Internal server error',
+
+        status: 'error'
+    return new Response (
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       JSON.stringify ({
         tenant: tenant_info,
 =======
@@ -415,13 +526,17 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({
         error: error.message |'Internal server error'
         status: 'error'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -502,6 +617,48 @@ if ( {) {}
         headers: {  }
 });          'Content - Type': 'application / json',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      });
+      {
+        status: 500;
+        headers: {
+
+;
+    return new Response(;
+      JSON.stringify({;
+        tenant: tenantInfo,;
+        status: 'success';
+      }),;
+      {;
+        headers: {;
+          'Content-Type': 'application/json',;
+          ...corsHeaders}});
+  } catch (error) {;
+    console.error('Tenant detector error:', error),;
+    return new Response(;
+      JSON.stringify({;
+        error: error.message || 'Internal server error',;
+        status: 'error';
+      }),;
+      {;
+        status: 500,;
+        headers: {;
+          'Content-Type': 'application/json',;
+          ...corsHeaders}});
+
+
+
+  }
+});
+
+  }
+});
+
+  }
+});
+
+          'Content - Type': 'application / json',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ...cors_headers}}
     );
   }
@@ -512,8 +669,11 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
 ;
@@ -646,6 +806,7 @@ if (subdomainParam) {
   }
 });
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -660,3 +821,5 @@ if (subdomainParam) {
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

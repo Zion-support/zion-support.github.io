@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   FormField
@@ -29,18 +30,26 @@ import { FormValues } from "./useHireRequestForm";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+import {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
+<<<<<<< HEAD
 } from '@/components / ui / form';
+=======
+} from "@/components/ui/form";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
+<<<<<<< HEAD
 } from '@/components / ui / select';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
@@ -171,6 +180,15 @@ interface TimelineFieldProps {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} from "@/components/ui/select";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface TimelineFieldProps {
+  form: UseFormReturn<FormValues>;
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
@@ -184,6 +202,7 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,6 +260,11 @@ import {FormValues} from "./useHireRequestForm";
     { value: "Ongoing", label: "Ongoing" }
   ],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    { value: "Ongoing", label: "Ongoing" },
+  ];
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <FormField;
       control={form.control}"
@@ -355,6 +379,7 @@ function TimelineField() {}
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -370,6 +395,70 @@ function TimelineField() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormValues } from "./useHireRequestForm",;
+
+interface TimelineFieldProps {;
+  form: UseFormReturn<FormValues>;
+}
+export function TimelineField(): any ({ form }: TimelineFieldProps) {;
+  const timelineOptions = [;
+    { value: "Less than 1 week", label: "Less than 1 week" },;
+    { value: "1-2 weeks", label: "1-2 weeks" },;
+    { value: "2-4 weeks", label: "2-4 weeks" },;
+    { value: "1-2 months", label: "1-2 months" },;
+    { value: "3-6 months", label: "3-6 months" },;
+    { value: "6+ months", label: "6+ months" },;
+    { value: "Ongoing", label: "Ongoing" }
+export /**
+ * TimelineField - Function description
+ */
+function TimelineField() {
+  const timeline_options = [;
+    { value: "Less than 1 week", label: "Less than 1 week" },
+    { value: "1 - 2 weeks", label: "1 - 2 weeks" },
+    { value: "2 - 4 weeks", label: "2 - 4 weeks" },
+    { value: "1 - 2 months", label: "1 - 2 months" },
+    { value: "3 - 6 months", label: "3 - 6 months" },
+    { value: "6+ months", label: "6+ months" },
+    { value: "Ongoing", label: "Ongoing" },
+  ];
+;
+  return (
+
+    <FormField;
+      control={form.control}
+      name="timeline";
+
+      render={({ field }) => (
+        <FormItem>;
+          <FormLabel className="text - white">Project Timeline</FormLabel>;
+          <FormControl>;
+            <Select;
+              onValueChange={field.on_change}
+              value={field.value}
+              default_value={field.value}
+            >;
+              <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text - white">;
+                <SelectValue placeholder="Select estimated timeline" />;
+              </SelectTrigger>;
+              <SelectContent>;
+                {timeline_options.map ((option) => (
+                  <SelectItem key={option.value} value={option.value}>;
+                    {option.label}
+
+      render={({ field }) => (;
+        <FormItem>;
+          <FormLabel className="text-white">Project Timeline</FormLabel>;
+          <FormControl>;
+
+                    {option.label}
+                  </SelectItem>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </SelectContent>
             </Select>
@@ -380,8 +469,18 @@ function TimelineField() {}
     />
   );
 }
+<<<<<<< HEAD
 =======
                 ))}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+        </FormItem>)}
+    />);
+}
+                    {option.label}
+                  </SelectItem>
+                ))}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

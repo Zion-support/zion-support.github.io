@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/contract-builder/deploy.ts
 <<<<<<< HEAD:pages/api/contract-builder/deploy.ts
 <<<<<<< HEAD
@@ -30,6 +31,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/contract-builder/deploy.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = ['
@@ -41,6 +46,7 @@ export default async function handler() { return null; }
   const { bytecode, constructorArgs } = req.body |{}
 <<<<<<< HEAD:pages_backup/api/contract-builder/deploy.ts
   if (!bytecode |!constructorArgs) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/contract-builder/deploy.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +87,15 @@ import { Interface } from '[^']*';
 const abi = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/contract-builder/deploy.ts
+=======
+
+
+    return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+import { Interface } from '[^']*';
+// Simple ABI for demonstration (release/refund)
+const abi = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 <<<<<<< HEAD:pages_backup/api/contract-builder/deploy.ts
 <<<<<<< HEAD
@@ -106,6 +121,7 @@ export default async function handler(req, res) {
     const tx = {
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/contract-builder/deploy.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,13 +167,20 @@ import { Interface } from 'ethers';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/contract-builder/deploy.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 return res.status(200).json({ abi, tx });
   } catch (e: any) {
     return res
       .status(400)
       .json({ error: e?.message || 'Failed to prepare deployment tx' });
+<<<<<<< HEAD
 =======
+=======
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return res.status(200).json({ abi, tx })
   } catch (e: any) {'
@@ -171,8 +194,62 @@ return res.status(200).json({ abi, tx });
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/contract-builder/deploy.ts
 
+<<<<<<< HEAD
   }
 }
+=======
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { Interface } from 'ethers'
+// Simple ABI for demonstration (release / refund);
+
+
+const abi = [;
+  'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
+]
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: 'Method not allowed' });
+  }
+  const { bytecode, constructor_args } = req.body || {}
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: 'bytecode and constructor_args are required' });
+  }
+  try {
+    const iface = new Interface (abi)
+    const data = iface.encode_deploy (constructor_args)
+    const tx = {
+      data: bytecode + data.slice (2)
+      // gas and value are intentionally left for client to estimate via MetaMask;
+    }
+    return res.status (200).json ({ abi, tx });
+  } catch (e: any) {
+    return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
+
+  }
+}
+
+
+
+
+
+
+  }
+
+}
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   const { bytecode, constructorArgs } = req.body || {};
   if (!bytecode || !constructorArgs) {;
@@ -207,6 +284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -431,3 +509,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/contract-builder/deploy.ts
+=======
+}
+}
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 conflictType = 'incoming';
         continue;
       }
@@ -10,18 +11,25 @@ conflictType = 'incoming';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔧 Starting merge conflict resolution...');
+
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
       return false;
@@ -45,19 +53,31 @@ conflictType = 'incoming';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+    if (!content.includes('
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conflictType = 'incoming';
         continue;
       }
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      if (line.includes('>>>>>>>')) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         inConflict = false;
         conflictType = '';
         continue;
       }
+      
       if (!inConflict) {
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -66,96 +86,29 @@ conflictType = 'incoming';
       }
       // Skip incoming version (second part)
     }
+    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
+    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
-#!/usr/bin/env node;
-const fs = require("fs")
-const path = require("fs")
-const { execSync } = require("child_process")
-class MergeConflictResolver {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.fixedFiles = []
-    this.errors = []
-    this.conflictMarkers = [
-      ",
-      ",
-      ",
-      "      "      ""],,
 }
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),,
-}
-  hasConflictMarkers(content) {
-    return this.conflictMarkers.some(marker => content.includes(marker)),,
-}
-  resolveConflict(content) {
-    // Remove all conflict markers and keep the HEAD version (first part)
-    let resolved = content;
-    // Remove conflict markers;
-    resolved = resolved.replace(/\n?/g, "")
-    resolved = resolved.replace(/\n?/g, "")
-    resolved = resolved.replace(/\n?/g, "")
-    resolved = resolved.replace(/    resolved = resolved.replace(/    ;
-    // Clean up any remaining malformed syntax;
-    resolved = resolved.replace(/;/g, "")
-    resolved = resolved.replace(/,\s*}/g, "}")
-    resolved = resolved.replace(/,\s*]/g, "]")
-    resolved = resolved.replace(/,\s*\)/g, ")")
-    return resolved,,
-}
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8")
-      let originalContent = content;
-      if (this.hasConflictMarkers(content)) {
-        content = this.resolveConflict(content)
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content, "utf8")
-          this.fixedFiles.push(filePath)
-          this.log(`✅ Resolved merge conflicts in ${filePath}`)
-          return true,,
-}
-      }
-      return false,,
-} catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false,,
-}
-  }
-  findFilesWithConflicts() {
-    const filesWithConflicts = []
-    const searchInDirectory = (dir) => {
-      const items = fs.readdirSync(dir)
-      for (const item of items) {
-        const fullPath = path.join(dir, item)
-        const stat = fs.statSync(fullPath)
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          searchInDirectory(fullPath),,
-} else if (stat.isFile() && (item.endsWith(".js") || item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".cjs") || item.endsWith(".mjs"))) {
-          try {
-            const content = fs.readFileSync(fullPath, "utf8")
-            if (this.hasConflictMarkers(content)) {
-              filesWithConflicts.push(fullPath),,
-}
-          } catch (error) {
-            // Skip files that can"t be read,,
-}
+
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
+  
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
+    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
+      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
@@ -169,6 +122,7 @@ function findConflictedFiles(dir) {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
 <<<<<<< HEAD
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -256,3 +210,10 @@ try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+          if (content.includes('
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

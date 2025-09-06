@@ -31,6 +31,7 @@ import {};
   DialogTitle;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   DialogDescription;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +41,9 @@ import {};
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  DialogDescription;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -48,6 +52,7 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -77,6 +82,11 @@ import React, { useState } from 'react',
 =======
   DialogDescription;import React, { useState } from 'react',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React, { useState } from 'react',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 =======
 import {}
@@ -86,6 +96,7 @@ import {}
   DialogHeader,
   DialogTitle,
   DialogDescription,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +112,9 @@ import {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -179,12 +193,42 @@ export function MessageTalentModal({}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+
+import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+export interface MessageTalentModalProps {
+
+  talent: TalentProfile
+  isOpen: boolean
+  onClose: () => void
+
+  jobTitle?: string
+}
+
+export function MessageTalentModal({;
+  talent;
+  isOpen;
+  onClose;
+export function MessageTalentModal({
+  talent,
+  isOpen,
+  onClose,
+
+
   jobTitle
 }: MessageTalentModalProps) {
 
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +242,9 @@ export function MessageTalentModal({}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  jobTitle
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
 
@@ -208,16 +255,21 @@ export function MessageTalentModal({}
   const { createConversation } = useMessaging(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const navigate = useNavigate(),
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const navigate = useNavigate(),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -227,11 +279,16 @@ export function MessageTalentModal({}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -250,10 +307,14 @@ export function MessageTalentModal({}
 =======
   const navigate = useNavigate(),  const handleSendMessage = async () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const handleSendMessage = async () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         variant: "destructive"
@@ -301,12 +362,19 @@ export function MessageTalentModal(): any ({;
   const [message, setMessage] = useState(;
     jobTitle ;'`
       ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;'`
+=======
+        variant: "destructive"
+  const [message, setMessage] = useState(;
+    jobTitle ;
+      ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       : `Hi ${talent && talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSendMessage = async () => {;
     if (!message && message.trim()) {;
+<<<<<<< HEAD
       toast({;"
         title: "Message required",;"
         description: "Please enter a message before sending.",;"
@@ -326,6 +394,16 @@ export function MessageTalentModal(): any ({;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before sending.",;
+        variant: "destructive";
+      });
+      return;
+    }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       return;
     }
@@ -405,14 +483,19 @@ function MessageTalentModal() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         image_url: talent.profile_picture_url || ""
       },
       
 
+<<<<<<< HEAD
       // Create conversation with this talent;
       await createConversation(
         talent.user_id,
@@ -430,10 +513,25 @@ function MessageTalentModal() {}
       
       toast({"
         title: "Message sent",`
+=======
+      // Create conversation with this talent
+      await createConversation(
+        talent.user_id,
+        message,
+        jobTitle ? 'job' : 'talent',
+        talent.id,
+        contextData
+
+      ),
+      
+      toast({
+        title: "Message sent",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: `Your message has been sent to ${talent.full_name}.`}),
       
       onClose(),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -453,12 +551,25 @@ function MessageTalentModal() {}
         variant: "destructive"
       })
     } finally {}
+=======
+      // Navigate to messages inbox
+      navigate("/messages")
+    } catch (error) {
+      console.error("Failed to send message:", error),
+      toast({
+        title: "Message not sent"
+        description: "There was an error sending your message. Please try again."
+        variant: "destructive"
+      })
+    } finally {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsSubmitting(false)
     }
   const navigate = useNavigate();
       });
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -468,6 +579,8 @@ function MessageTalentModal() {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         talent.user_id;
 
     try {;
@@ -476,6 +589,7 @@ function MessageTalentModal() {}
       // Create context data for the conversation;
 <<<<<<< HEAD
       const contextData = {;
+<<<<<<< HEAD
         title: jobTitle || `Discussion with ${talent && talent.full_name}`,,
   description: talent && talent.bio || talent && talent.professional_title || "",;
         image_url: talent && talent.profile_picture_url || ""
@@ -487,10 +601,17 @@ function MessageTalentModal() {}
         image_url: talent && talent.profile_picture_url || "";
       };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        title: jobTitle || `Discussion with ${talent && talent.full_name}`,;
+        description: talent && talent.bio || talent && talent.professional_title || "",;
+        image_url: talent && talent.profile_picture_url || "";
+      };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         message;
@@ -501,10 +622,23 @@ function MessageTalentModal() {}
       const contextData = {}`
         title: jobTitle || `Discussion with ${talent.full_name}`,"
         description: talent.bio || talent.professional_title || "","
+=======
+        message;
+
+    try {
+
+      setIsSubmitting(true),
+      
+      // Create context data for the conversation
+      const contextData = {
+        title: jobTitle || `Discussion with ${talent.full_name}`,
+        description: talent.bio || talent.professional_title || "",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         image_url: talent.profile_picture_url || ""
       },
       
 
+<<<<<<< HEAD
       // Create conversation with this talent;
       await createConversation(
         talent.user_id,
@@ -516,11 +650,26 @@ function MessageTalentModal() {}
       
       toast({"
         title: "Message sent",`
+=======
+      // Create conversation with this talent
+      await createConversation(
+        talent.user_id,
+        message,
+        jobTitle ? 'job' : 'talent',
+        talent.id,
+        contextData
+
+      ),
+      
+      toast({
+        title: "Message sent",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: `Your message has been sent to ${talent.full_name}.`}),
       
       onClose(),
       
 
+<<<<<<< HEAD
       toast({"
         title: "Message not sent""
         description: "There was an error sending your message. Please try again.""
@@ -531,10 +680,27 @@ function MessageTalentModal() {}
 
 
 
+=======
+
+      // Navigate to messages inbox
+      navigate("/messages")
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast({
+        title: "Message not sent"
+        description: "There was an error sending your message. Please try again."
+        variant: "destructive"
+      })
+    } finally {
+      setIsSubmitting(false)
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -656,6 +822,18 @@ export function MessageTalentModal() { return null; }
 
 
 <<<<<<< HEAD
+=======
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">
+        <DialogHeader>
+          <DialogTitle className="text-white flex items-center gap-3">
+            <Avatar className="h-8 w-8 border border-zion-purple/20">
+              <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
+              <AvatarFallback className="bg-zion-blue-dark text-white">
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -671,12 +849,20 @@ import { useMessaging } from "@/context/MessagingContext",;
 import { TalentProfile } from "@/types/talent",;
 import { toast } from "@/components/ui/use-toast",;
 import { useNavigate } from "react-router-dom",;
+<<<<<<< HEAD
 ;
 export interface MessageTalentModalProps {;
   talent:TalentProfile,;
   isOpen:boolean,;
   onClose:() => void,;
   jobTitle?:string;
+=======
+export interface MessageTalentModalProps {;
+  talent: TalentProfile,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  jobTitle?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export function MessageTalentModal({;
@@ -684,6 +870,7 @@ export function MessageTalentModal({;
   isOpen,;
   onClose,;
   jobTitle;
+<<<<<<< HEAD
 } MessageTalentModalProps) {;
   const { createConversation } = useMessaging(),;
   const navigate = useNavigate(),;
@@ -714,10 +901,40 @@ export function MessageTalentModal({;
         image_url:talent.profile_picture_url || "";
       },;
       ;
+=======
+}: MessageTalentModalProps) {;
+  const { createConversation } = useMessaging(),;
+  const navigate = useNavigate(),;
+  const [message, setMessage] = useState(;
+    jobTitle;
+      ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
+      : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
+  ),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const handleSendMessage = async () => {;
+    if (!message.trim()) {;
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before sending.",;
+        variant: "destructive";
+      }),;
+      return;
+    }
+;
+    try {;
+      setIsSubmitting(true),;
+      // Create context data for the conversation;
+      const contextData = {;
+        title: jobTitle || `Discussion with ${talent.full_name}`,;
+        description: talent.bio || talent.professional_title || "",;
+        image_url: talent.profile_picture_url || "";
+      },;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Create conversation with this talent;
       await createConversation(;
         talent.user_id,;
         message,;
+<<<<<<< HEAD
         jobTitle ? 'job' :'talent',;
         talent.id,;
         contextData;
@@ -750,6 +967,27 @@ export function MessageTalentModal({;
 =======
 =======
         message;        variant: "destructive";
+=======
+        jobTitle ? 'job' : 'talent',;
+        talent.id,;
+        contextData;
+      ),;
+
+      toast({;
+        title: "Message sent",;
+        description: `Your message has been sent to ${talent && talent.full_name}.`}),;
+
+      onClose();
+
+      // Navigate to messages inbox;
+      navigate("/messages");
+    } catch (error) {;
+      console && console.error("Failed to send message:", error);
+      toast({;
+        title: "Message not sent",;
+        description: "There was an error sending your message. Please try again.",;
+        variant: "destructive";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
     } finally {;
       setIsSubmitting(false);
@@ -765,7 +1003,8 @@ export function MessageTalentModal({;
     }
   }
 
-  return (    }
+  return (
+    }
   }
 
   return (
@@ -779,6 +1018,7 @@ export function MessageTalentModal({;
         <DialogHeader>;"
           <DialogTitle className="text-white flex items-center gap-3">;"
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -812,6 +1052,14 @@ export function MessageTalentModal({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
+              <AvatarFallback className="bg-zion-blue-dark text-white">;
+
+
+
+              <AvatarFallback className="bg-zion-blue-dark text-white">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -821,6 +1069,7 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
 <<<<<<< HEAD
             {talent.professional_title && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -841,10 +1090,43 @@ export function MessageTalentModal({;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+              <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
+            )}
+
+          </DialogDescription>;
+        </DialogHeader>;
+
+          </DialogDescription>;
+        </DialogHeader>;
+              <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
+              <AvatarFallback className="bg-zion-blue-dark text-white">;
+                {talent.full_name.charAt(0).toUpperCase()}
+                {talent && talent.full_name.charAt(0).toUpperCase()}
+              </AvatarFallback>;
+            </Avatar>;
+            Message {talent && talent.full_name}
+          </DialogTitle>;
+          <DialogDescription className="text-zion-slate">;
+            Send a direct message to start a conversation.;
+            {talent && talent.professional_title && (;
+              <span className="block mt-1 text-zion-cyan">{talent && talent.professional_title}</span>;
+            )}
+          </DialogDescription>;
+        </DialogHeader>;
+        ;
+        <div className="space-y-4">;
+          <div>;
+            <label className="block text-sm font-medium text-zion-slate mb-1">;
+              Message;
+            </label>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Textarea
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -931,30 +1213,52 @@ export function MessageTalentModal({;
 =======
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>              placeholder="Write your message here...";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onClose}
+          <Button
+            type="button"
+            onClick={handleSendMessage}
+            disabled={isSubmitting}
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+
+              className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
+              placeholder="Write your message here...";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />;
           </div>;
         </div>;
 
-        <DialogFooter className="gap - 2 sm:gap-0">;
+        <DialogFooter className="gap - 2 sm:gap - 0">;
           <Button;
             type="button";
             variant="outline";
             on_click={on_close}
-            className="border - zion - purple / 30 text-white";          >;
+            className="border - zion - purple / 30 text - white";
+          >;
             Cancel;
           </Button>;
           <Button;
             type="button";
             on_click={handleSendMessage}
             disabled={is_submitting}
-            className="bg - zion - purple hover:bg - zion - purple - dark text-white";
+            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
           >;
             {is_submitting ? 'Sending...' : 'Send Message'}
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>);
-}            onClick={handleSendMessage}
+}
+
+            type="button" ;
+            onClick={handleSendMessage}
             disabled={isSubmitting}
 =======
           >;
@@ -1018,6 +1322,7 @@ contextData);
 }finally {}
   setIsSubmitting (false) 
 }
+;
 
 <<<<<<< HEAD
 };
@@ -1040,6 +1345,7 @@ return (<Dialog open= {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1053,3 +1359,5 @@ return (<Dialog open= {
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

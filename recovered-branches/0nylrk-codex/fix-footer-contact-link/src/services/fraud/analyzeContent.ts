@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Content analysis functionality
 <<<<<<< HEAD
 
@@ -120,27 +121,25 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const reasons: string[] = []
   const contentLower = content.toLowerCase(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Content analysis functionality
+import { suspiciousPhrases } from "./constants";
+import { AnalysisResult } from "./types";
+/**
+ * Analyzes text content for suspicious patterns
+ */
+export const analyzeContent = (content: string): AnalysisResult => {
+  const contentLower = content.toLowerCase();
+  const reasons: string[] = [];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-  const contentLower = content && content.toLowerCase();
-  const reasons: string[] = [],
-  
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
-// Content analysis functionality;
-import { suspiciousPhrases } from './constants',;
-import { AnalysisResult } from './types',;
-/**;
- * Analyzes text content for suspicious patterns;
- */;
-export const analyzeContent = (content: string): AnalysisResult => {;
-  const contentLower = content.toLowerCase(),;
-  const reasons: string[] = [],;
-  // Check for suspicious phrases;
-  for (const phrase of suspiciousPhrases) {;
-    if (contentLower.includes(phrase.toLowerCase())) {;
+    if (contentLower.includes(phrase.toLowerCase())) {
       reasons.push(`Contains suspicious phrase: "${phrase}"`);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
@@ -171,6 +170,10 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  // Check for links (simplified check)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
   if (
     hasExternalLinks &&"
@@ -202,6 +205,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   if (/[!?]{3}/.test(content)) {"
     reasons.push("Suspicious punctuation pattern");
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return {
 <<<<<<< HEAD
@@ -273,42 +277,16 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    reasons
-  }
-}
-      reasons.push (`Contains suspicious phrase: "${phrase}"`);
-    }
-  }
-  // Check for links (simplified check);
-  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test (content_lower);
-  // Check condition
-if (||) {
-  $2
-}
-    content_lower.includes ('money') ||;
-    content_lower.includes ('deal'))) {
-    reasons.push ('Contains external payment links');
-  }
-  // Check for excessive capitalization (potential scam);
-  const capital_ratio = (content.match (/[A - Z]/g) || []).length / content.length;
-  // Check condition
-if ( {) {
-  $2
-}
-    reasons.push ('Excessive capitalization');
-  }
-  // Check for poor grammar with repetitive punctuation;
-  if () {) {
-  $2
-}
-    reasons.push ('Suspicious punctuation pattern');
-  }
+=======
+
   return {
-    is_suspicious: reasons.length > 0,
-    reasons;
-  }
-}
-;    reasons
+    isSuspicious: reasons.length > 0,
+    reasons,
+  };
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    reasons
 
 =======
     reasons;
@@ -378,6 +356,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -394,3 +373,5 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

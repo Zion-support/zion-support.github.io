@@ -84,6 +84,7 @@ export function ServiceDetailsSection({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { CountryPricing  } from '@/data / onsiteServicePricing';
@@ -167,10 +168,13 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
           </p>;
         </div>;
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -266,3 +270,6 @@ setSelectedCountry: (country: CountryPricing | null) => void
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

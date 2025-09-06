@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 <<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 <<<<<<< HEAD:pages/api/book/export/templates.ts
@@ -20,6 +21,10 @@
 ========
 
 
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -28,6 +33,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
@@ -54,6 +60,13 @@ const templates = null;
 const templates = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/templates.ts
+=======
+
+
+
+const templates = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const templates = {
   lulu: {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/book/export/templates.ts
@@ -86,6 +99,7 @@ const templates = {
       { name: 'Large Square', widthIn: 12, heightIn: 12, bleedIn: 0.125, marginIn: 0.75 }]}
   amazon: {;
     sizes: [
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 <<<<<<< HEAD
       { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 }
@@ -97,6 +111,8 @@ export default function handler($2) {;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/templates.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
         name: 'US Trade',
         widthIn: 6,
@@ -146,6 +162,7 @@ export default function handler($2) {;
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 <<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 <<<<<<< HEAD:pages/api/book/export/templates.ts
@@ -160,10 +177,13 @@ export default function handler($2) {;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/templates.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/book/export/templates.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api/book/export/templates.ts
@@ -184,3 +204,7 @@ export default function handler($2) {;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/export/templates.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

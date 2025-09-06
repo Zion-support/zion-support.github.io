@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -11,6 +12,8 @@ export default function About() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div>;
       <main>;
         <h1>About Zion Tech Group</h1>;
@@ -24,6 +27,7 @@ function About() {
     <div>;
       <main>;
         <h1 > About Zion Tech Group</h1>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -32,6 +36,8 @@ function About() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p>;
           We are a leading provider of advanced IT solutions and AI services.;
         </p>;

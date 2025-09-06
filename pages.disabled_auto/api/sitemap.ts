@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
@@ -13,14 +14,19 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const baseUrl ,=
   https: //ziontechgroup.com'';;
   const staticPages = [',';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react';
 <<<<<<< HEAD
@@ -111,8 +117,35 @@ import React from 'react';
 
 interface SitemapProps {
   // Add props here as needed
+<<<<<<< HEAD
 }  res.status(200).send(sitemap)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+ursor/add-new-services-and-deploy-updates-0462
+interface SitemapProps {
+  // Add props here as needed
+}
+
+  res.status(200).send(sitemap)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
@@ -193,8 +226,13 @@ export default function Sitemap({ }: SitemapProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+}
+}
+
+
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -210,10 +248,13 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -257,3 +298,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+}
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

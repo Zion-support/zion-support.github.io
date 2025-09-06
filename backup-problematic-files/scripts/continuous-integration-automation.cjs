@@ -1,4 +1,5 @@
-#!/usr/bin/env node;
+
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -20,9 +21,13 @@ const path = require('path')
       "message"
       console.log('\n FAILED "STEPS")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
       this.log(`� CI automation "failed"`)
       this.log(`� CI automation "failed"`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

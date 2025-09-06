@@ -21,19 +21,23 @@ export interface BlogAuthor {};
   avatar_url: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+export interface BlogPost {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface BlogAuthor {
 =======
 
 export interface BlogAuthor {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: string;
-}export interface BlogAuthor {
-  name: string;
 }
 <<<<<<< HEAD
 export interface BlogPost {
 
 export interface BlogPost {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -48,14 +52,20 @@ export interface BlogPost {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   published_date: string;
   read_time: string;
   category: string;
@@ -75,9 +85,14 @@ export interface BlogPost {;
 }
 // Type for generated blog content;
 
+<<<<<<< HEAD
 export interface GeneratedBlogContent {};
   title: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface GeneratedBlogContent {
+  title: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   meta_description: string;
   body: string;
   tags: string[];
@@ -89,8 +104,12 @@ export interface GeneratedBlogContent {};
   image_prompt?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   publishedDate: string;
   readTime: string;
   category: string;
@@ -99,16 +118,25 @@ export interface GeneratedBlogContent {};
   isFeatured?: boolean;
   isPublished?: boolean;
 
+<<<<<<< HEAD
   createdBy?: string;
   updatedAt?: string;
 }
 // Type for generated blog content;
+=======
+  createdBy?: string
+
+  updatedAt?: string
+}
+// Type for generated blog content
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface GeneratedBlogContent {;
   title: string;
   metaDescription: string;
   body: string;
   tags: string[];
 
+<<<<<<< HEAD
   tweetSummary?: string;
   imagePrompt?: string;
 }
@@ -131,6 +159,23 @@ export interface BlogAuthor {;
 =======
 }  name: string,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  tweetSummary?: string
+
+  imagePrompt?: string
+}
+// Type for generated newsletter content
+export interface GeneratedNewsletterContent {;
+  subject: string;
+  previewText: string;
+
+  body: string
+
+  cta: string
+}
+export interface BlogAuthor {;
+  name: string,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,;
   avatarUrl: string;
 }
@@ -163,6 +208,7 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,6 +255,16 @@ export interface GeneratedNewsletterContent {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Type for generated newsletter content;
+export interface GeneratedNewsletterContent {
+  subject: string;
+  previewText: string;
+  body: string;
+  cta: string;
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface BlogAuthor {;
 
 // Type for generated newsletter content;

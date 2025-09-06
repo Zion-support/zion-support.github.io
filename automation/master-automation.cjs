@@ -4,8 +4,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -27,10 +29,14 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,7 +69,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -97,6 +108,7 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -105,12 +117,15 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -124,6 +139,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -138,6 +157,7 @@ class MasterAutomation {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -153,6 +173,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -162,6 +183,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+  log(message) {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -173,6 +201,7 @@ class MasterAutomation {}
   };
   log(message) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +209,17 @@ class MasterAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -256,6 +296,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async runCommand(command, description) {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -268,6 +309,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async runCommand(command, description) {
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async runCommand(command, description) {
 
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -278,6 +321,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 <<<<<<< HEAD
   async runCommand(command, description) {
@@ -318,10 +363,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -364,7 +412,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -376,6 +429,7 @@ main
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, "logs", "master-automation.log");
@@ -423,6 +477,8 @@ class MasterAutomation {
 =======
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
@@ -545,9 +601,12 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -573,6 +632,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -593,6 +653,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -605,6 +672,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { success: true, results };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -640,12 +708,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -677,6 +753,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+=======
+
+      return {}
+        success: false,
+        stdout: error.stdout || '',
+        stderr: error.stderr || error.message};
+    };
+  };
+  async checkPM2Status() {}
+    this.log('Checking PM2 status...');
+    const result = await this.runCommand('pm2 status');
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result.success) {}
       this.log('PM2 status check completed');
       return true;
@@ -688,14 +779,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async startPM2Processes() {}
     this.log('Starting PM2 processes...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Start all processes from ecosystem file;
     const result = await this.runCommand('pm2 start ecosystem.config.cjs');
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Start all processes from ecosystem file;
     const result = await this.runCommand('pm2 start ecosystem.config.cjs');
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result.success) {}
       this.log('PM2 processes started successfully');
       return true;
@@ -707,9 +804,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async stopPM2Processes() {}
     this.log('Stopping PM2 processes...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     for (const processName of this.pm2Processes) {}
       await this.runCommand(`pm2 stop ${processName}`);
     };
@@ -718,12 +819,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async restartPM2Processes() {}
     this.log('Restarting PM2 processes...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     const result = await this.runCommand('pm2 restart ecosystem.config.cjs');
 =======
 
     const result = await this.runCommand('pm2 restart ecosystem.config.cjs');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const result = await this.runCommand('pm2 restart ecosystem.config.cjs');
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result.success) {}
       this.log('PM2 processes restarted successfully');
       return true;
@@ -735,11 +842,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async getPM2Logs(processName = null, lines = 50) {}
     this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const command = processName;
       ? `pm2 logs ${processName} --lines ${lines}
       : `pm2 logs --lines ${lines}`;`
     const result = await this.runCommand(command);
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const command = processName;
       ? `pm2 logs ${processName} --lines ${lines}
@@ -747,7 +857,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const result = await this.runCommand(command);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result.success) {}
       this.log('PM2 logs retrieved successfully');
       return result.stdout;
@@ -759,12 +872,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async monitorProcesses() {}
     this.log('Monitoring PM2 processes...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     const result = await this.runCommand('pm2 jlist');
 =======
 
     const result = await this.runCommand('pm2 jlist');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const result = await this.runCommand('pm2 jlist');
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result.success) {}
       try {}
         const processes = JSON.parse(result.stdout);
@@ -772,12 +891,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           p => p.pm2_env && p.pm2_env.status === 'online'
         );
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.log(`Found ${runningProcesses.length} running processes`);
 =======
 
         this.log(`Found ${runningProcesses.length} running processes`);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        this.log(`Found ${runningProcesses.length} running processes`);
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         for (const process of runningProcesses) {}
           this.log()
             `"Process": ${process.name} - "Status": ${process.pm2_env.status} - "Uptime": ${process.pm2_env.pm_uptime}"
@@ -796,13 +921,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async performHealthCheck() {}
     this.log('Performing health check...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check if PM2 is running;
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {}
       this.log('PM2 is not running, attempting to start processes...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -828,11 +958,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -984,6 +1119,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -1005,6 +1146,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+<<<<<<< HEAD
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -1084,6 +1226,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       await this.startPM2Processes();
       return;
     }
@@ -1093,6 +1238,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
@@ -1142,6 +1288,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 <<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -1171,6 +1319,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
+<<<<<<< HEAD
   }
   async start() {
 
@@ -1196,7 +1345,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
   async start() {}
     this.log('Master Automation started');
@@ -1214,6 +1369,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     await this.performHealthCheck();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1221,6 +1377,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Set up periodic health checks every 30 minutes
     setInterval(async () => {
       await this.performHealthCheck();
@@ -1394,9 +1552,14 @@ if (require.main === module) {
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Set up periodic health checks every 30 minutes;
@@ -1431,6 +1594,7 @@ if (require.main === module) {}
     case 'start':
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -1441,6 +1605,8 @@ if (require.main === module) {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   async generateReport() {
@@ -1488,46 +1654,62 @@ if (require.main === module) {
         console.error("Master Automation failed: ", error);
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "stop":
       automation.stop().catch(error => {
         console.error("Failed to stop Master Automation: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "restart":
       automation.restartPM2Processes().catch(error => {
         console.error("Failed to restart processes: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "status":
       automation.monitorProcesses().catch(error => {
         console.error("Failed to get status: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "report":
       automation.generateReport().catch(error => {
         console.error("Failed to generate report: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     default:
       console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
 
@@ -1612,7 +1794,12 @@ class MasterAutomation {
 =======
 main
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -1633,6 +1820,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1643,6 +1831,8 @@ main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async generateReport() {
     this.log('📊 Generating automation report...');
 
@@ -1662,7 +1852,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     this.log('✅ Quality checks completed');
@@ -1708,6 +1904,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1792,6 +1989,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -1808,6 +2010,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
     };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1832,11 +2035,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -1860,12 +2070,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1884,6 +2100,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1934,12 +2151,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async start() {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -1952,6 +2173,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -1959,6 +2181,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1979,7 +2203,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -2013,7 +2242,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 
   async status() {
@@ -2060,6 +2298,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return status;
   }
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2096,8 +2335,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -2272,6 +2516,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -2279,6 +2524,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -2306,13 +2553,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2322,10 +2575,13 @@ if (require.main === module) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
@@ -2342,6 +2598,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -2420,15 +2680,19 @@ if (require.main === module) {}
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 
 module.exports = MasterAutomation;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2437,6 +2701,11 @@ module.exports = MasterAutomation;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     case 'start':
       automation
         .start()
@@ -2464,6 +2733,7 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
   }
 }
@@ -2487,6 +2757,8 @@ module.exports = MasterAutomation;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
     default:
@@ -2552,14 +2824,29 @@ module.exports = MasterAutomation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 main
+=======
+
+    default:
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+      process.exit(1);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 }
 
+<<<<<<< HEAD
 main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+module.exports = MasterAutomation;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -2576,6 +2863,7 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 =======
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 module.exports = MasterAutomation;
 
 <<<<<<< HEAD
@@ -2644,4 +2932,10 @@ module.exports = MasterAutomation;
 main
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
 
@@ -37,6 +38,9 @@ import ErrorBoundary from './src/components/ErrorBoundary';
 <<<<<<< HEAD
 export default function App(): JSX.Element {
 =======
+=======
+import React, { JSX } from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -167,7 +171,12 @@ const SolutionsPage = lazy(() => import('./src/pages/Solutions').then(module => 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
+export default function App(): React.JSX.Element {
+export default function App(): JSX.Element {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <main>
@@ -372,6 +381,16 @@ function App() {
         <p>Welcome to our application</p>
       </header>
     </div>
+=======
+    <main>
+      <h1>Hello App</h1>
+    </main>
+
+  return (
+    <main>
+
+    </main>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
 <<<<<<< HEAD

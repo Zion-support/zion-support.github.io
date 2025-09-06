@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -29,10 +30,13 @@ import { Link } from "react-router-dom",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -46,6 +50,11 @@ import { Link } from "react-router-dom",export function ClientDashboard() {
 =======
 import { Link } from "react-router-dom",export function ClientDashboard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
+import { Link } from "react-router-dom";
+export function ClientDashboard() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
@@ -448,6 +457,7 @@ export function ClientDashboard() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
@@ -689,20 +699,15 @@ function ClientDashboard() {
 =======
   )
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  );
+}
 
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
-import {Link} from "react-router-dom";
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",;
-import { Link } from "react-router-dom";
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -782,3 +787,5 @@ import { Link } from "react-router-dom";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -96,6 +96,22 @@ export interface Education {;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
+  company_name: string;
+  role_title: string;
+  start_date: Date | string;
+  end_date?: Date | string;
+  is_current: boolean;
+  description?: string;
+  company_logo_url?: string;
+  location?: string;
+}
+
+  company_logo_url?: string,
+  location?: string;
+
+}
+export interface Education {
+  id?: string;
   institution: string;
   degree: string;
   field_of_study?: string;
@@ -112,6 +128,7 @@ export interface Education {;
   location?: string;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +157,10 @@ export interface Skill {  id?: string;
 =======
 export interface Skill {  id?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface Skill {
+  id?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   proficiency?: number;
   category?: string;
@@ -151,6 +172,7 @@ export interface Skill {  id?: string;
   years_experience?: number;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +275,43 @@ export interface Certification {  id?: string;
   proficiency?: number;
 }  id?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface Certification {
+  id?: string;
+  name: string;
+  proficiency?: number;
+}
+  id?: string;
+  name: string;
+  issuing_organization: string;
+  issue_date?: Date | string;
+  expiration_date?: Date | string;
+  credential_id?: string;
+  credential_url?: string;
+}
+
+  credential_id?: string,
+  credential_url?: string;
+
+}
+export interface PortfolioProject {
+  id?: string;
+  title: string;
+  description?: string;
+  technologies?: string[];
+  image_url?: string;
+  github_url?: string;
+  demo_url?: string;
+  pdf_url?: string;
+}
+
+  demo_url?: string,
+  pdf_url?: string;
+
+}
+export interface Resume {
+  id?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
@@ -261,6 +320,7 @@ export interface Certification {  id?: string;
   certifications: Certification[];
   portfolio_projects?: PortfolioProject[];
   is_active: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -280,6 +340,15 @@ export interface ResumeBasicInfo {;
 =======
 }  id?: string,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+  portfolio_projects?: PortfolioProject[]
+
+  is_active: boolean
+}
+export interface ResumeBasicInfo {;
+  id?: string,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,;
   headline?: string,;
   summary?: string;
@@ -352,6 +421,7 @@ export interface Resume {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
 =======
@@ -389,6 +459,17 @@ export interface Resume {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   portfolio_projects?: PortfolioProject[],  is_active: boolean;
+=======
+  portfolio_projects?: PortfolioProject[],
+  is_active: boolean;
+}
+;
+
+
+export interface ResumeBasicInfo {;
+
+  is_active: boolean;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@ async function ensure() {;
 =======
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const FILE_PATH = path.join(
   process.cwd(),
   'data',
@@ -85,6 +88,7 @@ export default async function handler(;
       text: body.text |"";
 =======
     const comment = {
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 <<<<<<< HEAD
 =======
@@ -126,6 +130,10 @@ export default async function handler() { return null; }
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -158,6 +166,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await ensure();"
   if (req.method === "GET") {}
     const data = await fs.readJson(FILE_PATH);
+<<<<<<< HEAD
     return res.status(200).json(data);
   }"
   if (req.method === "POST") {}
@@ -170,10 +179,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       author: body.author || "anon","
       text: body.text || "",
       createdAt: new Date().toISOString(),
+=======
+    const comment = {
+id: Date.now().toString(),
+origin/cursor/automate-test-improve-and-merge-code-2533
+      proposalId: body.proposalId,
+      region: body.region || 'Global',
+      author: body.author || 'anon',
+      text: body.text || '',
+      id: Date.now().toString(), proposalId: body.proposalId
+      region: body.region || 'Global', author: body.author || 'anon'
+      id: Date.now().toString()
+      proposalId: body.proposalId
+      region: body.region || 'Global'
+      author: body.author || 'anon'
+
+      text: body.text || ''
+
+      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
+<<<<<<< HEAD
   }"
   res.status(405).json({ error: "Method not allowed" });
 }
@@ -425,6 +456,8 @@ if ( {) {}
 =======;
 ========
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -537,6 +570,7 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -560,10 +594,16 @@ export default async function handler(req, res) {;
 
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/proposals/comment.ts
@@ -579,3 +619,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/comment.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

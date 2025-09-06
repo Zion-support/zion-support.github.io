@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
@@ -80,6 +81,16 @@ export function SaveTalentButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+interface SaveTalentButtonProps {
+  talentId: string;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+import React from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 interface SaveTalentButtonProps {
@@ -94,7 +105,7 @@ export function SaveTalentButton({
   onSave,
   isSaved,
 }: SaveTalentButtonProps) {
-=======import React from 'react';
+import React from 'react';
 import {Button} from "@/components/ui/button";
 =======
   isSaved: boolean;

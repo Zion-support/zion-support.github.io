@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -54,6 +55,18 @@ import * as SliderPrimitive from "@radix-ui/react-slider"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
+=======
+
+
+import {cn} from '@/lib/utils';
+import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils"
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -83,6 +96,7 @@ Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayNa
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { Slider };
 
 =======
@@ -106,6 +120,80 @@ import { cn } from "@/lib/utils"
     )}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export { Slider };
+
+      className
+    )}
+    {...props}
+  >
+    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
+      <SliderPrimitive.Range className="absolute h-full bg-primary" />
+    </SliderPrimitive.Track>
+    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
+  </SliderPrimitive.Root>
+export { Slider };
+export { Slider }
+;
+
+import React from 'react';
+import * as React from 'react';
+    ref={ref}
+    className={cn(
+      'relative flex w-full touch-none select-none items-center'
+      className
+    )}
+    {...props}>;
+    <SliderPrimitive && SliderPrimitive.Track className='relative h-2 w-full grow overflow-hidden rounded-full bg-secondary'>;
+      <SliderPrimitive && SliderPrimitive.Range className='absolute h-full bg-primary' />;
+    </SliderPrimitive && SliderPrimitive.Track>;
+    <SliderPrimitive && SliderPrimitive.Thumb className='block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50' />;
+  </SliderPrimitive && SliderPrimitive.Root>;
+));
+import * as SliderPrimitive from '@radix - ui / react - slider';
+;
+import {cn} from '@/lib / utils';
+;
+const Slider = React.forward_ref<;
+  React.ElementRef < typeof SliderPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof SliderPrimitive.Root>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <SliderPrimitive.Root;
+    ref={ref}
+    className={cn (
+      'relative flex w - full touch - none select - none items - center',
+      class_name)}
+    {...props}
+  >;
+    <SliderPrimitive.Track className='relative h - 2 w - full grow overflow - hidden rounded - full bg - secondary'>;
+      <SliderPrimitive.Range className='absolute h - full bg - primary' />;
+    </SliderPrimitive.Track>;
+    <SliderPrimitive.Thumb className='block h - 5 w - 5 rounded - full border - 2 border - primary bg - background ring - offset - background transition - colors focus - visible: outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50' />;
+  </SliderPrimitive.Root>));
+Slider.display_name = SliderPrimitive.Root.display_name,
+export { Slider }
+;
+
+      "relative flex w-full touch-none select-none items-center",
+
+
+      "relative flex w-full touch-none select-none items-center",
+
+
+import { cn } from "@/lib/utils"
+
+const Slider = React.forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+    ref={ref}
+    className={cn(
+      'relative flex w-full touch-none select-none items-center'
+      "relative flex w-full touch-none select-none items-center",
+      className
+    )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {...props}
   >"
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">"
@@ -181,10 +269,14 @@ Slider.displayName = SliderPrimitive.Root.displayName
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {...props}
   >;
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">;
@@ -207,7 +299,10 @@ React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> > ( ({
 ));
 Slider.displayName = SliderPrimitive.Root.displayName
 export { Slider }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
@@ -216,6 +311,7 @@ export { Slider }
 export { Slider };
 export { Slider }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -231,3 +327,5 @@ export { Slider }
 Slider.displayName = SliderPrimitive.Root.displayName;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

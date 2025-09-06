@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { MobileThemeProvider } from "./theme/MobileThemeProvider";
@@ -24,6 +27,7 @@ import { MobileProjects } from "./pages/MobileProjects";
 import { MobileMessages } from "./pages/MobileMessages";
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -38,6 +42,8 @@ import { MobileMessages } from "./pages/MobileMessages",
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",import { MobileJobPost } from "./pages/MobileJobPost";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
@@ -56,6 +62,7 @@ export function MobileApp() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -87,6 +94,10 @@ export function MobileApp() {};
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <MobileThemeProvider>
       <Routes>"
@@ -106,6 +117,7 @@ export function MobileApp() {};
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </MobileThemeProvider>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,3 +323,24 @@ export function MobileApp() {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  );
+}
+        <Route path="/post - job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div > Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>);
+}
+    </MobileThemeProvider>);
+}
+        <Route path="/post-job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div>Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>;
+  );
+}
+;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

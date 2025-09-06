@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
@@ -10,6 +11,10 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 =======
 >>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export default async /**
  * handler - Function description
@@ -38,17 +43,17 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
   const url = `data: text/html,base64,${base64}`
-<<<<<<< HEAD
-
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -57,8 +62,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' });
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -74,12 +80,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -93,6 +102,14 @@ export default async function handler(req, res) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> pr-12243
+=======
+
+
+
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -128,6 +145,7 @@ function escape_html() {}
     .replace (/>/g, '&gt, ');
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
@@ -140,11 +158,20 @@ function escape_html() {}
 >>>>>>> pr-12243
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -274,3 +301,9 @@ function escapeHtml(str: string) {}
 =======
 };'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts
+=======
+main
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

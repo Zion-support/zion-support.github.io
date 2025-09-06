@@ -9,6 +9,7 @@ const AIEvaluationOrchestrator: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -19,16 +20,22 @@ import Head from 'next/head';
 =======
 import React from 'react',
 import Head from 'next/head';
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Button from '../components/ui/Button';
 export default function AIEvaluationOrchestratorPage() {
 import Layout from '../components/layout/Layout';
 const AIEvaluationOrchestrator: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-evaluation-orchestrator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-evaluation-orchestrator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Layout>;
       <Head>;
@@ -361,6 +368,7 @@ export default function AIEvaluationOrchestratorPage() {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/ai-evaluation-orchestrator.tsx
 <<<<<<< HEAD
 =======
@@ -468,3 +476,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-evaluation-orchestrator.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

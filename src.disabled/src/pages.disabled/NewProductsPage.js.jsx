@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,11 +25,15 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { NEW_PRODUCTS } from \"@/data/newProductsData\"; const CATEGORY_FILTERS = Array && Array.from(new Set(NEW_PRODUCTS && NEW_PRODUCTS.map(p => p && p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function NewProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,3 +79,8 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { NEW_PRODUCTS } from \"@/data/newProductsData\"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function NewProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

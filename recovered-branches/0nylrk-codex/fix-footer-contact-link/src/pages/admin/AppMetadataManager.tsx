@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -123,6 +124,13 @@ import { SEO } from "@/components/SEO";"
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
 const AppMetadataManager: React.FC = () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
+const AppMetadataManager: React.FC = () => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <AppLayout>
       <SEO"
@@ -131,16 +139,25 @@ const AppMetadataManager: React.FC = () => {}
         noindex={true}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
 "
       <div className="container py-8">"
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">
           App Metadata Manager;
+=======
+      />
+
+      <div className="container py-8">
+        <h1 className="text-3xl font-bold text-zion-cyan mb-8">
+          App Metadata Manager
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </h1>
 
         <MetadataManager />
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 =======
@@ -161,10 +178,38 @@ export default AppMetadataManager;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default AppMetadataManager,
+=======
+  );
+};
+
+
+export default AppMetadataManager;
+
+import React from './react';
+import { AppLayout } from '@/layout / AppLayout';
+import { SEO } from '@/components / SEO';
+import { MetadataManager } from '@/components / mobile - app / admin / MetadataManager';
+const AppMetadataManager: React.FC = () => {
+  return (
+    <AppLayout>;
+      <SEO;
+        title="App Metadata Manager";
+        description="Manage app store metadata for the Zion mobile application";
+        noindex={true}
+      />;
+
+},
+
+
+export default AppMetadataManager;
+;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
+<<<<<<< HEAD
 const AppMetadataManager: React.FC = () => {;
 <<<<<<< HEAD
   return (;
@@ -240,6 +285,8 @@ import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 const AppMetadataManager:React.FC = () => {;
   return (;
@@ -273,6 +320,7 @@ export default AppMetadataManager;
   );
 },;
 export default AppMetadataManager;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -289,3 +337,5 @@ const AppMetadataManager: React.FC = () => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

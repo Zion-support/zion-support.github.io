@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -35,11 +36,17 @@ import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 =======
@@ -63,6 +70,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -70,6 +83,7 @@ main
   }
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,12 +105,18 @@ main
   const state = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,6 +136,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     eventId: uuidv4()
     type: "dao_endorsement" as const
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() }
@@ -125,7 +147,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 eventId: uuidv4(),
     type: 'dao_endorsement' as const,
     payload: {
@@ -140,12 +165,16 @@ eventId: uuidv4(),
     version,
     timestamp: Date.now(),
   };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   upsertEvent(state, event);
   writeState(state);
@@ -153,6 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
@@ -177,6 +207,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (sig) headers['x-zion-signature'] = sig;
 
   await Promise.all(
@@ -189,6 +221,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           await axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
       })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
   ),
@@ -359,6 +392,11 @@ if (headers["x - zion - signature"] = sig, ) {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+main
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {  } catch (error) {
@@ -375,6 +413,7 @@ main
   }
 }
       })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
   ),
 <<<<<<< HEAD
@@ -383,18 +422,24 @@ main
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 
 return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -487,6 +532,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 }
@@ -506,6 +552,10 @@ export default async function handler(req, res) {
   )
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+  )
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -514,6 +564,7 @@ main
 =======
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/sync/dao-endorsement.ts
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -523,3 +574,6 @@ main
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/dao-endorsement.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

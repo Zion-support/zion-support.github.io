@@ -25,6 +25,7 @@ export interface Conversation {
   sender_name?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   sender_avatar?: string;
 
 <<<<<<< HEAD
@@ -56,12 +57,34 @@ export interface Conversation {
 =======
   sender_avatar?: string;  }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  sender_avatar?: string;
+
+  attachment_url?: string
+
+  attachment_name?: string
+}
+// Define the shape of a conversation
+export interface Conversation {;
+export interface Conversation {
+  id: string;
+  user_id: string;
+  other_user: {
+    id: string;
+    name: string;
+
+    avatar_url?: string,
+    user_type?: string;
+
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   avatar_url?: string;
 <<<<<<< HEAD
   last_message?: {
 
     content: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     created_at: string;
@@ -75,6 +98,10 @@ export interface Conversation {
 =======
   last_message?: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    created_at: string;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   updated_at: string;
   unread_count: number;
@@ -82,6 +109,9 @@ export interface Conversation {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   context_id?: string,
   context_data?: ConversationContextData;
 }
@@ -93,6 +123,7 @@ export interface ConversationContextData {
   image_url?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -145,6 +176,8 @@ export interface MessagingContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -176,7 +209,11 @@ export interface Conversation {;
     created_at: string;
   },;
   updated_at: string,;
+<<<<<<< HEAD
   unread_count: number,;'
+=======
+  unread_count: number,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   context_type?: 'job' | 'talent' | 'general',;
   context_id?: string,;
   context_data?: ConversationContextData;
@@ -190,6 +227,7 @@ export interface ConversationContextData {;
 }
 ;
 
+<<<<<<< HEAD
 
 
    * Set the currently active conversation. Passing `null` will clear the;
@@ -199,6 +237,27 @@ export interface ConversationContextData {;
 =======
     created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Define the shape of the messaging context;
+export interface MessagingContextType {
+  messages: Message[];
+  conversations: Conversation[];
+  unread_count: number;
+  active_conversation: Conversation | null;
+  active_messages: Message[];
+  is_loading: boolean,
+  send_message: (conversation_id: string, content: string) => Promise < void>,
+  create_conversation: (
+    recipient_id: string,
+    initial_message: string,
+    context_type?: 'job' | 'talent' | 'general';
+    context_id?: string;
+    context_data?: ConversationContextData) => Promise < void>;
+  markAsRead: (conversation_id: string) => Promise < void>;
+  /**;
+
+   * Set the currently active conversation. Passing `null` will clear the;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -206,6 +265,7 @@ export interface ConversationContextData {;
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,3 +289,8 @@ export interface ConversationContextData {;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

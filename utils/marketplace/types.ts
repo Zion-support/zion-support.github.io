@@ -22,6 +22,7 @@ export type Offer = {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -51,6 +52,18 @@ export interface Offer {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+// Marketplace types
+export interface Offer {
+
+export interface Offer {;
+
+export interface Offer {;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -88,6 +101,7 @@ export interface PaymentTerms {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -154,10 +168,18 @@ export interface Project {;
   paymentTerms: PaymentTerms;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -168,12 +190,15 @@ export interface Project {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,10 +235,15 @@ export type MarketplaceDb = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
+<<<<<<< HEAD
 =======
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -226,11 +256,18 @@ export type MarketplaceDb = {;
 =======
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  timeline: any[];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ProjectNote {
 =======
 
@@ -262,6 +299,7 @@ export interface ProjectNote {};
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -283,3 +321,6 @@ export interface ProjectNote {};
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

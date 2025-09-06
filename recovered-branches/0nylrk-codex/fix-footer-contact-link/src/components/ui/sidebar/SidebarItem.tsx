@@ -12,16 +12,22 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   className?: string;
   children?: React && React.ReactNode;
   active?: boolean;
 }
+
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
 
@@ -29,6 +35,36 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 <<<<<<< HEAD
     <div
 
+
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode,
+  active?: boolean
+}
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
+  return (
+    <div
+
+
+export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
+  return (
+    <div
+      className={cn(
         "flex items-center px-3 py-2 text-sm font-medium rounded-md"
 =======
     <div;
@@ -90,6 +126,7 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
     </div>;
   );
 }
+
 import React from './react';
 =======
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {}
@@ -119,6 +156,47 @@ function SidebarItem() {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?:string,;
+  children?:React.ReactNode,;
+  active?:boolean,;
+}
+;
+export function SidebarItem({ className, children, active, ...props } SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",;
+        active ? "bg-primary/10 text-primary" :"text-muted-foreground hover:bg-accent hover:text-accent-foreground",;
+        className;
+      )}
+      {...props}
+    >;
+      {children}
+    </div>;
+  ),;}
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode;
+active?: boolean 
+}className, children, active, ...props 
+}: SidebarItemProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
+}
+      className={cn(;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "flex items-center px-3 py-2 text-sm font-medium rounded-md";
 =======
 
@@ -159,15 +237,20 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
 =======
 export function SidebarItem() { return null; }
 import { cn } from "@/lib/utils",
 
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from "@/lib/utils";
 interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
@@ -209,8 +292,11 @@ function SidebarItem() {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -36,6 +37,13 @@ const type { NextPage } from "next"; const Test: NextPage = () => {}}; export de
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
@@ -48,6 +56,7 @@ import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; ex
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -95,3 +104,10 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

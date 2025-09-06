@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -82,6 +83,8 @@ export function getDisputeUploadDir(caseId: string): string {;
   return path.join(UPLOADS_ROOT, caseId);
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
@@ -172,7 +175,29 @@ async function ensureBaseFiles() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+  }
+}
+
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+
+  } catch (error) {
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
 =======
 // Mock file system database utility;
@@ -186,6 +211,7 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
     }
 <<<<<<< HEAD
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -203,6 +229,8 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
 =======
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -216,6 +244,12 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+    console.error("Error reading file:", error);
+  }
+  return defaultValue;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -233,6 +267,7 @@ export function writeJson<T>(filePath: string, data: T): void {}
       fs.mkdirSync(dir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 <<<<<<< HEAD
   } catch (error) {
@@ -243,23 +278,42 @@ export function writeJson<T>(filePath: string, data: T): void {}
 }
 
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 }
 
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
 =======
   } catch (error) {"
@@ -344,17 +398,74 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 
 =======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+  try {
+    const fs = require ('fs'),
+    if () {) {
+  $2
+}
+      const content = fs.readFileSync (file_path, 'utf8');
+      return JSON.parse (content);
+    }
+  } catch (error) {
+    console.error ('Error reading file:', error);
+  }
+  return default_value;
+}
+    }
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+  } catch (error) {
+    console && console.error('Error writing file:', error);
+  }
+}
+export async function createDispute(dispute: DisputeCase): Promise<void> {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+}
+      fs.mkdir_sync (dir, { recursive: true });
+    }
+    fs.writeFileSync (file_path, JSON.stringify (data, null, 2));
+  } catch (error) {
+    console.error ('Error writing file:', error);
+  }
+}
+export async function create_dispute (dispute: DisputeCase): Promise < void> {
+  const all = await readAllDisputes ();
+  all.push (dispute);
+  await writeAllDisputes (all);
+}
+export function getDisputeUploadDir (case_id: string): string {
+  return path.join (UPLOADS_ROOT, case_id);
+}
+export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
+  const dir = getDisputeUploadDir (case_id);
+  await mkdir (dir, { recursive: true });
+  return dir;
+}
+}
+
+  return path && path.join(UPLOADS_ROOT, caseId);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
@@ -375,6 +486,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -385,6 +497,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -392,9 +510,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// File system database utilities
+import * as fs from 'fs';
+import * as path from 'path';
+
+export interface FSDocument {
+  id: string;
+  data: any;
+  createdAt: Date;
+  updatedAt: Date;
+  version: number;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface FSDocument {
   id: string;
@@ -622,6 +757,7 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -637,11 +773,14 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -649,3 +788,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

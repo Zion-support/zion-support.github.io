@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Integration types and interfaces
 
 export interface IntegrationConfig {
@@ -9,6 +10,8 @@ export interface IntegrationConfig {
   settings: Record<string, any>;
 
 export type IntegrationCategory = 'crm' | 'ats';
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
 
 
@@ -20,9 +23,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 export type IntegrationCategory = 'crm' | 'ats';
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+
+export type IntegrationCategory = 'crm' | 'ats';
+
+export type IntegrationCategory = 'crm' | 'ats';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type IntegrationProviderId =;'
@@ -35,6 +48,12 @@ export type IntegrationProviderId =;'
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type IntegrationCategory = 'crm' | 'ats';
 =======
 '
@@ -49,9 +68,16 @@ export type IntegrationProviderId ='
   | 'greenhouse''
   | 'lever'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   | 'workable';
 '
   | 'bamboohr';
@@ -60,14 +86,19 @@ export type IntegrationProviderId ='
   | 'bamboohr';
 <<<<<<< HEAD
 export interface IntegrationProviderMeta {
+<<<<<<< HEAD
 
   id: IntegrationProviderId, name: string,;
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
 export interface IntegrationProviderMeta {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string;
 }
@@ -77,6 +108,7 @@ export interface IntegrationProviderMeta {};
 <<<<<<< HEAD
 ;
 export interface IntegrationProviderMeta {
+<<<<<<< HEAD
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
@@ -86,6 +118,9 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
   id: IntegrationProviderId, name: string
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: IntegrationProviderId, name: string,;
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
@@ -95,6 +130,18 @@ export type IntegrationCategory = any;
   events: ZapierEvent[]
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
+  icon?: string;
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
+  icon?: string;
+  id: IntegrationProviderId, name: string
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface SyncRules {
 =======
 
@@ -109,6 +156,7 @@ export interface SyncRules {};
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -122,11 +170,16 @@ export interface ProviderConnection {
   refreshToken?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
+<<<<<<< HEAD
 
 lastError?: string | null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -136,19 +189,32 @@ export interface SyncLogEntry {
   lastError?: string | null;
 export interface SyncLogEntry {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;'
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   details?: Record < string, any>;
 ;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ManualOverride {
 =======
 export interface ManualOverride {};
@@ -165,6 +231,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
@@ -172,6 +240,13 @@ export interface ManualOverride {;
 
 export interface ZapierEvent {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
 =======
 
@@ -185,12 +260,18 @@ export interface ZapierEvent {;
 
 <<<<<<< HEAD
 export interface IntegrationsState {
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+<<<<<<< HEAD
 export interface IntegrationsState {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
@@ -204,6 +285,7 @@ export interface ZapierEvent {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
+<<<<<<< HEAD
   events: ZapierEvent[];  events: ZapierEvent[]
 pr-12243
 }
@@ -235,10 +317,33 @@ export interface IntegrationStatus {
   errorCount: number;
   lastError?: string;
 }
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   lastError?: string | null
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+=======
+  events: ZapierEvent[];  events: ZapierEvent[]
+}
+
+}
+}
+}
+}
+}
+
+export interface IntegrationsState {;
+
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface SyncLogEntry {
   id: string, timestamp: number,
 =======
@@ -275,6 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
   events: ZapierEvent[];
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -282,3 +388,7 @@ pr-12243
 
 ';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

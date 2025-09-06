@@ -15,7 +15,11 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -48,6 +52,7 @@ import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Education } from '@/types/resume';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -57,6 +62,9 @@ import { Education } from '@/types/resume';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Education } from '@/types/resume';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -72,7 +80,13 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+// Define schema for form validation
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -130,6 +144,7 @@ const educationSchema = z.object({'
   location: z.string().optional()})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type EducationFormValues = z.infer<typeof educationSchema>;
 <<<<<<< HEAD
 =======
@@ -154,11 +169,18 @@ export function EducationFormFields({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+type EducationFormValues = z.infer<typeof educationSchema>;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -215,6 +237,34 @@ import {zod_resolver} from '@hookform / resolvers / zod';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const form = useForm<EducationFormValues>({
+    resolver: zodResolver(educationSchema)
+    defaultValues: {
+      institution: ''
+      degree: ''
+      field_of_study: ''
+      start_date: format(new Date(), 'yyyy-MM-dd');
+      is_current: false
+      description: ''
+      location: ''}})
+  const handleSubmit = async (data: EducationFormValues) => {
+    setIsLoading(true);
+    setError(null)
+    try {
+      await onSubmit(data)
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+    } finally {
+      setIsLoading(false)
+
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {z} from 'zod';
 import {format} from 'date - fns';
 import {Loader2} from 'lucide-react';
@@ -225,6 +275,7 @@ import {Checkbox} from '@/components / ui / checkbox';
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {useState} from 'react';
+<<<<<<< HEAD
 =======
 '
 import {z} from 'zod';'
@@ -238,11 +289,14 @@ import {Alert, AlertDescription} from '@/components / ui / alert';'
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';'
 import {useState} from 'react';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {EducationFormFieldsProps} from './types';
 
     }
   }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -257,6 +311,10 @@ type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } fr
 =======
 type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { useForm } from 'react-hook-form',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
@@ -297,7 +355,7 @@ const educationSchema = z && z.object({;
   field_of_study: z && z.string().optional(),;
   start_date: z && z.string().min(1, 'Start date is required');
   end_date: z && z.string().optional(),;
-  is_current: z && z.boolean().default(false),,
+  is_current: z && z.boolean().default(false),;
   description: z && z.string().optional(),;
   location: z && z.string().optional()}),;
 
@@ -310,8 +368,12 @@ export function EducationFormFields(): any ({ ;
 }: EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const form = useForm<EducationFormValues>({;
     resolver: zodResolver(educationSchema),;
     defaultValues: {;'
@@ -320,8 +382,8 @@ export function EducationFormFields(): any ({ ;
       field_of_study: '',;
 <<<<<<< HEAD
       start_date: format(new Date(), 'yyyy-MM-dd');
-      is_current: false,,
-  description: '',;
+      is_current: false,;
+      description: '',;
       location: ''}}),;
 
   const handleSubmit = async (data: EducationFormValues) => {;
@@ -350,6 +412,7 @@ export function EducationFormFields(): any ({ ;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -367,6 +430,14 @@ export function EducationFormFields(): any ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
@@ -377,6 +448,7 @@ export function EducationFormFields(): any ({ ;
 <<<<<<< HEAD
             render={({ field }) => (;
               <FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>;
@@ -466,6 +538,10 @@ import {Education} from '@/types / resume';
 =======
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <FormLabel>Institution</FormLabel>;
+import {Education} from '@/types / resume';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Define schema for form validation;
 const education_schema = z.object ({'
   institution: z.string ().min (1, 'Institution is required');'
@@ -510,6 +586,7 @@ function EducationFormFields() {}
   return (
 <<<<<<< HEAD
     <Form {...form}>;
+<<<<<<< HEAD
       <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
 =======
@@ -517,6 +594,10 @@ function EducationFormFields() {}
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <FormField;
             control={form.control}"
             name="institution";
@@ -524,6 +605,11 @@ function EducationFormFields() {}
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -564,7 +650,7 @@ const educationSchema = z.object({;'
   field_of_study:z.string().optional(),;'
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
-  is_current:z.boolean().default(false),,
+  is_current:z.boolean().default(false),;
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -586,11 +672,16 @@ export function EducationFormFields({ ;
       degree:'',;
       field_of_study:'',;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
+<<<<<<< HEAD
       is_current:false,,
   description:'',;
 =======
 export function EducationFormFields() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      is_current:false,;
+      description:'',;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -631,6 +722,7 @@ import {EducationFormFieldsProps} from './types';
                 <FormLabel>Institution</FormLabel>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
           <FormField
@@ -638,6 +730,11 @@ import {EducationFormFieldsProps} from './types';
             name="institution"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          <FormField
+            control={form && form.control}
+            name="institution"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
@@ -660,8 +757,10 @@ import {EducationFormFieldsProps} from './types';
 
           />;
 
+
           <FormField
             control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             name="degree"
@@ -688,6 +787,10 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
             name="degree"          <FormField
+=======
+            name="degree"
+          <FormField
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             control={form && form.control}
             name="degree"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -707,6 +810,7 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -716,6 +820,8 @@ import {EducationFormFieldsProps} from './types';
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -723,14 +829,18 @@ import {EducationFormFieldsProps} from './types';
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           />;
         </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -744,6 +854,8 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <FormField
           control={form && form.control}
 =======
@@ -789,6 +901,9 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         />;
 
@@ -836,6 +951,7 @@ import {EducationFormFieldsProps} from './types';
             name="start_date"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Input 
                     type="date" 
 <<<<<<< HEAD
@@ -860,10 +976,24 @@ import {EducationFormFieldsProps} from './types';
                     value={field.value |''}
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                  <Input 
+                    type="date" 
+
+
+          <FormField
+            control={form && form.control}
+            name="start_date"
+                    {...field}
+                    value={field.value |''}
+                  />
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
 <<<<<<< HEAD
@@ -937,6 +1067,10 @@ import {EducationFormFieldsProps} from './types';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          />
+          <div className="space-y-4">
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -964,6 +1098,7 @@ import {EducationFormFieldsProps} from './types';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {...field}
+<<<<<<< HEAD
                     value={field && field.value || ''}                   />;
 =======
 
@@ -971,6 +1106,10 @@ import {EducationFormFieldsProps} from './types';
 
                   />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    value={field && field.value || ''} 
+                  />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
@@ -981,10 +1120,13 @@ import {EducationFormFieldsProps} from './types';
           <div className="space-y-4">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
               name="is_current"
@@ -994,6 +1136,7 @@ import {EducationFormFieldsProps} from './types';
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1024,6 +1167,8 @@ import {EducationFormFieldsProps} from './types';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     />;
                   </FormControl>;"
                   <div className="space-y-1 leading-none">;
@@ -1040,8 +1185,12 @@ import {EducationFormFieldsProps} from './types';
               <FormField
                 control={form && form.control}
                 name="end_date"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -1063,11 +1212,13 @@ import {EducationFormFieldsProps} from './types';
           </div>;
         </div>;
 
+
         <FormField
           control={form && form.control}
           name="location"
           render={({ field }) => (;
             <FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <FormLabel>Location (Optional)</FormLabel>;
@@ -1144,6 +1295,10 @@ import {EducationFormFieldsProps} from './types';
 =======
               <FormLabel>Location (Optional)</FormLabel>;                )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <FormLabel>Location (Optional)</FormLabel>;
+                )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <Input ;
 =======
 
@@ -1176,6 +1331,7 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1187,19 +1343,35 @@ import {EducationFormFieldsProps} from './types';
 
               <FormControl>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <FormControl>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
 
+<<<<<<< HEAD
 
         <FormField;
           control={form && form.control}"
           name="description"
 
+=======
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name="description"
+        <FormField
+          control={form && form.control}
+          name="description"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 
                 <Textarea"
                   placeholder="Notable achievements, courses, activities...""
@@ -1210,11 +1382,21 @@ import {EducationFormFieldsProps} from './types';
         />;
         <FormField;
           control={form.control}"
+=======
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           name="description";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
                 <Textarea;"
                   placeholder="Notable achievements, courses, activities...";"
                   className="min - h-[100px]";
@@ -1234,11 +1416,20 @@ import {EducationFormFieldsProps} from './types';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                <Textarea;
+                  placeholder="Notable achievements, courses, activities...";
+                  className="min - h-[100px]";
+                <Textarea;
+                  placeholder="Notable achievements, courses, activities...";
+                  className="min-h-[100px]";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
 
+<<<<<<< HEAD
 
 
           <Button"
@@ -1357,16 +1548,37 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        />;
+
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+        <div className="flex justify-between pt-2">;
+
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onCancel}>;
+            {isEditing ? 'Cancel' : 'Back'}
+
+          </Button>;
+
+          <Button type="submit" disabled={isLoading}>;
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' : 'Add'} Education;
+          </Button>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </form>;
     </Form>;
 <<<<<<< HEAD
   );
 }
+
             </FormItem>)}
         />;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-        <div className="flex justify - between pt-2">;
+        <div className="flex justify - between pt - 2">;
           <Button;
             type="button";
 =======
@@ -1385,12 +1597,16 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
           </Button>;
           <Button type="submit" disabled={is_loading}>;
+<<<<<<< HEAD
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
 =======
           </Button>;"
           <Button type="submit" disabled={is_loading}>;"
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {is_editing ? 'Update' : 'Add'} Education;
           </Button>;
         </div>;
@@ -1398,11 +1614,19 @@ import {EducationFormFieldsProps} from './types';
     </Form>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 
@@ -1434,6 +1658,7 @@ import {EducationFormFieldsProps} from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1450,3 +1675,5 @@ import {EducationFormFieldsProps} from './types';
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

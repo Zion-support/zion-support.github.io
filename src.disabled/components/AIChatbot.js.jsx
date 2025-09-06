@@ -43,6 +43,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ' "export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [isOpen,setIsOpen] = useState (false) const [isMinimized,setIsMinimized] = useState (false) const [messages,setMessages] = useState ([]) const [inputValue,setInputValue] = useState (') const [isTyping,setIsTyping] = useState (false) const messagesEndRef = useRef (null) const inputRef = useRef (null) ';"";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/AIChatbot.js.jsx
 =======
 <<<<<<< HEAD
@@ -72,3 +73,6 @@ ursor/add-new-services-and-deploy-updates-0462
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+' "export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [isOpen,setIsOpen] = useState (false) const [isMinimized,setIsMinimized] = useState (false) const [messages,setMessages] = useState ([]) const [inputValue,setInputValue] = useState (') const [isTyping,setIsTyping] = useState (false) const messagesEndRef = useRef (null) const inputRef = useRef (null) ';"";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

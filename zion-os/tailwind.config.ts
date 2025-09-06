@@ -80,7 +80,19 @@ export default config;
 =======
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
-    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],  theme: {
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+  content: [;
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+  content: [;
+    &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;,
+    &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;,
+    &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;],
+    &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;
+    &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;
+    &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;]
+  theme: {
     extend: {
       colors: {
 =======

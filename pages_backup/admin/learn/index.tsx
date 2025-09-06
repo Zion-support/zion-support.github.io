@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/admin/learn/index.tsx
 <<<<<<< HEAD:pages/admin/learn/index.tsx
 <<<<<<< HEAD
@@ -151,6 +152,8 @@ export default function AdminLearn() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/learn/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState  } from 'react';
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' });
@@ -457,6 +460,7 @@ function save_course() { return null; }
           Free
         </label>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/learn/index.tsx
 <<<<<<< HEAD
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
@@ -534,6 +538,8 @@ function save_course() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/learn/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <button
         onClick={saveCourse}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -543,6 +549,7 @@ function save_course() { return null; }
       {message && <div className='text-sm'>{message}</div>}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/learn/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -558,3 +565,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/learn/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

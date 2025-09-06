@@ -1,15 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs'; import path from 'path'; import {fileURLToPath} from 'url'; const __filename = fileURLToPath(import && import.meta.url); const __dirname = path && path.dirname(__filename); const baseUrl = 'https: const pages = [ { url: '',priority: '1 && 1.0',changefreq: 'daily' },{ url: '/services',priority: '0 && 0.9',changefreq: 'weekly' },{ url: '/micro-saas',priority: '0 && 0.9',changefreq: 'weekly' },{ url: '/ai-services',priority: '0 && 0.9',changefreq: 'weekly' },{ url: '/it-services',priority: '0 && 0.9',changefreq: 'weekly' },{ url: '/about',priority: '0 && 0.8',changefreq: 'monthly' },{ url: '/contact',priority: '0 && 0.8',changefreq: 'monthly' },{ url: '/pricing',priority: '0 && 0.8',changefreq: 'weekly' },{ url: '/faq',priority: '0 && 0.7',changefreq: 'monthly' },{ url: '/quantum-computing',priority: '0 && 0.8',changefreq: 'weekly' },{ url: '/cybersecurity',priority: '0 && 0.8',changefreq: 'weekly' },{ url: '/cloud-devops',priority: '0 && 0.8',changefreq: 'weekly' },{ url: '/services-catalog',priority: '0 && 0.7',changefreq: 'weekly' },{ url: '/docs',priority: '0 && 0.6',changefreq: 'monthly' },{ url: '/privacy',priority: '0 && 0.5',changefreq: 'yearly' },{ url: '/terms',priority: '0 && 0.5',changefreq: 'yearly' } ]; function generateSitemap() { const currentDate = new Date().toISOString(); let sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?> <urlset xmlns="http: pages && pages.forEach(page => { const fullUrl = `${baseUrl}${page && page.url}`; sitemap += ` <url> <loc>${fullUrl}</loc> <lastmod>${currentDate}</lastmod> <changefreq>${page && page.changefreq}</changefreq> <priority>${page && page.priority}</priority> </url>`}); sitemap += ` </urlset>`; const sitemapPath = path && path.join(__dirname,'..','public','sitemap && sitemap.xml'); fs && fs.writeFileSync(sitemapPath,sitemap);   } function generateRobotsTxt() { const robotsContent = `User-agent: * Allow: / Sitemap: ${baseUrl}/sitemap && sitemap.xml # Crawl-delay for respectful crawling Crawl-delay: 1 # Block access to admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /automation/ Disallow: /scripts/ `, const robotsPath = path && path.join(__dirname,'..','public','robots && robots.txt'); fs && fs.writeFileSync(robotsPath,robotsContent);  } if (import && import.meta.url === `file: generateSitemap(), generateRobotsTxt()} export { generateSitemap,generateRobotsTxt };
 import fs from 'fs';
 import path from 'path';
 import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
+<<<<<<< HEAD
 const baseUrl = '"https": //ziontechgroup && ziontechgroup.com';// Run if this is the main module
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const baseUrl = '"https": //ziontechgroup && ziontechgroup.com';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Define all pages with their priority and change frequency
 const pages = [{ url: '', "priority": '1 && 1.0', "changefreq": 'daily' },
   { "url": '/services', "priority": '0 && 0.9', "changefreq": 'weekly' },
@@ -81,6 +89,16 @@ Disallow: /_next/
 Disallow: /automation/
 Disallow: /scripts/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+`,
+  const robotsPath = path && path.join(__dirname, '..', 'public', 'robots && robots.txt');
+  fs && fs.writeFileSync(robotsPath, robotsContent);
+  console && console.log('✅ robots && robots.txt generated successfully!');
+  console && console.log(`📄 Robots && Robots.txt saved "to": ${robotsPath}`)}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Run if this is the main module
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -96,6 +114,7 @@ export { generateSitemap, generateRobotsTxt };
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/generate-sitemap-enhanced.js
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -105,6 +124,9 @@ export { generateSitemap, generateRobotsTxt };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ { url: '',priority: '1.0',changefreq: 'daily' },{ url: '/services',priority: '0.9',changefreq: 'weekly' },{ url: '/micro-saas',priority: '0.9',changefreq: 'weekly' },{ url: '/ai-services',priority: '0.9',changefreq: 'weekly' },{ url: '/it-services',priority: '0.9',changefreq: 'weekly' },{ url: '/about',priority: '0.8',changefreq: 'monthly' },{ url: '/contact',priority: '0.8',changefreq: 'monthly' },{ url: '/pricing',priority: '0.8',changefreq: 'weekly' },{ url: '/faq',priority: '0.7',changefreq: 'monthly' },{ url: '/quantum-computing',priority: '0.8',changefreq: 'weekly' },{ url: '/cybersecurity',priority: '0.8',changefreq: 'weekly' },{ url: '/cloud-devops',priority: '0.8',changefreq: 'weekly' },{ url: '/services-catalog',priority: '0.7',changefreq: 'weekly' },{ url: '/docs',priority: '0.6',changefreq: 'monthly' },{ url: '/privacy',priority: '0.5',changefreq: 'yearly' },{ url: '/terms',priority: '0.5',changefreq: 'yearly' } ]; function generateSitemap() { const currentDate = new Date().toISOString(); let sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: pages.forEach(page => { const fullUrl = `${baseUrl}${page.url}`; sitemap += ` <url> <loc>${fullUrl}</loc> <lastmod>${currentDate}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> </url>`}); sitemap += ` </urlset>`; const sitemapPath = path.join(__dirname,'..','public','sitemap.xml'); fs.writeFileSync(sitemapPath,sitemap); console.log('✅ Enhanced sitemap generated successfully!'); console.log(`📄 Sitemap saved to: ${sitemapPath}`); console.log(`🔗 Total URLs: ${pages.length}`)} function generateRobotsTxt() { const robotsContent = `User-agent: * Allow: / Sitemap: ${baseUrl}/sitemap.xml # Crawl-delay for respectful crawling Crawl-delay: 1 # Block access to admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /automation/ Disallow: /scripts/ `; const robotsPath = path.join(__dirname,'..','public','robots.txt'); fs.writeFileSync(robotsPath,robotsContent); console.log('✅ robots.txt generated successfully!'); console.log(`📄 Robots.txt saved to: ${robotsPath}`)} if (import.meta.url === `file: generateSitemap(); generateRobotsTxt()} export { generateSitemap,generateRobotsTxt };
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ { url: '',priority: '1.0',changefreq: 'daily' },{ url: '/services',priority: '0.9',changefreq: 'weekly' },{ url: '/micro-saas',priority: '0.9',changefreq: 'weekly' },{ url: '/ai-services',priority: '0.9',changefreq: 'weekly' },{ url: '/it-services',priority: '0.9',changefreq: 'weekly' },{ url: '/about',priority: '0.8',changefreq: 'monthly' },{ url: '/contact',priority: '0.8',changefreq: 'monthly' },{ url: '/pricing',priority: '0.8',changefreq: 'weekly' },{ url: '/faq',priority: '0.7',changefreq: 'monthly' },{ url: '/quantum-computing',priority: '0.8',changefreq: 'weekly' },{ url: '/cybersecurity',priority: '0.8',changefreq: 'weekly' },{ url: '/cloud-devops',priority: '0.8',changefreq: 'weekly' },{ url: '/services-catalog',priority: '0.7',changefreq: 'weekly' },{ url: '/docs',priority: '0.6',changefreq: 'monthly' },{ url: '/privacy',priority: '0.5',changefreq: 'yearly' },{ url: '/terms',priority: '0.5',changefreq: 'yearly' } ]; function generateSitemap() { const currentDate = new Date().toISOString(); let sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: pages.forEach(page => { const fullUrl = `${baseUrl}${page.url}`; sitemap += ` <url> <loc>${fullUrl}</loc> <lastmod>${currentDate}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> </url>`}); sitemap += ` </urlset>`; const sitemapPath = path.join(__dirname,'..','public','sitemap.xml'); fs.writeFileSync(sitemapPath,sitemap); console.log('✅ Enhanced sitemap generated successfully!'); console.log(`📄 Sitemap saved to: ${sitemapPath}`); console.log(`🔗 Total URLs: ${pages.length}`)} function generateRobotsTxt() { const robotsContent = `User-agent: * Allow: / Sitemap: ${baseUrl}/sitemap.xml # Crawl-delay for respectful crawling Crawl-delay: 1 # Block access to admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /automation/ Disallow: /scripts/ `; const robotsPath = path.join(__dirname,'..','public','robots.txt'); fs.writeFileSync(robotsPath,robotsContent); console.log('✅ robots.txt generated successfully!'); console.log(`📄 Robots.txt saved to: ${robotsPath}`)} if (import.meta.url === `file: generateSitemap(); generateRobotsTxt()} export { generateSitemap,generateRobotsTxt };
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ { url: '',priority: '1.0',changefreq: 'daily' },{ url: '/services',priority: '0.9',changefreq: 'weekly' },{ url: '/micro-saas',priority: '0.9',changefreq: 'weekly' },{ url: '/ai-services',priority: '0.9',changefreq: 'weekly' },{ url: '/it-services',priority: '0.9',changefreq: 'weekly' },{ url: '/about',priority: '0.8',changefreq: 'monthly' },{ url: '/contact',priority: '0.8',changefreq: 'monthly' },{ url: '/pricing',priority: '0.8',changefreq: 'weekly' },{ url: '/faq',priority: '0.7',changefreq: 'monthly' },{ url: '/quantum-computing',priority: '0.8',changefreq: 'weekly' },{ url: '/cybersecurity',priority: '0.8',changefreq: 'weekly' },{ url: '/cloud-devops',priority: '0.8',changefreq: 'weekly' },{ url: '/services-catalog',priority: '0.7',changefreq: 'weekly' },{ url: '/docs',priority: '0.6',changefreq: 'monthly' },{ url: '/privacy',priority: '0.5',changefreq: 'yearly' },{ url: '/terms',priority: '0.5',changefreq: 'yearly' } ]; function generateSitemap() { const currentDate = new Date().toISOString(); let sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: pages.forEach(page => { const fullUrl = `${baseUrl}${page.url}`; sitemap += ` <url> <loc>${fullUrl}</loc> <lastmod>${currentDate}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> </url>`}); sitemap += ` </urlset>`; const sitemapPath = path.join(__dirname,'..','public','sitemap.xml'); fs.writeFileSync(sitemapPath,sitemap); console.log('✅ Enhanced sitemap generated successfully!'); console.log(`📄 Sitemap saved to: ${sitemapPath}`); console.log(`🔗 Total URLs: ${pages.length}`)} function generateRobotsTxt() { const robotsContent = `User-agent: * Allow: / Sitemap: ${baseUrl}/sitemap.xml # Crawl-delay for respectful crawling Crawl-delay: 1 # Block access to admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /automation/ Disallow: /scripts/ `; const robotsPath = path.join(__dirname,'..','public','robots.txt'); fs.writeFileSync(robotsPath,robotsContent); console.log('✅ robots.txt generated successfully!'); console.log(`📄 Robots.txt saved to: ${robotsPath}`)} if (import.meta.url === `file: generateSitemap(); generateRobotsTxt()} export { generateSitemap,generateRobotsTxt };

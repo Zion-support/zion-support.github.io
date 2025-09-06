@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +84,8 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client";
@@ -91,6 +94,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -115,10 +119,46 @@ export const quoteRequestService = {}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+import {supabase} from "@/integrations/supabase/client";
+
+
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+
+
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+export const quoteRequestService = {
+  // Get all quote requests (for admin);
+  get_all: async () => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+
+
+
+
+
+import { supabase } from "@/integrations/supabase/client";
+import {supabase} from "@/integrations/supabase/client";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { supabase } from "@/integrations/supabase/client",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+
+export const quoteRequestService = {
+  // Get all quote requests (for admin)
+  getAll: async () => {
+    const { data, error } = await supabase
+      .from('quote_requests')
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       .select(`
         *,
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -128,10 +168,46 @@ export const quoteRequestService = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        talent:talent_id (
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return data && data.map((item: any) => ({
 
-      .select(`;
-        *;
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
+    
+    // Format the data to include talent_name
+    return data.map((item: any) => ({
+
+      ...item,
+      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+  };
+  
+
+
+
+  // Get quote requests for a specific talent
+  getByTalentId: async (talentId: string) => {
+    const { data, error } = await supabase
+      .from('quote_requests')
+      .select('*')
+      .eq('talent_id', talentId)
+
+
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
+    return data as QuoteRequest[]
+  },
+  
+
+
+  // Get a single quote request by id
+  getById: async (id: string) => {
+    const { data, error } = await supabase
+      .from('quote_requests')
       .select(`
         *,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -139,21 +215,14 @@ export const quoteRequestService = {}
           display_name
         )
       `)
-      .select(`
-        *,
-
-        talent:talent_id (
-
-        talent:talent_id (
-    return data && data.map((item: any) => ({
-
-      .order('created_at', { ascending: false });
+      .eq('id', id)
+      .single();
     if (error) throw error;
-    // Format the data to include talent_name
-    return data.map((item: any) => ({
-      ...item
-      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
+    return {
+      ...data;
+      talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
+<<<<<<< HEAD
       ...item,
 =======
 
@@ -190,11 +259,93 @@ export const quoteRequestService = {}
       .eq('talent_id', talentId)
 '
       .order('created_at', { ascending: false }),
+=======
+;
+  // Get quote requests for a specific talent;
+  getByTalentId: async (talent_id: string) => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select ('*');
+      .eq ('talent_id', talent_id);
+      .order ('created_at', { ascending: false });
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return data as QuoteRequest[];
+  }
+;
+  // Get a single quote request by id;
+  getById: async (id: string) => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+        talent:talent_id (
+
+      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+  };
+  
+
+  // Update quote request status
+  updateStatus: async (id: string, status: QuoteStatus) => {
+    const updates: any = { status }
+    // If marking as responded, set replied_at
+    if (status === 'responded') {
+      updates && updates.replied_at = new Date().toISOString()
+    }
+    // If marking as in_review and viewed_at is null, set viewed_at
+    if (status === 'in_review') {
+      const { data } = await supabase
+        .from('quote_requests')
+        .select('viewed_at')
+        .eq('id', id)
+        .single();
+
+      
+      if (!data && data.viewed_at) {
+        updates && updates.viewed_at = new Date().toISOString()
+
+      }
+    }
+    const { data, error } = await supabase
+      .from('quote_requests')
+      .update(updates)
+      .eq('id', id)
+      .select();
+    if (error) throw error;
+    return data[0] as QuoteRequest
+  }
+  // Archive/Unarchive a quote request
+  toggleArchive: async (id: string, isArchived: boolean) => {
+    const { data, error } = await supabase
+      .from('quote_requests')
+      .update({ is_archived: isArchived })
+      .eq('id', id)
+      .select();
+    if (error) throw error;
+    return data[0] as QuoteRequest
+  }
+  // Delete a quote request
+  delete: async (id: string) => {
+    const { error } = await supabase
+      .from('quote_requests')
+      .delete()
+      .eq('id', id);
+    if (error) throw error;
+    return true
+  }
+}
+
+      .single(),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     
     if (error) throw error,
     return data as QuoteRequest[]
   },
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -220,6 +371,15 @@ export const quoteRequestService = {}
       .eq('id', id)
 <<<<<<< HEAD
 
+=======
+  // Update quote request status
+  updateStatus: async (id: string, status: QuoteStatus) => {
+    const updates: any = { status },
+    
+    // If marking as responded, set replied_at
+    if (status === 'responded') {
+      updates.replied_at = new Date().toISOString()
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -337,6 +497,7 @@ if (throw error) {}
     if (error) throw error;
     return true;
 
+<<<<<<< HEAD
   }
 };
 =======
@@ -636,6 +797,63 @@ export const quoteRequestService = {;
     const { data, error } = await supabase;
       .from ('quote_requests');
       .update ({ is_archived: is_archived });
+=======
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
+    return data as QuoteRequest[]
+  },
+  
+
+
+  // Get a single quote request by id
+          display_name);
+      `);
+      .eq ('id', id);
+      .single ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return {
+      ...data;
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
+  }
+;
+  // Update quote request status;
+  update_status: async (id: string, status: QuoteStatus) => {
+    const updates: any = { status }
+;
+    // If marking as responded, set replied_at;
+    // Check condition
+if ( {) {
+  $2
+}
+      updates.replied_at = new Date ().toISOString ();
+    }
+    // If marking as in_review and viewed_at is null, set viewed_at;
+    // Check condition
+if ( {) {
+  $2
+}
+      const { data } = await supabase;
+        .from ('quote_requests');
+        .select ('viewed_at');
+        .eq ('id', id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        updates.viewed_at = new Date ().toISOString ();
+      }
+    }
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .update (updates);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .eq ('id', id);
       .select ();
 ;
@@ -661,6 +879,7 @@ if (throw error) {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -728,10 +947,14 @@ if (throw error) {}
 
 };
 <<<<<<< HEAD
+=======
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 };
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 };
@@ -747,3 +970,6 @@ if (throw error) {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

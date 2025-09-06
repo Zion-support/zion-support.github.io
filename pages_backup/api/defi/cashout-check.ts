@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/defi/cashout-check.ts
 <<<<<<< HEAD:pages/api/defi/cashout-check.ts
 <<<<<<< HEAD
@@ -92,6 +93,8 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/defi/cashout-check.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const DATA_DIR = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })

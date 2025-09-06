@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,19 @@ function ResumeWizard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { ResumeWizard, as, WizardComponent } from "./wizard";
+export function ResumeWizard() {
+  return <WizardComponent />;
+}
+import {ResumeWizard, as, WizardComponent} from './wizard';
+export function ResumeWizard() {;
+  return <WizardComponent />;
+}
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 import { ResumeWizard, as, WizardComponent } from "./wizard";
@@ -71,15 +85,22 @@ export function ResumeWizard() {};
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ResumeWizard as WizardComponent } from './wizard',;
 ;
 export function ResumeWizard() { return null; }
 } 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,16 +113,40 @@ export function ResumeWizard() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeWizard as WizardComponent } from './wizard';
 export function ResumeWizard() {};
+=======
+import { ResumeWizard as WizardComponent } from './wizard';
+export function ResumeWizard() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <WizardComponent />;
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import {ResumeWizard, as, WizardComponent} from './wizard';
+export function ResumeWizard() {
+  return <WizardComponent />
+import { ResumeWizard as WizardComponent } from './wizard';
+export function ResumeWizard() {
+  return <WizardComponent />;
+}
+export function ResumeWizard() {;
+  return <WizardComponent />;
+}
+;
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 '

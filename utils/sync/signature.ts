@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import crypto from "crypto";
 export function getSyncSecret(): string | null {;
   const raw = process.env.ZION_SYNC_SECRET || "";
@@ -50,6 +51,13 @@ export function getSyncSecret(): string | null {
 =======
 export function getSyncSecret(): string | null {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import crypto from "crypto";
+
+
+}
+export function getSyncSecret(): string | null {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
@@ -123,7 +131,11 @@ export function verifySignature(
 
 <<<<<<< HEAD
 export function generateNonce(): string {
-  return crypto.randomBytes(16).toString("hex");  verify: (signature: string, message: string, address: string) => false,
+  return crypto.randomBytes(16).toString("hex");
+
+export function generateNonce(): string {
+  return crypto.randomBytes(16).toString("hex");
+  verify: (signature: string, message: string, address: string) => false,
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
 =======
@@ -134,6 +146,7 @@ export function generateNonce(): string {";
 
 export function hashData(data: string): string {";
   return crypto.createHash("sha256").update(data).digest("hex");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -159,3 +172,9 @@ export function hashData(data: string): string {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+};
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

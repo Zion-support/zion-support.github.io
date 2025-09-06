@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/index.tsx
 <<<<<<< HEAD
 
@@ -47,6 +48,8 @@
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     slug: 'ai-automation-trends-2025',
     title: 'AI Automation Trends 2025',
@@ -120,12 +123,16 @@ export default function BlogIndexPage() {
               >
                 Read →
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function BlogIndexPage() {
 =======
 
@@ -152,6 +159,7 @@ export default function BlogIndexPage() {}
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">"
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>"
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/blog/index.tsx
 <<<<<<< HEAD:pages/blog/index.tsx
 <<<<<<< HEAD
@@ -214,11 +222,15 @@ export default function BlogIndexPage() {}
 =======
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/index.tsx
+=======
+              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/index.tsx
 <<<<<<< HEAD
   )
@@ -281,3 +293,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/index.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

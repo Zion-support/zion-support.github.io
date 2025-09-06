@@ -20,6 +20,7 @@ export type { ResumeOption } from "./types";
 
 export { ResumeSelector } from './ResumeSelector',;
 export type { ResumeOption } from './types';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -30,3 +31,11 @@ export type { ResumeOption } from './types';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export { ResumeSelector } from "./ResumeSelector";
+export type { ResumeOption } from "./types";
+
+export { ResumeSelector } from './ResumeSelector',;
+export type { ResumeOption } from './types';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

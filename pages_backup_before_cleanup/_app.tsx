@@ -28,6 +28,7 @@ interface _appProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -38,10 +39,15 @@ export default function _app({ }: _appProps) {
 
 export default function _app({ }: _appProps) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function _app({ }: _appProps) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <h1>_app</h1>
       <p>This component is currently under development.</p>
+<<<<<<< HEAD
     </div>;
   );
 <<<<<<< HEAD
@@ -53,11 +59,16 @@ export default function _app({ }: _appProps) {}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 <<<<<<< HEAD
+=======
+    </div>
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
@@ -80,3 +91,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

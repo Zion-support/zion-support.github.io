@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -46,10 +47,23 @@ interface Milestone {}
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+
+
+interface Milestone {
+  title: string;
+  description: string;
+  dueDate: string
+  estimatedHours: number
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,6 +78,9 @@ const corsHeaders = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -74,6 +91,7 @@ interface Milestone {
   description: string,
   dueDate: string,
   estimatedHours: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -93,6 +111,11 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 "
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
@@ -115,7 +138,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 interface Milestone {;
-  title: string,,
+  title: string,;
   description: string,;
   dueDate: string,;
   estimatedHours: number;
@@ -123,10 +146,13 @@ interface Milestone {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -389,8 +415,8 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 
-  try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -409,6 +435,41 @@ serve(async (req) => {
 =======
 =======;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
+    }
+    // Parse request body
+    const {
+      talentName;
+      clientName;
+      projectName;
+      scopeSummary;
+      startDate;
+      endDate;
+      paymentTerms;
+      paymentAmount;
+      additionalClauses;
+      milestones
+
+    } = await req && req.json();
+
+
+    // Create the contract prompt for OpenAI
+    let prompt = `
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
+
+
+
+
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {;
     // Get the OpenAI API key from environment variables;'
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -431,6 +492,7 @@ serve(async (req) => {
     } = await req.json(),;
     // Create the contract prompt for OpenAI;
     let prompt = `;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
@@ -461,6 +523,18 @@ serve(async (req) => {
     Payment Terms: ${paymentTerms}
     Payment Amount: ${paymentAmount}
 <<<<<<< HEAD
+=======
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
+
+
+
+    Project Name: ${projectName}
+    Project Scope: ${scopeSummary}
+    Start Date: ${new Date(startDate).toLocaleDateString()}
+    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
+    Payment Terms: ${paymentTerms}
+    Payment Amount: ${paymentAmount}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     The contract should include standard sections like: - Parties involved
     - Project scope
     - Timeline
@@ -472,12 +546,16 @@ serve(async (req) => {
       Please also include the following additional clauses:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
       ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
       ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       ${additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
@@ -487,14 +565,20 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       `
     }
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
       The project will be divided into the following milestones: `,
       
@@ -502,7 +586,10 @@ serve(async (req) => {
 
         prompt += `
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -510,6 +597,7 @@ serve(async (req) => {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
 
+<<<<<<< HEAD
 =======
       The project will be divided into the following milestones: `,
       milestones && milestones.forEach((milestone: Milestone, index: number) => {
@@ -557,6 +645,9 @@ if (milestones && milestones.length > 0) {prompt += `
 =======
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;        `
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        `
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       prompt += `
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
@@ -571,9 +662,24 @@ if (milestones && milestones.length > 0) {prompt += `
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
       body: JSON.stringify({
+        model: 'gpt-4o';
         messages: [
           {
-            role: 'system'      prompt += `;
+            role: 'system'
+        Milestone ${index + 1}: ${milestone.title}
+        - Description: ${milestone.description}
+        - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
+
+      { 
+        status: 500, 
+
+        - Estimated Work: ${milestone.estimatedHours} hours;
+        `;
+      }),;
+        - Estimated Work: ${milestone.estimatedHours} hours;
+        `;
+      }),;
+      prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
     }
@@ -591,6 +697,7 @@ if (milestones && milestones.length > 0) {prompt += `
     return new Response(JSON && JSON.stringify({ 
       success: true, 
       contract 
+<<<<<<< HEAD
 =======
     The contract should include standard sections like: - Parties involved;
     - Project scope;
@@ -656,6 +763,9 @@ if (milestones && milestones.length > 0) {prompt += `
     }
 `
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;`
     `;
@@ -716,6 +826,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
             role: 'system',
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},
           {
+<<<<<<< HEAD
             role: 'user',
             content: prompt}],
         temperature: 0.7})}),
@@ -818,11 +929,55 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
             role: 'system',;'
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},;
           {;'
+=======
+            role: 'user'
+            content: prompt}];
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate contract');
+    }
+    const contract = data.choices[0].message.content.trim ();
+;
+    return new Response (JSON.stringify ({
+      success: true,
+      contract;
+    }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+      });
+      {
+        status: 500
+;
+    prompt += `;
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
+    `,;
+    // Call OpenAI API;
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},;
+      body: JSON.stringify({;
+        model: 'gpt-4o',;
+        messages: [;
+          {;
+            role: 'system',;
+            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},;
+          {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             role: 'user',;
             content: prompt}],;
         temperature: 0.7})}),;
     const data = await response.json(),;
+<<<<<<< HEAD
     if (!response.ok) {;'
+=======
+    if (!response.ok) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error(data.error?.message || 'Failed to generate contract');
     }
 ;
@@ -830,6 +985,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
     return new Response(JSON.stringify({;
       success: true,;
       contract;
+<<<<<<< HEAD
     }), {;'
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
   } catch (error) {;'
@@ -837,10 +993,20 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
     return new Response(;
       JSON.stringify({;
         success: false,;'
+=======
+    }), {;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error generating contract:', error),;
+    return new Response(;
+      JSON.stringify({;
+        success: false,;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         error: error.message || 'Failed to generate contract';
       }),;
       {;
         status: 500,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -879,10 +1045,16 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 =======
 =======
             content: prompt}];        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+=======
+
+
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )
   }
 });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 
     console.error ('Error generating contract:', error);
     return new Response (
@@ -897,6 +1069,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -919,10 +1092,23 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
       }),
       {}
         status: 500,'
+=======
+
+
+    console.error('Error generating contract:', error),
+    return new Response(
+      JSON.stringify({ 
+        success: false,
+        error: error.message || 'Failed to generate contract' 
+      }),
+      { 
+        status: 500,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )  }
 }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -940,3 +1126,5 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

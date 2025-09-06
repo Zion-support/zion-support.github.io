@@ -67,6 +67,7 @@ export const DownloadSection: React.FC = () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AppStoreButtons
                 className="mb-8"
 =======
@@ -161,6 +162,9 @@ export const DownloadSection: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -193,6 +197,7 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,8 +244,12 @@ export const DownloadSection: React.FC = () => {;
 =======
   )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
-  )
+
+  );
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -248,6 +257,7 @@ export const DownloadSection: React.FC = () => {;
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,12 +275,19 @@ export const DownloadSection: React.FC = () => {;
 },
 
               />;"
+=======
+  )
+},
+
+              />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8 && 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
               </div>;
             </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,6 +333,8 @@ export const DownloadSection:React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">;
 =======
@@ -376,6 +395,7 @@ export const DownloadSection:React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </section>);
 }
@@ -388,10 +408,13 @@ export const DownloadSection:React.FC = () => {;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 };
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -417,3 +440,5 @@ export const DownloadSection:React.FC = () => {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

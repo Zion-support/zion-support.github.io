@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,10 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {}
@@ -34,6 +39,7 @@ export /**;
 function Analytics() {
   useEffect (() => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +67,10 @@ function Analytics() {}
 "
 "use client",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"use client",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
   processingStart: number,;
@@ -68,6 +78,7 @@ interface FirstInputEntry extends PerformanceEntry {;
   target?: Element;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function Analytics() {;
   useEffect(() => {;
@@ -95,6 +106,39 @@ export function Analytics() {;
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+=======
+export function Analytics() {;
+  useEffect(() => {;
+
+
+    // Performance monitoring;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Core Web Vitals monitoring;
+      const observer = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            // // // console.log ("LCP:", entry.start_time);
+          }
+
+
+          // Check condition
+if ( {) {
+  $2
+}
+            const firstInputEntry = entry as FirstInputEntry,
+            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
+
+          if (entry.entryType === "first-input") {;
+            const firstInputEntry = entry as FirstInputEntry,;
+            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
         }
       }),;
@@ -168,9 +212,13 @@ if ( {) {}
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Cumulative Layout Shift monitoring;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      // Cumulative Layout Shift monitoring;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
         for (const entry of list.get_entries ()) {
@@ -179,6 +227,7 @@ if ( {) {
   $2
 }
             const layoutShiftEntry = entry as any,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             cls += layoutShiftEntry.value;
           }
@@ -201,10 +250,24 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            cls += layoutShiftEntry.value;
+          }
+        }
+      }),
+      observer2.observe ({ entry_types: ["layout - shift"] }),
+      // Report metrics on page unload;
+      window.addEventListener ("beforeunload", () => {
+        // // // console.log ("CLS:", cls);
+      }),
+      // Cleanup;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return () => {;
         observer.disconnect();
 
         observer2.disconnect();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -258,6 +321,10 @@ if ( {) {
 =======
       // Cumulative Layout Shift monitoring;      }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }, []);'
   return null, // This component doesn't render anything;

@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 const logMessage = `[${timestamp}] ${message}\n`;
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const logMessage = `[${timestamp}] ${message}\n`;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
+
   async runCommand(command, options = {}) {
     try {
 <<<<<<< HEAD
@@ -39,9 +43,11 @@ const logMessage = `[${timestamp}] ${message}\n`;
       };
     }
   }
+
   async runAutomation(scriptName, command) {
     this.log(`Running: ${scriptName}`);
     const result = await this.runCommand(command);
+    
     if (result.success) {
       this.results.success.push({ script: scriptName, output: result.stdout });
       this.log(`✅ ${scriptName} completed successfully`);
@@ -49,15 +55,19 @@ const logMessage = `[${timestamp}] ${message}\n`;
       this.results.failed.push({ script: scriptName, error: result.stderr });
       this.log(`❌ ${scriptName} failed: ${result.stderr}`);
     }
+    
     return result;
   }
+
   async runAll() {
     this.log('🚀 Starting comprehensive automation run...');
+    
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+
     // Define all automation scripts to run
     const automations = [
       { name: 'Install Dependencies', command: 'npm install' },
@@ -77,18 +87,23 @@ const logMessage = `[${timestamp}] ${message}\n`;
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
       { name: 'Git Push', command: 'git push origin main' }
     ];
+
     // Run each automation
     for (const automation of automations) {
       await this.runAutomation(automation.name, automation.command);
     }
+
     // Generate comprehensive report
     this.generateReport();
+    
     this.log('🎉 Comprehensive automation run completed');
     this.log(`✅ Successful: ${this.results.success.length}`);
     this.log(`❌ Failed: ${this.results.failed.length}`);
     this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
+
     return this.results;
   }
+
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -104,16 +119,19 @@ const logMessage = `[${timestamp}] ${message}\n`;
         warnings: this.results.warnings
       }
     };
+
     const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to ${reportFile}`);
     return report;
   }
 }
+
 // Handle command line arguments
 if (require.main === module) {
   const runner = new RunAllAutomations();
   const command = process.argv[2];
+
   switch (command) {
     case "run":
       runner.runAll().catch(error => {
@@ -124,10 +142,14 @@ if (require.main === module) {
     case "report":
       runner.generateReport();
       break;
-    default: console.log("Usage: node run-all-automations.cjs [run|report]"), process.exit(1),
+    default:
+      console.log("Usage: node run-all-automations.cjs [run|report]");
+      process.exit(1);
   }
 }
+
 module.exports = RunAllAutomations;
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -161,9 +183,13 @@ const { execSync } = require('child_process')
         "priority"
         "message"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
         "impact"
         "impact"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

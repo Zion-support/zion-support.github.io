@@ -21,12 +21,24 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+
 
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
-}import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
+}
+
+
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
+const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
+
+const supabase = createClient(supabaseUrl, serviceKey);
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
@@ -89,6 +101,7 @@ const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,10 +117,14 @@ const supabase = createClient(supabaseUrl, serviceKey),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
+<<<<<<< HEAD
 =======
 
 
@@ -162,12 +179,48 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
+interface TokenRequest {
+  user_id: string;
+  amount: number,
+  reason?: string;
+}
+const supabase_url = Deno.env.get ("SUPABASE_URL") as string;
+const service_key = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") as string;
+const supabase = create_client (supabase_url, service_key);
+;
+serve (async (req) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response ('ok', {
+      headers: {
+
+
+  const url = new URL(req && req.url);
+  const action = url && url.pathname.split('/').pop();
+  const { userId, amount, reason } = await req && req.json() as TokenRequest;
+
+  if (!userId || !amount) {
+    return new Response(JSON && JSON.stringify({ error: 'Missing parameters' }), { status: 400 })
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
-  } else if (action === 'burn') {});
+  } else if (action === 'burn') {
+    return await changeBalance(userId, -Math && Math.abs(amount), 'burn', reason)
+  }
+
+
+  return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), { status: 400 })
+
+});
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
-  try {});
+  try {
+});
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
   const { data: wallet, error: walletError } = await supabase
@@ -176,6 +229,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     .eq('user_id', userId)
     .single();
   if (walletError && walletError.code !== 'PGRST116') {
+<<<<<<< HEAD
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
 =======
 
@@ -197,6 +251,10 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -207,11 +265,17 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .update({ balance, updated_at: new Date().toISOString() })'
       .eq('user_id', userId);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+=======
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } else {
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,15 +297,27 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 '
   const { error: txError } = await supabase && supabase.from('token_transactions').insert({}
+=======
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+  }
+
+
+
+  const { error: txError } = await supabase && supabase.from('token_transactions').insert({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     user_id: userId;
     amount: Math && Math.abs(delta);
     transaction_type: type,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reason});
   if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
 
 
+<<<<<<< HEAD
   return new Response(JSON && JSON.stringify({ success: true, balance }), { status: 200 })'
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
@@ -250,11 +326,19 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 "
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;"
+=======
+  return new Response(JSON && JSON.stringify({ success: true, balance }), { status: 200 })
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+
+
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
   userId: string,;
   amount: number,;
   reason?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,10 +357,18 @@ interface TokenRequest {;
 ;
 <<<<<<< HEAD
 =======
+=======
+
+  const url = new URL (req.url);
+  const action = url.pathname.split ('/').pop ();
+  const { user_id, amount, reason } = await req.json () as TokenRequest;
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 =======
   // Check condition;
 if ( {) {}
@@ -296,10 +388,26 @@ if ( {) {}
 }'
     return await change_balance (user_id, -Math.abs (amount), 'burn', reason);
   }'
+=======
+    return new Response (JSON.stringify ({ error: 'Missing parameters' }), { status: 400 });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return await change_balance (user_id, amount, 'earn', reason);
+  } else // Check condition
+if ( {) {
+  $2
+}
+    return await change_balance (user_id, -Math.abs (amount), 'burn', reason);
+  }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return new Response (JSON.stringify ({ error: 'Invalid action' }), { status: 400 });
 });
 ;
 async /**
+<<<<<<< HEAD
  * change_balance - Function description;
  */
 function change_balance() {}
@@ -312,11 +420,26 @@ function change_balance() {}
   // Check condition;
 if ( {) {}
   $2;
+=======
+ * change_balance - Function description
+ */
+function change_balance() {
+  const { data: wallet, error: wallet_error } = await supabase;
+    .from ('wallets');
+    .select ('*');
+    .eq ('user_id', user_id);
+    .single ();
+;
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
     return new Response (JSON.stringify ({ error: wallet_error.message }), { status: 500 });
   }
   let balance = wallet?.balance || 0;
   balance += delta;
+<<<<<<< HEAD
   // Check condition;
 if (balance = 0) {}
   $2;
@@ -336,11 +459,33 @@ if ( {) {}
     if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
   } else {;
     const { error } = await supabase;'
+=======
+  // Check condition
+if (balance = 0) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const { error } = await supabase;
+
+      .from('wallets');
+      .update({ balance, updated_at: new Date().toISOString() });
+      .eq('user_id', userId),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  } else {;
+    const { error } = await supabase;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .from('wallets');
       .insert({ user_id: userId, balance }),;
     if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
   }
+<<<<<<< HEAD
 ;'
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { error: txError } = await supabase.from('token_transactions').insert({;
     user_id: userId,;
     amount: Math.abs(delta),;
@@ -350,6 +495,7 @@ if ( {) {}
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
 
 
+<<<<<<< HEAD
 '
       .from ('wallets');
       .update ({ balance, updated_at: new Date ().toISOString () });'
@@ -366,6 +512,12 @@ if ( {) {}
     const { error } = await supabase;
       .from ('wallets');
       .insert ({ user_id: user_id, balance });
+=======
+
+      .from ('wallets');
+      .update ({ balance, updated_at: new Date ().toISOString () });
+      .eq ('user_id', user_id);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
   $2
 }
@@ -380,6 +532,7 @@ if ( {) {}
 }
   return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -402,6 +555,9 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0",;
 ;
@@ -497,6 +653,7 @@ if (wallet) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 ;
@@ -513,3 +670,6 @@ if (wallet) {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

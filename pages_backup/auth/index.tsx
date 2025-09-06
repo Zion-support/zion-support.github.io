@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/auth/index.tsx
 <<<<<<< HEAD:pages/auth/index.tsx
 <<<<<<< HEAD
@@ -203,6 +204,8 @@ const Onboarding: NextPage = () => {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/auth/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
 
 const Onboarding: NextPage = () => {
@@ -213,17 +216,22 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
 
   return (
     <div className='space-y-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/auth/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/auth/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
 <<<<<<< HEAD:pages_backup/auth/index.tsx
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/auth/index.tsx
 <<<<<<< HEAD
 =======
@@ -240,6 +248,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/auth/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <h1 className='text-2xl font-semibold'>Get Started</h1>
 
       <div className='flex items-center gap-2 text-sm flex-wrap'>
@@ -269,6 +279,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {step === 3 && (
           <div>Preview your profile/listing before going live.</div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/auth/index.tsx
 <<<<<<< HEAD
           <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
@@ -339,6 +350,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/auth/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
 
       <div className="flex gap-2">
@@ -413,6 +427,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 export default Onboarding;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/auth/index.tsx
 <<<<<<< HEAD:pages/auth/index.tsx
 <<<<<<< HEAD
@@ -481,3 +496,6 @@ export default Onboarding,
 
 '";`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/auth/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ const React,{ useState } from react" import { Link } from";";react-router-dom" i
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React,{ useState } from react\' import { Link } from\';\';react-router-dom\' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from\';\';lucide-react\' import { Button } from\';\';@/components/ui/button\' const mobileMenuItems = [{ \"name\": \'Service,s,\"icon\": <Briefcase: className=\'w-5 h-5\'/,>,\"href\": \'; /services\' },\''\' { \"name\": \'Talen,t,\"icon\": <Users: className=\'w-5 h-5\'/,>,\"href\": \'; /talent\' },\''\' { \"name\": \'Equipmen,t,\"icon\": <HardDrive: className=\'w-5 h-5\'/,>,\"href\": \'; /equipment\' },\''\' { \"name\": \'Innovatio,n,\"icon\": <Lightbulb: className=\'w-5 h-5\'/,>,\"href\": \';\';/category/innovation\'}] \"export\": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)\'';
 const React,{ useState } from react" import { Link } from";";react-router-dom" import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from";";lucide-react" import { Button } from";";@/components/ui/button" const mobileMenuItems = [{ name: "Service,s,icon: <Briefcase: className="w-5 h-5"/,>,href: "; /services" },""" { name: "Talen,t,icon: <Users: className="w-5 h-5"/,>,href: "; /talent" },""" { name: "Equipmen,t,icon: <HardDrive: className="w-5 h-5"/,>,href: "; /equipment" },""" { name: "Innovatio,n,icon: <Lightbulb: className="w-5 h-5"/,>,href: ";";/category/innovation"}] export: function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)"";'"'"
+=======
+import _React,{ useState } from react' import { Link } from';';react-router-dom' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from';';lucide-react' import { Button } from';';@/components/ui/button' const mobileMenuItems = [{ "name": 'Service,s,"icon": <Briefcase: className='w-5 h-5'/,>,"href": '; /services' },''' { "name": 'Talen,t,"icon": <Users: className='w-5 h-5'/,>,"href": '; /talent' },''' { "name": 'Equipmen,t,"icon": <HardDrive: className='w-5 h-5'/,>,"href": '; /equipment' },''' { "name": 'Innovatio,n,"icon": <Lightbulb: className='w-5 h-5'/,>,"href": ';';/category/innovation'}] "export": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)'';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

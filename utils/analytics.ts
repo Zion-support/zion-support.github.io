@@ -34,6 +34,7 @@ export async function trackEvent(payload: TrackEventPayload) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -49,6 +50,9 @@ export async function trackEvent(payload: TrackEventPayload) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 <<<<<<< HEAD
 export type TrackEventPayload = {
@@ -83,6 +87,7 @@ function track_event() {}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -106,6 +111,13 @@ function track_event() {}
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+    await fetch('/api/analytics/events/track', {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
@@ -115,8 +127,19 @@ function track_event() {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
   }
 }
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(payload);
+      keepalive: true as any});
+  } catch (e) {;
+    // swallow;
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -149,14 +172,21 @@ function track_event() {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
 <<<<<<< HEAD
+=======
+}
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
   }
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -178,3 +208,5 @@ function track_event() {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

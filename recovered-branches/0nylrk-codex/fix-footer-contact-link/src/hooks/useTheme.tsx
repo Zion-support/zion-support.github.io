@@ -42,6 +42,7 @@ export const useTheme = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -76,6 +77,10 @@ export const useTheme = () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),;
+=======
+    theme: "dark",
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 };
 
@@ -83,6 +88,7 @@ import React from 'react',;
 ;
 // This is a simplified version of the theme hook for offline development;
 export const useTheme = () => {;
+<<<<<<< HEAD
   return {;"
     theme:"dark",;`
     setTheme:(theme:string) => // // // console.log(`Theme would change to:${theme}`);
@@ -91,16 +97,29 @@ export const useTheme = () => {;
 //This is a simplified version of the theme hook for offline development;
 };"
     theme: "dark"`
+=======
+  return {;
+    theme:"dark",;
+    setTheme:(theme:string) => // // // console.log(`Theme would change to:${theme}`);
+  },;
+},; import React from 'react';
+//This is a simplified version of the theme hook for offline development 
+};
+    theme: "dark"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 
@@ -131,6 +150,7 @@ export const use_theme = () =>: any {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,3 +174,6 @@ export const use_theme = () =>: any {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

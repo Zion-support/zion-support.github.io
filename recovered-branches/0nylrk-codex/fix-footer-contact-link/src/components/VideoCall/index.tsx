@@ -6,6 +6,7 @@ export { VideoCallRoom } from "../video/VideoCallRoom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export { VideoCallRoom } from '../video/VideoCallRoom';
 // Stub implementation for any LiveKit exports that might be used
@@ -89,6 +90,20 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {import React from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { VideoCallRoom } from '../video/VideoCallRoom',;
+=======
+// Stub implementation for any LiveKit exports that might be used
+export const VideoCall: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
+  return <div>{children}</div>;
+};
+
+export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
+  return <div>{children}</div>;
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 }) => {};
@@ -98,7 +113,7 @@ export { VideoCallRoom } from '../video/VideoCallRoom',;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
-  return <div>{children}</div>
+  return <div>{children}</div>;
 };
 <<<<<<< HEAD
 =======
@@ -136,6 +151,34 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
   return <div>{children}</div>
 }
+<<<<<<< HEAD
+=======
+;
+
+import React from 'react',;
+export { VideoCallRoom } from '../video/VideoCallRoom',;
+;
+// Stub implementation for any LiveKit exports that might be used;
+export const VideoCall:React.FC<{children?:React.ReactNode}> = ({children}) => {;
+  return <div>{children}</div>,;
+},;
+;
+export const LiveKitRoom:React.FC<{children?:React.ReactNode}> = ({children}) => {;
+  return <div>{children}</div>,;
+},; 
+
+import React from 'react';
+export { VideoCallRoom } from '../video/VideoCallRoom';
+// Stub implementation for any LiveKit exports that might be used
+export const VideoCall: React.FC<{children?: React.ReactNode}> = ({children}) => {
+  return <div>{children}</div>
+
+}
+
+export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
+  return <div>{children}</div>
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <div>{children}</div>;
 };
 
@@ -149,6 +192,7 @@ export const VideoCall: React.FC<{children?: React.ReactNode}> = ({children}) =>
 export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {;
   return <div>{children}</div>;
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -160,3 +204,5 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

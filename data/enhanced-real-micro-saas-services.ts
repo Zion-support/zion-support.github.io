@@ -2031,10 +2031,14 @@ export const getServicesByCategory = null;
 name: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 tagline: string;
 price: string;
 period: string;
@@ -2059,8 +2063,12 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 name: string;
@@ -2087,6 +2095,8 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface MicroSaasService {
 =======
@@ -4271,6 +4281,104 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     return enhancedRealMicroSaasServices;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// Service categories
+export const serviceCategories = [
+  'AllAI & Enterprise Automation',
+  'Quantum AI & BiotechAI & Cybersecurity',
+  'Quantum AI & FinanceAI & Supply Chain',
+  'Quantum AI & ClimateAI & Manufacturing',
+  'Quantum AI & HealthcareAI & Logistics',
+  'Quantum AI & EnergyAI & Education',
+  'Quantum AI & CybersecurityAI & Marketing',
+  'Quantum AI & ResearchAI & Legal Services',
+  'Quantum AI & Autonomous VehiclesAI & Real Estate',
+  'Quantum AI & CyberneticsQuantum AI & Space Technology',
+  // ADDITIONAL INNOVATIVE CATEGORIES
+  'AI & Content CreationAI & Customer Service',
+  'AI & Sales AutomationAI & Data Analytics',
+  'AI & HR TechAI & Market Research',
+  'AI & Video ProductionAI & SEO',
+  'AI & BlockchainAI & IoT',
+  'AI & Machine LearningQuantum Computing & AI',
+  'Quantum Finance & TradingQuantum Technology',
+  'Autonomous ManufacturingAutonomous Systems',
+  'Quantum CybersecuritySpace Technology & Aerospace',
+  'Metaverse & VR/ARMetaverse & Virtual Reality',
+  'Biomedical AINeural Technology',
+  'Blockchain & DeFiEdge Computing & IoT',
+  'Manufacturing & Industry 4.0Cybersecurity & Privacy',
+  'Healthcare & BiotechnologyFinancial Technology',
+  'Financial Technology & TradingEnergy & Sustainability',
+  'IoT & Smart CitiesClimate Technology',
+  'Robotics & AutomationAgriculture & Food Tech'
+];
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+
+
+export const getServicesByCategory = (category: string) => {
+  if (category === 'All') return allEnhancedRealMicroSaasServices;
+  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
+};
+export const getPopularServices = () => {
+  return allEnhancedRealMicroSaasServices.filter(service => service.popular)
+};
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return allEnhancedRealMicroSaasServices.filter(service => {
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= min && (max === Infinity ? true : price <= max)
+  })
+};
+export const serviceCategories = [
+  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
+  'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
+  'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
+];
+;
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  
+  // Map category names to match service categories
+  const categoryMapping: { [key: string]: string[] } = {
+    'Quantum Computing': ['Quantum AI & ComputingQuantum Technology'],
+    'AI & Machine Learning': ['AI & Content CreationAI & Customer Service', 'AI & Sales AutomationAI & Data Analytics', 'AI & Legal TechAI & HR Tech', 'AI & Market ResearchAI & Video Production', 'AI & SEOAI & Blockchain', 'AI & IoTAdvanced AI Services'],
+    'Cybersecurity': ['Cybersecurity & PrivacyCybersecurity'],
+    'Blockchain & Web3': ['Blockchain & DeFiAI & Blockchain'],
+    'IoT & Smart Cities': ['Edge Computing & IoTAI & IoT', 'IoT & Smart Cities'],
+    'Metaverse & VR/AR': ['Metaverse & VR/AR'],
+    'Robotics & Automation': ['Robotics & AutomationAutonomous Systems'],
+    'Energy & Sustainability': ['Energy & SustainabilityClimate Technology'],
+    'Logistics & Supply Chain': ['Logistics & Supply Chain'],
+    'Financial Technology': ['Financial TechnologyFinancial Technology & Trading', 'Quantum Finance & Trading'],
+    'Biotechnology & Healthcare': ['Biotechnology & HealthcareBiomedical AI', 'Biotechnology & Healthcare AI'],
+    'Space Technology': ['Space Technology & Aerospace'],
+    'Content Creation': ['AI & Content CreationAI & Video Production'],
+    'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
+    'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
+    'Climate Technology': ['Climate Technology']
+  };
+
+  // Find matching categories
+  const matchingCategories = categoryMapping[categoryName] || [];
+  
+  return enhancedRealMicroSaasServices.filter(service => 
+    matchingCategories.some(category => 
+      service.category.includes(category)
+    )
+  );
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Service categories
 export const serviceCategories = [
   'AllAI & Enterprise Automation',
@@ -4329,10 +4437,14 @@ export const serviceCategories = [
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
 ;
+<<<<<<< HEAD
 =======
 
 // Combined all services;
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -4410,8 +4522,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

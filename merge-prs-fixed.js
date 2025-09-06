@@ -121,12 +121,15 @@ const fs = require('fs');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 #!/usr/bin/env node;
 
@@ -162,6 +165,9 @@ try {;'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 try {;
     // Ensure clean working directory;
@@ -187,6 +193,7 @@ try {;
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -231,11 +238,16 @@ try {;
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+            // Resolve conflicts by accepting our version;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             // Resolve conflicts by accepting our version;
 
 
             for (const file of files) {;
                 if (file.trim()) {;
+<<<<<<< HEAD
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
@@ -251,6 +263,9 @@ try {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
@@ -393,6 +408,9 @@ try {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -412,6 +430,7 @@ try {;
             execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -424,6 +443,8 @@ try {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             // Continue with other branches;
         }
     }
@@ -437,6 +458,7 @@ try {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -444,6 +466,10 @@ try {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     // Get all branches;'
     console.log('🌿 Getting all branches...'),;'
@@ -541,6 +567,7 @@ try {;
 
     process.exit(1);
 }
+<<<<<<< HEAD
 '
     console.log ('📤 Pushing all changes to main...'),'
     exec_sync ('git push origin main'),'
@@ -575,6 +602,18 @@ try {;
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message);
     process.exit(1);}
+=======
+    console.log ('📤 Pushing all changes to main...'),
+    exec_sync ('git push origin main'),
+    console.log ('🎉 All merge operations completed successfully!'),
+    console.log ('✅ All PRs have been merged into main branch'),
+    console.log ('✅ All merge conflicts have been resolved'),
+    console.log ('✅ Repository is now clean and up to date');
+} catch (error) {
+    console.error ('❌ Error during merge process:', error.message),
+    process.exit (1);
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     process.exit(1);
 }
 <<<<<<< HEAD

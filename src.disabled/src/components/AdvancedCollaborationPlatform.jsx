@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,12 +21,16 @@ import _React,{ useState,useRef } from 'react'; export function AdvancedCollabor
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isVideoOff": '!isVideoOff' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isScreenSharing": '!isScreenSharing' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage && chatMessage.trim()) {}}}}
 const React,{ useState,useRef } from "react"; export function AdvancedCollaborationPlatform() { return; }; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from "lucide-react"; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === "1" ? { .p,isVideoOff: "!isVideoOff" } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === "1" ? { .p,isScreenSharing: "!isScreenSharing" } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage && chatMessage.trim()) {}}}}'"'"
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +45,9 @@ import _React,{ useState,useRef } from 'react'; export function AdvancedCollabor
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isVideoOff": '!isVideoOff' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isScreenSharing": '!isScreenSharing' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}
 const React,{ useState,useRef } from "react"; export function AdvancedCollaborationPlatform() { return; }; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from "lucide-react"; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === "1" ? { .p,isVideoOff: "!isVideoOff" } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === "1" ? { .p,isScreenSharing: "!isScreenSharing" } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}'"'"
 import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isVideoOff": '!isVideoOff' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isScreenSharing": '!isScreenSharing' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}

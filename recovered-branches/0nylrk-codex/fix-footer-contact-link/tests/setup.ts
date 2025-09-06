@@ -18,6 +18,7 @@ after_each (() => {
   cleanup (),
   vi.restoreAllMocks ();
 }),
+
 import '@testing-library/jest-dom',;
 import { afterEach, vi } from 'vitest',;
 =======
@@ -42,6 +43,7 @@ afterEach(() => {;
   vi.restoreAllMocks();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,10 +62,34 @@ import { after_each, vi } from 'vitest','
 import { cleanup } from '@testing - library / react',;
 // Ensure React Testing Library cleans up and mocks are restored between tests;
 after_each (() => {}
+=======
+});
+
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+;
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+afterEach(() => {;
+  cleanup(),;
+  vi.restoreAllMocks(),;
+}),; 
+
+import '@testing - library / jest - dom',
+import { after_each, vi } from 'vitest',
+import { cleanup } from '@testing - library / react',
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+after_each (() => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   cleanup (),
   vi.restoreAllMocks ();
 }),
 
+<<<<<<< HEAD
 '
 import '@testing-library/jest-dom',;'
 import { afterEach, vi } from 'vitest',;'
@@ -82,3 +108,10 @@ import { cleanup } from '@testing-library/react',;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

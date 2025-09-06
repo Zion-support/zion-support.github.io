@@ -4,6 +4,7 @@ import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 =======
@@ -67,6 +68,12 @@ import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/
 const KitPage = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+const KitPage = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const KitPage = () => {
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -74,6 +81,7 @@ import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,6 +183,26 @@ const res = await fetch(asset.path);
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+
+
+
+} from '../../utils/mediaKit';
+const KitPage = () => {;
+
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+
+const KitPage = () => {
+
+
+
+  const [bundle, setBundle] = useState<MediaBundle>('general');
+  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [companyName, setCompanyName] = useState('Zion');
+  const [raiseAmount, setRaiseAmount] = useState('$5M');
+  const [tokenName, setTokenName] = useState('ZION');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
     []
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -315,6 +343,7 @@ zip.file('rollout-timeline.txt', tl);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
 
   const onGeneratePdf = useCallback(async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -325,10 +354,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
@@ -401,17 +434,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const drawText = (text: string, x: number, y: number, size = 12) => {
 page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     };
 
     let y = 760;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -670,6 +709,7 @@ if ( {) {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 
@@ -690,10 +730,17 @@ if ( {) {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+    );
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -711,16 +758,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <meta
           name='description'
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
         />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Head>
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
@@ -925,6 +978,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />"
               <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
@@ -1204,6 +1258,8 @@ export default KitPage;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {timeline.length > 0 && (
               <ul className='mt-3 text-sm list-disc list-inside space-y-1'>
                 {timeline.map(t => (
@@ -1246,6 +1302,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <PressReleaseCard type='launch' title='Launch' />
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
             )}          </div>
@@ -1278,10 +1335,15 @@ export default KitPage;
             )}
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+            )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </section>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 =======
@@ -1403,6 +1465,8 @@ export default KitPage;
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 };
 

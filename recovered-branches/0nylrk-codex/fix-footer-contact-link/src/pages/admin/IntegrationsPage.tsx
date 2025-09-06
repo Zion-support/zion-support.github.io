@@ -44,6 +44,7 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
@@ -63,11 +64,14 @@ export default function IntegrationsPage() {;
 =======
 import React, { useState } from "react";
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function IntegrationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -82,6 +86,10 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function IntegrationsPage() {
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default function IntegrationsPage() {
   return (
@@ -104,6 +112,7 @@ export default function IntegrationsPage() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -117,6 +126,9 @@ export default function IntegrationsPage() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -142,6 +154,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -149,6 +162,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function IntegrationsPage() {
   return (
 =======
@@ -163,6 +179,7 @@ export default function IntegrationsPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -170,11 +187,16 @@ export default function IntegrationsPage() {};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       />
       <Header />"
+=======
+      />
+      <Header />
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <main className="min-h-screen bg-background">
         <IntegrationsHub />
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -247,30 +269,11 @@ export default function IntegrationsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
-
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { IntegrationsHub } from '@/components / integrations / IntegrationsHub';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * IntegrationsPage - Function description
- */
-function IntegrationsPage() {
-  return (
-    <ProtectedRoute admin_only={true}>;
-      <SEO;
-        title="Integrations - Zion AI Marketplace";
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
-      />;
-      <Header />;
-      <main className="min - h-screen bg-background">;
-        <IntegrationsHub />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>);  ),;}
+}
+  ),;}
  export default function IntegrationsPage () {
   return (true 
 }> <SEO title="Integrations - Zion AI Marketplace" description="Connect your Zion account with CRMs and Applicant Tracking Systems." /> <Header /> <main className="min-h-screen bg-background" > <IntegrationsHub /> </main> <Footer /> </ProtectedRoute>) 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/performance-optimization.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,10 @@ import React from 'react';
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/performance-optimization.tsx
+=======
+import React from 'react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function PerformanceOptimization() {
   return (
     <>
@@ -51,6 +56,7 @@ export default function PerformanceOptimization() {
             <nav className='mb-8'>
               <Link
                 href='/blog'
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/blog/performance-optimization.tsx
 <<<<<<< HEAD
 =======
@@ -280,6 +286,8 @@ function PerformanceOptimization() {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/performance-optimization.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
                 ← Back to Blog
@@ -1183,6 +1191,7 @@ export default function PerformanceOptimization(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 =======
 ;
@@ -1216,3 +1225,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/performance-optimization.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

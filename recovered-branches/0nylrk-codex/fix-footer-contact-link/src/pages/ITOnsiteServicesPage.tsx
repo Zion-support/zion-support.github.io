@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -68,12 +69,15 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 <<<<<<< HEAD
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
 import { GlobalServiceSection } from "@/components/GlobalServiceSection";
 import { QuoteFormSection } from "@/components/QuoteFormSection";
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from "react";"
 import { useSearchParams } from "react-router-dom";"
@@ -86,6 +90,11 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import {}
   CountryPricing,
 <<<<<<< HEAD
+=======
+import { TrustedBySection } from "@/components/TrustedBySection";
+import {
+  CountryPricing,
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onsiteServicePricing,
 } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
@@ -93,6 +102,7 @@ import { PageHero } from "@/components/services/PageSections/PageHero";
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 =======
@@ -111,6 +121,9 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";"
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {};
   const [searchParams] = useSearchParams();
@@ -181,6 +194,7 @@ export default function ITOnsiteServicesPage() {};
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -196,6 +210,9 @@ export default function ITOnsiteServicesPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter((country) =>
@@ -203,6 +220,7 @@ export default function ITOnsiteServicesPage() {};
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -218,12 +236,15 @@ export default function ITOnsiteServicesPage() {};
     .sort((a, b) => {}
       // First, sort by popular status;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
 
       if (aIsPopular && !bIsPopular) return -1;
       if (!aIsPopular && bIsPopular) return 1;
 
+<<<<<<< HEAD
       // Then sort alphabetically;
       return a.country.localeCompare(b.country);
     });
@@ -276,12 +297,20 @@ export default function ITOnsiteServicesPage() {};
 
   const handleCountrySelect = (country: CountryPricing) => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country);
+    });
+
+  const handleCountrySelect = (country: CountryPricing) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     (setSelectedCountry(country),
       // Scroll to the service details section;
       setTimeout(() => {}
         document"
           .getElementById("service-details")"
           ?.scrollIntoView({ behavior: "smooth" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       }, 100));
@@ -313,10 +342,16 @@ export default function ITOnsiteServicesPage() {};
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      }, 100));
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <AppLayout>"
       <section className="py-16 bg-zion-blue">"
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -328,6 +363,9 @@ export default function ITOnsiteServicesPage() {};
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -348,10 +386,14 @@ export default function ITOnsiteServicesPage() {;
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Check for success parameter in URL;
   const success = searchParams && searchParams.get("success");
 
+<<<<<<< HEAD
 =======
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
@@ -390,12 +432,14 @@ export default function ITOnsiteServicesPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
       toast({;
-        title: "Payment Successful",,
-  description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+        title: "Payment Successful",;
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
   }, [success]);
 
@@ -427,6 +471,7 @@ export default function ITOnsiteServicesPage() {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, 100);
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -434,10 +479,16 @@ export default function ITOnsiteServicesPage() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    }, 100);
+  };
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -496,12 +547,30 @@ export default function ITOnsiteServicesPage() { return null; }
 =======
             <CountryTabs;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          {/* Hero Section with Features */}
+          <PageHero />
+
+          {/* Country Selection Tabs */}
+          <div className="mb-12">
+            <CountryTabs
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
 <<<<<<< HEAD
+<<<<<<< HEAD
               setSearchQuery={setSearchQuery}          {/* Service Details Section */}
+=======
+              setSearchQuery={setSearchQuery}
+            />
+          </div>
+
+            />
+          </div>
+          {/* Service Details Section */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <ServiceDetailsSection
 =======
               setSearchQuery={setSearchQuery}
@@ -698,11 +767,12 @@ if (return 1) {}
   return (
 <<<<<<< HEAD
     <AppLayout>;
-      <section className="py - 16 bg - zion-blue">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+      <section className="py - 16 bg - zion - blue">;
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
           {/* Hero Section with Features */}
           <PageHero />;
           {/* Country Selection Tabs */}
+<<<<<<< HEAD
           <div className="mb-12">;
 =======
     <AppLayout>;"
@@ -713,6 +783,9 @@ if (return 1) {}
           {/* Country Selection Tabs */}"
           <div className="mb - 12">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="mb - 12">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <CountryTabs;
               popular_countries={popular_countries}
               filtered_countries={filtered_countries}
@@ -732,6 +805,7 @@ if (return 1) {}
           <ServiceIncludes />;
 <<<<<<< HEAD
           {/* Complete Pricing Table */}
+<<<<<<< HEAD
           <div id="pricing - table" className="my-16">;
             <div className="text - center mb-8">;
               <h2 className="text - 2xl font - bold text - white mb-4">Full IT Onsite Services Pricing</h2>;
@@ -743,6 +817,12 @@ if (return 1) {}
               <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;"
               <p className="text - zion - slate - light mb - 6">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div id="pricing - table" className="my - 16">;
+            <div className="text - center mb - 8">;
+              <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;
+              <p className="text - zion - slate - light mb - 6">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Our per - incident prices include transportation costs and the first hour of onsite service.;
                 Additional hours are billed separately at standard rates.;
               </p>;
@@ -758,6 +838,9 @@ if (return 1) {}
     </AppLayout>);
 <<<<<<< HEAD
 }
+
+}
+
   ),; //Show success toast if redirected from successful payment useEffect ( () => {
   if (success === "true") {
   toast ({
@@ -806,6 +889,7 @@ if (return 1) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -822,3 +906,6 @@ if (return 1) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

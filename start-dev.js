@@ -158,8 +158,11 @@ process.on ('SIGTERM', () => {'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { spawn } = require('child_process');
 ;
 console.log('🚀 Starting development server...');
@@ -190,6 +193,7 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM');
   process.exit(0);
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -213,3 +217,5 @@ process.on('SIGTERM', () => {;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
  * Advanced Testing Automation;
  * Comprehensive testing suite with multiple test types and reporting;
  */
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -77,9 +78,13 @@ const { execSync } = require('child_process')
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     console.error('Advanced testing automation "failed")
     console.error('Advanced testing automation "failed")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

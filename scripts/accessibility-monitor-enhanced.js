@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -15,6 +16,10 @@ const accessibilityChecks = { colorContrast: () => {  return true},keyboardNav: 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -66,11 +71,14 @@ Object.entries(accessibilityChecks).forEach(([name, check]) => {}
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -84,10 +92,14 @@ console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibili
 <<<<<<< HEAD
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🎉 Accessibility monitoring completed!');
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+console.log('🎉 Accessibility monitoring completed!');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 ursor/add-new-services-and-deploy-updates-0462
@@ -95,6 +107,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
@@ -121,3 +134,7 @@ console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibili
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
+console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -114,6 +115,8 @@ export const supabaseAnonKey = import && import.meta.env ;
 =======
 <<<<<<< HEAD:corrupted_backup/performance-monitor.ts
 <<<<<<< HEAD:lib.disabled/lib/performance-monitor.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface PerformanceMetrics {
   "responseTime": number;
   memoryUsage: number;
@@ -163,10 +166,14 @@ export const performanceMiddleware = ("req": NextApiRequest, "res": NextApiRespo
   next()}
 export default PerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: 'number; memoryUsage: number; timestamp: string; endpoint: string; method: string;' } } class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: 'NextApiRequest',res: 'NextApiResponse',next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: 'endMemory - startMemory',timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
+<<<<<<< HEAD
 =======
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -198,6 +205,11 @@ import { createClient } from '@supabase/supabase-js';
 // Utility to detect network connectivity. navigator.onLine is not reliable inimport { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
 import { createClient } from '@supabase/supabase-js';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { responseTime: number; memoryUsage: number; timestamp: string; endpoint: string; method: string} class PerformanceMonitor { private static instance: PerformanceMonitor; private metrics: PerformanceMetrics[] = []; static getInstance(): PerformanceMonitor { if (!PerformanceMonitor.instance) { PerformanceMonitor.instance = new PerformanceMonitor()} return PerformanceMonitor.instance} recordMetric(metric: PerformanceMetrics) { this.metrics.push(metric); if (this.metrics.length > 1000) { this.metrics = this.metrics.slice(-1000)} getMetrics(): PerformanceMetrics[] { return [...this.metric,s ]} getAverageResponseTime(): number { if (this.metrics.length === 0) { return 0} const total = this.metrics.reduce((sum,metric) => sum + metric.responseTime,0); return total / this.metrics.length} getMemoryUsage(): number { if (this.metrics.length === 0) { return 0} const latest = this.metrics[this.metrics.length - 1]; return latest ? latest.memoryUsage : 0} export const performanceMiddleware = (req: NextApiRequest,res: NextApiResponse,next: Function) => { const startTime = Date.now(); const startMemory = process.memoryUsage().heapUsed; res.on('finish',() => { const endTime = Date.now(); const endMemory = process.memoryUsage().heapUsed; const monitor = PerformanceMonitor.getInstance(); monitor.recordMetric({ responseTime: 'endTime - startTime',memoryUsage: endMemory - startMemory,timestamp: new Date().toISOString(),endpoint: req.url || '',method: req.method || '' })}); next()} export default PerformanceMonitor;
+import { createClient } from '@supabase/supabase-js';
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -224,7 +236,9 @@ export const checkOnline = async (): Promise<boolean> => {"
     return false;
   }
 
+
   try {;
+
 
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), 3000);"
@@ -233,6 +247,7 @@ export const checkOnline = async (): Promise<boolean> => {"
       signal: controller.signal,
     });
     clearTimeout(id);
+<<<<<<< HEAD
 <<<<<<< HEAD
     return true
   } catch {
@@ -252,10 +267,15 @@ if ( {) {
     return true;
   } catch {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return true;
+  } catch {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return false;
   }
-  try {
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 // Custom fetch wrapper to provide clearer errors when network requests fail;
@@ -264,12 +284,15 @@ export const safe_fetch: typeof fetch = async (input, init) => {
   $2
 }
     throw new Error ('No internet connection');
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Custom fetch wrapper to provide clearer errors when network requests fail
 export const safeFetch: typeof fetch = async (input, init) => {
   if (!(await checkOnline())) {
     throw new Error("No internet connection");
   }
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -510,3 +533,20 @@ export const safeFetch: typeof fetch = async (input, init) => {;
 export const getFromProfiles = () => supabase.from("profiles");
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return await fetch(input, init);
+  } catch (err) {
+    // Log the original error for debugging
+    console.error("Supabase fetch failed:", err);
+    throw new Error("Failed to connect to Supabase");
+  }
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: { fetch: safeFetch },
+});
+
+// Helper function to get profiles table
+export const getFromProfiles = () => supabase.from('profiles');
+export const getFromProfiles = () => supabase.from("profiles");
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

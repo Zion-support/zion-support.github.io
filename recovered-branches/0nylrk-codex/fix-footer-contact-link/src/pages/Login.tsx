@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -67,6 +68,15 @@ export default function Login() {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { LoginContent } from "@/components/auth/login";
+export default function Login() {
+  const { isAuthenticated, user } = useAuth();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 
@@ -84,10 +94,12 @@ export default function Login() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />;
   }
+
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return <Navigate to="/onboarding" />
@@ -140,8 +152,12 @@ export default function Login() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return <Navigate to="/onboarding" />;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
-  }  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
 <<<<<<< HEAD
@@ -153,7 +169,7 @@ export default function Login() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
-=======import { Navigate } from './react-router-dom';
+import { Navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -203,6 +219,7 @@ if ( {) {}
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Header } from "@/components/Header",;
@@ -235,10 +252,13 @@ export default function Login() {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
       <Header />;
       <LoginContent />;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>;
@@ -257,6 +277,9 @@ export default function Login() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>);
 }
 
@@ -266,11 +289,14 @@ export default function Login() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   ),; export default function Login () {
   const {
@@ -288,6 +314,7 @@ export default function Login() {;
   );
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -302,3 +329,5 @@ export default function Login() {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

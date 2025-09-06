@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +24,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 pr-12243
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 =======
 
@@ -33,6 +45,14 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";"
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 pr-12243
@@ -69,9 +89,18 @@ export default function EnhancedButton(): any ({;
   ...props;
 }: EnhancedButtonProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <button
       className={clsx(
+=======
+=======
+
+  return (
+    <button
+      className={clsx(
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -126,16 +155,28 @@ export default function EnhancedButton({
   size = "md"
   fullWidth
 
+<<<<<<< HEAD
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
+<<<<<<< HEAD
 pr-12243
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         baseStyles
 =======
 
@@ -150,6 +191,7 @@ pr-12243
       )}
       {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -160,6 +202,8 @@ pr-12243
 
 <<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import clsx from './clsx';
 export type EnhancedButtonProps =;
@@ -202,6 +246,15 @@ function EnhancedButton() {
       {...props}
     />);
 }
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 =======
@@ -210,6 +263,7 @@ function EnhancedButton() {
 );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     />
   );
@@ -220,6 +274,15 @@ pr-12243
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+    />
+  );
+=======
+    />;
+);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
@@ -231,6 +294,7 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedButton;
 <<<<<<< HEAD
 }
@@ -246,3 +310,14 @@ pr-12243
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default EnhancedButton;
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -107,9 +107,12 @@ function StructuredData() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -132,6 +135,7 @@ export function StructuredData() {const structuredData = {;
         "https://twitter.com/ziontechgroup";
         "https://github.com/ziontechgroup";
         "https://linkedin.com/company/ziontechgroup";
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ];
@@ -141,6 +145,9 @@ export function StructuredData() {const structuredData = {;
 =======
 =======      ];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      ];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     "feature_list": [;
       "Marketplace & Jobs",
@@ -178,6 +185,7 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,6 +255,10 @@ export function StructuredData() {;
 =======
   return (  return (;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (
+  return (;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <script;
 =======
 

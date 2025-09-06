@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -36,6 +41,7 @@ const handler = NextAuth ({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -48,10 +54,18 @@ import NextAuth from "next-auth",;"
 import CredentialsProvider from "next-auth/providers/credentials",;"
 import { PrismaAdapter } from "@auth/prisma-adapter",;"
 import { prisma } from "@/lib/prisma",;"
+=======
+
+import NextAuth from "next-auth",;
+import CredentialsProvider from "next-auth/providers/credentials",;
+import { PrismaAdapter } from "@auth/prisma-adapter",;
+import { prisma } from "@/lib/prisma",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,6 +92,8 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   providers: [;
     CredentialsProvider ({"
       name: "credentials",
@@ -146,6 +162,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }}
@@ -169,6 +186,9 @@ const handler = NextAuth({;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   providers: [;
     CredentialsProvider({;"
       name: "credentials";
@@ -277,6 +297,7 @@ const handler = NextAuth({;
         session.user.role = token.role;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       return session;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,12 +316,20 @@ export { handler as GET, handler as POST };
     }},;
   pages: {;"
     signIn: "/auth/signin",;"
+=======
+      return session;
+
+    }},;
+  pages: {;
+    signIn: "/auth/signin",;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -319,3 +348,5 @@ export { handler as GET, handler as POST };
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

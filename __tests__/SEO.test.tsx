@@ -19,6 +19,7 @@ describe("SEO", () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -64,6 +65,8 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 });
   });
 });
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -70,10 +70,10 @@ import _React from 'react'; import Head from 'next/head'; export default functio
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
-import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -86,3 +86,5 @@ import React from \'react\'; import Head from \'next/head\'; export default func
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

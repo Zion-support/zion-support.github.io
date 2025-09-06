@@ -43,6 +43,7 @@ ursor/add-new-services-and-deploy-updates-0462
 "export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/AIChatbot.jsx
 =======
 <<<<<<< HEAD
@@ -72,3 +73,6 @@ export: const AIChatbot = ({ welcomeMessage = "Hello ! I&quot;m: Zion Tech Group
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

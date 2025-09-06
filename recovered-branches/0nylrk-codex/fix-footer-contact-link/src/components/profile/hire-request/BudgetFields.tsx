@@ -2,11 +2,11 @@ import React from "react";"
 import { UseFormReturn } from "react-hook-form";
 <<<<<<< HEAD
 import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
@@ -42,7 +42,22 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+=======
+;
+
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <FormField
@@ -178,6 +193,7 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   )
 }
 ;
+<<<<<<< HEAD
 =======
       />;
 
@@ -307,3 +323,5 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

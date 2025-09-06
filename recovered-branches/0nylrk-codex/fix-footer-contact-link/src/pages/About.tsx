@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -64,6 +65,13 @@ import { SEO } from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";
 export default function About() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+export default function About() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <SEO"
@@ -225,6 +233,7 @@ export default function About() {}
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -674,6 +683,10 @@ function About() {
 =======
       <Footer />;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 }
 ;
@@ -684,8 +697,11 @@ function About() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   ),;}
  export default function About () {
@@ -693,13 +709,17 @@ function About() {
   2 
 }d=" M13 10V3L4 14h7v7l9-11h-7z"/> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Innovation</h3> <p className=" text-zion-slate-light"> We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Community</h3> <p className=" text-zion-slate-light"> We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Trust</h3> <p className=" text-zion-slate-light" > We maintain the highest standards of integrity, transparency, and ethical practices in everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </>) 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   );
 }
 ;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -717,3 +737,5 @@ function About() {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

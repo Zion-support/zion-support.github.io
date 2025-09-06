@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,12 +81,15 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { DisputeDetail } from "@/components/disputes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function DisputeDetailPage() {
 =======
@@ -103,6 +107,9 @@ import { DisputeDetail } from "@/components/disputes";"
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 function DisputeDetailPage() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+function DisputeDetailPage() {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <ProtectedRoute>
       <>
@@ -170,6 +177,41 @@ function DisputeDetailPage() {}
         <SEO;"
           title="Dispute Details | Zion AI Marketplace";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          description="View and manage dispute details";
+        />;
+        <AppHeader />;
+        <DisputeDetail />;
+        <Footer />;
+      </>;
+
+
+
+;
+
+
+export default DisputeDetailPage;
+
+export default DisputeDetailPage;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </> </ProtectedRoute> export default DisputeDetailPage;
+          description="View and manage dispute details"
+        />
+        <AppHeader />
+        <DisputeDetail />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+export default DisputeDetailPage;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </ProtectedRoute>);
 }
 <<<<<<< HEAD

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
@@ -28,12 +29,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import OpenAI from 'openai';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +82,9 @@ export default async function handler() { return null; }
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
 =======
@@ -132,6 +142,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     role: 'system' as const,
     content:
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
@@ -196,6 +207,9 @@ function handler() {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
@@ -253,6 +267,7 @@ function handler() {
       model: "gpt - 4o - mini"
       messages: [sys_message, ...messages]
 
+<<<<<<< HEAD
       temperature: 0.2
 <<<<<<< HEAD
 
@@ -268,6 +283,11 @@ function handler() {
       temperature: 0.2
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+
+      temperature: 0.2
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ''),
   };
 
@@ -276,12 +296,16 @@ function handler() {
       model: 'gpt-4o-mini',
 messages: [sysMessage, ...messages],
       temperature: 0.2,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/chat.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     });
 
     const assistantMessage =
@@ -293,6 +317,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       sessionId: sessionId ?? "unknown",
       payload: { intent },
     });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
@@ -318,6 +343,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         matchedArticleIds: intent.matchedArticleIds
 
         links: matched_articles.map ((a) => ({
+=======
+      meta: {
+        intent_matched: intent.intent_matched
+        matchedArticleIds: intent.matchedArticleIds
+
+        links: matched_articles.map ((a) => ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
     return res.status(200).json({
@@ -339,6 +371,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         matchedArticleIds: intent.matchedArticleIds,
 <<<<<<< HEAD:pages_backup/api/support/chat.ts
         links: matchedArticles.map((a) => ({
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -371,6 +404,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           title: a.title
           href: `/help/${a.slug}`
@@ -386,10 +421,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
 =======
   } catch (e: any) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     });
   } catch (e: any) {}
     return res.status(200).json({}
@@ -400,6 +438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 }
@@ -436,3 +475,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
+=======
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

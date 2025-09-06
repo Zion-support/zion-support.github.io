@@ -23,6 +23,7 @@ const "ContactBackup": NextPage = () => {
 export default ContactBackup
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
 =======
 =======
@@ -35,6 +36,10 @@ import type { NextPage } from 'next' const ContactBackup: NextPage = () => { ret
 =======
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackupimport type { NextPage } from 'next';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
+import type { NextPage } from 'next';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const "ContactBackup": NextPage = () => {;
   return (
     <div className="container mx-auto px-4 py-20">;
@@ -43,6 +48,10 @@ const "ContactBackup": NextPage = () => {;
     </div>;
   );
 }
+
+
+
+
 export default ContactBackup;
 =======
 
@@ -55,6 +64,7 @@ export default ContactBackup;
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;'"
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
 
+<<<<<<< HEAD
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
@@ -74,6 +84,9 @@ import type { NextPage } from 'next' const ContactBackup: NextPage = () => { ret
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
 export default ContactBackup;
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
@@ -83,6 +96,7 @@ import type { NextPage } from 'next' const ContactBackup: NextPage = () => { ret
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -104,11 +118,19 @@ import type { NextPage } from 'next' const ContactBackup: NextPage = () => { ret
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next'
 const "ContactBackup": NextPage = () => {
   return (
     <div className="container mx-auto px-4 py-20">
       <h1 className="text-3xl font-bold mb-4">Contact</h1>
+<<<<<<< HEAD
 =======
 
 
@@ -121,10 +143,13 @@ const "ContactBackup": NextPage = () => {}
     <div className="container mx-auto px-4 py-20">"
       <h1 className="text-3xl font-bold mb-4">Contact</h1>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <p className="text-gray-700">This is a backup contact page.</p>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ContactBackup
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
@@ -145,3 +170,7 @@ export default ContactBackup'";
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default ContactBackup
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

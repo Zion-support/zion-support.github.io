@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { createContext } from "react";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { AuthContextType } from "@/types/auth";
+
 import { createContext } from "react",
 =======
 import { createContext } from "react";"
@@ -10,11 +15,18 @@ import { createContext } from "react","
 import type { AuthContextType } from "@/types/auth",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createContext } from "react";
 import {createContext} from "react";
 =======
@@ -72,7 +84,12 @@ import type { AuthContextType } from "@/types/auth",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { createContext } from "react",;
 import type { AuthContextType } from "@/types/auth",;
@@ -90,6 +107,7 @@ import type { AuthContextType } from "@/types/auth",;
 export const AuthContext = createContext<AuthContextType | undefined>(undefined),
 import { createContext } from "react",;
 import type { AuthContextType } from "@/types/auth",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,12 +134,19 @@ import { createContext } from "react","
 import type { AuthContextType } from "@/types/auth",
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
+<<<<<<< HEAD
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 <<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // default value so consumers still get some level of type safety.
 <<<<<<< HEAD
 <<<<<<< HEAD

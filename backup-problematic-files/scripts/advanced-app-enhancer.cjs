@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-app-enhancer.cjs
 =======
 <<<<<<< HEAD
@@ -19,6 +20,10 @@
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -46,5 +51,8 @@ export const "Spinner"
 =======
 =======
 console.log('\n New Features "Added")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('\n New Features "Added")
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

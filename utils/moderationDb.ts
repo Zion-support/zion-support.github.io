@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -32,14 +33,26 @@ export interface ModerationFlag {;
 
 export interface ModerationFlag {
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
+export interface ModerationFlag {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -68,9 +81,17 @@ let flags: ModerationFlag[] = [];
 >>>>>>> main
 =======
 }
+<<<<<<< HEAD
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -92,6 +113,7 @@ export async function getFlagById (id: string): Promise < ModerationFlag | null>
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -100,6 +122,11 @@ export async function getFlagById (id: string): Promise < ModerationFlag | null>
 =======
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 <<<<<<< HEAD
 ;
@@ -128,6 +155,7 @@ export async function readAllFlags (): Promise < ModerationFlag[]> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
@@ -145,10 +173,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {};
   return [...flags];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +201,8 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {}
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
@@ -187,6 +227,11 @@ export interface ModerationFlag {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 // Mock data storage - replace with actual database
@@ -195,6 +240,7 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 <<<<<<< HEAD
@@ -202,6 +248,8 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
 =======
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -249,7 +297,12 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 =======
@@ -262,6 +315,7 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -347,6 +401,8 @@ export async function createFlag(
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
 <<<<<<< HEAD
@@ -418,10 +474,40 @@ if (return undefined) {
   };
   
   flags.push(flag);
+=======
+
+export async function createFlag(
+  data: Partial<ModerationFlag>,
+): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentId: data.contentId || "",
+    contentType: data.contentType || "post",
+    reason: data.reason || "",
+    userEmail: data.userEmail || "",
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    ...data,
+  };
+
+  flags.push(flag);
+    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
+    reason: data.reason || '',
+    user_email: data.user_email || '',
+    status: 'pending',
+    created_at: new Date ().toISOString (),
+    ...data;
+  }
+;
+  flags.push (flag);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return flag;
 }
 
 export async function updateFlagStatus(
+<<<<<<< HEAD
   id: string, 
   status: ModerationFlag['status'], 
   adminNotes?: string
@@ -442,7 +528,18 @@ export async function updateFlagStatus(
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+  id: string,
+  status: ModerationFlag["status"],
+  adminNotes?: string,
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -450,6 +547,7 @@ main
   return flag;
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -470,11 +568,14 @@ main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
@@ -482,3 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

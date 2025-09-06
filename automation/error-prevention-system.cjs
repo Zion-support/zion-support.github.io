@@ -1,19 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorPreventionSystem {}
   constructor() {}
     this.logFile = path.join(__dirname, '../logs/error-prevention.log');
@@ -23,12 +30,18 @@ class ErrorPreventionSystem {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
 =======
     
     );
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    );
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
       console.error('Failed to write to log "file": ', error.message)};
@@ -36,9 +49,13 @@ class ErrorPreventionSystem {}
   async checkBuildErrors() {}
     this.log('Checking for build errors...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       execSync('npm run build', { "stdio": 'pipe' }
 });
@@ -58,9 +75,13 @@ class ErrorPreventionSystem {}
   async checkLintingErrors() {}
     this.log('Checking for linting errors...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       execSync('npm run lint', { "stdio": 'pipe' }
 });
@@ -76,9 +97,13 @@ class ErrorPreventionSystem {}
 });
       this.log(`"WARNING": Linting errors: ${error.message}`, 'WARN');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Try to auto-fix;
       try {}
         this.log('Attempting to auto-fix linting errors...');
@@ -93,9 +118,13 @@ class ErrorPreventionSystem {}
   async checkTypeScriptErrors() {}
     this.log('Checking for TypeScript errors...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       execSync('npm run type-check', { "stdio": 'pipe' }
 });
@@ -115,9 +144,13 @@ class ErrorPreventionSystem {}
   async checkDependencyErrors() {}
     this.log('Checking for dependency issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       // Check for missing dependencies;
       if () {}
@@ -138,9 +171,13 @@ class ErrorPreventionSystem {}
         })};
         this.log('"CRITICAL": node_modules missing, installing dependencies...', 'ERROR');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {}
           execSync('npm install', { "stdio": 'pipe' }
 });
@@ -188,9 +225,13 @@ class ErrorPreventionSystem {}
   async checkFileSystemErrors() {}
     this.log('Checking for filesystem issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       const criticalFiles = ['package.json',]
         'next.config.js',
@@ -198,9 +239,13 @@ class ErrorPreventionSystem {}
         'tailwind.config.js'
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       criticalFiles.forEach(file => {})
         if () {}
           this.errors.push({})
@@ -222,9 +267,13 @@ class ErrorPreventionSystem {}
       }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Check for corrupted files;
       const sourceDirs = ['src', 'pages', 'components'];
       sourceDirs.forEach(dir => {})
@@ -254,9 +303,13 @@ class ErrorPreventionSystem {}
       }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       this.log('Filesystem check completed');
       return true} catch (error) {}
       this.log(`"ERROR": Filesystem check failed: ${error.message}`, 'ERROR');
@@ -265,17 +318,25 @@ class ErrorPreventionSystem {}
   async checkEnvironmentErrors() {}
     this.log('Checking for environment issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       // Check Node.js version;
       const nodeVersion = process.versio;n;
       const majorVersion = parseInt(nodeVersion.slice(1).split('.')[0];);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if ( {})
         this.errors.push({})
           "type": 'environment',
@@ -299,9 +360,13 @@ class ErrorPreventionSystem {}
       const totalMemory = require('os').totalmem(;);
       const memoryUsagePercent = ((totalMemory - freeMemory) / totalMemory) * 1;0;0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if ( {})
         this.errors.push({})
           "type": 'environment',
@@ -327,12 +392,18 @@ class ErrorPreventionSystem {}
   async autoFixErrors() {}
     this.log('Attempting to auto-fix errors...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     let fixedCount = ;0;
 =======
     
     let fixedCount = ;0;
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    let fixedCount = ;0;
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       // Fix linting errors;
       if () {}
@@ -377,9 +448,13 @@ class ErrorPreventionSystem {}
   async runErrorPrevention() {}
     this.log('Starting error prevention system...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const checks = [this.checkBuildErrors(),]
       this.checkLintingErrors(),
       this.checkTypeScriptErrors(),
@@ -388,11 +463,14 @@ class ErrorPreventionSystem {}
       this.checkEnvironmentErrors();
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     await Promise.all(checks);
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
     this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     await Promise.all(checks);
 
@@ -401,7 +479,10 @@ class ErrorPreventionSystem {}
 
     this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if ( {})
       this.log(`Errors "found": ${this.errors.length}`, 'WARN')) {`}
      {}
@@ -412,20 +493,30 @@ class ErrorPreventionSystem {}
       const mediumErrors = this.errors.filter(e => e.severity === 'medium';);
       const lowErrors = this.errors.filter(e => e.severity === 'low';);
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
 =======
       
       this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Log critical and high severity errors;
       [...criticalErrors, ...highErrors].forEach(error => {})
         this.log(`  [${error.severity.toUpperCase()}] ${error.message}`, 'ERROR')}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Attempt auto-fix;
       await this.autoFixErrors()} else {}
       this.log('No errors found - system is healthy')};
@@ -438,9 +529,13 @@ class ErrorPreventionSystem {}
       "status": this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length > 0 ? 'CRITICAL' : 'HEALTHY'
    };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       fs.writeFileSync()
         path.join(__dirname, '../logs/error-prevention-report.json'),
@@ -464,6 +559,7 @@ if ( {})
 module.exports = ErrorPreventionSystem;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -472,6 +568,9 @@ module.exports = ErrorPreventionSystem;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
@@ -479,6 +578,7 @@ module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
@@ -491,3 +591,6 @@ module.exports = ErrorPreventionSystem;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

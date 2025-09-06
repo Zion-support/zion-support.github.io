@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": const ADVANCED_MICRO_SAAS_SERVICES = [
 export: const ADVANCED_MICRO_SAAS_SERVICES = [""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -38,3 +39,6 @@ export: const ADVANCED_MICRO_SAAS_SERVICES = [""
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"export": const ADVANCED_MICRO_SAAS_SERVICES = ["]"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

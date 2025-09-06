@@ -43,6 +43,7 @@ export function ModeToggle() {;
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Create a simplified theme hook for offline mode
@@ -59,6 +60,25 @@ import { Button } from "@/components/ui/button"
 ;
 // Create a simplified theme hook for offline mode;
 const useTheme = () => ({"
+=======
+
+import {Moon, Sun} from "lucide-react"
+import {Button} from "@/components/ui/button"
+// Create a simplified theme hook for offline mode
+const useTheme = () => ({
+  theme: "dark",
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`);
+});
+
+export function ModeToggle() {;
+  const { theme, setTheme } = useTheme();
+import { Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+// Create a simplified theme hook for offline mode
+
+const useTheme = () => ({
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   theme: "dark"
   setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
 });"
@@ -70,6 +90,7 @@ const useTheme = () => ({"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -78,10 +99,17 @@ const useTheme = () => ({"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
   const { theme, setTheme } = useTheme();
+
+
+
 
   const { theme, setTheme } = useTheme();
 import { Moon, Sun } from "lucide-react";
@@ -95,6 +123,16 @@ theme: "dark"
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+
+      <span className="sr-only">Toggle theme</span>;
+    </Button>;
+  );
+    >
       {theme === "dark" ? (
 =======
 export function ModeToggle() {}
@@ -183,17 +221,21 @@ function ModeToggle() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {theme === "dark" ? (
         <Sun className="h - 5 w - 5 text - yellow - 300" />) : (
         <Moon className="h - 5 w - 5 text - slate - 300" />)}
       <span className="sr - only">Toggle theme</span>;
     </Button>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -202,6 +244,8 @@ function ModeToggle() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;

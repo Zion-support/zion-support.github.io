@@ -7,6 +7,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import * as React from &quot;react&quot;
@@ -23,6 +24,9 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import * as React from "react"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 =======
 
@@ -54,11 +58,17 @@ const RadioGroup = React.forwardRef<
 
 
 
+
+
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>(({ className, ...props }, ref) => {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from &quot;react & quot;
 import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
 import { Circle } from &quot;lucide-react & quot;
@@ -68,6 +78,7 @@ import { cn } from &quot;@/lib / utils & quot;
 const RadioGroup = React.forward_ref<;
   React.ElementRef < typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >(({ class_name, ...props }, ref) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -80,11 +91,18 @@ const RadioGroup = React.forward_ref<;
 
 
 
+=======
+>(({ class_name, ...props }, ref) => {
+  return (
+    <RadioGroupPrimitive.Root;
+      className={cn (&quot;grid gap - 2&quot;, class_name)}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {...props}
       ref={ref}
     />);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -110,12 +128,16 @@ className={cn(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -158,11 +180,23 @@ className={cn(
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;,
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+
+
+        className
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
       {...props}
     >
+      <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
+        <Circle className=&quot;h-2.5 w-2.5 fill-current text-current&quot; />
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="h-2.5 w-2.5 fill-current text-current" />      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
         <Circle className="h-2.5 w-2.5 fill-current text-current" />
 =======
 
@@ -226,8 +260,17 @@ RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
 <<<<<<< HEAD
 export { RadioGroup, RadioGroupItem }
+
+
+export { RadioGroup, RadioGroupItem }
 ;
+<<<<<<< HEAD
 =======
+=======
+
+;
+export { RadioGroup, RadioGroupItem }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export { RadioGroup, RadioGroupItem }
 
@@ -298,6 +341,7 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item> > ( ({
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -312,3 +356,5 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item> > ( ({
 
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

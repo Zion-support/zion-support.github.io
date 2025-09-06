@@ -14,9 +14,13 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
         otherLines.join('\n') + '\n'
         '};\n\n'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

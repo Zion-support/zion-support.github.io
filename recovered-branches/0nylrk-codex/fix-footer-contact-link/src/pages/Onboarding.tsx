@@ -21,6 +21,7 @@ export default function Onboarding() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,12 +57,16 @@ import {Steps, Step} from "@/components/ui/steps";"
 import {supabase} from "@/integrations/supabase/client";"
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() { return null; }
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 "
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 "
       case "serviceProvider": return "creator";"
       case "talent":;"
@@ -97,6 +102,13 @@ export default function Onboarding() {};
   const navigate = useNavigate();
 
 <<<<<<< HEAD
+=======
+
+
+
+
+  // Convert our user types to match what's expected in the database
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
 
@@ -106,6 +118,7 @@ export default function Onboarding() {};
       case "serviceProvider": return "creator";
       case "talent":;
         return "jobSeeker";
+
 
   // Convert our user types to match what's expected in the database;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
@@ -217,7 +230,12 @@ export default function Onboarding() {
   }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
+<<<<<<< HEAD
 =======
+=======
+
+  },
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
@@ -231,6 +249,7 @@ export default function Onboarding() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
@@ -245,16 +264,58 @@ export default function Onboarding() {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
-    } else if (type === "talent") {    }
+    } else if (type === "talent") {
+      case "client":;
+        return "employer",;
+      default:;
+        return "buyer";
+    }
+  };
+
+  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {;
+    setUserType(type);
+
+    // Direct to specific registration page based on user type;
+    if (type === "serviceProvider") {;
+      navigate('/service-onboarding'),;
+      return;
+    } else if (type === "talent") {;
+      navigate('/talent-onboarding');
+      return;
+    }
+
+
+    // Continue with the onboarding flow for clients;
+    setCurrentStep(1);
+  };
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {;
+    if (!user || !userType) {;
+      toast({;
+        title: "Authentication Error",;
+        description: "Your session may have expired. Please log in again.",;
+        variant: "destructive"}),;
+
+      navigate('/login');
+      return;
+    }
+
+
+    }
+
 
   },
 
+
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       toast({
@@ -281,6 +342,12 @@ export default function Onboarding() {
 =======
       toast({        title: "Authentication Error",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      toast({
+
+
+        title: "Authentication Error",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
 =======
@@ -339,6 +406,7 @@ export default function Onboarding() {
     const dbUserType = mapUserTypeToDatabase(userType),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -361,10 +429,26 @@ export default function Onboarding() {
         userType: dbUserType;
         headline: data.headline;
         profileComplete: true;
+=======
+    
+
+
+    try {
+      await updateProfile({
+        id: user.id
+        displayName: data.displayName
+        bio: data.bio, // This is now valid since we added bio to UserDetails
+        userType: dbUserType
+        headline: data.headline
+        profileComplete: true
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
       
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -382,12 +466,16 @@ export default function Onboarding() {
 =======
           // Update onboarding milestone
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      // Update onboarding milestone
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -406,10 +494,14 @@ export default function Onboarding() {
         _milestone: 'profile_completed'
         _status: true;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
       
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -420,10 +512,13 @@ export default function Onboarding() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -730,17 +825,175 @@ export default function Onboarding() { return null; }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
 =======
+=======
+
+
+      const dashboardRoute = userType === "client" 
+        ? "/client-dashboard" 
+        : "/talent-dashboard",
+      
+
+
+      // Redirect to dashboard
+      navigate(dashboardRoute)
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      // Redirect to dashboard
+      navigate(dashboardRoute)
+    } catch (error) {
+      console.error('Error updating profile:', error),
+      toast({
+        title: 'Error'
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
 
+
   },
+
+
 
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
+<<<<<<< HEAD
   if (!user) {                <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  if (!user) {
+
+
+    navigate('/login'),
+
+
+    return null
+
+    const dbUserType = mapUserTypeToDatabase(userType);
+
+    try {;
+      await updateProfile({ ;
+        id: user && user.id,;
+        displayName: data && data.displayName,;
+        bio: data && data.bio, // This is now valid since we added bio to UserDetails;
+        userType: dbUserType,;
+        headline: data && data.headline,;
+        profileComplete: true;
+      });
+      // Update onboarding milestone;
+      await supabase && supabase.rpc('update_onboarding_milestone', {;
+        _user_id: user && user.id,;
+        _milestone: 'profile_completed',;
+        _status: true;
+      });
+      // Get the appropriate dashboard route based on user type;
+      const dashboardRoute = userType === "client" ;
+        ? "/client-dashboard" ;
+        : "/talent-dashboard";
+    } catch (error) {;
+      console && console.error('Error updating profile:', error);
+      toast({;
+        title: 'Error',;
+        description: 'There was a problem updating your profile. Please try again.',;
+        variant: 'destructive'});
+    }
+  };
+  if (!user) {;
+    navigate('/login');
+    return null;
+  }
+  return (
+
+                <Step
+                  key={index}
+                  status={
+                    currentStep > index
+                      ? "complete"
+                      : currentStep === index
+                      ? "current"
+                      : "incomplete"
+
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",;
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",;
+import { Steps, Step } from "@/components/ui/steps",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+export default function Onboarding() {;
+  const { user, updateProfile, isLoading } = useAuth(),;
+  const [currentStep, setCurrentStep] = useState(0),;
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),;
+  const navigate = useNavigate(),;
+  // Convert our user types to match what's expected in the database;
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
+    switch (type) {;
+      case "serviceProvider": return "creator",;
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+      navigate('/talent-onboarding');
+      return;
+    }
+      navigate('/login');
+      return;
+    }
+  }
+;
+  return (;
+
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="max-w-4xl mx-auto">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-white mb-4">;
+              Welcome to Zion;
+            </h1>;
+            <p className="text-zion-slate-light text-xl">;
+              Complete your profile to get started;
+            </p>;
+          </div>;
+
+          <div className="mb-12">;
+            <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
+              {steps && steps.map((step, index) => (;
+  return (
+                <Step
+                  key={index}
+                  status={
+                    currentStep> index;
+                      ? "complete";
+            </Steps>;
+          </div>;
+                      : currentStep === index;
+                      ? "current";
+                      : "incomplete";
+                  }
+                  label={step && step.label}
+                  description={step && step.description}
+                />;
+              ))}
+
+            </Steps>;
+          </div>;
+
+          <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
+            {currentStep === 0 ? (;
+              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />;
+            ) : (;
+              <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />;
+            )}
+
+            {currentStep === 1 && (;
+              <div className="mt-6">;
+
+                <Button
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
@@ -775,6 +1028,7 @@ export default function Onboarding() { return null; }
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
@@ -788,6 +1042,19 @@ import { UserTypeSelection } from '@/components / onboarding / UserTypeSelection
 import { ProfileSetup } from '@/components / onboarding / ProfileSetup';'
 import { Steps, Step } from '@/components / ui / steps';'
 import { supabase } from '@/integrations / supabase / client';'
+=======
+
+import { useState } from './react';
+import { use_navigate } from './react-router-dom';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { UserTypeSelection } from '@/components / onboarding / UserTypeSelection';
+import { ProfileSetup } from '@/components / onboarding / ProfileSetup';
+import { Steps, Step } from '@/components / ui / steps';
+import { supabase } from '@/integrations / supabase / client';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from '@/hooks / use - toast';
 export default /**;
  * Onboarding - Function description;
@@ -896,16 +1163,17 @@ if ( {) {}
     <>;
 <<<<<<< HEAD
       <Header />;
-      <div className="min - h-screen bg - zion - blue py - 12 px-4">;
-        <div className="max - w-4xl mx-auto">;
-          <div className="text - center mb-12">;
-            <h1 className="text - 4xl font - bold text - white mb-4">;
+      <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
+        <div className="max - w-4xl mx - auto">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - white mb - 4">;
               Welcome to Zion;
             </h1>;
-            <p className="text - zion - slate - light text-xl">;
+            <p className="text - zion - slate - light text - xl">;
               Complete your profile to get started;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className="mb-12">;
             <Steps current_step={current_step} className="max - w-xl mx-auto">;
 =======
@@ -923,6 +1191,10 @@ if ( {) {}
           <div className="mb - 12">;"
             <Steps current_step={current_step} className="max - w-xl mx - auto">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          <div className="mb - 12">;
+            <Steps current_step={current_step} className="max - w-xl mx - auto">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {steps.map ((step, index) => (
                 <Step;
                   key={index}
@@ -939,14 +1211,15 @@ if ( {) {}
             </Steps>;
 <<<<<<< HEAD
           </div>;
-          <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue-light">;
+          <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue - light">;
             {current_step === 0 ? (
               <UserTypeSelection on_select={handleUserTypeSelect} selected_type={user_type} />) : (
               <ProfileSetup on_complete={handleProfileComplete} user_type={user_type!} />)}
             {current_step === 1 && (
-              <div className="mt-6">;
+              <div className="mt - 6">;
                 <Button;
                   variant="outline";
+<<<<<<< HEAD
                   className="w - full border - zion - blue - light text - white hover:bg - zion - blue-light";
 =======
           </div>;"
@@ -960,11 +1233,15 @@ if ( {) {}
                   variant="outline";"
                   className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   on_click={() => setCurrentStep (0)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >;
                   Back to Role Selection;
                 </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -977,10 +1254,15 @@ if ( {) {}
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              </div>)}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
               </div>;
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
               </div>;
@@ -1001,10 +1283,15 @@ if ( {) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              </div>;
+            )}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -1015,12 +1302,15 @@ if ( {) {}
 =======
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 }
     </>);
+<<<<<<< HEAD
     </>;
   ),; export default function Onboarding () {}
   const {};
@@ -1051,6 +1341,41 @@ return null;"
   userType! 
 }/>) "
 }<Button variant=" outline"className=" w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick= {}
+=======
+}
+}
+    </>);
+    </>;
+  ),; export default function Onboarding () {
+  const {
+  user, updateProfile, isLoading 
+}= useAuth ();
+const [currentStep, setCurrentStep] = useState (0);
+case "talent": return "jobSeeker";
+case "client": return "employer";
+default: 
+}
+};
+//Direct to specific registration page based on user type if (type === "serviceProvider") {
+  navigate ('/service-onboarding');
+return 
+}else if (type === "talent") {
+  navigate ('/talent-onboarding');
+return 
+}? "/client-dashboard" : "/talent-dashboard";
+}
+};
+if (!user) {
+  navigate ('/login');
+return null;
+}min-h-screen bg-zion-blue py-12 px-4"> <div className=" max-w-4xl mx-auto"> <div className=" text-center mb-12"> <h1 className=" text-4xl font-bold text-white mb-4"> Welcome to Zion </h1> <p className=" text-zion-slate-light text-xl"> Complete your profile to get started </p> </div> />) ) 
+}</Steps> </div>) : (<ProfileSetup onComplete= {
+  handleProfileComplete 
+}userType= {
+  userType! 
+}/>) 
+}<Button variant=" outline"className=" w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick= {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   () => setCurrentStep (0) 
 }> Back to Role Selection </Button> </div>) 
 }</div> </div> </div> <Footer /> </>) 
@@ -1059,12 +1384,16 @@ return null;"
   );
 }
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1076,3 +1405,5 @@ return null;"
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

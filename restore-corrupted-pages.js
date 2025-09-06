@@ -102,7 +102,17 @@ function restorePage() { return null; }
         // Take the content after the conflict resolution
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         backupContent = parts[1].split('>>>>>>>')[0]
+=======
+
+
+
+
+      }
+    }
+    // Clean up the content
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -251,8 +261,12 @@ if ( {) {}
   $2;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+<<<<<<< HEAD
         // Take the content after the conflict resolution;'
         backup_content = parts[1].split ('>>>>>>>')[0];
+=======
+        // Take the content after the conflict resolution;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     }
     // Clean up the content;
@@ -412,6 +426,12 @@ function restoreAllCorruptedPages() { return null; }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
+        results.total++,
+        
+        console.log(`\n🔍 Checking: ${fullPath}`),
+
+
 
 
 
@@ -451,6 +471,7 @@ function restoreAllCorruptedPages() { return null; }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {}
         results.total++,`
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -502,6 +523,8 @@ function restoreAllCorruptedPages() { return null; }
         const result = restorePage(fullPath),
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -594,6 +617,7 @@ function restoreAllCorruptedPages() { return null; }
 =======
 
           results.failed++,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
@@ -610,6 +634,10 @@ function restoreAllCorruptedPages() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           results.failed++,
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           results.failed++,
 
 
@@ -667,6 +695,7 @@ function restoreAllCorruptedPages() { return null; }
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   return results
   // // // console.log('🚀 Starting page restoration process...'),
@@ -684,6 +713,16 @@ function restoreAllCorruptedPages() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+
+  scanDirectory(pagesDir),
+  // Generate summary
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   scanDirectory(pagesDir),
   // Generate summary
   scanDirectory(pagesDir),
@@ -752,6 +791,9 @@ function restoreAllCorruptedPages() { return null; }
   return results
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   // // // console.log('🚀 Starting page restoration process...'),;
   scanDirectory(pagesDir),;
@@ -767,9 +809,15 @@ function restoreAllCorruptedPages() { return null; }
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 <<<<<<< HEAD
@@ -905,6 +953,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -917,6 +966,8 @@ if ( {) {}
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
@@ -991,6 +1042,13 @@ module.exports = {
 =======
 
 
+<<<<<<< HEAD
+=======
+};
+
+
+main
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 

@@ -7,6 +7,7 @@ import { useEffect, useState  } from 'react';
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
 =======
@@ -180,6 +181,12 @@ export default function LearnMarketplace() {
   const [courses, setCourses] = useState<Course[]>([]),
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+export default function LearnMarketplace() {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
+  const [courses, setCourses] = useState<Course[]>([]),
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
@@ -221,6 +228,7 @@ export default function LearnMarketplace(req, res) {
   useEffect(() => {;
     async function load() {;
       setLoading(true);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
 
@@ -238,12 +246,15 @@ export default function LearnMarketplace(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setCourses(data.courses || []);
 setLoading(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
     load ();
   }, [filters]);
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
 ;
@@ -253,6 +264,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
       setCourses(data.courses || []);
       setLoading(false)
@@ -288,6 +302,7 @@ import FilterBar from '../../components/learn/FilterBar';
   }, [filters]),
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -314,22 +329,33 @@ import FilterBar from '../../components/learn/FilterBar';
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+  return (
+    <div className="space-y-6">
+      <div className="flex items-end justify-between gap-4">
+        <div>
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <h1 className='text-2xl font-semibold'>Zion Academy</h1>
           <div className='text-gray-500 text-sm'>
             Courses • Certifications • Career Boost
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/learn/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
@@ -386,10 +412,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {courses.map(c => (
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {courses.map(c => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <CourseCard key={c.id} course={c} />
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
 =======
@@ -493,3 +525,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
+=======
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

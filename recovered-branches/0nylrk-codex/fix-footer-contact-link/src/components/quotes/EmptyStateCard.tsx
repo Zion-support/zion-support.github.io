@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -80,6 +81,13 @@ import {MessageSquare, ArchiveIcon} from "lucide-react";
 type EmptyStateCardProps = {"
   type: "active" | "archived";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {MessageSquare, ArchiveIcon} from "lucide-react";
+type EmptyStateCardProps = {
+  type: "active" | "archived";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {";
@@ -132,8 +140,12 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
 type EmptyStateCardProps = {
-  type: 'active' | 'archived'
-},
+  type: "active" | "archived";
+};
+
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
+  const isActive = type === "active";
+
   return (
 =======
 
@@ -175,6 +187,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {";
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>"
         <p className="text-zion-slate-light max-w-md mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,11 +297,22 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          {isActive
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>
       </CardContent>
     </Card>
   );
+};
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
+        </p>
+      </CardContent>
+    </Card>
+  );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -318,28 +342,40 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+};
+import React from './react';
+import { Card, CardContent  } from '@/components / ui / card';
+import { MessageSquare, ArchiveIcon  } from './lucide-react';
+type EmptyStateCardProps = {
+  type: "active" | "archived";
+}
+;
+export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
+  const is_active = type === "active";
+;
+  return (
+    <Card className="bg - zion - blue - dark border border - zion - blue - light text - center py - 12">;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <CardContent>;
-        <div className="mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">;
-          {isActive ? (;
-            <MessageSquare className="h-8 w-8 text-white" />;
-          ) : (;
-            <ArchiveIcon className="h-8 w-8 text-white" />;
-          )}
+        <div className="mx - auto w - 16 h - 16 bg - zion - blue - light opacity - 60 rounded - full flex items - center justify - center mb - 4">;
+          {is_active ? (
+            <MessageSquare className="h - 8 w - 8 text - white" />) : (
+            <ArchiveIcon className="h - 8 w - 8 text - white" />)}
         </div>;
-        <h3 className="text-xl font-medium text-white mb-2">;
-          {isActive ? 'No hire requests yet' : 'No archived requests'}
+        <h3 className="text - xl font - medium text - white mb - 2">;
+          {is_active ? "No hire requests yet" : "No archived requests"}
         </h3>;
-        <p className="text-zion-slate-light max-w-md mx-auto">;
+        <p className="text - zion - slate - light max - w-md mx - auto">;
+          {is_active;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
-          }
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>;
       </CardContent>;
-    </Card>;            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
-        </p>
-      </CardContent>
-    </Card>
-  );  ),;
+    </Card>);
+}
+;
+  ),;
 },; type EmptyStateCardProps = {
 =======
       <CardContent>;"
@@ -374,13 +410,17 @@ bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent
   isActive ? (<MessageSquare className=" h-8 w-8 text-white"/>) : (<ArchiveIcon className=" h-8 w-8 text-white" />) 
 }</div> </p> </CardContent> </Card>) 
 };
-  )
+  );
+
 };
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,11 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+
+main
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -54,10 +60,13 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -87,6 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +104,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
@@ -124,6 +137,7 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -131,6 +145,10 @@ if ( {) {
       res.status(400).json({ error: "Invalid path" })
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+      res.status(400).json({ error: "Invalid path" })
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -313,6 +331,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   res.setHeader("Allow", "GET, POST")
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 
@@ -411,6 +430,10 @@ export default function handler(req, res) {
   const identity = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+  const identity = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");
@@ -429,6 +452,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,10 +472,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -466,8 +493,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

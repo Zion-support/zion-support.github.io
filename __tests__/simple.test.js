@@ -5,6 +5,7 @@ describe('Simple Test', () => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   });
 });
@@ -13,3 +14,5 @@ describe('Simple Test', () => {
   });
 });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

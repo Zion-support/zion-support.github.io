@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
@@ -311,6 +312,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real-time threat detection and response',
         'Multi-factor authentication (MFA)',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Continuous identity verification and authentication',
+        'Micro - segmentation and network isolation',
+        'Adaptive access controls and policies',
+        'Real - time threat detection and response',
+        'Multi - factor authentication (MFA)',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Privileged access management (PAM)',
         'API security and monitoring',
         'Cloud security posture management',
@@ -318,6 +326,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security analytics and insights',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🔒',
 
         'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
@@ -367,6 +376,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
         'Continuous identity verification and authentication','
         'Micro - segmentation and network isolation','
         'Adaptive access controls and policies','
@@ -377,6 +387,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Cloud security posture management','
         'Compliance reporting and auditing','
         'Security analytics and insights',
+=======
+      integrations: [
+        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'
+      ]
+      useCases: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ],
       popular: true,
 
@@ -398,6 +416,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -466,6 +490,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Automated threat response and mitigation',
         'Global threat intelligence sharing',
         'Vulnerability assessment and prioritization',
@@ -473,9 +499,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security metrics and reporting',
         'Integration with security tools',
         'Custom threat feeds and alerts',
+<<<<<<< HEAD
         '24 / 7 security monitoring',
       ],
       popular: true,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🛡️',
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
@@ -546,6 +576,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+        '24 / 7 security monitoring',
+      ],
+      popular: true,
+      integrations: [
+        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'
+      ]
+      useCases: [
+        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'
+      ]
+      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
+      competitors: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -635,6 +682,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'Multi-cloud security monitoring (AWS, Azure, GCP)',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Continuous compliance assessment and reporting',
         'Automated risk identification and remediation',
         'Identity and access management (IAM)',
@@ -646,6 +695,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Security metrics and dashboards',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '☁️',
 
       icon: '☁️',
@@ -706,6 +756,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+      useCases: [
+        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'
+      ]
+      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.'
+      competitors: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -788,6 +849,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'Automated security testing in CI/CD',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Static application security testing (SAST)',
         'Dynamic application security testing (DAST)',
         'Software composition analysis (SCA)',
@@ -799,6 +862,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Integration with DevOps tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🔧',
 
         'Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions',
@@ -955,6 +1019,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     // IoT Security Platform;
     {
+=======
+      integrations: [
+        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'
+      ]
+      useCases: [
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
+      launch_date: '2024 - 11 - 05',
+      customers: 56,
+      rating: 4 && 4.8,
+      reviews: 28,
+    },
+      id: 'iot-security-platform'
+      name: 'IoT Security Platform'
+      tagline: 'Secure your IoT ecosystem with comprehensive protection'
+      price: '$199'
+      period: '/month'
+      description:
+        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.'
+      features: [
+        'IoT device authentication and management'
+        'Network traffic monitoring and analysis'
+        'Threat detection and response'
+        'Device vulnerability assessment'
+        'Secure firmware updates'
+        'Data encryption and protection'
+        'Compliance monitoring and reporting'
+        'Real-time security alerts'
+        'Integration with IoT platforms'
+        'Mobile security management'
+      ]
+      popular: true
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
+      launchDate: '2024-09-25'
+      customers: 43
+      rating: 4.7
+      reviews: 21
+    }
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
+      launchDate: '2024-09-25',
+      customers: 43,
+      rating: 4.7,
+      reviews: 21,
+
+    },;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       id: 'iot - security - platform',
       name: 'IoT Security Platform',
       tagline: 'Secure your IoT ecosystem with comprehensive protection',
@@ -964,7 +1080,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
       features: [;
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'IoT device authentication and management',
         'Network traffic monitoring and analysis',
         'Threat detection and response',
@@ -972,15 +1091,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Secure firmware updates',
         'Data encryption and protection',
         'Compliance monitoring and reporting',
+<<<<<<< HEAD
         'Real - time security alerts',
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Real-time security alerts',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Real - time security alerts',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Integration with IoT platforms',
         'Mobile security management',
       ],
       popular: true,
       icon: '📱',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       color: 'from - purple - 600 to - violet - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / iot - security - platform',
@@ -988,10 +1118,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
       target_audience:;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
+<<<<<<< HEAD
 
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
@@ -1017,10 +1150,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
       ],
       roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
       competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
+<<<<<<< HEAD
 
       market_size: '$14.2B IoT security market',
       growth_rate: '30% annual growth',
@@ -1108,8 +1244,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+<<<<<<< HEAD
   ];    features: []
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
+      launch_date: '2024 - 09 - 25',
+      customers: 43,
+      rating: 4 && 4.7,
+      reviews: 21,
+  ];    features: [
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1182,10 +1336,17 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
 
     popular: true, icon: '📱',
     color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',
@@ -1197,10 +1358,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Python, C++, React, Node && Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
+<<<<<<< HEAD
 
     marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
@@ -1219,6 +1387,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 21
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
 =======
@@ -1255,10 +1429,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
+<<<<<<< HEAD
 
     market_size: '$14.2B IoT security market';
     growth_rate: '30% annual growth';
@@ -1273,21 +1454,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     realImplementation: true;
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
     launchDate: '2024-09-25';
     customers: 43;
     rating: 4 && 4.7;
     reviews: 21
+<<<<<<< HEAD
   }
 ];
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 '
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];'
     use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];'
@@ -1302,6 +1494,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     reviews: 21;
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;'
@@ -1326,11 +1524,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 ;
 
+<<<<<<< HEAD
 
 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
@@ -1630,15 +1837,26 @@ export interface AdvancedCybersecurityService {;
     rating: 4.7;
     reviews: 21;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
   }
 ];
 
 
+<<<<<<< HEAD
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

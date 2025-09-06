@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/pitch/add-slide.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,11 +23,16 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 main
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/pitch/add-slide.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
@@ -89,6 +95,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -124,6 +131,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return res.status(200).json({
     title: 'Additional Insight'
@@ -131,7 +140,10 @@ main
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 };
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/pitch/add-slide.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -140,9 +152,13 @@ main
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/admin/pitch/add-slide.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/pitch/add-slide.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

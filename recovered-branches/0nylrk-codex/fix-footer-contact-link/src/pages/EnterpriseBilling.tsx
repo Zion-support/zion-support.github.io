@@ -179,27 +179,22 @@ export default function EnterpriseBilling() {;
   if (!hasBillingAccess) {;
 =======
 import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-export default function EnterpriseBilling() {;
-  const { user } = useAuth();
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
   const { user } = useAuth();
 
   // Check if user has billing permissions
+  const hasBillingAccess =
+    user?.role === "enterprise_admin" ||
+    (user?.permissions && user.permissions.includes("billing_access"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!hasBillingAccess) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -221,10 +216,13 @@ export default function EnterpriseBilling() {
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
   
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!hasBillingAccess) {
-    return <Navigate to="/unauthorized" />
+    return <Navigate to="/unauthorized" />;
   }
   return (
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -312,6 +310,12 @@ export default function EnterpriseBilling() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+    <ProtectedRoute>
+      <SEO
+        title="Enterprise Billing - Zion AI Marketplace"
+        description="Manage your subscription, view invoice history, and download billing statements."
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />
       <Header />
       <main className="min-h-screen bg-background">
@@ -319,6 +323,7 @@ export default function EnterpriseBilling() {;
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 }
@@ -337,6 +342,13 @@ export default function EnterpriseBilling() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
   }
@@ -373,7 +385,7 @@ if ( {) {
         description="Manage your subscription, view invoice history, and download billing statements.";
       />;
       <Header />;
-      <main className="min - h-screen bg-background">;
+      <main className="min - h-screen bg - background">;
         <BillingDashboard />;
       </main>;
       <Footer />;
@@ -382,8 +394,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  export default function EnterpriseBilling () {
   const {
@@ -395,6 +410,7 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -409,3 +425,5 @@ if ( {) {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

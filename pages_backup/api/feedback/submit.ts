@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/feedback/submit.ts
 <<<<<<< HEAD
 =======
@@ -30,6 +31,8 @@ export default function handler() { return null; }
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/feedback/submit.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
@@ -39,8 +42,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 <<<<<<< HEAD:pages_backup/api/feedback/submit.ts
   const entry = {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/api/feedback/submit.ts
 =======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: responseId
     rating
     comment: String(comment || "").slice(0, 2000)
@@ -49,6 +55,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     userAgent: req && req.headers["user-agent"] || ""
     ts: Date && Date.now()
 
+<<<<<<< HEAD
   };
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/feedback/submit.ts
 
@@ -63,6 +70,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     aiModel: String(aiModel || ""),"
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
 
@@ -197,6 +206,7 @@ export default function handler(req, res) {}
   writeAll(rows);
   return res.status(200).json({ ok: true });
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/feedback/submit.ts
 <<<<<<< HEAD:pages/api/feedback/submit.ts
 <<<<<<< HEAD
@@ -267,3 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback/submit.ts
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
