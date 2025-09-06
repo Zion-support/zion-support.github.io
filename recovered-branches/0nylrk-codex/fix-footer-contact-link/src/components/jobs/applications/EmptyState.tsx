@@ -30,6 +30,9 @@ function EmptyState() {
 
 
 export function EmptyState() {
+    </Card>);
+
+}export function EmptyState() {
   return (
     <Card className="bg-muted/30">
       <CardContent className="pt-6 text-center">
@@ -63,6 +66,7 @@ export function EmptyState() {
   );
 }
     </Card>;
+      </CardContent>    </Card>;
   );
 }
     </Card>

@@ -4,6 +4,40 @@
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+import React from 'react';
+import { render, screen } from '@testing - library / react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe ('EquipmentPage', () => {
+  it ('renders equipment page correctly', () => {
+    render (
+      <MemoryRouter>;
+        <EquipmentPage />;
+      </MemoryRouter>);
+    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+
+  });
+  const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
+import { Link } from 'react-router-dom',;
+import { SERVICE_CATEGORIES } from '@/data/servicesData',;
+export function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: ''
+  }),
+
+  const [selectedService, setSelectedService] = useState(''),
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -86,6 +120,7 @@
 
 
             <form onSubmit={handleSubmit} className="space-y-6">
+            </p>            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -238,6 +273,7 @@
 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                     Budget Range
@@ -490,10 +526,7 @@
 
   );
 };
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
 describe('EquipmentPage', () => {
   it('renders equipment page correctly', () => {
     render(
@@ -504,3 +537,4 @@ describe('EquipmentPage', () => {
     expect(screen.getByText('Equipment')).toBeInTheDocument();
   });
 });
+    </div>

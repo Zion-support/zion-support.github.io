@@ -71,6 +71,7 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
 export interface TalentCardProps {;
+
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
@@ -104,6 +105,7 @@ export function TalentCard(): any ({;
       onRequestHire(talent);
     }
 
+  };
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -166,6 +168,7 @@ export function TalentCard(): any ({;
             
 
             {/* Location & Availability */}
+              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -178,6 +181,8 @@ export function TalentCard(): any ({;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
 
+                </div>;
+              )}
 
             </div>;
           </div>;
@@ -185,6 +190,12 @@ export function TalentCard(): any ({;
                 </div>;
               )}
                 <span
+
+        {/* Skills */}
+        {skills && skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills && skills.map((skill, index) => (;
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
@@ -200,6 +211,14 @@ export function TalentCard(): any ({;
         )}
 
             )}
+              ))}              )}
+            </div>;
+          </div>;
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
 
           </div>;
 
@@ -394,6 +413,7 @@ if ( {) {
 
     </Card>;
   );}
+              onClick={handleViewProfile}  );}
  export interface TalentCardProps {
   talent: TalentProfile;
 onViewProfile: (id: string) => void;
@@ -460,3 +480,13 @@ isAuthenticated: boolean
               onClick={handleViewProfile}
 
 
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+            >
+              View <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  )
+}

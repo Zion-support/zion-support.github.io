@@ -52,6 +52,7 @@ import { ContractFormValues } from "./ContractForm";
 
 
 interface PaymentTermsFieldsProps {
+import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
   talent: TalentProfile
@@ -73,6 +74,7 @@ export function PaymentTermsFields({
   handleMilestonesGenerated 
 
 }: PaymentTermsFieldsProps) {
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -128,6 +130,11 @@ interface PaymentTermsFieldsProps {;
 
 
   return (
+export function PaymentTermsFields(): any ({ ;
+  form;
+  talent;
+  handleMilestonesGenerated ;
+}: PaymentTermsFieldsProps) {;
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField
@@ -248,6 +255,7 @@ export function PaymentTermsFields({;
 
 
       {/* Project Milestones */}
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
@@ -293,6 +301,7 @@ export function PaymentTermsFields({;
 
 
             projectName={form && form.getValues("projectName") || "Project"}
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}            projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}
             endDate={form && form.getValues("endDate")}
@@ -413,3 +422,6 @@ handleMilestonesGenerated
 }
 
 
+    </>;
+  );
+}

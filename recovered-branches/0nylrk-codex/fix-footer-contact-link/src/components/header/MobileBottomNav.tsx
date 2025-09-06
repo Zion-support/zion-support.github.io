@@ -13,6 +13,8 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   const isAuthenticated = !!user;
 
 
+interface MobileBottomNavProps {;
+  unreadCount?: number;
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -34,6 +36,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -82,6 +85,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
     {
+      authRequired: true    {
       name: "Dashboard"
       href: "/dashboard"
       icon: User
@@ -127,7 +131,7 @@ interface MobileBottomNavProps {;
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
+  const isAuthenticated = !!user;
   const navItems = [;
     {;
       name: "Home",;
@@ -154,6 +158,42 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
+      matches: (path: string) => path === "/"
+};    {;
+      name: "Browse",;
+      href: "/talent",;
+      icon: Search,;
+      matches: (path: string) => path && path.startsWith("/talent") || path && path.startsWith("/categories") || path && path.startsWith("/marketplace")
+};    {;
+      name: "Community",;
+      href: "/community",;
+      icon: MessageCircle,;
+      matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum")
+};    {;
+      name: "Messages",;
+      href: "/messages",;
+      icon: MessageSquare,;
+      matches: (path: string) => path && path.startsWith("/messages") || path && path.startsWith("/inbox"),;
+      badge: unreadCount,;
+      authRequired: true
+};    {;
+      name: "Dashboard",;
+      href: "/dashboard",;
+      icon: User,;
+      matches: (path: string) => path && path.startsWith("/dashboard"),;
+      authRequired: true;
+    }
+  ];
+
+  // Filter items based on auth status;
+  const visibleItems = navItems && navItems.filter(item => ;
+    !item && item.authRequired || (item && item.authRequired && isAuthenticated);
+  return (
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
+      <div className="flex justify-around items-center h-16">;
+
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
+              item && item.matches(location && location.pathname)
         {visibleItems && visibleItems.map(item => (;
           <Link
             key={item && item.name}
@@ -168,6 +208,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
+              item && item.matches(location && location.pathname)
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -339,3 +381,4 @@ return ({
 }
 
 
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;

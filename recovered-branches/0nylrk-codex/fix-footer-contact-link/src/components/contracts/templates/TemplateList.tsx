@@ -76,6 +76,7 @@ interface TemplateListProps {
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
   if (isLoading) {;
+import {useState} from "react";  if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -83,6 +84,20 @@ interface TemplateListProps {
     );
   }
 }
+
+  if (!templates && templates.length) {;
+
+    return (
+      <div className="text-center py-8">;
+        <p className="text-muted-foreground">No templates found.</p>;
+        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;
+      </div>;
+    );
+  }
+  return (
+    <div className="space-y-3">;
+      {templates && templates.map((template) => (;
+        <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
 
 export function TemplateList({;
   templates;
@@ -129,6 +144,20 @@ interface TemplateListProps {;
             <div className="flex items-center justify-between">;
               <div className="space-y-1">;
                 <div className="flex items-center gap-2">;
+}          <CardContent className="p-4">;
+            <div className="flex items-center justify-between">;
+              <div className="space-y-1">;
+                <div className="flex items-center gap-2">;
+                  <h3 className="font-medium">{template && template.title}</h3>;
+                  {template && template.is_default && (;
+                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
+                  )}
+  };
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
@@ -139,6 +168,9 @@ interface TemplateListProps {;
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
+  const handleSetDefault = async (templateId: string) => {;
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId)
+};
 
   if (isLoading) {;
     return (
@@ -173,6 +205,30 @@ interface TemplateListProps {;
               variant="outline" 
 
 
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Last updated: {new Date(template.updated_at).toLocaleDateString()}
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>
+                  <Edit className="h-4 w-4" />
+                </Button>
+                {!template.is_default ? (
+                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template.id)}>
+                    <Star className="h-4 w-4" />
+                  </Button>
+                ) : (
+                  <Button variant="ghost" size="icon" disabled>
+                    <StarOff className="h-4 w-4" />
+                  </Button>
+                )}
+                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>
+                  <Trash className="h-4 w-4 text-destructive" />
+                </Button>
+              </div>
+            </div>
+            <Separator className="my-3" />
               className="w-full"
             >
               Use This Template
@@ -342,6 +398,7 @@ if ( {) {
               variant="outline" ;
               className="w-full";
             >;
+              onClick={handleDeleteConfirm}            >;
               Use This Template;
             </Button>;
           </CardContent>;
@@ -379,6 +436,11 @@ if ( {) {
 
 
               Delete;
+        </Card>))}
+      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
+        <AlertDialogContent>;
+          <AlertDialogHeader>;
+            <AlertDialogTitle > Delete Template</AlertDialogTitle>;              Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
@@ -455,3 +517,5 @@ if (isLoading) {
   );
 }
 ;
+    </div>);
+}

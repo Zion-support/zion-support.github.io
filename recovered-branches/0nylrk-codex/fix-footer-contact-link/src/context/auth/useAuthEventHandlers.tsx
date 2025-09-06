@@ -5,6 +5,7 @@ import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 
 import { toast } from "@/hooks/use-toast",
+
 import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
@@ -36,6 +37,7 @@ export function useAuthEventHandlers(
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile');
       }
+import { useNavigate } from 'react-router-dom'      }
     }, 0);
     }, 0),
 
@@ -97,6 +99,7 @@ export function useAuthEventHandlers(;
 
 
       description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+      setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
       variant: "default"}),;
 
     // Check for new registration and send welcome email if needed;
@@ -142,6 +145,13 @@ export function useAuthEventHandlers(;
 
 
 import { toast } from '@/hooks / use - toast';
+      toast({;
+        title: "Complete your profile",,
+  description: "Please complete your profile information to get started",;
+        variant: "default"}),;
+      navigate('/onboarding');
+    }
+  };import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
 import {use_navigate} from 'react-router-dom';
@@ -208,7 +218,7 @@ export function useAuthEventHandlers(): any (;
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
   setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
 ) {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
 
 
 
@@ -219,6 +229,10 @@ export function useAuthEventHandlers(): any (;
   }
 }
   }
+}
+
+  }
+}  }
 }
 
 ;
@@ -235,6 +249,8 @@ export function useAuthEventHandlers(;
     toast({;
       title:"Welcome back!",;
       description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
+      title:"Welcome back!",,
+  description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
       variant:"default"}),;
     ;
     // Check for new registration and send welcome email if needed;
@@ -250,6 +266,8 @@ export function useAuthEventHandlers(;
       toast({;
         title:"Complete your profile",;
         description:"Please complete your profile information to get started",;
+        title:"Complete your profile",,
+  description:"Please complete your profile information to get started",;
         variant:"default"}),;
       navigate('/onboarding'),;
     }
@@ -259,6 +277,8 @@ export function useAuthEventHandlers(;
     toast({;
       title:"Signed out",;
       description:"You have been successfully logged out",;
+      title:"Signed out",,
+  description:"You have been successfully logged out",;
       variant:"default"}),;
   },;
 ;
@@ -278,6 +298,7 @@ toast ({
   navigate ('/onboarding');
 }
 };
+}
 };
 }
   }

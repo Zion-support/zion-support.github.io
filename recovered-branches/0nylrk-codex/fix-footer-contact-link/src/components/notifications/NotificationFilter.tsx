@@ -5,6 +5,20 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 export type FilterType =
+import React from 'react';
+import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
+
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+
+interface NotificationFilterProps {
+  filter: FilterType,
+  onFilterChange: (filter: FilterType) => void
+import React from 'react',;
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
+interface NotificationFilterProps {;
+  filter: FilterType,;
+  onFilterChange: (filter: FilterType) => void;export type FilterType =
   | "all"
   | "unread"
   | "onboarding"
@@ -23,6 +37,9 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
   onFilterChange
 
+export const NotificationFilter: React.FC<NotificationFilterProps> = ({
+  filter,
+  onFilterChange
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
   onFilterChange
@@ -92,6 +109,10 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+  );
+
+  )
+},
 
   ),;
 },; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
@@ -111,6 +132,7 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 }
 
 
+}
 }
 };
   )

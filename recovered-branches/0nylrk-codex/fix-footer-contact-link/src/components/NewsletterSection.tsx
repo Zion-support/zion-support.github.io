@@ -29,6 +29,13 @@ export function NewsletterSection() {
 
 
 
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
+}
+
   )
   )
 

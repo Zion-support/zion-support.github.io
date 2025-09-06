@@ -1,15 +1,5 @@
 
 import {use_navigate} from 'react-router-dom';
-export default /**
- * ReferralsPage - Function description
- */
-function ReferralsPage() {
-  const navigate = use_navigate ();
-  const { is_authenticated } = use_auth ();
-  const {
-    is_loading;
-    referral_code;
-
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -26,7 +16,6 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
-
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {useReferrals} from '@/hooks / useReferrals';
@@ -41,6 +30,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
+
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const {;
+    isLoading;
+    referralCode;import {use_navigate} from 'react-router-dom';
+export default /**
+ * ReferralsPage - Function description
+ */
+function ReferralsPage() {
+  const navigate = use_navigate ();
+  const { is_authenticated } = use_auth ();
+  const {
+    is_loading;
+    referral_code;
+
+export default function ReferralsPage() {
+
 
 
   const navigate = useNavigate();
@@ -101,6 +108,7 @@ export default function ReferralsPage() {
 
 
   const {
+  const { isAuthenticated } = useAuth(),  const {
     isLoading,
     referralCode,
     referrals,
@@ -131,6 +139,11 @@ export default function ReferralsPage() {
       toast({;
         title: "Authentication required",;
         description: "Please login to access the referral program",;
+  useEffect(() => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",,
+  description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
     }
@@ -170,6 +183,9 @@ export default function ReferralsPage() {;
 ;
 export default function ReferralsPage() {;
   const navigate = useNavigate();
+;
+export default function ReferralsPage() {;
+  const navigate = useNavigate();
   const { isAuthenticated } = useAuth(),;
   const {;
     isLoading,;
@@ -185,6 +201,8 @@ export default function ReferralsPage() {;
       toast({;
         title: "Authentication required",;
         description: "Please login to access the referral program",;
+        title: "Authentication required",,
+  description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
     }
@@ -206,6 +224,7 @@ export default function ReferralsPage() {;
 ;
   return (;
 
+  return (;
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
         <div>;
@@ -235,6 +254,15 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
           />;
 
+      <ReferralStats stats={stats} isLoading={isLoading} />;
+
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">;
+        <div className="lg:col-span-2 space-y-6">;
+          <ReferralLink
+            referralLink={referralLink} 
+            onCopy={copyReferralLink} 
+            onShare={shareOnSocialMedia}
+          />;
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -378,3 +406,6 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 ;
     </div>);
 }
+        <div className="space-y-6">;;
+        <div className="space-y-6">;
+        <div className="space-y-6">;

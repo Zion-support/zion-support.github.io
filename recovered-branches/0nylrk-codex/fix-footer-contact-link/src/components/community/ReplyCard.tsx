@@ -11,6 +11,8 @@ import {cn} from "@/lib/utils";
   canMarkAnswer?: boolean;
   className?: string;
 }
+interface ReplyCardProps {;
+  reply: ForumReply,;
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -115,6 +117,7 @@ export const ReplyCard = ({;
 
       className
     )}>;
+    <Card className={cn(      className    )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
@@ -152,6 +155,13 @@ export const ReplyCard = ({;
         )}
 
 
+            )}
+            {reply.isAnswer && (
+              <Badge className="ml-2 bg-green-500 text-white">
+                <CheckCircle className="h-3 w-3 mr-1" />
+                Answer
+              </Badge>
+            )}
           </div>;
         </div>;
       </CardHeader>;
@@ -289,7 +299,7 @@ export const ReplyCard = ({ ;
   canMarkAnswer = false,;
   className;
 } ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix:true }),;
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix:true });
 ;
   return (;
     <Card className={cn(;
@@ -313,6 +323,9 @@ export const ReplyCard = ({ ;
                 {reply && reply.authorRole}
 
                 {reply && reply.authorRole}
+  )
+};
+
               </Badge>;
             )}
             {reply && reply.isAnswer && (;
@@ -331,3 +344,9 @@ export const ReplyCard = ({ ;
 export default ReplyCard;
 
 
+  )
+};
+
+export default ReplyCard;
+export default ReplyCard;
+export default ReplyCard;

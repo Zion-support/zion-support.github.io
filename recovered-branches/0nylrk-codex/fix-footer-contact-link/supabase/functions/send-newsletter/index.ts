@@ -105,6 +105,7 @@ serve(async (req) => {
       return new Response(JSON && JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 200})
+  testMode?: boolean,        status: 200})
     }
     // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
@@ -122,6 +123,7 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
+      message: "Email would be sent to all subscribers in production"      status: 500})
   }
 });
 
@@ -155,6 +157,7 @@ serve(async (req) => {;
   }
 ;
   try {;
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {;
       throw new Error("Resend API key is not set in environment variables");
@@ -191,6 +194,8 @@ serve(async (req) => {;
       status: 500});
 
     };
+      status: 500})
+};
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -262,6 +267,16 @@ if ( {) {
   }
 });
 ;
+    },
+
+    return new Response(JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200})
+  } catch (error) {
+    console.error("Error in send-newsletter function:", error),
+    
+    return new Response(JSON.stringify({ error: error.message }), {}
+});
   }
 });
 ;
@@ -334,6 +349,7 @@ previewText: string;
 body: string;
 testMode?: boolean;
 testEmail?: string 
+}serve (async (req) => {}const resend = new Resend (resendApiKey);
 }serve (async (req) => {}const resend = new Resend (resendApiKey);
 }serve (async (req) => {}const resend = new Resend (resendApiKey);
 const {

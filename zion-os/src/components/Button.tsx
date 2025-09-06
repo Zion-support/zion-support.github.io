@@ -56,7 +56,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
     xl: 'rounded-xl',;
     full: 'rounded-full';
   },;
-  const widthClasses = fullWidth ? 'w-full' : '',;
+  const widthClasses = fullWidth ? 'w-full' : '';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
 
 
@@ -101,6 +101,34 @@ interface ButtonProps {
       {content}
 
     <Button;
+  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+}
+const Button = forward_ref < HTMLButtonElement ButtonProps>(({
+  children,
+  variant = 'primary',
+  size = 'md',
+  href,
+  on_click,
+  disabled = false,
+  loading = false,
+  icon,
+  icon_position = 'right',
+  class_name = '',
+  type = 'button',
+  full_width = false,
+  rounded = 'lg';
+      <Link href={href} className={classes}>;
+        {content}
+      </Link>);
+  }
+;
+
+  return (;
+  return (  return (;
+    <button;
+      ref={ref}
+      type={type}
+      className={classes}    <Button;
       {...props}
       icon={icon}
       on_click={on_click}

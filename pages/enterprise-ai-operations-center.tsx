@@ -87,6 +87,9 @@ export default function EnterpriseAIOpsPage() {
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
+import React from 'react',
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
@@ -124,6 +127,7 @@ export default function EnterpriseAIOpsPage(req, res) {
 
 
 
+  )
               </div>;
             </div>;
           </div>;
@@ -140,6 +144,9 @@ export default function EnterpriseAIOpsPage(req, res) {
 ;
 
 ;
+;
 
 
 
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

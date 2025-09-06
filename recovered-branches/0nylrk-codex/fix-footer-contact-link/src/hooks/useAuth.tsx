@@ -14,6 +14,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+
   id?: string;
   name?: string;
   email?: string;
@@ -300,6 +301,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
     // Mock implementation
+}  // Mock auth functions for now - these would connect to Supabase in a real implementation
+
+  const signIn = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth    // Mock implementation
     setUser({
       id: "google-user-id"
       email: "google@example.com"
@@ -316,6 +321,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 
   const loginWithFacebook = async () => {
+  const loginWithFacebook = async () => {
+    // // // console.log("Facebook login requested"),  const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
     // Mock implementation
     setUser({
@@ -334,6 +341,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 
   const loginWithTwitter = async () => {
+  const loginWithTwitter = async () => {
+    // // // console.log("Twitter login requested"),  const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
     // Mock implementation
     setUser({
@@ -404,6 +413,27 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
+  };
+
+  const signOut = async () => {;
+    // This would be replaced with actual Supabase auth;
+    console && console.log("Sign out attempted");
+    setUser(null)
+};
+
+  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
+    // This would be replaced with actual Supabase auth;
+    console && console.log("Sign up attempted with:", email, userData);
+    // Mock successful sign-up;
+    setUser({ ;
+      id: "mock-user-id", ;
+      email, ;
+
+  },
+
+    // // // console.log("Web3 login requested"),
+    const ethereum = (window as any).ethereum,
+    if (!ethereum) {
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -666,6 +696,11 @@ if ( {) {
   },;
   };
   const loginWithFacebook = async () => {;
+      setUser({ ...user, ...data });      displayName: "Google User",;
+      name: "Google User",;
+      profileComplete: true;
+    })
+};  },;  const loginWithFacebook = async () => {;
     console && console.log("Facebook login requested");
     // Mock implementation;
     setUser({ ;
@@ -682,6 +717,8 @@ if ( {) {
 
   },;
   };
+    })
+};
   const loginWithTwitter = async () => {;
     console && console.log("Twitter login requested");
     // Mock implementation;
@@ -705,6 +742,11 @@ if ( {) {
       return;
     }
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+      email: "twitter@example.com",;
+      displayName: "Twitter User",;
+      name: "Twitter User",;
+      profileComplete: true;
+    });      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       await ethereum.request ({
         method: 'personal_sign',
@@ -730,7 +772,7 @@ if ( {) {
       return;
     }
     try {;
-      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
+      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
       await ethereum && ethereum.request({;
         method: 'personal_sign',;
@@ -1050,3 +1092,7 @@ export function useAuth(): AuthContextType {;
 }
 ;
 ;
+  }    isLoading;
+    signIn;
+    signOut;
+    signUp;

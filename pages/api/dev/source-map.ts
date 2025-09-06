@@ -1,5 +1,13 @@
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Source map endpoint' });
+}
+
+
+>>>>>>> main
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -40,6 +48,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
 ;
 export default /**
  * handler - Function description
@@ -66,6 +77,9 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+      res.status(400).json({ error: "Invalid path" })
+      return;
+      res.status(400).json({ error: "Invalid path" }),
       res.status(400).json({ error: "Invalid path" })
       return;
 export default function handler(req, res) {
@@ -126,6 +140,8 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
+  const identity = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");
@@ -148,3 +164,5 @@ export default function handler(req, res) {
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main

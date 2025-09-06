@@ -17,6 +17,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(201).json(created);
 
 }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
@@ -24,6 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
     const companies = store.listCompanies();
@@ -48,7 +53,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../utils/data/enterpriseStore';
 export default function handler(req, res) {
   try {
@@ -128,3 +132,12 @@ export default function handler(req, res) {
 }
 
 
+  if (req.method;
+    return res.status(201).json(created)
+    });
+    return res.status(201).json(created);
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

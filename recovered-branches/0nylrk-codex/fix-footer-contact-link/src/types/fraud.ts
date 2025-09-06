@@ -5,6 +5,8 @@ export type FraudSeverity = "safe" | "suspicious" | "dangerous";
 
 export type FraudSeverity = "safe" | "suspicious" | "dangerous";
 
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
 export interface FraudFlag {
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
@@ -13,6 +15,7 @@ export interface FraudFlag {;
 
 
 export interface FraudFlag {
+export interface FraudFlag {export interface FraudFlag {
   id: string;
   user_id: string;
   user_email?: string;

@@ -3,6 +3,8 @@ import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
+
+
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -60,6 +62,15 @@ export function KanbanColumn({
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
 import { Droppable } from './react - beautiful - dnd';
+import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications}: KanbanColumnProps) {
+  // Add color based on column type
+
+  const getBadgeVariant = (columnId: string) => {
+    switch (columnId) {import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -205,8 +216,10 @@ export function KanbanColumn({;
 
   }
 
-  },
+  }
   
+    }
+  };
 
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
@@ -267,6 +280,7 @@ export function KanbanColumn({;
 
       case "rejected":;
         return "destructive",
+              {applications.map((application, index) => (        return "destructive",
       default:;
         return "outline";
     }
@@ -323,6 +337,14 @@ export function KanbanColumn({;
               {applications.length === 0 && (
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
+;              )}
+            </div>;
+          )}
+                />))}
+              {provided.placeholder}
+              {applications.length === 0 && (
+                <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p-4">;
+                  <p className="text - center text - sm text - muted-foreground">;
                     Drag candidates here;
                   </p>;
                 </div>)}
@@ -336,6 +358,7 @@ export function KanbanColumn({;
 
 
 
+}
     }
   },;
   ;
@@ -462,6 +485,8 @@ return (<Card className= {
               {applications.length === 0 && (
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
+                <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p-4">;
+                  <p className="text - center text - sm text - muted-foreground">;
                     Drag candidates here;
                   </p>;
                 </div>)}
@@ -472,3 +497,4 @@ return (<Card className= {
 }
 
 
+;

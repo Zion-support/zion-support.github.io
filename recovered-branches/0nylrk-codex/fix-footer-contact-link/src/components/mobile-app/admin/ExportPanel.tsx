@@ -4,6 +4,8 @@ import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
+
+
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -61,6 +63,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
@@ -179,6 +182,7 @@ if ( {) {
 
 
   return (
+          metadata.platform  return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -291,7 +295,7 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`,;
       } else {;
         // Convert object to CSV format;
-        const headers = ['appTitleshortDescription', 'longDescriptionversion', 'platform'],;
+        const headers = ['appTitleshortDescription', 'longDescriptionversion', 'platform'];
         const values = [;
           metadata.appTitle,;
           metadata.shortDescription,;
@@ -413,6 +417,19 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 }
 ;
 
+        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+
+                CSV;
+              </Button>;
+            </div>;
+          </div>;              Enable Analytics;
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>
+};
+    </Card>);
+}
 
 };
     </Card>);
@@ -424,3 +441,24 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
     </Card>);
 }
 ;
+    </Card>);
+}
+;
+    </Card>;
+  ),;
+},; interface ExportPanelProps {
+  platform: AppPlatform;
+metadata: AppMetadataValues 
+}platform, metadata 
+}) => {
+  const handleExport = (format: 'json' | 'csv') => {
+  try {
+  let content: string;
+let fileName: string;
+if (format === 'json') {}
+};
+return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) 
+};
+    </Card>;
+  )
+};

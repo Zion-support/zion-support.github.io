@@ -414,7 +414,7 @@ setShowCreateDialog (false)
 };
  return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {
   key 
-}"\\ -H " Content-Type: application/json"`;
+}"\\ -H " Content-Type: application/json"`
 };
 //Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {
   showCreateDialog 

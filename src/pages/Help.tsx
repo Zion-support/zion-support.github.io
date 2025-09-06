@@ -61,3 +61,12 @@ const Help = () => {
 export default Help;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+import React, { useState } from 'react';""
+import { motion } from 'framer-motion';""
+import { SEO } from '../components/SEO';
+import { 
+  Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight
+} from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -19,6 +19,21 @@ import {cleanupAuthState} from "@/utils/authUtils";
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object({;
+    password: z;
+      .string();
+      .min(8, "Password must be at least 8 characters");
+      .max(64, "Password must be less than 64 characters");
+    confirmPassword: z && z.string()});
+  .refine((data) => data && data.password === data && data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+
+type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
+
+export default function UpdatePassword() {;
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -106,6 +121,7 @@ export default function UpdatePassword() {
   const location = useLocation(),
 
   // Initialize react-hook-form
+import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
@@ -128,6 +144,9 @@ export default function UpdatePassword() {
     cleanupAuthState()
 
 
+    } else {
+      setError("No access token found. Please request a new password reset link.")
+    }
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
     
@@ -206,6 +225,14 @@ if ( {) {
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
+    if (token) {
+      setAccessToken(token)
+    } else {
+      set_error ("No access token found. Please request a new password reset link.");
+    }
+
+  }, [location]),
+
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
@@ -333,7 +360,7 @@ export default function UpdatePassword() {;
       password:"",;
       confirmPassword:""}}),;
 ;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const location = useLocation(),;
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
@@ -397,6 +424,34 @@ export default function UpdatePassword() {;
 
   return (
 
+  return (
+
+          title: "Password update failed",
+          description: error.message,
+          variant: "destructive"}),
+        setError(error.message),
+
+        return
+      }
+      // Show success message and clean up auth state
+      setSuccess(true);
+      toast({
+        title: "Password updated successfully"
+        description: "You can now log in with your new password."})
+      // Clean auth state and redirect after a delay
+      cleanupAuthState();
+      setTimeout(() => {
+        navigate("/login")
+      }, 3000)
+    } catch (error: any) {
+      console.error("Password update error:", error);
+      toast({
+        title: "Password update failed"
+        description: error.message |"An unexpected error occurred"
+        variant: "destructive"})
+      setError(error.message |"An unexpected error occurred")
+    } finally {
+      setIsLoading(false)
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -411,6 +466,8 @@ export default function UpdatePassword() {;
         toast({;
           title: "Password update failed",;
           description: error && error.message,;
+          title: "Password update failed",,
+  description: error && error.message,;
           variant: "destructive"}),;
         setError(error && error.message);
         return;
@@ -554,6 +611,17 @@ export default function UpdatePassword() {;
 
 
                     <FormField
+        title: "Password updated successfully",,
+  description: "You can now log in with your new password."}),;
+
+      // Clean auth state and redirect after a delay;
+      cleanupAuthState();
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              {error && (;
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
+                  <p className="text-sm">{error}</p>;                    <FormField
+                      control={form && form.control}
+                      name="password"                    <FormField
                       control={form && form.control}
                       name="password"
                       render={({ field }) => (;
@@ -593,6 +661,20 @@ export default function UpdatePassword() {;
                     <FormField
                       control={form && form.control}
                       name="confirmPassword"
+                              type="password"
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              disabled={isLoading}
+                              {...field}
+                            />;
+                          </FormControl>;
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+;
+                    <FormField;
+                      control={form.control}
+                      name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -601,6 +683,25 @@ export default function UpdatePassword() {;
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               disabled={isLoading}
+                              disabled={isLoading}
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="confirmPassword"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="password"
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              placeholder="••••••••"
                               {...field}
                             />;
                           </FormControl>;
@@ -613,6 +714,8 @@ export default function UpdatePassword() {;
                         onClick={() => navigate("/login")}
 
 
+
+                    />;
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -688,6 +791,23 @@ if ( {) {
                   <p className="text - sm">{error}</p>;
                   <Button;
                     className="mt - 3 text - xs";
+      <div className="flex min - h-screen bg - zion-blue">;
+        <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:px - 20 xl:px-24">;
+          <div className="mx - auto w - full max - w-sm lg:w-96">;
+            <div className="text - center mb-10">;
+              <h2 className="text - 3xl font - bold tracking - tight text-white">;
+                Update your password;
+              </h2>;
+              <p className="mt - 2 text - sm text - zion - slate-light">;
+                Enter your new password below.;
+              </p>;
+            </div>;
+            <div className="bg - zion - blue - dark rounded - lg p-6">;
+              {error && (
+                <div className="mb - 6 p - 4 bg - red - 500 / 20 border border - red - 500 / 50 rounded - md text-white">;
+                  <p className="text-sm">{error}</p>;
+                  <Button;
+                    className="mt - 3 text-xs";
                     variant="outline";
                     on_click={() => navigate ('/forgot - password')}
                   >;
@@ -704,11 +824,21 @@ if ( {) {
                     Your password has been successfully updated.;
                   </p>;
                   <p className="mt - 2 text - sm text - zion - slate - light">;
+                <div className="text - center py-8">;
+                  <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb-4">;
+                    <LockKeyhole className="h - 6 w - 6 text - zion-purple" />;
+                  </div>;
+                  <h3 className="text - lg font - medium text-white">Password updated</h3>;
+                  <p className="mt - 2 text - sm text - zion - slate-light">;
+                    Your password has been successfully updated.;
+                  </p>;
+                  <p className="mt - 2 text - sm text - zion - slate-light">;
                     Redirecting you to login...;
                   </p>;
                 </div>) : (
                 <Form {...form}>;
                   <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+                  <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
                     <FormField;
                       control={form.control}
                       name="password";
@@ -719,12 +849,18 @@ if ( {) {
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                          <FormLabel className="text - zion - slate-light">New Password</FormLabel>;
+                          <FormControl>;
+                            <Input;
+                              type="password";
+                              className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
                           </FormControl>;
                           <FormMessage className="text - red - 400" />;
+                          <FormMessage className="text - red-400" />;
                         </FormItem>)}
                     />;
                     <FormField;
@@ -737,17 +873,24 @@ if ( {) {
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                          <FormLabel className="text - zion - slate-light">Confirm Password</FormLabel>;
+                          <FormControl>;
+                            <Input;
+                              type="password";
+                              className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
                           </FormControl>;
                           <FormMessage className="text - red - 400" />;
+                          <FormMessage className="text - red-400" />;
                         </FormItem>)}
                     />;
                     <Button;
                       type="submit";
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
                       disabled={is_loading || !access_token}
                     >;
                       {is_loading ? "Updating..." : "Update Password"}
@@ -774,6 +917,11 @@ if ( {) {
                         onClick={() => navigate("/login")}
 
 
+                    <div className="text-center">;
+                      <Button;
+                        variant="link";
+                        className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light p-0";
+                        on_click={() => navigate ("/login")}
                         type="button";
                       >;
                         Back to login;
@@ -785,6 +933,7 @@ if ( {) {
 
 
                       name="confirmPassword";
+                  </form>;                      name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -857,6 +1006,7 @@ if ( {) {
     </>);
 }
 }
+                <p className="text-lg text-white/80">;}
     </>);
     </>;
   ); import {
@@ -867,6 +1017,7 @@ FormItem;
 FormLabel;
   password: z .string () if (token) {
   setAccessToken (token) 
+}else {}
 }else {}
 }, [location]);
 //Form submission handler 
@@ -885,6 +1036,12 @@ if (error) {
   toast ({
   title: "Password update failed";
 description: error.message;
+setError (error.message);
+return;
+}//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
+setTimeout ( () => {}finally {
+  title: "Password update failed",
+  description: error.message;
 setError (error.message);
 return;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();

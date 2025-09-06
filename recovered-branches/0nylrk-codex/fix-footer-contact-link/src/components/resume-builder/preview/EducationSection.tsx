@@ -1,4 +1,6 @@
 
+import {Education} from '@/types / resume';
+import {format} from 'date - fns';
 
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
@@ -35,6 +37,7 @@ interface EducationSectionProps {
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
 import { Education } from '@/types/resume',;
+      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
   education: Education[];
@@ -45,6 +48,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
   const sortedEducation = [...education].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
@@ -175,3 +179,7 @@ if (return null) {
 }
 
 
+      return format(new Date(date), 'MMM yyyy');    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedEducation.length === 0) return null;

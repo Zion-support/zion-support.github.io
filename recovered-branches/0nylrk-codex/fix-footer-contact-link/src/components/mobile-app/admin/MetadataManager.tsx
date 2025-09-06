@@ -46,6 +46,7 @@ const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace"
   shortDescription: "Hire top AI talent or find global IT jobs on the go."
   longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
   keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
   version: "1.0.0"
   platform: "ios"
@@ -158,6 +159,9 @@ export const MetadataManager: React.FC = () => {
 
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
+    setIsSaving(true)
+    try {
+      // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
       <Tabs defaultValue="ios" className="w-full">
         <div className="flex justify-between items-center mb-6">
           <TabsList className="bg-zion-blue">
@@ -258,7 +262,7 @@ export const MetadataManager: React.FC = () => {;
   // Separate form instances for each platform;
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } });
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } });
-  const currentForm = currentPlatform === "ios" ? iosForm : androidForm,;
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
 
   const handleSaveMetadata = async (data: AppMetadataValues) => {;
     setIsSaving(true),;
@@ -276,6 +280,7 @@ export const MetadataManager: React.FC = () => {;
 
 
     } finally {;
+export type AppPlatform = "ios" | "android",;    } finally {;
       setIsSaving(false);
     }
   };
@@ -284,7 +289,7 @@ export const MetadataManager: React.FC = () => {;
 ;
 export type AppPlatform = "ios" | "android",;
 ;
-export type AppMetadataValues = {;
+export type AppMetadataValues = {
   appTitle:string,;
   shortDescription:string,;
   longDescription:string,;
@@ -336,6 +341,7 @@ export const MetadataManager:React.FC = () => {;
 
 
     <div className="bg-zion-blue-dark rounded-lg p-6">;
+  return (    <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
           <TabsList className="bg-zion-blue">;
@@ -366,6 +372,7 @@ export const MetadataManager:React.FC = () => {;
 
 
         <TabsContent value="ios" className="mt-0">;
+          </TabsList>;        <TabsContent value="ios" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;
@@ -440,6 +447,7 @@ export const MetadataManager:React.FC = () => {;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={androidForm.getValues()} />;
     } catch (error) {
+            </div>;    } catch (error) {
       toast.error ("Failed to save metadata");
       console.error (error);
     } finally {
@@ -459,6 +467,10 @@ export const MetadataManager:React.FC = () => {;
 }
 ;
 
+      </Tabs>
+};
+    </div>);
+}
 
 };
     </div>);
@@ -470,3 +482,28 @@ export const MetadataManager:React.FC = () => {;
     </div>);
 }
 ;
+    </div>);
+}
+;
+    </div>;
+  ),;
+},; export type AppPlatform = "ios" | "android";
+  setIsSaving (true);
+try {
+  //This would be implemented with actual API calls in production //Simulate API call await new Promise (resolve => setTimeout (resolve, 1000) );
+}finally {
+  setIsSaving (false) 
+}
+};
+return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="ios" className="w-full" > <div className="flex justify-between items-center mb-6" > <TabsList className="bg-zion-blue" > <TabsTrigger value="ios" onClick= {
+  () => setCurrentPlatform ("ios") 
+}> App Store (iOS) </TabsTrigger> <TabsTrigger value="android" onClick= {
+  () => setCurrentPlatform ("android") 
+}> currentForm.handleSubmit (handleSaveMetadata) 
+}disabled= {
+  isSaving 
+}> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
+};
+    </div>;
+  )
+};

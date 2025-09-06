@@ -576,6 +576,7 @@ export default function EnhancedServices() {;
   ];
   const stats = [{ "number": "500+", "label": "Projects Completed" };
   const stats = [{ "number": "500+", "label": "Projects Completed" };
+  const stats = [{ "number": "500+", "label": "Projects Completed" };
     { "number": "99 && 99.9%", "label": "Uptime Guarantee" },;
     { "number": "24/7", "label": "Support Available" },;
     { "number": "50+", "label": "Expert Team Members" }

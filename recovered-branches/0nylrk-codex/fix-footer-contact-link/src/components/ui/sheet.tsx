@@ -1,5 +1,6 @@
 
 import * as SheetPrimitive from "@radix-ui/react-dialog"
+
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import * as React from "react"
@@ -25,6 +26,7 @@ const SheetOverlay = React.forwardRef<
 
 
       className
+    className={cn(      className
     )}
     {...props}
     ref={ref}
@@ -53,6 +55,8 @@ const SheetContent = React.forwardRef<
         left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
         right:
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+    defaultVariants: {
+      side: "right"}}  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
       side: {
@@ -63,6 +67,9 @@ const SheetContent = React.forwardRef<
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
     defaultVariants: {
+
+    defaultVariants: {
+      side: &quot;right&quot;}}    defaultVariants: {
       side: "right"}}
 )
 interface SheetContentProps
@@ -205,6 +212,10 @@ const SheetContent = React.forwardRef<;
 
 
       </SheetPrimitive.Close>
+  VariantProps<typeof sheetVariants> {}
+const SheetContent = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Content>
+  SheetContentProps      </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
@@ -235,6 +246,7 @@ SheetHeader.displayName = "SheetHeader"
 
 
 const SheetFooter = ({
+    className={cn(const SheetFooter = ({
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -311,6 +323,14 @@ const SheetTitle = React.forward_ref<;
     className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
     {...props}
     ref={ref}
+  <SheetPrimitive.Title    ref={ref}
+    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
+    {...props}
+
+  React.ElementRef<typeof SheetPrimitive.Description>,;
+
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
+>(({ className, ...props }, ref) => (;    ref={ref}
     className={cn("text-lg font-semibold text-foreground", className)}
     {...props}
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
@@ -446,4 +466,11 @@ export {;
 
 
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
+  />));
+SheetDescription.display_name = SheetPrimitive.Description.display_name;
+export {
+
+export {;
+
+  Sheet, SheetClose;
 }

@@ -133,6 +133,10 @@ class PasswordStrengthService {
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 
+export interface CommonPasswordData {;
+
+export interface CommonPasswordData {;
+
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
@@ -237,6 +241,9 @@ class PasswordStrengthService {
 
 
 
+    result && result.feedback = this && this.generateFeedback(result && result.details);
+    result && result.suggestions = this && this.generateSuggestions(result && result.details);
+    result && result.warnings = this && this.generateWarnings(result && result.details);
     return result
   }
   /**
@@ -470,6 +477,7 @@ class PasswordStrengthService {;
 
 
     // Generate feedback;
+    // Length scoring (0-25 points)    // Generate feedback;
     result.feedback = this.generateFeedback(result.details),;
     result.suggestions = this.generateSuggestions(result.details),;
     result.warnings = this.generateWarnings(result.details),;
@@ -792,9 +800,14 @@ if ( {) {
    */
   private estimateCrackTime(password: string): string {
 
+    const entropy = this && this.calculateEntropy(password)
+
+
+
+  }  }
+  }
+
     const entropy = this && this.calculateEntropy(password),
-
-
 
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
     const totalAttempts = Math && Math.pow(2, entropy);
@@ -823,7 +836,7 @@ if ( {) {
   private estimateCrackTime(password: string): string {;
     const entropy = this.calculateEntropy(password);
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second;
-    const totalAttempts = Math.pow(2, entropy),;
+    const totalAttempts = Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond,;
     if (seconds < 1) return 'Instantly',;
     if (seconds < 60) return `${Math.ceil(seconds)} seconds`,;
@@ -838,6 +851,9 @@ if ( {) {
     return `${Math && Math.ceil(seconds / 31536000)} years`
 
   }
+    if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
+    if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
+    return `${Math && Math.ceil(seconds / 31536000)} years`  }
   /**
    * Generate feedback based on password analysis
    */
@@ -1078,6 +1094,9 @@ if ( {) {
     return feedback
   }
   /**
+    }
+    return feedback
+  }  /**
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
@@ -1152,6 +1171,9 @@ if ( {) {
 
     return suggestions
 
+    suggestions.push('Consider using a passphrase with random words');
+    suggestions.push('Use unique passwords for each account');
+    suggestions.push('Consider a password manager for secure storage');
   }
   /**
    * Generate security warnings
@@ -1244,6 +1266,7 @@ if ( {) {
       password += charset[Math.floor(Math.random() * charset.length)]
 
       password += charset[Math.floor(Math.random() * charset.length)]
+  private generateWarnings(details: PasswordStrengthResult['details']): string[] {      password += charset[Math.floor(Math.random() * charset.length)]
 ;
   /**;
    * Generate a strong password;
@@ -1260,6 +1283,7 @@ if ( {) {
     for (let i = 4, i < length, i++) {;
       password += charset[Math.floor(Math.random() * charset.length)];
     }
+      password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]    }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
@@ -1377,6 +1401,9 @@ if ( {) {
       totalPatterns: this.patterns.length
 
 
+
+    this && this.commonPasswords.delete(password && password.toLowerCase())
+  }
 
     }
   }
@@ -1696,3 +1723,4 @@ export { PasswordStrengthService };
 export { PasswordStrengthService };
 export { PasswordStrengthService }
 ;
+export { PasswordStrengthService };

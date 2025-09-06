@@ -6,6 +6,6 @@ const Accessibility-auditor = ({ className }) => {
       <h1>Accessibility-auditor</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

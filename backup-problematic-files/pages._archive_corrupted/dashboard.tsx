@@ -296,3 +296,4 @@ export default DashboardPage
 :backup-problematic-files/pages._archive_corrupted/dashboard.tsx
 >>>>>>> main:corrupted_backup/dashboard.tsx
 ursor/automate-test-improve-and-merge-code-646c
+:backup-problematic-files/pages._archive_corrupted/dashboard.tsx

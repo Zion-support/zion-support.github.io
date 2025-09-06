@@ -33,6 +33,11 @@ serve(async (req: Request) => {
   if (req && req.method === "OPTIONS") {
 
 const corsHeaders = {
+    "authorization, x-client-info, apikey, content-type"},
+
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req && req.method === "OPTIONS") {const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
@@ -40,6 +45,7 @@ serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {
     return new Response(null, {
+  if (req.method === "OPTIONS") {
       status: 204
       headers: corsHeaders})
   }
@@ -68,6 +74,10 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
 
 
+    const supabase = createClient(    if (error) {
+      console && console.error("Failed to create scheduled reminders:", error);
+      return new Response(
+        JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -125,6 +135,14 @@ serve(async (req: Request) => {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
 
+      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
+      for (const job of pendingJobs) {
+        // Call the send-onboarding-reminder function for each job
+        const reminderResponse = await fetch(
+          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
+          {
+            method: "POST";
+            headers: {
 
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
@@ -153,6 +171,7 @@ serve(async (req: Request) => {
 
             .eq("id", job && job.id);
           if (updateError) {
+        );          if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
             processedJobs && processedJobs.push(job && job.id)
@@ -172,6 +191,7 @@ serve(async (req: Request) => {
 
 
           // Update job status to failed
+        } else {          // Update job status to failed
           await supabase
             .from("scheduled_jobs")
             .update({
@@ -228,6 +248,14 @@ serve(async (req: Request) => {
 
 
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+            .eq("id", job && job.id)            .eq("id", job && job.id)
+        }
+      }
+    }
+    return new Response(      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -244,7 +272,7 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers":;
@@ -380,6 +408,8 @@ if ( {) {
   }
 });
 
+  }
+});
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;

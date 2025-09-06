@@ -2,6 +2,12 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
 const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import jwt from 'jsonwebtoken';
+import { ethers } from 'ethers';
+const JWT_SECRET = null;
+    return res.status(200).json({ ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -23,9 +29,6 @@ export default async function handler(
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
@@ -53,10 +56,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
     return res && res.status(200).json({ ok: true });
+    return res && res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
@@ -126,9 +129,6 @@ function handler() {
 }
     return res.status(500).json({ error: e?.message |"Verify failed" });
     return res.status(500).json({ error: e?.message || "Verify failed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
   try {
@@ -161,3 +161,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

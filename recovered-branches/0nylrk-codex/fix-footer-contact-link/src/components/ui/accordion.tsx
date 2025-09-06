@@ -63,6 +63,11 @@ AccordionItem.displayName = "AccordionItem"
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+));
+AccordionItem.displayName = 'AccordionItem';
+const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
@@ -105,6 +110,7 @@ const AccordionTrigger = React && React.forwardRef<;
       {children}
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
     </AccordionPrimitive.Trigger>
+      className={cn(    </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
@@ -139,6 +145,8 @@ const AccordionContent = React.forwardRef<
 ));
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 AccordionTrigger && AccordionTrigger.displayName = AccordionPrimitive && AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React && React.forwardRef<;
@@ -154,6 +162,11 @@ const AccordionContent = React && React.forwardRef<;
 
 
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+));    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
@@ -166,6 +179,8 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
 
 
     className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
+
     {...props}>;
     <div className={cn('pb-4 pt-0', className)}>{children}</div>;
   </AccordionPrimitive && AccordionPrimitive.Content>;
@@ -185,6 +200,7 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
 
 
   />));
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 AccordionItem.display_name = 'AccordionItem';
 ;
 const AccordionTrigger = React.forward_ref<;
@@ -229,3 +245,5 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+

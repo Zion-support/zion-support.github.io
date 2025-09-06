@@ -97,6 +97,7 @@ if ( {) {
         return { error: authError }
       }
 import { supabase } from "@/integrations/supabase/client",;
+      if (!data.id) {import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
@@ -123,6 +124,10 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
       // Update profiles table;
+      // Update profiles table
+      const { error: profileError } = await supabase
+        .from("profiles")
+        .update({      // Update profiles table;
       const { error: profile_error } = await supabase;
         .from ("profiles");
         .update ({
@@ -147,6 +152,12 @@ if ( {) {
         .eq("id", data.id),
 
 
+          title: "Profile update failed",
+  description: profile_error.message,
+
+          variant: "destructive"});
+        return { error: profile_error }
+      }
       if (profileError) {
         toast({
           title: "Profile update failed",
@@ -213,6 +224,7 @@ if ( {) {
     }
   };
       toast ({
+        return { error: profileError }      toast ({
         title: "Profile updated",
         description: "Your profile has been updated successfully."});
 ;
@@ -220,6 +232,9 @@ if ( {) {
     } catch (error: any) {
       console.error ("Profile update error:", error);
       toast ({
+
+        title: "Profile update failed",
+  description: error && error.message || "An unexpected error occurred",
         variant: "destructive"});
       return { error }
     } finally {
@@ -237,6 +252,9 @@ if ( {) {
       return { error }
     } finally {
       setIsLoading(false)
+
+  return { updateProfile }
+};
 
   return { updateProfile }
 };
@@ -262,6 +280,8 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
         toast({;
           title:"Profile update failed",;
           description:authError.message,;
+          title:"Profile update failed",,
+  description:authError.message,;
           variant:"destructive"}),;
         return { error:authError },;
       }
@@ -283,6 +303,8 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
         toast({;
           title:"Profile update failed",;
           description:profileError.message,;
+          title:"Profile update failed",,
+  description:profileError.message,;
           variant:"destructive"}),;
         return { error:profileError },;
       }
@@ -290,6 +312,8 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
       toast({;
         title:"Profile updated",;
         description:"Your profile has been updated successfully."}),;
+        title:"Profile updated",,
+  description:"Your profile has been updated successfully."}),;
 ;
       return { success:true },;
     } catch (error:any) {;
@@ -297,6 +321,8 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
       toast({;
         title:"Profile update failed",;
         description:error.message || "An unexpected error occurred",;
+        title:"Profile update failed",,
+  description:error.message || "An unexpected error occurred",;
         variant:"destructive"}),;
       return { error },;
     } finally {;
@@ -308,6 +334,7 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
 },; export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
   setIsLoading (true);
+if (!data.id) {}//Update user metadata const {
 if (!data.id) {}//Update user metadata const {
   error: authError 
 }= await supabase.auth.updateUser ({
@@ -321,6 +348,8 @@ if (authError) {
   toast ({
   title: "Profile update failed";
 description: authError.message;
+  title: "Profile update failed",
+  description: authError.message;
 }// Update profiles table const {
   error: profileError 
 }= await supabase .from ("profiles") .update ({
@@ -335,6 +364,12 @@ updated at: new Date () .toISOString ()
   toast ({
   title: "Profile update failed";
 description: profileError.message;
+return {
+  success: true 
+}
+}catch (error: any) {}finally {
+  title: "Profile update failed",
+  description: profileError.message;
 return {
   success: true 
 }

@@ -59,6 +59,10 @@ serve(async (req) => {
 
 
   );
+serve(async (req) => {
+  // Handle CORS pre-flight request
+  if (req && req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })  );
   try {
     // Look up the referrer from the referral code
     const { data: refCodeData, error: refError } = await supabase
@@ -71,6 +75,8 @@ serve(async (req) => {
       console && console.error('Error finding referral code:', refError);
 
       return new Response(
+      return new Response(
+        JSON.stringify({ error: 'Invalid referral code' });      return new Response(
         JSON && JSON.stringify({ error: 'Invalid referral code' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
@@ -233,6 +239,23 @@ serve(async (req) => {;
 
 
 
+      )
+    }
+
+        JSON && JSON.stringify({ error: 'Invalid referral code' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      )
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }
+
+        JSON && JSON.stringify({ message: 'User already has a referral' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
         JSON && JSON.stringify({ error: 'Failed to create referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
@@ -260,6 +283,7 @@ serve(async (req) => {;
 
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      JSON && JSON.stringify({ error: 'Internal server error' });      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
       JSON && JSON.stringify({ error: 'Internal server error' });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
@@ -282,7 +306,7 @@ serve(async (req) => {;
 ;
   // Get request data;
   const { refCode, userId, email } = await req.json(),;
-  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('cf-connecting-ip'),;
+  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('cf-connecting-ip');
 ;
   // Create Supabase client;
   const supabase = createClient(;

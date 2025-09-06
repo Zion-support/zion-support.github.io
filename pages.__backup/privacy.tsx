@@ -41,6 +41,13 @@ interface PrivacyProps {
   // Add props here as needed
 }
 export default function Privacy({}: PrivacyProps) {
+interface PrivacyProps {
+  // Add props here as needed
+
+interface PrivacyProps {
+  // Add props here as needed
+}
+export default function Privacy({}: PrivacyProps) {
   return (
     <div>
       <h1>Privacy</h1>
@@ -131,3 +138,4 @@ export default function Privacy(): any ({}: PrivacyProps) {;
 ursor/automate-test-improve-and-merge-code-646c
 }
 }
+}}

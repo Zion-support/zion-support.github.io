@@ -86,7 +86,7 @@ if ( {) {
       const observer2 = new PerformanceObserver((list) => {;
         for (const entry of list.getEntries()) {;
           if (entry.entryType === "layout-shift") {;
-            const layoutShiftEntry = entry as any,;
+            const layoutShiftEntry = entry as any;
             cls += layoutShiftEntry.value;
           }
         }
@@ -104,6 +104,7 @@ if ( {) {
 
 
       }
+      // Cumulative Layout Shift monitoring;      }
     }
   }, []);
   return null, // This component doesn't render anything;

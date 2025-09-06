@@ -12,6 +12,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     return;
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const filePath = null;
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return;
   }
@@ -38,6 +45,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+      const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+const body =
+        typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
@@ -63,11 +75,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
+
 
 
 
@@ -79,6 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+
 
 export default /**
  * handler - Function description
@@ -152,3 +167,10 @@ if ( {) {
 
 
 
+
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

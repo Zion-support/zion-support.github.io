@@ -19,9 +19,11 @@ interface TokenRequest {
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0"
 
 
+
+}import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 
 interface TokenRequest {
   userId: string,
@@ -95,6 +97,12 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   return new Response(JSON.stringify({ error: 'Invalid action' }), { status: 400 })
 });
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {});
+  }
+  if (action === 'earn') {
+    return await changeBalance(userId, amount, 'earn', reason)
+  } else if (action === 'burn') {});
+async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
+  try {});
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
   const { data: wallet, error: walletError } = await supabase
@@ -108,6 +116,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -122,6 +131,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   } else {
     const { error } = await supabase
       .from('wallets')
@@ -214,7 +224,7 @@ if ( {) {
 ;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-const supabase = createClient(supabaseUrl, serviceKey),;
+const supabase = createClient(supabaseUrl, serviceKey);
 serve(async (req) => {;
   if (req.method === 'OPTIONS') {;
     return new Response('ok', {;

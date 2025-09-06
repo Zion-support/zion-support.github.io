@@ -11,6 +11,17 @@ export default async function handler(
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind,;
+} from "../../../utils/design-map";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import JSZip from 'jszip';
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -24,6 +35,14 @@ export default async /**
 function handler() {
 
 
+  UIKitKind
+} from '../../../utils/design-map';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
@@ -68,6 +87,31 @@ function handler() {
 
 
 
+    const buffer = await zip && zip.generateAsync({ type: "nodebuffer" });
+    res && res.setHeader("Content-Type", "application/zip");
+    res && res.setHeader(
+      "Content-Disposition"
+      `attachment; filename=zion-design-${kind}.zip`
+    );
+
+export default async function handler(req, res) {
+  try {
+    const map = { design: 'map' };
+    const tokens = { colors: {}, typography: {} };
+    res.status(200).json({
+      map
+      tokens
+      message: 'Design export completed'
+    });
+  } catch (e: unknown) {
+    res.status(500).json({
+      error: e?.message || 'Export failed'
+    });
+import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map';
+export default async function handler(req, res) {
+  try {
+    const kit = (req.query.kit as string) || 'tailwind';
+    const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -109,6 +153,8 @@ function handler() {
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
       uiFolder && uiFolder.file(path, content),
+      uiFolder && uiFolder.file(path, content),
+      uiFolder && uiFolder.file(path, content)
 
     );
     // README
@@ -121,6 +167,16 @@ function handler() {
     );
 
 
+      "README && README.md",
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+      "README && README.md"
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
+    );
+
+    );
+    res.status(200).send(buffer);
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message |"Export failed" });
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -152,3 +208,6 @@ function handler() {
 
 
 
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

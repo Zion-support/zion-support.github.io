@@ -5,11 +5,22 @@
   },
   {
 
+
+
+      {}
+    ]
+  },
+  {
+
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         title: 'Real - Time Analytics Dashboard',
         description:;
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.'
+
+      }
+    ]
           'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.'
 
       }
@@ -48,6 +59,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Stakeholder Engagement',
       'Research'
       'Research'
+      'Research'
     ],
     hourly_rate: 180,
     years_experience: 9,
@@ -67,12 +79,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'CUDA',
       'Edge AI'
       'Edge AI'
+      'Edge AI'
     ],
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
+    is_verified: true
+      }
+    ]
     is_verified: true
       }
     ]
@@ -91,6 +107,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Python',
       'Hugging Face',
       'Language Models',
+      'Sentiment Analysis'
       'Sentiment Analysis'
       'Sentiment Analysis'
     ],
@@ -112,6 +129,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'TensorFlow Quantum',
       'Optimization'
       'Optimization'
+      'Optimization'
     ],
     hourly_rate: 190,
     years_experience: 5,
@@ -129,6 +147,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Agile',
       'Analytics',
       'Stakeholder Management',
+      'Product Roadmap'
       'Product Roadmap'
       'Product Roadmap'
     ],
@@ -150,6 +169,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'OpenAI Gym',
       'Multi - agent Systems'
       'Multi - agent Systems'
+      'Multi - agent Systems'
     ],
     hourly_rate: 150,
     years_experience: 6,
@@ -169,6 +189,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Clinical Validation',
       'Regulatory Compliance'
       'Regulatory Compliance'
+      'Regulatory Compliance'
     ],
     hourly_rate: 170,
     years_experience: 8,
@@ -180,6 +201,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 import { TalentProfile } from "@/types/talent",
+
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+    id: "t-001", user_id: "user-001",
+    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+
+
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -228,8 +255,28 @@ export const TALENT_PROFILES: TalentProfile[] = [
 ];
 
 
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+      }
+    ]
+  }
+];
+;
+
+
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
 ];
 ;
+;
+    id: "t-001";
+    user_id: "user-001";
+    full_name: "Alexandra Chen";
+    professional_title: "Senior AI Engineer & Machine Learning Expert";
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

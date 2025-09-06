@@ -4,6 +4,10 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 ;
 
 
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export default function AiHrAnalyticsPlatform() {
+	return (
+		<ServiceLanding
 
 export default function AiHrAnalyticsPlatform() {
 	return (
@@ -53,3 +57,29 @@ export default function AiHrAnalyticsPlatform() {
 
 
 
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Engagement drivers and action suggestions"
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}

@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface AICodeReviewProps {
   // Add props here as needed
-export default function AICodeReview({ }: AICodeReviewProps) {
+
+}
+
+export default function AICodeReview({}: AICodeReviewProps) {
   return (
     <div>
       <h1>AICodeReview</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/AICodeReview.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function AICodeReview({ }: AICodeReviewProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/AICodeReview.jsx

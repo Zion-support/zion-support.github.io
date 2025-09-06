@@ -4,6 +4,17 @@
       title: &quot;Enterprise Infrastructure&quot;
       description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
       features: [
+        &quot;Job & Talent Marketplace&quot;
+        &quot;Token System + Rewards&quot;
+        &quot;On-chain Contract Builder&quot;
+        &quot;Multi-currency Support&quot;
+      ]
+      gradient: &quot;bg-gradient-to-r from-green-600 to-emerald-600&quot;
+    }
+    {
+      title: &quot;Enterprise Infrastructure&quot,
+  description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
+      features: [
         &quot;Regional Dashboards&quot;
         &quot;Partner API Access&quot;
         &quot;White-label Vendor Plugin&quot;
@@ -14,6 +25,8 @@
     {
       title: &quot;Education & Growth&quot;
       description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
+      title: &quot;Education & Growth&quot,
+  description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
       features: [
         &quot;Zion Academy&quot;
         &quot;Incubator + Grants&quot;
@@ -231,6 +244,24 @@
 
               <br />
               <span className="text-white">AI-Powered Digital Economies</span>
+    }
+  ],
+  return (    }
+  ],
+  return (
+    <div className=&quot;min - h-screen & quot;>;
+      {/* Hero Section */}
+
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
 
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -243,6 +274,17 @@
 
                 🚀 Launch Your Economy
               </Link>
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">              </Link>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </Link>
@@ -279,6 +321,8 @@
 
 
               Ready to Build the Future?
+            </h2>            {features.map((feature, index) => (
+              <FeatureCard              Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
@@ -296,6 +340,22 @@
       </section>
 
 
+<section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
+          <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
+            <h2 className=&quot;text - 4xl font - bold mb - 6&quot;>;
+              Ready to Build the Future?;
+            </h2>;
+            <p className=&quot;text - xl text - white / 70 mb - 8 max - w-2xl mx - auto & quot;>;
+              Join the revolution in decentralized business. Launch your sovereign AI - powered digital economy today.;
+            </p>;
+            <div className=&quot;flex flex - col sm:flex - row gap - 4 justify - center & quot;>;
+              <a href=&quot;/multiverse / launch & quot; className=&quot;btn - primary hover - lift text - lg px - 8 py - 4&quot;>;
+                🚀 Start Building Now;
+              </Link>;
+              <a href=&quot;/admin / instances & quot; className=&quot;btn - secondary hover - lift text - lg px - 8 py - 4&quot;>;
+                📊 Explore Examples;
+              </Link>;
             </div>;
           </div>;
         </div>;
@@ -329,6 +389,7 @@
     </div>);
 
 
+    </div>);
               Ready to Build the Future?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -374,3 +435,4 @@
 }
 
 
+}

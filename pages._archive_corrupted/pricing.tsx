@@ -154,6 +154,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       ],
+        'Content management system'      ],
       \"popular\": true
     },
     {
@@ -222,6 +223,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               Simple, Transparent Pricing
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">              Simple, Transparent Pricing
             </h1>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
               Choose the plan that fits your business needs.
@@ -253,6 +255,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
             {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
@@ -459,6 +462,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 <div className=\"text-center mb-8\">
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">                <div className=\"text-center mb-8\">
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <p className=\"text-gray-600 mb-4\">{plan.description}</p>
                   <div className=\"mb-4\">
@@ -497,6 +504,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                   {plan.features.map((feature, featureIndex) => (
+                <ul className="space-y-4 mb-8">                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
                       <span className=\"text-gray-600\">{feature}</span>
@@ -588,6 +596,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               Ready to Get Started?
+            ))}              Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
               Contact us today for a free consultation and custom quote.
@@ -660,6 +669,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+}
+};
+export default PricingPage;
+}}
+};
+export default PricingPage;
+}
+
 };
 export default PricingPage;
 
@@ -684,3 +701,6 @@ export default PricingPage;
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+};
+export default PricingPage;
+

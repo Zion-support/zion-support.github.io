@@ -6,6 +6,6 @@ const AIAutonomousPenetrationTesting = ({ className }) => {
       <h1>AIAutonomousPenetrationTesting</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

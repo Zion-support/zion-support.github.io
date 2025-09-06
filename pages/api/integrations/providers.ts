@@ -1,5 +1,7 @@
 
 
+
+
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -18,6 +20,11 @@ function handler() {
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
 import { PROVIDERS } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -33,11 +40,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   res.status(200).json({ providers: PROVIDERS });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { PROVIDERS } from '../../../lib/integrations/registry';
 export default function handler(req, res) {
   try {
@@ -56,3 +62,8 @@ export default function handler(req, res) {
   }
 }
 
+
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  res.status(200).json({ providers: PROVIDERS })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

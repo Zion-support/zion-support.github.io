@@ -1,5 +1,12 @@
 
 import {useState, useEffect} from 'react';
+import {use_form} from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
+import { toast } from './sonner';
+import {use_navigate} from 'react-router-dom';
+import {job_schema, JobSchemaType} from './validation';
+import { use_auth } from '@/hooks / use_auth';
 
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
@@ -25,6 +32,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 import { useState, useEffect } from 'react',
+import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
@@ -80,6 +88,15 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       job_type: '';
       salary_range: '';
       description: '';
+export interface JobPostingProps {
+  job_id?: string;
+  on_success?: () => void;
+}      title: '';
+      company: '';
+      location: '';
+      job_type: '';
+      salary_range: '',
+  description: '';
       responsibilities: '';
       qualifications: '';
       benefits: '';
@@ -110,6 +127,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 
 
       const jobData = {
+      toast && toast.error("You must be logged in to post a job");
+      navigate("/login"),      const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
@@ -223,7 +242,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 ;
     setIsLoading(true),;
     try {;
-      const publishedDate = startDate ? startDate.toString() : '',;
+      const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '',;
       const jobData = {;
         ...values,;
@@ -273,6 +292,8 @@ if ( {) {
 
 
 
+        is_remote: isRemote,
+        user_id: user && user.id};
       }
       return job_data;
     } catch (error: any) {
@@ -283,6 +304,7 @@ if ( {) {
 
 
 
+;
       setIsLoading (false);
     }
   }
@@ -332,6 +354,7 @@ if ( {) {
     setInitialValues;
     submitJob
 ;
+    setInitialValues;;
       return jobData;
     } catch (error: any) {;
       console.error("Error in job form submission:", error),;
@@ -360,3 +383,9 @@ if ( {) {
 }
 
 
+;
+
+  }
+};
+  }
+};

@@ -33,6 +33,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
       quote.id;
+
+import type { QuoteRequest } from "@/types/quotes",      quote.id;
       quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
@@ -137,6 +139,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
 
     // Download file and clean up
+      quote.project_summary;    // Download file and clean up
     link.click(),
     setTimeout(() => {
       document.body.removeChild(link),
@@ -232,6 +235,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             ? `$${quote.budget_min}`;
 
 
+    }, 100)import { Button } from "@/components/ui/button",;
 ;
 interface ExportToCSVProps {;
   quotes:QuoteRequest[],;
@@ -283,7 +287,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     // Create download link;
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
-    const url = URL.createObjectURL(blob),;
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a'),;
     link.setAttribute('href', url),;
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),;
@@ -347,3 +351,23 @@ new Date (quote.created at) .toLocaleDateString () ]);
 }
 ;
 
+
+      <Download size={16} />;
+      Export CSV;
+    </Button>;
+  )
+};
+      quote.budget_display ||;
+        (quote.budget_min && quote.budget_max;
+          ? `$${quote.budget_min} - $${quote.budget_max}`;
+          : quote.budget_min;
+            ? `$${quote.budget_min}`;      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+
+    >;
+      <Download size={16} />;
+      Export CSV;
+    </Button>;
+  )
+};

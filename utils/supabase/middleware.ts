@@ -22,6 +22,7 @@ export function middleware(request: NextRequest) {;
   const { pathname } = request.nextUrl,;
   if (pathname === '/dashboard' || pathname === '/dashboard/') {;
     const role = request.cookies.get('userRole')?.value || 'talent';
+    const role = request.cookies.get('userRole')?.value || 'talent';
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
     return NextResponse.redirect(new URL(target, request.url));
   }
@@ -76,7 +77,7 @@ if ( {) {
   }
   return NextResponse.next ();
 }
-export const config = {
+export const config = {}export const config = {
   matcher: ['/dashboard / dashboard/']}
 
 ;
@@ -94,3 +95,4 @@ export const config = {;
 
 
 
+  matcher: ['/dashboard/dashboard/']};

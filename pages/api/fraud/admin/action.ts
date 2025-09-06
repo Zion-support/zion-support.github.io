@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -64,6 +65,22 @@ export default async function handler(
 
   }
   const store = getFraudStore();
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { fraudId, action, reason, adminId } = req.body || {};
+  if (!fraudId || !action) {
+    res.status(400).json({ error: 'Missing fraudId or action' });
+return;
+  }
+
+  const act = (action as string).toUpperCase() as AdminActionType;
+  if (!['SUSPEND', 'WARN', 'IGNORE'].includes(act)) {
+    res.status(400).json({ error: 'Invalid action' });
+    return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+
+  const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
   if (!fraud) {
     return res && res.status(404).json({ error: "Fraud record not found" });
@@ -86,6 +103,10 @@ export default async function handler(
 
 
 
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -120,6 +141,9 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 
 
+  store.addAdminAction(adminAction);
+
+}
   store.addAdminAction(adminAction);
 
 }
@@ -290,3 +314,16 @@ export default async function handler(req, res) {
 
 
 
+  await store.recordAction({
+    fraudId,
+    action: act,
+    adminId: adminId || null,
+    reason: reason || null
+  });
+  const newStatus =
+    act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
+  await store.updateEventStatus(fraudId, newStatus);
+
+  res.status(200).json({ ok: true, status: newStatus });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

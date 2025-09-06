@@ -31,6 +31,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
       post.isFeatured && "bg-zion-purple/5"
+import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-10 w-10">
@@ -84,6 +85,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -141,7 +143,7 @@ interface PostCardProps {;
 }
 ;
 export const PostCard = ({ post, compact = false }: PostCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),;
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
   return (;
     <Card className={cn(;
       "transition-shadow hover:shadow-md",;
@@ -415,5 +417,9 @@ export default PostCard;
 };
 export default PostCard;
 
+
+  )
+};
+export default PostCard;
 
 export default PostCard;

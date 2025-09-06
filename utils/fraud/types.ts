@@ -28,6 +28,7 @@ export interface AdminAction {
 export interface AdminAction {;
 
   id: string;
+export interface AdminAction {  id: string;
   case_id: string;
   type: AdminActionType;
   adminId: string;
@@ -51,6 +52,7 @@ export interface FraudDetectionResult {
 >>>>>>> main
 }
 
+}
 
 export interface FraudDetectionResult {;
   isFraud: boolean;
@@ -64,6 +66,7 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
 ursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
+  reasons: string[];  confidence: number;
   reasons: string[];
 
   suggested_actions: AdminActionType[],
@@ -110,6 +113,21 @@ ursor/fix-website-loading-errors-and-merge-6662
       enabled: boolean;
       threshold: number;
     };
+export interface FraudDetectionConfig {}
+
+export interface FraudDetectionConfig {};
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number
+};
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number
+};
+    spam: {
+      enabled: boolean;
+      threshold: number
+};
   };
   autoActions: {
     enabled: boolean;
@@ -151,4 +169,10 @@ ursor/automate-test-improve-and-merge-code-646c
   };
 
 }
+    confidenceThreshold: number
+};
+    confidenceThreshold: number
+  };
+
+}}
 }

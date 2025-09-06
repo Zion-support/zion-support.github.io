@@ -1,5 +1,21 @@
 
 
+
+import React, { useState } from 'react',
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Brain, Building, Target, Cpu, Shield;
+  Check, Phone, Mail, MapPin;
+  TrendingUp, Zap, Globe
+ } from 'lucide-react';
+// Import our new service data
+import { advancedAIMLServices  } from '../data/2025-advanced-ai-ml-services';
+import { advancedCybersecurityServices  } from '../data/2025-advanced-cybersecurity-services';
+import { advancedCloudDevOpsServices2025  } from '../data/2025-advanced-cloud-devops-services';
+import { industrySpecificSolutions  } from '../data/2025-industry-specific-solutions';
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+const ComprehensiveServicesShowcase2025 = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
 // All services combined const allServices = [ ...advancedAIMLServices;
@@ -20,6 +36,7 @@
   opacity: 1, y: 0
 }transition= {
   {}initial= {
+  {}initial= {
   {
   opacity: 0, y: 20
 }animate= {
@@ -34,12 +51,14 @@
   opacity: 1
 }exit= {
   {}initial= {
+  {}initial= {
   {
   opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
+  {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   /* Service Header */ ;
 }<divclassName= {
@@ -160,9 +179,12 @@
                   <div className="flex flex-col gap-2">;
                     <a
 ursor/automate-test-improve-and-merge-code-646c
+  {};export default ComprehensiveServicesShowcase;
+                  {/* CTA Button */}
+                  <div className="flex flex-col gap-2">;
+                    <a
 import React, { useState } from 'react';
 import SEO from './seo/Seo';
-import { motion } from 'framer-motion';
 import { 
   Brain, Building, Circle, Monitor, Shield, 
   Check, Phone, Mail, MapPin,
@@ -429,6 +451,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   opacity: 1, y: 0
 }transition= {
   {}initial= {
+  {}initial= {
   {
   opacity: 0, y: 20
 }animate= {
@@ -443,12 +466,14 @@ const ComprehensiveServicesShowcase2025 = () => {
   opacity: 1
 }exit= {
   {}initial= {
+  {}initial= {
   {
   opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
+  {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   {}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   /* Service Header */ ;
 }<divclassName= {
@@ -571,6 +596,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  {};export default ComprehensiveServicesShowcase;
+                  {/* CTA Button */}
+                  <div className="flex flex-col gap-2">;
+                    <a
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
@@ -586,6 +617,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+ursor/fix-netlify-build-and-merge-to-main-9571
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+>>>>>>> main
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -633,6 +668,7 @@ ursor/automate-test-improve-and-merge-code-646c
               <motion&& motion.div 
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
@@ -641,6 +677,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -803,6 +840,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -893,6 +932,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -948,6 +989,7 @@ ursor/automate-test-improve-and-merge-code-646c
                               ))}
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
                                   {feature}
                                 </li>
                               ))}
@@ -957,6 +999,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -1061,6 +1104,7 @@ ursor/automate-test-improve-and-merge-code-646c
           )}
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
                             
                             <a
                               href={service.link}
@@ -1097,6 +1141,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1116,6 +1161,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+>>>>>>> main
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1139,6 +1188,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+>>>>>>> main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1161,6 +1214,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+>>>>>>> main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1186,6 +1243,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+>>>>>>> main
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1204,6 +1265,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
           
+          
+ursor/fix-netlify-build-and-merge-to-main-9571
+          
+>>>>>>> main
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1225,6 +1290,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1322,6 +1389,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+ursor/fix-netlify-build-and-merge-to-main-9571
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> main
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
@@ -1377,6 +1448,7 @@ export default ComprehensiveServicesShowcase;
 ;
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1394,3 +1466,11 @@ export default ComprehensiveServicesShowcase2025;
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+  duration: 0.5, delay: 0.2
+}className="text-center p-6" > <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Globe className="w-8 h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3> <p className="text-gray-600"> Cloud-native solutions that scale globally with enterprise-grade reliability </p> </motion.div> </div> </div> </section> {
+  /* Contact Section */ 
+}<section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> Let's discuss how our innovative services can help you achieve your business goals </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Call Us</h3> <p className="text-blue-100">+1 302 464 0950</p> </div> <div className="text-center"> <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Email Us</h3> <p className="text-blue-100">kleber@ziontechgroup.com</p> </div> <div className="text-center"> <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Visit Us</h3> <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2" > <Mail className="w-5 h-5" /> Start Consultation </a> <a href="https://ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2" > <Globe className="w-5 h-5" /> Visit Website </a> </div> </div> </section> </div>) 
+};
+export default ComprehensiveServicesShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

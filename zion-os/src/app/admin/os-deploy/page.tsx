@@ -5,6 +5,14 @@ ursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from "react";
 "use client";
 
+"use client";
+
+"use client";
+
+"use client";
+import { useState } from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -48,6 +56,9 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -71,6 +82,8 @@ export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
 >>>>>>> main
 
+
+>>>>>>> main
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -101,6 +114,9 @@ export default function OSDeployPage() {;
 
 
 
+        {/* Header */}
+>>>>>>> main
+
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
 ai: 'Advanced AI capabilities and automation',
@@ -121,6 +137,10 @@ ai: 'Advanced AI capabilities and automation',
             configurations
           </p>
         </div>
+        {/* Header */}
+
+
+        {/* Header */}
         {/* Header */}
 
 
@@ -166,6 +186,7 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -176,6 +197,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 
 
+
+>>>>>>> main
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -281,6 +304,7 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -289,6 +313,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   placeholder="latam"
 >>>>>>> main
 
+
+>>>>>>> main
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -304,6 +330,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
@@ -311,6 +338,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
 >>>>>>> main
 
+
+>>>>>>> main
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -326,6 +355,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 <input
                   id="region"
                   name="region"
@@ -336,6 +366,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 />;
               </div>;
             </div>;
@@ -353,6 +386,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -423,6 +457,17 @@ ursor/automate-test-improve-and-merge-code-646c
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -552,6 +597,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -600,6 +647,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -642,6 +690,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 <input
                   id="treasury"
                   type="checkbox"
@@ -651,6 +700,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -663,6 +713,8 @@ ursor/automate-test-improve-and-merge-code-646c
               </label>
 >>>>>>> main
 
+
+>>>>>>> main
 
                 />;
                 <div>;
@@ -679,6 +731,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
                 <input
                   id="governance"
                   type="checkbox"
@@ -688,6 +742,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -700,6 +755,8 @@ ursor/automate-test-improve-and-merge-code-646c
               </label>
 >>>>>>> main
 
+
+>>>>>>> main
 
                 />;
                 <div>;
@@ -716,6 +773,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
                 <input
                   id="moderation"
                   type="checkbox"
@@ -725,6 +784,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -737,6 +797,8 @@ ursor/automate-test-improve-and-merge-code-646c
               </label>
 >>>>>>> main
 
+
+>>>>>>> main
 
                 />;
                 <div>;
@@ -753,6 +815,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
                 <input
                   id="partnerships"
                   type="checkbox"
@@ -762,6 +826,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -899,6 +964,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
                 }`}
               >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+                }`}
+              >
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -911,6 +981,7 @@ export default function AdminDeployPage() {;
     event.preventDefault(),;
     setLoading(true),;
     setMessage(null),;
+    const formData = new FormData(event.currentTarget);
     const formData = new FormData(event.currentTarget);
     const formData = new FormData(event.currentTarget);
     const features: Record<string boolean> = {},;
@@ -1292,6 +1363,79 @@ export default function AdminDeployPage() {;
                 {message}
               </div>;
             )}
+                {message}
+              </div>;
+            )}
+  };
+
+  return (
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+<div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">🚀 Deploy Zion OS Instance</h1>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            Create a new digital economy with AI-powered automation and blockchain integration
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="glass-effect rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6">Basic Configuration</h2>
+            
+            <div className="space-y-6">
+              <div>
+                <label className="block text-white font-medium mb-2">Instance Name</label>
+                <input 
+                  name="name" 
+                  className="input-field" 
+                  placeholder="My Digital Economy"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-white font-medium mb-2">Description</label>
+                <textarea 
+                  name="description" 
+                  className="input-field" 
+                  rows={3}
+                  placeholder="Describe your digital economy's purpose and goals"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-white font-medium mb-2">Vertical</label>
+                  <select name="vertical" className="select-field">
+                    <option value="GENERAL">General</option>
+                    <option value="HEALTH">Healthcare</option>
+                    <option value="EDUCATION">Education</option>
+                    <option value="LAW">Legal</option>
+                    <option value="GOV">Government</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-white font-medium mb-2">Region</label>
+                  <input 
+                    name="region" 
+                    className="input-field" 
+                    placeholder="North America"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div className="text-center">
+            <button 
+              type="submit"
+              disabled={loading}
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {loading ? "Deploying..." : "🚀 Deploy Instance"}
+            </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </div>
@@ -1326,6 +1470,10 @@ export default function AdminDeployPage() {;
               >;
                 {message}
               </div>)}
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1389,3 +1537,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

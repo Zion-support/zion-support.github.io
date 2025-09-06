@@ -9,6 +9,12 @@ import {CategoryCard} from '@/components/CategoryCard',
 
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',
+
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter } from 'react-router-dom',
+import { CategoryCard } from '@/components/CategoryCard',
+
 import {CategoryCard} from '@/components/CategoryCard';
 it('renders category card with link to slug', () => {
   render(
@@ -29,7 +35,7 @@ it('normalizes slug with special characters', () => {;
       <CategoryCard title='R&D Tools!' description='desc' icon='*' />;
     </MemoryRouter>;
   ),;
-  const link = screen && screen.getByRole('link', { name: /r&d tools!/i }),;
+  const link = screen && screen.getByRole('link', { name: /r&d tools!/i });
   expect(link).toHaveAttribute('href/category/rd-tools'),;
 }),;
 it('removes accents from slug', () => {;
@@ -51,6 +57,15 @@ it('treats underscores as spaces in slug', () => {;
   expect(link).toHaveAttribute('href/category/ai-tools'),;
 }),;
 import {render, screen} from '@testing - library / react';
+  ),
+
+it('renders category card with link to slug', () => {;
+  render(;
+    <MemoryRouter>;
+      <CategoryCard title='Test Category' description='desc' icon='*' />;
+    </MemoryRouter>;
+  ),;
+
 import {CategoryCard} from '@/components / CategoryCard';
 it ('renders category card with link to slug', () => {
   render (
@@ -167,3 +182,4 @@ it('treats underscores as spaces in slug', () => {
 
 
 
+  expect(link).toHaveAttribute('href/category/ai-tools');

@@ -59,6 +59,25 @@ import { Button } from "@/components/ui/button",
 
 
 export interface ResumeTabProps {
+
+export interface ResumeTabProps {
+  selectedResumeId?: string | null,
+  onSelectResume?: (resumeId: string) => void,
+  onResumeSelected?: (resume: ResumeOption) => void,
+  onApply?: () => Promise<void>,
+  isSubmitting?: boolean
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
+export interface ResumeTabProps {;
+  selectedResumeId?: string | null,;
+  onSelectResume?: (resumeId: string) => void,;
+  onResumeSelected?: (resume: ResumeOption) => void,;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean;
+}
+;
+export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {;
   const handleResumeSelected = (resume: ResumeOption) => {;
     if (onResumeSelected) {;
       onResumeSelected(resume);
@@ -168,9 +187,6 @@ if ( {) {
 }
 }
 
-import React from 'react',;
-import { ResumeSelector, ResumeOption } from "../resume-selector",;
-import { Button } from "@/components/ui/button",;
 ;
 export interface ResumeTabProps {;
   selectedResumeId?:string | null,;
@@ -239,3 +255,12 @@ isSubmitting?: boolean
 
 
 }
+    if (onSelectResume) {;
+      onSelectResume(resume && resume.id);      {onApply && (
+        <div className="mt-6">
+          <Button 
+            onClick={onApply} 
+            disabled={!selectedResumeId || isSubmitting}          {!selectedResumeId && (
+            <p className="text-sm text-muted-foreground mt-2">
+              Please select a resume to continue
+            </p>}

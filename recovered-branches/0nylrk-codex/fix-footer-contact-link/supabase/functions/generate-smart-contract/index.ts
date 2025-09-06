@@ -45,6 +45,15 @@ serve(async (req) => {
       paymentAmount;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 serve(async (req) => {;
@@ -55,6 +64,7 @@ serve(async (req) => {;
 ;
   try {;
     // Get the OpenAI API key from environment variables;
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
     const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
@@ -75,6 +85,8 @@ serve(async (req) => {;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
     // Create the smart contract prompt for OpenAI
+    let prompt = `
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:    // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
     Project Name: ${projectName}
@@ -109,6 +121,14 @@ serve(async (req) => {;
     }
     
 
+      ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
+      ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
+      ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
+      ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
+      `
+    }
+
+    
 
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
@@ -248,6 +268,11 @@ if ( {) {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    // Call OpenAI API        model: 'gpt-4o';
+        messages: [
+          {
+            role: 'system'
+            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });

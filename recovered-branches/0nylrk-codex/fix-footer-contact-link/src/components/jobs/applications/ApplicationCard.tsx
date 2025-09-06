@@ -11,6 +11,20 @@ import {toast} from "sonner";
 
 
 
+interface ApplicationCardProps {;
+  application: JobApplication;
+}
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+
+  const handleDownloadResume = () => {;
+    // This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon")
+};
+
+  const renderActionButtons = () => {;
+    switch (application && application.status) {;
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -47,7 +61,7 @@ interface ApplicationCardProps {
   application: JobApplication
 }
 
-export function ApplicationCard({ application }: ApplicationCardProps) {
+export function ApplicationCard({ application }: ApplicationCardProps) {}export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
@@ -57,6 +71,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
 
       case "shortlisted": return (
+    toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
@@ -307,6 +322,16 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             <div className="text-sm text-muted-foreground mt-1">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>;
+
+    }
+  }    }
+
+  },
+
+  return (
+        {expanded && (
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (            </div>;
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
@@ -325,6 +350,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             {application.resume && (;
 
 
+
+        {expanded && (
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (    <Card className="overflow-hidden">;
+      <CardHeader className="pb-3">;
+        <div className="flex justify-between items-start">;
+          <div>;
               <div className="border rounded-md p-3 bg-muted/20">;
                 <div className="flex justify-between items-center">;
                   <div className="flex items-center">;
@@ -335,6 +367,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
                     <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
+                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
                   </div>;
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
                     <Download className="h-3 w-3 mr-1" /> Download;
@@ -350,6 +383,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
             {application && application.match_score && (;
+            {application && application.match_score && (;
               <div>;
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>;
                 <div className="flex items-center">;
@@ -359,6 +393,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
                     {application && application.match_score}%;
+                    {application && application.match_score}%;                    {application && application.match_score}%;
                   </div>;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
@@ -424,6 +459,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         <Button 
           variant="secondary" 
 
+
+        <Button 
+          variant="secondary" 
 
           size="sm"
           className="w-full"
@@ -533,3 +571,4 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 }
 }
 ;
+  )

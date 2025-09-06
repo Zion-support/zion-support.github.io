@@ -158,11 +158,19 @@ export default function SavedTalentsPage() {
 
 
         if (data) {
+            talent_profile (
+
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);        if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
 
 
+              is_verified;
+            );
+          `;
           );
           .eq("user_id", user && user.id);
 
@@ -219,6 +227,8 @@ if ( {) {
           `;
           );
 
+
+      } catch (error) {
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
@@ -258,11 +268,13 @@ if ( {) {
         setIsLoading(false)
       }
     }
+      }
 
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)
+  }
     },
 
     fetchSavedTalents()
@@ -298,6 +310,18 @@ if ( {) {
         toast({;
           title: "Error",;
           description: "Failed to load saved talents. Please try again later.",;
+  const handleRequestHire = (talent: TalentProfile) => {
+    console.log("Request to hire:", talent);    toast({
+      title: "Hire Request Sent"
+      description: `A hire request has been sent to ${talent.full_name}.`})
+
+  }
+
+      } catch (error) {;
+        console.error("Error fetching saved talents:", error),;
+        toast({;
+          title: "Error",,
+  description: "Failed to load saved talents. Please try again later.",;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
@@ -313,6 +337,8 @@ if ( {) {
     toast({;
       title: "Hire Request Sent",;
       description: `A hire request has been sent to ${talent.full_name}.`});
+      title: "Hire Request Sent",,
+  description: `A hire request has been sent to ${talent.full_name}.`});
   },;
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {;
     try {;
@@ -370,6 +396,13 @@ if ( {) {
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
           toast({
+          throw error;        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        );        }
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        ),          toast({
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
             variant: "destructive"})
@@ -381,6 +414,7 @@ if ( {) {
 
 
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved"
             description: "Talent saved to your list."})
@@ -392,6 +426,7 @@ if ( {) {
 
 
       console.error("Error toggling saved talent:", error),
+      console.error("Error toggling saved talent:", error),      console.error("Error toggling saved talent:", error),
       toast({
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
@@ -578,6 +613,7 @@ if ( {) {
 
 
 ;
+        description="View and manage your saved talents in the Zion AI Marketplace";
     fetchSavedTalents ();
   }, [user]);
 ;
@@ -687,6 +723,15 @@ if ( {) {
           <div className="text - center py - 8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
           <div className="text - center py - 8">No talents saved yet.</div>) : (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
+      <div className="container mx - auto px - 4 py-8">;
+        <h1 className="text - 3xl font - bold mb-4">Saved Talents</h1>;
+        <p className="text - muted-foreground">;
+          Here are the talents you've saved for future reference.;
+        </p>;
+        {is_loading ? (
+          <div className="text - center py-8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
+          <div className="text - center py-8">No talents saved yet.</div>) : (
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt-8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
                 key={talent.id}
@@ -748,6 +793,13 @@ if ( {) {
           </div>;
         )}
       </div>;
+                is_authenticated={!!user}
+              />))}
+          </div>)}
+      </div>;
+      <Footer />;
+    </>);
+}      </div>;
       <Footer />;
     </>;
   ),; export default function SavedTalentsPage () {
@@ -761,6 +813,7 @@ useEffect ( () => {
   const fetchSavedTalents = async () => {
   setIsLoading (true);
 try {
+  if (!user) {}const {
   if (!user) {}const {
   if (!user) {}const {
   data, error 
@@ -782,3 +835,44 @@ is verified) `) if (data) {
 }
 
 
+};
+}, [user])
+};
+  try {
+  if (!user) {}//Remove from saved talents const {
+  error 
+}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId);
+}else {
+  //Add to saved talents const {
+  error 
+}= await supabase .from ('saved talents') .insert ([ {
+  user id: user.id, talent id: talentId 
+}]);
+if (error) {
+  throw error 
+}data: talentData, error: talentError 
+}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
+return;
+}
+}
+};
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <AppHeader /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p> {
+  savedTalents.map ( (talent) => (<TalentCard key= {
+  talent.id 
+}talent= {
+  talent 
+}onViewProfile= {
+  handleViewProfile 
+}onRequestHire= {
+  handleRequestHire 
+}isSaved= {
+  true 
+}onToggleSave= {
+  handleToggleSave 
+}isAuthenticated= {
+  !!user 
+}/>) ) 
+}</div>) 
+}</div> <Footer /> </>) 
+}
+;

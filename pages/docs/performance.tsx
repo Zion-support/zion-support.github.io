@@ -27,6 +27,12 @@ export default function PerformanceDocRedirect() {
     <>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />
+;
+;
+
+
+
+
       </Head>
       <main style={{ padding: 24 }}>
         <p>Redirecting to Performance documentation…</p>
@@ -58,3 +64,5 @@ export default function PerformanceDocRedirect(req, res) {
 
 
 
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

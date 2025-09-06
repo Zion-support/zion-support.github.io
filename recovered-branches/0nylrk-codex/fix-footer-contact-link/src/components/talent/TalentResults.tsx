@@ -23,6 +23,7 @@ interface TalentResultsProps {
   isAuthenticated: boolean
   activeFiltersProps: {
     selectedSkills: string[],
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -87,6 +88,9 @@ interface TalentResultsProps {;
 
     priceRange: [number, number];
 
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
@@ -259,6 +263,11 @@ function TalentResults() {
 
 
 ;
+export function TalentResults(): any ({;      />;
+    </div>;
+  );
+}
+;;
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
@@ -268,3 +277,6 @@ function TalentResults() {
 ;
 ;
 }
+}
+;
+

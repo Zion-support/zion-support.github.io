@@ -2,6 +2,12 @@
 // Define the shape of a message
 export interface Message {;
 
+  attachment_url?: string,
+  attachment_name?: string;
+}
+// Define the shape of a conversation;
+
+export interface Conversation {
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -17,6 +23,7 @@ export interface Conversation {
     id: string;
     name: string;
   }
+  sender_avatar?: string;  }
   name: string;
   avatar_url?: string;
   last_message?: {
@@ -78,6 +85,8 @@ export interface ConversationContextData {;
 }
 ;
    * Set the currently active conversation. Passing `null` will clear the;
+    content: string,
+    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -88,4 +97,5 @@ export interface ConversationContextData {;
 
 
 
+}
 }

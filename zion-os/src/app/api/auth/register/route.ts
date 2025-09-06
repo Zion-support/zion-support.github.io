@@ -17,6 +17,13 @@ function POST() {
     const { name, email, password } = register_schema.parse (body),
 
 
+    const existing_user = await prisma.user.find_unique ({
+      where: { email }}),
+    // Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json (
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -27,6 +34,7 @@ const registerSchema = z.object({;
   password: z.string().min(8, "Password must be at least 8 characters")}),;
 export async function POST(request: NextRequest) {;
   try {;
+    const body = await request.json();
     const body = await request.json();
     const { name, email, password } = registerSchema.parse(body),;
     // Check if user already exists;

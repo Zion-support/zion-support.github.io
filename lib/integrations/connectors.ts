@@ -10,6 +10,15 @@ import { v4 as uuidv4 } from "uuid";
 
 
 
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 async function mockProviderCall<T>(
   connection: ProviderConnection
   action: string
@@ -19,6 +28,29 @@ async function mockProviderCall<T>(
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+async function callProvider<T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+    details
+  };
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
+}
+
+// CRM actions
+export const crm = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -38,6 +70,18 @@ async function mockProviderCall<T>(
     return mockProviderCall(connection, "add_project_note", { note });
   }
 }
+// ATS actions
+export const ats = {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, any>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  }
+};
+
 // ATS actions
 export const ats = {
   const log: SyncLogEntry = {
@@ -63,6 +107,7 @@ async function mockProviderCall < T>(
     action,
     details
     details
+    details
   }
 ;
   // In a real implementation, call provider SDK / API here using connection.access_token;
@@ -79,6 +124,10 @@ export const crm = {
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 
 };
@@ -88,6 +137,33 @@ export const ats = {
 
 
 
+
+  async pushApplicant($2) {
+    return simulateAction($3);
+  },
+  async uploadResume($2) {
+    return simulateAction($3);
+  },
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+    return simulateAction(connection, 'ats.updateStatus', { change })
+  }};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+async pushApplicant(
+    connection: ProviderConnection,
+    applicant: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+  },
+  async uploadResume(
+    connection: ProviderConnection,
+    resume: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.uploadResume', {
+      resumeMeta: { name: resume?.name }
+    });
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
@@ -129,6 +205,7 @@ export const ats = {
   return { log, result: { ok: true } as unknown as T }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 // ATS actions;
@@ -150,6 +227,12 @@ export const ats = {
   }
 }
 ;
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 ;
 // ATS actions;
@@ -162,6 +245,10 @@ export const ats = {
   }
 }
 ;
+  }
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async createCandidate(
     connection: ProviderConnection,
@@ -176,6 +263,10 @@ export const ats = {
   }
 };
 
+  }
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
 // Email actions
 export const email = {
   async sendNotification(
@@ -186,3 +277,12 @@ export const email = {
   }
 };
 
+  }
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -401,6 +401,7 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
             </div>;
+        <div className="max-w-5xl mx-auto px-8">            </div>;
           </Carousel>;
         </div>;
       </div>;
@@ -448,4 +449,5 @@ company: "AI Systems"
 
 }
 ;
+    </section>);}
 ;

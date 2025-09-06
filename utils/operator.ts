@@ -41,6 +41,9 @@ export const operator = {
 
 
 >>>>>>> main
+  getEventById: (id: string) => null
+};
+
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -98,3 +101,4 @@ export const operator = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export const getSupportEvents = () => operatorManager.getSupportEvents();

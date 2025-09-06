@@ -60,6 +60,10 @@ export default function Careers() {
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
         title: "Product Manager",
+import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",        title: "Product Manager",
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
@@ -67,6 +71,7 @@ export default function Careers() {
       },
     product: [
       {
+
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -79,6 +84,7 @@ export default function Careers() {
 
 
     ];
+    ];    ];
     marketing: [
       {
         title: "Growth Marketing Manager"
@@ -125,6 +131,7 @@ export default function Careers() {
 
 
       {
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."      {
         title: "Talent Acquisition Specialist"
         location: "Remote"
         type: "Full-time"
@@ -139,6 +146,7 @@ export default function Careers() {
 
 
   // Benefits list
+    ]  // Benefits list
   const benefits = [
     {
       title: "Flexible Work"
@@ -157,6 +165,7 @@ export default function Careers() {
 
 
     {
+      )    {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
       icon: (
@@ -317,6 +326,7 @@ export default function Careers() {;
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
       }
     ],;
+    },
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
@@ -327,6 +337,11 @@ export default function Careers() {;
         type: "Full-time",;
         department: "Marketing",;
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
+        department: "Marketing",,
+  description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.";
+        type: "Full-time",;
+        department: "Marketing",,
+  description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
       }
     operations: [;
       {;
@@ -335,6 +350,8 @@ export default function Careers() {;
         type: "Full-time",;
         department: "Operations",;
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";
+        department: "Operations",,
+  description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";
       {;
         title: "Talent Acquisition Specialist",;
         location: "Remote",;
@@ -732,6 +749,16 @@ export default function Careers() {;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
+        department: "Operations",,
+  description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
+      }
+    ];                            Apply Now;
+                          </Button>;
+                        </div>;
+                      </CardContent>;            </Tabs>;
+          </div>;
+          ;
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
@@ -754,6 +781,7 @@ export default function Careers() {;
                 </TabsContent>;
               ))}
               Send General Application;
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
             </Button>;
           </div>;
         </div>;
@@ -782,6 +810,8 @@ location: "Remote";
 type: "Full-time";
 department: "Engineering";
 description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace." 
+department: "Engineering",
+  description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace." 
 };
 {
   title: "AI Research Engineer";
@@ -789,6 +819,8 @@ location: "San Francisco, CA";
 type: "Full-time";
 department: "Engineering";
 description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems." 
+department: "Engineering",
+  description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems." 
 };
 {
   title: "Full Stack Developer";
@@ -796,6 +828,8 @@ location: "Remote";
 type: "Full-time";
 department: "Engineering";
 description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL." 
+department: "Engineering",
+  description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL." 
 }];
 product: [ {
   title: "Product Manager";
@@ -803,6 +837,8 @@ location: "New York, NY";
 type: "Full-time";
 department: "Product";
 description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients." 
+department: "Product",
+  description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients." 
 };
 {
   title: "UX/UI Designer";
@@ -810,6 +846,8 @@ location: "Remote";
 type: "Full-time";
 department: "Product";
 description: "Create intuitive and engaging user experiences that make complex technology accessible to all users." 
+department: "Product",
+  description: "Create intuitive and engaging user experiences that make complex technology accessible to all users." 
 }];
 marketing: [ {
   title: "Growth Marketing Manager";
@@ -817,6 +855,8 @@ location: "Remote";
 type: "Full-time";
 department: "Marketing";
 description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace." 
+department: "Marketing",
+  description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace." 
 };
 {
   title: "Content Strategist";
@@ -824,6 +864,8 @@ location: "London, UK";
 type: "Full-time";
 department: "Marketing";
 description: "Develop compelling content that educates and inspires our audience about the future of AI and technology." 
+department: "Marketing",
+  description: "Develop compelling content that educates and inspires our audience about the future of AI and technology." 
 }];
 operations: [ {
   title: "Community Manager";
@@ -831,6 +873,8 @@ location: "Remote";
 type: "Full-time";
 department: "Operations";
 description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts." 
+department: "Operations",
+  description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts." 
 };
 {
   title: "Talent Acquisition Specialist";
@@ -838,6 +882,8 @@ location: "Remote";
 type: "Full-time";
 department: "Operations";
 description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
+department: "Operations",
+  description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
 }
 };
 //Benefits list </svg>) 

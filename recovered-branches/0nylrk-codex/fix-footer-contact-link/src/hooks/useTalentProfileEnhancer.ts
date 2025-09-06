@@ -46,6 +46,9 @@ export interface CategorizedSkills {
 
 export interface CategorizedSkills {;
   programming: string[];
+export interface TalentProfileData {export interface TalentProfileData {
+
+export interface TalentProfileData {;
   devops: string[];
   platforms: string[];
 
@@ -79,6 +82,7 @@ export function useTalentProfileEnhancer() {;
       });
 
       if (error) {
+    setError(null)      if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -155,6 +159,10 @@ export interface CategorizedSkills {
 
     error
   soft_skills: string[],
+export interface CategorizedSkills {
+  programming: string[];
+  devops: string[];
+  platforms: string[];  soft_skills: string[],
   other: string[];
 }
 export interface EnhancedProfile {
@@ -200,5 +208,7 @@ if ( {) {
 
 
 
+  }
+}
   }
 }

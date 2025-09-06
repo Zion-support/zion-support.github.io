@@ -40,6 +40,7 @@ const routes = [{ "name": 'Home', "href": '/' };
 
 
 const routes = [{ "name": 'Home', "href": '/' };
+const routes = [{ "name": 'Home', "href": '/' };
   { "name": 'Solutions', "href": '/solutions' },;
   { "name": 'Services', "href": '/services' },;
   { "name": 'Pricing', "href": '/pricing' },;
@@ -94,6 +95,7 @@ const routes = [{ "name": 'Home', "href": '/' },
   { "name": 'Docs', "href": '/docs' },
   { "name": 'Privacy', "href": '/privacy' },
   { "name": 'Terms', "href": '/terms' },
+  { "name": 'Cookies', "href": '/cookies' }
   { "name": 'Cookies', "href": '/cookies' }
   { "name": 'Cookies', "href": '/cookies' }
 ];

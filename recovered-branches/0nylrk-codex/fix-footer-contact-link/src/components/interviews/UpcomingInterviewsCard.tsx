@@ -15,6 +15,7 @@ export function UpcomingInterviewsCard() {;
   useEffect(() => {;
     const loadInterviews = async () => {;
 import React, { useEffect, useState } from "react",
+  const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -104,6 +105,12 @@ function UpcomingInterviewsCard() {
       } finally {
         setIsLoading(false)
       }
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);      setIsLoading(true);
+      try {;
+        const interviews = await fetchInterviews();
+        const now = new Date();
 
     },
 
@@ -147,8 +154,20 @@ export function UpcomingInterviewsCard() {;
       setIsLoading(true),;
       try {;
         const interviews = await fetchInterviews();
-        const now = new Date(),;
+        const now = new Date();
       } catch (error) {
+        const interviews = await fetchInterviews(),;
+        const now = new Date(),;
+
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter (interview =>;
+            interview.status === 'confirmed' &&;
+            !is_past (parseISO (interview.scheduled_date)));
+          .sort ((a, b) =>;
+            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
+          .slice (0, 3), // Take only the next 3 interviews;
+        setUpcomingInterviews (upcoming);
         console.error ("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading (false);
@@ -162,12 +181,25 @@ export function UpcomingInterviewsCard() {;
           );
           .sort((a, b) => ;
             parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
+
           );
           .slice(0, 3), // Take only the next 3 interviews;
 
         setUpcomingInterviews(upcoming);
       } catch (error) {;
     return (
+        console && console.error("Error loading upcoming interviews:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    };
+
+    loadInterviews();
+  }, []);
+
+  if (isLoading) {;
+
+    return (    return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -206,6 +238,7 @@ export function UpcomingInterviewsCard() {;
   if (upcomingInterviews.length === 0) {;
     return (;
     return (
+              </div>;    return (    return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -255,6 +288,9 @@ export function UpcomingInterviewsCard() {;
   return (
 
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+    );
+  }
+  return (
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -346,6 +382,7 @@ export function UpcomingInterviewsCard() {;
       <CardContent>;
         <div className="space-y-4">;
                     </div>;
+          {upcomingInterviews.map(interview => {                    </div>;
                   )}
                 </Avatar>;
                 <div className="flex-1">;
@@ -357,6 +394,11 @@ export function UpcomingInterviewsCard() {;
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
                     )}
+                      {interview && interview.title || "Interview"}
+                    </p>;
+                    {isStartingSoon && (;
+                      <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;                        Soon;
+                      </span>;
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
@@ -525,3 +567,5 @@ return (<img src= {
 }
 }
 ;
+            );
+          })}

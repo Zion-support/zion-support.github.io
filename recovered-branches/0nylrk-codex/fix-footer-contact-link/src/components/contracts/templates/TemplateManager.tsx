@@ -32,6 +32,25 @@ import {useToast} from "@/hooks/use-toast";
 
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
+interface TemplateManagerProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onSelectTemplate: (template: ContractFormValues) => void,;
+  currentValues?: ContractFormValues;
+}
+
+export function TemplateManager(): any ({;
+  isOpen;
+  onClose;
+  onSelectTemplate;
+  currentValues;
+}: TemplateManagerProps) {;
+  const [mode, setMode] = useState<"list" | "save">("list");
+  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
+
+  const { templates, isLoading } = useContractTemplates();
+  const { toast } = useToast();
+
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
@@ -196,6 +215,10 @@ export function TemplateManager({
           />;
         )}
             <TemplateList;
+import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(template) => {;
+                setSelectedTemplate(template);
+                setMode("save");
+              }}            <TemplateList;
               templates={templates}
               is_loading={is_loading}
               on_select={handleSelectTemplate}
@@ -221,7 +244,7 @@ export function TemplateManager({
 
 
 
-  ),; interface TemplateManagerProps {
+  ),; interface TemplateManagerProps {}  ),; interface TemplateManagerProps {
   isOpen: boolean;
 onClose: () => void;
 onSelectTemplate: (template: ContractFormValues) => void;
@@ -240,3 +263,52 @@ toast ({}
 
 
 toast ({}
+toast ({}
+
+};
+return (<Dialog open= {
+  isOpen 
+}onOpenChange= {
+  onClose 
+}> <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle> {
+  mode === "list" ? "Contract Templates" : "Save Template" 
+}</DialogTitle> </DialogHeader> {
+  mode === "list" ? (<div className="space-y-4" > <div className="flex justify-end" > <Button variant="outline" onClick= {
+  () => setMode ("save") 
+}disabled= {
+  !currentValues 
+}
+}
+}/> </div>) : (<TemplateSaveForm onCancel= {
+  () => {}
+}onComplete= {
+  handleSaveComplete 
+}editTemplate= {
+  selectedTemplate 
+}currentValues= {
+  currentValues 
+}
+}</DialogContent> </Dialog>) 
+}
+            />;
+          </div>;
+        ) : (;
+          <TemplateSaveForm;
+            onCancel={() => {;
+              setMode("list");
+              setSelectedTemplate(null);
+            }}
+            onComplete={handleSaveComplete}
+            editTemplate={selectedTemplate}
+            currentValues={currentValues}
+          />
+        )}
+      </DialogContent>
+    </Dialog>
+  )
+}
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;

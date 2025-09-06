@@ -6,6 +6,7 @@ import {useEffect, useState} from 'react';
 
 
 import { useEffect, useState  } from 'react';
+
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -164,7 +165,7 @@ export default function TokenManager() {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]),;
 
-  const isAdmin = user?.userType === 'admin',;
+  const isAdmin = user?.userType === 'admin';
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
@@ -181,6 +182,7 @@ export default function TokenManager() {;
 
 
       .limit(100);
+export default function TokenManager() {;      .limit(100);
     if (!error) setTransactions(data || []);
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
@@ -192,6 +194,10 @@ export default function TokenManager() {;
       toast({;
         title: 'Success',;
         description: 'Transaction processed';
+      body: JSON && JSON.stringify({ userId, amount })});
+    if (res && res.ok) {;      toast({;
+        title: 'Success',,
+  description: 'Transaction processed';
       });
       fetchTransactions();
     } else {;
@@ -199,6 +205,8 @@ export default function TokenManager() {;
       toast({;
         title: 'Error',;
         description: err && err.error || 'Failed',;
+        title: 'Error',,
+  description: err && err.error || 'Failed',;
         variant: 'destructive';
       });
     }
@@ -413,3 +421,9 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
 
 
 }
+                <ul className="space-y-2">;
+                  {transactions.map (tx => (
+                    <li key={tx.id} className="flex justify - between border - b py - 2 text-white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>))}}

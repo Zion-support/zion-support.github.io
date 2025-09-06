@@ -7,6 +7,14 @@ export function LoadingState() {;
     <div className="flex justify-center items-center p-8">
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
     </div>
+export function LoadingState() {;
+  return (
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
     <div className='flex justify-center items-center p-8'>;
       <Loader2 className='h-8 w-8 animate-spin text-primary' />;
     </div>;
@@ -26,6 +34,7 @@ function LoadingState() {
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
     </div>
   )
+  )
 }
 
     <div className='flex justify-center items-center p-8'>
@@ -34,6 +43,10 @@ function LoadingState() {
 >>>>>>> main
 export function LoadingState() {;
   return (
+  );
+};
+
+>>>>>>> main
   );
 };
 
@@ -50,3 +63,11 @@ export function LoadingState() {
   )
 }
 ;
+  )
+}
+;
+
+export function LoadingState() {
+  return (
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

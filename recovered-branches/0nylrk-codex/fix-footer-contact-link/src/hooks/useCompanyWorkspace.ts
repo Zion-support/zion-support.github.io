@@ -54,6 +54,11 @@ billingCycle: "Annual",
           name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),
           logoUrl: "/placeholder.svg",
           theme: {
+  const [error, setError] = useState<string | null>(null),        setError(null)
+      } else {
+        // For any other slug, we could check if it's a valid company
+        // For demo purposes, let's assume it exists
+        setCompany({          theme: {
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
             textColor: "#1f2937"}
@@ -61,6 +66,15 @@ billingCycle: "Annual",
           teamSize: 5;
           teamLimit: 10;
         setError(null)
+          billingCycle: "Monthly"
+            primaryColor: "#4f46e5",
+            backgroundColor: "#ffffff",
+            textColor: "#1f2937"},
+          plan: "Teams",
+          teamSize: 5,
+          teamLimit: 10,
+          billingCycle: "Monthly",
+          workspaceUrl: `${companySlug}.zion-ai.com`});
       }
       setIsLoading(false)
     }, 1000), // Simulate loading delay
@@ -159,6 +173,8 @@ if ( {) {
         setError(null)
 
 import { useState, useEffect } from "react",;
+  return { company, isLoading, error }
+}import { useState, useEffect } from "react",;
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace(companySlug?: string) {;
   const [company, setCompany] = useState<Company | null>(null),;

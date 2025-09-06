@@ -238,6 +238,11 @@ export function ContractBuilder({
   talent,
   clientName,
 
+export function ContractBuilder({;export function ContractBuilder({;
+  isOpen;
+  onClose;
+  talent;
+  clientName;}
 
   onContractGenerated
 }: ContractBuilderProps) {
@@ -254,6 +259,7 @@ export function ContractBuilder({
       <SmartContractBuilder;
         isOpen={isOpen}
         onClose={() => {;
+  ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
@@ -318,6 +324,12 @@ export function ContractBuilder({
   return (;
 
   return (
+        client_name={client_name}
+        onContractGenerated={onContractGenerated}
+
+      />
+    )
+  }
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -335,6 +347,10 @@ export function ContractBuilder({
                 size="sm";
 
                 onClick={() => setTemplateManagerOpen(true)}
+            <div className="flex gap-2">;
+              <Button
+                variant="outline" 
+                size="sm"                onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
@@ -430,6 +446,9 @@ export function ContractBuilder({;
             </div>;
           </div>;
               talent={talent}
+        onContractGenerated={onContractGenerated}                variant="secondary"
+                size="sm"
+                onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
@@ -487,6 +506,11 @@ export function ContractBuilder({;
 
 
         <TemplateManager
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
@@ -523,6 +547,8 @@ export function ContractBuilder({;
 
 
   ),; interface ContractBuilderProps {
+  );
+}  ),; interface ContractBuilderProps {
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -547,3 +573,39 @@ const handleContractGenerated = (contract: string) => {
 }
 
 
+};
+return (<SmartContractBuilder isOpen= {
+  isOpen 
+}/>) 
+}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
+  talent 
+}clientName= {
+  clientName 
+}initialValues= {
+  formValues 
+}onFormValuesChange= {
+  setFormValues 
+}onContractGenerated= {
+  handleContractGenerated 
+}/> </TabsContent> />) 
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  templateManagerOpen 
+}onClose= {
+  () => setTemplateManagerOpen (false) 
+}onSelectTemplate= {
+  handleLoadTemplate 
+}currentValues= {
+  formValues 
+}/> </DialogContent> </Dialog>) 
+}
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;

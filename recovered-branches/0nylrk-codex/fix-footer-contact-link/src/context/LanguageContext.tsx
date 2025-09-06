@@ -18,6 +18,7 @@ export type LanguageContextType = {
 };
 
 const supportedLanguages = [
+}const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' }
@@ -76,6 +77,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
 
   const { i18n, t } = useTranslation();
+}  const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) |'en'
@@ -191,6 +193,7 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
       document.document_element.class_list.remove ('rtl');
     }
     const syncLanguageWithProfile = async () => {
+      document.documentElement.classList.add('rtl')    const syncLanguageWithProfile = async () => {
       // Check condition
 if ( {) {
   $2
@@ -248,7 +251,7 @@ const defaultLanguageContext:LanguageContextType = {;
   supportedLanguages;
 },;
 ;
-const LanguageContext = createContext(defaultLanguageContext),;
+const LanguageContext = createContext(defaultLanguageContext);
 ;
 export const useLanguage = ():LanguageContextType => useContext(LanguageContext),;
 ;
@@ -373,6 +376,39 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   const changeLanguage = async (lang: SupportedLanguage) => {;
     if (lang === currentLanguage) return;
 
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
+  children, ;
+  authState = { isAuthenticated: false, user: null } ;
+}) => {;
+  const { i18n, t } = useTranslation();
+  const { isAuthenticated, user } = authState;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
+  );
+  const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');
+
+  useEffect(() => {;
+    // Set initial language from localStorage or browser;
+    const savedLang = localStorage && localStorage.getItem('zion_language') as SupportedLanguage;
+    if (savedLang && supportedLanguages && supportedLanguages.some(lang => lang && lang.code === savedLang)) {;
+      i18n && i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang);
+    }
+  }, []);
+
+  // Update RTL status when language changes;
+  useEffect(() => {;
+    setIsRTL(i18n && i18n.dir() === 'rtl');
+    document && document.documentElement.dir = i18n && i18n.dir();
+    document && document.documentElement.lang = currentLanguage;
+
+    // Add RTL class for Tailwind;
+    if (i18n && i18n.dir() === 'rtl') {;
+      document && document.documentElement.classList && classList.add('rtl');
+    } else {;
+      document && document.documentElement.classList && classList.remove('rtl');
+    }
+  }, [currentLanguage, i18n]);
     try {;
       await i18n && i18n.changeLanguage(lang);
       setCurrentLanguage(lang),;
@@ -412,6 +448,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 
           console && console.error('Error updating language preference:', error);
         }
+      toast({,
+  description: t('language && language.language_changed', { language: langName });
+      });        }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
@@ -437,6 +476,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   };
   
 
+
+  };
+  
 
   return (
     <LanguageContext.Provider
@@ -493,6 +535,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       }}>;
       {children}
           const { error } = await supabase;
+        isRTL;          const { error } = await supabase;
             .from ('profiles');
             .update ({ preferred_language: current_language });
             .eq ('id', user.id);
@@ -696,3 +739,4 @@ syncLanguageWithProfile ()
     </LanguageContext.Provider>;
   );
 };
+ursor/fix-website-loading-errors-and-merge-6662

@@ -26,6 +26,8 @@ export const QrCodeDownload: React.FC = () => {
                 store of choice.
               </p>
 
+              <AppStoreButtons 
+                className="mb-8" 
 
               <AppStoreButtons
                 className="mb-8"
@@ -63,6 +65,9 @@ export const QrCodeDownload: React.FC = () => {
 
 
   );
+  )
+};
+  )
 };
 
   );
@@ -95,6 +100,7 @@ export const QrCodeDownload:React.FC = () => {;
 
 
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+  return (    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-5xl mx-auto">;
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
@@ -208,3 +214,14 @@ export default QrCodeDownload;
 }
 };
 
+              <AppStoreButtons
+                className="mb-8" 
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+              />;
+
+              <div className="flex gap-2 items-center text-sm text-gray-400">;
+                <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>;
+                <span>Compatible with iOS 14+ and Android 8 && 8.0+</span>;
+              </div>;
+            </div>;

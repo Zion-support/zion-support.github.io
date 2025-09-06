@@ -3,6 +3,8 @@
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -12,6 +14,7 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 // Initialize Supabase client
+const supabase = createClient(supabaseUrl, supabaseServiceKey);// Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -37,6 +40,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
   const campaignId = url.searchParams.get("cid"),
+  // Parse the URL to get the tracking parameters  const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
@@ -127,6 +131,7 @@ if ( {) {
 
 
             "Expires": "0"}}
+          headers: {            "Expires": "0"}}
       )
     } else if (type === "click") {
       await supabase
@@ -153,6 +158,9 @@ if ( {) {
 
 
         .eq("user_id", userId),
+        headers: {
+          Location: destination}})
+    }        .eq("user_id", userId),
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
@@ -166,6 +174,8 @@ if ( {) {
       return new Response(null, {
         status: 302
             "Content - Type": "image / gif",
+      return new Response(null, {
+        status: 302
             "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
             "Pragma": "no - cache";
             "Expires": "0"}}
@@ -197,6 +207,12 @@ if ( {) {
     console.error("Error tracking email event:", error),
     
         headers: {
+    console && console.error("Error tracking email event:", error);
+    
+
+    console.error("Error tracking email event:", error),
+    
+
           Location: destination}})
     }
     // If it was a click event, still try to redirect the user
@@ -237,7 +253,7 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 serve(async (req) => {;
   // Parse the URL to get the tracking parameters;
@@ -413,4 +429,5 @@ headers: {
 
 
   }
+    }  }
 });

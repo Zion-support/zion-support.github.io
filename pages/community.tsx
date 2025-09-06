@@ -73,6 +73,34 @@ import Layout from '../components/Layout';
 ursor/automate-test-improve-and-merge-code-646c
 
 
+export default function CommunityPage() {
+  const communityFeatures = [
+    {
+      title: "Developer Forums",
+      description: "Connect with developers and share knowledge",
+      icon: MessageCircle,
+      features: ["Technical Discussions", "Code Sharing", "Problem Solving"]
+    },
+    {
+      title: "Events & Webinars",
+      description: "Join our regular events and learning sessions",
+      icon: Calendar,
+      features: ["Monthly Webinars", "Tech Talks", "Workshops"]
+    },
+    {
+      title: "User Groups",
+      description: "Connect with like-minded professionals",
+      icon: Users,
+      features: ["Local Meetups", "Online Groups", "Networking"]
+    },
+    {
+      title: "Recognition Program",
+      description: "Get recognized for your contributions",
+      icon: Award,
+      features: ["Community Badges", "Contributor Recognition", "Special Access"]
+    }
+  ];
+
   return (
     <Layout
       title="Community - Zion Tech Group"
@@ -362,3 +390,6 @@ export default function CommunityPage() {
 
 
 ursor/automate-test-improve-and-merge-code-646c
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

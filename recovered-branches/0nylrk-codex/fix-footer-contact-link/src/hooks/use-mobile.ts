@@ -8,6 +8,8 @@ export function useIsMobile() {
 
     typeof window !== "undefined" ? window.innerWidth < 768 : false,
 
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false,
   );
   useEffect(() => {
@@ -27,6 +29,28 @@ export function useIsMobile() {
   return isMobile;
 
 }
+    if (typeof window !== 'undefined') {
+      window && window.addEventListener('resize', handleResize);
+      return () => window && window.removeEventListener('resize', handleResize)    }
+    return undefined;
+  }, []);
+
+  return isMobile
+export /**
+ * useIsMobile - Function description
+ */
+function useIsMobile() {
+  const [is_mobile, setIsMobile] = useState (
+    typeof window !== 'undefined' ? window.inner_width < 768 : false);
+;
+  useEffect (() => {
+    const handle_resize = () =>: any {
+      setIsMobile (window.inner_width < 768);
+    }
+;
+    // Check condition
+if ( {) {
+  $2}
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
     }
@@ -35,6 +59,7 @@ export function useIsMobile() {
 
 
 import { useState, useEffect } from 'react',;
+  }, []);import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
@@ -53,6 +78,8 @@ export function useIsMobile() {;
 
 
 
+}
+;
 
 }
 ;
@@ -97,4 +124,5 @@ return isMobile
 
 
 }
+}}
 ;

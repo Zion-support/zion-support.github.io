@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface BlockchainProps {
   // Add props here as needed
-export default function Blockchain({ }: BlockchainProps) {
+
+}
+
+export default function Blockchain({}: BlockchainProps) {
   return (
     <div>
       <h1>Blockchain</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/Blockchain.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function Blockchain({ }: BlockchainProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/Blockchain.jsx

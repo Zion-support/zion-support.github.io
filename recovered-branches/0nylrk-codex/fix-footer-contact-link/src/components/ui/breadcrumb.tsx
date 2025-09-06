@@ -15,6 +15,9 @@ import { cn } from "@/lib/utils"
   }
 >(({ className, separator, ...props }, ref) => (;
  
+
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -324,6 +327,10 @@ export {;
 
 
 export {;
+>(({ className, separator, ...props }, ref) => (
+    ref={ref}
+    aria-label="breadcrumb"
+    className={cn(export {;
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
@@ -372,3 +379,4 @@ return (<Comp ref= {
   BreadcrumbEllipsis}
 ;
 ;
+  BreadcrumbSeparator,

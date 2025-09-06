@@ -9,6 +9,11 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
 
+// Test setup file for Jest
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
   value: jest.fn().mockImplementation((query) => ({
 
 import '@testing-library/jest-dom';
@@ -25,6 +30,7 @@ ursor/automate-test-improve-and-merge-code-646c
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+
     matches: false,
     media: query,
     onchange: null,
@@ -49,6 +55,12 @@ global.IntersectionObserver = class IntersectionObserver {
 
 
 // Mock IntersectionObserver
+    dispatchEvent: jest && jest.fn()
+  }))
+});
+
+// Mock IntersectionObserver
+
   constructor() {}
   disconnect() {}
   observe() {}
@@ -60,6 +72,9 @@ global.ResizeObserver = class ResizeObserver {
 >>>>>>> main
 }
 // Mock ResizeObserver
+}
+// Mock ResizeObserver
+
   constructor() {}
   disconnect() {}
   observe() {}
@@ -70,6 +85,20 @@ global.ResizeObserver = class ResizeObserver {
 
 }
 // Mock console methods to reduce noise in tests
+}
+// Mock console methods to reduce noise in tests
+// Global test setup
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn() }));
+
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn() }));
+
+// Mock console methods
+global.console = {
+  ...console, warn: jest.fn(), error: jest.fn() };
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
@@ -88,6 +117,9 @@ beforeAll(() => {
 >>>>>>> main
 beforeAll(() => {
   console.error = (...args: any[]) => {
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+
     ) {
       return;
     }
@@ -157,6 +189,7 @@ if (
   $2
 }
 >>>>>>> main
+
     ) {
       return;
     }
@@ -187,3 +220,4 @@ after_all (() => {
 });
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+

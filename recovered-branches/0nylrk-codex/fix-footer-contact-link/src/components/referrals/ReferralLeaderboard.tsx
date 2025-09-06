@@ -66,6 +66,13 @@ function ReferralLeaderboard() {
                           : "bg-muted text-muted-foreground"
 
 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
                   }`}
                 >;
                   {entry.rank}
@@ -78,6 +85,11 @@ function ReferralLeaderboard() {
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+                <span className="font-medium">{entry.name}</span>;
+              </div>;
+              <span className="text-sm">;
+                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
+
 import { Award } from "lucide-react",;
 ;
 interface LeaderboardEntry {;
@@ -103,6 +115,8 @@ export function ReferralLeaderboard() {;
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Award className="h - 5 w - 5" />;
+        <CardTitle className="flex items - center gap-2">;
+          <Award className="h - 5 w-5" />;
           Leaderboard;
         </CardTitle>;
         <CardDescription > Top referrers this month</CardDescription>;

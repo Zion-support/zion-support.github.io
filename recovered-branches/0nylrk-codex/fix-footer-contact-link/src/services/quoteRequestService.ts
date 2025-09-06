@@ -1,7 +1,12 @@
 
-import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
+
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+import { supabase } from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
@@ -10,8 +15,6 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
 
 
-import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
 
 
@@ -43,6 +46,8 @@ export const quoteRequestService = {
 
     return data && data.map((item: any) => ({
 
+
+    return data && data.map((item: any) => ({
 
       .select(`;
         *;
@@ -179,6 +184,7 @@ if (throw error) {
 
 
     }
+      updates && updates.replied_at = new Date().toISOString()    }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
       const { data } = await supabase
@@ -192,6 +198,7 @@ if (throw error) {
 
 
       }
+        .single();      }
     }
     const { data, error } = await supabase
       .from('quote_requests')
@@ -468,3 +475,4 @@ if (throw error) {
   }
 };
 };
+    return true;

@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getFraudStore } from '../../../../utils/fraud/store';
 
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
@@ -62,6 +63,10 @@ if ( {) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 function ensureAdmin(req: NextApiRequest): boolean {;
@@ -147,6 +152,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
+  const store = getFraudStore(),
 
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>
@@ -162,3 +169,13 @@ export default async function handler(req, res) {
 
 
 
+
+
+
+
+import { getFraudStore } from '[^']*';
+function ensureAdmin(req: NextApiRequest): boolean {
+  const token = null;
+  res.status(200).json({ items })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

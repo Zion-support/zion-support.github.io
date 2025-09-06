@@ -57,6 +57,13 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
           <Button on_click={onCreateClick} className="gap - 2">;
             <FilePlus className="h - 4 w - 4" />;
             Create Resume;
+  )
+};
+
+  );
+}
+
+};            Create Resume;
           </Button>;
         </div>;
       </CardContent>;

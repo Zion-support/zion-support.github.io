@@ -113,6 +113,10 @@ export default function CloudFinopsOptimizer() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function CloudFinopsOptimizer() {;
+  return (
+
+
     <>;
       <Head>;
         <title>Cloud FinOps Optimizer — Zion Tech Group</title>;

@@ -2,6 +2,9 @@
 
 export function extractClientIp(req: NextApiRequest): string | null {
 
+
+
+import type { NextApiRequest } from 'next';
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
@@ -26,9 +29,12 @@ export function getClientIp(req: any): string {;
 
 
 export function getClientIp(req: any): string {;
+}
+export function getClientIp(req: any): string {
+
+export function getClientIp(req: any): string {;
 
 
-import type { NextApiRequest } from 'next';
   
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
@@ -38,6 +44,9 @@ import type { NextApiRequest } from 'next';
 export function getClientIp(req: any): string {
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
@@ -54,6 +63,14 @@ export function getClientIp(req: any): string {
 
   return remoteAddress |'unknown';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  return remoteAddress |'unknown';
 }
 
   // Check IP reputation
@@ -260,3 +277,5 @@ if ( {) {
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,6 +9,7 @@ import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';interface AIEnhancementButtonProps {
 
   currentContent: string
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general'
@@ -30,9 +31,35 @@ export function AIEnhancementButton({;
   className?: string;
 }
   currentContent;
+  className?: string;
+}
+export function AIEnhancementButton({
+
+export function AIEnhancementButton({;
   enhancementType;
   context;
   onEnhanced;
+
+  buttonText = "Enhance with AI";
+
+  const handleEnhance = async () => {;
+    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
+
+      setError('Please enter at least some basic content before enhancing');
+      return;
+    }
+
+    setError(null);
+    const enhancedContent = await enhanceContent(;
+      currentContent;
+      enhancementType;
+      context;
+    );
+
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  };
 
   buttonText = "Enhance with AI";
   className;
@@ -111,6 +138,7 @@ export function AIEnhancementButton({
   
   return (
     <Button
+      <Button
       type="button"
       variant="ghost"
       size="sm"
@@ -125,6 +153,7 @@ export function AIEnhancementButton({
 
 }
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
+      onClick={handleEnhance}import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
   enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',

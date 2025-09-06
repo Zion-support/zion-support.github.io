@@ -128,6 +128,10 @@ export function BasicInfoForm(): any ({;
 
 
 import React, { useState, useEffect } from "react",;
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
@@ -178,6 +182,7 @@ export function BasicInfoForm({;
   };
 
   }, [initialData, form]),;
+  yearsExperience = 0,;  }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
@@ -271,6 +276,8 @@ export function BasicInfoForm({;
         }
       })
     }
+              yearsExperience={yearsExperience || 0}
+
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -295,6 +302,7 @@ export function BasicInfoForm({;
     }
 
   }
+  }
         }
       });
     }
@@ -308,6 +316,8 @@ export function BasicInfoForm({;
               setValue={form && form.setValue}
               skills={skills}
               location={form.getValues("location")}
+              yearsExperience={yearsExperience |0}
+              yearsExperience={yearsExperience || 0}
               rateType="hourly"
             />
           </div>
@@ -332,6 +342,7 @@ export function BasicInfoForm({;
 
 
 }
+  )}
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';

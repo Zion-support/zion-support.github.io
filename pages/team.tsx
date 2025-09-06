@@ -3,6 +3,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
+
 const Page = () => {
   return (
     <MainLayout
@@ -44,6 +45,10 @@ ursor/automate-test-improve-and-merge-code-646c
 
 } from "lucide-react";
 import Layout from "../components/Layout";
+  Code
+} from "lucide-react";
+import SEO from '../components/SEO';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -147,6 +152,10 @@ ursor/automate-test-improve-and-merge-code-646c
   },
   {
 ursor/automate-test-improve-and-merge-code-646c
+      "Business Development"
+    ]
+  },
+  {
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -359,6 +368,10 @@ const teamMembers = [;
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
+export default function TeamPage() {
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -609,6 +622,7 @@ const stats = [;
   { number: "15+", label: "Years Experience" },
   { number: "25+", label: "Countries Represented" },
   { number: "95%", label: "Employee Satisfaction" }
+  { number: "95%", label: "Employee Satisfaction" }
 ];
 export default /**
  * TeamPage - Function description
@@ -772,6 +786,7 @@ export default function TeamPage() {;
 
     <>
 ursor/automate-test-improve-and-merge-code-646c
+    <>
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
@@ -798,6 +813,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
     </>;
 ursor/automate-test-improve-and-merge-code-646c
+
+
+    </>;
   );
   return (
     <>;
@@ -814,13 +832,14 @@ ursor/automate-test-improve-and-merge-code-646c
       </div>;
     </>;
   );
-import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
 
 
 
 ursor/automate-test-improve-and-merge-code-646c
+export default function TeamPage() {
+	return (
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -836,6 +855,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
     </Layout>);
 ursor/automate-test-improve-and-merge-code-646c
+    </Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -849,6 +869,7 @@ const team_members = [;
     icon: Brain,
     description:;
       "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
   },
   {
     name: "Michael Chen",
@@ -856,6 +877,7 @@ const team_members = [;
     expertise: "Cloud Infrastructure",
     icon: Cloud,
     description:;
+      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
       "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
   },
   {
@@ -865,6 +887,7 @@ const team_members = [;
     icon: Shield,
     description:;
       "Ensuring enterprise - grade security with expertise in threat detection and prevention."
+      "Ensuring enterprise - grade security with expertise in threat detection and prevention."
   },
   {
     name: "David Thompson",
@@ -872,6 +895,8 @@ const team_members = [;
     expertise: "Project Management",
     icon: Users,
     description:;
+      "Leading our development teams with agile methodologies and client - focused delivery."
+  }
       "Leading our development teams with agile methodologies and client - focused delivery."
   }
 ];
@@ -926,3 +951,181 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+    <>
+      <SEO
+        title="Our Team | Zion Tech Group"
+        description="Meet the leadership team at Zion Tech Group."
+        canonical="/team"
+      />
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
+        <p className="text-gray-300 mb-8">
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
+    </>
+export default function Team() {
+  const teamMembers = [
+    {
+      name: 'Kleber Santos', role: 'CEO & Founder',
+      expertise: 'AI & Machine Learning', description: 'Visionary leader with 15+ years in AI and technology innovation.',
+      icon: Brain, linkedin: 'https://linkedin.com/in/kleber-santos'
+    },
+    {
+      name: 'Sarah Johnson', role: 'CTO',
+      expertise: 'Cloud Architecture', description: 'Expert in scalable cloud solutions and enterprise architecture.',
+      icon: Globe, linkedin: 'https://linkedin.com/in/sarah-johnson'
+    },
+    {
+      name: 'Michael Chen', role: 'Lead AI Engineer',
+      expertise: 'Machine Learning', description: 'Specialist in deep learning and autonomous systems development.',
+      icon: Brain, linkedin: 'https://linkedin.com/in/michael-chen'
+    },
+    {
+      name: 'Emily Rodriguez', role: 'Security Director',
+      expertise: 'Cybersecurity', description: 'Cybersecurity expert with focus on zero-trust architecture.',
+      icon: Shield, linkedin: 'https://linkedin.com/in/emily-rodriguez'
+    },
+    {
+      name: 'David Kim', role: 'DevOps Lead',
+      expertise: 'Infrastructure', description: 'DevOps specialist with expertise in automation and scaling.',
+      icon: Code, linkedin: 'https://linkedin.com/in/david-kim'
+    },
+    {
+      name: 'Lisa Thompson', role: 'Product Manager',
+      expertise: 'SaaS Solutions', description: 'Product strategist focused on micro SaaS and user experience.',
+      icon: Users, linkedin: 'https://linkedin.com/in/lisa-thompson'
+    }
+  ];
+
+  const values = [
+    {
+      icon: Brain, title: 'Innovation First',
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions.'
+    }, {
+      icon: Users,
+      title: 'Client Success', description: 'Your success is our success. We\'re committed to delivering exceptional results.''
+    },
+    {
+      icon: Shield, title: 'Security & Trust',
+      description: 'We maintain the highest security standards and build trust through transparency.'
+    }, {
+      icon: Zap,
+      title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.'
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Our Team — Zion Tech Group</title>
+        <meta name="description" content="Meet the expert team behind Zion Tech Group. Experienced professionals dedicated to delivering innovative technology solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https: //ziontechgroup.com/team" />
+      </Head>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+                Meet Our <span className="text-blue-600">Expert Team</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Our diverse team of technology experts brings together decades of experience 
+                in AI, cloud computing, cybersecurity, and software development.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Members */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
+              <p className="text-lg text-gray-600">
+                Experienced professionals leading innovation in technology
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow border border-gray-100">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <member.icon className="w-12 h-12 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                    <p className="text-blue-600 font-semibold mb-2">{member.role}</p>
+                    <p className="text-sm text-gray-500 mb-4">{member.expertise}</p>
+                    <p className="text-gray-600 mb-6">{member.description}</p>
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      Connect on LinkedIn
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Company Values */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <p className="text-lg text-gray-600">
+                The principles that guide everything we do
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Work with Our Team?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let&apos;s discuss how our expert team can help transform your business with innovative technology solutions.''
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get In Touch
+              </Link>
+              <Link href="/careers" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Join Our Team
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+</>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

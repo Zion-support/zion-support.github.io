@@ -11,6 +11,7 @@ export default function FeaturesPage() {
 
 
 export default function FeaturesPage() {
+ursor/fix-website-loading-errors-and-merge-6662
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Features</h1>;
@@ -79,6 +80,10 @@ function FeaturesPage() {
   return (
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+
+
 export default function FeaturesPage() {;
   return (
 
@@ -106,6 +111,7 @@ export default function FeaturesPage() {
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold'>Features</h1>
+<h1 className='text-2xl font-semibold'>Features</h1>
       <div className='mt-6 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <Globe2 className='h-6 w-6 text-indigo-500' />
@@ -126,6 +132,8 @@ export default function FeaturesPage() {
           <p className='mt-1 text-sm opacity-80'>
             Track deliverables and approvals anywhere.
           </p>        </div>
+          </p>
+        </div>
       </div>
     </EnhancedLayout>;
   );
@@ -152,3 +160,11 @@ export default function FeaturesPage() {
 
   );
   );
+
+  );
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+  );
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

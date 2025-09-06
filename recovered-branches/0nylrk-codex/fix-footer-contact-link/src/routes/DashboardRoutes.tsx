@@ -28,6 +28,7 @@ const DashboardRoutes = () => {;
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
+const DashboardRoutes = () => {import {Fragment} from "react";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -401,6 +402,9 @@ const DashboardRoutes = () => {;
         element={
 
           <ProtectedRoute>;
+      <Route
+        path="/developers"
+        element={          <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -468,6 +472,7 @@ export default DashboardRoutes;
 
 
         }
+        path="/contract-builder"        }
       />;
     </Routes>);
 }

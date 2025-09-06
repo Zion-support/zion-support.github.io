@@ -190,6 +190,7 @@ export const ResumeStepContent = ({;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
           resumeId={resume?.id!}
+import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
@@ -201,6 +202,12 @@ export const ResumeStepContent = ({;
 
 
         />
+        />;
+      </TabsContent>;
+
+      <TabsContent value="education">;
+
+        <EducationForm        />
       </TabsContent>
       <TabsContent value="education">
         <EducationForm
@@ -333,6 +340,7 @@ export const ResumeStepContent = ({
 
   ),;
 },; interface ResumeStepContentProps {
+          onBack={onPrevStep}},; interface ResumeStepContentProps {
   activeTab: string;
 resume: Resume;
 onNextStep: () => void;
@@ -408,3 +416,5 @@ onPrevStep
 };
 
 
+  )
+};

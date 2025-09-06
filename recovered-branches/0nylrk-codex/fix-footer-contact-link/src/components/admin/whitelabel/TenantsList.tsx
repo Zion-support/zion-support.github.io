@@ -28,6 +28,21 @@ import {;
 
   TableHeader
 } from "@/components/ui/table";
+import React, { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -48,6 +63,8 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 
 
     loadTenants();
+  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
   }, []);
 
       setIsLoading(true);
@@ -75,6 +92,7 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
     }
 
 
+  };
   Edit,
   MoreHorizontal,
   ExternalLink,
@@ -288,6 +306,7 @@ export function TenantsList() {;
 
       });
     }
+      const { error } = await supabase;    }
 
   },
 

@@ -44,6 +44,10 @@ const Alert = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
   <div
     ref={ref}
+    role="alert"
+    className={cn(alertVariants({ variant }), className)}
+    {...props}
+  />
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -123,11 +127,18 @@ const AlertTitle = React.forward_ref<;
     ref={ref}
     className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
     {...props}
+
+  />
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
+));
+AlertTitle.displayName = 'AlertTitle';
+const AlertDescription = React.forwardRef<
+  HTMLParagraphElement
+  React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>
 ))
 AlertTitle.displayName = "AlertTitle"
 
@@ -135,6 +146,8 @@ const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 AlertTitle && AlertTitle.displayName = 'AlertTitle';
+
+>(({ className, ...props }, ref) => (AlertTitle && AlertTitle.displayName = 'AlertTitle';
 
 const AlertDescription = React && React.forwardRef<;
   HTMLParagraphElement,;
@@ -247,6 +260,10 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
     {...props}
   />
 ));
+AlertDescription.display_name = 'AlertDescription';
+;
+export { Alert, AlertTitle, AlertDescription }
+;));
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }
 ))

@@ -29,6 +29,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
 
+
 interface HireRequest {
   talent: {
     id: string;
@@ -72,7 +73,10 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
 
 
-const corsHeaders = {
+const corsHeaders = {}
+  project: {
+    overview: string;
+    timeline: string;const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
@@ -96,6 +100,7 @@ interface HireRequest {
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+    budgetMax: numberimport { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
 const corsHeaders = {;
@@ -136,6 +141,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+    budgetMax: number;  }
   try {
     const supabase = createClient(
     const { talent, requester, project } = requestData;
@@ -259,7 +265,7 @@ serve(async (req) => {;
       try {;
         const configuration = new Configuration({;
           apiKey:openAiKey}),;
-        const openai = new OpenAIApi(configuration),;
+        const openai = new OpenAIApi(configuration);
         ;
         const prompt = `;
           Project Overview:"${project.overview}";
@@ -347,6 +353,22 @@ serve(async (req) => {;
         console.error("Error generating enhanced content:", aiError);
 
         // Continue without enhanced content
+    const budgetDisplay = `$${project && project.budgetMin.toLocaleString()} - $${project && project.budgetMax.toLocaleString()}`;
+    
+    // 1. Optional: Enhance content with AI
+    let enhancedContent: EnhancedContent | null = null;
+    
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),        const prompt = `          Project Overview: "${project && project.overview}"
+          
+          Please provide:
+          1. A brief summary of this project (max 100 characters)
+          2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
+          
+
+          Format your response as JSON: {
+            "summary": "Brief summary here"
+            "projectType": "Project type here"          }
+        `;        // Continue without enhanced content
       }
     }
     // 2. Store the request in the database
@@ -406,6 +428,9 @@ serve(async (req) => {;
     }
     
     }
+        {      ])
+      .select();
+    if (requestError) {}
     
     // 3. Create notification for the admin
     // Fetch admin users
@@ -419,6 +444,12 @@ serve(async (req) => {;
     if (adminError) {
       console && console.error("Error fetching admin users:", adminError)
     }
+    if (adminError) {
+      console && console.error("Error fetching admin users:", adminError)
+    }    if (adminError) {
+      console && console.error("Error fetching admin users:", adminError)
+    }
+    let adminId: string | undefined = undefined;
       .limit(1),
       
     if (adminError) {
@@ -427,6 +458,7 @@ serve(async (req) => {;
     
     let adminId: string | undefined = undefined,
     
+
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
@@ -504,6 +536,7 @@ if ( {) {
       admin_id = admin_users[0].id,
       const adminNotificationContent = {
         related_id: requestRecord[0].id
+      const adminNotificationContent = {        related_id: requestRecord[0].id
       }
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
@@ -511,6 +544,14 @@ if ( {) {
 
 
       }
+          _title: adminNotificationContent && adminNotificationContent.title;
+          _message: adminNotificationContent && adminNotificationContent.message;
+          _type: adminNotificationContent && adminNotificationContent.type,
+          _related_id: adminNotificationContent && adminNotificationContent.related_id
+
+        });
+      if (notificationError) {
+        console && console.error("Error creating admin notification:", notificationError)      }
     }
     // 4. Send email notification to talent
     if (talent && talent.email) {
@@ -528,6 +569,7 @@ if ( {) {
 
 
             <p>${project.overview}</p>
+            <p>${project.overview}</p>            <p>${project.overview}</p>
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
@@ -651,6 +693,12 @@ if ( {) {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+        console.error("Error creating admin notification:", notificationError)            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
+            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
+            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
+            <p>Best regards,<br>The Zion AI Marketplace Team</p>    return new Response(
+        request_id: requestRecord[0].id
+      {        headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 200}
     )
   } catch (error) {
@@ -965,3 +1013,4 @@ error: error.message
   }
 });
 
+        headers: { ...cors_headers, "Content - Type": "application / json" }

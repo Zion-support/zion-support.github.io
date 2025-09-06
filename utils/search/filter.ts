@@ -3,6 +3,7 @@ export type AccessLevel = "public" | "private" | "admin";
 export interface SearchResult {
   id: string;
   title: string;
+  title: string,
   description: string;
   type: string;
   rating?: number;
@@ -29,6 +30,8 @@ export interface SearchFilters {
     min?: number;
     max?: number;
   };
+    max?: number
+};
 }
 
 // Mock data for search results
@@ -43,6 +46,7 @@ const mockTalent: SearchResult[] = [
     location: "Remote",
     skills: ["react", "javascript", "typescript", "node"],
     keywords: ["frontend", "web", "ui"]
+    keywords: ["frontend", "web", "ui"]
   },
   {
     id: "2",
@@ -53,6 +57,8 @@ const mockTalent: SearchResult[] = [
     price: 65,
     location: "New York",
     skills: ["react", "node", "python", "postgresql"],
+    keywords: ["fullstack", "web", "api"]
+  }
     keywords: ["fullstack", "web", "api"]
   }
 ];
@@ -69,6 +75,8 @@ const mockJobs: SearchResult[] = [
     skills: ["react", "javascript", "css"],
     keywords: ["frontend", "web", "ui"]
   }
+    keywords: ["frontend", "web", "ui"]
+  }
 ];
 
 const mockProjects: SearchResult[] = [
@@ -81,6 +89,8 @@ const mockProjects: SearchResult[] = [
     price: 15000,
     location: "Remote",
     skills: ["react", "node", "mongodb"],
+    keywords: ["ecommerce", "web", "fullstack"]
+  }
     keywords: ["ecommerce", "web", "fullstack"]
   }
 ];
@@ -165,6 +175,7 @@ export function searchAll(
     talent: filteredResults.filter((r) => r.type === "talent"),
     jobs: filteredResults.filter((r) => r.type === "job"),
     projects: filteredResults.filter((r) => r.type === "project")
+    projects: filteredResults.filter((r) => r.type === "project")
   };
 }
 
@@ -188,3 +199,10 @@ export function suggestDidYouMean(query: string): string[] {
   return suggestions.slice(0, 3); // Return max 3 suggestions
 }
 
+  
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
+  return results;
+}

@@ -4,6 +4,38 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     return res.status(200).json({ url })
+
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+  const { slides, format, version } = req.body || {};
+  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
+  const html = generateHtml(slides);
+  res.status(200).send(html);
+}
+
+function generateHtml(slides: any[]) {
+  return slides.map(slide => `<div>${slide.title}</div>`).join('');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
+  const { slides, format, version } = req.body |{}
+  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
+  if (format === 'gslides') {
+    // TODO: integrate Google Slides API and return created deck URL
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req),
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+>>>>>>> main
+
+
+    return res.status(200).json({ url })
+    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
+return res.status(200).json({ url });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version || ''}</title></head><body>` +
@@ -13,6 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version || 'draft'}.html"`)
   res.status(200).send(html)
+.replace(/&/g, '&amp,')
 }
 
 }
@@ -24,3 +57,18 @@ function escapeHtml(str: string) {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 };
+}
+
+    .replace(/'/g, '&#039,');
+};
+
+
+};
+}
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/'/g, '&#039;');
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

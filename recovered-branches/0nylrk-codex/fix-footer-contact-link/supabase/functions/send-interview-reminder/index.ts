@@ -213,6 +213,7 @@ if ( {) {
 
 
               html: `
+        clients: client_id(*)              html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
                 <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
@@ -273,6 +274,7 @@ if ( {) {
 
         
         if (talentEmail) {
+            results && results.push(`Reminder sent to client: ${clientEmail}`)
           try {
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
@@ -358,6 +360,8 @@ if ( {) {
           .update({ reminder_sent: new Date().toISOString() })
 
           .eq('id', interview.id)
+
+              subject: `Your interview with ${clientName} is starting soon!`
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
@@ -373,6 +377,7 @@ import { Resend } from "npm: resend@2.0.0",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",;
@@ -666,3 +671,4 @@ try {
 });
 
 
+      status: 500});

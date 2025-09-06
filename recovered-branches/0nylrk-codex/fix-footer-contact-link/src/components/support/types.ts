@@ -6,6 +6,14 @@ export interface HelpArticle {
   title: string;
   content: string;
   lastUpdated: string;
+import {ReactNode} from "react";
+export interface HelpArticle {;
+  id: string;
+  title: string;
+  content: string;
+}
+
+export interface HelpCategory {;  lastUpdated: string;
   tags: string[];
 }
 

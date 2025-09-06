@@ -82,6 +82,13 @@ export async function generateContract(
 
 
         title: m.title,
+  title: string,
+  description: string;
+
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,        title: m.title,
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
@@ -121,12 +128,19 @@ export async function generateContract(
   
   if (error) {
     throw error
+  }
+  
+
+  if (data.success && data.contract) {
+    return data.contract  } else {
+    throw new Error("Failed to generate contract")
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "../components/ContractForm",;
 interface Milestone {;
   title: string,;
+  title: string,,
   description: string,;
   dueDate: string,;
   estimatedHours: number;
@@ -145,6 +159,12 @@ export async function generateContract(;
     ? generatedMilestones.map(m => ({;
         title: m.title,;
         description: m.description,;
+  const additionalClauses = values.additionalClauses || [];
+  // Prepare milestone data if we have AI-generated milestones;
+  const milestoneData = generatedMilestones.length > 0;
+    ? generatedMilestones.map(m => ({;
+        title: m.title,,
+  description: m.description,;
         dueDate: m.dueDate,;
         estimatedHours: m.estimatedHours;
       }));
@@ -248,3 +268,16 @@ if ( {) {
 }
 
 
+    throw new Error("Failed to generate contract")  }
+}  } else {
+    throw new Error ("Failed to generate contract");
+  }
+}
+;
+  if (data.success && data.contract) {;
+    return data.contract;
+  } else {;
+    throw new Error("Failed to generate contract");
+  }
+}
+;

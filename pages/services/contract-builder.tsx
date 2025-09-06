@@ -9,6 +9,11 @@ export default function ContractBuilderRedirect() {
 
 
 
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
+export default function ContractBuilderRedirect() {;
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/automation/contract-builder');
@@ -26,6 +31,9 @@ export default function ContractBuilderRedirect() {
 
 
 import { useEffect } from 'react';
+}
+
+
 export default function ContractBuilderRedirect() {
   const router = useRouter();
   useEffect(() => {
@@ -33,7 +41,6 @@ export default function ContractBuilderRedirect() {
   }, [router]);
   return null
 }
-import {useEffect} from 'react';
 import {use_router} from 'next / router';
 export default /**
  * ContractBuilderRedirect - Function description
@@ -69,3 +76,8 @@ export default function ContractBuilderRedirect(req, res) {
 
 
 
+export default function ContractBuilderRedirect() {
+  const router = null;
+  return null
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -16,6 +16,7 @@ import {Notification, NotificationType} from '@/context/notifications';
 
 
 export const getTypeIcon = (type: NotificationType) => {
+// Use the centralized icon wrapper to avoid missing icons;
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
@@ -61,6 +62,7 @@ export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+    case 'message':;      return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
     case 'booking_confirmation':;
@@ -119,6 +121,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       onMarkAsRead(notification.id)
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
+interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
   onMarkAsRead,;
   onDismiss;
@@ -128,6 +131,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
     }
+  const navigate = useNavigate();
+  const handleClick = () => {;
+    if (!notification.read) {;
+      onMarkAsRead(notification.id);    }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
@@ -147,8 +154,14 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 
   }
   };
-  },
+  }
 
+  }
+  }
+
+  }
+  };
+  },
 
 interface NotificationItemProps {;
   notification: Notification,;
@@ -359,6 +372,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 }
 ;
 
+            </TooltipContent>;
+          </Tooltip>;
+        </TooltipProvider>;
+      </div>
+};
+    </div>);
+}
 
 };
     </div>);
@@ -370,3 +390,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
     </div>);
 }
 ;
+    </div>;
+  )
+};

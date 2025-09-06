@@ -1,28 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
   description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
   keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
-=======
-import React from "react";
-import Link from "next/link";
-
-export const metadata = {
-  title: "Smart Invoice Generator | Zion Tech Group",
-  description:
-    "AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.",
-  keywords:
-    "invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator",
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -97,31 +84,14 @@ export default function SmartInvoiceGeneratorPage() {
           <Link
             href="/contact"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-=======
-      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Smart Invoice Generator
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your billing process with AI-powered invoice automation.
-          Create professional invoices in seconds, track payments intelligently,
-          and get paid 30% faster with our smart financial platform.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator Demo"
-            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
           >
             Start Your Free Trial
           </Link>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
   );
 }
-=======
       </section>
 
       {/* Key Features */}
@@ -144,7 +114,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Auto-populate from projects",
               "Smart template selection",
               "Multi-currency support",
-              "Custom branding",
+              "Custom branding"
             ]}
           />
           <FeatureCard
@@ -155,7 +125,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Stripe & PayPal integration",
               "Auto payment reminders",
               "Recurring billing",
-              "Payment analytics",
+              "Payment analytics"
             ]}
           />
           <FeatureCard
@@ -166,7 +136,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Real-time revenue tracking",
               "Outstanding payment alerts",
               "Cash flow forecasting",
-              "Tax preparation tools",
+              "Tax preparation tools"
             ]}
           />
           <FeatureCard
@@ -177,7 +147,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Milestone-based billing",
               "Auto-send schedules",
               "Follow-up sequences",
-              "Approval workflows",
+              "Approval workflows"
             ]}
           />
           <FeatureCard
@@ -188,7 +158,7 @@ export default function SmartInvoiceGeneratorPage() {
               "iOS & Android apps",
               "Offline functionality",
               "Photo receipt capture",
-              "Push notifications",
+              "Push notifications"
             ]}
           />
           <FeatureCard
@@ -199,7 +169,7 @@ export default function SmartInvoiceGeneratorPage() {
               "QuickBooks integration",
               "Xero compatibility",
               "Project management sync",
-              "API access",
+              "API access"
             ]}
           />
         </div>
@@ -228,7 +198,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Payment processing",
               "Mobile app",
               "Email support",
-              "Basic reporting",
+              "Basic reporting"
             ]}
             cta="Start Free Trial"
             popular={false}
@@ -245,7 +215,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Custom branding",
               "Priority support",
               "Advanced analytics",
-              "API access",
+              "API access"
             ]}
             cta="Start Free Trial"
             popular={true}
@@ -262,7 +232,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Dedicated support",
               "Custom integrations",
               "Advanced security",
-              "SLA guarantee",
+              "SLA guarantee"
             ]}
             cta="Contact Sales"
             popular={false}
@@ -325,7 +295,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Quick invoice creation",
               "Time tracking integration",
               "Professional templates",
-              "Mobile invoicing",
+              "Mobile invoicing"
             ]}
           />
           <UseCaseCard
@@ -336,7 +306,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Team collaboration",
               "Client management",
               "Automated workflows",
-              "Financial reporting",
+              "Financial reporting"
             ]}
           />
           <UseCaseCard
@@ -347,7 +317,7 @@ export default function SmartInvoiceGeneratorPage() {
               "Custom integrations",
               "Advanced analytics",
               "Multi-currency support",
-              "Compliance features",
+              "Compliance features"
             ]}
           />
         </div>
@@ -360,16 +330,12 @@ export default function SmartInvoiceGeneratorPage() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
             Don't just take our word for it. Here's what our clients have to say
             about their experience.
-=======
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
-=======
+ursor/fix-lint-push-and-merge-to-main-745c
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+ursor/fix-lint-push-and-merge-to-main-32fb
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -430,7 +396,7 @@ function FeatureCard({
   icon,
   title,
   description,
-  benefits,
+  benefits
 }: {
   icon: string;
   title: string;
@@ -461,7 +427,7 @@ function PricingCard({
   description,
   features,
   cta,
-  popular,
+  popular
 }: {
   name: string;
   price: string;
@@ -525,7 +491,7 @@ function PricingCard({
 function MetricCard({
   number,
   label,
-  description,
+  description
 }: {
   number: string;
   label: string;
@@ -544,7 +510,7 @@ function UseCaseCard({
   icon,
   title,
   description,
-  benefits,
+  benefits
 }: {
   icon: string;
   title: string;
@@ -572,7 +538,7 @@ function TestimonialCard({
   quote,
   author,
   role,
-  company,
+  company
 }: {
   quote: string;
   author: string;
@@ -590,4 +556,3 @@ function TestimonialCard({
     </div>
   );
 }
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4

@@ -9,6 +9,13 @@ export default async function handler(
 }
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
 
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
+
+  res.status(200).json(data);
+}
+  // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
   const data = {
     activeUsers30d: 12840
     gmv: 1450000
@@ -26,8 +33,20 @@ export default async function handler(
 
 
 
-    ],
+    ]
 
 
 
 
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
+  const data = null;
+  res.status(200).json(data)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

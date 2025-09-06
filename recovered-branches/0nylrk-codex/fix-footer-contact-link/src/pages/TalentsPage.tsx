@@ -18,6 +18,7 @@ import { ProductListing } from "@/types/listings",
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 // Sample talent listings
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-1",
@@ -31,6 +32,7 @@ const TALENT_LISTINGS: ProductListing[] = [
 
 
     author: {
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],    author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
       avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100"}
@@ -118,6 +120,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 
 
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
+  {    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
@@ -223,6 +226,12 @@ const TALENT_LISTINGS: ProductListing[] = [;
 
 
 
+
+    author: {    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
+    category: "Security"
+    price: 165
+    currency: "$"
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];    author: {
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -244,6 +253,31 @@ const TALENT_LISTINGS: ProductListing[] = [;
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
 
 
+    id: "talent-6",
+    title: "AI Ethics Consultant",
+    description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",
+    category: "Consulting",
+    price: 180,
+    currency: "$",
+    tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
+    author: {
+      name: "Sarah Johnson"
+      id: "sarah-johnson"
+      avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100"}
+    images: ["https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=800&h=500"]
+    createdAt: "2023-10-15T13:45:00.000Z"
+    aiScore: 94
+    rating: 4.9
+    reviewCount: 21}]
+// Filter options specific to talents
+const TALENT_FILTERS = [
+  { label: 'Engineering', value: 'engineering' }
+  { label: 'Data Science', value: 'data-science' }
+  { label: 'DevOps', value: 'devops' }
+  { label: 'Security', value: 'security' }
+  { label: 'Development', value: 'development' }
+  { label: 'Consulting', value: 'consulting' }]
+    author: {
       name: "James Wilson",
       id: "james - wilson",
       avatar_url: "https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100"},
@@ -279,6 +313,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 
 
 
+    author: {
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -355,6 +390,8 @@ export default function TalentsPage() {;
   return (
     <DynamicListingPage
 
+  return (
+    <DynamicListingPage
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 // Sample talent listings;
@@ -363,6 +400,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-1",;
     title: "Senior AI Engineer",;
     description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems.",;
+    title: "Senior AI Engineer",,
+  description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems.",;
     category: "Engineering",;
     price: 150,;
     currency: "$",;
@@ -380,6 +419,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-2",;
     title: "DevOps Specialist",;
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",;
+    title: "DevOps Specialist",,
+  description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",;
     category: "DevOps",;
     price: 135,;
     currency: "$",;
@@ -397,6 +438,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-3",;
     title: "Data Scientist",;
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",;
+    title: "Data Scientist",,
+  description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",;
     category: "Data Science",;
     price: 145,;
     currency: "$",;
@@ -413,6 +456,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-4",;
     title: "Cybersecurity Expert",;
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",;
+    title: "Cybersecurity Expert",,
+  description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",;
     category: "Security",;
     price: 165,;
     currency: "$",;
@@ -430,6 +475,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-5",;
     title: "Full-Stack Developer",;
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",;
+    title: "Full-Stack Developer",,
+  description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",;
     category: "Development",;
     price: 125,;
     currency: "$",;
@@ -446,6 +493,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     id: "talent-6",;
     title: "AI Ethics Consultant",;
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",;
+    title: "AI Ethics Consultant",,
+  description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",;
     category: "Consulting",;
     price: 180,;
     currency: "$",;
@@ -519,3 +568,5 @@ function TalentsPage() {
 }
 
 
+}/>) 
+}

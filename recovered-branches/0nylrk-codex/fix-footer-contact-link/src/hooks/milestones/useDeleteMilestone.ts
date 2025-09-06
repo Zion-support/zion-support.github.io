@@ -129,6 +129,10 @@ if (throw error) {
     }
 
 
+      return false    } finally {
+      setIsSubmitting (false);
+    }
+
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -157,4 +161,5 @@ if (throw error) {
   }
 };
   }
+
 };

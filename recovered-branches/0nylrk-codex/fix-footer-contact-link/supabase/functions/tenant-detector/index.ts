@@ -37,6 +37,8 @@ if (!supabaseUrl |!supabaseServiceKey) {
 
 
   throw new Error('Required environment variables are not set')
+
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
@@ -46,6 +48,7 @@ serve(async (req) => {
 
 
   if (req && req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
@@ -74,6 +77,7 @@ serve(async (req) => {
 
 
     if (!hostname && !subdomainParam) {
+  try {    if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info
@@ -93,6 +97,8 @@ serve(async (req) => {
 
 
         console && console.error('Database error:', error);
+        console && console.error('Database error:', error);
+        throw new Error(`Database error: ${error && error.message}`)        console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
       }
       tenantInfo = data as TenantInfo
@@ -111,6 +117,7 @@ serve(async (req) => {
 
 
         const subdomain = hostname && hostname.split('.')[0];
+        const subdomain = hostname && hostname.split('.')[0];        const subdomain = hostname && hostname.split('.')[0];
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
@@ -140,6 +147,7 @@ interface TenantInfo {;
 
   logo_url: string | null,
   theme_preset: string;
+            .single();  theme_preset: string;
 }
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -228,7 +236,7 @@ if (!supabaseUrl || !supabaseServiceKey) {;
   throw new Error('Required environment variables are not set');
 }
 ;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === 'OPTIONS') {;
@@ -291,6 +299,7 @@ serve(async (req) => {;
 
 
       // Check condition
+      // If no match on custom domain, try subdomain;      // Check condition
 if ( {) {
   $2
 }
@@ -360,6 +369,7 @@ if ( {) {
 
         status: 'error'
     return new Response (
+            tenant_info = subdomain_result.data as TenantInfo;    return new Response (
       JSON.stringify ({
         tenant: tenant_info,
         status: 'success';
@@ -421,7 +431,12 @@ if ( {) {
   }
 });
 
-          'Content - Type': 'application / json',
+          'Content - Type': 'application / json'
+      });
+      {
+        status: 500;
+        headers: {}
+});          'Content - Type': 'application / json',
           ...cors_headers}}
     );
   }

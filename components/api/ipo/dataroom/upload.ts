@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -9,12 +10,26 @@ import fs from 'fs';
 import path from 'path';
 
 
+
+
+
+
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+export const config = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -44,16 +59,46 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath)
+if (!file || !file.filepath)
+      return res.status(400).json({ error: 'File missing' });
+    const targetDir = resolveDataPath(path.join('dataroom', section));
+    if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
+    const targetPath = path.join(
+      targetDir
+      file.originalFilename |path.basename(file.filepath)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+      type: 'file_upload'
+      section
+      name: path.basename(targetPath)
+    });
+    res.status(200).json({ ok: true });
+  });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    res.status(200).json({ ok: true })
+      type: 'file_upload',
+      section,
+      name: path && path.basename(targetPath)
     });
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
   })
 
-}
+
+  })
 
 }
 
+}
+
+  })
+  })
   })
   })
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
@@ -94,6 +139,7 @@ function handler() {
       section,
       name: path.basename (target_path)
       name: path.basename (target_path)
+      name: path.basename (target_path)
     });
     res.status (200).json ({ ok: true });
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
@@ -107,3 +153,11 @@ function handler() {
 
 }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+}
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

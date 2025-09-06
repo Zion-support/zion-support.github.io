@@ -4,6 +4,19 @@ import { createServerClient } from '../../../utils/supabase/server';
 
 
       supabase
+
+
+      supabase
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = null;
+        { label: 'ai', value: 1 }]})
+  try {
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+supabase
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -34,20 +47,28 @@ import { createServerClient } from '../../../utils/supabase/server';
 
     });
 
-
-  }
-
-}
+    });
 
 
   }
 
 }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+
+  }
+
+}
 
 }
 
 
 
+
+}
+ursor/fix-website-loading-errors-and-merge-6662
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -76,6 +97,7 @@ function handler() {
       supabase;
         .from ('search_matches');
         .select ('talent_id, tag');
+        .eq ('talent_id', talent_id)
         .eq ('talent_id', talent_id)
         .eq ('talent_id', talent_id)
     ]);
@@ -121,6 +143,7 @@ function handler() {
         .slice (0, 5);
         .map (([label, value]) => ({ label, value }))
         .map (([label, value]) => ({ label, value }))
+        .map (([label, value]) => ({ label, value }))
     });
   } catch (e) {
     res.status (200).json ({
@@ -135,9 +158,14 @@ function handler() {
       ]
         { label: 'ai', value: 1 }
       ]
+        { label: 'ai', value: 1 }
+      ]
     });
   }
 }
 }
 
 
+}
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

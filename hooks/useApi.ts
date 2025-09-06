@@ -56,6 +56,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       set_loading (false)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       setLoading(false)};
+  return { data, loading, error, execute }
+};      setLoading(false)};
+
+  return { data, loading, error, execute }}
+};
+}
+};
+      setLoading(false)};      setLoading(false)};
 ;
   return { data, loading, error, execute }}
 }
@@ -79,11 +87,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 interface ApiState<T> {}import { useState, useEffect } from 'react';
 ;
 interface ApiState < T> {};import { useState, useEffect } from 'react';
-interface ApiState<T> {
+interface ApiState<T> {}interface ApiState<T> {
   data: T | null;
   loading: boolean;
   error: string | null;
 }
+export function use_api < T>(url: string, options?: RequestInit) {
+    loading: true
+    error: null
+    data: null,
+    loading: true,
+    error: null,;
+  });
 export function use_api < T>(url: string, options?: RequestInit) {
   const [state, set_state] = useState < ApiState < T>>({
     data: null,
@@ -102,6 +117,9 @@ export function use_api < T>(url: string, options?: RequestInit) {
       try {
           data: null,
           loading: false,
+          error: error instanceof Error ? error && error.message : 'An error occurred'
+        });
+      }
           error: error instanceof Error ? error && error.message : 'An error occurred'
         });
       }
@@ -189,6 +207,7 @@ interface UseApiProps {
   // Add props here as needed
 }
 import { useState, useEffect } from 'react';
+import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 
 interface ApiState<T> {
   data: T | null;
@@ -231,6 +250,7 @@ export default useApi;
 >>>>>>> main
 export default function UseApi({}: UseApiProps) {
 export default function UseApi({}: UseApiProps) {
+export default useApi;export default function UseApi({}: UseApiProps) {
   return (
     <div>
       <h1>UseApi</h1>
@@ -252,6 +272,9 @@ interface ApiState<T> {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null
 }
 }
 export function useApi<T>(

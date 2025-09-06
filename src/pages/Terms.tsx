@@ -80,3 +80,7 @@ export default Terms;
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
 export default Terms;
+>>>>>>> main
+import { motion } from 'framer-motion';""
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -9,14 +9,16 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
 const { FlatCompat } = require('@eslint/eslintrc');
 const js = require('@eslint/js');
+import globals from 'globals';
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
   allConfig: js.configs.all
 });
 
-module.exports = [
+export default [
   ...compat.extends('next/core-web-vitals'),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -88,7 +90,6 @@ ursor/automate-test-improve-and-merge-code-646c
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
-import globals from 'globals';
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -172,6 +173,32 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
+    ]
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -183,6 +210,7 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
+        afterAll: 'readonly'
         afterAll: 'readonly'
       },
       parser: typescriptParser,
@@ -209,6 +237,17 @@ export default [
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+    },
+    rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -226,19 +265,24 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 ursor/fix-lint-push-and-merge-to-main-32fb
+    }
     },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  },
+  {
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       globals: {
-        window: 'readonly',
-        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
-        global: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
+        global: 'readonly',
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly'
@@ -285,4 +329,12 @@ ursor/automate-test-improve-and-merge-code-646c
   },
 ursor/fix-lint-push-and-merge-to-main-32fb
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+];
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-console': 'off'
+    }
+  }
 ];

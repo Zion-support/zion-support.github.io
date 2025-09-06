@@ -82,3 +82,6 @@ export interface SignupCheckResult extends AnalysisResult {}
 
 export interface SignupCheckResult extends AnalysisResult {}
 
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;

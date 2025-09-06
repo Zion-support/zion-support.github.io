@@ -2,6 +2,8 @@
 import { supabase } from "@/integrations/supabase/client";
 
 /**
+import {supabase} from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",/**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
@@ -23,6 +25,8 @@ export const ensureProfilesTableExists = async () => {
       ),`
     });
 
+      ),`
+    });
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn(
@@ -62,6 +66,8 @@ if ( {) {
       CREATE TABLE IF NOT EXISTS public.profiles (
 
 
+      ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
+      
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
         user_type TEXT,
@@ -138,6 +144,7 @@ if ( {) {
       END
       $$;
           CREATE POLICY "Users can view their own profile" 
+        avatar_url TEXT;          CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
         END IF,
@@ -172,6 +179,7 @@ if ( {) {
           AND tablename = 'profiles'
         ) THEN
 ;
+            USING (auth && auth.uid() = id);;
       DO $$;
       BEGIN;
         IF NOT EXISTS (
@@ -193,6 +201,12 @@ if ( {) {
         END IF;
       END;
       $$;
+        END IF;
+      END
+      $$;        END IF;
+      END;
+      $$;
+
         END IF;
       END
       $$;
@@ -223,6 +237,10 @@ if ( {) {
 
 
                 new.raw_user_meta_data->>'bio';
+      -- Set up trigger for new users
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      BEGIN                new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
         VALUES (new && new.id, 
@@ -393,9 +411,15 @@ export const ensureProfilesTableExists = async () => {;
 
 
   }
+      $$ LANGUAGE plpgsql SECURITY DEFINER;      -- Check if trigger exists before creating it
+      DO $$
+      BEGIN
+        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
+          CREATE TRIGGER on_auth_user_created  }
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
 
   await ensureProfilesTableExists();
+  await ensureProfilesTableExists()
 };

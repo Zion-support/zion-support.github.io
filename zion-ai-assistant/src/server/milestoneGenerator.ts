@@ -37,6 +37,8 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     return milestones.map((m) => ({;
       title: String(m.title).slice(0, 120);
       description: String(m.description |"").slice(0, 2000);
+      title: String(m.title).slice(0, 120),
+  description: String(m.description |"").slice(0, 2000);
       suggestedDueDateIso: String(m.suggestedDueDateIso);
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) |8);
       tags: ["AI Suggested"];
@@ -80,7 +82,7 @@ import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilesto
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {;
   if (!OPENAI_API_KEY) return null,;
-  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`,;
+  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
   const user = {;
     scopeOfWork: input.scopeOfWork,;
     startDateIso: input.startDateIso,;
@@ -165,7 +167,8 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';
+    });  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition
@@ -347,6 +350,25 @@ body: JSON.stringify (body)
 
 
 
+      ? parsed.milestones;
+      : [],
+    // Check condition
+if (return null, ) {
+  $2
+}
+    return milestones.map ((m) => ({
+      title: String (m.title).slice (0, 120),
+      description: String (m.description || "").slice (0, 2000),
+      suggestedDueDateIso: String (m.suggestedDueDateIso),
+      estimatedEffortHours: Math.max (1, parse_int (String (m.estimatedEffortHours), 10) || 8),
+      tags: ["AI Suggested"];
+    }));
+  } catch {
+    return null;
+  }
+}
+  return milestones;
+}
   }
   return milestones;
 }

@@ -2,6 +2,17 @@
 
 
 
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useEffect, useState } from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([]),
+  const [userId, setUserId] = useState(""),
+  const [amount, setAmount] = useState(100),
+  const [reason, setReason] = useState("admin_action"),
+  const [config, setConfig] = useState<any>(null),
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
@@ -11,6 +22,13 @@
 
 
 
+  }
+  useEffect(() => {
+    load()
+  }, [])
+  async function issue() {} catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
@@ -131,6 +149,15 @@ export default function AdminTokens() {
   }
 
 
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(config)}),
+    const data = await res.json(),
+    const res = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    setConfig(data)
+  }
+
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -195,8 +222,6 @@ export default function AdminTokens() {
   const [amount, setAmount] = useState(100)
   const [reason, setReason] = useState("admin_action")
   const [config, setConfig] = useState<any>(null)
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -273,6 +298,7 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout",
 
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
 
+        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => (
@@ -283,6 +309,27 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout",
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
 
+            ))}
+            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
+          </div>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+;
+  async function saveConfig() {;
+    const res = await fetch("/api/admin/tokens/config", {;
+      method: "POST",;
+      headers: { "Content-Type": "application/json" },;
+      body: JSON.stringify(config)});
+    const data = await res.json();
+    setConfig(data);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 import React, { useEffect, useState } from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
@@ -485,3 +532,6 @@ function save_config() {
 
 
 
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

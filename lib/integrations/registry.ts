@@ -1,11 +1,23 @@
 
 
-
-
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
+
 export const PROVIDERS: IntegrationProviderMeta[] = [
+
+
+
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+import { IntegrationProviderMeta  } from './types';
+;
+export const PROVIDERS: IntegrationProviderMeta[] = [;
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: "salesforce"
     name: "Salesforce"
@@ -28,6 +40,10 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   },
 
 
+    description: "All - in - one CRM"
+  },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -50,6 +66,18 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   {}
   {}
 import { IntegrationProviderMeta } from './types';
+  {
+    id: "bamboohr"
+    name: "BambooHR"
+    category: "ats"
+    description: "HRIS & ATS"
+  }
+];
+export function getProviderById(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -63,16 +91,23 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 
 
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
+    description: "HRIS & ATS"
     description: "HRIS & ATS"
     description: "HRIS & ATS"
   },;
@@ -86,3 +121,17 @@ export function getProviderById(
 
 
 
+): IntegrationProviderMeta | undefined {;
+  return PROVIDERS.find((p) => p.id === id);
+}
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id);
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

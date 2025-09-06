@@ -242,6 +242,7 @@ export function ListingCard({;
 
 
         {author && (
+  profileType?: 'service' | 'talent'        {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />

@@ -59,6 +59,7 @@ export function useTranslationService() {;
 
 
         console && console.error('Translation error:', error);
+        console && console.error('Translation error:', error);        console && console.error('Translation error:', error);
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
@@ -121,6 +122,7 @@ export function useTranslationService() {;
       setIsTranslating(false);
       console.error('Translation service error:', err);
       const initialTranslations: Record<SupportedLanguage, string> = {
+        initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
         en: content;
         es: '';
         pt: ''
@@ -179,6 +181,10 @@ export function useTranslationService() {;
 
       }
     }
+            }
+    }
+  }
+  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
 
     if (!translations) return fallback,
     return translations[currentLanguage] || translations && translations.en || fallback
@@ -325,6 +331,9 @@ export function useTranslationService() {;
     isTranslating;
 
     getTranslation
+          return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -360,6 +369,7 @@ export function useTranslationService() {;
     isTranslating;
     getTranslation;
   }
+
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition
@@ -391,3 +401,6 @@ setIsTranslating (false);
 }
   }
 }
+    return translations[current_language] || translations.en || fallback;
+  }
+}}

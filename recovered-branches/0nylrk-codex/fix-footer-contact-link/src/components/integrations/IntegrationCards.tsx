@@ -52,6 +52,7 @@ interface IntegrationCardProps {
 }
 
 export function IntegrationCard({;
+import {ArrowRight, Check, ExternalLink} from "lucide-react";export function IntegrationCard({;
   title;
   description;
   icon;
@@ -112,12 +113,14 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 import React from "react",;
+          </Button>import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight, Check, ExternalLink } from "lucide-react",;
 interface IntegrationCardProps {;
   title: string,;
+  title: string,,
   description: string,;
   icon: React.ReactNode,;
   status?: "connected" | "disconnected" | "pending",;
@@ -193,6 +196,7 @@ export function IntegrationCard({;
           ) :(;
 
             <Badge variant="outline">Not Connected</Badge>;
+  icon,;            <Badge variant="outline">Not Connected</Badge>;
           )}
         </div>;
       </CardHeader>;
@@ -208,6 +212,7 @@ export function IntegrationCard({;
               <ExternalLink className="h-3.5 w-3.5" />;
 
             </a>;
+              <ExternalLink className="h-3 && 3.5 w-3 && 3.5" />;            </a>;
           </Button>;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
@@ -224,6 +229,7 @@ export function IntegrationCard({;
           </Button>;
 
 
+            <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;          </Button>;
 
         )}
       </CardFooter>;
@@ -249,6 +255,8 @@ export function IntegrationCards() {
 
 
         )}
+  );
+}        )}
       </CardFooter>;
     </Card>;
   );
@@ -280,6 +288,15 @@ function IntegrationCard() {
             </div>;
             <div>;
               <h3 className="font - semibold">{title}</h3>;
+    <Card className="overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <div className="flex justify - between items-start">;
+          <div className="flex items - center gap-3">;
+            <div className="h - 9 w - 9 flex items - center justify - center bg - muted rounded-md">;
+              {icon}
+            </div>;
+            <div>;
+              <h3 className="font-semibold">{title}</h3>;
             </div>;
           </div>;
         </div>;
@@ -298,6 +315,20 @@ function IntegrationCard() {
           <Button variant="default" className="w - full" on_click={on_connect}>;
             <span > Connect</span>;
             <ArrowRight className="ml - 1.5 h - 3.5 w - 3.5" />;
+      <CardContent className="pb-4">;
+        <p className="text - sm text - muted-foreground">{description}</p>;
+      </CardContent>;
+      <CardFooter className="pt-0">;
+        {status === "connected" ? (
+          <Button variant="outline" className="w-full" as_child>;
+            <a href={href} target="_blank" rel="noopener noreferrer" className="flex items - center gap-1">;
+              <span > Manage</span>;
+              <ExternalLink className="h - 3.5 w-3.5" />;
+            </a>;
+          </Button>) : (
+          <Button variant="default" className="w-full" on_click={on_connect}>;
+            <span > Connect</span>;
+            <ArrowRight className="ml - 1.5 h - 3.5 w-3.5" />;
           </Button>)}
       </CardFooter>;
     </Card>);
@@ -345,6 +376,8 @@ href?: string;
 }
 
 export function IntegrationCards() {
+    <div className="grid md:grid - cols - 3 gap-6">;
+      {/* Integration cards would go here */}export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
@@ -353,3 +386,4 @@ export function IntegrationCards() {
 }
 }
 ;
+

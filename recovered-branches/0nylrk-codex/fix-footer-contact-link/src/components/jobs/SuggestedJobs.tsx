@@ -34,6 +34,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const currentTalentId = talentId || user?.id,
   const { 
     isLoading,
+import { NoJobsCard } from "./NoJobsCard",    isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
@@ -165,6 +166,26 @@ import { NoJobsCard } from "./NoJobsCard",;
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+  }
+
+  return (
+    <div className="space-y-6">;
+      {/* New Matches Section */}
+
+      {newMatches && newMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">New Job Matches</h3>;
+            <Badge className="bg-green-100 text-green-800 border-green-300">;
+              {newMatches && newMatches.length} New;
+            </Badge>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {newMatches && newMatches.map(match => (;
+              <JobMatchesCard              />
             ))}
           </div>
         </div>
@@ -217,6 +238,19 @@ import { NoJobsCard } from "./NoJobsCard",;
             <h3 className="text-lg font-medium">Previously Viewed</h3>;
           </div>;
                 key={match && match.id} 
+          </div>;
+        </div>;
+      )}
+
+      {/* Previously Viewed Section */}
+      {viewedMatches && viewedMatches.length > 0 && (;        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches && viewedMatches.map(match => (;
+              <JobMatchesCard                key={match && match.id} 
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
@@ -230,11 +264,29 @@ import { NoJobsCard } from "./NoJobsCard",;
           </div>;
         </div>;
       )}
+
+      {/* Applied Jobs Section */}
+      {appliedMatches && appliedMatches.length > 0 && (;            ))}
+          </div>;
+        </div>;
+      )}
+      ;
+      {/* Applied Jobs Section */}
+      {appliedMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
                 onDecline={handleDecline}
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {appliedMatches && appliedMatches.map(match => (;
+              <JobMatchesCard
+                key={match && match.id} 
+                match={match} 
+                onApply={handleApply} 
+
+                onDecline={handleDecline}                onDecline={handleDecline}
                 showApplied={true}
               />;
             ))}
@@ -355,6 +407,9 @@ if ( {) {
 
 
   ),; interface SuggestedJobsProps {
+    </div>;
+  );
+}  ),; interface SuggestedJobsProps {
   talentId?: string 
 }export function SuggestedJobs ({
   talentId 

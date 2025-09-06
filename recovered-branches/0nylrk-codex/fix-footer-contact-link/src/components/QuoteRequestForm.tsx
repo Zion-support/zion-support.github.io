@@ -30,6 +30,8 @@ export function QuoteRequestForm() {
 export function QuoteRequestForm() {;
 
 
+export function QuoteRequestForm() {;
+
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
@@ -103,10 +105,11 @@ export function QuoteRequestForm() {
 
 
   });
-  }),
+  })
   
 
 
+    },
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
@@ -173,6 +176,8 @@ export function QuoteRequestForm() {
       amount: 0,;
       type: "fixed";
     };
+      type: "fixed"
+};
     contactInfo: {;
       name: "",;
       email: "",;
@@ -191,6 +196,11 @@ export function QuoteRequestForm() {
   const handleNext = () => {;
     switch (currentStep) {;
 
+    }))
+};
+
+  const handleNext = () => {;
+    switch (currentStep) {;
       case "service": setCurrentStep("details");
         break;
       case "details":;
@@ -208,6 +218,11 @@ export function QuoteRequestForm() {
 
 
   };
+  },
+  
+
+  const handleBack = () => {
+    switch (currentStep) {};
 
   const handleBack = () => {;
     switch (currentStep) {;
@@ -235,6 +250,7 @@ export function QuoteRequestForm() {
       console.log("Submitting form data:", formData);
       // Simulate API call
   },
+      // Simulate API call  },
   
   const handleSubmit = async () => {
     setIsSubmitting(true),
@@ -246,6 +262,7 @@ export function QuoteRequestForm() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
+
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -419,6 +436,10 @@ function QuoteRequestForm() {
     switch (currentStep) {;
       case "service":;
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+        variant: "destructive"})    } finally {
+      setIsSubmitting (false);
+    }
+  }        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
       case "timeline":;
@@ -431,6 +452,8 @@ function QuoteRequestForm() {
     }
 
 
+  },
+  
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -456,6 +479,7 @@ function QuoteRequestForm() {
 
 
                 <Button
+              {currentStep !== "service" && (                <Button
                   variant="outline"
                   onClick={handleBack}
                   className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
@@ -618,7 +642,7 @@ export function QuoteRequestForm() {;
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",;
 ;
 export function QuoteRequestForm() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { toast } = useToast(),;
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -737,6 +761,11 @@ export function QuoteRequestForm() {;
   };
 
   return (
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>
+
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -852,6 +881,7 @@ export function QuoteRequestForm() {;
                   {is_submitting ? "Submitting..." : "Submit Request"}
                 </Button>)}
             </div>;
+              )}            </div>;
           </CardContent>;
         </Card>;
       </div>;
@@ -869,6 +899,10 @@ export function QuoteRequestForm() {;
     </div>);
 }
 }
+}
+;
+    </div>);
+}}
     </div>);
     </div>;
   ),; export function QuoteRequestForm () {
@@ -888,6 +922,7 @@ case "budget": setCurrentStep ("timeline");
 break;
 case "summary": setCurrentStep ("budget");
 break;
+toast ({}finally {
 toast ({}finally {
   setIsSubmitting (false) 
 }

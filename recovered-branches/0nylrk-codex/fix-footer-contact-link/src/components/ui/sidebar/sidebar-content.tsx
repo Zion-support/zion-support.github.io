@@ -8,6 +8,8 @@ import type { SafeRef } from "../sidebar.types"
 
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
+  React.ComponentProps<typeof Input>export const SidebarInput = React.forwardRef<
+  React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 import * as React from &quot;react & quot;
 import { Input } from &quot;@/components / ui / input & quot;
@@ -66,6 +68,7 @@ export const SidebarHeader = React.forwardRef<
 
 >((props, ref) => {
   return (
+  return (  return (
     <Input;
       ref={ref}
 >((props, ref) => {
@@ -75,6 +78,14 @@ export const SidebarHeader = React.forwardRef<
       data - sidebar=&quot;header & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+
+    />);
+});
+SidebarHeader.display_name = &quot;SidebarHeader & quot;
+;
+export const SidebarFooter = React.forward_ref<;
+  HTMLDivElement,
+  React.ComponentProps<&quot;div & quot;>;
 
 SidebarHeader.displayName = "SidebarHeader"
 
@@ -89,6 +100,11 @@ export const SidebarFooter = React.forwardRef<
       {...props}
 
 
+SidebarFooter.displayName = "SidebarFooter"
+
+export const SidebarSeparator = React.forwardRef<
+  HTMLDivElement
+  React.ComponentProps<typeof Separator>
     />);
 });
 SidebarFooter.display_name = &quot;SidebarFooter & quot;
@@ -156,6 +172,9 @@ export const SidebarContent = React.forwardRef<
 
 
         props.className
+  return (
+    <div;
+      ref={ref}        props.className
       )}
       {...props}
     />
@@ -166,7 +185,7 @@ SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
 
->((props, ref) => {
+>((props, ref) => {})>((props, ref) => {
   return (
     <div;
       ref={ref}
@@ -175,6 +194,10 @@ export const SidebarGroup = React.forwardRef<
       {...props}
 
 
+    />);
+});
+SidebarGroup.display_name = &quot;SidebarGroup & quot;
+;
 
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement,;
@@ -193,3 +216,4 @@ export const SidebarGroup = React.forwardRef<
 })
 SidebarGroup.displayName = &quot;SidebarGroup&quot;
 SidebarGroup.displayName = "SidebarGroup"
+

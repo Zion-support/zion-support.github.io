@@ -85,6 +85,8 @@ function useUIState() {
 
     selected_talent;
     setSelectedTalent;
+    selected_talent;
+    setSelectedTalent;
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -180,6 +182,12 @@ export function useUIState() {;
     toggle_section;
     closeMobileFilter}
     expandedSections;
+    setSelectedTalent,;    expandedSections;
+    toggleSection;
+    expanded_sections;
+    toggle_section;
+    closeMobileFilter}
+}    expandedSections;
     toggleSection;
 
     expanded_sections;

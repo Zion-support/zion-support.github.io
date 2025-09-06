@@ -5,6 +5,11 @@ import { ProfileData } from '@/types/profile';
       {
 
 
+
+
+      {
+
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
         id: 'p2',
         title: 'Sentiment Analysis API',
         description:;
@@ -22,6 +27,12 @@ import { ProfileData } from '@/types/profile';
 
       {
 
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+        date: 'May 2023'
+      },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
@@ -51,10 +62,15 @@ import { ProfileData } from '@/types/profile';
     projects: [
       {
 
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
+
+      {
 
       {
         id: 'p1'
@@ -63,6 +79,16 @@ export const MOCK_TALENTS: ProfileData[] = [
           'Built a state-of-the-art facial recognition system using deep learning for a major retail chain, improving security protocols and reducing losses by 32%.'
         imageUrl:
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
+        date: 'Sep 2023'
+      },
+      {
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023'
+      },
+      {
+        tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
+        date: 'Dec 2022'
+      }
         date: 'Sep 2023'
       },
       {
@@ -122,6 +148,9 @@ export const MOCK_TALENTS: ProfileData[] = [
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
+      ]
+    }
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
       ]
     }
@@ -206,6 +235,12 @@ export const MOCK_TALENTS: ProfileData[] = [
         tags: ['Tableau', 'BI', 'Data Visualization'],
         date: 'Jan 2023'
       }
+        date: 'Apr 2023'
+      },
+      {
+        tags: ['Tableau', 'BI', 'Data Visualization'],
+        date: 'Jan 2023'
+      }
     ],
       {
         id: 'e1'
@@ -256,6 +291,8 @@ export const MOCK_TALENTS: ProfileData[] = [
       }
         date: 'Aug 2023'
       }
+        date: 'Aug 2023'
+      }
     ],
       {
         id: 'e1'
@@ -292,6 +329,9 @@ export const MOCK_TALENTS: ProfileData[] = [
         { day: 'Friday', hours: '9:00 AM - 5:00 PM' }
       ]
     }
+        { day: 'Friday', hours: '9:00 AM - 5:00 PM' }
+      ]
+    }
   },
   {
       { name: 'React', level: 5, endorsements: 35 },
@@ -303,6 +343,7 @@ export const MOCK_TALENTS: ProfileData[] = [
       { name: 'Redux', level: 5, endorsements: 29 },
       { name: 'AWS', level: 3, endorsements: 18 }
       { name: 'AWS', level: 3, endorsements: 18 }
+      { name: 'AWS', level: 3, endorsements: 18 }
     ],
       {
         id: 'p1'
@@ -310,10 +351,13 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
         date: 'Nov 2023'
         date: 'Nov 2023'
+        date: 'Nov 2023'
       },
       {
       {
         tags: ['SaaS', 'React', 'GraphQL'],
+        date: 'Mar 2023'
+      }
         date: 'Mar 2023'
       }
         date: 'Mar 2023'
@@ -337,6 +381,10 @@ export const MOCK_TALENTS: ProfileData[] = [
     availability: {
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Saturday', hours: '12:00 PM - 4:00 PM' }
+      ]
+    }
+  }
         { day: 'Saturday', hours: '12:00 PM - 4:00 PM' }
       ]
     }
@@ -749,6 +797,7 @@ export const MOCK_TALENTS: ProfileData[] = [
       ]
     },
     hourlyRate: 125,
+contactEmail: 'david.martinez@example.com'
 contactEmail: 'david.martinez@example.com'
 contactEmail: 'david.martinez@example.com'
   },;
@@ -1195,6 +1244,22 @@ export const MOCK_TALENTS: ProfileData[] = [;
 ];
 
 
+      {
+
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+        id: 'p2',
+        title: 'Sentiment Analysis API',
+        description:;
+          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023'
+      },
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -1203,6 +1268,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images.unsplash.com / photo - 1581094288338 - 2314dddb7ece?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
+        date: 'Dec 2022'
+      }
+    ],
+
         date: 'Dec 2022'
       }
     ],
@@ -1217,6 +1286,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'Mar 2021',
         end_date: 'Present',
         current: true
+        current: true
       },
       {
         id: 'e2',
@@ -1226,6 +1296,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Developed and deployed ML models for product recommendation systems. Improved conversion rates by 28% through personalized customer experiences.',
         start_date: 'Jun 2018',
         end_date: 'Feb 2021'
+        end_date: 'Feb 2021'
       },
       {
         id: 'e3',
@@ -1234,6 +1305,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
         description:;
           'Analyzed large datasets to extract business insights and develop predictive models. Created automated reporting systems using Python and visualization tools.',
         start_date: 'Aug 2016',
+        end_date: 'May 2018'
+      }
         end_date: 'May 2018'
       }
     ],
@@ -1247,6 +1320,12 @@ export const MOCK_TALENTS: ProfileData[] = [;
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
+      ]
+    },
+
+    hourly_rate: 150,
+    contact_email: 'alexandra.chen@example.com'
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
       ]
     },
@@ -1308,6 +1387,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
       { name: 'Azure', level: 3, endorsements: 18 },
       { name: 'Python', level: 3, endorsements: 16 },
       { name: 'Infrastructure as Code', level: 5, endorsements: 26 }
+      { name: 'Infrastructure as Code', level: 5, endorsements: 26 }
     ],
     projects: [;
       {
@@ -1320,11 +1400,14 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         tags: ['AWS', 'Kubernetes', 'Microservices'],
         date: 'Nov 2023'
+        date: 'Nov 2023'
       },
       {
 
           'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
         tags: ['CI/CD', 'GitHub Actions', 'DevOps'],
+        date: 'Jul 2023'
+      }
         date: 'Jul 2023'
       }
     ],
@@ -1365,6 +1448,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['CI / CD', 'GitHub Actions', 'DevOps'],
         date: 'Jul 2023'
       }
+        date: 'Jul 2023'
+      }
     ],
     experience: [;
       {
@@ -1376,6 +1461,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'Jun 2020',
         end_date: 'Present',
         current: true
+        current: true
       },
       {
         id: 'e2',
@@ -1384,6 +1470,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
         description:;
           'Designed and implemented multi - cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and performance.',
         start_date: 'Feb 2017',
+        end_date: 'May 2020'
+      }
         end_date: 'May 2020'
       }
     ],
@@ -1395,6 +1483,12 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         { day: 'Monday', hours: '1:00 PM - 5:00 PM' },
         { day: 'Wednesday', hours: '1:00 PM - 5:00 PM' },
+        { day: 'Friday', hours: '1:00 PM - 5:00 PM' }
+      ]
+    },
+
+    hourly_rate: 135,
+    contact_email: 'michael.reynolds@example.com'
         { day: 'Friday', hours: '1:00 PM - 5:00 PM' }
       ]
     },
@@ -1456,6 +1550,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
       { name: 'Machine Learning', level: 3, endorsements: 15 },
       { name: 'Data Visualization', level: 5, endorsements: 21 },
       { name: 'Predictive Modeling', level: 4, endorsements: 17 }
+      { name: 'Predictive Modeling', level: 4, endorsements: 17 }
     ],
     projects: [;
       {
@@ -1467,6 +1562,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['Data Science', 'Market Analysis', 'R'],
+        date: 'Oct 2023'
         date: 'Oct 2023'
       },
       {
@@ -1480,6 +1576,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images.unsplash.com / photo - 1460925895917 - afdab827c52f?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['Time Series', 'Forecasting', 'Python'],
+        date: 'Apr 2023'
         date: 'Apr 2023'
       },
       {
@@ -1499,6 +1596,12 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         'Currently committed to a long-term project until mid-June 2025.',
       availableHours: []
+        date: 'Jan 2023'
+      }
+    ],
+
+        'Currently committed to a long-term project until mid-June 2025.',
+      availableHours: []
     },
     hourlyRate: 145,
     contactEmail: 'priya && priya.sharma@example && example.com',
@@ -1512,6 +1615,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'Aug 2021',
         end_date: 'Present',
         current: true
+        current: true
       },
       {
         id: 'e2',
@@ -1522,12 +1626,18 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'May 2018',
         end_date: 'Jul 2021'
       }
+        end_date: 'Jul 2021'
+      }
     ],
     availability: {
       status: 'unavailable',
       next_available: 'June 15, 2025',
       message:;
         'Currently committed to a long - term project until mid - June 2025.',
+      available_hours: []
+    },
+    hourly_rate: 145,
+    contact_email: 'priya.sharma@example.com'
       available_hours: []
     },
     hourly_rate: 145,
@@ -1587,6 +1697,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
       { name: 'Incident Response', level: 5, endorsements: 21 },
       { name: 'Security Architecture', level: 4, endorsements: 16 },
       { name: 'Cloud Security', level: 4, endorsements: 14 }
+      { name: 'Cloud Security', level: 4, endorsements: 14 }
     ],
     projects: [;
       {
@@ -1598,6 +1709,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images.unsplash.com / photo - 1562813733 - b31f1c218a51?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['Security', 'Finance', 'Assessment'],
+        date: 'Dec 2023'
         date: 'Dec 2023'
       },
       {
@@ -1615,6 +1727,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
       }
     ],
 
+        date: 'Aug 2023'
+      }
+    ],
+
     experience: [;
       {
         id: 'e1',
@@ -1625,6 +1741,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'Oct 2021',
         end_date: 'Present',
         current: true
+        current: true
       },
       {
         id: 'e2',
@@ -1633,6 +1750,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
         description:;
           'Provided expert security consulting services to clients across various industries. Conducted penetration testing, security audits, and vulnerability assessments.',
         start_date: 'Jan 2019',
+        end_date: 'Sep 2021'
+      }
         end_date: 'Sep 2021'
       }
     ],
@@ -1646,6 +1765,12 @@ export const MOCK_TALENTS: ProfileData[] = [;
         { day: 'Tuesday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Wednesday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Thursday', hours: '9:00 AM - 5:00 PM' },
+        { day: 'Friday', hours: '9:00 AM - 5:00 PM' }
+      ]
+    },
+
+    hourly_rate: 165,
+    contact_email: 'james.wilson@example.com'
         { day: 'Friday', hours: '9:00 AM - 5:00 PM' }
       ]
     },
@@ -1689,6 +1814,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
       { name: 'Next && Next.js', level: 4, endorsements: 26 },
       { name: 'Redux', level: 5, endorsements: 29 },
       { name: 'AWS', level: 3, endorsements: 18 }
+      { name: 'AWS', level: 3, endorsements: 18 }
     ],
 
           'Developed a responsive e-commerce platform using React and Node && Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
@@ -1706,6 +1832,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['React', 'Node.js', 'E - Commerce'],
 
         date: 'Nov 2023'
+        date: 'Nov 2023'
       },
       {
 
@@ -1722,6 +1849,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['React', 'Analytics', 'D3.js'],
 
         date: 'Jul 2023'
+        date: 'Jul 2023'
       },
       {
 
@@ -1734,6 +1862,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images.unsplash.com / photo - 1559028012 - 481c04fa702d?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['SaaS', 'React', 'GraphQL'],
+        date: 'Mar 2023'
+      }
         date: 'Mar 2023'
       }
     ],
@@ -1751,6 +1881,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         start_date: 'May 2021',
         end_date: 'Present',
         current: true
+        current: true
       },
       {
         id: 'e2',
@@ -1765,6 +1896,12 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
+        end_date: 'Apr 2021'
+
+      }
+    ],
+    availability: {
+
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -1772,6 +1909,14 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Saturday', hours: '12:00 PM - 4:00 PM' }
+      ]
+    },
+
+    hourly_rate: 125,
+contact_email: 'david.martinez@example.com'
+
+  }
         { day: 'Saturday', hours: '12:00 PM - 4:00 PM' }
       ]
     },
@@ -2206,3 +2351,10 @@ contact_email: "david.martinez@example.com";
 
 
 
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

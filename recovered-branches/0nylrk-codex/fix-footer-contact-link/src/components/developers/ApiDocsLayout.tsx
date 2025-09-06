@@ -33,6 +33,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const currentPath = location.pathname;
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -90,6 +91,7 @@ interface ApiDocsLayoutProps {;
 }
 ;
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
+  const location = useLocation();
   const location = useLocation();
   const location = useLocation();
   const currentPath = location.pathname,;
@@ -286,4 +288,5 @@ export default ApiDocsLayout;
 export default ApiDocsLayout;
 
 
+export default ApiDocsLayout;;
 export default ApiDocsLayout;

@@ -131,6 +131,12 @@ if ( {) {
       } finally {
         setIsLoading(false)
     isLoading
+    const checkDispute = async () => {
+      if (!projectId && !milestoneId) {
+        setIsLoading(false),
+        return
+      }
+      try {    isLoading
 
     isLoading 
 
@@ -215,6 +221,9 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 }
 
   }
+}
+
+}  }
 }
 
 ;

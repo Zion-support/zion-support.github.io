@@ -55,6 +55,7 @@ export function EducationForm({ ;
 
     let success;
 
+    let success;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
   const [editingId, setEditingId] = useState<string | null>(null),;
@@ -107,6 +108,10 @@ export function EducationForm(): any ({ ;
     let success;
     let success;
     if (editingId) {;
+      is_current: data.is_current,,
+  description: data.description,;
+      location: data.location},;
+    let success,;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
@@ -151,6 +156,8 @@ export function EducationForm(): any ({ ;
   };
 
 
+  };
+
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -169,6 +176,8 @@ export function EducationForm(): any ({ ;
 
 
   const handleDelete = async (id: string) => {;
+    // Form reset happens in the child component
+};  const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
@@ -202,6 +211,10 @@ export function EducationForm(): any ({ ;
 
   return (
 
+  }
+
+  },
+  return (
 
       <EducationList 
         educationEntries={educationEntries} 
@@ -263,6 +276,10 @@ export function EducationForm(): any ({ ;
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
         <div className="flex justify-end">;
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Education' : 'Add Education'}
+        </h3>        <div className="flex justify-end">;
           <Button type="button" onClick={onComplete}>;
             Next;
           </Button>;
@@ -406,3 +423,5 @@ if ( {) {
 }
 
 
+  );
+}

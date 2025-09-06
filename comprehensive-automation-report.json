@@ -87,13 +87,29 @@
       "success": true,
       "duration": 7037,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 22421,
+ursor/automate-test-improve-and-merge-code-e883
+  "timestamp": "2025-09-06T08:34:04.724Z",
+  "duration": 397290,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 84429,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
-      "warnings": []
+      "warnings": [
+        "Command failed: npm audit --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ]
     },
     "codeQuality": {
       "success": false,
       "duration": 27333,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 27631,
+ursor/automate-test-improve-and-merge-code-e883
+      "success": true,
+      "duration": 56422,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
       "warnings": []
     },
@@ -101,6 +117,11 @@
       "success": true,
       "duration": 1719,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 1683,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 1450,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 1719,
       "errors": [],
       "warnings": []
     },
@@ -108,6 +129,11 @@
       "success": true,
       "duration": 6250,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 6198,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 11039,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 6250,
       "errors": [],
       "warnings": []
     },
@@ -119,12 +145,22 @@
       "success": true,
       "duration": 46,
       "errors": [],
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
+      "errors": [],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
       "duration": 9508,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 9692,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 9508,
       "errors": [],
       "warnings": []
     },
@@ -132,6 +168,11 @@
       "success": true,
       "duration": 6736,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      "duration": 7154,
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
       "warnings": []
     },
@@ -141,6 +182,7 @@
       "errors": [],
       "warnings": []
     }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "totalErrors": 6
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -150,3 +192,19 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 }
+      "success": false,
+      "duration": 0,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "summary": {
+    "totalTasks": 8,
+    "successfulTasks": 4,
+    "failedTasks": 4
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  ]
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

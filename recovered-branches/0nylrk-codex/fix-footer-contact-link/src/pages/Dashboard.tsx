@@ -37,6 +37,18 @@ export default function Dashboard() {
 
 
 
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
 
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -74,6 +86,38 @@ export default function Dashboard() {
         title: "Error creating test notification",;
         description: "Something went wrong",;
         variant: "destructive"});
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",,
+  description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",,
+  description: "Something went wrong",;
+        variant: "destructive"});
+
+  const handleTestNotification = async () => {
+    const result = await createTestNotification(user.id);
+    if (result.success) {
+      toast({
+        title: "Test notification created",
+        description: "Check your notification center"
+      });
+    } else {
+      toast({
+        title: "Error creating test notification",
+        description: "Something went wrong",
+        variant: "destructive"
+      });
+    }
+  }
+  },
+
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -143,6 +187,7 @@ export default function Dashboard() {
                         View Wallet
                       </a>
                     </span>
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
                   </div>
 
                   <div className="flex justify-between items-center">
@@ -543,6 +588,7 @@ if ( {) {
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
                   <CommunityDiscussion />;
+                        await createOnboardingNotification({                  <CommunityDiscussion />;
                 </div>;
               </div>;
             </div>;
@@ -588,3 +634,6 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
   );
 }
 ;
+    </>);
+}
+ursor/fix-website-loading-errors-and-merge-6662

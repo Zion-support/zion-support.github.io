@@ -140,12 +140,14 @@ function ZeroTrustSecurityPlatformPage() {
           'Continuous authentication and authorization',
           'Visibility and audit for compliance',
           'Rollout playbooks and migration kits'
+          'Rollout playbooks and migration kits'
         ]}
         industries={[;
           'Enterprise IT',
           'Financial Services',
           'Healthcare',
           'SaaS',
+          'Public Sector'
           'Public Sector'
         ]}
         canonical='https: //ziontechgroup.com / zero - trust - security - platform';
@@ -162,3 +164,5 @@ function ZeroTrustSecurityPlatformPage() {
 
 
 
+export default function ZeroTrustSecurityPlatformPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

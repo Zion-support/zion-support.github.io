@@ -26,6 +26,7 @@ export function AIEnhancementDialog({;
 
 
 import React from 'react',;
+  defaultOptions;import React from 'react',;
 import {;
   Dialog,;
   DialogContent,;
@@ -132,6 +133,11 @@ export function AIEnhancementDialog({;
   return (;
 
 
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose()
+};
   },
 
   return (
@@ -215,3 +221,8 @@ function AIEnhancementDialog() {
 }
 
 
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}

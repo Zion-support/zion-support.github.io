@@ -14,6 +14,8 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
 ursor/automate-test-improve-and-merge-code-646c
     './src/**/*.{js,ts,jsx,tsx}'
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -161,6 +163,9 @@ ursor/automate-test-improve-and-merge-code-646c
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#334155',
+        'zion-slate-light': '#475569'
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
@@ -185,3 +190,5 @@ ursor/automate-test-improve-and-merge-code-646c
     require('@tailwindcss/aspect-ratio')
   ]
 };
+  plugins: []
+}

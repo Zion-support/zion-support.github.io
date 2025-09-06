@@ -160,6 +160,7 @@ const timeRangeToInterval = {;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
                           style={{ width: `${percentage}%` }}
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;                          style={{ width: `${percentage}%` }}
                         />;
                       </div>;
                       <span className="text-xs text-zion-slate">{percentage}%</span>;
@@ -179,6 +180,9 @@ const timeRangeToInterval = {;
 
 
 }
+          )}
+}
+;}
 ;
 export /**
  * PageViewsTable - Function description
@@ -232,6 +236,18 @@ if (return 'Home Page', ) {
               <SelectValue placeholder="Time Range" />;
             </SelectTrigger>;
             <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
+    <Card className="bg - zion - blue - dark border - zion - blue-light">;
+      <CardHeader className="pb-2">;
+        <div className="flex flex - col sm:flex - row justify - between sm:items-center">;
+          <div>;
+            <CardTitle className="text - white text-lg">Top Pages</CardTitle>;
+            <CardDescription className="text - zion - slate-light">Most viewed pages on your platform</CardDescription>;
+          </div>;
+          <Select value={time_range} onValueChange={(value: TimeRange) => setTimeRange (value)}>;
+            <SelectTrigger className="w - 28 mt - 2 sm:mt - 0 bg - zion - blue border - zion - blue - light text - zion - slate-light">;
+              <SelectValue placeholder="Time Range" />;
+            </SelectTrigger>;
+            <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
               <SelectItem value="1d">Last 24h</SelectItem>;
               <SelectItem value="7d">Last 7 days</SelectItem>;
               <SelectItem value="30d">Last 30 days</SelectItem>;
@@ -250,6 +266,14 @@ if (return 'Home Page', ) {
                 <div className="flex items - center gap - 2">;
                   <Skeleton className="h - 4 w - 10 bg - zion - blue - light" />;
                   <Skeleton className="h - 6 w - 32 bg - zion - blue - light" />;
+        <div className="space-y-4">;
+          {is_loading ? (
+            Array (5).fill (0).map ((_, i) => (
+              <div key={i} className="flex items - center justify-between">;
+                <Skeleton className="h - 4 w - 40 bg - zion - blue-light" />;
+                <div className="flex items - center gap-2">;
+                  <Skeleton className="h - 4 w - 10 bg - zion - blue-light" />;
+                  <Skeleton className="h - 6 w - 32 bg - zion - blue-light" />;
                 </div>;
               </div>))) : page_views && page_views.length > 0 ? (
             page_views.map ((page, index) => {
@@ -270,11 +294,26 @@ if (return 'Home Page', ) {
                         />;
                       </div>;
                       <span className="text - xs text - zion - slate">{percentage}%</span>;
+                <div key={index} className="flex items - center justify-between">;
+                  <div className="text - zion - slate - light font-medium">;
+                    {formatPathName (page.path)}
+                  </div>;
+                  <div className="flex items - center gap-3">;
+                    <span className="text - white font-medium">{page.count}</span>;
+                    <div className="w - 32 flex items - center gap-2">;
+                      <div className="flex - 1 h - 2 bg - zion - blue - light rounded - full overflow-hidden">;
+                        <div;
+                          className="h - full bg - gradient - to - r from - zion - purple to - zion-cyan";
+                          style={{ width: `${percentage}%` }}
+                        />;
+                      </div>;
+                      <span className="text - xs text - zion-slate">{percentage}%</span>;
                     </div>;
                   </div>;
                 </div>);
             })) : (
             <div className="text - center py - 8 text - zion - slate">;
+            <div className="text - center py - 8 text - zion-slate">;
               No page view data available for this time period;
             </div>)}
         </div>;

@@ -72,6 +72,23 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       
       
       <Card>
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+import { Button  } from '@/components / ui / button';
+
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {      <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -141,6 +158,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
 
 
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
+  return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -229,6 +247,18 @@ interface ContractTypeCardsProps {;
 
 
           >;
+      <Card>;
+        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
+          <div className="flex justify - between items-center">;
+            <CardTitle className="flex items - center gap-2">;
+              <ShieldCheck className="h - 5 w - 5 text-primary" />;
+              Smart Contracts;
+            </CardTitle>;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;          </ul>;
+        </CardContent>;
+        <CardFooter>;
+          <Button;
+          >;          >;
             Create Smart Contract;
           </Button>;
         </CardFooter>;
@@ -241,6 +271,7 @@ interface ContractTypeCardsProps {;
 
 
     </div>);
+}    </div>);
 
 }
 }

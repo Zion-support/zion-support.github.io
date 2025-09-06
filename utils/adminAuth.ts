@@ -2,6 +2,18 @@
 
 }
 
+
+
+import type { NextApiRequest } from 'next';
+export interface Session {
+
+export interface Session {;
+  userId: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
@@ -22,6 +34,14 @@ export interface Session {;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
+  
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' };
+  }
+  
+  return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
+}
 
 
 export interface Session {
@@ -31,6 +51,8 @@ export interface Session {
 }
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -45,6 +67,9 @@ export interface Session {
 
 }
 
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
@@ -56,6 +81,10 @@ export const isAdmin = () => {
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -176,6 +205,7 @@ export function getAdminUser(id: string): AdminUser | null {
 };
 
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -203,6 +233,16 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+
+
+
+
+};
+
+}
+;
+
+ursor/fix-website-loading-errors-and-merge-6662
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -218,8 +258,28 @@ export const isAdmin = () => {
 
 };
 
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = () => {
+  // Placeholder implementation
+  return true;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export const isAdmin = () => {
+  // Placeholder implementation;
+  return true;
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};
+
 };
 
 }
 ;
 
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -16,6 +16,7 @@ const AuthRoutes = () => {;
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
+const AuthRoutes = () => {import {Fragment} from "react";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -92,6 +93,8 @@ const AuthRoutes = () => {;
       {/* Auth Routes */}
 
   return (
+const AuthRoutes = () => {
+const AuthRoutes = () => {;
     <Routes>;
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
@@ -188,3 +191,17 @@ export default AuthRoutes;
 export default AuthRoutes;
 
 
+          <ProtectedRoute>;
+            <ServiceOnboarding />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>
+};
+
+},
+
+  return (
+    <Routes>;
+      {/* Auth Routes */}
+export default AuthRoutes;

@@ -8,6 +8,11 @@
 
 
 
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { ShieldAlert  } from './lucide-react';
+interface EmptyFraudStateProps {
+  has_filters: boolean;
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
@@ -20,10 +25,16 @@ interface EmptyFraudStateProps {
   onResetFilters: () => void
 }
 
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
 
     </div>;
 );
 
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -34,6 +45,7 @@ interface EmptyFraudStateProps {;
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
   has_filters,
+  onResetFilters
   onResetFilters
 }) => {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
@@ -57,6 +69,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   );
     </div>
   );
+};
+
+};
+  )
 };
 
 ;
@@ -97,3 +113,5 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 };
 
 
+  )
+};

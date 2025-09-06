@@ -5,6 +5,9 @@ import type { NextApiRequest, NextApiResponse } from "next";
 >>>>>>> main
 
 
+
+
+>>>>>>> main
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
@@ -21,12 +24,14 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
       count: 1,
       resetTime: now + RATE_LIMIT_WINDOW
       resetTime: now + RATE_LIMIT_WINDOW
+      resetTime: now + RATE_LIMIT_WINDOW
     });
     return true;
   }
 
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: "Too Many Requests" });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
     return false;
@@ -41,6 +46,9 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -114,6 +122,8 @@ export const rateLimiter = new RateLimiter({
 // Express middleware for rate limiting
 export function rateLimit(config: RateLimitConfig) {
   const limiter = new RateLimiter(config);
+export function rateLimit(options: { windowMs: number; max: number }) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (req: any, res: any, next: any) => {
     const info = limiter.isAllowed(req);
     res.set({
@@ -130,6 +140,7 @@ export function rateLimit(config: RateLimitConfig) {
     }
     next();
   };
+}
 }
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -199,3 +210,15 @@ if ( {) {
 
 
 
+
+
+
+}
+
+
+}
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

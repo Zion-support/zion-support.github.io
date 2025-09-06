@@ -1,6 +1,7 @@
 
 
 
+});
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
@@ -36,6 +37,7 @@ import cors from "cors",;
 import { z } from "zod",;
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js",;
 import { generateMilestones } from "./milestoneGenerator.js",;
+const app = express();
 const app = express();
 const app = express();
 app.use(cors()),;
@@ -120,3 +122,4 @@ app.listen(port, () => {;
 
 
 });
+});});

@@ -43,6 +43,7 @@ import { Button } from "@/components/ui/button",
 
 
 interface ReviewsModerationTableProps {
+import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
@@ -171,6 +172,7 @@ export function ReviewsModerationTable({
   }
 
   },
+        variant: "destructive"})  },
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
@@ -183,6 +185,11 @@ export function ReviewsModerationTable({
   }
   },
 
+  const handleViewDetails = (review: Review) => {
+    setSelectedReview(review)
+    setViewDetailsOpen(true)
+
+  },
 
   const renderStars = (rating: number) => {
     return (
@@ -196,6 +203,19 @@ export function ReviewsModerationTable({
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
 
+interface ReviewsModerationTableProps {;
+  reviews: Review[],;
+  isLoading: boolean,;
+  onRefresh: () => void;
+}
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status}: {;
+      reviewId: string,;
+      status: ReviewStatus;
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -203,6 +223,7 @@ import { format } from "date-fns",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Review, ReviewStatus } from "@/types/reviews",;
+;
 import {;
   Table,;
   TableBody,;
@@ -356,6 +377,9 @@ export function ReviewsModerationTable({;
     switch (status) {;
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",;
 
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
       case "rejected":;
         return "bg-red-100 text-red-800 hover:bg-red-200",;
       default:;
@@ -367,6 +391,7 @@ export function ReviewsModerationTable({;
   const getInitials = (name:string) => {;
   },;
 
+  };
   const getInitials = (name: string) => {;
     return name;
       .split(" ");
@@ -385,6 +410,12 @@ export function ReviewsModerationTable({;
 
 
         .eq("id", reviewId);
+      .toUpperCase()
+};
+
+  if (isLoading) {;
+
+    return (        .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
     return (
@@ -461,6 +492,22 @@ export function ReviewsModerationTable({;
 
 
 import { useState } from './react';
+    );
+  }
+
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "approved" })
+};
+
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "rejected" })
+};
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review),;
+    setViewDetailsOpen(true)
+};
+
+  const renderStars = (rating: number) => {;import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
 import { format } from './date - fns';
@@ -512,6 +559,11 @@ if ( {) {
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
+      <div className="space-y-4">;
+        <div className="h - 12 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
       </div>);
   }
   // Check condition
@@ -522,6 +574,9 @@ if ( {) {
       <div className="py - 10 text - center">;
         <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;
         <p className="text - muted - foreground">;
+      <div className="py - 10 text-center">;
+        <h3 className="text - lg font - medium mb-2">No reviews to moderate</h3>;
+        <p className="text - muted-foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
   const handle_reject = (review_id: string) =>: any {
@@ -638,6 +693,10 @@ if ( {) {
                         {review.reviewer_profile?.display_name || "User"}
                       </span>;
                           : <User className="h-4 w-4" />}
+  return (    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;                          : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
                     )}
@@ -734,6 +793,8 @@ if ( {) {
 
 
                   {review && review.status === "pending" && (;
+                  {review && review.status === "pending" && (;
+                    <>;                  {review && review.status === "pending" && (;
                     <>;
                       <Button
                         size="sm"
@@ -774,6 +835,7 @@ if ( {) {
 
 
                         disabled={isPending}
+                        className="h-8 w-8 p-0"                        disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
                       </Button>;
@@ -790,6 +852,10 @@ if ( {) {
 
 
                         <MoreHorizontal className="h-4 w-4" />;
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent align="end">;
@@ -799,12 +865,23 @@ if ( {) {
 
 
 
+                      {review && review.status === "approved" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;
+                          Mark as rejected;
+                        </DropdownMenuItem>;
+                      )}
+                      {review && review.status === "rejected" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;
+                          Mark as approved;
+                        </DropdownMenuItem>;
+                      )}
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
             <TableHead > Status</TableHead>;
             <TableHead > Reports</TableHead>;
             <TableHead className="text - right">Actions</TableHead>;
+            <TableHead className="text-right">Actions</TableHead>;
           </TableRow>;
         </TableHeader>;
         <TableBody>;
@@ -813,6 +890,8 @@ if ( {) {
               <TableCell>;
                 <div className="flex items - center gap - 2">;
                   <Avatar className="h - 8 w - 8">;
+                <div className="flex items - center gap-2">;
+                  <Avatar className="h - 8 w-8">;
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
@@ -822,12 +901,15 @@ if ( {) {
                         {review.reviewer_profile?.display_name;
                           ? get_initials (review.reviewer_profile.display_name);
                           : <User className="h - 4 w - 4" />}
+                          : <User className="h - 4 w-4" />}
                       </AvatarFallback>)}
                   </Avatar>;
                   <div>;
                     {review.is_anonymous ? (
                       <span className="text - sm font - medium">Anonymous</span>) : (
                       <span className="text - sm font - medium">;
+                      <span className="text - sm font-medium">Anonymous</span>) : (
+                      <span className="text - sm font-medium">;
                         {review.reviewer_profile?.display_name || "User"}
                       </span>)}
                   </div>;
@@ -852,6 +934,8 @@ if ( {) {
               </TableCell>;
               <TableCell className="text - right">;
                 <div className="flex justify - end gap - 2">;
+              <TableCell className="text-right">;
+                <div className="flex justify - end gap-2">;
                   {review.status === "pending" && (
                     <>;
                       <Button;
@@ -862,6 +946,11 @@ if ( {) {
                         disabled={is_pending}
                       >;
                         <Check className="h - 4 w - 4 text - green - 500" />;
+                        className="h - 8 w - 8 p-0";
+                        on_click={() => handle_approve (review.id)}
+                        disabled={is_pending}
+                      >;
+                        <Check className="h - 4 w - 4 text - green-500" />;
                       </Button>;
                       <Button;
                         size="sm";
@@ -871,6 +960,11 @@ if ( {) {
                         disabled={is_pending}
                       >;
                         <X className="h - 4 w - 4 text - red - 500" />;
+                        className="h - 8 w - 8 p-0";
+                        on_click={() => handle_reject (review.id)}
+                        disabled={is_pending}
+                      >;
+                        <X className="h - 4 w - 4 text - red-500" />;
                       </Button>;
                     </>)}
                   <DropdownMenu>;
@@ -881,6 +975,9 @@ if ( {) {
                         className="h - 8 w - 8 p - 0";
                       >;
                         <MoreHorizontal className="h - 4 w - 4" />;
+                        className="h - 8 w - 8 p-0";
+                      >;
+                        <MoreHorizontal className="h - 4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent align="end">;
@@ -957,6 +1054,12 @@ if ( {) {
 
 
                     {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
+                      {review.status === "rejected" && (                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+        </TableBody>;
+      </Table>;
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}
@@ -1505,3 +1608,29 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 
 
 }
+                  </Avatar>;
+                  <div>;
+                    <div className="font-medium">;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? "Anonymous";
+                        : selectedReview && selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>;
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
+                      {selectedReview && selectedReview.status}
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+
+              <div className="border rounded-md p-3 bg-muted/20">;
+                <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;
+              </div>;
+
+              <div className="space-y-2">;
+                <h4 className="text-sm font-medium">Additional Ratings</h4>;
+                <div className="flex flex-wrap gap-2">;
+                  {selectedReview && selectedReview.communication_rating && (;
+                    <Badge variant="outline">;
+                      Communication: {selectedReview && selectedReview.communication_rating}/5;
+                    </Badge>;}

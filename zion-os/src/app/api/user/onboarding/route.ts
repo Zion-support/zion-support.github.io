@@ -1,6 +1,7 @@
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
@@ -23,10 +24,13 @@ export async function POST(request: NextRequest) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
           role: updatedUser && updatedUser.role,
+          onboardingCompleted: updatedUser && updatedUser.onboardingCompleted
+        }
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted
         }
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted
@@ -38,6 +42,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
     console.error("Onboarding completion error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
@@ -50,6 +55,8 @@ ursor/automate-test-improve-and-merge-code-646c
           name: updated_user.name,
           email: updated_user.email,
           role: updated_user.role,
+          onboarding_completed: updated_user.onboarding_completed
+        }
           onboarding_completed: updated_user.onboarding_completed
         }
           onboarding_completed: updated_user.onboarding_completed
@@ -68,11 +75,13 @@ ursor/automate-test-improve-and-merge-code-646c
       { error: 'Internal server error' },
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
 export async function POST(request: NextRequest) {;
   try {;
+    const session = await getServerSession();
     const session = await getServerSession();
     const session = await getServerSession();
     if (!session?.user?.email) {;
@@ -112,6 +121,9 @@ export async function POST(request: NextRequest) {;
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+
+
+ursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -148,7 +160,10 @@ export async function POST(request: NextRequest) { try {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       { status: 500 }
+      { status: 500 }
+>>>>>>> main
     );
   }
 }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

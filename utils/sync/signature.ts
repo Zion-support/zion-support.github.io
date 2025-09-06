@@ -8,6 +8,7 @@ import crypto from "crypto";
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export function getSyncSecret(): string | null {}
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
@@ -37,6 +38,7 @@ export function signPayload(
   return {
     signature,
     timestamp,
+    nonce
     nonce
     nonce
   };
@@ -76,6 +78,8 @@ import crypto from 'crypto';
   recover: (signature: string, message: string) => '';
 >>>>>>> main
   verify: (signature: string, message: string, address: string) => false,
+export function generateNonce(): string {
+  return crypto.randomBytes(16).toString("hex");  verify: (signature: string, message: string, address: string) => false,
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
 }
@@ -90,4 +94,5 @@ export function hashData(data: string): string {
 
 };
 
+}
 }

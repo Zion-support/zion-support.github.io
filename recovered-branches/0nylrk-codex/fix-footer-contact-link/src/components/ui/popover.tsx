@@ -1,5 +1,6 @@
 
 import * as React from "react"
+
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
@@ -14,6 +15,7 @@ const PopoverContent = React.forwardRef<
 
 
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
@@ -31,6 +33,7 @@ const PopoverContent = React.forwardRef<
         className
 
         className
+      className={cn(        className
       )}
       {...props}
     />;

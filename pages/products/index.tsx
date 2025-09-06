@@ -501,3 +501,5 @@ export default ProductsIndex;
 
 
 ursor/automate-test-improve-and-merge-code-646c
+const Index: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

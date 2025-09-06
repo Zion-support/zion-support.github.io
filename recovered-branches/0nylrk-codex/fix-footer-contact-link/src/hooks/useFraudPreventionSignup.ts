@@ -36,7 +36,7 @@ export function useFraudPreventionSignup() {;
     try {;
       const response = await fetch('https: //api.ipify.org?format=json');
       const response = await fetch('https: //api.ipify.org?format=json');
-      const data = await response.json(),;
+      const data = await response.json();
       return data.ip;
     } catch (error) {;
       console.error('Error getting IP:', error),;
@@ -87,6 +87,11 @@ export function useFraudPreventionSignup() {;
         // Create a fraud flag for admin review
         const { error } = await supabase && supabase.from('fraud_flags').insert({
           user_email: email;
+export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+  // Get the user's IP address (in a real app, you'd do this server-side)
+
+  const getIP = async (): Promise<string | undefined> => {
+    try {          user_email: email;
           content_type: 'signup'
           content_id: email, // Using email as content ID for signup attempts
           content_excerpt: `Signup attempt for ${email}`;
@@ -128,6 +133,23 @@ export function useFraudPreventionSignup() {;
         // If the check is very suspicious, block the signup
             title: "Signup blocked";
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+          reason: fraudCheck && fraudCheck.reasons.join();          reason: fraudCheck && fraudCheck.reasons.join();
+          ip_address: ipAddress;
+          timestamp: new Date().toISOString()
+          status: 'pending'
+        });          console && console.error('Error creating fraud flag:', error)
+        }
+        // Depending on how strict we want to be, we could block the signup
+        // If the check is very suspicious, block the signup
+
+        if (fraudCheck && fraudCheck.reasons.some(r => 
+          r && r.includes('Multiple accounts') || 
+          r && r.includes('suspicious email domain')
+
+        )) {
+          toast({
+            title: "Signup blocked",
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
             variant: "destructive"});
         }
         // Otherwise, allow but flag for review
@@ -184,6 +206,14 @@ export function useFraudPreventionSignup() {;
             title: "Signup blocked",;
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
             variant: "destructive"}),;
+            title: "Signup blocked",,
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
+            variant: "destructive"}),;
+        if (fraudCheck && fraudCheck.reasons.some(r => 
+          r && r.includes('Multiple accounts') || 
+          r && r.includes('suspicious email domain')
+        )) {
+          toast({
 import {checkSignupPatterns} from '@/services / fraud / signup_check';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from '@/hooks / use - toast';
@@ -274,6 +304,8 @@ if (||) {
 
   return {
 
+  return {
+  return {  return {
 
     isCheckingFraud;
 
@@ -401,3 +433,7 @@ status: 'pending'
 }
 
 
+}    isCheckingFraud;
+
+    checkFraudBeforeSignup}
+}

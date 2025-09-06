@@ -9,6 +9,7 @@ import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
   doc: jsPDF;
+export function addSkillsSection(  doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
@@ -34,6 +35,8 @@ export function addSkillsSection(;
 
 
   yPos += 8;
+  yPos += 8;
+  // Group skills by category  yPos += 8;
   // Group skills by category
     if (!acc[category]) {
       acc[category] = []
@@ -87,7 +90,7 @@ export function addSkillsSection(;
     doc.setFont('helveticabold'),;
     doc.text(category, 20, yPos),;
     doc.setFont('helveticanormal'),;
-    const skillsText = categorySkills.map(skill => skill.name).join(', '),;
+    const skillsText = categorySkills.map(skill => skill.name).join(', ');
     const skillLines = doc.splitTextToSize(skillsText, 160);
     doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines.length * 5) + 10;
@@ -105,6 +108,8 @@ export function addSkillsSection(;
 
 
   }
+  return yPos + 5
+  }, {} as Record<string, typeof skills>);  }
   return yPos + 5
 import {Skill} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -218,3 +223,4 @@ return yPos + 5
 
 
 }
+}}

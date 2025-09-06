@@ -59,6 +59,7 @@ export function WhitelabelRequestForm() {
       };
       
       // Submit to Supabase
+      }      // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
@@ -76,10 +77,12 @@ export function WhitelabelRequestForm() {
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
 
+  };
     }
 
   };
 
+  };
   };
 
 import React from 'react',;
@@ -212,8 +215,10 @@ export function WhitelabelRequestForm() {;
         title: 'Error creating tenant';
         description: error.message || 'Something went wrong'});
     }
-  },
+  }
 
+
+  },
 
   return (
     <Card className="w-full max-w-2xl">
@@ -231,6 +236,8 @@ export function WhitelabelRequestForm() {;
   }
 
   return (
+    }
+  }
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
@@ -340,6 +347,9 @@ if (throw error) {
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
+    <Card className="w - full max-w-2xl">;
+      <CardHeader>;
+        <CardTitle > Create White - Label Instance</CardTitle>;
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
@@ -348,6 +358,7 @@ if (throw error) {
         <Form {...form}>;
 
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
             <div className="space-y-4">;
               <FormField;
                 control={form.control}
@@ -458,6 +469,12 @@ if (throw error) {
                 name="primary_color";
 
 
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Brand Name</FormLabel>;                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Custom Domain (Optional)</FormLabel>;
+                    <FormControl>;
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Primary Brand Color</FormLabel>;
@@ -472,6 +489,8 @@ if (throw error) {
               />;
 
 
+                  </FormItem>;
+                )}
                   </FormItem>;
                 )}
               <FormField
@@ -509,6 +528,7 @@ if (throw error) {
 
 
                 <FormField
+                render={({ field }) => (                <FormField
                   control={form && form.control}
                   name="headline"
                       <FormControl>;
@@ -598,6 +618,16 @@ if (throw error) {
 
 
         <p>;
+                      <FormMessage />;                <FormField
+                  control={form.control}
+                  name="cta";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > CTA Button Text</FormLabel>;
+                      <FormControl>;
+                        <Input placeholder="Get Started" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;        <p>;
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
@@ -649,3 +679,5 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 }
 }
 ;
+    </Card>);
+}

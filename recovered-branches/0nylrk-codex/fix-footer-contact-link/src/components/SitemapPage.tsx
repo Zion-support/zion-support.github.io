@@ -9,6 +9,26 @@ import { AppLayout } from "@/layout/AppLayout";
 export const SitemapPage: React.FC = () => {
 
   return (
+import React from './react';
+import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
+import { Link  } from './react-router-dom';
+import { ChevronRight  } from './lucide-react';
+import { SEO  } from './SEO';
+import { AppLayout  } from '@/layout / AppLayout';
+
+export const SitemapPage: React.FC = () => {
+import React from 'react';
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';
+import {Link} from 'react-router-dom';
+import {ChevronRight} from 'lucide-react';
+import {SEO} from './SEO';
+import {AppLayout} from '@/layout/AppLayout';
+import React from 'react',
+import { completeSitemap, dynamicPaths } from '@/config/sitemap',
+import { Link } from 'react-router-dom',
+import { ChevronRight } from 'lucide-react',
+import { SEO } from './SEO',
+import { AppLayout } from '@/layout/AppLayout',  return (
     <AppLayout>
       <SEO
         title="Sitemap | Zion AI Marketplace"
@@ -192,3 +212,8 @@ export const SitemapPage: React.FC = () => {
   );
 };
 
+            </ul>;
+          </div>;
+        </div>;
+      </div>;  )
+};

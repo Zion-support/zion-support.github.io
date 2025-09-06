@@ -3,6 +3,7 @@ ursor/automate-test-improve-and-merge-code-646c
 'use client';
 >>>>>>> main
 
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -468,3 +469,4 @@ export default Header;
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export default Header;

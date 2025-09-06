@@ -36,6 +36,12 @@ const corsHeaders = {
 
 
 serve(async (req) => {
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -147,6 +153,10 @@ if ( {) {
 
 
 
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
@@ -171,6 +181,13 @@ if ( {) {
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:;
 Title: ${title}
+    
+
+;
+    const configuration = new Configuration({;
+      apiKey: Deno.env.get('OPENAI_API_KEY')}),;
+    const openai = new OpenAIApi(configuration);
+    const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
@@ -255,6 +272,15 @@ Format the response as a JSON object with the following structure:
         tags: []
         suggestedPrice: { min: 0, max: 0 }
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+    
+
+                        [null, responseText];
+      const jsonString = jsonMatch[1].trim();
+      parsedResponse = JSON && JSON.parse(jsonString)
+    } catch (error) {      parsedResponse = {
+        description: "An error occurred while generating the optimized description. Please try again.";
+        tags: []
+        suggestedPrice: { min: 0, max: 0 }
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
       
@@ -416,7 +442,15 @@ Format the response as a JSON object with the following structure:;
       JSON && JSON.stringify({ 
         error: "Failed to generate optimized listing content",
         details: error && error.message 
-      });
+
+        keyPoints: []
+      }
+    }
+    return new Response(      });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }      }
+    );
+  } catch (error) {});
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -434,6 +468,12 @@ Format the response as a JSON object with the following structure:;
     );
   }
 });
+      }
+    );
+  }
+});
+
+;
       JSON.stringify({
         generated: parsedResponse
 

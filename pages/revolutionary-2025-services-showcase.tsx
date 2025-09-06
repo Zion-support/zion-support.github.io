@@ -3,6 +3,122 @@
 
 
 
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight,
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code,
+  Phone, Mail, MapPin, ExternalLink, ChevronDown,
+  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
+} from 'lucide-react',
+
+// Import the new revolutionary services;
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',;
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',;
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const serviceCategories = [
+  {
+    id: 'ai-consciousness',
+    title: '🧠 AI Consciousness & Emotional Intelligence',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  },
+  {
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond',
+    icon: Atom,
+    color: 'from-blue-500 to-cyan-500',
+    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
+    gradient: 'from-blue-500/20 to-cyan-500/20'
+  },
+  {
+    id: 'space-tech',
+    title: '🚀 Space Technology & Satellite',
+    description: 'Space mission management and satellite operations',
+    icon: Rocket,
+    color: 'from-indigo-500 to-blue-500',
+    services: allServices.filter(s => s.category.includes('Space Technology')),
+    gradient: 'from-indigo-500/20 to-blue-500/20'
+  },
+  {
+    id: 'cybersecurity',
+    title: '🔒 Next-Generation Cybersecurity',
+    description: 'Quantum encryption and AI threat detection',
+    icon: Shield,
+    color: 'from-red-500 to-pink-500',
+    services: allServices.filter(s => s.category.includes('Cybersecurity')),
+    gradient: 'from-red-500/20 to-pink-500/20'
+  },
+  {
+    id: 'cloud-infrastructure',
+    title: '☁️ Quantum Cloud & Infrastructure',
+    description: 'Quantum-enhanced cloud computing and infrastructure',
+    icon: Cloud,
+    color: 'from-cyan-500 to-blue-500',
+    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
+    gradient: 'from-cyan-500/20 to-blue-500/20'
+  },
+  {
+    id: 'fintech',
+    title: '🏦 Financial Technology Revolution',
+    description: 'AI-powered trading and quantum risk management',
+    icon: DollarSign,
+    color: 'from-green-500 to-emerald-500',
+    services: allServices.filter(s => s.category.includes('Financial Technology')),
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  },
+  {
+    id: 'industrial-iot',
+    title: '🏭 Industrial IoT & Smart Manufacturing',
+    description: 'Zero downtime manufacturing and predictive maintenance',
+    icon: Building2,
+    color: 'from-gray-500 to-slate-500',
+    services: allServices.filter(s => s.category.includes('Industrial IoT')),
+    gradient: 'from-gray-500/20 to-slate-500/20'
+  },
+  {
+    id: 'edtech',
+    title: '🎓 Education Technology Revolution',
+    description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
+    icon: Users,
+    color: 'from-blue-500 to-cyan-500',
+    services: allServices.filter(s => s.category.includes('Education Technology')),
+    gradient: 'from-blue-500/20 to-cyan-500/20'
+  },
+  {
+    id: 'sustainability',
+    title: '🌱 Sustainability & Green Technology',
+    description: 'AI-powered environmental solutions for carbon neutrality',
+    icon: Globe,
+    color: 'from-green-500 to-emerald-500',
+    services: allServices.filter(s => s.category.includes('Sustainability')),
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  },
+  {
+    id: 'logistics',
+    title: '🚛 Logistics & Supply Chain',
+    description: '99.9% delivery accuracy and zero waste supply chain',
+    icon: Package,
+    color: 'from-orange-500 to-red-500',
+    services: allServices.filter(s => s.category.includes('Logistics')),
+    gradient: 'from-orange-500/20 to-red-500/20'
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -23,6 +139,7 @@ import {;
 // Import the new revolutionary services;
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
 const contactInfo = {;
   mobile: '+1 302 464 0950';
@@ -158,10 +275,22 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  }),
+  })
 
 
 
+  }
+}
+const serviceCategories = [
+  {
+    id: 'ai-consciousness'
+    title: ' AI Consciousness & Emotional Intelligence'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: allServices.filter(s => s.category.includes('AI Consciousness') |s.category.includes('Healthcare AI'))
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  }
   return (
     <>
       <Head>
@@ -243,7 +372,6 @@ import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {
   Search, Filter, Star, Users, TrendingUp,
   DollarSign, Clock, CheckCircle, ArrowRight,
   Brain, Rocket, Dna, Globe, Shield, Wifi,
@@ -703,6 +831,18 @@ function Revolutionary2025ServicesShowcase() {
                       <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - black / 90 border border - gray - 700 / 50 rounded - 2xl p - 6 h - full backdrop - blur - xl hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                         {/* Popular Badge */}
 
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </p>;
+            </div>;
+            {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
                 <motion.div
@@ -779,6 +919,11 @@ function Revolutionary2025ServicesShowcase() {
                             POPULAR;
                           </div>)}
 
+                        {service.popular && (
+                          <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            POPULAR
+                          </div>
+                        )}
                         {/* Service Icon */}
                         <div className="text - 4xl mb - 4">{service.icon}</div>;
 
@@ -789,6 +934,88 @@ function Revolutionary2025ServicesShowcase() {
 
 
 
+                        </h3>
+                        {/* Tagline */}
+                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                          {service.tagline}
+                        </p>
+                        {/* Price */}
+                        <div className="text-3xl font-bold text-white mb-4">
+                          {service.price}
+                          <span className="text-lg text-gray-400 font-normal">{service.period}</span>
+                        </div>
+                        {/* Features */}
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                        {/* Service Icon */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <div className="text-4xl mb-4">{service.icon}</div>
+                        {/* Service Title */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                          {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                        </h3>;
+                        {/* Tagline */}
+                        <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
+                          {service.tagline}
+
+                        </p>;
+
+                        {/* Price */}
+                        <div className="text - 3xl font - bold text - white mb - 4">;
+                          {service.price}
+
+                          <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
+                        </div>;
+
+                        {/* Features */}
+                        <div className="space - y-2 mb - 6">;
+                          <h4 className="text - sm font - semibold text - purple - 400">Key Features</h4>;
+                          <ul className="space - y-1">;
+                            {service.features.slice (0, 4).map ((feature, feature_index) => (
+                              <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
+                                <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
+                                {feature}
+
+                        <div className="space-y-2 mb-6">
+                          <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
+                          <ul className="space-y-1">
+                            {service.features.slice(0, 4).map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                              </li>;
+                            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </ul>;
+                        </div>;
+                        {/* Market Data */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -898,6 +1125,12 @@ function Revolutionary2025ServicesShowcase() {
                               <div className="flex items - center gap - 3 mb - 2">;
                                 <h3 className="text - xl font - bold text - white">{service.name}</h3>;
 
+                        {/* Contact Info */}
+                        {/* Contact Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
@@ -1050,6 +1283,30 @@ function Revolutionary2025ServicesShowcase() {
 
                                   </span>))}
 
+                                {service.popular && (
+                                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                                    POPULAR
+                                  </span>
+                                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                              </div>
+                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                            </div>
+                          </div>
+                          <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
+                              <ul className="space-y-1">
+                                {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                                    {feature}
+                                  </li>
+                                ))}
                                     {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1266,6 +1523,20 @@ function Revolutionary2025ServicesShowcase() {
 
 
 
+import Head from 'next/head',
+import { Search, Filter, Star, Users, TrendingUp;
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi;
+  Package, Bot, Car, Building2, Monitor, Cpu;
+  Zap, Atom, Database, Cloud, Lock, Code;
+  Phone, Mail, MapPin, ExternalLink, ChevronDown;
+  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
+ } from 'lucide-react';
+// Import the new revolutionary services
+import { revolutionary2025Services  } from '../data/revolutionary-2025-innovative-services';
+const allServices = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+                    setSelectedCategory('all')
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
@@ -1452,3 +1723,66 @@ function Revolutionary2025ServicesShowcase() {
 
 
 
+
+}
+
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation.;
+              </p>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto mb - 8">;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <Phone className="w - 8 h - 8 text - purple - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Call Us</h3>;
+                  <p className="text - gray - 300 mb - 3">{contact_info.mobile}</p>;
+                  <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`} className="text - purple - 400 hover:text - purple - 300">;
+                    Call Now →;
+                  </a>;
+                </div>;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <Mail className="w - 8 h - 8 text - blue - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Email Us</h3>;
+                  <p className="text - gray - 300 mb - 3">{contact_info.email}</p>;
+                  <a href={`mailto:${contact_info.email}`} className="text - blue - 400 hover:text - blue - 300">;
+                    Send Email →;
+                  </a>;
+                </div>;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Visit Us</h3>;
+                  <p className="text - gray - 300 mb - 3 text - sm">{contact_info.address}</p>;
+                  <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - green - 400 hover:text - green - 300">;
+                    Get Directions →;
+                  </a>;
+                </div>;
+              </div>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact">;
+                  <button className="bg - gradient - to - r from - purple - 500 to - blue - 600 hover:from - purple - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - lg font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
+                    Start Your Transformation;
+                  </button>;
+                </Link>;
+                <Link href={contact_info.website}>;
+                  <button className="px - 8 py - 4 border border - gray - 600 text - gray - 300 rounded - lg hover: border - purple - 500 hover:text - purple - 400 transition - all duration - 300 text - lg">;
+                    Visit Website;
+                  </button>;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </>);
+}
+
+
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

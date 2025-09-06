@@ -6,6 +6,11 @@ interface MarkdownProps {
   content: string;
   className?: string;
 
+import React from "react",
+import ReactMarkdown from "react-markdown",
+import { cn } from "@/lib/utils",interface MarkdownProps {
+  content: string;
+  className?: string;
 }
 export function Markdown({ content, className }: MarkdownProps) {
   return (
@@ -17,6 +22,13 @@ export function Markdown({ content, className }: MarkdownProps) {
 
   );
 }
+  )
+import React from "react",;
+import ReactMarkdown from "react-markdown",;
+import { cn } from "@/lib/utils",;
+interface MarkdownProps {;
+  content: string,;
+  className?: string;}
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
   return (
@@ -54,15 +66,14 @@ function Markdown() {
 
 
   )
+  )
 
 }
 
 ;
 
+;
 
-import React from "react",;
-import ReactMarkdown from "react-markdown",;
-import { cn } from "@/lib/utils",;
 ;
 interface MarkdownProps {;
   content:string,;

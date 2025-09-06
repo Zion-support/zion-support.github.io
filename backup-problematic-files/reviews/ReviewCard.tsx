@@ -75,7 +75,7 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
         )}
       </div>;
     </div>;
-  );
+  )
 };
 export default ReviewCard;
 > Report abuse </button> </div>);
@@ -105,14 +105,14 @@ const ReviewCard: React.FC < Props> = ({ review, on_report }) => {
           </span>;
         </div>;
         <button;
-          className='text - xs text - red - 500 hover:underline'          on_click={() => on_report && on_report (review.id)}    <div className="enhanced - card hover: shadow - lg transition - shadow">;
-      <div className="flex items - center justify - between mb - 2">;
-        <div className="flex items - center gap - 2">;
+          className='text - xs text - red - 500 hover:underline'          on_click={() => on_report && on_report (review.id)}    <div className="enhanced - card hover: shadow-lg transition-shadow">;
+      <div className="flex items - center justify-between mb-2">;
+        <div className="flex items-center gap-2">;
           <StarRating value={review.rating} on_change={() => {}} read_only size={18} />;
-          <span className="text - sm text - gray - 500">{new Date (review.created_at).toLocaleDateString ()}</span>;
+          <span className="text - sm text-gray-500">{new Date (review.created_at).toLocaleDateString ()}</span>;
         </div>;
         <button;
-          className="text - xs text - red - 500 hover:underline";
+          className="text - xs text-red-500 hover:underline";
         >;
           Report abuse;
         </button>;
@@ -141,10 +141,10 @@ const ReviewCard: React.FC < Props> = ({ review, on_report }) => {
 }
 ;
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill - success">Would work again</span>)}
+          <span className="pill pill-success">Would work again</span>)}
       </div>;
-      <p className="text - sm leading - 6">{review.text}</p>;
-      <div className="flex flex - wrap gap - 2 mt - 3">;
+      <p className="text-sm leading-6">{review.text}</p>;
+      <div className="flex flex - wrap gap-2 mt-3">;
         {typeof review.categories?.communication === 'number' && (
           <span className="pill">Communication: {review.categories.communication}★</span>)}
         {typeof review.categories?.qualityOfWork === 'number' && (

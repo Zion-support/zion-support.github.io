@@ -66,6 +66,12 @@ export const jobSchema = z.object({
 export const jobSchema = z.object({
   title: z.string().min(3, {;
     message: "Title must be at least 3 characters."});
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+import { z } from "zod",import {z} from "zod";
+export const jobSchema = z.object({
+  title: z.string().min(3, {;
+    message: "Title must be at least 3 characters."});
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
@@ -123,6 +129,7 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 
 
 export type JobSchemaType = z.infer<typeof jobSchema>,
+import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
 import { z } from "zod",;
 export const jobSchema = z.object({;
   title: z.string().min(3, {;
@@ -134,6 +141,7 @@ export const jobSchema = z.object({;
   job_type: z.string().min(3, {;
     message: "Job type must be at least 3 characters."}),;
   salary_range: z.string().optional(),;
+  salary_range: z.string().optional(),,
   description: z.string().min(10, {;
     message: "Description must be at least 10 characters."}),;
   responsibilities: z.string().optional(),;
@@ -152,3 +160,5 @@ export const jobSchema = z.object({;
 export type JobSchemaType = z.infer<typeof jobSchema>;
 
 
+export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>;

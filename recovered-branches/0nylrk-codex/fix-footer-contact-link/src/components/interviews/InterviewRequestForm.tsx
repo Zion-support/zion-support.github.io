@@ -85,6 +85,8 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       toast({;
         title: "Authentication required",;
         description: "Please log in to schedule an interview",;
+        title: "Authentication required",,
+  description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
 
@@ -186,6 +188,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
       toast({
+      // Calculate end time based on duration      toast({
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
@@ -195,6 +198,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
       console.error("Failed to schedule interview:", error),
+      console.error("Failed to schedule interview:", error),      console.error("Failed to schedule interview:", error),
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
@@ -362,12 +366,16 @@ if ( {) {
       toast({;
         title: "Interview requested",;
         description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+        title: "Interview requested",,
+  description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
       onClose();
     } catch (error) {;
       console && console.error("Failed to schedule interview:", error);
       toast({;
         title: "Failed to schedule interview",;
         description: "An error occurred while scheduling the interview. Please try again.",;
+        title: "Failed to schedule interview",,
+  description: "An error occurred while scheduling the interview. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -421,6 +429,18 @@ if ( {) {
           <div>;
             <h3 className="text - lg font - medium text - white">{talent.full_name}</h3>;
             <p className="text - sm text - zion - slate - light">{talent.professional_title}</p>;
+      <form on_submit={form.handle_submit (on_submit)} className="space-y-5">;
+        <div className="flex items - center mb-6">;
+          <div className="flex - shrink - 0 h - 12 w - 12 rounded - full overflow - hidden mr-4">;
+            <img;
+              src={talent.profile_picture_url || "/placeholder.svg"}
+              alt={talent.full_name}
+              className="h - full w - full object-cover";
+            />;
+          </div>;
+          <div>;
+            <h3 className="text - lg font - medium text-white">{talent.full_name}</h3>;
+            <p className="text - sm text - zion - slate-light">{talent.professional_title}</p>;
           </div>;
         </div>;
         <FormField;
@@ -430,6 +450,26 @@ if ( {) {
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
 
+              <FormControl>;
+                <Input placeholder="Brief title for the interview" {...field} />;
+              </FormControl>;
+              <FormMessage />;                          "w-full pl-3 text-left font-normal"
+                          !field && field.value && "text-muted-foreground"
+                        )}>;
+                        {field && field.value ? (;
+                          format(field && field.value, "PPP");
+                        ) : (;
+                          <span>Pick a date</span>;
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                      </Button>;
+                    </FormControl>;
+                  </PopoverTrigger>;
+                  <PopoverContent className="w-auto p-0" align="start">;
+                    <Calendar
+                      mode="single"
+                      selected={field && field.value}
+                      onSelect={field && field.onChange}
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -496,7 +536,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
       // Combine date and time;
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time} 00`;
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time} 00`;
-      const scheduledDate = new Date(dateTimeString),;
+      const scheduledDate = new Date(dateTimeString);
       ;
       // Calculate end time based on duration;
       const durationMinutes = parseInt(values.duration),;
@@ -724,6 +764,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       toast({;
         title: "Authentication required",;
         description: "Please log in to schedule an interview",;
+        title: "Authentication required",,
+  description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
     }
@@ -749,12 +791,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       toast({;
         title: "Interview requested",;
         description: `Your interview request with ${talent.full_name} has been sent.`}),;
+        title: "Interview requested",,
+  description: `Your interview request with ${talent.full_name} has been sent.`}),;
       onClose();
     } catch (error) {;
       console.error("Failed to schedule interview:", error),;
       toast({;
         title: "Failed to schedule interview",;
         description: "An error occurred while scheduling the interview. Please try again.",;
+        title: "Failed to schedule interview",,
+  description: "An error occurred while scheduling the interview. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -865,6 +911,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
                     <Calendar;
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";                    <Calendar;
                       mode="single";
                       selected={field.value}
                       onSelect={field.onChange}
@@ -911,6 +960,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
 
 
+              <FormItem>;
+                <FormLabel > Time</FormLabel>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
@@ -919,6 +971,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+          />;
+        </div>;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField
             control={form && form.control}
             name="duration"
@@ -929,6 +985,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
                   <SelectContent className="max - h-[300px]">;
+                  <SelectContent className="max-h-[300px]">;
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
@@ -940,6 +997,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <FormField;
             control={form.control}
             name="duration";
@@ -1284,6 +1342,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 />;
               </FormControl>;
               <FormMessage />;
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+              </FormControl>;
+              <FormMessage />;
+
+        />;
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
             Cancel;
@@ -1293,6 +1357,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
       </form>;
     </Form>;
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+  );
+}
             )}
           />
         )}
@@ -1302,6 +1372,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
+        <div className="flex justify - end gap - 4 pt-4">;
           <Button variant="outline" on_click={on_close} type="button">;
             Cancel;
           </Button>;
@@ -1315,6 +1386,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 }
 ;
 
+}
   ),; interface InterviewRequestFormProps {
   talent: TalentProfile;
 onClose: () => void;

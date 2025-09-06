@@ -29,8 +29,9 @@ interface SustainabilityProps {;
 }
 
 }
-export default function Sustainability(): any ({ }: SustainabilityProps) {;
+export default function Sustainability(): any ({}: SustainabilityProps) {;
   return (
+  // Add props here as needed;  return (
     <div>;
       <h1>Sustainability</h1>;
       <p>This component is currently under development.</p>;

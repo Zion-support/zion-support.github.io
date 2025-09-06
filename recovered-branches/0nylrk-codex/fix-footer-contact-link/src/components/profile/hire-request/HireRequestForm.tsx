@@ -14,6 +14,9 @@ import {BudgetFields} from "./BudgetFields";
   userDetails?: {;
     name?: string;
     email?: string;
+export interface HireRequestFormProps {;
+  talent: TalentProfile,;
+  onClose: () => void,;
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -74,6 +77,15 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   
 
 
+  initialJobTitle?: string;  onSubmitSuccess?: () => void
+}
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
+    initialJobTitle;
+    userDetails
+  });    initialJobTitle;
+    userDetails
+  });
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -374,3 +386,4 @@ return (<Form {
 }
 
 
+          </Button>

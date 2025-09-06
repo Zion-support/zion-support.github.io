@@ -21,6 +21,7 @@ export function SidebarMenu({
     </ul>);
 }
 
+}
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -51,6 +52,9 @@ import React from "react",
 import { cn } from "@/lib/utils",
 
 
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
+
+
 import {cn} from "@/lib/utils";
 interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
   className?: string;
@@ -63,3 +67,5 @@ interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElemen
 }
 
 
+}
+;

@@ -33,6 +33,9 @@ type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
 export function useSitemap() {;
   const { user, isAuthenticated } = useAuth();
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
   const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
@@ -60,6 +63,9 @@ export function useSitemap() {;
   }
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
+  const findRouteByPath = (path: string): SitemapItem | undefined => {}
+    return true
+  }  function isValidUserType(type: string): boolean {
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
   return {
@@ -71,6 +77,8 @@ import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
 // Define the allowed user types;
+    canAccessRouteimport {use_auth} from './use_auth';
+import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
 export /**
@@ -161,6 +169,7 @@ export function useSitemap() {;
   const { user, isAuthenticated } = useAuth(),;
   // Get routes that the current user can access;
   // Cast userType to UserType or pass undefined if not valid;
+  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined;
   const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined;
   const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;

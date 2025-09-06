@@ -1,6 +1,10 @@
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
+  const router = useRouter()
+>>>>>>> main
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -49,6 +53,8 @@ export function SupportWidget() {
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
 
+                  "font-semibold",
+                  theme === "dark" ? "text-white" : "text-gray-800",
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -73,6 +79,22 @@ const [isOpen, setIsOpen] = useState(false)
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
+import { ChatBotPanel } from './ChatBotPanel';
+import { MessageSquare, Info, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useTheme } from '@/hooks/useTheme';
+
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  const router = null;
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+              : "bg-white border border-gray-200"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -86,6 +108,7 @@ const [isOpen, setIsOpen] = useState(false)
 ursor/automate-test-improve-and-merge-code-646c
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
+>>>>>>> main
                 )}
               >
 
@@ -107,7 +130,6 @@ import React, { useState } from "react",;
 import { useRouter } from "next/router",;
 import { Button } from "@/components/ui/button",;
 import { ChatBotPanel } from "./ChatBotPanel",;
-import { MessageSquare, Info, X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { useTheme } from "@/hooks/useTheme",;
 export function SupportWidget() {;
@@ -151,6 +173,8 @@ export function SupportWidget() {;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               <Button
+>>>>>>> main
+              <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -184,3 +208,9 @@ ursor/automate-test-improve-and-merge-code-646c
               <Button
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+;
+;
+              <Button
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

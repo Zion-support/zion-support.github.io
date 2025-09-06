@@ -95,6 +95,9 @@ export interface BulkAddSkillsProps {
 ;
 ;
 
+  defaultCategory?: string;
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
 
 ;
 ;

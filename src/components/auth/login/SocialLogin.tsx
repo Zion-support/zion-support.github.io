@@ -1,11 +1,19 @@
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
 import { Facebook, Twitter, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,6 +31,9 @@ export function SocialLogin() {
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
+        </div>
+        <div className="relative flex justify-center text-sm">
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
 return (
     <div className='mt-6'>
       <div className='relative'>
@@ -35,6 +46,10 @@ return (
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
+        </div>
+        <div className='relative flex justify-center text-sm'>
+          <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
+>>>>>>> main
             Or continue with
           </span>
         </div>
@@ -43,11 +58,6 @@ return (
 
 
 
-import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Web3Login } from './Web3Login';
-import { useState } from 'react';
-import { openAuthPopup } from '@/api/authSocial';
 export function SocialLogin() {;
   const [isLoading, setIsLoading] = useState(false);
 
@@ -92,6 +102,9 @@ function SocialLogin() {
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+>>>>>>> main
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"
@@ -104,6 +117,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -132,6 +146,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -149,10 +165,18 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+            </svg>
+          )}
+        </Button>;
+        <Button
+>>>>>>> main
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup("facebook")}
+
+
 
 
 
@@ -169,6 +193,7 @@ ursor/automate-test-improve-and-merge-code-646c
           onClick={() => openAuthPopup('facebook')}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
@@ -186,6 +211,10 @@ ursor/automate-test-improve-and-merge-code-646c
           onClick={() => openAuthPopup('twitter')}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          onClick={() => openAuthPopup("twitter")}
+          onClick={() => openAuthPopup("twitter")}
+          onClick={() => openAuthPopup('twitter')}
+>>>>>>> main
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
@@ -197,6 +226,10 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+>>>>>>> main
         </Button>
         <Web3Login />
       </div>
@@ -269,11 +302,13 @@ export function SocialLogin() {;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
 
+
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
+
 
 >>>>>>> main
 }
@@ -339,3 +374,7 @@ export function SocialLogin() {;
 }
 }
 ;
+}
+;
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

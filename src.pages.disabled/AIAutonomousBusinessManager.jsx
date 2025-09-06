@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface AIAutonomousBusinessManagerProps {
   // Add props here as needed
-export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessManagerProps) {
+
+}
+
+export default function AIAutonomousBusinessManager({}: AIAutonomousBusinessManagerProps) {
   return (
     <div>
       <h1>AIAutonomousBusinessManager</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/AIAutonomousBusinessManager.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessMan
 }
 }
 }
+:temp_exclude/src.pages.disabled/AIAutonomousBusinessManager.jsx

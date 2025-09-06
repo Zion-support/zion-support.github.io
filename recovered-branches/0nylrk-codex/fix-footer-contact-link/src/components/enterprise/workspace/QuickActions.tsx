@@ -57,6 +57,12 @@ export function QuickActions() {
     }
     },
 
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",      color: "bg-blue-100 dark:bg-blue-900/20"
+    }
+    },
 
     {
       id: "schedule"
@@ -123,6 +129,7 @@ export function QuickActions() {;
                 </div>;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;              </div>;
             </Button>;
           ))}
         </div>;
@@ -202,6 +209,9 @@ function QuickActions() {
 
 
 
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-4">;
+          {actions.map (action => (
+          {actions.map(action => (;
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -225,4 +235,6 @@ function QuickActions() {
 }
 
 
+}
+}
 }

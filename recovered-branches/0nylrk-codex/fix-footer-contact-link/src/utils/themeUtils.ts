@@ -132,7 +132,7 @@ export function applyThemeColors(colors: ThemeColors) {;
 // Apply theme colors to document CSS variables;
 
 export function applyThemeColors(colors: ThemeColors) {;
-  const root = document.documentElement,;
+  const root = document.documentElement;
   root.style.setProperty('--primary-color', colors.primaryColor),;
   root.style.setProperty('--background-color', colors.backgroundColor),;
   root.style.setProperty('--text-color', colors.textColor),;
@@ -148,6 +148,9 @@ export function applyThemeColors(colors: ThemeColors) {;
 
 
 }
+  switch (preset) {
+    case 'dark':;
+      return {}
 export /**
  * applyThemeColors - Function description
  */
@@ -241,3 +244,7 @@ export function applyThemeColors(colors:ThemeColors) {;
 ;
 
 
+  // Set background and text colors on body;
+  document.body.style.background_color = colors.background_color;
+  document.body.style.color = colors.text_color;
+}

@@ -1,5 +1,10 @@
 
 
+
+
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({testDir:'tests/e2e';
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -10,12 +15,16 @@ export default defineConfig({;
 
 
 
+
+
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
     baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
     trace:'on-first-retry'},;
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -32,6 +41,7 @@ export default defineConfig({;
     }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     {name:'Mobile Chrome';
       use:{;
@@ -45,7 +55,6 @@ export default defineConfig({;
     ['list'],;
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 }),;import { defineConfig, devices } from "@playwright/test";
-import { defineConfig, devices } from '@playwright/test';
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
   },
@@ -64,6 +73,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
+      }
+    }}    },
+ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Desktop Firefox",
       use: {
@@ -74,6 +86,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
+      }
+    }}    },
+ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Desktop Safari",
       use: {
@@ -85,6 +100,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
+      }
+    }}    }}    },
+ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Mobile Chrome",
       use: {
@@ -96,6 +114,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
+      }
+    }}    },
+ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Mobile Safari",
       use: {
@@ -136,6 +157,16 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
   ]});        browserName: 'chromium';
+    {name:'Mobile Chrome';
+      use:{;
+        browserName:'chromium';
+  ]
+  ]
+        browserName: "webkit",
+        ...devices["iPhone 12"]}}],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]});        browserName: 'chromium';
         channel: 'chrome'}
     };
     {
@@ -164,6 +195,12 @@ export default define_config ({
   use:{
     baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace:'on - first - retry'},
+;
+export default define_config ({
+  test_dir:'tests / e2e';
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace:'on - first - retry'};
   projects:[;
     {
       name:'Desktop Chrome',
@@ -187,6 +224,7 @@ export default define_config ({
         browser_name:'chromium',
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         ...devices['Pixel 5']}
     },
     {
@@ -200,6 +238,7 @@ export default define_config ({
 
 ]
 
+]
 ]
   testDir: 'tests/e2e',;
   use: {;
@@ -260,6 +299,7 @@ export default define_config ({
 }
   ],;
   reporter: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ['list'];
 
     {
@@ -272,6 +312,9 @@ export default define_config ({
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
+    ['list'];
+    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
+});import { defineConfig, devices } from "@playwright/test";
     baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'
     trace: 'on-first-retry'
   }
@@ -279,6 +322,11 @@ export default define_config ({
     {
       name: "Desktop Chrome"
       use: {}
+      use: {
+        browserName: 'chromium'
+        channel: 'chrome'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
     }
     {
       name: "Desktop Firefox"
@@ -311,6 +359,75 @@ export default define_config ({
       use: {
 
 
+export default defineConfig({
+  testDir: 'tests/e2e';
+  use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace: 'on-first-retry'},
+  projects: [
+    {
+      name: 'Desktop Chrome';
+      use: {
+        browserName: 'chromium';
+        channel: 'chrome'}
+    },
+    {
+      name: "Desktop Firefox",
+      use: {
+        browserName: 'firefox'
+      }
+    },
+    {
+      name: "Desktop Safari",
+      use: {
+        browserName: 'webkit'
+      }
+    },
+    {
+      name: "Mobile Chrome",
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5']
+      }
+    },
+    {
+      name: "Mobile Safari",
+      use: {
+        browserName: 'webkit',
+        ...devices['iPhone 12']
+      }
+    }
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      use: {
+        browser_name: 'firefox';
+        browserName: 'firefox'
+        browser_name: 'firefox';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+    }
+    {
+
+      name: "Desktop Safari"
+
+      name: 'Desktop Safari';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      use: {
+        browser_name: 'webkit';
+        browserName: 'webkit'
+        browser_name: 'webkit';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+    }
+    {
+
+      name: "Mobile Chrome"
+      use: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         browser_name: 'chromium',
         ...devices['Pixel 5'];
@@ -324,6 +441,9 @@ export default define_config ({
         browser_name: 'chromium',
         ...devices['Pixel 5'];
 
+        browserName: 'chromium'
+        ...devices['Pixel 5']
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     }
     {
@@ -332,6 +452,8 @@ export default define_config ({
 
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         browser_name: 'webkit',
         ...devices['i_phone 12'];
 
@@ -345,6 +467,8 @@ export default define_config ({
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
     ['list'];
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
@@ -354,12 +478,16 @@ export default define_config ({
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
@@ -381,3 +509,25 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      name: 'Mobile Chrome';
+      use: {
+        browserName: 'chromium';
+        ...devices['Pixel 5']}
+    },
+    {
+      name: 'Mobile Safari';
+      use: {
+        browserName: 'webkit';
+        ...devices['iPhone 12']}
+    }
+  ]
+  reporter: [
+    ['list'];
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+    ['list']
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

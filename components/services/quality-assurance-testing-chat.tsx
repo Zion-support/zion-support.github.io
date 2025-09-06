@@ -38,6 +38,7 @@ export default QualityAssuranceTestingChat;
 
 
 
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -55,6 +56,7 @@ const QualityAssuranceTestingChat: NextPage = () => {
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -79,6 +81,7 @@ const QualityAssuranceTestingChat: NextPage = () => {
 export default QualityAssuranceTestingChat;
 ;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <div>
       <Head>
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
@@ -122,3 +125,4 @@ export default QualityAssuranceTestingChat;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -113,6 +113,10 @@ export default function MicroCrm() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function MicroCrm() {;
+  return (
+
+
     <>;
       <Head>;
         <title>Micro CRM (Multi-tenant) — Zion Tech Group</title>;

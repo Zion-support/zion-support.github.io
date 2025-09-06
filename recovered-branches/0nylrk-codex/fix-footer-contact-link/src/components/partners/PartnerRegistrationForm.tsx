@@ -80,6 +80,9 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 
 
 
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -126,6 +129,7 @@ export function PartnerRegistrationForm() {;
   const { user } = useAuth();
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
       name: "",;
       website: "",;
@@ -180,6 +184,7 @@ export function PartnerRegistrationForm() {;
       return true;
     }
     }
+      .select('id');    }
     setIsSubmitting(true);
     try {;
       // Check if they already have a partner profile;
@@ -298,12 +303,26 @@ if (return) {
 
             social_media: {
       // Insert new partner profile;
+            social_media: {      // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
           {;
 
 
+            user_id: user && user.id,;
+            name: data && data.name,;
+            website: data && data.website || null,;
+            social_media: {;
+              twitter: data && data.twitter || null,;
+              instagram: data && data.instagram || null,;
+              youtube: data && data.youtube || null,;
+              linkedin: data && data.linkedin || null},;
+            niche: data && data.niche,;
+            audience_size: data && data.audience_size,;
+            payout_method: data && data.payout_method,;
+            bio: data && data.bio,;
+            status: 'pending', // Partners need approval;
 
           }
         ]);
@@ -358,6 +377,9 @@ if (return) {
 
 
       toast({
+      if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
+      }
+    } catch (error: any) {      toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
 
@@ -367,6 +389,7 @@ if (return) {
 
 
     }
+      setIsSubmitting(false)    }
   }
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -383,6 +406,14 @@ if (return) {
                 name="name"
 
 
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name / Brand</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your name or brand name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
         ]);
         .select(),;
       if (error) throw error,;
@@ -477,6 +508,7 @@ if ( {) {
   }
   return (
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
+    <Card className="bg - zion - blue - dark border - zion - blue-light">;
       <CardHeader>;
         <CardTitle > Partner Registration</CardTitle>;
         <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
@@ -578,6 +610,9 @@ if ( {) {
                       <FormLabel>Twitter (Optional)</FormLabel>;
 
 
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField;
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -588,6 +623,14 @@ if ( {) {
                 <FormField;
 
 
+                />;
+
+                <FormField
+                  control={form && form.control}
+                  name="instagram"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Instagram (Optional)</FormLabel>;
                 />;
                 <FormField;
 
@@ -673,6 +716,8 @@ if ( {) {
 
 
                       <FormControl>;
+
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
@@ -702,6 +747,11 @@ if ( {) {
 
 
                 <FormField
+                />;
+              </div>;
+
+              <FormField
+                control={form && form.control}                <FormField
                   control={form && form.control}
                   name="audience_size"
                   render={({ field }) => (;
@@ -711,6 +761,7 @@ if ( {) {
                   </FormItem>)}
               />;
               <div className="grid sm:grid - cols - 2 gap - 4">;
+              <div className="grid sm:grid - cols - 2 gap-4">;
                 <FormField;
                   control={form.control}
                   name="audience_size";
@@ -870,6 +921,8 @@ if ( {) {
                     <FormMessage />;
 
 
+            <Button 
+              type="submit" 
 
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
@@ -1000,5 +1053,13 @@ data: existingCode
 };
 }
 
+
+}
+              className="w - full bg - zion - purple hover:bg - zion - purple-dark";
+              disabled={is_submitting}
+            >;
+              {is_submitting ? "Submitting..." : "Submit Application"}
+};
+}
 
 }

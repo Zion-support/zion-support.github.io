@@ -32,6 +32,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 
 
+
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -97,6 +98,7 @@ export function ApplicationActions({
 }: ApplicationActionsProps) {
   return (
             size="sm"
+  onViewApplication,            size="sm"
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
               <Loader2 className="h-4 w-4 animate-spin" />;
@@ -204,6 +206,9 @@ export function ApplicationActions({;
 
 
 
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
 
       <Button 
         variant="default" 
@@ -284,6 +289,7 @@ interface ApplicationActionsProps {;
 
 
 ;
+  );
 
       ;
       <Button ;

@@ -51,6 +51,7 @@ const OpenAppRedirect: React.FC = () => {
 
 
           setStatus('timeout');
+      // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
           } else if (isiOS) {;
@@ -78,7 +79,7 @@ const OpenAppRedirect: React.FC = () => {;
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting'),;
   useEffect(() => {;
     const attemptAppOpen = async () => {;
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent),;
+      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       const isAndroid = /Android/.test(navigator.userAgent),;
       // App scheme URLs (these would be your actual app's URL schemes);
       const appScheme = "zion: //",;
@@ -256,6 +257,13 @@ const OpenAppRedirect:React.FC = () => {;
 
         ;
 
+          }    
+    attemptAppOpen()
+  }, [navigate]),
+          noindex={true}
+      />;
+      <div className="text-center p-8">;
+        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
         {status === 'redirecting' && (;
           <>;
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>;
@@ -306,6 +314,8 @@ export default OpenAppRedirect;
 
 
       </div>;
+  )
+};      </div>;
     </div>;
   );
 },;
@@ -389,3 +399,8 @@ export default OpenAppRedirect;
 export default OpenAppRedirect;
 
 
+      }
+export default OpenAppRedirect;export default OpenAppRedirect;
+      }
+export default OpenAppRedirect;
+;

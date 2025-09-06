@@ -28,6 +28,7 @@ import { format } from 'date-fns',;
 /**;
 
  * Formats a date for PDF display;
+import {format} from 'date-fns'; * Formats a date for PDF display;
  * @param date Date or string to format;
  * @returns Formatted date string;
  */;
@@ -56,4 +57,6 @@ export function formatDate(date: Date | string | undefined): string {;
 }
 }
 }
+}
+}}
 }

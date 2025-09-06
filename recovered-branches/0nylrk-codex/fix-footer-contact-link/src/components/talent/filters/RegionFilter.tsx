@@ -57,6 +57,12 @@ export function RegionFilter({
 
 
 import { ChevronDown, ChevronUp } from "lucide-react",;
+const REGION_OPTIONS = [
+  { id: "North America", label: "North America" }
+  { id: "Europe", label: "Europe" }
+  { id: "Asia", label: "Asia" }
+  { id: "South America", label: "South America" }
+  { id: "Australia", label: "Australia" }import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
 const REGION_OPTIONS = [;
@@ -216,3 +222,4 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   { id: "Africa", label: "Africa" }
 ];
 ;
+  );

@@ -32,13 +32,13 @@ const services = [
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
-    title: 'Smart Factory Solutions,',;
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+    title: 'Smart Factory Solutions,',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Smart Factory Solutions',;
-    description: 'IoT-enabled manufacturing systems for intelligent production management.',;
+    title: 'Smart Factory Solutions',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
     icon: Settings,;
     features: [,;
       'Real-time production monitoring,',;
@@ -48,8 +48,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Predictive Maintenance AI,',;
-    description: 'AI-powered systems to predict and prevent equipment failures.,',;
+    title: 'Predictive Maintenance AI,',,
+  description: 'AI-powered systems to predict and prevent equipment failures.,',;
     icon: Brain,;
     features: [,;
       'Equipment health monitoring,',;
@@ -59,8 +59,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'IoT Sensor Networks,',;
-    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+    title: 'IoT Sensor Networks,',,
+  description: 'Connected sensor systems for comprehensive factory monitoring.,',;
     icon: Cpu,;
     features: [,;
       'Environmental monitoring,',;
@@ -70,8 +70,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Quality Control Systems,',;
-    description: 'Automated quality assurance using computer vision and AI.,',;
+    title: 'Quality Control Systems,',,
+  description: 'Automated quality assurance using computer vision and AI.,',;
     icon: Shield,;
     features: [,;
       'Visual inspection systems,',;
@@ -81,8 +81,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Supply Chain Optimization,',;
-    description: 'AI-driven supply chain management for improved efficiency.,',;
+    title: 'Supply Chain Optimization,',,
+  description: 'AI-driven supply chain management for improved efficiency.,',;
     icon: BarChart3,;
     features: [,;
       'Demand forecasting,',;
@@ -92,8 +92,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Digital Twin Technology,',;
-    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+    title: 'Digital Twin Technology,',,
+  description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
     icon: Database,;
     features: [,;
       '3D factory modeling,',;
@@ -105,29 +105,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Increased Efficiency,',;
-    description: 'Automated processes and AI optimization improve production efficiency.,',;
+    title: 'Increased Efficiency,',,
+  description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
 ];
 const benefits = [;
   {;
-    title: 'Increased Efficiency',;
-    description: 'Automated processes and AI optimization improve production efficiency.',;
+    title: 'Increased Efficiency',,
+  description: 'Automated processes and AI optimization improve production efficiency.',;
     icon: Activity;
   },;
   {}
-    title: 'Reduced Downtime,',;
-    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    title: 'Reduced Downtime,',,
+  description: 'Predictive maintenance prevents unexpected equipment failures.,',;
     icon: Wrench,;
   },;
   {}
-    title: 'Better Quality,',;
-    description: 'Automated quality control ensures consistent product quality.,',;
+    title: 'Better Quality,',,
+  description: 'Automated quality control ensures consistent product quality.,',;
     icon: Shield,;
   },;
   {}
-    title: 'Cost Savings,',;
-    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    title: 'Cost Savings,',,
+  description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
     icon: BarChart3,;
   }
 ;];
@@ -525,6 +525,6 @@ export default function ManufacturingPage() {;
         </section>
       </div>
     </Layout>
-  );
+  )
 };
 

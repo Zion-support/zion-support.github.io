@@ -17,6 +17,7 @@ interface EmptyStateProps {
   description: string
   action?: {
   icon;
+import { Link } from "react-router-dom",  icon;
   title;
   description;
   action;
@@ -26,6 +27,7 @@ interface EmptyStateProps {
 
 
     text: string,
+  className}: EmptyStateProps) {;    text: string,
     href?: string,
     onClick?: () => void
   },
@@ -59,6 +61,9 @@ export function EmptyState({
 
       className={cn(
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
+  secondaryAction;    <div
+
+      className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         className
 import React from "react",;
@@ -68,6 +73,7 @@ import { Link } from "react-router-dom",;
 interface EmptyStateProps {;
   icon: React.ReactNode,;
   title: string,;
+  title: string,,
   description: string,;
   action?: {;
     text: string,;
@@ -118,6 +124,7 @@ export function EmptyState({;
             </Button>;
           ) : (;
               className="bg-zion-purple hover:bg-zion-purple-light"
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
@@ -125,6 +132,9 @@ export function EmptyState({;
         )}
 
 
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action.onClick}
             >
               {action.text}
@@ -283,3 +293,15 @@ className?: string
 }
 
 
+          ) : (              size="lg"
+              className="border-zion-blue-light hover:bg-zion-blue-light"
+              onClick={secondaryAction && secondaryAction.onClick}>;
+              {secondaryAction && secondaryAction.text}
+            </Button>;
+          );
+        )}
+
+      </div>;
+    </div>;
+  );
+}

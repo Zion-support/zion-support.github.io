@@ -13,12 +13,15 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "terser",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom']
+          vendor: ["react", "react-dom"],
+          ui: ["framer-motion", "lucide-react"],
+          router: ["react-router-dom"]
         },
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
@@ -74,6 +77,7 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 });
     include: ['react', 'react-dom', 'react-router-dom']
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
   },
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 });

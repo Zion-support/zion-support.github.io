@@ -17,6 +17,7 @@ import {Resume} from '@/types / resume';
 // Import components;
 
 import { useState, useEffect  } from 'react';
+// Import components;import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
 import { Tabs  } from '@/components/ui/tabs';
@@ -38,6 +39,9 @@ export function ResumeWizard() {
 
 
 import {ResumeProgress} from './ResumeProgress';
+import {Button} from '@/components/ui/button';
+import {Resume} from '@/types/resume';
+// Import components
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
 import {ResumeSteps} from './ResumeSteps';
@@ -65,6 +69,7 @@ import {RESUME_STEPS} from './constants';
 
 
   // Use the extracted hook for progress calculation
+import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
 
   }
   const handleResumeChange = (resumeId: string) => {
@@ -141,6 +146,7 @@ export function ResumeWizard() {;
   if (isLoading) {
     return (
   if (error) {
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
         <AlertCircle className="h-4 w-4" />
@@ -152,8 +158,8 @@ export function ResumeWizard() {;
 
   }
   if (showNewResumeForm) {}
+  if (showNewResumeForm) {}
   if (showNewResumeForm) {
-
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
@@ -187,7 +193,7 @@ export function ResumeWizard() {;
   }, [user, fetchResume]),;
   ;
   const handleCreateNewResume = async (title:string) => {;
-    const resumeId = await createResume({ title:title.trim() }),;
+    const resumeId = await createResume({ title:title.trim() });
     if (resumeId) {;
       await fetchResume(resumeId),;
       setShowNewResumeForm(false),;
@@ -351,6 +357,8 @@ if ( {) {
     return (
       <div className="flex justify - center items - center h - 64">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      <div className="flex justify - center items - center h-64">;
+        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
       </div>);
   }
   // Check condition
@@ -360,6 +368,8 @@ if ( {) {
     return (
       <Alert variant="destructive" className="mb - 6">;
         <AlertCircle className="h - 4 w - 4" />;
+      <Alert variant="destructive" className="mb-6">;
+        <AlertCircle className="h - 4 w-4" />;
         <AlertTitle > Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>);
@@ -386,6 +396,10 @@ if ( {) {
       <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
         <h1 className="text - 2xl font - bold">Resume Builder</h1>;
         <div className="flex gap - 4 flex - wrap items - center">;
+    <div className="space-y-6">;
+      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap-4">;
+        <h1 className="text - 2xl font-bold">Resume Builder</h1>;
+        <div className="flex gap - 4 flex - wrap items-center">;
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             on_click={() => setShowNewResumeForm (true)}
@@ -394,6 +408,9 @@ if ( {) {
             className="gap - 2";
           >;
             <FilePlus className="h - 4 w - 4" />;
+            className="gap-2";
+          >;
+            <FilePlus className="h - 4 w-4" />;
             Create New;
           </Button>;
         </div>;
@@ -402,6 +419,9 @@ if ( {) {
         <CardContent className="pt - 6">;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
             <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+        <CardContent className="pt-6">;
+          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
+            <h2 className="text - xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
@@ -475,4 +495,5 @@ function ResumeWizard() {
     fetch_resume;
     create_resume;
   } = use_resume ();
+;
 ;

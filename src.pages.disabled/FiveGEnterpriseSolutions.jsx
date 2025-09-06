@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FiveGEnterpriseSolutionsProps {
   // Add props here as needed
-export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {
+
+}
+
+export default function FiveGEnterpriseSolutions({}: FiveGEnterpriseSolutionsProps) {
   return (
     <div>
       <h1>FiveGEnterpriseSolutions</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/FiveGEnterpriseSolutions.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
 }
 }
 }
+:temp_exclude/src.pages.disabled/FiveGEnterpriseSolutions.jsx

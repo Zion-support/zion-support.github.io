@@ -58,6 +58,13 @@ export function RecentActivity() {
     }
     },
 
+import { Badge } from "@/components/ui/badge",      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",      type: "job"
+    }
+    },
 
     {
       id: "act-4"
@@ -69,9 +76,10 @@ export function RecentActivity() {
     }
 
 
-  ],
+  ]
 
 
+}
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -86,8 +94,10 @@ export function RecentActivity() {
         return <Badge variant="outline">Activity</Badge>
     }
 
-  },
+  }
 
+  }
+  },
 
   return (
     <Card>
@@ -157,6 +167,8 @@ export function RecentActivity() {;
 
 
     {;
+      type: "candidate"
+};    {;
       id: "act-3",;
       user: "David Johnson",;
       action: "scheduled an interview with",;
@@ -179,6 +191,7 @@ export function RecentActivity() {;
 
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
+      type: "interview";      case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
@@ -266,6 +279,7 @@ export function RecentActivity() {;
 
 
           {activities && activities.map((activity) => (;
+  return (          {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
                   </div>;
@@ -364,6 +378,10 @@ function RecentActivity() {
 
 
             View All Activity;
+        </div>;
+
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
           </button>;
         </div>;
       </CardContent>;
@@ -381,6 +399,10 @@ function RecentActivity() {
     </Card>);
 }
 }
+}
+;
+    </Card>);
+}}
     </Card>);
     </Card>;
   ); export function RecentActivity () {

@@ -10,12 +10,27 @@ export function SupportWidget() {;
 
 
   return (
+  return (
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>  return (
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
 
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (
@@ -42,12 +57,6 @@ export function SupportWidget() {;
   return (
     <>
   return (
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
@@ -61,6 +70,27 @@ export function SupportWidget() {
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+
+import { cn } from "@/lib/utils",
+import { useTheme } from "@/hooks/useTheme",
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false),
+  const { theme } = useTheme(),
+  
+  return (
+    <>
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+      ;
+      {/* Support panel */}
+      {isOpen && (;
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
 
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
@@ -179,6 +209,10 @@ export function SupportWidget() {;
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"                aria-label="Close support";
               >;
                 <X className="h-5 w-5" />;
               </Button>;
@@ -289,3 +323,5 @@ const {
 }
 
 
+  );
+}

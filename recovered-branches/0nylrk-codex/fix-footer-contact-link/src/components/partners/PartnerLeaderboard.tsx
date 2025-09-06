@@ -80,6 +80,7 @@ export function PartnerLeaderboard() {
 
 
     {
+      avatar: "", // URL would be here    {
 
       id: "2"
       rank: 2
@@ -104,9 +105,11 @@ export function PartnerLeaderboard() {
 
 
     }
+    }
+
+
+
     },
-
-
     {
 
       id: "4"
@@ -206,6 +209,8 @@ export function PartnerLeaderboard() {;
 
 
     };
+      badges: ["gold", "trending"]
+};    };
     {;
       id: "2",;
       rank: 2,;
@@ -219,6 +224,8 @@ export function PartnerLeaderboard() {;
 
 
     };
+      badges: ["silver"]
+};    };
     {;
       id: "3",;
       rank: 3,;
@@ -232,6 +239,8 @@ export function PartnerLeaderboard() {;
 
 
     };
+      badges: ["bronze"]
+};    };
     {;
       id: "4",;
       rank: 4,;
@@ -245,6 +254,8 @@ export function PartnerLeaderboard() {;
 
 
     };
+      badges: []
+};    };
     {;
       id: "5",;
       rank: 5,;
@@ -368,6 +379,7 @@ function PartnerLeaderboard() {
 
 
                   }`}
+  ];                  }`}
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
@@ -570,6 +582,7 @@ export function PartnerLeaderboard() {;
       </Card>;
 
             )}
+                        </Badge>            )}
           </div>
         </CardContent>
       </Card>
@@ -630,6 +643,10 @@ export function PartnerLeaderboard() {;
 }
 ;
             )}
+          </div>;
+        </CardContent>;
+      </Card>;
+      ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle>Your Ranking</CardTitle>;
@@ -683,6 +700,7 @@ export function PartnerLeaderboard() {;
 
 
             </ul>;
+      </Card>;            </ul>;
           </div>;
         </CardContent>;
       </Card>;
@@ -740,3 +758,5 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 }
 }
 ;
+    </div>);
+}

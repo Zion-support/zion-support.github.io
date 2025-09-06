@@ -44,6 +44,7 @@ import { cn } from "@/lib/utils",
 
 
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
       return <MessageCircle className={cn(className, "text-blue-500")} />,
@@ -255,6 +256,9 @@ const NotificationCard: React.FC<{;
   }
   
   };
+  }  };
+  },
+  
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -491,6 +495,26 @@ const NotificationCard: React.FC<{;
         </div>;
       </div>;
     </div>;
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 w-8 p-0"            <Button
+              variant="outline"
+              size="sm"
+              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+              onClick={handleAction}>;
+              {notification && notification.action_text}
+              <ChevronRight className="ml-1 h-4 w-4" />;
+            </Button>;
+          )}
+        </div>;
+      </div>;
+    </div>;
+  )
+};
+
+export default function NotificationsPage() {;
+  const {;
     filteredNotifications;
     unreadCount;
     action_text?: string;
@@ -537,6 +561,24 @@ if ( {) {
               </div>;
             </div>;
             <div className="flex items - center gap - 2">;
+      <div className="flex items - start gap-4">;
+        <div className="mt-1">;
+          {getNotificationIcon (notification.type, "h - 6 w - 6")}
+        </div>;
+        <div className="flex-1">;
+          <div className="flex justify-between">;
+            <div className="flex flex-col">;
+              <h3 className="font - medium text-white">{notification.title}</h3>;
+              <div className="flex items - center gap - 2 mb-2">;
+                {getNotificationTypeBadge (notification.type)}
+                <span className="text - xs text - zion - slate-light">;
+                  {formatDistanceToNow (new Date (notification.created_at), { add_suffix: true })}
+                </span>;
+                {!notification.read && (
+                  <Badge variant="outline" className="bg - zion - cyan bg - opacity - 20 text - zion - cyan text-xs">New</Badge>)}
+              </div>;
+            </div>;
+            <div className="flex items - center gap-2">;
               {!notification.read && (
                 <Button;
                   variant="ghost";
@@ -546,6 +588,11 @@ if ( {) {
                 >;
                   <Check className="h - 4 w - 4 text - green - 400" />;
                   <span className="sr - only">Mark as read</span>;
+                  className="h - 8 w - 8 p-0";
+                  on_click={() => onMarkAsRead (notification.id)}
+                >;
+                  <Check className="h - 4 w - 4 text - green-400" />;
+                  <span className="sr-only">Mark as read</span>;
                 </Button>)}
               <Button;
                 variant="ghost";
@@ -559,6 +606,15 @@ if ( {) {
             </div>;
           </div>;
           <p className="text - zion - slate - light mb - 3">{notification.message}</p>;
+                className="h - 8 w - 8 p-0";
+                on_click={() => on_dismiss (notification.id)}
+              >;
+                <Trash2 className="h - 4 w - 4 text - red-400" />;
+                <span className="sr-only">Dismiss</span>;
+              </Button>;
+            </div>;
+          </div>;
+          <p className="text - zion - slate - light mb-3">{notification.message}</p>;
           {notification.action_url && notification.action_text && (
             <Button;
               variant="outline";
@@ -568,6 +624,11 @@ if ( {) {
             >;
               {notification.action_text}
               <ChevronRight className="ml - 1 h - 4 w - 4" />;
+              className="mt - 1 text - zion - cyan border - zion - cyan hover:bg - zion - cyan hover:text-black";
+              on_click={handle_action}
+            >;
+              {notification.action_text}
+              <ChevronRight className="ml - 1 h - 4 w-4" />;
             </Button>)}
         </div>;
       </div>;
@@ -836,6 +897,7 @@ export default function NotificationsPage() {;
   )
 }
             </TabsContent>;
+    filter;            </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
@@ -910,3 +972,5 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
   );
 }
 ;
+    </>);
+}

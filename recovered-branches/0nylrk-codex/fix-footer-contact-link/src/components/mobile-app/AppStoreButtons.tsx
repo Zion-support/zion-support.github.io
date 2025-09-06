@@ -23,6 +23,9 @@ interface AppStoreButtonsProps {
   class_name?: string;
 
 interface AppStoreButtonsProps {
+interface AppStoreButtonsProps {;
+
+  className?: string;interface AppStoreButtonsProps {
   class_name?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
@@ -169,6 +172,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
         href={googlePlayUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+
+  appStoreUrl = "#";
+  googlePlayUrl = "#";        onClick={handleGooglePlayClick}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -187,6 +194,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <div className="text-xl font-semibold">Google Play</div>
         </div>
 },
+        </div>},
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -221,6 +229,8 @@ interface AppStoreButtonsProps {;
 }
 ;
 export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
+;
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   className,;
   appStoreUrl = "#",;
   googlePlayUrl = "#",;
@@ -228,6 +238,7 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
   onGooglePlayClick;
 }) => {;
   const handleAppStoreClick = (e:React.MouseEvent<HTMLAnchorElement>) => {;
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
     if (!appStoreUrl || appStoreUrl === "#") {;
       e.preventDefault(),;
       // // // console.log("App Store download clicked"),;
@@ -395,3 +406,11 @@ onAppStoreClick?. () h-8 w-8 mr-3"/> <div> <div className=" text-xs">Download on
 };
 
 export default AppStoreButtons;
+  }
+  return (    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
+      <a
+        href={appStoreUrl} 
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick={handleAppStoreClick}
+        target="_blank"
+        rel="noopener noreferrer">;

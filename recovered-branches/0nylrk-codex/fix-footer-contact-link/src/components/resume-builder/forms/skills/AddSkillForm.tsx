@@ -15,6 +15,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 interface AddSkillFormProps {
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
@@ -30,6 +31,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
+
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
@@ -131,7 +134,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
       category:skillCategory || 'Other',;
       proficiency:proficiency},;
     ;
-    const success = await onAddSkill(newSkill),;
+    const success = await onAddSkill(newSkill);
     if (success) {;
       setSkillName(''),;
       setProficiency(3),;
@@ -254,6 +257,11 @@ if ( {) {
                 enhancementType="general";
                 onEnhanced={handleEnhanceSkill}
               <SelectValue placeholder="Select category" />;
+      proficiency: proficiency}  return (  return (
+    <form onSubmit={handleSubmit} className="space-y-4">;
+      <div className="flex flex-col gap-4 md:flex-row">;
+        <div className="flex-1">;
+          <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
             </SelectTrigger>;
             <SelectContent>;
               <SelectItem value="Programming">Programming</SelectItem>;
@@ -307,6 +315,13 @@ if ( {) {
 },
               on_change={(e) => set_proficiency (Number (e.target.value))}
               className="w - 20";
+              <SelectItem value="AI / ML">AI / ML</SelectItem>;}
+
+}
+};
+},
+              on_change={(e) => set_proficiency (Number (e.target.value))}
+              className="w-20";
             />;
             <Button type="submit">Add</Button>;
           </div>;
@@ -335,3 +350,8 @@ const newSkill: Skill = {
 
 }
 
+    </form>);}
+
+}
+};
+},

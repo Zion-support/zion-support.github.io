@@ -14,6 +14,7 @@ import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",
 export function MobileHome() {
   const { user } = useAuth();
 
@@ -88,3 +89,5 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
     </div>
   )
 }
+        showSettings
+      />

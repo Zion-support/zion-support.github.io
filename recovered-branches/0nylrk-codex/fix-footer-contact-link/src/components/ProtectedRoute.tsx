@@ -28,6 +28,12 @@ export interface ProtectedRouteProps {
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+
+  children;
+
+  adminOnly = false;
+
   children;
 
   adminOnly = false;
@@ -68,6 +74,10 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
 
   tenantAdminAllowed = false,
+  requiredUserType
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {  tenantAdminAllowed = false,
   requiredUserType
 }) => {
   const { user, isLoading } = useAuth(),
@@ -132,6 +142,10 @@ export default ProtectedRoute;
 
 export default ProtectedRoute;
 import {use_auth} from '@/hooks / use_auth';
+    return <Navigate to="/unauthorized" />;
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
+  children,;
+  adminOnly = false,;
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 import {use_whitelabel} from '@/context / WhitelabelContext';
 export interface ProtectedRouteProps {
@@ -158,6 +172,8 @@ if ( {) {
 }
     return <div className="flex h - screen w - full items - center justify - center">;
       <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
+    return <div className="flex h - screen w - full items - center justify-center">;
+      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
     </div>;
   }
   // Redirect to login if not authenticated;
@@ -226,7 +242,7 @@ export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
 ;
   // Check for admin access if required;
   if (adminOnly) {;
-    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),;
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
     if (!hasAdminAccess) {;
       return <Navigate to="/unauthorized" />;
     }

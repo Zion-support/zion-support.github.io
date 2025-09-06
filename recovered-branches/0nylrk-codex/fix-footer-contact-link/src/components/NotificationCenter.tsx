@@ -50,6 +50,12 @@ export const NotificationCenter:React.FC = () => {;
 
 
 
+export const NotificationCenter: React.FC = () => {;  const { ;
+    filteredNotifications,;
+    unreadCount, ;
+    markAsRead, ;
+    markAllAsRead;
+    dismissNotification, ;
     loading;
     filter;
     setFilter;
@@ -102,7 +108,8 @@ export const NotificationCenter: React.FC = () => {
     markAllAsRead,
 
 
-    dismissNotification, 
+    dismissNotification 
+  } = useNotifications();    dismissNotification, 
     loading,
     filter,
     setFilter,
@@ -129,6 +136,8 @@ export const NotificationCenter: React.FC = () => {
           toast.error("Failed to load notifications")
 
 // Use the shared icon wrapper;
+        try {import React, { useState, useEffect } from 'react',;
+// Use the shared icon wrapper;
 import {;
   NotificationFilter,;
   NotificationHeader,;
@@ -147,6 +156,8 @@ export const NotificationCenter: React.FC = () => {;
     setFilter,;
     fetchNotifications;
   } = useNotifications(),;
+  const [open, setOpen] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
   // Refresh notifications when popover opens;
   useEffect(() => {;
     if (open) {;
@@ -176,6 +187,12 @@ export const NotificationCenter: React.FC = () => {;
     }
 
   const handleMarkAllAsRead = async () => {
+      loadNotifications();
+    }
+  }, [open, fetchNotifications]),
+
+  const handleMarkAllAsRead = async () => {
+    try {  const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
       toast.success("All notifications marked as read")
@@ -185,7 +202,11 @@ export const NotificationCenter: React.FC = () => {;
     }
 
 
-  },
+  }
+  }
+  const handleFilterChange = (newFilter: FilterType) => {
+    setFilter(newFilter as any)
+  }
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
@@ -207,6 +228,7 @@ export const NotificationCenter: React.FC = () => {;
   }, [open, fetchNotifications]),;
 
   const handleMarkAllAsRead = async () => {;
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">  const handleMarkAllAsRead = async () => {;
     try {;
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
@@ -339,6 +361,7 @@ if ( {) {
 
 
         />;
+    }        />;
         <NotificationList;
           loading={loading}
           error={error}
@@ -360,6 +383,7 @@ if ( {) {
 
 
 
+  )
 };
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}

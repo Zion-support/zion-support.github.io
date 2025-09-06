@@ -1,10 +1,11 @@
 
 
 import {supabase} from "@/integrations/supabase/client";
-
 import type { UserDetails } from "@/types/auth";
-
 import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";
+
+
 import type { UserDetails } from "@/types/auth",
 
 
@@ -102,6 +103,9 @@ export const checkNewRegistration = async (user: UserDetails) => {
       
 
 
+      sessionStorage.removeItem(key);    }
+  })
+},
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
@@ -186,6 +190,11 @@ if ( {) {
 
 
       // Create entry in email_campaigns table
+          job_type: "send_retention_email";
+          scheduled_for: new Date ().toISOString ();
+          status: "pending";
+          payload: {}
+        });      // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
         .insert({
@@ -198,6 +207,11 @@ if ( {) {
 
 
             user_id: user.id,
+            user_type: user.user_type || "unknown",
+            display_name: user.display_name || user.email?.split ("@")[0] || "User";          user_id: user.id,
+          campaign_type: "welcome_series",
+          template_name: "welcome_email",
+          template_data: {            user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
@@ -355,3 +369,4 @@ export const checkNewRegistration = async (user:UserDetails) => {;
 };
   }
 };
+            display_name: user.displayName || user.email?.split("@")[0] || "User";

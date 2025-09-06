@@ -58,6 +58,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
 
 
+      setIsLoading(true),
+      
+
   
   const clientId = userId || user?.id,
   const fetchJobs = async () => {
@@ -151,6 +154,12 @@ if (throw fetch_error) {
 
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
+        .from("jobs")
+        .select("*")
+        .eq("client_id", clientId)    try {
       const { error: updateError } = await supabase
         .from("jobs")
         .update({ status: newStatus })
@@ -210,6 +219,7 @@ if (throw fetch_error) {
 
 
       // Update local state
+    }      // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
       return true
@@ -245,6 +255,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
+  const clientId = userId || user?.id;
   const clientId = userId || user?.id;
   const clientId = userId || user?.id;
   const fetchJobs = async () => {;
@@ -327,6 +338,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     updateJob;
     getJobById;
 
+  }
+};  }
+};
   }
 };
   }

@@ -15,6 +15,8 @@ const ToastProvider = ToastPrimitives.Provider
 
 
 
+
+const ToastProvider = ToastPrimitives.Provider
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -90,6 +92,18 @@ const Toast = React.forwardRef<
 
 
     />
+const Toast = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitives.Root>
+  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
+    VariantProps<typeof toastVa</typeof>riants>
+>(({ className, variant, ...props }, ref) => {
+
+  
+
+    VariantProps<typeof toastVariants>
+>(({ className, variant, ...props }, ref) => {
+
+  
   );
 });
 Toast.displayName = ToastPrimitives.Root.displayName;
@@ -146,6 +160,8 @@ const ToastAction = React && React.forwardRef<;
 
 
 import React from 'react';
+  <ToastPrimitives.Action;
+
 import * as React from 'react';
 import * as ToastPrimitives from '@radix - ui / react - toast';
 import {cva, type, VariantProps} from 'class - variance - authority';
@@ -413,6 +429,7 @@ const ToastTitle = React.forwardRef<;
 
 
     ref={ref}
+  <ToastPrimitives.Title    ref={ref}
     className={cn('text-sm font-semibold', className)}
     {...props}
   />
@@ -455,6 +472,11 @@ type ToastActionElement = React.ReactElement;
     className={cn('text-sm opacity-90', className)}
     {...props}
   />
+ToastTitle.displayName = ToastPrimitives.Title.displayName;const ToastDescription = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitives.Description>
+  React.ComponentPropsWit</typeof>houtRef<typeof ToastPrimitives.Description>
+>(({ className, ...props }, ref) => (
+  <ToastPrimitives.Description  />
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
@@ -573,6 +595,8 @@ export function useToast() {
   ToastDescription,;
   ToastClose,;
   ToastAction,;
+  ToastClose,;
+  ToastAction
 };
 
 // Add useToast hook export;
@@ -584,6 +608,12 @@ export function useToast() {;
       console && console.log('Toast:', props);
     },;
   };
+
+      // Implementation of toast functionality;
+      console.log ('Toast:', props);
+    }
+    }
+};
 
       // Implementation of toast functionality;
       console.log ('Toast:', props);

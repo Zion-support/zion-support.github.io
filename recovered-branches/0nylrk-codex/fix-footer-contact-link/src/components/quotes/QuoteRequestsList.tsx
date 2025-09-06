@@ -46,6 +46,13 @@ import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
 type QuoteRequestsListProps = {
+import type { QuoteRequest } from "@/types/quotes"}) => {
+  if (isLoading) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
+      </div>
+    )
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;
@@ -79,7 +86,7 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 
 
 ;
-type QuoteRequestsListProps = {;
+type QuoteRequestsListProps = {
   quotes:QuoteRequest[],;
   isLoading:boolean,;
   isArchived:boolean,;
@@ -160,6 +167,8 @@ if ( {) {
     return (
       <div className="text - center py - 20">;
         <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+      <div className="text - center py-20">;
+        <p className="text - zion - slate-light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
       </div>);
   }
   // Check condition
@@ -188,6 +197,8 @@ if ( {) {
       {quotes.map(quote => (;
 
 
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-5">;
+      {quotes.map (quote => (
         <QuoteRequestCard;
           key={quote.id}
           quote={quote}
@@ -242,6 +253,8 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
     </div>
   )
 }
+          onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
+          onToggleArchive={onToggleArchive}
 
     </div>;
   );

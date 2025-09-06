@@ -23,6 +23,15 @@ import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
 
 interface ResumeVersionSelectorProps {
+
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
@@ -33,6 +42,9 @@ export function ResumeVersionSelector({
   onResumeChange
 }: ResumeVersionSelectorProps) {
 
+export function ResumeVersionSelector({
+  currentResume,
+  onResumeChange
 export function ResumeVersionSelector({
   currentResume,
   onResumeChange
@@ -71,6 +83,9 @@ export function ResumeVersionSelector({
 
 
 import { useState } from 'react',;
+        setNewResumeTitle('')
+
+        setNewResumeTitle('')
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -98,6 +113,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle.trim()) {;
       setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
       const resumeId = await createResume({ title: newResumeTitle.trim() });
       const resumeId = await createResume({ title: newResumeTitle.trim() });
       if (resumeId) {;
@@ -201,6 +217,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 
               className="gap-2"
+        setNewResumeTitle('');              className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />

@@ -80,6 +80,10 @@ import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null);
+    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext';
+export function useTrackUserBehavior(componentName: string) {;
+  const { trackEvent } = useAnalytics(),;
+  const componentRef = useRef<HTMLDivElement>(null),;
   useEffect(() => {;
     const component = componentRef.current,;
     if (!component) return,;
@@ -188,3 +192,5 @@ return componentRef
 ;
 
 
+}
+;}

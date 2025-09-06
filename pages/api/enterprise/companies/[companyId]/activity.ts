@@ -1,5 +1,8 @@
 
 
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -31,8 +34,6 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
 
@@ -43,10 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!company) return res.status(404).json({ error: "company_not_found" });
   return res.status(200).json(company.activity);
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ activity: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
 export default function handler(req, res) {
   try {
@@ -82,3 +81,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+ursor/fix-website-loading-errors-and-merge-6662
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const company = null;
+  return res.status(200).json(company.activity)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

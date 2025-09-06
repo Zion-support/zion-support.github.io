@@ -6,6 +6,7 @@ export interface CustomerTicket {;
   id: string;
   customerId: string;
   subject: string;
+  subject: string,
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
@@ -107,6 +108,12 @@ export interface CustomerProfile {
 
 
 }
+  tags: string[];  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';}
+export interface CustomerProfile {}
+export interface CustomerProfile {
 export interface AIResponse {
   id: string;
   ticket_id: string;
@@ -140,6 +147,7 @@ export interface CustomerServiceMetrics {
   }>
 
   customer_satisfaction: number;
+}  customer_satisfaction: number;
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
   agent_performance: Record < string, {
@@ -221,6 +229,13 @@ export interface CustomerServiceRequest {
 
 
 }
+}
+export interface CustomerServiceRequest {
+  customer_id: string;    customerSatisfaction: number
+  }>
+}
+export interface CustomerServiceRequest {
+  customerId: string;}
   ticketId: string;
 export interface CustomerServiceResponse {
   ticket_id: string;
@@ -247,6 +262,7 @@ export interface CustomerServiceResponse {;
 export class AICustomerServiceService {
 
 export class AICustomerServiceService {;
+  estimatedResolutionTime: string;export class AICustomerServiceService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -316,7 +332,9 @@ export interface CustomerServiceResponse {
 
 
 
-  }
+    try {}
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {}
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
       return data
@@ -367,6 +385,23 @@ export interface CustomerServiceResponse {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Get ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        createdAt: new Date(data.createdAt);
+        updatedAt: new Date(data.updatedAt);
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
+        conversationHistory: data.conversationHistory.map((msg: any) => ({
+          ...msg
+          timestamp: new Date(msg.timestamp)}))}
+    } catch (error) {
+      console.error('Error getting ticket:', error);
       throw error
     }
   }
@@ -379,6 +414,11 @@ export interface CustomerServiceResponse {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(updates)});
 
+      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        method: 'PATCH',
+        headers: {
+
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -396,6 +436,8 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error updating ticket:', error);
     } catch (error) {
+      console && console.error('Error getting ticket:', error);    } catch (error) {
+      console && console.error('Error updating ticket:', error);    } catch (error) {
       console && console.error('Error updating ticket:', error);
       throw error
     }
@@ -480,6 +522,7 @@ export interface CustomerServiceResponse {
 
 
       return {
+    try {      return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
@@ -698,6 +741,9 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
       throw error
+      console && console.error('Error searching tickets:', error);    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+      console && console.error('Error auto-assigning tickets:', error);
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
@@ -746,6 +792,7 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error generating report:', error);
     } catch (error) {
+      console && console.error('Error generating report:', error);    } catch (error) {
       console && console.error('Error generating report:', error);
       throw error
     }
@@ -757,6 +804,9 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   id: string,;
   customerId: string,;
   subject: string,;
+  id: string,;
+  customerId: string,;
+  subject: string,,
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -1029,6 +1079,7 @@ export interface CustomerTicket {;
   id:string,;
   customerId:string,;
   subject:string,;
+  subject:string,,
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   status:'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -1104,6 +1155,7 @@ export interface CustomerServiceMetrics {;
 export interface CustomerServiceRequest {;
   customerId:string,;
   subject:string,;
+  subject:string,,
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   category:string,;
@@ -1189,6 +1241,7 @@ export interface CustomerServiceMetrics {;
 export interface CustomerServiceRequest {;
   customerId: string,;
   subject: string,;
+  subject: string,,
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   category: string,;
@@ -1224,6 +1277,7 @@ export class AICustomerServiceService {;
         throw new Error(`Create ticket API error: ${response.statusText}`);
       }
 ;
+      const data = await response.json();
       const data = await response.json();
       return data;
     } catch (error) {;

@@ -37,6 +37,9 @@ export function sanitizeHtml(html: string): string {
 origin/main
 origin/automation-improvements-final
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
+  sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');'"
+  // Remove javascript: URLs
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   return sanitized;

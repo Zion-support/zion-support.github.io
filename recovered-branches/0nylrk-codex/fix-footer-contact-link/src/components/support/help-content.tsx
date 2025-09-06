@@ -19,6 +19,7 @@ import {
 
 
 export const HELP_CATEGORIES: HelpCategory[] = [
+
   {
     id: "getting-started"
     name: "Getting Started"
@@ -79,6 +80,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 
   {
+    ]  {
     id: "hiring"
     name: "Hiring Process"
     description: "How to find and hire talent on the platform"
@@ -118,6 +120,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 
         id: "post-job",
+      {        id: "post-job",
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
         lastUpdated: "2023-10-25",
@@ -161,6 +164,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-10-15"
         tags: ["profile", "talent"]
       }
+    ]
+  },
 
         id: "talent-profile",
         title: "Setting up a talent profile",
@@ -289,6 +294,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   }
 ];
 
+      }
+    ];
         id: "file-dispute",
         title: "How to file a dispute",
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.",
@@ -658,3 +665,4 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   }
 ];
+        title: "Tips for preventing disputes",

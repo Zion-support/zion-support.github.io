@@ -21,12 +21,16 @@ export default function Login() {
       [e.target.name]: e.target.value
     });
   };
+    })
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
   };
+    console.log('Login attempt:', formData)
+};
 
   return (
         <div className="max-w-md w-full space-y-8">
@@ -365,3 +369,4 @@ export default LoginPage
 :backup-problematic-files/pages._archive_corrupted/login.tsx
 >>>>>>> main:corrupted_backup/login.tsx
 ursor/automate-test-improve-and-merge-code-646c
+:backup-problematic-files/pages._archive_corrupted/login.tsx

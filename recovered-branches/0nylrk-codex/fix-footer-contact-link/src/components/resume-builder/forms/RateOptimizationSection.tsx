@@ -67,6 +67,12 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
+  location?: string}) => {
+  const handleSuggestionApplied = (rate: number) => {
+    setValue("hourlyRate", rate)
+
+  },
+
   return (
     <div className="space-y-4">
       <FormField
@@ -101,6 +107,7 @@ import { Card, CardContent } from "@/components/ui/card",;
 
 
 interface RateOptimizationSectionProps {;
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
@@ -148,6 +155,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 
   return (
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
     <div className="space-y-4">;
       <FormField
         control={control}
@@ -171,6 +179,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             <FormLabel > Your {rate_type === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
 
             <FormControl>;
+            <FormControl>;            <FormControl>;
               <Input;
                 type="number";
                 min="1";
@@ -181,6 +190,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
                 placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
                 {...field}
               />;
             </FormControl>;
@@ -200,6 +210,17 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 
             skills={skills}
+      />;
+
+      <Card>;
+        <CardContent className="pt-4">;
+
+          <TalentRateRecommender          <TalentRateRecommender
+          </FormItem>)}
+      />;
+      <Card>;
+        <CardContent className="pt-4">;
+          <TalentRateRecommender;
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
@@ -269,3 +290,4 @@ return (<div className="space-y-4" > <FormField control= {
 };
 
 
+;

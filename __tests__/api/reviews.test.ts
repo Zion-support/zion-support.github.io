@@ -7,6 +7,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import reviewsHandler from '@/pages/api/reviews'; // Handler for POST /api/reviews
 import productReviewsHandler from '@/pages/api/reviews/[productId]'; // Handler for GET /api/reviews/[productId]
+import { createMocks, RequestMethod } from 'node-mocks-http';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import reviewsHandler from '@/pages/api/reviews'; // Handler for POST /api/reviews;
+import productReviewsHandler from '@/pages/api/reviews/[productId]'; // Handler for GET /api/reviews/[productId];
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import {
   PrismaClient,
   ProductReview,
@@ -123,6 +128,17 @@ describe('/api/reviews API Endpoint'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 // Mock Prisma Client
+  Prisma
+} from '@prisma/client'; // Import Prisma types;
+import { supabase } from '@/integrations/supabase/client';
+  User as SupabaseUser,
+  Session,
+  AuthError
+} from '@supabase/supabase-js'; // Supabase types;
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+
+// Mock Prisma Client;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 jest.mock('@prisma/client', () => {
   const mockPrismaClient = {
     "productReview": {
@@ -133,6 +149,13 @@ jest.mock('@prisma/client', () => {
       findUnique: jest.fn()
     },
     $"disconnect": jest.fn()
+      findMany: jest.fn()
+    },
+    user: {
+      findUnique: jest.fn()
+    },
+    $disconnect: jest.fn(),
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
   return {
     "PrismaClient": jest.fn(() => mockPrismaClient),
@@ -154,6 +177,14 @@ jest.mock('@prisma/client', () => {
       }
     }
   }})
+          this.name = 'PrismaClientKnownRequestError';
+        }
+      }
+    }
+  };
+});
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Mock Supabase Client
 jest.mock('@/integrations/supabase/client', () => ({
   "supabase": {
@@ -162,6 +193,12 @@ jest.mock('@/integrations/supabase/client', () => ({
     }
   }
 }))
+      getSession: jest.fn()
+    }
+  }
+}));
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Define expected response types
 interface ErrorResponse {
   "error": string
@@ -202,6 +239,24 @@ describe('/api/reviews API Endpoint', () => {
         "role": 'USER',
         "softDeleted": false,
         "userType": 'individual'
+        email: 'test@example.com',
+        name: 'Test User',
+        passwordHash: 'hashedpassword',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        avatarUrl: null,
+        bio: null,
+        companyId: null,
+        headline: null,
+        lastLoginAt: null,
+        notifications: {},
+        profileComplete: false,
+        resetToken: null,
+        resetTokenExpiry: null,
+        role: 'USER',
+        softDeleted: false,
+        userType: 'individual',
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       };
       const "mockReviewResponse": ProductReview = {
         id: 'review1',
@@ -230,6 +285,41 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'POST' as RequestMethod,
         "body": { productId: 'prod1', "rating": 5, "comment": 'Great!' }
       })
+        productId: 'prod1',
+        userId: 1,
+        rating: 5,
+        comment: 'Great!',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      const mockSupabaseSession: Session = {
+        user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,
+        access_token: 'token',
+        refresh_token: 'ref',
+        expires_in: 3600,
+        token_type: 'bearer',
+        expires_at: Date.now() + 3600000
+      };
+
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+        data: { session: mockSupabaseSession },
+        error: null
+      });
+
+      (prismaMock.user.findUnique as jest.Mock).mockResolvedValue(
+        mockPrismaUser
+      );
+      (prismaMock.productReview.create as jest.Mock).mockResolvedValue(
+        mockReviewResponse
+      );
+
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: { productId: 'prod1', rating: 5, comment: 'Great!' }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -262,6 +352,34 @@ describe('/api/reviews API Endpoint', () => {
         "id": 1,
         "email": 'test@example.com'
       })
+          rating: 5,
+          comment: 'Great!',
+          userId: mockPrismaUser.id
+        }
+      });
+    });
+
+    it('should fail if user already reviewed the product (409)', async () => {
+      const mockSupabaseSession: Session = {
+        user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,
+        access_token: 'token',
+        refresh_token: 'ref',
+        expires_in: 3600,
+        token_type: 'bearer',
+        expires_at: Date.now() + 3600000
+      };
+
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+        data: { session: mockSupabaseSession },
+        error: null
+      });
+
+      (prismaMock.user.findUnique as jest.Mock).mockResolvedValue({
+        id: 1,
+        email: 'test@example.com'
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       (prismaMock.productReview.create as jest.Mock).mockRejectedValue(
         new Prisma.PrismaClientKnownRequestError(
           'Unique constraint failed',
@@ -269,6 +387,8 @@ describe('/api/reviews API Endpoint', () => {
           'client-version',
           {
             "target": ['productId,userId']
+            target: ['productId', 'userId'],
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           }
         )
       )
@@ -280,6 +400,12 @@ describe('/api/reviews API Endpoint', () => {
           "comment": 'Another great review!'
         }
       })
+          rating: 5,
+          comment: 'Another great review!'
+        }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -294,6 +420,17 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'POST' as RequestMethod,
         "body": { productId: 'prod1', "rating": 6, "comment": 'Too good!' }
       })
+        error: 'You have already reviewed this product.'
+      });
+    });
+
+    it('should fail with invalid rating (400) - too high', async () => {
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: { productId: 'prod1', rating: 6, comment: 'Too good!' }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -312,6 +449,21 @@ describe('/api/reviews API Endpoint', () => {
           comment: 'Text rating!'
         }
       })
+        error: 'Rating is required and must be a number between 1 and 5.'
+      });
+    });
+
+    it('should fail with invalid rating (400) - not a number', async () => {
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: {
+          productId: 'prod1',
+          rating: 'five-stars',
+          comment: 'Text rating!'
+        }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -334,6 +486,26 @@ describe('/api/reviews API Endpoint', () => {
           comment: 'Trying to review without login'
         }
       })
+        error: 'Rating is required and must be a number between 1 and 5.'
+      });
+    });
+
+    it('should fail if not authenticated (401)', async () => {
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+        data: { session: null },
+        error: null
+      });
+
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: {
+          productId: 'prod1',
+          rating: 5,
+          comment: 'Trying to review without login'
+        }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -364,6 +536,34 @@ describe('/api/reviews API Endpoint', () => {
           comment: 'Review with no email in session'
         }
       })
+        error: 'Not authenticated or session error.'
+      });
+    });
+
+    it('should fail if Supabase user email is missing (401)', async () => {
+      const mockSupabaseSessionNoEmail: Session = {
+        user: { id: 'supaUserId', email: undefined } as SupabaseUser,
+        access_token: 'token',
+        refresh_token: 'ref',
+        expires_in: 3600,
+        token_type: 'bearer',
+        expires_at: Date.now() + 3600000
+      };
+
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+        data: { session: mockSupabaseSessionNoEmail },
+        error: null
+      });
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: {
+          productId: 'prod1',
+          rating: 5,
+          comment: 'Review with no email in session'
+        }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -373,6 +573,11 @@ describe('/api/reviews API Endpoint', () => {
         "error": 'User email not found in session.'
       })
     })
+        error: 'User email not found in session.'
+      });
+    });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     it('should fail if user not found in Prisma database (404)', async () => {
       const "mockSupabaseSession": Session = {
         user: {
@@ -398,6 +603,33 @@ describe('/api/reviews API Endpoint', () => {
           comment: 'User exists in Supa, not Prisma'
         }
       })
+          id: 'supaUserId',
+          email: 'unknown@example.com'
+        } as SupabaseUser,
+        access_token: 'token',
+        refresh_token: 'ref',
+        expires_in: 3600,
+        token_type: 'bearer',
+        expires_at: Date.now() + 3600000
+      };
+
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+        data: { session: mockSupabaseSession },
+        error: null
+      });
+
+      (prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null);
+
+      const { req, res } = createMocks({
+        method: 'POST' as RequestMethod,
+        body: {
+          productId: 'prod1',
+          rating: 5,
+          comment: 'User exists in Supa, not Prisma'
+        }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await reviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -434,6 +666,44 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'GET' as RequestMethod
         query: { productId: 'prod123' }
       })
+        error: 'User not found in our database.'
+      });
+    });
+  });
+
+  describe('GET /api/reviews/[productId]', () => {
+    it('should successfully fetch reviews for a product (200)', async () => {
+      const mockReviewsList: ProductReview[] = [
+        {
+          id: 'rev1',
+          productId: 'prod123',
+          userId: 1,
+          rating: 5,
+          comment: 'Excellent!',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          id: 'rev2',
+          productId: 'prod123',
+          userId: 2,
+          rating: 4,
+          comment: 'Very good.',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
+      ];
+
+      (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue(
+        mockReviewsList
+      );
+
+      const { req, res } = createMocks({
+        method: 'GET' as RequestMethod,
+        query: { productId: 'prod123' }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await productReviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -443,6 +713,8 @@ describe('/api/reviews API Endpoint', () => {
       expect(prismaMock.productReview.findMany).toHaveBeenCalledWith(
         expect.objectContaining({
           "where": { productId: 'prod123' }
+          where: { productId: 'prod123' },
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         })
       )
     })
@@ -452,6 +724,11 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'GET' as RequestMethod
         query: { productId: 'prodNonExistent' }
       })
+        method: 'GET' as RequestMethod,
+        query: { productId: 'prodNonExistent' }
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await productReviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -464,6 +741,11 @@ describe('/api/reviews API Endpoint', () => {
         "method": 'GET' as RequestMethod
         query: {} // No productId
       })
+        method: 'GET' as RequestMethod,
+        query: {}, // No productId
+      });
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       await productReviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -510,3 +792,10 @@ ursor/automate-test-improve-and-merge-code-646c
         "error"
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> main
+        error: 'productId is required in the URL path and must be a string.'
+      });
+    });
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

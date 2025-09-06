@@ -16,6 +16,7 @@ import {useAuth} from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
+
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -57,6 +58,8 @@ const mockPost: ForumPost = {
 
 
 const mockPost: ForumPost = {
+// Mock data for a forum post
+import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
@@ -91,6 +94,7 @@ const mockReplies: ForumReply[] = [
   }
 
   {
+    downvotes: 0  {
     id: "reply2"
     postId: "1"
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
@@ -331,6 +335,7 @@ export default function ForumPostPage() {
 
     return (
 
+    isAnswer: true    return (
   const { postId } = useParams() as { postId?:string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
@@ -342,6 +347,10 @@ export default function ForumPostPage() {
   ;
   // Check if user is admin/mod;
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const isAuthor = user?.id === post?.authorId;
+  ;
+  // Check if user is admin/mod;
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',;
   ;
   // For this demo, we'll assume the post is found;
   if (!post) {;
@@ -364,6 +373,8 @@ export default function ForumPostPage() {
 
 
 
+    );
+  }
     );
   }
   const handleDownvote = () => {
@@ -404,6 +415,7 @@ export default function ForumPostPage() {
       upvotes: 0
 
       downvotes: 0
+      description: "You downvoted this post"})      downvotes: 0
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
@@ -430,6 +442,12 @@ export default function ForumPostPage() {
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
 
+
+    toast({
+      title: "Reply posted"
+      description: "Your reply has been added to the discussion"})
+
+  }
 
       });
       return;
@@ -507,6 +525,8 @@ export default function ForumPostPage() {
       });
       return;
     }
+    // Update the replies;
+    const updatedReplies = replies && replies.map(reply => ({;
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
@@ -527,6 +547,7 @@ export default function ForumPostPage() {
 
 
     })),
+      isAnswer: reply.id === replyId    })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
@@ -541,6 +562,9 @@ export default function ForumPostPage() {
 
 
     toast({
+    toast({
+      title: "Answer marked"
+      description: "The reply has been marked as the accepted answer"})    toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
   const handleReportPost = () => {
@@ -572,6 +596,7 @@ export default function ForumPostPage() {
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
   const handleLockPost = () => {},
+      description: "A moderator will review this content"})  },
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
@@ -859,6 +884,15 @@ export default function ForumPostPage() {;
 
 
                       {post.authorRole}
+
+    toast({
+      title: post.isLocked ? "Post unlocked" : "Post locked"
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
+      title: post.isLocked ? "Post unlocked" : "Post locked"
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
+  }
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
                     </Badge>
                   )}
                 </div>
@@ -1060,6 +1094,7 @@ export default function ForumPostPage() {;
 
 
         <Card>;
+    setPost({ ...post, isAnswered: true }),;        <Card>;
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
@@ -1076,6 +1111,14 @@ export default function ForumPostPage() {;
 
 
                     </Badge>;
+                  <AvatarImage src={post && post.authorAvatar} />;
+                  <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <div className="font-medium text-lg">{post && post.authorName}</div>;
+                  {post && post.authorRole && (;
+                    <Badge variant="outline" className="mt-1">;
+                      {post && post.authorRole}                    </Badge>;
                   )}
                 </div>;
               </div>;
@@ -1087,6 +1130,9 @@ export default function ForumPostPage() {;
 
 
                   {timeAgo}
+              <div className="flex items-center text-sm text-muted-foreground">;
+                <Calendar className="h-4 w-4 mr-1" />;
+                <time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
                 </time>;
               </div>;
             </div>;
@@ -1670,6 +1716,20 @@ if (return) {
             </div>
           )}
               )}
+            <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
+
+            <div className="flex flex-wrap gap-2 mb-6">;
+              {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+                  {tag}
+                </Badge>;
+              ))}                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleUpvote}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleDownvote}              )}
             </div>
           )}
           {post.isLocked && (
@@ -1692,6 +1752,19 @@ if (return) {
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
+                <ReplyCard
+                  key={reply.id}
+                  reply={reply}                <ReplyCard
+                  key={reply.id}
+                  reply={reply}
+                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+
+          {post && post.isLocked && (;
+                </Alert>;              )}
+            </div>;
+          )}
+          ;
+          {post.isLocked && (;
             <Alert className="mb-8">;
               <AlertDescription className="flex items-center">;
                 <Lock className="h-4 w-4 mr-2" />;
@@ -1699,6 +1772,11 @@ if (return) {
               </AlertDescription>;
             </Alert>;
           )}
+
+          <div className="space-y-6">;
+            {replies;
+              .filter(reply => !reply && reply.isAnswer);
+              .map(reply => (;
                 <ReplyCard
                   key={reply && reply.id}
                   reply={reply}
@@ -1891,3 +1969,7 @@ downvotes: 0
 }</div> </div> </div> </AppLayout>) 
 }
 ;
+                />;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />

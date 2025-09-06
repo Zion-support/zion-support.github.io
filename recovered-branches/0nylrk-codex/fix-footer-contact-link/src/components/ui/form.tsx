@@ -1,3 +1,4 @@
+
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -48,6 +49,29 @@ const useFormField = () => {;
       <Controller {...props} />
     </FormFieldContext.Provider>
 
+const FormField = ({ ...props }: any) =></FormFieldContextValue> {  return (
+    <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext && FormFieldContext.Provider>;
+  )
+};
+const useFormField = () => {;
+  const fieldContext = React && React.useContext(;
+    FormFieldContext;
+      <Controller {...props} />
+    </FormFieldContext.Provider>
+
+  );
+}
+const useFormField = () => {
+  const fieldContext = React.useContext(
+    FormFieldContext
+  ) as FormFieldContextValue;
+  const itemContext = React.useContext(
+    FormItemContext
+  ) as FormItemContextValue | null;
+  const { getFieldState, formState } = useFormContext();
+  const fieldState = getFieldState(fieldContext.name, formState);
   )
 }
 
@@ -86,7 +110,7 @@ const FormItem = React.forwardRef<
 };
 
 type FormItemContextValue = {
-type FormItemContextValue = {;
+type FormItemContextValue = {
   id: string,;
 };
 
@@ -114,6 +138,13 @@ const FormItem = React && React.forwardRef<;
   );
 });
 FormItem && FormItem.displayName = 'FormItem';
+
+  if (!fieldContext) {
+    throw new Error('useFormField should be used within <FormField>');
+  }
+  if (!itemContext) {
+    throw new Error("useFormField should be used within <FormItem>")
+  }
 
 const FormLabel = React && React.forwardRef<;
   React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
@@ -215,6 +246,17 @@ const FormLabel = React.forwardRef<
       htmlFor={formItemId}
       {...props}
     />
+
+    >;
+
+      {body}
+    </p>;
+  );
+});
+
+FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
   )
 })
 FormLabel.displayName = "FormLabel"
@@ -551,3 +593,7 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
   FormField
 }
 ;
+  if (!body) {}
+    >
+      {body}
+    </p>

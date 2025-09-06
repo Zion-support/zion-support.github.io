@@ -80,3 +80,7 @@ export default Privacy;
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
 export default Privacy;
+>>>>>>> main
+import { motion } from 'framer-motion';""
+import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

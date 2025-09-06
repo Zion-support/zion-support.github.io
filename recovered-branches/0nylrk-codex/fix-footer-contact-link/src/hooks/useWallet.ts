@@ -123,6 +123,7 @@ if ( {) {
 
 
         amount;
+      set_error (err.message);        amount;
         transaction_type: 'earn';
         reason: reason |null
         created_at: new Date().toISOString()}
@@ -241,6 +242,7 @@ if (return) {
 
 
 import { useEffect, useState } from 'react',;
+;import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
@@ -459,3 +461,7 @@ export function useWallet() {;
 
 
 }
+    fetchTransactions;
+    earnTokens;
+
+    spendTokens}}

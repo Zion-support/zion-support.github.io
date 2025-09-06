@@ -23,6 +23,7 @@ const Menubar = React.forwardRef<
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -47,6 +48,7 @@ const MenubarTrigger = React.forwardRef<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -111,6 +113,7 @@ const MenubarSubTrigger = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   >;
@@ -172,6 +175,7 @@ const MenubarContent = React.forwardRef<
 
           className
 
+          className
         )}
         {...props}
       />;
@@ -246,6 +250,7 @@ const MenubarItem = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -301,6 +306,8 @@ className={cn (
   React.ElementRef<typeof MenubarPrimitive.RadioItem>,;
 
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
@@ -344,6 +351,8 @@ const MenubarLabel = React.forward_ref<;
 
   React.ElementRef<typeof MenubarPrimitive.Label>,;
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
     inset?: boolean;
   }
@@ -360,6 +369,7 @@ const MenubarLabel = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -400,6 +410,7 @@ const MenubarSeparator = React.forward_ref<;
 
         className
 
+        className
       )}
 />));
 MenubarSeparator.display_name = MenubarPrimitive.Separator.display_name;

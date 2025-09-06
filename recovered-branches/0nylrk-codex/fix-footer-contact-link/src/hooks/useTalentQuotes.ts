@@ -14,6 +14,7 @@ import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {;
   const { user } = useAuth();
   const { toast } = useToast();
+import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
@@ -45,7 +46,7 @@ export const useTalentQuotes = () => {;
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
   // Get the talent's ID (user's ID);
-  const talentId = user?.id || '',;
+  const talentId = user?.id || '';
   // Fetch quotes for this talent;
   const { data: allQuotes = [], isLoading, error } = useQuery({;
     queryKey: ['quotestalent', talentId],;
@@ -78,6 +79,7 @@ export const useTalentQuotes = () => {;
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
     
+    queryKey: ['quotestalent', talentId];    
     return true
   }),
 
@@ -91,6 +93,7 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
+
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -130,6 +133,7 @@ export const useTalentQuotes = () => {;
 
         description: "Failed to update status: " + error && error.message,
         variant: "destructive"
+        description: "The quote request status has been updated"        variant: "destructive"
       })
     }
   });
@@ -157,6 +161,7 @@ export const useTalentQuotes = () => {;
 
 
     onSuccess: (_, variables) => {
+  const toggleArchiveMutation = useMutation({    onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
@@ -183,6 +188,7 @@ export const useTalentQuotes = () => {;
 
 
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
+          : "The quote request has been moved back to active quotes"    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
@@ -327,6 +333,12 @@ if ( {) {
     toggleArchive: (id: string, isArchived: boolean) => 
 
     },
+        title: "Error",
+  description: "Failed to update quote: " + error && error.message,
+        variant: "destructive"
+      })
+    }
+  });    },
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -351,6 +363,8 @@ if ( {) {
       toast({;
         title: message,;
         description: "The quote request status has been updated";
+        title: message,,
+  description: "The quote request status has been updated";
       }),;
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] });
     },;
@@ -358,6 +372,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to update status: " + error.message,;
+        title: "Error",,
+  description: "Failed to update status: " + error.message,;
         variant: "destructive";
       });
     }
@@ -370,6 +386,8 @@ if ( {) {
       toast({;
         title: variables.isArchived ? "Quote archived" : "Quote unarchived",;
         description: variables.isArchived;
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",,
+  description: variables.isArchived;
           ? "The quote request has been archived";
           : "The quote request has been moved back to active quotes";
       }),;
@@ -379,6 +397,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to update quote: " + error.message,;
+        title: "Error",,
+  description: "Failed to update quote: " + error.message,;
         variant: "destructive";
       });
     }
@@ -404,6 +424,8 @@ if ( {) {
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

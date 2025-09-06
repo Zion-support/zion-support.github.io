@@ -18,6 +18,7 @@ export interface ContentGenerationRequest {
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
 }
+  length: 'short' | 'medium' | 'long';}
 export interface ContentGenerationResponse {
   content: string;
   word_count: number;
@@ -337,6 +338,32 @@ ${request && request.topic} represents a significant opportunity for organizatio
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
 
+  suggestions: string[];
+  metadata: {
+    title: string;
+  metadata: {
+    title: string,
+  description: string
+
+    tags: string[]
+  }
+}
+export interface ContentTemplate {
+
+export interface ContentTemplate {;
+  id: string;
+  name: string,
+  description: string;
+  type: string;      }
+      {
+        id: 'social - media - campaign';
+        name: 'Social Media Campaign',
+  description: 'Complete social media content strategy and posts';
+      {
+        id: 'landing - page - copy';
+        name: 'Landing Page Copy';    return {
+      content: mockContent;
+      wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
@@ -558,6 +585,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
     // Mock content analysis;
     return {
       seo_score: Math.floor (Math.random () * 30) + 70;
+        title: `${request && request.topic} - Complete Guide`,
+  description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']      }
+    }
+  }  async analyzeContent(content: string): Promise<{
+    seoScore: number;
+    readabilityScore: number;
+    suggestions: string[]
+    keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
         'Add more headings for better structure_include internal links to related content_optimize meta description';
@@ -646,6 +682,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
+        'marketing': 1.5;// Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -714,6 +751,9 @@ export const AI_CONTENT_PRICING = {;
     period: '/month',;
 
 
+
+    period: '/month',
+    period: '/month',
 
     features: [;
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
@@ -788,6 +828,7 @@ export const AI_CONTENT_PRICING = {;
 };
 
 
+  }
   }
 };
 

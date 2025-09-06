@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
-export default function PostJob({ }: PostJobProps) {
+
+}
+
+export default function PostJob({}: PostJobProps) {
   return (
     <div>
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/PostJob.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function PostJob({ }: PostJobProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/PostJob.jsx

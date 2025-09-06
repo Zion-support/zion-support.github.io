@@ -66,6 +66,10 @@ type LoginFormValues = z.infer<typeof loginSchema>,
     
 
 
+import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
@@ -224,6 +228,7 @@ export function LoginForm() {;
           control={form && form.control}
           name="email"
                   />;
+      setIsSubmitting(false)                  />;
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
@@ -362,3 +367,8 @@ await login (data.email, data.password)
 }
 }
 ;
+            </FormItem>;
+
+        <FormField
+          control={form && form.control}
+          name="password"

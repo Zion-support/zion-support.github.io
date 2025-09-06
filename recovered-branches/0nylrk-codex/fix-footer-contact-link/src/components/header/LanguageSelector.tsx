@@ -17,6 +17,11 @@ DropdownMenu
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 } from "@/components/ui/dropdown-menu";
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -82,6 +87,7 @@ import { Globe  } from './lucide-react';
 DropdownMenuTrigger,;
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+  );} from "@/components/ui/dropdown-menu";
 
   return (
     <DropdownMenu>;
@@ -93,11 +99,16 @@ DropdownMenuTrigger,;
         >;
           <Globe className="h - 5 w - 5" />;
           <span className="sr - only">{t ("general.select_language")}</span>;
+          className="text - white hover:bg - zion-purple / 10";
+        >;
+          <Globe className="h - 5 w-5" />;
+          <span className="sr-only">{t ("general.select_language")}</span>;
         </Button>;
       </DropdownMenuTrigger>;
       <DropdownMenuContent;
         align="end";
         className="bg - zion - blue - dark border border - zion - purple / 20";
+        className="bg - zion - blue - dark border border - zion-purple / 20";
       >;
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
@@ -122,4 +133,26 @@ DropdownMenuTrigger,;
 
   );
 }
+}
+  );
+}
+}  );
+}
+}
+  ),;}
+ return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
+  lang.code 
+}className= {
+  `cursor-pointer $ {
+  currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
+}` 
+}onClick= {
+  () => changeLanguage (lang.code) 
+}> </div> </DropdownMenuItem>) ) 
+}</DropdownMenuContent> </DropdownMenu>) 
+}
+</DropdownMenuContent>
+    </DropdownMenu>
+
+  );
 }

@@ -228,6 +228,15 @@ export function DisputeForm({ ;
     setFiles(newFiles);
     form && form.setValue("attachments", newFiles);
   };
+          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
+        }  };
+
+  const removeFile = (index: number) => {;
+    const newFiles = [...files];
+    newFiles && newFiles.splice(index, 1);
+    setFiles(newFiles);
+    form && form.setValue("attachments", newFiles)
+};
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
@@ -238,6 +247,8 @@ export function DisputeForm({ ;
         milestone_id: milestoneId,;
         reason_code: values && values.reason_code,;
         description: values && values.description}),;
+        reason_code: values && values.reason_code,,
+  description: values && values.description}),;
 
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
@@ -404,6 +415,7 @@ export function DisputeForm({;
 
   return (
           <FormField
+  return (          <FormField
             control={form && form.control}
             name="reason_code"
             render={({ field }) => (;
@@ -515,6 +527,13 @@ if ( {) {
       </div>;
       <Form {...form}>;
         <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+    <div className="space-y-6">;
+      <div className="flex items - center space-x-2">;
+        <FileText className="h - 5 w - 5 text-primary" />;
+        <h2 className="text - xl font-semibold">Report an Issue</h2>;
+      </div>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
           <FormField;
             control={form.control}
             name="reason_code";
@@ -549,6 +568,7 @@ if ( {) {
 
                     ))}
                   </SelectContent>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
                 </Select>;
                 <FormMessage />;
               </FormItem>;
@@ -561,6 +581,9 @@ if ( {) {
             control={form && form.control}
             name="description"
 
+          <FormField
+            control={form && form.control}
+            name="description"
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
           />;
           ;
@@ -614,6 +637,7 @@ if ( {) {
           />;
           ;
 
+          />;
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
@@ -663,6 +687,11 @@ if ( {) {
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
 
                 />;
+                <Input
+                  type="file" 
+                  multiple 
+                  onChange={handleFileChange}
+                  className="cursor-pointer"                />;
 
                 {files && files.length > 0 && (;
                   <div className="space-y-2">;
@@ -767,6 +796,9 @@ if ( {) {
 
 
             </Button>
+    </div>);
+
+}            </Button>
           </div>
         </form>
       </Form>
@@ -859,3 +891,4 @@ description: values.description
 
 
 }
+  )

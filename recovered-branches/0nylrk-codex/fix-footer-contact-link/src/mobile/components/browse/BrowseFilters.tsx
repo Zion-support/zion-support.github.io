@@ -25,6 +25,15 @@ import { X, Filter } from "lucide-react";
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { X, Filter } from "lucide-react",
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
@@ -48,6 +57,30 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
 
 
   return (
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Slider } from '@/components / ui / slider';
+import { Switch } from '@/components / ui / switch';
+import { Input } from '@/components / ui / input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { X, Filter } from './lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
+import { Badge } from '@/components / ui / badge';
+import { Label } from '@/components / ui / label';
+
+import { Label } from "@/components/ui/label",
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+  
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+    return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
@@ -366,6 +399,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
 
 
                   <Select>;
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}                  <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
                     </SelectTrigger>;
@@ -635,3 +671,35 @@ if (!activeFilters.includes (filter) ) {
 
   )
 }
+                <div className="space-y-2">;
+                  <Label > Salary Range</Label>;
+                  <div className="flex gap - 4 items-center">;
+                    <Input placeholder="Min" type="number" className="w-full" />;
+                    <span > to</span>;
+                    <Input placeholder="Max" type="number" className="w-full" />;
+                  </div>;
+                </div>;
+                <div className="space-y-2">;
+                  <Label > Skills</Label>;
+                  <div className="grid grid - cols - 2 gap-2">;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">JavaScript</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">React</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">Python</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">Figma</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">UI / UX</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify-start">Node.js</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex items - center justify-between">;
+                  <Label > Only show verified profiles</Label>;
+                  <Switch />;
+                </div>;
+              </div>;
+              <SheetFooter>;
+                <Button variant="outline" className="w-full">Reset</Button>;
+                <Button className="w-full" on_click={() => add_filter ("Experience: 3+ years")}>Apply Filters</Button>;
+              </SheetFooter>;
+            </SheetContent>;
+          </Sheet>;
+          <Select>;
+            <SelectTrigger className="w-[120px] h-8">;

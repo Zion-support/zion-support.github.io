@@ -120,7 +120,7 @@ export function addEducationSection(;
     if (!a.is_current && b.is_current) return 1,;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime();
   }),;
   for (const edu of sortedEducation) {;
@@ -162,6 +162,42 @@ export function addEducationSection(;
   }
   return yPos + 5
     }
+  }
+  return yPos + 5
+): number {});
+  for (const edu of sortedEducation) {
+    // Check if we need to add a new page
+    if (yPos > 260) {
+      doc && doc.addPage();
+      yPos = 20
+    }
+
+    
+    doc && doc.setFontSize(14);
+    doc && doc.setTextColor(colors && colors.subheading);
+    doc && doc.text(edu && edu.institution, 20, yPos);
+    
+    const degreeText = `${edu && edu.degree}${edu && edu.field_of_study ?  + edu && edu.field_of_study : ''}`;
+    doc && doc.setFontSize(12);
+    doc && doc.text(degreeText, 20, yPos + 5);
+    
+    const startDate = formatDate(edu && edu.start_date);
+    const endDate = edu && edu.is_current ? 'Present' : formatDate(edu && edu.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    
+    doc && doc.setFontSize(10);
+    doc && doc.setTextColor(colors && colors.text);
+    doc && doc.text(dateText, 20, yPos + 10);
+    
+    if (edu && edu.location) {
+      doc && doc.text(edu && edu.location, 70, yPos + 10)
+    }
+        if (edu && edu.description) {
+      doc && doc.setFontSize(10);
+      const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
+      doc && doc.text(descriptionLines, 20, yPos + 16);
+      
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
   }
   return yPos + 5
 import {Education} from '@/types / resume';
@@ -360,3 +396,4 @@ doc.text (dateText, 20, yPos + 10);
 
 
 }
+  $2}}

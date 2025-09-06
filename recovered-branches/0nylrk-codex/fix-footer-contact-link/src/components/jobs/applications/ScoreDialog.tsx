@@ -1,6 +1,8 @@
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
+
+
 import {
   Dialog;
   DialogContent;
@@ -112,6 +114,8 @@ export function ScoreDialog({;
 
           <ApplicationScoreCard
           <ApplicationScoreCard ;
+          <ApplicationScoreCard 
+
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
@@ -180,3 +184,7 @@ onScoreUpdated
 }
 
 
+      </DialogContent>;
+    </Dialog>;
+  );
+}

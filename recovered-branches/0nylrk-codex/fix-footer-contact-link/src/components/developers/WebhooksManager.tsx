@@ -68,6 +68,7 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
 
 
 import { useState, useEffect } from "react",
+export function WebhooksManager() {import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
@@ -156,6 +157,11 @@ export function WebhooksManager() {
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
     ),
+    testWebhook,    await createWebhook(
+      webhookName
+      webhookUrl
+      selectedEvents
+      webhookSecret.trim() === "" ? undefined : webhookSecret    ),
     
     setShowCreateDialog(false),
     resetWebhookForm()
@@ -219,6 +225,21 @@ export function WebhooksManager() {
 
 
   return (
+  },
+
+  const handleDeleteWebhook = async (webhookId: string) => {
+    await deleteWebhook(webhookId)
+    setShowDeleteConfirm(null)
+
+  },
+
+  const handleTestWebhook = async (webhookId: string) => {
+    await testWebhook(webhookId, testEventType);
+    setShowTestResult(true)  const resetWebhookForm = () => {
+    setWebhookName("");
+    setWebhookUrl("");
+    setWebhookSecret("");
+    setSelectedEvents([])  return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -623,6 +644,10 @@ export function WebhooksManager() {;
                     onChange={(e) => setWebhookSecret(e.target.value)}
 
 
+  }, []),;                  <Input
+                    id="webhook-secret"
+                    type="password"
+                    value={webhookSecret}
                     placeholder="••••••••••••••••";
                     className="bg-zinc-800 border-zinc-700";
                   />;
@@ -1140,6 +1165,15 @@ function WebhooksManager() {
                         </Button>;
                       </DropdownMenuTrigger>;
                         </DropdownMenuItem>;
+                      <DropdownMenuTrigger asChild>;                        <Button variant="ghost" size="icon">;
+                          <MoreVertical size={16} />;
+                        </Button>;
+                      </DropdownMenuTrigger>;
+
+                          onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
+                          className="cursor-pointer text-red-500";
+                        >;
+                          <X size={14} className="mr-2" /> Delete;                        </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
@@ -1149,6 +1183,24 @@ function WebhooksManager() {
             ));
           )}
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;
+
+                </div>;
+
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
+                  <span>Created: {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}</span>;
+                  {webhook && webhook.last_triggered_at && (;
+                    <span>Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
+
+                  )}                </div>;
+              </div>;
+            ));
+          )}
+
+      <Dialog 
+        open={showTestDialog !== null} 
+
+        onOpenChange={(open) => {
+          if (!open) {      <CardFooter className="justify-between border-t border-zinc-800 py-4">;
         <div className="text-xs text-zinc-500">;
           Webhooks will be sent with HTTPS POST requests to your endpoint.;
         </div>;
@@ -1177,12 +1229,25 @@ function WebhooksManager() {
           }
         }}
 
+          }
+        }}
+
+      >;
+        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
+          <DialogHeader>;
+            <DialogTitle>Test Webhook</DialogTitle>;
+            <DialogDescription className="text-zinc-400">;
+              Send a test webhook to your endpoint.;
+            </DialogDescription>;
+          </DialogHeader>;
           {!showTestResult ? (;
             <>;
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="test-event-type">Event Type</Label>;
             }
+
+                  <Select            }
           }
         }}
                   <Select
@@ -1212,6 +1277,10 @@ function WebhooksManager() {
                 </Button>
                 <Button variant="outline" onClick={() => {
                   clearTestResult()
+                    The event type will determine the structure of the test payload.;
+                  </p>;
+                </div>;
+              </div>;                  clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
@@ -1260,6 +1329,7 @@ function WebhooksManager() {
 
 
               ;
+                      {testResult?.status} {testResult?.statusText}              ;
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
                   Cancel;
@@ -1326,6 +1396,10 @@ function WebhooksManager() {
 
 
           )}
+                        testResult && testResult.status >= 200 && testResult.status < 300;                  Test Another Event;
+                </Button>;
+              </DialogFooter>;
+            </>;          )}
         </DialogContent>
       </Dialog>
       {/* Delete Webhook Confirmation Dialog */}
@@ -1408,6 +1482,7 @@ function WebhooksManager() {
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
               This action will permanently remove this webhook.;
+              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}              This action will permanently remove this webhook.;
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -1423,6 +1498,7 @@ function WebhooksManager() {
 
 
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
+              className="bg-red-600 hover: bg-red-700";            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction ;

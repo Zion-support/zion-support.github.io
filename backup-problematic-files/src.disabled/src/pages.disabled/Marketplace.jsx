@@ -6,6 +6,6 @@ const Marketplace = ({ className }) => {
       <h1>Marketplace</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

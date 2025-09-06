@@ -111,6 +111,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+import Layout from '../components/Layout';    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
+  },
+  {
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -167,6 +171,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      "Experience with databases (PostgreSQL, MongoDB)"    ],
+    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
+  },
+  {
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -223,6 +231,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      "Experience with containerization (Docker, Kubernetes)"    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+  },
+  {
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -279,6 +291,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      "Experience with security tools and frameworks"    ],
+    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
+  },
+  {
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -335,6 +351,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      "Experience with infrastructure as code (Terraform, CloudFormation)"    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
+  },
+  {
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -391,6 +411,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      "Experience with user research and testing"    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
+  }
+];
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -906,6 +930,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
+      title="Careers - Zion Tech Group"      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1050,6 +1078,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     viewport={{ once: true }}
                 
                   >
+                    viewport={{ once: true }}                  >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
@@ -1090,6 +1119,8 @@ ursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
@@ -1164,6 +1195,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
     className="text-center mb-16"
+        {/* Values Section */}    className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1291,6 +1323,8 @@ ursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
@@ -1387,6 +1421,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
     className="text-center mb-16"
+        {/* Job Openings Section */}    className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1553,6 +1588,8 @@ ursor/automate-test-improve-and-merge-code-646c
     key={job.id}
 ursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}              transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Open Positions;
@@ -1676,6 +1713,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
+        {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
               viewport={{ "once": true }}
@@ -1705,6 +1743,7 @@ ursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+              viewport={{ once: true }}            >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
               </h2>
@@ -1740,3 +1779,4 @@ ursor/automate-test-improve-and-merge-code-646c
     </MainLayout>;
   ),;
 ursor/automate-test-improve-and-merge-code-646c
+}

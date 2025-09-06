@@ -1,4 +1,10 @@
 export interface RateLimitConfig {
+
+  burst_limit: number,
+  window_size: number;
+
+}
+export interface RateLimitRule {export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -24,6 +30,7 @@ export interface RateLimitRule {
   config: RateLimitConfig;
   enabled: boolean;
 }
+}}
 export interface RateLimitStats {
   endpoint: string;
   method: string;
@@ -129,6 +136,7 @@ export interface RateLimitViolation {;
   id: string;
   api_key: string;
   endpoint: string;
+    minute: number;  endpoint: string;
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
@@ -218,8 +226,14 @@ if ( {) {
 
 
         id: `rule_${Date && Date.now()}`;
-        createdAt: new Date(),
+        createdAt: new Date()
 
+  }
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+    try {
+      // Mock response for demo;
+      return {
+        ...rule;
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -317,6 +331,8 @@ export class APIRateLimiterService {;
 
 
         id: `rule_${Date.now ()}`;
+    }
+  }        id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
       }
@@ -409,6 +425,9 @@ if ( {) {
 
 
 
+      return await response.json ();    } catch (error) {
+      // Mock rules for demo;
+      return [;
         }
         {
           id: 'rule_2';
@@ -434,6 +453,7 @@ if ( {) {
           createdAt: new Date()
           updatedAt: new Date()
         }
+            requestsPerDay: 1000;        }
       ];
     }
   }
@@ -702,6 +722,9 @@ if ( {) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
 
       }
+        throw new Error('Rule not found')      }
+    }
+  }      }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
       throw error
@@ -896,6 +919,7 @@ if ( {) {
       }
       return await response.json ();
     } catch (error) {
+        headers: {} catch (error) {
       // Mock stats for demo;
       return [;
         {
@@ -1049,7 +1073,7 @@ if ( {) {
       return await response.json(),;
     } catch (error) {;
       // Mock update for demo;
-      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),;
+      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id);
       if (!existingRule) {;
         throw new Error('Rule not found'),;
       }
@@ -1217,6 +1241,9 @@ if ( {) {
       return await response.json ();
     } catch (error) {
       // Mock API keys for demo;
+    }
+  }
+  async getAPIKeys (): Promise < APIKey[]> {      // Mock API keys for demo;
       return [;
         {
           id: 'key_1';
@@ -1312,6 +1339,14 @@ if ( {) {
 
 
 
+  }
+
+            burst_limit: 25,
+            window_size: 60;
+          }
+          created_at: new Date ();
+          last_used: new Date (),
+          is_active: true;
 
         }
       ];
@@ -1450,6 +1485,7 @@ if ( {) {
           ipAddress: '10 && 10.0.0 && 0.50',
           userAgent: 'ZionMobileApp/1 && 1.0'
           api_key: 'zion_web123';
+          id: 'violation_1';          api_key: 'zion_web123';
           endpoint: '/api / users';
           method: 'GET',
           timestamp: new Date (Date.now () - 1000 * 60 * 30), // 30 minutes ago;
@@ -1713,6 +1749,10 @@ export const API_RATE_LIMITER_PRICING = {
 
 
   }
+    overview: {
+      total_requests: number;
+      blocked_requests: number;
+      active_rules: number  }
   professional: {
     name: 'Professional';
     price: 79;
@@ -2090,3 +2130,5 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
   }
 }
 ;
+  }
+};

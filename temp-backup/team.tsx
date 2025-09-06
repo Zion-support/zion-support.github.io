@@ -29,8 +29,9 @@ interface TeamProps {;
 }
 
 }
-export default function Team(): any ({ }: TeamProps) {;
+export default function Team(): any ({}: TeamProps) {;
   return (
+  // Add props here as needed;  return (
     <div>;
       <h1>Team</h1>;
       <p>This component is currently under development.</p>;

@@ -60,6 +60,17 @@ export default function MessagingInbox() {
     // Fetch conversations when component mounts
     const loadData = async () => {
 import {Button} from '@/components / ui / button';
+        await fetchConversations()
+      } catch (error) {
+        console.error("Failed to load conversations:", error),
+        toast.error("Failed to load messages. Please try again.")
+      }
+
+
+
+  useEffect(() => {
+    // Fetch conversations when component mounts
+    const loadData = async () => {import {Button} from '@/components / ui / button';
 import {use_navigate} from 'react-router-dom';
 export default /**
  * MessagingInbox - Function description
@@ -134,6 +145,7 @@ function MessagingInbox() {
 
 
               <Button
+            {activeConversation && (              <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
@@ -170,9 +182,15 @@ export default function MessagingInbox() {;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
 
 
-  const isMobile = useIsMobile(),;
+  const isMobile = useIsMobile();
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
+              {isLoading ? (
+                <div className="flex-1 flex items-center justify-center p-8">
+                  <div className="animate-pulse">Loading conversations...</div>
+                </div>
+              ) : (
+                <ConversationsList
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
@@ -204,6 +222,33 @@ export default function MessagingInbox() {;
   return (;
 
     <ProtectedRoute>;
+        console && console.error("Failed to load conversations:", error);
+        toast && toast.error("Failed to load messages. Please try again.");
+      }
+    };
+
+    loadData();
+  }, [fetchConversations]);
+
+  const startVideoCall = () => {;
+    if (!activeConversation) {;
+      toast && toast.error("Please select a conversation first");
+      return;
+    }
+
+    const roomId = `msg-${activeConversation && activeConversation.id}`;
+    setActiveCall(roomId);
+
+    // Show toast notification;
+    toast && toast.success("Starting video call", {,
+  description: "Initializing video call connection...";
+    });
+
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`)
+};
+
+  return (    <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
           <div className="flex justify-between items-center mb-6">;
@@ -214,6 +259,7 @@ export default function MessagingInbox() {;
 
 
               <Button
+            {activeConversation && (;
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
@@ -236,6 +282,7 @@ export default function MessagingInbox() {;
 
 
               {/* Conversations List */}
+            )}              {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
                   <div className="animate-pulse">Loading conversations...</div>;
@@ -245,6 +292,7 @@ export default function MessagingInbox() {;
 
 
     }
+              ) : (;    }
 ;
     load_data ();
   }, [fetch_conversations]);
@@ -276,6 +324,11 @@ if ( {) {
           <div className="flex justify - between items - center mb - 6">;
             <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
               <MessageSquare className="h - 6 w - 6" />;
+      <div className="min - h-screen bg - zion-blue">;
+        <div className="container mx - auto py - 8 px-4">;
+          <div className="flex justify - between items - center mb-6">;
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
+              <MessageSquare className="h - 6 w-6" />;
               Messages;
             </h1>;
             {active_conversation && (
@@ -429,6 +482,28 @@ export default function MessagingInbox() {;
 
 }
 ;
+                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple-light";
+              >;
+                <Video className="h - 4 w-4" />;
+                Start Call;
+              </Button>)}
+          </div>;
+          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow-hidden">;
+            <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>;
+              {/* Conversations List */}
+              {is_loading ? (
+                <div className="flex - 1 flex items - center justify - center p-8">;
+                  <div className="animate-pulse">Loading conversations...</div>;
+                </div>) : (
+                <ConversationsList;
+              <ConversationDetailView />;
+            </div>;
+          </div>;
+        </div>;  ),; useEffect ( () => {
+  //Fetch conversations when component mounts const loadData = async () => {
+  try {}
+
+}
 
 };
 }, [fetchConversations]);

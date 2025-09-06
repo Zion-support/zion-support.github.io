@@ -132,6 +132,7 @@ function MessagingProvider() {
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 
+}
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -234,6 +235,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
   useEffect(() => {;
     if (conversations.length > 0) {;
       const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
       setUnreadCount(count);
     }
   }, [conversations, setUnreadCount]),;
@@ -296,6 +298,9 @@ if ( {) {
 
 
       {children}
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}      {children}
 
     </MessagingContext && MessagingContext.Provider>;
   );
@@ -303,6 +308,7 @@ if ( {) {
 
 
 
+  return (
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
@@ -397,3 +403,8 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 ;
 
 
+  return (
+    <MessagingContext.Provider value={context_value}>;
+      {children}
+    </MessagingContext.Provider>);
+}

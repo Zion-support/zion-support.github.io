@@ -20,6 +20,20 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
   useEffect__(() => {
 
 
+
+
+import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default function CloudAutomationHub() {
+  const [logs, setLogs] = useState<any[]>([])
+  useEffect(() => {
+import { useEffect, useState } from 'react',;
+;
+export default function CloudAutomationHub() {
+  const [logs, setLogs] = useState<any[]>([]),
+export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
+ursor/fix-lint-push-and-merge-to-main-ce13
+  useEffect__(() => {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
@@ -27,6 +41,8 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 
   }, [])
 
+  }, []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div>
@@ -167,6 +183,10 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 
               <span className="text-gray-600">{log.insights?.theme}</span>
 
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt || log.file}</span>
+              <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))}
         </ul>
@@ -180,6 +200,7 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
     </div>
 
   )
+  )
 export default function CloudAutomationHub(req, res) {
   try {
   const [logs, setLogs] = useState<any[]>([]);
@@ -192,6 +213,8 @@ export default function CloudAutomationHub(req, res) {
   return (;
     <div className="space-y-6">;
 
+
+}
 
 }
 
@@ -292,3 +315,5 @@ export default function CloudAutomationHub(req, res) {
 
 
 
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

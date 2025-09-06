@@ -171,6 +171,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   const removeFilter = (filterKey: string,) => {;
     if (filterKey && filterKey.startsWith('type-')) {;
       const typeToRemove = filterKey && filterKey.replace('type-', '');
+      const typeToRemove = filterKey && filterKey.replace('type-', '');
       const newTypes = filters && filters.types.filter(t => t !== typeToRemove),;
       onFiltersChange({ ...filters, types: newTypes });
     } else if (filterKey === 'category') {;
@@ -193,6 +194,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
         <Badge 
           key = {filter.key}
+          key = {filter.key}
 
       
       {activeFilters.map(filter => (
@@ -212,6 +214,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
       {activeFilters && activeFilters.map(filter => (;
         <Badge
+          key = {filter && filter.key}
           key = {filter && filter.key}
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1">;
@@ -378,6 +381,7 @@ if ( {) {
       {active_filters.map (filter => (
         <Badge;
           key = {filter.key }
+          key = {filter.key }
           variant="secondary";
           className="flex items - center gap - 1 pl - 2 pr - 1";
         >;
@@ -389,6 +393,7 @@ if ( {) {
             size="sm";
             className="h - 4 w - 4 p - 0 hover:bg - transparent";
             on_click = {(, ) => remove_filter (filter.key) }
+            on_click = {(, ) => remove_filter (filter.key) }
             aria - label={`Remove ${filter.label} filter`}
           >;
             <X className="h - 3 w - 3" />;
@@ -397,6 +402,7 @@ if ( {) {
       <Button;
         variant="ghost";
         size="sm";
+        on_click = {onClearAll }
         on_click = {onClearAll }
         className="text - xs h - 6 px - 2";
       >;
@@ -434,3 +440,36 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         Clear all
 
 
+      </button>
+    </div>
+  )}
+'"
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>)}
+'";
+import React from 'react';
+
+export default ActiveFiltersBar; import React from 'react'
+interface SearchFilters {
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string
+}
+interface ActiveFiltersBarProps {
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  onClearAll: () => void;
+  className?: string
+}
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

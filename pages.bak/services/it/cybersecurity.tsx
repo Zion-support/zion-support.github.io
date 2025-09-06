@@ -40,6 +40,11 @@ interface CybersecurityProps {
   // Add props here as needed
 }
 export default function Cybersecurity({}: CybersecurityProps) {
+
+interface CybersecurityProps {
+  // Add props here as needed
+}
+export default function Cybersecurity({}: CybersecurityProps) {
   return (
     <div>
       <h1>Cybersecurity</h1>
@@ -61,7 +66,7 @@ interface CybersecurityProps {
 }
 }
 }
-export default function Cybersecurity({}: CybersecurityProps) {
+export default function Cybersecurity({}: CybersecurityProps) {}}
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -102,6 +107,10 @@ interface CybersecurityProps {;
   // Add props here as needed;
 }
 export default function Cybersecurity(): any ({}: CybersecurityProps) {;
+interface CybersecurityProps {;
+  // Add props here as needed;
+}
+export default function Cybersecurity(): any ({}: CybersecurityProps) {;
   return (
     <div>;
       <h1>Cybersecurity</h1>;
@@ -133,3 +142,4 @@ export default function Cybersecurity(): any ({}: CybersecurityProps) {;
 ursor/automate-test-improve-and-merge-code-646c
 }
 }
+  );

@@ -45,6 +45,8 @@ interface DiscussionPost {
 }
 
   body: string
+  body: string
+}  body: string
 }
 
   body: string
@@ -79,6 +81,8 @@ id: 1
   }
 
 
+    body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?"
+  },
   body: string
 }
   {
@@ -93,6 +97,7 @@ id: 1
 
 
 const initialPosts: DiscussionPost[] = [;
+export const CommunityDiscussion: React.FC = () => {const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
     author: "Anna Zhou",;
@@ -104,6 +109,9 @@ const initialPosts: DiscussionPost[] = [;
     time: "50m ago",;
     title: "Quick tip: How to rank your Zion listing higher",;
   const handleAddPost = () => {;
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
+  },;
+];
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
       {;
@@ -120,6 +128,7 @@ const initialPosts: DiscussionPost[] = [;
     setShowNew(false);
   }
 
+  return (
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -302,6 +311,13 @@ import { Separator } from "@/components/ui/separator",;
                 onClick={() => setShowNew(false)}
 
 
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+            <div className="flex gap - 3 justify-end">;
+              <Button;
+                variant="secondary";
+                size="sm";
+                className="bg - zion - blue text - white hover:bg - zion - blue-dark";
+                on_click={() => setShowNew (false)}
               >;
                 Cancel;
               </Button>;
@@ -314,6 +330,9 @@ import { Separator } from "@/components/ui/separator",;
 
 
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
@@ -370,4 +389,7 @@ import { Separator } from "@/components/ui/separator",;
 
 };
   );
+};
+  )
+};}
 };

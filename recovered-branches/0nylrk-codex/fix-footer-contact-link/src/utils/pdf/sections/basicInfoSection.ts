@@ -102,6 +102,12 @@ export function addBasicInfoSection(;
 
   }
   return yPos
+export function addBasicInfoSection(  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
+  colors: PdfThemeColors
+): number {
+  // Add header with name and title  }
+  return yPos
 import {ResumeBasicInfo} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 export function addBasicInfoSection (
@@ -201,3 +207,4 @@ yPos += 10;
 
 
 }
+}}

@@ -41,6 +41,10 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
     return (
       <Comp
         className={cn(
+interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
+          "text-muted-foreground hover: text-foreground hover:bg-accent"
+
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
@@ -84,6 +88,9 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
 ),
 
 SidebarMenuButton.displayName = "SidebarMenuButton",
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 );
@@ -142,7 +149,7 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 ;
 export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(;
   ({ className, children, asChild = false, ...props }, ref) => {;
-    const Comp = asChild ? Slot :"button",;
+    const Comp = asChild ? Slot :"button";
     return (;
       <Comp;
         className={cn(;

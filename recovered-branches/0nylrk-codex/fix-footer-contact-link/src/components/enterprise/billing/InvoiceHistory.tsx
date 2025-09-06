@@ -14,6 +14,7 @@ import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
 import React from "react",
+  TableHeader;import React from "react",
   Table,
   TableBody,
   TableCell,
@@ -38,6 +39,8 @@ import { toast } from "@/hooks/use-toast";
 
 
 export function InvoiceHistory() {
+  TableHeader,  TableRow} from "@/components/ui/table",
+import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
   // Mock invoice data
 
   const invoices = [
@@ -302,6 +305,23 @@ export function InvoiceHistory() {;
   )
 
 
+      id: "INV-1234",
+      date: "May 1, 2025",
+      amount: "$1,999.00",  const handleDownloadInvoice = (invoiceId: string) => {
+    // In a real app, this would trigger a download of the invoice PDF
+    toast({
+      title: "Downloading invoice"
+      description: `Downloading invoice ${invoiceId} as PDF.`})      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
+      case "pending":;
+        return <Badge variant="outline">Pending</Badge>;
+    }
+
+  },
+
+  return (                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 gap-1"
 }
                       className="h-8 gap-1">;
                       <FileText className="h-3 && 3.5 w-3 && 3.5" />;
@@ -364,6 +384,7 @@ function InvoiceHistory() {
   const getBadgeForStatus = (status: string) =>: any {
     switch (status) {
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
+      case "paid": return <Badge className="bg - green-500">Paid</Badge>;
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
       case "overdue":;
@@ -387,6 +408,19 @@ function InvoiceHistory() {
         </div>;
       </div>;
       <div className="rounded - md border">;
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Invoice History</h3>;
+        <div className="relative">;
+          <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+          <Input;
+            type="search";
+            placeholder="Search invoices...";
+            className="w-[200px] md:w-[300px] pl-9";
+          />;
+        </div>;
+      </div>;
+      <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -396,12 +430,14 @@ function InvoiceHistory() {
               <TableHead > Amount</TableHead>;
               <TableHead > Status</TableHead>;
               <TableHead className="text - right">Actions</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {invoices.map ((invoice) => (
               <TableRow key={invoice.id}>;
                 <TableCell className="font - medium">{invoice.id}</TableCell>;
+                <TableCell className="font-medium">{invoice.id}</TableCell>;
                 <TableCell>{invoice.date}</TableCell>;
                 <TableCell>{invoice.period}</TableCell>;
                 <TableCell>{invoice.amount}</TableCell>;
@@ -418,6 +454,15 @@ function InvoiceHistory() {
 
 
             {invoices.map((invoice) => (;
+                <TableCell className="text-right">;
+                  <div className="flex justify - end gap-2">;
+                    <Button;
+                      variant="outline";
+                      size="sm";
+                      className="h - 8 gap-1";
+                      on_click={() => handleDownloadInvoice (invoice.id)}
+                    >;
+                      <Download className="h - 3.5 w-3.5" />;
               <TableRow key={invoice.id}>;
                 <TableCell className="font-medium">{invoice.id}</TableCell>;
                 <TableCell>{invoice.date}</TableCell>;

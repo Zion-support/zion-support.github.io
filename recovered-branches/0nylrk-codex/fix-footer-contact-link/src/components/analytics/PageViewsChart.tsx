@@ -125,6 +125,8 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+          data={data || []}
+          dataKeys={["views"]}          onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;

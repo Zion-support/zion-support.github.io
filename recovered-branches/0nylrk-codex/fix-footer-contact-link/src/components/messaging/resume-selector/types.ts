@@ -12,6 +12,8 @@ export interface ResumeOption {;
 
 
 export interface ResumeOption {
+
+export interface ResumeOption {
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -21,7 +23,8 @@ export interface ResumeOption {
 
 
 
-import { Resume } from "@/types/resume",
+import { Resume } from "@/types/resume"
+}import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
   title: string,
@@ -43,6 +46,8 @@ export interface ResumeOption {;
 
 
   onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;

@@ -7,10 +7,6 @@ import {
   ProjectNote
 } from "../../../utils/marketplace/types";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { getDemoUser } from "../../../utils/marketplace/auth";
-import { getProjectById, saveProject } from "../../../utils/marketplace/store";
-import {
   Project
   ProjectDocument
   ProjectNote,;
@@ -35,6 +31,11 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
+function bad(res: NextApiResponse, message: string, code;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+      id?: string;
+    }
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
@@ -62,7 +63,6 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { getDemoUser  } from '../../../utils / marketplace / auth';
 import { getProjectById, save_project  } from '../../../utils / marketplace / store';
-import {
   Project
   ProjectDocument
   ProjectNote
@@ -295,6 +295,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const { content } = req.body as { content: string }
         if (!content) return bad(res, "Missing content")
 
+    if (req.method === "GET") {
+      return res.json({ ok: true, project });
+    }
+    if (req.method === "PATCH") {
+      const { action } = req.body as { action: string }
+      if (action === "add_note") {
+        const { content } = req.body as { content: string }
+        if (!content) return bad(res, "Missing content");
         const note: ProjectNote = {
           id: uuidv4()
           authorId: user.id
@@ -337,37 +345,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
 
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid";
-import { getDemoUser } from "../../../utils/marketplace/auth";
-import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 
-import {
   Project
   ProjectDocument
   ProjectNote
 } from "../../../utils/marketplace/types";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { getDemoUser } from "../../../utils/marketplace/auth";
-import { getProjectById, saveProject } from "../../../utils/marketplace/store";
-import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
-import {
   Project
   ProjectDocument
   ProjectNote,;
 } from "../../../utils/marketplace/types";
-import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
     ok: false
     error: message
   });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types"
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -407,10 +398,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
 
+          createdAtIso: new Date().toISOString()
+        }
         project.notes.push(note);
         saveProject(project);
         return res.json({ ok: true, project });
       }
+      if (action === "add_document") {
+        const { name, url } = req.body as { name: string; url?: string }
+        if (!name) return bad(res, "Missing name");
+        const doc: ProjectDocument = {
+          id: uuidv4()
+          name
+          url
+          uploadedAtIso: new Date().toISOString()
+        }
         project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -504,3 +506,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 
+
+      if (action === 'mark_completed') {
+        project.status = 'COMPLETED';
+        saveProject(project);
+        return res.json({ ok: true, project });
+      }
+
+      return bad(res, 'Unknown action');
+    }
+
+    return bad(res, 'Method not allowed', 405);
+  } catch (e: any) {
+    const status = e?.statusCode || 500;
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message || 'Server error' });
+  }
+
+}}}
+  }
+}

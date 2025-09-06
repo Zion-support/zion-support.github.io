@@ -38,6 +38,10 @@
             <p>
               AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
 
+import Head from 'next/head';
+import React from 'react';
+        <meta name;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>
@@ -59,6 +63,7 @@
 
 
 
+  )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -69,3 +74,5 @@
 
 
 
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,8 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-;
+const { execSync } = require('child_process')
 };
 };
 ;
@@ -19,7 +18,8 @@ const { execSync } = require('child_process');
       return {;
         succes:s:true;
         vulnerabilitie:s:audit.vulnerabilities || {;
-        summar:y:audit.metadata || {;      };
+        summar:y:audit.metadata || {
+};
     } catch (error) {;
       // npm audit might fail if there are vulnerabilities;
       try {;
@@ -28,17 +28,16 @@ const { execSync } = require('child_process');
           return {;
             succes:s:false;
             erro:r:'Vulnerabilities found';
-            outpu:t:output;
-          ;
-        };
+            outpu:t:output
+};
       } catch (parseError) {;
-        this.log(`Error parsing npm audit:output:${parseError.message}`);
-      };
+        this.log(`Error parsing npm audit:output:${parseError.message}`)
+};
 ;
       return {;
         succes:s:false;
         erro:r:error.message;
-        outpu:t:error.stdout || error.stderr || '';      ;
+        outpu:t:error.stdout || error.stderr || ''
 };
 };
 ;
@@ -64,13 +63,13 @@ const { execSync } = require('child_process');
               lin:e:lineNum;
               typ:e:'hardcoded-password';
               severit:y:'high';
-              messag:e:'Hardcoded password detected';            });
-          };
-      };
+              messag:e:'Hardcoded password detected';            })
+};
+      }
 };
 ;
     scanDirectory(this.projectRoot);
-    return files;
+    return files
 };
 ;
   async scanConfigs() {;
@@ -98,8 +97,8 @@ const { execSync } = require('child_process');
               fil:e:configFile;
               typ:e:'exposed-secret';
               severit:y:'high';
-              messag:e:'Potential secret exposed in configuration file';            });
-          };
+              messag:e:'Potential secret exposed in configuration file';            })
+};
 ;
           // Check for debug mode in production configs;
           if (configFile.includes('production') && content.includes('debu:g:true')) {;
@@ -107,9 +106,9 @@ const { execSync } = require('child_process');
               fil:e:configFile;
               typ:e:'debug-mode';
               severit:y:'medium';
-              messag:e:'Debug mode enabled in production configuration';            });
-          };
-        };
+              messag:e:'Debug mode enabled in production configuration';            })
+}
+};
       });
 ;
       return {;
@@ -120,7 +119,7 @@ const { execSync } = require('child_process');
       return {;
         succes:s:false;
         erro:r:error.message;
-        issue:s:[];      ;
+        issue:s:[]
 };
 };
 ;
@@ -144,7 +143,7 @@ const { execSync } = require('child_process');
       report.recommendations.push({;
         priorit:y:'critical';
         messag:e:'Dependency vulnerabilities found';
-        actio:n:'Run npm audit fix to resolve vulnerabilities';      });
+        actio:n:'Run npm audit fix to resolve vulnerabilities';      })
 };
 ;
     if (codeResults.issues.length > 0) {;
@@ -153,31 +152,32 @@ const { execSync } = require('child_process');
         report.recommendations.push({;
           priorit:y:'high';
           messag:e:`${highSeverity} high-severity security issues found in code`;
-          actio:n:'Review and fix high-severity security issues';        });
-      };
+          actio:n:'Review and fix high-severity security issues';        })
+}
 };
 ;
     if (configResults.issues.length > 0) {;
       report.recommendations.push({;
         priorit:y:'medium';
         messag:e:'Configuration security issues found';
-        actio:n:'Review configuration files for security issues';      });
+        actio:n:'Review configuration files for security issues';      })
 };
 ;
-    return report;
+    return report
 };
 ;
   async saveReport(report) {;
     try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
-        fs.mkdirSync(reportDir, { recursiv:e:true });
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true })
+};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
-      this.log(`Error saving:report:${error.message}`);};
+      this.log(`Error saving:report:${error.message}`)
+}
 };
 ;
   async run() {;
@@ -187,7 +187,8 @@ const { execSync } = require('child_process');
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
-        fs.mkdirSync(logsDir, { recursiv:e:true });      };
+        fs.mkdirSync(logsDir, { recursiv:e:true })
+};
 ;
       // Run all security scans;
       const depResults = await this.scanDependencies();
@@ -217,13 +218,13 @@ const { execSync } = require('child_process');
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
       } else {;
-        this.log('\n No security issues found!');
-      };
+        this.log('\n No security issues found!')
+};
 ;
     } catch (error) {;
-      this.log(` Error running security:scanner:${error.message}`);      process.exit(1);
+      this.log(` Error running security:scanner:${error.message}`);      process.exit(1)
 };
-};
+}
 };
 ;
 // Run the security scanner;
@@ -240,8 +241,8 @@ class SecurityScanner {,;
     this.projectRoot = process.cwd(),;
     this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),;
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),;
-    this.startTime = Date.now(),;
-  };
+    this.startTime = Date.now(),
+};
 ,;
   log(message) {,;
     const timestamp = new Date().toISOString(),;
@@ -250,9 +251,9 @@ class SecurityScanner {,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage),;
     } catch (error) {,;
-      console.error('Error writing to log:file:', error.message),;
-    };
-  };
+      console.error('Error writing to log:file:', error.message),
+}
+};
 ,;
   async scanDependencies() {,;
     try {,;
@@ -268,8 +269,8 @@ class SecurityScanner {,;
       return {,;
         succes:s:true,;
         vulnerabilitie:s:audit.vulnerabilities || {},;
-        summar:y:audit.metadata || {};
-      };
+        summar:y:audit.metadata || {}
+};
     } catch (error) {,;
       // npm audit might fail if there are vulnerabilities,;
       try {,;
@@ -278,20 +279,20 @@ class SecurityScanner {,;
           return {,;
             succes:s:false,;
             erro:r:'Vulnerabilities found',;
-            outpu:t:output,;
-          };
-        };
+            outpu:t:output,
+}
+};
       } catch (parseError) {,;
-        this.log(`Error parsing npm audit:output:${parseError.message}`),;
-      };
+        this.log(`Error parsing npm audit:output:${parseError.message}`),
+};
 ,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
-        outpu:t:error.stdout || error.stderr || '',;
-      };
-    };
-  };
+        outpu:t:error.stdout || error.stderr || '',
+};
+    }
+};
 ,;
   async scanCode() {,;
     try {,;
@@ -316,14 +317,14 @@ class SecurityScanner {,;
               typ:e:'hardcoded-password',;
               severit:y:'high',;
               messag:e:'Hardcoded password detected',;
-            }),;
-          };
-      };
-    };
+            }),
+};
+      }
+};
 ,;
     scanDirectory(this.projectRoot),;
-    return files,;
-  };
+    return files,
+};
 ,;
   async scanConfigs() {,;
     try {,;
@@ -348,8 +349,8 @@ class SecurityScanner {,;
               typ:e:'exposed-secret',;
               severit:y:'high',;
               messag:e:'Potential secret exposed in configuration file',;
-            }),;
-          };
+            }),
+};
 ,;
           // Check for debug mode in production configs,;
           if (configFile.includes('production') && content.includes('debu:g:true')) {,;
@@ -358,23 +359,23 @@ class SecurityScanner {,;
               typ:e:'debug-mode',;
               severit:y:'medium',;
               messag:e:'Debug mode enabled in production configuration',;
-            }),;
-          };
-        };
+            }),
+}
+};
       }),;
 ,;
       return {,;
         succes:s:true,;
-        issue:s:configIssues,;
-      };
+        issue:s:configIssues,
+};
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
-        issue:s:[],;
-      };
-    };
-  };
+        issue:s:[],
+};
+    }
+};
 ,;
   async generateReport(depResults, codeResults, configResults) {,;
     const report = {,;
@@ -390,8 +391,8 @@ class SecurityScanner {,;
         cod:e:codeResults,;
         config:s:configResults,;
       },;
-      recommendation:s:[],;
-    };
+      recommendation:s:[],
+};
 ,;
     // Generate recommendations,;
     if (!depResults.success) {,;
@@ -399,8 +400,8 @@ class SecurityScanner {,;
         priorit:y:'critical',;
         messag:e:'Dependency vulnerabilities found',;
         actio:n:'Run npm audit fix to resolve vulnerabilities',;
-      }),;
-    };
+      }),
+};
 ,;
     if (codeResults.issues.length > 0) {,;
       const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,;
@@ -409,34 +410,34 @@ class SecurityScanner {,;
           priorit:y:'high',;
           messag:e:`${highSeverity} high-severity security issues found in code`,;
           actio:n:'Review and fix high-severity security issues',;
-        }),;
-      };
-    };
+        }),
+}
+};
 ,;
     if (configResults.issues.length > 0) {,;
       report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'Configuration security issues found',;
         actio:n:'Review configuration files for security issues',;
-      }),;
-    };
+      }),
+};
 ,;
-    return report,;
-  };
+    return report,
+};
 ,;
   async saveReport(report) {,;
     try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
-        fs.mkdirSync(reportDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true }),
+};
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
-      this.log(`Error saving:report:${error.message}`),;
-    };
-  };
+      this.log(`Error saving:report:${error.message}`),
+}
+};
 ,;
   async run() {,;
     this.log('  Starting Security Scanner...'),;
@@ -446,8 +447,8 @@ class SecurityScanner {,;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
-        fs.mkdirSync(logsDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true }),
+};
 ,;
       // Run all security scans,;
       const depResults = await this.scanDependencies(),;
@@ -478,14 +479,14 @@ class SecurityScanner {,;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-        this.log('\n No security issues found!'),;
-      };
+        this.log('\n No security issues found!'),
+};
 ,;
     } catch (error) {,;
       this.log(` Error running security:scanner:${error.message}`),;
-      process.exit(1),;
-    };
-  };
+      process.exit(1),
+};
+  }
 };
 ,;
 // Run the security scanner,;
@@ -514,8 +515,8 @@ class SecurityScanner {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    };
-  };
+    }
+};
 ,
   async scanDependencies() {,
     try {,
@@ -531,8 +532,8 @@ class SecurityScanner {,
       return {,
         success: true,
         vulnerabilities: audit.vulnerabilities || {},
-        summary: audit.metadata || {};
-      };
+        summary: audit.metadata || {}
+};
     } catch (error) {,
       // npm audit might fail if there are vulnerabilities,
       try {,
@@ -542,8 +543,8 @@ class SecurityScanner {,
             success: false,
             error: 'Vulnerabilities found',
             output: output
-          };
-        };
+          }
+};
       } catch (parseError) {,
         this.log(`Error parsing npm audit output: ${parseError.message}`)
       };
@@ -552,9 +553,9 @@ class SecurityScanner {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || ''
-      };
-    };
-  };
+      }
+}
+};
 ,
   async scanCode() {,
     try {,
@@ -580,9 +581,9 @@ class SecurityScanner {,
               severity: 'high',
               message: 'Hardcoded password detected'
             })
-          };
-      };
-    };
+          }
+}
+};
 ,
     scanDirectory(this.projectRoot),
     return files
@@ -621,8 +622,8 @@ class SecurityScanner {,
               severity: 'medium',
               message: 'Debug mode enabled in production configuration'
             })
-          };
-        };
+          }
+};
       }),
 ,
       return {,
@@ -634,9 +635,9 @@ class SecurityScanner {,
         success: false,
         error: error.message,
         issues: []
-      };
-    };
-  };
+      }
+}
+};
 ,
   async generateReport(depResults, codeResults, configResults) {,
     const report = {,
@@ -672,8 +673,8 @@ class SecurityScanner {,
           message: `${highSeverity} high-severity security issues found in code`,
           action: 'Review and fix high-severity security issues'
         })
-      };
-    };
+      }
+};
 ,
     if (configResults.issues.length > 0) {,
       report.recommendations.push({,
@@ -697,8 +698,8 @@ class SecurityScanner {,
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    };
-  };
+    }
+};
 ,
   async run() {,
     this.log('  Starting Security Scanner...'),
@@ -746,8 +747,8 @@ class SecurityScanner {,
     } catch (error) {,
       this.log(` Error running security scanner: ${error.message}`),
       process.exit(1)
-    };
-  };
+    }
+}
 };
 ,
 // Run the security scanner,

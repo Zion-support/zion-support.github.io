@@ -181,6 +181,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
             {apiEndpoints.map((endpoint, index) => (
+          <div className="space-y-6">            {apiEndpoints.map((endpoint, index) => (
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
                 <div className=\"flex items-center justify-between mb-4\">
                   <h3 className=\"text-xl font-semibold text-gray-900\">{endpoint.name}</h3>
@@ -296,6 +297,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               Our team is here to help you integrate our APIs into your applications.
+            ))}              Our team is here to help you integrate our APIs into your applications.
             </p>
             <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 text-white rounded-lg \"hover\": b g-blue-700 transition-colors inline-flex items-center\">
               Contact Our API Team
@@ -326,6 +328,9 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+  )
+};
+export default API;
           </div>;
         </section>;
         <section className=\"py-16 bg-gray-50\">;
@@ -356,3 +361,6 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  )
+};
+export default API;

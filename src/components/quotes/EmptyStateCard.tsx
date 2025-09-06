@@ -18,6 +18,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 type EmptyStateCardProps = {
   type: 'active' | 'archived';
 },;
+type EmptyStateCardProps = {
+  type: 'active' | 'archived';
+
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
 
@@ -53,6 +56,10 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
 
+
+          {isActive ? 'No hire requests yet' : 'No archived requests'}
+        </h3>
+        <p className="text-zion-slate-light max-w-md mx-auto">
 
           {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
@@ -105,3 +112,5 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 
 };
 
+type EmptyStateCardProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

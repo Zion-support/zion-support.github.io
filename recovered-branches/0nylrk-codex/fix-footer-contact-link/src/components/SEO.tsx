@@ -56,6 +56,10 @@ export function SEO(): any ({;
 
 import { Helmet } from "react-helmet-async",
 interface SEOProps {
+import { Helmet } from './react - helmet - async';  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;interface SEOProps {
   title: string,
   description: string,
   keywords?: string,
@@ -123,10 +127,11 @@ export function SEO({;
   canonical,;
   noindex} SEOProps) {;
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
-  const fullTitle = title ? `${title} | ${siteTitle}` :siteTitle,;
+  const fullTitle = title ? `${title} | ${siteTitle}` :siteTitle;
   ;
   return (;
   return (
+  return (  return (
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
@@ -165,6 +170,8 @@ export function SEO({;
 
 interface SEOProps {;
   title: string,;
+interface SEOProps {;
+  title: string,,
   description: string,;
   keywords?: string,;
   ogImage?: string,;
@@ -198,6 +205,7 @@ export function SEO({;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
 ;
       {/* Twitter */}
+;      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
@@ -291,3 +299,4 @@ noindex
 }
 
 
+;

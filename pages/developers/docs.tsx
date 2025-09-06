@@ -23,3 +23,8 @@ export default function DocsRoute(req, res) {
 
 
 
+const ApiDocsPage = null;
+export default function DocsRoute() {
+  return <ApiDocsPage />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}

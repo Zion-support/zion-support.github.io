@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ContentCreationProps {
   // Add props here as needed
-export default function ContentCreation({ }: ContentCreationProps) {
+
+}
+
+export default function ContentCreation({}: ContentCreationProps) {
   return (
     <div>
       <h1>ContentCreation</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/ContentCreation.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function ContentCreation({ }: ContentCreationProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/ContentCreation.jsx

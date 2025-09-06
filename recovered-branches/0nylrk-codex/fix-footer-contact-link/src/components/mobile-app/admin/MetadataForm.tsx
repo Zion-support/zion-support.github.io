@@ -189,7 +189,7 @@ interface MetadataFormProps {;
 export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
   const { control, register, watch, setValue } = form,;
   const keywords = watch("keywords");
-  const platform = watch("platform"),;
+  const platform = watch("platform");
   ;
   const addKeyword = (e:React.KeyboardEvent<HTMLInputElement>) => {;
     if (e.key === "Enter" || e.key === ",") {;
@@ -365,6 +365,20 @@ if ( {) {
 
                       maxLength={maxDescriptionLength}
                 </FormItem>)}
+                    Max {platform === "ios" ? "170" : "80"} characters;
+                  </FormDescription>;
+
+            />;
+
+            <FormField
+              control={control}
+              name="longDescription"              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Long Description</FormLabel>;
+                  <FormControl>;
+                    <Textarea
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"                      maxLength={maxDescriptionLength}                </FormItem>)}
             />;
             <FormField;
               control={control}
@@ -376,6 +390,7 @@ if ( {) {
                     <Textarea;
                       placeholder="Detailed description of your app";
                       className="min - h-32";
+                      className="min-h-32";
                       max_length={maxDescriptionLength}
                       {...field}
                     />;
@@ -418,6 +433,10 @@ if ( {) {
             <FormField;
 
 
+                </FormItem>;
+              )}
+            />;
+            <FormField;
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -434,6 +453,7 @@ if ( {) {
 
 
                       placeholder="Detailed description of your app"
+                  <FormControl>                      placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
@@ -463,6 +483,7 @@ if ( {) {
 
 
               />;
+            />              />;
 
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
@@ -546,6 +567,11 @@ if ( {) {
               </FormDescription>;
             </div>;
             <FormField
+                    {keyword}
+
+                    <button 
+
+                      type="button"            <FormField
               control={control}
               name="version"
               render={({ field }) => (
@@ -645,6 +671,7 @@ if (value && !keywords.includes (value) ) {}
 }
 
 );
+););
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -661,3 +688,5 @@ if (value && !keywords.includes (value) ) {}
 };
 
 
+  )
+};

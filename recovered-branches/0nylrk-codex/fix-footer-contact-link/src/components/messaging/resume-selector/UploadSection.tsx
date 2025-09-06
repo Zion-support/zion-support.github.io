@@ -3,13 +3,33 @@
 
 
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from "lucide-react";
-
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
+interface UploadSectionProps {
+  customFile: File | null,
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+}
+
+import { Button } from "@/components/ui/button";
+import { Upload, FileText } from 'lucide-react';
+interface UploadSectionProps {
+  customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+export function UploadSection({
+  customFile
+  onFileUpload
+}: UploadSectionProps) {
+import React from "react";
+import { Upload, FileText } from "lucide-react";
+
+interface UploadSectionProps {
+  customFile: File | null,
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+}
 
 interface UploadSectionProps {
   customFile: File | null,
@@ -55,6 +75,11 @@ export function UploadSection(): any ({;
       
       
       
+      export function UploadSection(): any ({;
+  customFile,;
+  onFileUpload,;
+}: UploadSectionProps) {;
+  return (      
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -113,6 +138,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </Button>;
       </div>;
 
+
+          />;
+        </Button>;
+      </div>;
       {customFile && (;
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;
           <div className="flex items-center justify-between">;
@@ -189,3 +218,13 @@ onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 ;
 }
+              <span className="text-white">{customFile && customFile.name}</span>;
+            </div>;
+            <span className="text-xs text-zion-slate">;
+              {Math && Math.round(customFile && customFile.size / 1024)} KB;
+            </span>;
+          </div>;
+        </div>;
+      )}
+    </div>;
+  );

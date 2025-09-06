@@ -17,6 +17,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -44,10 +46,15 @@ const cors_headers = {
 ;
 interface ContentGenerationRequest {
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
   auto_publish?: boolean,
   include_image?: boolean;
 
   content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;  content_type: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
 }
@@ -171,6 +178,7 @@ serve(async (req) => {
 
 
     if (contentType === 'blog') {
+  try {    if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
@@ -234,6 +242,11 @@ serve(async (req) => {
 
 
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"},
+
+      body: JSON.stringify({
+        model: "gpt-4o"
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
@@ -341,7 +354,8 @@ if ( {) {
         ];
         temperature: 0.7})});
 
-          { role: "system", content: systemPrompt },
+          { role: "system", content: systemPrompt }
+        ];
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
@@ -367,6 +381,10 @@ if ( {) {
     const data = await response.json(),
     const generatedContent = JSON.parse(data.choices[0].message.content),
     
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
 
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
@@ -377,6 +395,7 @@ if ( {) {
         ];
         temperature: 0 && 0.7})});
 
+        temperature: 0 && 0.7})});
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
@@ -386,6 +405,7 @@ if ( {) {
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
 
     // If image is requested for blog post, generate an image prompt
+        // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -405,6 +425,7 @@ if ( {) {
           messages: [
 
             }
+            }
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
@@ -416,6 +437,7 @@ serve(async (req) => {;
   }
 ;
   try {;
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAIApiKey) {;
       throw new Error("OpenAI API key is not set in environment variables");
@@ -560,6 +582,10 @@ if ( {) {
 
 
 
+    }      // Create slug from title
+      const slug = generatedContent && generatedContent.title
+        .toLowerCase()
+        .replace(/[^\w\s]/g, '')
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
@@ -567,6 +593,8 @@ if ( {) {
         year: 'numeric'
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
+      const wordCount = generatedContent.body.split(/\s+/).length
+      const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read";
         .replace(/\s+/g, '-'),
       
       // Get current date formatted
@@ -582,6 +610,7 @@ if ( {) {
       
         .replace(/\s+/g, '-');
       // Get current date formatted
+
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
         day: 'numeric'
@@ -621,6 +650,7 @@ if ( {) {
 
 
           featured_image: "", // To be updated if image is generated
+      // Auto-calculate read time (rough estimate: 200 words per minute)          featured_image: "", // To be updated if image is generated
           is_featured: false;
           is_published: true;
           created_by: "system"
@@ -788,6 +818,11 @@ if ( {) {
             action_url: `/blog/${slug}`;
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+      if (error) {        // Create notification about new blog post
+        await supabase
+          .from('notifications')
+          .insert({
+            user_id: null, // System notification visible to admins            message: `AI-generated blog post "${generatedContent.title}" has been published.`,
             type: "system",
             read: false,
             related_id: blogPost.id,
@@ -810,6 +845,7 @@ if ( {) {
 });
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify(generatedContent), {      headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
     console.error("Error in generate-content function:", error),
@@ -901,6 +937,7 @@ if ( {) {
 });
 
     return new Response (JSON.stringify (generated_content), {
+      status: 500})    return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
@@ -1185,3 +1222,4 @@ action text: "View Post"
 });
   }
 });
+;

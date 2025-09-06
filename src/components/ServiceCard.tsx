@@ -28,6 +28,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="text-4xl mb-4 text-center">
           {icon}
         </div>
+      )}
+      <h3 className="text-xl font-semibold mb-3 text-white text-center">{title}</h3>
+      <p className="text-gray-300 mb-4 text-center">{description}</p>
+      {features.length > 0 && (
         <ul className="space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-sm text-gray-300">
@@ -36,6 +40,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
+  );
+};
+
+export default ServiceCard;
+      )}
+    </motion.div>
   );
 };
 

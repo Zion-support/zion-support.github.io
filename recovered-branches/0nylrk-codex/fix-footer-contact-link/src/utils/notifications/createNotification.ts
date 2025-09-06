@@ -33,6 +33,12 @@ export async function createNotification({
   message;
   type;
 
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
   userId,
   title,
   message,
@@ -40,6 +46,7 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
+
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -55,6 +62,14 @@ export async function createNotification({
   void actionText,
   try {
     // Call the create_notification database function
+    const { data, error } = await supabase.rpc('create_notification', {
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
+      _related_id: relatedId
+    });
+    if (error) throw error;
       _user_id: userId,
       _title: title,
       _message: message,
@@ -181,3 +196,4 @@ if ( {) {
 
 
 
+    return { success: true, notificationId: data }

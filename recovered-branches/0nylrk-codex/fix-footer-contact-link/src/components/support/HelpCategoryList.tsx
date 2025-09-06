@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle
   CardTitle
+  CardTitle
 } from "@/components/ui/card";
 import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
@@ -22,6 +23,7 @@ export function HelpCategoryList({
   searchQuery
 
 
+  searchQuery
   searchQuery
 }: HelpCategoryListProps) {
   // Filter categories based on search query
@@ -93,11 +95,63 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
 }
+interface HelpCategoryListProps {;
+  categories: HelpCategory[],;
+  onCategorySelect: (categoryId: string) => void,;
+  searchQuery: string;
+}
+
+      )
+    : categories,
+
+export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+  // Filter categories based on search query;
+  const filteredCategories = searchQuery;
+    ? categories && categories.filter(;
+        category =>;
+          category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.articles.some(;
+            article =>;
+              article && article.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+              article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          );
+      );
+
+  if (filteredCategories && filteredCategories.length === 0) {;
+    return (
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
           key={category.id}
+    );
+  }
+  return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
+    : categories;
+
+        <Card
+          key={category && category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category && category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
+              {category && category.icon}
+            </div>;
+            <CardTitle>{category && category.name}</CardTitle>;
+            <CardDescription>{category && category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-zion-slate-light">;
+              {category && category.articles.length} articles;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map(category => (
+        <Card          key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -146,10 +200,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 
 import React from './react';
       ))}
+      ))}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle
   CardTitle
   CardTitle
 } from '@/components / ui / card';
@@ -187,6 +243,9 @@ if ( {) {
       <div className="text - center py - 8">;
         <h3 className="text - lg font - medium mb - 2">No results found</h3>;
         <p className="text - zion - slate - light">;
+      <div className="text - center py-8">;
+        <h3 className="text - lg font - medium mb-2">No results found</h3>;
+        <p className="text - zion - slate-light">;
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>);
@@ -201,6 +260,15 @@ if ( {) {
         >;
           <CardHeader className="pb - 2">;
             <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+      {filtered_categories.map ((category) => (
+        <Card;
+          key={category.id}
+          className="cursor - pointer hover:border - zion - purple / 50 transition-colors";
+          on_click={() => onCategorySelect (category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb-3">;
               {category.icon}
             </div>;
             <CardTitle>{category.name}</CardTitle>;
@@ -208,6 +276,7 @@ if ( {) {
           </CardHeader>;
           <CardContent>;
             <p className="text - sm text - zion - slate - light">;
+            <p className="text - sm text - zion - slate-light">;
               {category.articles.length} articles;
             </p>;
           </CardContent>;

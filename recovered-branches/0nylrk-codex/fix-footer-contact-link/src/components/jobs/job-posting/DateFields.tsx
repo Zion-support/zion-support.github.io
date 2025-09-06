@@ -65,7 +65,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
-interface DateFieldsProps {
+interface DateFieldsProps {} from "@/components/ui/popover";
+
+import { cn } from "@/lib/utils";interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
@@ -75,6 +77,7 @@ interface DateFieldsProps {
 
 
   return (
+}  return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -103,6 +106,7 @@ export function DateFields(): any ({;
 
                   !startDate && "text-muted-foreground"
                 )}
+                className={cn(                )}
               >
                 {startDate ? (
                   format(startDate, "PPP")
@@ -121,6 +125,8 @@ export function DateFields(): any ({;
               disabled={(date) => date > new Date()}
 
 import React from 'react',;
+              selected={startDate}
+              onSelect={setStartDate}import React from 'react',;
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
 import { Button } from "@/components/ui/button",;
@@ -149,6 +155,9 @@ interface DateFieldsProps {;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
   return (;
 
+;
+export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
+  return (;
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
@@ -212,6 +221,16 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 date > new Date();
               }
               initialFocus
+              <Button
+                variant={"outline"}
+                className={cn(
+                  "w-full md: w-[240px] pl-3 text-left font-normal",
+                  !startDate && "text-muted-foreground",
+                )}>;                {startDate ? (;
+                  format(startDate, "PPP");
+                ) : (;
+                  <span>Pick a date</span>;
+                )}              initialFocus
             />
           </PopoverContent>
         </Popover>
@@ -230,6 +249,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 
 
                   !endDate && "text-muted-foreground"
+                className={cn(                  !endDate && "text-muted-foreground"
                 )}
               >
                 {endDate ? (
@@ -303,6 +323,13 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
   );
     </div>);
 
+  );
+    </div>);            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+  );
+    </div>);
       <div>;
         <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
         <Popover>;
@@ -320,6 +347,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
             </FormControl>;
           </PopoverTrigger>;
           <PopoverContent className="w - auto p - 0" align="start">;
+          <PopoverContent className="w - auto p-0" align="start">;
             <Calendar;
               mode="single";
               selected={end_date}
@@ -358,3 +386,4 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 }
 
 
+}

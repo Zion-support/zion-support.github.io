@@ -60,6 +60,7 @@ import { X } from "lucide-react",
 
 
 interface ActiveFiltersProps {
+  priceRange: [number, number];interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
   selectedAvailability: string[],
@@ -94,6 +95,9 @@ export function ActiveFilters({
 
 
   const hasActiveFilters = 
+}}: ActiveFiltersProps) {
+  // Check if any filters are active
+
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
     selectedRegions.length > 0 ||
@@ -225,6 +229,7 @@ export function ActiveFilters({;
 
 
         <ClickableBadge
+      {selectedSkills.map(skill => (        <ClickableBadge        <ClickableBadge
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
@@ -279,6 +284,7 @@ export function ActiveFilters({;
 
         >;
           {region}
+      {selectedRegions && selectedRegions.map(region => (;          {region}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -290,6 +296,10 @@ export function ActiveFilters({;
 
 
         <ClickableBadge
+      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setPriceRange([50, 200])}
         >;
@@ -305,6 +315,10 @@ export function ActiveFilters({;
 
 
         <ClickableBadge
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >;
@@ -386,6 +400,10 @@ export function ActiveFilters({;
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
       >;
 
+
+      <Button
+        variant="ghost" 
+        size="sm" 
 
         Clear All;
       </Button>;
@@ -477,3 +495,4 @@ if (!hasActiveFilters) return null;
 ;
 
 
+;

@@ -53,6 +53,13 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
         }, 0);
         avgTimeToHire = Math.round(totalDays / hiredApplications.length)
       }
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}      }
       // Calculate conversion rate
       const conversionRate = hiredApplications.length > 0
         ? Math.round((hiredApplications.length / applications.length) * 100)
@@ -99,6 +106,12 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
     if (applications && applications.length > 0) {;
       // Calculate status distribution;
       const statusCounts: Record<string, number> = {};
+interface HiringAnalyticsProps {;
+  jobId?: string;
+}
+;
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId),;
       applications && applications.forEach(app => {;
         statusCounts[app && app.status] = (statusCounts[app && app.status] || 0) + 1;
       });
@@ -185,6 +198,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
@@ -200,6 +214,18 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
           <ResponsiveContainer width="100%" height="100%">;
             <PieChart>;
               <Pie
+  return (  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
+  
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
+  
+  return (
+    ),;
+  }
+  ;
+  const COLORS = ['#0088FE#00C49F', '#FFBB28#FF8042', '#8884d8'];
+  ;
+  return (;
                 data={analyticsData && analyticsData.statusDistribution}
                 cx="50%"
                 cy="50%"
@@ -249,6 +275,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
             {analyticsData.timeToHire || "N/A"}
 
           </div>;
+            {analyticsData && analyticsData.timeToHire || "N/A"}          </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Average days from application to hire;
           </div>;
@@ -268,6 +295,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
             {analyticsData.conversionRate}%;
 
           </div>;
+            {analyticsData && analyticsData.conversionRate}%;          </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Applications to hired ratio;
           </div>;
@@ -527,6 +555,11 @@ if ( {) {
   )
 }
             <BarChart
+            <BarChart
+              data={analyticsData && analyticsData.funnelData}
+              layout="vertical">;              <XAxis type="number" />;
+              <YAxis dataKey="name" type="category" width={100} />;
+              <Tooltip />;            <BarChart
               data={analyticsData && analyticsData.funnelData}
               layout="vertical">;
               <XAxis type="number" />;
@@ -590,3 +623,5 @@ if (applications && applications.length > 0) {
   );
 }
 ;
+    </div>);
+}

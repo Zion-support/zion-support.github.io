@@ -52,6 +52,7 @@ interface SetupProps {
 
 export default function Setup({}: SetupProps) {
 export default function Setup({}: SetupProps) {
+export default function Setup({}: SetupProps) {
   return (
     <div>
       <h1>Setup</h1>
@@ -63,3 +64,14 @@ export default function Setup({}: SetupProps) {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> main
+import '@testing-library/jest-dom'
+import { cleanup } from '@testing-library/react'
+import { afterEach, vi } from 'vitest'
+
+// Ensure React Testing Library cleans up and mocks are restored between tests
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

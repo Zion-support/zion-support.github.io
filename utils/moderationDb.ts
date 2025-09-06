@@ -5,6 +5,14 @@
   id: string;
   contentId: string;
 
+export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
+export interface ModerationFlag {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -25,6 +33,29 @@ let flags: ModerationFlag[] = [];
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
+}
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+}
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+>>>>>>> main
+
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;
 >>>>>>> main
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
@@ -35,10 +66,15 @@ ursor/automate-test-improve-and-merge-code-646c
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
   flag && flag.status = status;
@@ -63,6 +99,9 @@ export interface ModerationFlag {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -70,6 +109,47 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 >>>>>>> main
+>>>>>>> main
+
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  // Mock implementation - replace with actual database logic
+  return {
+    id;
+    contentId: 'content-1';
+    contentType: 'post';
+    reason: 'spam';
+    status: 'pending';
+    reportedBy: 'user-1';
+    createdAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()
+  };
+}
+
+export async function updateFlagStatus(id: string, status: string, adminNotes?: string): Promise<ModerationFlag | null> {
+  // Mock implementation - replace with actual database logic
+  const flag = await getFlagById(id);
+  if (flag) {
+    flag.status = status as any;
+    flag.adminNotes = adminNotes;
+    flag.updatedAt = new Date().toISOString();
+  }
+  return flag;
+}
+
+export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' | 'updatedAt'>): Promise<ModerationFlag> {
+  // Mock implementation - replace with actual database logic
+  const newFlag: ModerationFlag = {
+    ...flag,
+    id: Date.now().toString();
+    createdAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()
+  };
+  return newFlag;
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
@@ -94,6 +174,12 @@ export async function createFlag(
   flags.push(flag);
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
+    ...data
+  };
+
+  flags.push(flag);
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -110,6 +196,7 @@ export async function createFlag(
   };
 
   flags.push(flag);
+>>>>>>> main
   return flag;
 }
 
@@ -151,6 +238,9 @@ export async function updateFlagStatus(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -161,3 +251,6 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

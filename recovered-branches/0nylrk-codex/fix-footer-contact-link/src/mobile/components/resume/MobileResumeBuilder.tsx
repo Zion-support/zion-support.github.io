@@ -17,6 +17,14 @@ import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
 
 
 import React, { useState } from "react",
+
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -80,6 +88,9 @@ type ResumeStep = "basics" | "experience" | "education" | "skills",
 
 export function MobileResumeBuilder() {
 
+type ResumeStep = "basics" | "experience" | "education" | "skills",
+
+export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
   const renderStepContent = () => {
@@ -140,6 +151,10 @@ export function MobileResumeBuilder() {;
 
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
+        <Button
+          variant={currentStep === "experience" ? "default" : "outline"}
+          className="flex-1 rounded-full"        <Button
+          variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
         >;
@@ -153,6 +168,10 @@ export function MobileResumeBuilder() {;
 
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
+        <Button
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"        <Button
+          variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
         >;
@@ -161,6 +180,10 @@ export function MobileResumeBuilder() {;
 
 
       {renderStepContent()}
+        <Button
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
 
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
@@ -615,6 +638,10 @@ function EducationStep() {;
       >;
 
         <Plus className="h-4 w-4" /> Add Another Education;
+      <Button
+        variant="outline" 
+        className="w-full gap-2" 
+        onClick={addEducation}>;        <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
   );
@@ -631,7 +658,7 @@ function SkillsStep() {;
     { id: '1', name: "", proficiency: "beginner" }
   ]),;
   const addSkill = () => {;
-    const newId = (skills.length + 1).toString(),;
+    const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
   },;
   const removeSkill = (id: string) => {;
@@ -813,3 +840,8 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 ;
     </div>);
 }
+function SkillsStep() {;
+  const [skills, setSkills] = useState([;
+    { id: '1', name: "", proficiency: "beginner" }  ]);
+
+  return (

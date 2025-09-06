@@ -34,6 +34,7 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 // Define schema for form validation
+import { Education } from '@/types/resume';// Define schema for form validation
 
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
@@ -101,6 +102,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
   }
   };
 import { useForm } from 'react-hook-form',;
+type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
@@ -120,12 +122,47 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
+
+// Define schema for form validation;
+const educationSchema = z && z.object({;
+  institution: z && z.string().min(1, 'Institution is required');
+  degree: z && z.string().min(1, 'Degree is required');
+  field_of_study: z && z.string().optional(),;
+  start_date: z && z.string().min(1, 'Start date is required');
+  end_date: z && z.string().optional(),;
+  is_current: z && z.boolean().default(false),,
+  description: z && z.string().optional(),;
+  location: z && z.string().optional()}),;
+
+type EducationFormValues = z && z.infer<typeof educationSchema>;
+
+export function EducationFormFields(): any ({ ;
+  isEditing, ;
+  onSubmit, ;
+  onCancel ;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({;
     resolver: zodResolver(educationSchema),;
     defaultValues: {;
       institution: '',;
       degree: '',;
       field_of_study: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd');
+      is_current: false,,
+  description: '',;
+      location: ''}}),;
+
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true);
+    setError(null),;
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err && err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
     }
 
   },
@@ -144,6 +181,9 @@ import { Education } from '@/types/resume',;
             control={form && form.control}
             name="institution"
 import {Education} from '@/types / resume';
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
 // Define schema for form validation;
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required');
@@ -189,6 +229,8 @@ function EducationFormFields() {
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <FormField;
             control={form.control}
             name="institution";
@@ -211,6 +253,7 @@ const educationSchema = z.object({;
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
   is_current:z.boolean().default(false),;
+  is_current:z.boolean().default(false),,
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -233,6 +276,8 @@ export function EducationFormFields({ ;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
       is_current:false,;
       description:'',;
+      is_current:false,,
+  description:'',;
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -245,6 +290,7 @@ export function EducationFormFields({ ;
     } finally {;
     }
 
+  }
   }
     }
   }
@@ -261,6 +307,22 @@ export function EducationFormFields({ ;
                 </FormControl>;
                 <FormMessage />;
           <FormField
+            control={form && form.control}
+          <FormField;
+            control={form.control}
+            name="institution";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+
+          />;
+
+          <FormField
+            control={form && form.control}
+            name="degree"          <FormField
             control={form && form.control}
             name="degree"
             render={({ field }) => (;
@@ -339,6 +401,18 @@ export function EducationFormFields({ ;
           <div className="space-y-4">
 
 
+          <FormField
+            control={form && form.control}
+            name="start_date"        />;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+          <FormField
+            control={form && form.control}
+            name="start_date"
+
+                  <Input 
+                    type="date" 
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -351,6 +425,10 @@ export function EducationFormFields({ ;
 
 
                   />;
+                  <Input
+                    type="date" 
+                    {...field}
+                    value={field && field.value || ''}                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
@@ -381,6 +459,7 @@ export function EducationFormFields({ ;
                       onCheckedChange={field.onChange}
 
 
+          <div className="space-y-4">;
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -399,6 +478,12 @@ export function EducationFormFields({ ;
                 control={form.control}
                 name="end_date";
 
+
+            {!form && form.watch('is_current') && (;
+
+              <FormField
+                control={form && form.control}
+                name="end_date"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -469,6 +554,28 @@ export function EducationFormFields({ ;
 
 
                 )}
+                      <Input
+                        type="date" 
+                        {...field} 
+                        value={field && field.value || ''} 
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+
+                )}
+              />;
+            )}
+
+          </div>;
+        </div>;
+
+        <FormField
+          control={form && form.control}
+          name="location"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Location (Optional)</FormLabel>;                )}
                       <Input ;
                         type="date" ;
                         {...field} ;
@@ -673,6 +780,15 @@ export function EducationFormFields({ ;
         />;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
         <div className="flex justify - between pt - 2">;
+        </div>;
+      </form>;
+    </Form>;
+  );
+}
+            </FormItem>)}
+        />;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify - between pt-2">;
           <Button;
             type="button";
             variant="outline";
@@ -682,6 +798,7 @@ export function EducationFormFields({ ;
           </Button>;
           <Button type="submit" disabled={is_loading}>;
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
             {is_editing ? 'Update' : 'Add'} Education;
           </Button>;
         </div>;

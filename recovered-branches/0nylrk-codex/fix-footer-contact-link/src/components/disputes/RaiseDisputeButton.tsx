@@ -35,6 +35,11 @@ interface RaiseDisputeButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+}
 
 interface RaiseDisputeButtonProps {
   projectId: string,
@@ -52,6 +57,8 @@ export function RaiseDisputeButton({
 
 
   milestoneId, 
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",  milestoneId, 
   variant = "outline", 
   size,
   className 
@@ -59,6 +66,17 @@ export function RaiseDisputeButton({
 
   
   
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const navigate = useNavigate(),
+  
+
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    navigate(`/dashboard/disputes/${disputeId}`)
+
+  },
+  
+
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
@@ -228,6 +246,13 @@ function RaiseDisputeButton() {
 
 
           <DisputeForm;
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className="sm:max-w-[550px]">;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}

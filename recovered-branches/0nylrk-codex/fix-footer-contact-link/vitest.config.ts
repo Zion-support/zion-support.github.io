@@ -46,6 +46,7 @@ export default define_config ({
 
 
 import { defineConfig } from 'vitest/config',;
+    setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
@@ -60,5 +61,6 @@ export default defineConfig({;
     globals: true}});
 
 
+    globals: true}});
     globals: true}});
     globals: true}});

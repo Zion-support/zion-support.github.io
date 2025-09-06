@@ -6,6 +6,7 @@
 :src.broken/pages/Blog.js
 >>>>>>> main:corrupted_backup/Blog.js
 import { useState, useEffect } from "react";
+:src.broken/pages/Blog.jsimport { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";

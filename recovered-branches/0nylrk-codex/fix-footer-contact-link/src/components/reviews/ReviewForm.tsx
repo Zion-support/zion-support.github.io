@@ -9,6 +9,7 @@ import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 
 
+interface ReviewFormValues {;
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -116,6 +117,7 @@ export function ReviewForm({;
 
 
 import { useState } from "react",;
+import { Review } from "@/types/reviews",import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
@@ -248,6 +250,10 @@ export function ReviewForm({
 
 
   return (
+    const success = await onSubmit(formattedData);
+    if (success) {;
+      form && form.reset();
+    }  return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
         {/* Main Rating */}
@@ -263,6 +269,8 @@ export function ReviewForm({
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
   RadioGroup,;
   RadioGroupItem} from "@/components/ui/radio-group",;
 ;
@@ -318,6 +326,7 @@ export function ReviewForm({;
       reviewee_id:revieweeId},;
     ;
     const success = await onSubmit(formattedData);
+    const success = await onSubmit(formattedData);
     if (success) {;
       form.reset(),;
     }
@@ -350,6 +359,9 @@ export function ReviewForm({;
                       className="focus:outline-none transition-transform hover:scale-110";
                     >;
                             ? "fill-yellow-400 text-yellow-400"
+                      key={star}
+                      type="button";
+                      onClick={() => field.onChange(star)}
                             : "text-gray-300"
                       <Star;
                         className={`h-10 w-10 ${;
@@ -372,6 +384,8 @@ export function ReviewForm({;
 
 
 
+
+        />;
 
         {/* Review Text */}
         <FormField
@@ -478,6 +492,7 @@ function ReviewForm() {
 
   });
 ;
+              message: "Review must be at least 20 characters"}}};
   const handle_submit = async (values: ReviewFormValues) => {
     const formatted_data = {
       ...values,
@@ -497,6 +512,7 @@ if ( {) {
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
+      <form on_submit={form.handle_submit (handle_submit)} className="space-y-6">;
         {/* Main Rating */}
         <FormField;
           control={form.control}
@@ -509,6 +525,11 @@ if ( {) {
               </FormLabel>;
               <FormControl>;
                 <div className="flex justify - center gap - 1">;
+              <FormLabel className="block text - center mb-2">;
+                How was your experience with {reviewee_name}?;
+              </FormLabel>;
+              <FormControl>;
+                <div className="flex justify - center gap-1">;
                   {[1, 2, 3, 4, 5].map ((star) => (
                     <button;
                       key={star}
@@ -537,6 +558,7 @@ if ( {) {
                 <Textarea;
                   placeholder="Share your experience and feedback...";
                   className="min-h-24 resize-none";
+                  className="min - h-24 resize-none";
                   {...field}
                 />;
               </FormControl>;
@@ -547,6 +569,7 @@ if ( {) {
         />;
         ;
 
+        />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (;
           <div className="space-y-6 border-t pt-6">;
@@ -614,6 +637,7 @@ if ( {) {
 
 
                         </FormItem>;
+                            <RadioGroupItem value={value && value.toString()} />;                        </FormItem>;
                       ))}
                     </RadioGroup>;
                   </FormControl>;
@@ -667,6 +691,7 @@ if ( {) {
                             <RadioGroupItem value={value.toString()} />;
 
 
+            />;
                           </FormControl>;
                           <FormLabel className="cursor-pointer font-normal">;
                             {value}
@@ -676,6 +701,8 @@ if ( {) {
 
 
                         </FormItem>;
+                        </FormItem>;
+                      ))}                        </FormItem>;
                       ))}
                     </RadioGroup>;
                   </FormControl>;
@@ -917,6 +944,7 @@ if ( {) {
           name="is_anonymous";
 
 
+            />;
           render={({ field }) => (;
             <FormItem>;
               <div className="flex items-center gap-2">;
@@ -928,6 +956,10 @@ if ( {) {
 
 
                   <Switch
+                    checked={field && field.value}
+                  <Switch
+                    checked={field && field.value}
+                    onCheckedChange={field && field.onChange}                  <Switch
                     checked={field && field.value}
                     onCheckedChange={field && field.onChange}
                   />;
@@ -1334,3 +1366,4 @@ defaultValues: defaultValues ? {
 }
 }
 ;
+          )}

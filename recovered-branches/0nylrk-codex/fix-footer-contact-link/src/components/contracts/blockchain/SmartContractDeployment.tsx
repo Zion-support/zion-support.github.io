@@ -44,6 +44,7 @@ export function SmartContractDeployment({
   solidityCode,
   onDeploy,
   isDeploying
+import { toast } from "sonner",  isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 
@@ -174,6 +175,7 @@ if ( {) {
 
 
               checked={deploymentOptions.deployToChain}
+    walletAddress: ''              checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
@@ -241,7 +243,7 @@ export function SmartContractDeployment({ ;
   },;
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const blob = new Blob([solidityCode], { type: 'text/plain' });
     const url = URL.createObjectURL(blob),;
     // Create a temporary anchor to trigger download;
     const a = document.createElement('a'),;
@@ -264,6 +266,7 @@ interface SmartContractDeploymentProps {;
   isDeploying: boolean;
 }
   isDeploying;
+import { toast } from "sonner",;  isDeploying;
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
     network: 'none',;
@@ -303,6 +306,45 @@ interface SmartContractDeploymentProps {;
 
 
   }
+  });
+
+  const handleDeployContract = async () => {;
+    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
+      toast && toast.error("Please enter a wallet address for blockchain deployment");
+      return;
+    }
+
+    try {;
+      await onDeploy(deploymentOptions);
+    } catch (error) {;
+      console && console.error("Deployment error:", error);
+    }
+  };
+
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL && URL.createObjectURL(blob);
+
+    // Create a temporary anchor to trigger download;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
+    // Clean up;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded")
+};
+
+  return (    <Card className="w-full">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <ShieldCheck className="h-5 w-5 text-primary" />;
+  }  }
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -337,6 +379,21 @@ interface SmartContractDeploymentProps {;
 
 
 
+                  })}
+                  className="flex flex-col space-y-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ethereum" id="ethereum" />
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>
 
               })}
 
@@ -441,6 +498,10 @@ interface SmartContractDeploymentProps {;
                   value={deploymentOptions.walletAddress || ''}
 
                   })}
+                <Input 
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions.walletAddress || ''}                  })}
 
                 />;
               </div>;
@@ -487,6 +548,12 @@ interface SmartContractDeploymentProps {;
                     ...deploymentOptions,;
                     useEscrow:checked;
                   onCheckedChange={(checked) => setDeploymentOptions({
+                />;
+              </div>;
+              <div className="flex items-center space-x-2">;
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+
                     ...deploymentOptions;
                     useEscrow: checked
                   onCheckedChange={(checked) => setDeploymentOptions({;
@@ -581,6 +648,9 @@ interface SmartContractDeploymentProps {;
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items - center space-x-2">;
             <Switch;
               id="deploy - blockchain";
               checked={deployment_options.deployToChain}
@@ -594,6 +664,7 @@ interface SmartContractDeploymentProps {;
           {deployment_options.deployToChain && (
             <>;
               <div className="space - y-2">;
+              <div className="space-y-2">;
                 <Label > Select blockchain network</Label>;
                 <RadioGroup;
                   default_value={deployment_options.network}
@@ -608,12 +679,20 @@ interface SmartContractDeploymentProps {;
                     <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
                   </div>;
                   <div className="flex items - center space - x-2">;
+                  className="flex flex - col space-y-1";
+                >;
+                  <div className="flex items - center space-x-2">;
+                    <RadioGroupItem value="ethereum" id="ethereum" />;
+                    <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
+                  </div>;
+                  <div className="flex items - center space-x-2">;
                     <RadioGroupItem value="polygon" id="polygon" />;
                     <Label html_for="polygon">Polygon (lower fees, faster)</Label>;
                   </div>;
                 </RadioGroup>;
               </div>;
               <div className="space - y-2">;
+              <div className="space-y-2">;
                 <Label html_for="wallet - address">Wallet address for transactions</Label>;
                 <Input;
                   id="wallet - address";
@@ -626,6 +705,7 @@ interface SmartContractDeploymentProps {;
                 />;
               </div>;
               <div className="flex items - center space - x-2">;
+              <div className="flex items - center space-x-2">;
                 <Switch;
                   id="use - escrow";
                   checked={deployment_options.use_escrow}
@@ -649,6 +729,10 @@ interface SmartContractDeploymentProps {;
               <pre>{solidityCode.slice(0, 500)}...</pre>;
 
 
+          <div className="rounded - md bg - muted p-4">;
+            <h4 className="text - sm font - medium mb-2">Smart Contract Preview</h4>;
+            <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font-mono">;
+              <pre>{solidity_code.slice (0, 500)}...</pre>;
             </div>;
           </div>;
         </div>;
@@ -739,4 +823,6 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 }
 ;
 }
+}
+;}
 ;

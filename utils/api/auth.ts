@@ -7,6 +7,13 @@ export interface User {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+export interface AuthContext {
+  user: User | null;
+  login: (email: string, password: string) => Promise<User | null>;
+  logout: () => void;
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+}
+
 export function validateUser(userId: string, role: string): User | null {
   if (!userId || !role) return null;
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
@@ -27,16 +34,29 @@ import { NextApiRequest, NextApiResponse } from "next";
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
 
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> main
 
 
 
+>>>>>>> main
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return null;
+  }
+  return user;
+}
+
     return null;
   }
   return user;
@@ -57,3 +77,6 @@ export function getUserFromRequest (req: any): User | null {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

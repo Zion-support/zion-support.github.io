@@ -4,10 +4,67 @@
 
 };
 
+  id: string;
+export interface EmergingTechService2026 {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 };
 
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services
+  {
+  {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -18,6 +75,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -98,6 +156,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
     rating: 4.4,
     reviews: 29
     reviews: 29
+    reviews: 29
   },;
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
@@ -115,6 +174,18 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -129,6 +200,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Integration with classical computing frameworks',
       'Custom quantum algorithm development',
       'Quantum performance analytics and benchmarking',
+      'API for quantum application development'
       'API for quantum application development'
       'API for quantum application development'
     ],
@@ -178,6 +250,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18
+      'Rigetti'
+    ],
+    customers: 23,
+    rating: 4 && 4.9,
+    reviews: 18
   },
   // Blockchain & Web3 Solutions
   {
@@ -200,6 +277,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Real - time alerts and notifications',
       'API for blockchain applications'
       'API for blockchain applications'
+      'API for blockchain applications'
     ],
     popular: true,
     icon: '⛓️',
@@ -219,6 +297,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PostgreSQL',
       'Redis'
       'Redis'
+      'Redis'
     ],
     integrations: [
       'Ethereum'
@@ -235,11 +314,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Security auditing',
       'Market analysis'
       'Market analysis'
+      'Market analysis'
     ],
     roi: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
     customers: 156,
     rating: 4 && 4.7,
+    reviews: 89
     reviews: 89
     reviews: 89
   },
@@ -263,6 +344,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Scalable device connectivity',
       'Advanced analytics and reporting'
       'Advanced analytics and reporting'
+      'Advanced analytics and reporting'
     ],
     popular: false,
     icon: '📡',
@@ -278,6 +360,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'React',
       'Node && Node.js',
       'PostgreSQL',
+      'Redis'
       'Redis'
       'Redis'
     ],
@@ -296,11 +379,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Predictive maintenance',
       'Energy optimization'
       'Energy optimization'
+      'Energy optimization'
     ],
     roi: 'Organizations report 250% ROI through improved device management and operational efficiency.',
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
     customers: 89,
     rating: 4 && 4.6,
+    reviews: 45
     reviews: 45
     reviews: 45
   },
@@ -323,6 +408,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Custom edge computing workflows',
       'Advanced analytics and reporting',
       'Mobile edge computing support',
+      'API for edge applications'
       'API for edge applications'
       'API for edge applications'
     ],
@@ -374,6 +460,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     customers: 45,
     rating: 4 && 4.5,
     reviews: 23
+      'VMware Edge'
+    ],
+    customers: 45,
+    rating: 4 && 4.5,
+    reviews: 23
   },
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
@@ -394,6 +485,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Custom AR / VR workflows',
       'Real - time content analytics',
       'Multi - platform deployment support',
+      'API for AR / VR applications'
       'API for AR / VR applications'
       'API for AR / VR applications'
     ],
@@ -429,11 +521,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Virtual events',
       'Gaming and entertainment'
       'Gaming and entertainment'
+      'Gaming and entertainment'
     ],
     roi: 'Developers report 400% ROI through faster development and improved content quality.',
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     customers: 67,
     rating: 4 && 4.4,
+    reviews: 34
     reviews: 34
     reviews: 34
   },
@@ -456,6 +550,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Safety and compliance management',
       'Advanced analytics and reporting',
       'Mobile app for robot control',
+      'API for robotics applications'
       'API for robotics applications'
       'API for robotics applications'
     ],
@@ -500,6 +595,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     customers: 34,
     rating: 4 && 4.3,
     reviews: 18
+      'Universal Robots'
+    ],
+    customers: 34,
+    rating: 4 && 4.3,
+    reviews: 18
   },
   // Digital Twin & Simulation
   {
@@ -519,6 +619,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       '3D visualization and modeling',
       'Advanced analytics and reporting',
       'API for custom integrations',
+      'Mobile app for monitoring'
       'Mobile app for monitoring'
       'Mobile app for monitoring'
     ],
@@ -558,6 +659,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitors: [
 
+      'Siemens Digital Twin',
+      'PTC ThingWorx',
+      'GE Digital Twin',
+      'Autodesk'
+    ],
       'Siemens Digital Twin'
       'PTC ThingWorx'
       'GE Digital Twin'
@@ -572,11 +678,31 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     customers: 56,
     rating: 4 && 4.4,
     reviews: 29
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
+    launchDate: '2024-06-25'
+    customers: 56
+    rating: 4.4
+    reviews: 29
+  }
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    customers: 56,
+    rating: 4 && 4.4,
+    reviews: 29
+  }
+];
+  },;
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
+}
+export const getPopularEmergingTechServices2026 = () => {};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -595,6 +721,18 @@ export const getEmergingTechServices2026ByPriceRange = (
 
 
 
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    return price >= minPrice && price <= maxPrice;
+  });
+};    return price >= minPrice && price <= maxPrice
+
+  })
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -783,6 +921,13 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 29
   }
 ];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(service => service.category === category)
+};
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular)
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -792,3 +937,103 @@ export interface EmergingTechService2026 {;
 
   })
 };
+
+  })
+};
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export interface EmergingTechService2026 {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+
+export interface EmergingTechService2026 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+
+export interface EmergingTechService2026 {;
+
+};
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

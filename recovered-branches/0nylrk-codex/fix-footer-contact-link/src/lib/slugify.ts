@@ -14,6 +14,12 @@ export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   return title
     .trim()
     .replace(/_/g, " ") // treat underscores like spaces
@@ -41,6 +47,9 @@ export function unslugify(slug: string, separator = "-"): string {
 
 
 
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -53,6 +62,10 @@ export function slugify (title: string, separator = "-"): string {
 
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+;
+
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -126,4 +139,5 @@ export function unslugify(slug: string, separator = "-"): string {;
 
 
 
+}
 }

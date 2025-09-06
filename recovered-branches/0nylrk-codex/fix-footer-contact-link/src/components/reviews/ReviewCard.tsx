@@ -9,6 +9,29 @@ import { Badge } from "@/components/ui/badge";
 import {
 
   Dialog,
+interface ReviewCardProps {
+  review: Review;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
+}
+
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+import {  Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -19,6 +42,8 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 
+  DialogTrigger
+} from "@/components/ui/dialog";
   DialogTrigger
 } from "@/components/ui/dialog";
 interface ReviewCardProps {
@@ -63,6 +88,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   };
 
 
+    )
+};
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
@@ -91,6 +118,13 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
   return (
     <div className="border rounded-lg p-4 bg-card">
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
+    )
+  },
+      <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
@@ -146,11 +180,31 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
 
         <div className="flex">{renderStars(review.rating)}</div>
+          {renderStars(review.rating)}
+        </div>        <div className="flex">{renderStars(review.rating)}</div>
       </div>
 
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+
+      {(review.communication_rating ||
+        review.quality_rating ||
+        review.timeliness_rating ||
+        review.would_work_again !== undefined) && (
+        <div className="border-t pt-3 mt-3">
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Communication
+                <span className="ml-1 text-yellow-500">
+                  {review.communication_rating}/5
+                </span>
+              </Badge>
+            )}
+
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -307,6 +361,10 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         </div>;
 
 
+          </div>;
+        </div>;
+        </div>;
+
       )}
 
       <div className="mt-3 flex justify-end">
@@ -427,3 +485,4 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 ;
 
+;

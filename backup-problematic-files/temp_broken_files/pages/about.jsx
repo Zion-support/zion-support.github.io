@@ -64,6 +64,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main:corrupted_backup/about.js
               <p className="text-gray-600 text-lg">
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg">
                 To empower businesses with cutting-edge technology solutions that drive growth, 
                 efficiency, and innovation. We believe in delivering exceptional value through 
                 personalized service and world-class expertise.
@@ -91,6 +93,10 @@ ursor/automate-test-improve-and-merge-code-646c
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
 ursor/automate-test-improve-and-merge-code-646c
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>              <p className="text-gray-600 text-lg">
+                To be the global leader in technology transformation, helping businesses 
+                harness the power of AI, cloud computing, and digital innovation to create 
+                a more connected and efficient world.
               </p>
             </div>
           </div>
@@ -149,6 +155,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main:corrupted_backup/about.js
 ursor/automate-test-improve-and-merge-code-646c
               </p>
+                to excellence, innovation, and client success continues to drive everything we do.              </p>
             </div>
           </div>
 
@@ -206,6 +213,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main:corrupted_backup/about.js
 ursor/automate-test-improve-and-merge-code-646c
                 <p className="text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>                <p className="text-gray-600">
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
                   shared success.
@@ -217,6 +225,8 @@ ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
 ursor/automate-test-improve-and-merge-code-646c
+                <div className="text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
                 <div className="text-4xl mb-4">⭐</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Excellence
@@ -331,6 +341,7 @@ ursor/automate-test-improve-and-merge-code-646c
               <a 
 ursor/automate-test-improve-and-merge-code-646c
             </p>
+              Let&apos;s discuss how we can help transform your business with our technology solutions.            </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="/contact"
@@ -358,4 +369,8 @@ ursor/automate-test-improve-and-merge-code-646c
 export default About;
 export default About;
 ursor/automate-test-improve-and-merge-code-646c
+export default About;
+  )
+};
+
 export default About;

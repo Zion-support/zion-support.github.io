@@ -53,6 +53,7 @@ function useTalentDirectory() {
     toggleSection
 
   } = useUIState(),
+  // Fetch auth status and saved talents  } = useUIState(),
 
   return {
     // Talents and loading state
@@ -88,6 +89,16 @@ function useTalentDirectory() {
     savedTalents,
     
 import { useAuthStatus } from "./talent/useAuthStatus",;
+
+    // Actions
+    toggleSkill;
+    toggleAvailability;
+    toggleRegion;
+    clearFilters;
+    toggleSection;
+    handleToggleSave
+
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
@@ -173,6 +184,9 @@ export function useTalentDirectory() {;
 
 
 
+  }
+}
+;
 
   }
 }
@@ -201,5 +215,6 @@ export function useTalentDirectory() {;
 
 
   }
+}  }
 }
 ;

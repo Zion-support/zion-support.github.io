@@ -29,8 +29,9 @@ interface SecurityProps {;
 }
 
 }
-export default function Security(): any ({ }: SecurityProps) {;
+export default function Security(): any ({}: SecurityProps) {;
   return (
+  // Add props here as needed;  return (
     <div>;
       <h1>Security</h1>;
       <p>This component is currently under development.</p>;

@@ -1,6 +1,28 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -54,6 +76,9 @@ export default function Marketplace() {
   const filterOptions = generateFilterOptions(),
   
   // Filter listings based on selected filters
+export default function Marketplace() {;  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions(),
+    // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
@@ -86,7 +111,7 @@ export default function Marketplace() {;
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
-  const filterOptions = generateFilterOptions(),;
+  const filterOptions = generateFilterOptions();
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {;
     // Search filter;
@@ -98,6 +123,7 @@ export default function Marketplace() {;
 
 
     }
+      return false    }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
       return false
@@ -122,6 +148,9 @@ export default function Marketplace() {;
 
     
     return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {    
+    return true
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
@@ -145,6 +174,16 @@ export default function Marketplace() {;
   };
   const clearAllFilters = () => {;
 
+        );
+        break;
+      case 'location':
+        setSelectedLocations(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
 
@@ -199,6 +238,10 @@ export default function Marketplace() {;
         );
         break;
     }
+
+  };
+
+  const clearAllFilters = () => {;
     setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
@@ -246,6 +289,8 @@ export default function Marketplace() {;
 
 
   // Handle requesting a quote
+  },
+    // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
     if (listing) {
@@ -441,6 +486,7 @@ if ( {) {
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
+
           }
         }
       });
@@ -592,11 +638,27 @@ navigate("/request-quote", {state: {
   },;
 ;
   return (;
+  };
+  }  }
+  };
+  },
+
+  return (
+
     <AppLayout>;
       <main className="flex-grow container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto mb-8">;
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
           <p className="text-zion-slate-light">;
+;
+  return (
+    <AppLayout>;
+      <main className="flex - grow container mx - auto px - 4 py-8">;
+        <div className="max - w-4xl mx - auto mb-8">;
+          <h1 className="text - 3xl font - bold text - white mb-4">AI & Tech Marketplace</h1>;
+          <p className="text - zion - slate-light">;
+
+  }
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
@@ -619,6 +681,24 @@ navigate("/request-quote", {state: {
               </Button>;
               <Button variant="ghost" size="icon" className="text-zion-slate-light">;
                 <ListFilter className="h-4 w-4" />;
+        {/* Search and filter bar */}
+        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb-8">;
+          <div className="flex flex - col md:flex - row gap-4">;
+            <div className="relative flex-1">;
+              <EnhancedSearchInput;
+                value={search_query}
+                on_change={setSearchQuery}
+                placeholder="Search the marketplace...";
+                search_suggestions={search_suggestions}
+              />;
+            </div>;
+            <div className="flex gap-2">;
+              <Button variant="ghost" size="icon" className="text - zion - slate-light">;
+                <Grid3X3 className="h - 4 w-4" />;
+              </Button>;
+              <Button variant="ghost" size="icon" className="text - zion - slate-light">;
+                <ListFilter className="h - 4 w-4" />;
+
               </Button>;
             </div>;
           </div>;
@@ -714,6 +794,17 @@ navigate("/request-quote", {state: {
         {/* Search and filter bar */}
 
 
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">;
+          {/* Sidebar Filters */}
+          <div className="lg: col - span-1">;
+            <FilterSidebar;
+
+              filters={{
+
+                selectedProductTypes
+                selectedLocations
+                selectedAvailability,
               <EnhancedSearchInput
                 value={searchQuery}
                 onChange={setSearchQuery}
@@ -734,6 +825,14 @@ navigate("/request-quote", {state: {
           <div className="lg: col - span - 1">;
             <FilterSidebar;
               filters={{
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">;
+          {/* Sidebar Filters */}
+          <div className="lg: col - span-1">;
+            <FilterSidebar;
+              filters={{
+                selectedProductTypes;
+                selectedLocations;
+                selectedAvailability
 
                 selectedProductTypes,
                 selectedLocations,
@@ -763,6 +862,7 @@ navigate("/request-quote", {state: {
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
                 selectedRating
+
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -1027,3 +1127,4 @@ Discover professional services and products for your AI and tech projects. Brows
   );
 }
 ;
+                  </Button>;

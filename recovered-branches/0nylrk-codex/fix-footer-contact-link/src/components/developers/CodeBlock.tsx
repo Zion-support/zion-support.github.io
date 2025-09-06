@@ -24,6 +24,8 @@ interface CodeBlockProps {;
 export function CodeBlock(): any ({ ;
 
   code;
+}  code;
+
   language = 'bash';
   showLineNumbers = false;
   className;
@@ -60,6 +62,11 @@ export function CodeBlock({
 
 
 
+
+import {cn} from "@/lib/utils";export function CodeBlock({ 
+  code,
+  language = 'bash',
+  showLineNumbers = false,
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
@@ -87,6 +94,8 @@ export function CodeBlock({
 
 
   return (
+  },
+
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
@@ -125,6 +134,9 @@ export function CodeBlock({;
   };
 
   return (
+    }, 2000)
+};
+
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
       className
@@ -213,6 +225,13 @@ export function CodeBlock({ ;
 
 ;
 
+
+export default CodeBlock;
+
+  );
+}
+
+;
 
 export default CodeBlock;
 
@@ -309,3 +328,4 @@ export default CodeBlock;
 export default CodeBlock;
 
 
+export default CodeBlock;

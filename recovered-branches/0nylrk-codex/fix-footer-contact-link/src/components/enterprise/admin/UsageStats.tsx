@@ -150,6 +150,7 @@ export function UsageStats() {
 
 
         <Card>
+  CardTitle        <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
             <CardDescription>
@@ -164,6 +165,7 @@ export function UsageStats() {
 
 
                 <div className="text-sm font-medium">Monthly contact credits</div>
+                <div className="text-sm font-medium">Monthly contact credits</div>                <div className="text-sm font-medium">Monthly contact credits</div>
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -195,6 +197,11 @@ export function UsageStats() {
 
 
         <Card>
+            <Button size="sm" onClick={handleSaveChanges}>
+              Save Changes
+            </Button>
+          </CardFooter>
+        </Card>        <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -312,6 +319,10 @@ export function UsageStats() {
 
 
   )
+          <CardFooter>            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
+      </div>  )
   Card,;
   CardContent,;
   CardDescription,;
@@ -326,6 +337,9 @@ export function UsageStats() {;
       title: "Limits updated";
       description: "The new usage limits have been saved successfully."});
   };
+      title: "Limits updated",
+  description: "The new usage limits have been saved successfully."})
+};
   return (;
 
     <div className="space-y-8">;
@@ -375,6 +389,10 @@ function UsageStats() {
 
 
 
+          <CardContent className="space-y-4">;
+            <div>;
+              <div className="flex items - center justify - between mb-2">;
+                <div className="text - sm font-medium">;
                   Monthly job posting limit;
                 </div>;
                 <Badge variant="outline">25 / 50</Badge>;
@@ -515,6 +533,16 @@ function UsageStats() {
 
 
             <CardDescription>;
+            <Button size="sm" on_click={handleSaveChanges}>;
+
+              Save Changes;
+            </Button>;
+          </CardFooter>;
+        </Card>;
+
+        <Card>;
+          <CardHeader>;
+            <CardTitle > AI Features</CardTitle>;            <CardDescription>;
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
@@ -524,6 +552,9 @@ function UsageStats() {
               <div className="flex items-center justify-between mb-2">;
                 <div className="text-sm font-medium">Monthly budget</div>;
                 <Badge variant="outline">$1,250 / $5,000</Badge>;
+              <div className="flex items - center justify - between mb-2">;
+                <div className="text - sm font-medium">Monthly budget</div>;
+                <Badge variant="outline">$1, 250 / $5, 000</Badge>;
               </div>;
               <Progress value={25} className="h-2" />;
             </div>;
@@ -597,6 +628,16 @@ function UsageStats() {
       </div>;
     </div>);
 }
+              <div className="grid grid - cols - 3 items - center gap-4">;
+                <div className="text-sm">Monthly budget:</div>;
+                <div className="col - span-2">;
+                  <Input type="number" min="0" step="100" default_value="5000" />;
+                </div>;
+              </div>;
+              <div className="grid grid - cols - 3 items - center gap-4">;
+                <div className="text-sm">Alert threshold:</div>;
+                <div className="col - span-2">;
+                  <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring">;  );}
   );
         <Button > Contact Us</Button>;
       </div>;

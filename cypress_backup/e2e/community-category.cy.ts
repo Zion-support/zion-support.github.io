@@ -7,6 +7,21 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 ursor/automate-test-improve-and-merge-code-646c
 
 
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})});
+describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
+describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}
+
+});''
+
+
+
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });''
 });''
 });''
@@ -102,3 +117,13 @@ ursor/automate-test-improve-and-merge-code-646c
 });''
 });''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> main
+describe('community category listing', () => {
+  it('displays posts in Getting Hired category', () => {
+    cy.visit('/community/getting-hired');
+    cy.get('[data-testid="post-card"]')
+      .its('length')
+      .should('be.greaterThan', 0);
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

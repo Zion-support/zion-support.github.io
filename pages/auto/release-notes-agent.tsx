@@ -18,6 +18,11 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
 
+      </main>
+    </div>
+  )
+}
+export default ReleaseNotesAgent;
 
 
 
@@ -36,3 +41,9 @@ const ReleaseNotesAgent: NextPage = () => {
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
 
 
+export default ReleaseNotesAgent,;
+export default ReleaseNotesAgent,
+
+
+const ReleaseNotesAgent: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

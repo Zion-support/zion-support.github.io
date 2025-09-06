@@ -97,6 +97,7 @@ export interface OnboardingStep {
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
 ;
+import {Link} from "react-router-dom";;
 export function OnboardingTracker({;
   steps,;
   title = "Complete Your Profile",;
@@ -104,6 +105,9 @@ export function OnboardingTracker({;
 
 
 export function OnboardingTracker(): any ({ ;
+  title?: string;
+  className?: string;
+}
   steps;
   title = "Complete Your Profile", ;
   className ;
@@ -111,6 +115,8 @@ export function OnboardingTracker(): any ({ ;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
   return (
+
+  return (  return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;

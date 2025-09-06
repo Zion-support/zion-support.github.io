@@ -381,3 +381,4 @@ refetch: fetchMilestones
 };
 
 
+            created_by_profile:profiles ! user_id (display_name, avatar_url);

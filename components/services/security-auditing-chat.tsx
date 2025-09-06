@@ -1,6 +1,7 @@
 
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,6 +15,7 @@ const SecurityAuditingChat: NextPage = () => {
     <div>
       <Head>
 
+
 const SecurityAuditingChat: NextPage = () => {;
   return (
     <div>;
@@ -22,6 +24,12 @@ const SecurityAuditingChat: NextPage = () => {;
         <meta name="description" content="SecurityAuditingChat service" />{" "}
 
 
+
+
+const SecurityAuditingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
 
       </Head>;
 
@@ -33,6 +41,8 @@ const SecurityAuditingChat: NextPage = () => {;
       </Head>;
 
 
+        <meta name="description" content="SecurityAuditingChat service" />
+      </Head>
       <main>
         <h1>SecurityAuditingChat</h1>
         <p>Service details coming soon...</p>
@@ -40,6 +50,7 @@ const SecurityAuditingChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
+
 
       <main>;
         <h1>SecurityAuditingChat</h1>;
@@ -50,6 +61,15 @@ const SecurityAuditingChat: NextPage = () => {;
   );
 }
 export default SecurityAuditingChat;
+
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+
+
+
+
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+
+ursor/fix-website-loading-errors-and-merge-6662
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
 
@@ -74,6 +94,7 @@ const SecurityAuditingChat: NextPage = () => {
 export default SecurityAuditingChat;
 ;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <div>
       <Head>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
@@ -114,3 +135,5 @@ export default SecurityAuditingChat;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
 
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

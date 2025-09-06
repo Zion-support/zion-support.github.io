@@ -114,6 +114,10 @@ export function useAIContentEnhancer() {;
 
 
 import { useState } from 'react',;
+      setError(errorMessage);
+      toast({
+        title: "AI Enhancement Failed",
+  description: errorMessageimport { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
 type EnhancementType =;
@@ -167,6 +171,7 @@ export function useAIContentEnhancer() {;
 
 
         variant: "destructive"
+        throw new Error(error.message);        variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
       return null
@@ -338,3 +343,5 @@ error
 
 
   }
+  const [error, set_error] = useState < string | null>(null);  }
+}

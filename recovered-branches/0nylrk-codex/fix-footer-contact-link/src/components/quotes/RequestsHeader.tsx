@@ -12,6 +12,7 @@ import type { QuoteStatus } from "@/types/quotes";
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
+
   Select,
   SelectContent, 
   SelectItem, 
@@ -159,6 +160,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 
 
 },
+  setArchiveFilter;
+}) => {;
+  return (},
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import {;
@@ -169,7 +173,7 @@ import {;
   SelectValue;
 } from "@/components/ui/select",;
 import type { QuoteStatus } from "@/types/quotes",;
-type RequestsHeaderProps = {;
+type RequestsHeaderProps = {
   unreadCount: number,;
   statusFilter: QuoteStatus | 'all',;
   setStatusFilter: (value: QuoteStatus | 'all') => void,;
@@ -245,6 +249,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 
 
             <SelectValue placeholder="Active Only" />;
+      </div>;            <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value="active">Active Only</SelectItem>;
@@ -347,3 +352,4 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
 };
 
 export default RequestsHeader;
+      </div>;

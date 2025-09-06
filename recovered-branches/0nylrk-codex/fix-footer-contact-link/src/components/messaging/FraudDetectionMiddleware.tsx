@@ -14,6 +14,17 @@ import { supabase } from '@/integrations/supabase/client',;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
 }
+import {check_message, monitor_content} from '@/services / fraud';
+import {toast} from '@/hooks / use - toast';
+import {supabase} from '@/integrations / supabase / client';
+// Props for the middleware component;
+
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode;
+}
+
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode}
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -59,6 +70,7 @@ export const FraudDetectionContext = React.createContext(
 
 
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -250,6 +262,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           toast({;
             title: "Message Flagged",;
             description: "Your message contains content that may violate our terms of service.",;
+        // If it's dangerous, show a warning to the user;
+        if (quickCheck && quickCheck.severity === 'dangerous') {;
+          toast({;
+            title: "Message Flagged",,
+  description: "Your message contains content that may violate our terms of service.",;
             variant: "destructive",;
             duration: 5000;
           });
@@ -277,6 +294,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         toast({;
           title: "Message Blocked",;
           description: data && data.explanation || "This message contains prohibited content.",;
+          title: "Message Blocked",,
+  description: data && data.explanation || "This message contains prohibited content.",;
           variant: "destructive";
         });
         return { ;
@@ -328,6 +347,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
   );
+    </FraudDetectionContext && FraudDetectionContext.Provider>;
+  )
 };
 
 // Hook to use the fraud detection context;
@@ -587,7 +608,7 @@ export const FraudDetectionMiddleware:React.FC<FraudDetectionMiddlewareProps> = 
 ;
 // Hook to use the fraud detection context;
 export const useFraudDetection = () => {;
-  const context = React.useContext(FraudDetectionContext),;
+  const context = React.useContext(FraudDetectionContext);
   if (context === undefined) {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware'),;
   }
@@ -615,3 +636,7 @@ explanation: data.explanation
 };
 
 
+    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
+  }
+  return context
+};

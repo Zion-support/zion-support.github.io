@@ -35,6 +35,9 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 } from "@/components/ui/card";
 interface ReferralLinkProps {
   referralLink: string;
+  CardTitle
+} from "@/components/ui/card";
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLink: string;
   onCopy: () => void;
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
@@ -58,6 +61,20 @@ export function ReferralLink({
   };
 
 
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+  
+  const handleCopy = () => {
+    onCopy(),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -289,5 +306,6 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 }
 ;
   )
+          <div className="flex space-x-2">  )
   )
 

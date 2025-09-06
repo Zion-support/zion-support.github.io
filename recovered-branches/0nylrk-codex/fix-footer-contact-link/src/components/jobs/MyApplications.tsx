@@ -32,6 +32,9 @@ function MyApplications() {
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
 import { useState } from "react",
+  const getStatusBadge = (status: ApplicationStatus) => {;
+    switch (status) {;
+    switch (status) {
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -110,6 +113,7 @@ export function MyApplications() {
 
 
       case "new": return <Badge variant="secondary">New</Badge>;
+  }      case "new": return <Badge variant="secondary">New</Badge>;
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
@@ -121,6 +125,10 @@ export function MyApplications() {
 
   if (isLoading) {
       case "rejected":;
+  },
+  
+
+  if (isLoading) {
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
@@ -240,6 +248,7 @@ export function MyApplications() {;
 
 
               <div className="flex justify-between items-center">
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   size="sm"
@@ -429,3 +438,5 @@ export function MyApplications() {;
     }
   }
 ;
+                <Button 
+                  variant="default" 

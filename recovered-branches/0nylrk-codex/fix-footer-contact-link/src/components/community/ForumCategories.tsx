@@ -37,6 +37,9 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   },
   {
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
 
     id: "project-help"
     name: "Project Help"
@@ -163,6 +166,7 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Megaphone";
   }
 import { Link } from './react-router-dom';
+    icon: "MessageSquare"import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
@@ -342,7 +346,7 @@ export const ForumCategories = () => {;
   return (;
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories.map((category) => {;
-        const Icon = iconMap[category.icon as keyof typeof iconMap],;
+        const Icon = iconMap[category.icon as keyof typeof iconMap];
         return (;
           <Link key={category.id} to={`/community/category/${category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;

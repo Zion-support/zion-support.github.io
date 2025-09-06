@@ -7,6 +7,8 @@ export const metadata = {
   description:
     "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
 ursor/automate-test-improve-and-merge-code-646c
+  description: "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+  keywords: "contact, support, AI services, micro SaaS, IT services, consulting"
 };
 
 export default function ContactPage() {
@@ -18,10 +20,9 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-<<<<<<< HEAD
             Ready to transform your business with cutting-edge technology? Let&apos;s
+            Ready to transform your business with cutting-edge technology? Let's
             discuss how we can help you achieve your goals.
-=======
             Ready to transform your business with cutting-edge technology? 
             Let&apos;s discuss how we can help you achieve your goals.
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
@@ -203,3 +204,4 @@ export default function ContactPage() {
 
 }
 ursor/automate-test-improve-and-merge-code-646c
+}

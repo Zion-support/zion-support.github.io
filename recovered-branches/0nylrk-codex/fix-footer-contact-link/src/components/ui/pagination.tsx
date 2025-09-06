@@ -64,6 +64,15 @@ const PaginationContent = React && React.forwardRef<;
   React && React.ComponentProps<'ul'>;
 >(({ className, ...props }, ref) => (;
   <ul
+
+const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+  <nav
+    role='navigation'
+    aria-label='pagination'
+    className={cn('mx-auto flex w-full justify-center', className)}
+    {...props}
+
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';  <ul
 ;
 import {cn} from '@/lib / utils';
 import {ButtonProps, button_variants} from '@/components / ui / button';
@@ -104,6 +113,7 @@ type PaginationLinkProps = {
 
 >(({ className, ...props }, ref) => (
 
+  />
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
@@ -111,6 +121,23 @@ type PaginationLinkProps = {
   />
 
 ))
+));
+PaginationContent.displayName = 'PaginationContent';
+const PaginationItem = React.forwardRef<
+  HTMLLIElement
+  React.ComponentProps<'li'>
+>(({ className, ...props }, ref) => (
+  <li ref={ref} className={cn('', className)} {...props} />
+));
+PaginationItem.displayName = 'PaginationItem';
+type PaginationLinkProps = {
+  isActive?: boolean;
+} & Pick<ButtonProps, 'size'> &
+  React.ComponentProps<'a'>;
+const PaginationLink = ({
+  className
+  isActive
+  size = 'icon'
 PaginationContent.displayName = "PaginationContent"
 
 const PaginationItem = React.forwardRef<
@@ -131,6 +158,9 @@ const PaginationLink = ({
   isActive,
   size = "icon",
   ...props
+
+  ...props
+}: PaginationLinkProps) => (  ...props
 }: PaginationLinkProps) => (
 PaginationContent && PaginationContent.displayName = 'PaginationContent';
 
@@ -141,6 +171,7 @@ const PaginationItem = React && React.forwardRef<;
   <li ref={ref} className={cn('', className)} {...props} />;
 ));
 PaginationItem && PaginationItem.displayName = 'PaginationItem';
+type PaginationLinkProps = {
 type PaginationLinkProps = {
 type PaginationLinkProps = {
   isActive?: boolean;
@@ -282,6 +313,7 @@ PaginationLink.displayName = "PaginationLink"
 
 
 const PaginationPrevious = ({
+      buttonVariants({const PaginationPrevious = ({
   className
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
@@ -341,6 +373,7 @@ const PaginationEllipsis = ({;
   <span
     aria-hidden
 
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
     className={cn("flex h-9 w-9 items-center justify-center", className)}
@@ -489,6 +522,7 @@ export {
 
 
   />;
+  </span>  />;
 ));
 PaginationContent.displayName = "PaginationContent";
 const PaginationItem = React.forwardRef<;
@@ -607,3 +641,22 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
   PaginationPrevious
 }
 ;
+  PaginationPrevious
+}
+;
+  PaginationPrevious} />) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
+/>) ) PaginationContent.displayName = "PaginationContent" const PaginationItem = React.forwardRef< HTMLLIElement;
+) ) PaginationItem.displayName = "PaginationItem" React.ComponentProps<"a"> 
+}{
+  ...props 
+}/>) PaginationLink.displayName = "PaginationLink" const PaginationPrevious = ({
+  className, ...props 
+}: React.ComponentProps<typeof PaginationLink>) => (<PaginationLink > <ChevronLeft className="h-4 w-4" /> <span>Previous</span> </PaginationLink>) PaginationPrevious.displayName = "PaginationPrevious" const PaginationNext = ({
+  className, ...props 
+}: React.ComponentProps<typeof PaginationLink>) => (<PaginationLink > <span>Next</span> <ChevronRight className="h-4 w-4" /> </PaginationLink>) PaginationNext.displayName = "PaginationNext" <span aria-hidden className= {
+  cn ("flex h-9 w-9 items-center justify-center", className) 
+}{
+  ...props 
+}> <MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >More pages</span> </span>) PaginationEllipsis.displayName = "PaginationEllipsis" export {
+  Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious 
+}

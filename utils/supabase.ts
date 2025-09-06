@@ -13,6 +13,12 @@ export const supabase = {
 
 
 >>>>>>> main
+
+    getUser: () => Promise<any>;
+    signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>
+};
+}
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -22,6 +28,12 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
         eq: (column: string, value: any) => ({
           single: () => Promise.resolve({ data: null, error: null }),
           then: (callback: (result: any) => any) =>
+            callback({ data: [], error: null })
+        }),
+        insert: (data: any) => ({
+          select: (columns: string = "*") => ({
+            single: () => Promise.resolve({ data: data, error: null })
+          })
             callback({ data: [], error: null })
         }),
         insert: (data: any) => ({
@@ -44,10 +56,17 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
               single: () => Promise.resolve({ data: data, error: null })
             })
           })
+              single: () => Promise.resolve({ data: data, error: null })
+            })
+          })
         }),
         delete: () => ({
           eq: (column: string, value: any) => ({
             then: (callback: (result: any) => any) =>
+              callback({ data: null, error: null })
+          })
+        })
+      })
               callback({ data: null, error: null })
           })
         })
@@ -61,6 +80,8 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
       getUser: () => Promise.resolve({ data: { user: null }, error: null }),
       signIn: (credentials: any) =>
         Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null })
+    }
       signOut: () => Promise.resolve({ error: null })
     }
       signOut: () => Promise.resolve({ error: null })
@@ -117,6 +138,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key"
+  anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key"
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
@@ -149,3 +171,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  })
+};
+}
+  })
+};
+

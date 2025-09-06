@@ -61,6 +61,11 @@ export function PartnerReferralLinks() {
 
   
   const handleCopyLink = (link: string) => {
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
       title: "Link copied!"
@@ -271,7 +276,7 @@ export function PartnerReferralLinks() {;
       "Name,Link",;
       ...allLinks.map(l => `${l.name},${l.link}`);
     ].join("\n"),;
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),;
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL.createObjectURL(blob),;
     const link = document.createElement("a"),;
     link.setAttribute("href", url),;
@@ -365,6 +370,13 @@ export function PartnerReferralLinks() {;
   return (
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam("");
+    }  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink }
+      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -394,6 +406,8 @@ export function PartnerReferralLinks() {;
 
 
       "Name,Link";
+              onClick={handleDownloadLinks}
+              className="flex items-center gap-2">;      "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
     ].join("\n");
               onClick={handleDownloadLinks}
@@ -612,6 +626,10 @@ if ( {) {
                   onValueChange={setSelectedCampaign}
                 >;
                   <SelectTrigger id="campaign">;
+            <Input
+              value={baseLink}
+              readOnly
+              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
                   <SelectContent>;
@@ -818,6 +836,12 @@ if ( {) {
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
+                <Label html_for="custom">Custom Parameter (Optional)</Label>;
+                <Input;
+                  id="custom";
+                  placeholder="spring_campaign, video_123, etc.";
+                  value={custom_param}
+                  on_change={(e) => setCustomParam (e.target.value)}                variant="outline"                className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
                 Create First Link;
@@ -833,6 +857,12 @@ if ( {) {
                     <Link className="h - 4 w - 4 text - zion - purple" />;
 
                     <span>{item.name || "Campaign Link"}</span>;
+            </CardContent>;
+          </Card>;
+        )}
+      </div>;
+    </div>;
+  );                    <span>{item.name || "Campaign Link"}</span>;
                   </div>;
                 </CardTitle>;
               </CardHeader>;
@@ -893,3 +923,8 @@ document.body.removeChild (link);
     </div>
   )
 }
+                    <Copy className="h - 4 w-4" />;
+                    <span className="sr-only">Copy</span>;
+                  </Button>;
+                </div>;
+              </CardContent>;}

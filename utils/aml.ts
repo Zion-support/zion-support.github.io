@@ -39,6 +39,10 @@ export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
 export type WatchlistMatch = {
+export type WatchlistMatch = {
+  list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
+  list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
+export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
@@ -52,6 +56,11 @@ export type WatchlistMatch = {
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+>>>>>>> main
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -78,6 +87,22 @@ ursor/fix-website-loading-errors-and-merge-6662
   status: 'clear' | 'match' | 'review' | 'unknown';
 >>>>>>> main
   status: 'clear' | 'match' | 'review' | 'unknown';
+  status: "clear" | "match" | "review" | "unknown";
+  status: "clear" | "match" | "review" | "unknown";
+};
+
+export type AmlCheckResult = {;
+export type WatchlistMatch = {
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+export type AmlCheckResult = {};
+
+export type AmlCheckResult = {;
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  status: 'clear' | 'match' | 'review' | 'unknown';
+>>>>>>> main
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: "mock" | "remote";
@@ -247,6 +272,7 @@ class AmlManager {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
+>>>>>>> main
     }
     return { status: "clear" };
   }
@@ -262,6 +288,7 @@ class AmlManager {
         status: "match",
         details: { reason: "Test business name detected" }
         details: { reason: "Test business name detected" }
+        details: { reason: "Test business name detected" }
       };
     }
     return { status: "clear" };
@@ -272,6 +299,7 @@ class AmlManager {
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
+>>>>>>> main
 >>>>>>> main
 }
 
@@ -338,3 +366,13 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export function getAmlProvider (): AmlProvider {
+  return new MockAmlProvider ();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export function getAmlProvider(): AmlProvider {
+  return provider;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

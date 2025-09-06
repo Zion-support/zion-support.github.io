@@ -1,6 +1,28 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -24,6 +46,7 @@ export default function TalentProfilePage() {
 
 
   const navigate = useNavigate();
+import {toast} from "@/hooks/use-toast";  const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
@@ -32,6 +55,7 @@ export default function TalentProfilePage() {
 
 
 import React, { useState, useEffect } from "react",
+  const { isAuthenticated, user } = useAuth();import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
@@ -90,6 +114,7 @@ export default function TalentProfilePage() {
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
   // Handle loading error gracefully
+  const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
@@ -123,6 +148,7 @@ export default function TalentProfilePage() {;
   const { id } = useParams() as { id?: string },;
   const navigate = useNavigate();
   const navigate = useNavigate();
+  const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id),;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),;
@@ -154,6 +180,8 @@ export default function TalentProfilePage() {;
       toast({;
         title: "Error loading profile",;
         description: "There was a problem loading this talent profile. Please try again.",;
+        title: "Error loading profile",,
+  description: "There was a problem loading this talent profile. Please try again.",;
         variant: "destructive"});
     }
   }, [error]),;
@@ -186,7 +214,10 @@ export default function TalentProfilePage() {;
 
 
 
-  const handleMessageTalent = () => {
+  const handleMessageTalent = () => {}
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
+  }  const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required"
@@ -406,6 +437,10 @@ export default function TalentProfilePage() {;
         profile={profile} ;
 
 
+    setIsMessageModalOpen(true)  // Handle loading error gracefully;
+  useEffect(() => {;
+    if (error) {;
+      toast({;
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
@@ -588,6 +623,11 @@ if ( {) {
       
       
       {/* Request to Hire Modal */}
+            onClick={handleMessageTalent}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;      {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
@@ -718,3 +758,4 @@ const handleMessageTalent = () => {
 }/> </div>) 
 }
 ;
+        userDetails={userProfile}

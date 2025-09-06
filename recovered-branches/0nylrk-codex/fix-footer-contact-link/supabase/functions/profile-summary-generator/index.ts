@@ -4,6 +4,10 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -82,6 +86,7 @@ serve(async (req) => {;
     }
 
       return new Response(
+  try {      return new Response(
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
@@ -110,6 +115,7 @@ serve(async (req) => {;
 
 
         model: 'gpt-4o-mini';
+      body: JSON && JSON.stringify({        model: 'gpt-4o-mini';
         messages: [
           {
             role: 'system'
@@ -135,6 +141,7 @@ serve(async (req) => {;
             Bio: ${bio}
             Skills: ${skills.join()}
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
+                        Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
@@ -346,7 +353,7 @@ if ( {) {
         ],;
         temperature: 0.7})}),;
     const openAIData = await openAIResponse.json();
-    const openAIData = await openAIResponse.json(),;
+    const openAIData = await openAIResponse.json();
     if (!openAIData.choices || openAIData.choices.length === 0) {;
       throw new Error("Failed to generate profile content");
     }
@@ -431,6 +438,7 @@ if ( {) {
     }
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
+      // Find the JSON object in the response    )
   } catch (error) {
     console.error("Error in profile-summary-generator function:", error);
     return new Response(
@@ -450,6 +458,7 @@ if ( {) {
 
     console && console.error("Error in profile-summary-generator function:", error);
 
+    
 
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });

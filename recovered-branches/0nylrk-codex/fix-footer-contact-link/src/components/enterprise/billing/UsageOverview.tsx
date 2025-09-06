@@ -204,6 +204,13 @@ export function UsageOverview() {;
   return (
 
 
+      used: 32,
+      total: 100,
+      percentage: 32
+};
+      percentage: 32
+    }
+    },import React from "react",;
 export function UsageOverview() {;
   // Mock usage data;
   const usage = {;
@@ -278,6 +285,7 @@ export function UsageOverview() {;
 
 
           <TabsContent value="current" className="space-y-6">;
+          </TabsList>;          <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
@@ -329,6 +337,19 @@ export function UsageOverview() {;
 
 
             <div className="pt-4 text-sm text-muted-foreground">;
+                    {usage && usage.jobPosts.used} / {usage && usage.jobPosts.total}
+                  </p>;
+                </div>;
+                <Progress value={usage && usage.jobPosts.percentage} className="h-2" />;
+              </div>;              <div className="space-y-2">;
+                <div className="flex items-center justify-between">;
+                  <p className="text-sm font-medium">Messages Sent</p>;
+                  <p className="text-sm text-muted-foreground">;
+                    {usage && usage.messaging.used} / {usage && usage.messaging.total}
+                  </p>;
+                </div>;
+                <Progress value={usage && usage.messaging.percentage} className="h-2" />;
+              </div>;            <div className="pt-4 text-sm text-muted-foreground">;
               <p>Current billing period: May 1, 2025 - May 31, 2025</p>;
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
             </div>;
@@ -407,3 +428,8 @@ function UsageOverview() {
 ;
     </Card>);
 }
+          <TabsContent value="historical">;
+            <div className="py-10 text-center text-muted-foreground">;    }
+  }
+
+  return (

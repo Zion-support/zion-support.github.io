@@ -52,3 +52,7 @@ export const getAIPricing = async (service: string) => {;
 };
 
 };
+},export const calculateAICost = async (usage: any) => {
+  // Placeholder implementation;
+  return { cost: 0, success: true }
+}

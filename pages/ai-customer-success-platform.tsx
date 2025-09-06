@@ -1,6 +1,9 @@
 
 
 
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
 export default function AICustomerSuccessPlatform() {
@@ -17,8 +20,8 @@ export default function AICustomerSuccessPlatform() {
 				"Executive QBR reports and cohort analytics"
 
 
+}
 
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export default /**
  * AICustomerSuccessPlatform - Function description
@@ -47,6 +50,7 @@ return (
 
 
 
+}
 
 
 			pricePerMonthUSD={1999  } catch (error) {
@@ -77,3 +81,31 @@ return (
 };
 
 
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["SaaS", "Fintech", "Media", "E‑commerce"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

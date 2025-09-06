@@ -28,6 +28,11 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 
 // Initialize Supabase client
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",// Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
@@ -80,6 +85,12 @@ serve(async (req) => {
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
     }
+    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }
+    const processedJobs = [];
       .limit(50),
 
     if (jobsError) {
@@ -150,6 +161,8 @@ if ( {) {
       for (const job of pendingJobs) {
         try {
           // Call the send - retention - email function for each job;
+    if (pendingJobs && pendingJobs.length > 0) {
+      for (const job of pendingJobs) {          // Call the send - retention - email function for each job;
           const reminder_response = await fetch (
             `${supabase_url}/functions / v1 / send - retention - email`;
             {
@@ -187,6 +200,7 @@ if ( {) {
 
 
             
+            
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
@@ -213,6 +227,7 @@ if ( {) {
           console.error(`Error processing job ${job.id}:`, error),
           
           // Update job status to failed
+                status: "failed"})          // Update job status to failed
           await supabase
             .from("scheduled_jobs")
             .update({
@@ -246,6 +261,11 @@ if ( {) {
       JSON.stringify({
 
         message: "Retention emails processed successfully",
+            .eq("id", job && job.id)            .eq("id", job && job.id)
+        }
+      }
+    }
+    return new Response(        message: "Retention emails processed successfully",
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
         job_ids: processedJobs}),
@@ -291,6 +311,10 @@ if ( {) {
 });
 
 
+  } catch (error) {});        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
@@ -303,7 +327,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
@@ -379,6 +403,8 @@ if ( {) {
   }
 });
 
+  }
+});
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
 ;

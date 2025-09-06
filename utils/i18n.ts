@@ -32,6 +32,11 @@ export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 >>>>>>> main
 export const supportedLocales = ["en", "pt", "es", "ar"] as const;
 
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
+export const i18n = {
+  language: 'en'
+  resolvedLanguage: 'en'
 }
 }
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
@@ -51,6 +56,7 @@ export const i18n = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  resolvedLanguage: "en"
   resolvedLanguage: "en"
 };
 }

@@ -1,4 +1,23 @@
 
+
+import { useJobApplications } from "@/hooks/useJobApplications";
+import { ApplicationCard } from "./ApplicationCard";
+import { LoadingState } from "./LoadingState";
+import { EmptyState } from "./EmptyState";
+import { ErrorState } from "./ErrorState";
+
+import { Button } from "@/components/ui/button";
+import { ApplicationStatus } from "@/types/jobs";
+
+export function ApplicationsTracker() {
+
+  const { applications, isLoading, error } = useJobApplications();
+
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
+    "all",;
+
+  );
+
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -7,11 +26,6 @@ import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
 
 import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { ApplicationCard } from "./ApplicationCard";
-import { LoadingState } from "./LoadingState";
-import { EmptyState } from "./EmptyState";
-import { ErrorState } from "./ErrorState";
 
 import { Button } from "@/components/ui/button",
 import { ApplicationStatus } from "@/types/jobs",
@@ -41,6 +55,14 @@ export function ApplicationsTracker() {;
   }
 
   
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+  }  
   const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
@@ -168,6 +190,10 @@ export function ApplicationsTracker() {;
 
       
       
+          onClick={() => setStatusFilter("rejected")}
+
+      
+
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
@@ -184,6 +210,7 @@ export function ApplicationsTracker() {;
 
 
       {filteredApplications.length === 0 && (
+      </div>      {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
             No applications with this status.
@@ -237,6 +264,8 @@ if ( {) {
   return (
     <div className="space - y-6">;
       <div className="flex flex - wrap gap - 2">;
+    <div className="space-y-6">;
+      <div className="flex flex - wrap gap-2">;
         <Button;
           size="sm";
           variant={status_filter === "all" ? "default" : "outline"}
@@ -408,3 +437,4 @@ if (isLoading) {
 
 
 }
+}}

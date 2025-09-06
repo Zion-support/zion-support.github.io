@@ -32,6 +32,8 @@ export const dataStore = {
 interface Project {
   id: string;
   title: string;
+}  id: string;
+  title: string,
   description: string;
   status: string;
   createdAt: Date;
@@ -39,6 +41,26 @@ interface Project {
 }
 
 
+interface Review {
+  id: string;
+  projectId: string;
+  fromRole: "client" | "talent";
+  fromId: string;
+  toRole: "client" | "talent";
+  toId: string;
+  rating: number;
+  text: string;
+  categories?: any;
+  anonymous: boolean;
+  approved: boolean;
+  removed: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+class DataStore {
+  private projects: Project[] = [];
+  private reviews: Review[] = [];
 
   // Project methods
   findProjectById(id: string): Project | undefined {
@@ -53,6 +75,7 @@ interface Project {
       description: data.description || "",
       status: data.status || "active",
       createdAt: new Date(),
+      updatedAt: new Date()
       updatedAt: new Date()
       updatedAt: new Date()
     };
@@ -154,6 +177,7 @@ export const data_store = {
     this.projects.push(project);
     return project;
 ursor/automate-test-improve-and-merge-code-646c
+}
   }
 
   // Review methods

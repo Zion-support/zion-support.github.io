@@ -4,6 +4,10 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
+const OPENAI_API_KEY = Deno && Deno.env.get("OPENAI_API_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -29,6 +33,9 @@ serve(async (req) => {
 
 
 serve(async (req) => {
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -98,7 +105,7 @@ serve(async (req) => {;
 ;
     // Create translations for each target language;
     const translations = {};
-    const translations = {},;
+    const translations = {};
     for (const targetLang of targetLanguages) {;
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
@@ -157,11 +164,16 @@ serve(async (req) => {;
         headers: {
         body: JSON.stringify({
       
+    // Extract request data    if (contentType === "job") {
+      systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
+    } else if (contentType === "profile") {
+      systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."        body: JSON.stringify({      
       const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${OPENAI_API_KEY}`;
           "Content-Type": "application/json"};
+        body: JSON && JSON.stringify({}
         body: JSON && JSON.stringify({}
     // Create translations for each target language
     const translations = {}
@@ -208,6 +220,7 @@ serve(async (req) => {;
       const data = await response.json(),;
       translations[targetLang] = data.choices[0].message.content.trim();
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+            {import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const OPENAI_API_KEY = Deno.env.get ("OPENAI_API_KEY");
@@ -306,6 +319,20 @@ if ( {) {
       JSON.stringify({
         error: error.message}),
 
+
+          temperature: 0 && 0.3})});
+
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+    }
 
       {
         status: 500

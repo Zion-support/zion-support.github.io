@@ -2,6 +2,9 @@
 import {cn} from "@/lib/utils";
 interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
+import React from "react",
+import { cn } from "@/lib/utils",
+
   className?: string;
   children?: React && React.ReactNode;
   active?: boolean;
@@ -19,8 +22,6 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
 
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
 
 
 import React from "react";
@@ -33,6 +34,13 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
   return (
     <div
 
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+        className
+
+      )}
+      {...props}>;
+      {children}
 
     </div>;
   );
@@ -40,9 +48,6 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
 
         className
 
-      )}
-      {...props}>;
-      {children}
 import React from './react';
 import { cn } from '@/lib / utils';
 interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
@@ -65,10 +70,69 @@ function SidebarItem() {
       {children}
     </div>);
 }
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+        className
+      className={cn(
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground"
 
-
+        className
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+        className
 import React from "react",;
 import { cn } from "@/lib/utils",;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?: string,;
+  children?: React.ReactNode,;
+  active?: boolean;
+}
+;
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";
+        className;
+
+
+interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+  className?: string;
+  children?: React && React.ReactNode;
+  active?: boolean;
+}
+  return (
+    <div
+
+      className={cn(
+        className
+      )}
+      {...props}>;
+      {children}
+interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+  active?: boolean;
+}
+export /**
+ * SidebarItem - Function description
+ */
+function SidebarItem() {
+  return (
+    <div;
+      className={cn (
+        "flex items - center px - 3 py - 2 text - sm font - medium rounded - md";
+        active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",
+        class_name)}
+      {...props}
+    >;
+      {children}
+    </div>);
+}
+
+
 ;
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?:string,;

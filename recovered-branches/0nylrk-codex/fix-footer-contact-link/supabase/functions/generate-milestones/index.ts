@@ -31,6 +31,15 @@ serve(async (req) => {
 
 
 
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -131,7 +140,7 @@ serve(async (req) => {;
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
-      const content = data.choices[0].message.content.trim(),;
+      const content = data.choices[0].message.content.trim();
       // Try to parse the response as JSON;
       const milestones = JSON.parse(content),;
       return new Response(JSON.stringify({ milestones }), {;
@@ -154,6 +163,11 @@ serve(async (req) => {;
     
     
   }
+    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    if (!apiKey) {;
+      throw new Error('OPENAI_API_KEY is not set');
+
+    
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
@@ -278,6 +292,10 @@ if ( {) {
 
 
     }
+                content: 'You are a project management expert that breaks work into appropriate milestones.'}
+          {
+            role: 'user'
+            content: prompt}];    }
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
@@ -450,6 +468,7 @@ serve(async (req) => {;
       throw new Error(data.error?.message || 'Failed to generate milestones'),;
     }
 ;
+    return new Response(;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
       const content = data.choices[0].message.content.trim(),;

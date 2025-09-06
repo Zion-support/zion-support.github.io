@@ -36,6 +36,16 @@ export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({ch
 
 export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
   return <div>{children}</div>;
+}
+
+  return <div>{children}</div>
+};
+
+export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {import React from 'react',;
+export { VideoCallRoom } from '../video/VideoCallRoom',;
+
+export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
+  return <div>{children}</div>
 };
 export { VideoCallRoom } from '../video / VideoCallRoom';
 ;

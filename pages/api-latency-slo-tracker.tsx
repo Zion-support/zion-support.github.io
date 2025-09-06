@@ -51,6 +51,9 @@ export default function ApiLatencySloTrackerPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 to-pink-700 text-white">Start from $129/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+import React from 'react',
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
@@ -76,6 +79,7 @@ export default function ApiLatencySloTrackerPage(req, res) {
             {[ 'SLO budgets with alertsSynthetic + RUM coveragePer-endpoint latency dashboardsPublic status page (optional)' ].map((f) => (;
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-rose-500/30 text-slate-200">{f}</div>;
             ))  } catch (error) {
+  )
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -94,3 +98,9 @@ export default function ApiLatencySloTrackerPage(req, res) {
   } catch (error) {
 
 
+;
+;
+;
+
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

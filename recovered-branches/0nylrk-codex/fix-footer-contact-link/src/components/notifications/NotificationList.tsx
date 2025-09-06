@@ -24,6 +24,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 
 
 import React from 'react',;
+  onMarkAsRead;import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
@@ -285,3 +286,11 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
     </ScrollArea>;
   );
 };
+  error;
+  notifications;
+  onMarkAsRead;  on_dismiss,
+  on_retry;
+}) => {
+  return (
+    <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
+      {error ? (

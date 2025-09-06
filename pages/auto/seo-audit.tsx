@@ -71,3 +71,19 @@ const SEOAudit: NextPage = () => {
 
 
 
+},
+export default SEOAudit
+}
+
+},
+export default SEOAudit
+
+},
+export default SEOAudit
+},
+
+export default SEOAudit,;
+export default SEOAudit,
+
+const SEOAudit: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -258,6 +258,8 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 
 
+  }
+}
 const services = [{;
     "title": 'AI Revenue Optimization Platform',;
     "href": '/services/ai-revenue-operations-platform',;

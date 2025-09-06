@@ -1,6 +1,16 @@
 
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
 interface MobileThemeProviderProps {
   children: React.ReactNode;
 }
@@ -10,6 +20,8 @@ interface MobileThemeProviderProps {
 
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
+
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
   const { theme } = useTheme();
 
@@ -97,4 +109,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
       {children}
     </div>
   )
+}
+    </div>;
+  );
 }

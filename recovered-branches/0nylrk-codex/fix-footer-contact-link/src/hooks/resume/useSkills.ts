@@ -13,6 +13,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
   const { user } = useAuth();
+export function useSkills() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -79,6 +80,10 @@ export function useSkills() {;
 
 
 ;
+      return false    try {
+      const { error } = await supabase
+        .from('resume_skills')
+        .insert({;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -260,6 +265,11 @@ deleteSkill
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
+          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete skill')
+    } finally {
+      setIsLoading(false)import {useState} from 'react';
 export /**
  * use_skills - Function description
  */
@@ -347,3 +357,4 @@ if (throw error) {
     setIsLoading (true);
     set_error (null);
 ;
+}

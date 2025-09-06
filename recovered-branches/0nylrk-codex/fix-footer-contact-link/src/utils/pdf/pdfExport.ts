@@ -24,6 +24,7 @@ import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
   theme: 'light' | 'dark';
+export interface ExportOptions {  theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
   maxProjects?: number
@@ -52,6 +53,9 @@ export async function exportResumeToPDF(
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
+
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
@@ -89,6 +93,7 @@ const default_options: ExportOptions = {
   max_projects: 2,
   font_family: 'default';
 }
+  // Set background color}
 ;
 export async function exportResumeToPDF (
   resume: Resume,
@@ -211,7 +216,7 @@ export async function exportResumeToPDF(;
   // Load custom fonts if specified;
   await loadCustomFonts(doc, fontFamily),;
   // Set up colors based on theme;
-  const colors = getPdfThemeColors(theme),;
+  const colors = getPdfThemeColors(theme);
   // Set background color;
   doc.setFillColor(colors.background),;
   doc.rect(0, 0, 210, 297, 'F'), // Fill entire page;
@@ -231,3 +236,4 @@ export async function exportResumeToPDF(;
 }
 
 
+}

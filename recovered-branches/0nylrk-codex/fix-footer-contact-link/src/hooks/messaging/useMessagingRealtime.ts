@@ -94,6 +94,7 @@ export function useMessagingRealtime(;
 
 
           })
+          toast({})
         }
       )
       .subscribe();
@@ -133,6 +134,8 @@ if (return, ) {
   $2
 }
     // Subscribe to new messages;
+    }
+  }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
       .on (
@@ -158,6 +161,8 @@ if ( {) {
           toast ({
             title: `New message from ${payload.new.sender_name || 'Someone'}`;
             description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
+            title: `New message from ${payload.new.sender_name || 'Someone'}`,
+  description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
           });
         }
       );
@@ -171,6 +176,9 @@ if ( {) {
 }
 
 }
+}
+
+}}
 }
 
 ;
@@ -210,6 +218,8 @@ export function useMessagingRealtime(;
           toast({;
             title: `New message from ${payload.new.sender_name || 'Someone'}`;
             description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
+            title: `New message from ${payload.new.sender_name || 'Someone'}`,
+  description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
           });
         }
       );

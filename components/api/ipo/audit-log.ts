@@ -21,6 +21,7 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Typeapplication/json');
@@ -33,6 +34,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
@@ -75,6 +85,10 @@ function handler() {
 
 
 
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -91,3 +105,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 }
+  const data = readJsonFile('audit-log.json', [] as unknown[]);
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
+  res.status(200).send(JSON.stringify(data, null, 2));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

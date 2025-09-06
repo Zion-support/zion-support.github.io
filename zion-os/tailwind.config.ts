@@ -4,6 +4,9 @@
 
 
   theme: {
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],  theme: {
     extend: {
       colors: {
         'zion - blue': '#3b82f6zion - purple': '#8b5cf6zion - green': '#10b981zion - orange': '#f59e0bzion - red': '#ef4444zion - teal': '#14b8a6zion - cyan': '#06b6d4zion - indigo': '#6366f1zion - emerald': '#059669zion - pink': '#ec4899'},

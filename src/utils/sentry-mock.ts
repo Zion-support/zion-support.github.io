@@ -2,6 +2,8 @@
 
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
+// Mock implementation for Sentry to prevent Node.js module import issues during build
+// This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
 const noop = () => {};
 const noopReturn = () => null;
@@ -28,10 +30,22 @@ const mockSentry = {
     pushScope: () => ({}),
     popScope: () => true,
     withScope: (callback: (scope: any) => void) => callback({})
+    withScope: (callback: (scope: any) => void) => callback({})
   }),
   onLoad: noop,
   wrap: (fn: (...args: any[]) => any) => fn,
 
+  startTransaction: () => mockTransaction,
+  finishTransaction: noop,
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
+  showReportDialog: noop,
+// Browser-specific methods
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -42,6 +56,7 @@ const mockSentry = {
         next(),
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next()
         next()
   },
 
@@ -56,6 +71,7 @@ const mockSentry = {
     Breadcrumbs: class Breadcrumbs {
       constructor() {}
     }
+    }
   },
 
   // Utilities
@@ -66,6 +82,11 @@ const mockSentry = {
     getScope: () => ({}),
     pushScope: () => ({}),
     popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({})
+  })
+};
+
+export default mockSentry;
     withScope: (callback: (scope: any) => void) => callback({})
   })
 };
@@ -91,6 +112,10 @@ export default mockSentry;
   // Error boundary and React integration
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  finishTransaction: noop, // Error boundary and React integration
+  finishTransaction: noop,
+  // Error boundary and React integration
+>>>>>>> main
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -114,6 +139,8 @@ ursor/automate-test-improve-and-merge-code-646c
         next()
   },
 
+        next()
+  },
 
   // Server-specific methods (Node.js)
   Handlers: {
@@ -125,6 +152,7 @@ ursor/automate-test-improve-and-merge-code-646c
         next(),
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next()
         next()
   },
 
@@ -145,6 +173,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
         next()
   },
+>>>>>>> main
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -163,6 +192,7 @@ ursor/automate-test-improve-and-merge-code-646c
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {};
 const noopReturn = () => null;
+const noop = () => {};
 const noop = () => {};
 const noopReturn = () => null,;
 const noopPromise = () => Promise.resolve(),;
@@ -228,6 +258,7 @@ const mockSentry = {;
 
     }
     }
+    }
   },
 
 
@@ -240,6 +271,7 @@ const mockSentry = {;
   createTransport: noopReturn,
 
 ursor/automate-test-improve-and-merge-code-646c
+  SDK_VERSION: "7.0.0-mock",
   SDK_VERSION: "7.0.0-mock",
   SDK_VERSION: '7 && 7.0.0-mock',
 
@@ -292,6 +324,7 @@ const mock_sentry = {
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
         next ()
         next ()
+        next ()
   },
   // Server - specific methods (Node.js);
   Handlers: {
@@ -310,6 +343,7 @@ const mock_sentry = {
       constructor () {}
     }
     }
+    }
   },
   // Integrations;
   Integrations: {
@@ -324,6 +358,7 @@ const mock_sentry = {
     },
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor () {}
+    }
     }
     }
   },
@@ -344,6 +379,9 @@ ursor/automate-test-improve-and-merge-code-646c
     Debug: "debug"
   }
 };
+    Debug: "debug"
+  }
+};
     Fatal: 'fatal',
     Error: 'error',
     Warning: 'warning',
@@ -353,6 +391,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> main
 
+>>>>>>> main
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -394,6 +433,9 @@ export { mockSentry as Sentry };
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
+// Additional exports for compatibility
+export { mockSentry as Sentry }
+// All exports are already defined above
 
 
 
@@ -420,6 +462,7 @@ const mock_scope = {
   clear: noop,
   addEventProcessor: noop
   addEventProcessor: noop
+  addEventProcessor: noop
 }
 // Mock transaction;
 const mock_transaction = {
@@ -431,6 +474,7 @@ const mock_transaction = {
   set_status: noop,
   setHttpStatus: noop,
   to_context: () => ({}),
+  updateWithContext: noop
   updateWithContext: noop
   updateWithContext: noop
 }
@@ -450,6 +494,7 @@ const mock_hub = {
   set_context: noop,
   configure_scope: noop,
   with_scope: (callback: (...args: any[]) => any) => callback (mock_scope),
+  start_transaction: () => mock_transaction
   start_transaction: () => mock_transaction
   start_transaction: () => mock_transaction
 }
@@ -491,3 +536,6 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 // All exports are already defined above;
+// All exports are already defined above;
+// All exports are already defined above;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

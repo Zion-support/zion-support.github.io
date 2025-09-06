@@ -23,3 +23,8 @@ export default function BookBuilderPage(req, res) {
 
 
 
+const BookBuilder = null;
+export default function BookBuilderPage() {
+  return <BookBuilder />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}

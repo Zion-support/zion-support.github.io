@@ -37,6 +37,9 @@ function ContractPreview() {
 
 
 import React from "react",
+interface ContractPreviewProps {;
+  contractContent?: string;
+  generatedContract?: string, // Added to support both naming conventions;import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent";
@@ -61,6 +64,22 @@ interface ContractPreviewProps {
 export function ContractPreview({
   contractContent;
 
+import { SmartContractInfo } from "@/types/smart-contracts",interface ContractPreviewProps {
+  contractContent?: string,
+  generatedContract?: string, // Added to support both naming conventions
+  status?: 'draft' | 'ready' | 'pending'
+}
+export function ContractPreview({
+  contractContent;}
+export function ContractPreview({
+  contractContent;
+
+  generatedContract
+  status = 'ready'
+  onDeploy
+  onSign;
+  onClose;
+  deployStatus;
   talent?: TalentProfile,
   onDeploy?: () => void,
   onSign?: () => void,
@@ -81,6 +100,17 @@ export function ContractPreview({
 
 
 export function ContractPreview(): any ({ ;
+  deploymentInfo
+}: ContractPreviewProps) {
+  // Use either contractContent or generatedContract, whichever is provided
+
+  const displayContent = contractContent || generatedContract || "",
+  
+
+    <div className="space-y-4">;
+      <div className="flex justify - between items - center mb-4">;
+        <h2 className="text - 2xl font-bold">Contract Preview</h2>;
+        {status === 'ready' ? (
   contractContent;
   generatedContract, ;
   status = 'ready', ;
@@ -89,6 +119,7 @@ export function ContractPreview(): any ({ ;
   onClose;
 
 
+          <Badge
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800"
@@ -140,6 +171,10 @@ export function ContractPreview({;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
           <Badge
+  return (    <div className="space-y-4">;
+      <div className="flex justify-between items-center mb-4">;
+        <h2 className="text-2xl font-bold">Contract Preview</h2>;
+        {status === 'ready' ? (;
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
@@ -241,12 +276,15 @@ export function ContractPreview({;
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
+          {displayContent}            variant="secondary";
+            className="text - sm bg - green - 100 text - green-800";
           >;
             Ready to Sign;
           </Badge>) : status === 'pending' ? (
           <Badge;
             variant="outline";
             className="text - sm bg - yellow - 100 text - yellow - 800";
+            className="text - sm bg - yellow - 100 text - yellow-800";
           >;
             Pending Review;
           </Badge>) : (
@@ -256,6 +294,9 @@ export function ContractPreview({;
       <div className="border rounded - lg p - 6 bg - muted / 50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted - foreground">;
+      <div className="border rounded - lg p - 6 bg-muted / 50">;
+        {/* Render the contract content as markdown or formatted text */}
+        <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted-foreground">;
           {display_content}
         </div>;
       </div>;
@@ -269,6 +310,14 @@ export function ContractPreview({;
         </div>)}
       {/* Actions */}
       <div className="flex justify - end space - x-3 mt - 4">;
+        <div className="mt - 4 p - 4 bg - primary / 10 rounded-lg">;
+          <h3 className="font - medium mb-2">Contract Deployment Info</h3>;
+          <p className="text-sm">Contract Address: {deployment_info.deployed_address || "Pending..."}</p>;
+          <p className="text-sm">Network: {deployment_info.network_name || "Unknown"}</p>;
+          <p className="text-sm">Status: {deployment_info.status}</p>;
+        </div>)}
+      {/* Actions */}
+      <div className="flex justify - end space - x-3 mt-4">;
         {on_close && (
           <Button variant="outline" on_click={on_close}>;
             Close;

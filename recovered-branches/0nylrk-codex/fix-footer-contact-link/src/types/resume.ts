@@ -34,6 +34,10 @@ export interface WorkExperience {
 
 
 
+}
+export interface WorkExperience {
+
+export interface WorkExperience {;
   id?: string;
   institution: string;
   degree: string;
@@ -50,6 +54,11 @@ export interface WorkExperience {
 
 
   id?: string;
+  institution_logo_url?: string,
+  location?: string;
+
+}
+export interface Skill {  id?: string;
   name: string;
   proficiency?: number;
   category?: string;
@@ -91,6 +100,14 @@ export interface WorkExperience {
 
 
   id?: string;
+  category?: string,
+  years_experience?: number;
+
+}
+export interface Certification {  id?: string;
+  name: string;
+  proficiency?: number;
+}  id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
@@ -114,6 +131,9 @@ export interface WorkExperience {
 }
 export interface ResumeBasicInfo {;
   id?: string,;
+  portfolio_projects?: PortfolioProject[];
+  is_active: boolean;
+}  id?: string,;
   title: string,;
   headline?: string,;
   summary?: string;
@@ -199,6 +219,7 @@ export interface ResumeBasicInfo {;
 
 
   is_active: boolean;
+  portfolio_projects?: PortfolioProject[],  is_active: boolean;
 }
 ;
 }

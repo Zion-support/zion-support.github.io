@@ -293,3 +293,4 @@ export default DemoPage
 export default DemoPage
 >>>>>>> main:corrupted_backup/demo.tsx
 ursor/automate-test-improve-and-merge-code-646c
+export default DemoPage

@@ -5,6 +5,8 @@ interface MilestoneActivitiesProps {
 
 interface MilestoneActivitiesProps {
   projectId: string;
+interface MilestoneActivitiesProps {
+  projectId: string;
 }
 export /**
  * MilestoneActivities - Function description
@@ -76,3 +78,4 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -15,6 +15,21 @@ import { useAuth } from "@/hooks/useAuth";
   CardTitle
 } from "@/components/ui/card";
 import { Navigate } from "react-router-dom";
+import {Header} from "@/components/header";
+import {Footer} from "@/components/Footer";
+import {JobPostingForm} from "@/components/jobs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+export default function PostJob() {;
+import { Header } from "@/components/header",
+import { Footer } from "@/components/Footer",
+import { JobPostingForm } from "@/components/jobs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -77,6 +92,13 @@ export default function PostJob() {
       />;
       <Header />;
 
+}
+    return (
+      <div className="flex items - center justify - center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
+      </div>);
+  }
+  return (
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -88,6 +110,7 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 ;
 export default function PostJob() {;
   const { isAuthenticated, isLoading } = useAuth(),;
+  const isMobile = useIsMobile();
   const isMobile = useIsMobile();
   ;
   if (isLoading) {;
@@ -171,5 +194,7 @@ if (isLoading) {
 }
 ;
       {is_mobile && <div className="h - 16"></div>}
+  return (;;
+      {is_mobile && <div className="h-16"></div>}
     </>);
 }

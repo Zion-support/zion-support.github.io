@@ -4,6 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface VideoCallRoomProps {
 
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import React from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+interface VideoCallRoomProps {;
   room?: string;
   token?: string;
   serverUrl?: string;
@@ -37,6 +44,25 @@ export function VideoCallRoom({
     </Card>
   );
 }
+interface VideoCallRoomProps {
+  room?: string,
+  token?: string,
+  serverUrl?: string,
+  onDisconnect?: () => void,
+  className?: string
+}
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+  return (
+
+import React from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+interface VideoCallRoomProps {;
+  room?: string,;
+  token?: string,;
+  serverUrl?: string,;
+  onDisconnect?: () => void;
+  className?: string;}
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
@@ -59,7 +85,6 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
   );
 }
 
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 interface VideoCallRoomProps {
@@ -99,9 +124,6 @@ function VideoCallRoom() {
 ;
 
 
-import React from 'react',;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
 ;
 interface VideoCallRoomProps {;
   room?:string,;
@@ -119,6 +141,8 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardHeader>;
       <CardContent className="flex flex-col items-center justify-center p-8">;
         <p className="text-center mb-4">;
+      <CardContent className="flex flex - col items - center justify - center p-8">;
+        <p className="text - center mb-4">;
           Video calling functionality is currently unavailable.;
           Please check back later or use an alternative communication method.;
         </p>;
@@ -144,3 +168,8 @@ className?: string
 }
 ;
 ;
+          <Button on_click={on_disconnect}>Close</Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}

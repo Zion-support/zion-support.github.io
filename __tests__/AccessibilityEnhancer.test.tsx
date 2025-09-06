@@ -96,6 +96,7 @@ describe('AccessibilityEnhancer', () => {
   });
 });
 });
+});
 describe('AccessibilityEnhancer'
   it('renders children correctly'
     expect(screen.getByTestId('test-child'
@@ -112,3 +113,7 @@ describe('AccessibilityEnhancer'
 ursor/automate-test-improve-and-merge-code-646c
 });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> main
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+});

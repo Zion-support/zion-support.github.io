@@ -1,5 +1,10 @@
 
 
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   roles: DevRole[];
@@ -11,6 +16,11 @@
   roles: DevRole[];
   userId?: string;
 }
+
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -48,6 +58,30 @@ export function requireRoles(
   }
   return { isAuthenticated: false, roles: [] }
 }
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -74,6 +108,9 @@ export function requireRoles(
   }
   return identity;
 
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -246,3 +283,9 @@ if ( {) {
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

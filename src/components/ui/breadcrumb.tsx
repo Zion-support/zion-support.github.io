@@ -1,5 +1,20 @@
 }
 >(({ className, separator, ...props }, ref,) => (;
+}
+>(({ className, separator, ...props }, ref,) => (;
+ 
+import { cn } from "@/lib/utils"
+ 
+const Breadcrumb = null;
+  BreadcrumbEllipsis}
+;
+const Breadcrumb = React.forwardRef<
+  HTMLElement
+  React.ComponentPropsWithoutRef<'nav'> & {
+    separator?: React.ReactNode
+  }
+>(({ className, separator, ...props }, ref,) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
 import * as React from 'react';
 import { Slot } from '@radix - ui / react - slot';
@@ -21,12 +36,18 @@ const Breadcrumb = React.forward_ref<;
 
 
 
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',
+      className
+    )}
+    {...props}
+
+
+
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
  
-import { cn } from "@/lib/utils"
  
 const Breadcrumb = React.forwardRef<
   HTMLElement,
@@ -55,6 +76,14 @@ Breadcrumb.display_name = 'Breadcrumb';
     class_name = {cn (
       "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
       class_name) }
+
+  />));
+Breadcrumb.display_name = 'Breadcrumb';
+    ref = {ref }
+    aria - label="breadcrumb";
+    class_name = {cn (
+      "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
+      class_name) }
     {...props}
   />));
 Breadcrumb.display_name = 'Breadcrumb';
@@ -67,6 +96,16 @@ const BreadcrumbList = React.forwardRef<
   React.ComponentPropsWithoutRef<'ol'>;
 >(({ class_name, ...props }, ref) => (
   <ol;
+  />
+));
+Breadcrumb.displayName = 'Breadcrumb';
+
+const BreadcrumbList = React.forwardRef<
+  HTMLOListElement,
+  React.ComponentPropsWithoutRef<'ol'>
+>(({ className, ...props }, ref) => (
+  <ol
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ref={ref}
     className={cn ('flex items - center gap - 1.5', class_name)}    {...props}
   />));
@@ -102,6 +141,13 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
 
 
 const BreadcrumbSeparator = ({}: React.ComponentProps<"li">) => (
+const BreadcrumbSeparator = ({
+  children
+  className
+  ...props
+
+
+}: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
@@ -118,10 +164,12 @@ const BreadcrumbSeparator = ({}: React.ComponentProps<"li">) => (
 ));
 Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
     ref = {ref}
+    ref = {ref}
     aria-label="breadcrumb";
     className = {cn(;
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
       className;
+    )}
     )}
     {...props}
   />;
@@ -132,6 +180,7 @@ Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
   React && React.ComponentPropsWithoutRef<'ol'>;
 >(({ className, ...props }, ref) => (;
 
+ 
  
  
 const Breadcrumb = React.forwardRef<
@@ -241,3 +290,68 @@ const BreadcrumbEllipsis = ({;
 export {
 
 
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+    {...props}>;
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+export {;
+  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+
+export {;
+
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className,
+  ...props
+}: React.ComponentProps<"span">) => (
+  <span
+    role="presentation"
+    aria-hidden="true"
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >
+    &#8230,
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}
+  >
+    &#8230
+  </span>
+);
+BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+
+
+export {
+  BreadcrumbEllipsis
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

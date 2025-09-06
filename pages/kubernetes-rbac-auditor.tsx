@@ -55,6 +55,9 @@ export default function KubernetesRbacAuditorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white">Start from $179/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+import React from 'react',
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
@@ -80,6 +83,7 @@ export default function KubernetesRbacAuditorPage(req, res) {
             {[ 'Cluster-wide RBAC inventoryOver-permission & wildcard detectionUnused binding analysisLeast-privilege recommendations' ].map((f) => (;
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-sky-500/30 text-slate-200">{f}</div>;
             ))  } catch (error) {
+  )
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -98,3 +102,9 @@ export default function KubernetesRbacAuditorPage(req, res) {
   } catch (error) {
 
 
+;
+;
+;
+
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -65,6 +65,9 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
   const [matches, setMatches] = useState<MatchResult[]>([]);
 
 
+import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
@@ -98,6 +101,9 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
         // Get AI matches;
         const results = await findMatches(;
 
+
+        // Get AI matches;
+        const results = await findMatches(;
 
         
 ;
@@ -196,6 +202,23 @@ if (return) {
         setIsMatching (false);
       }
     runMatching()
+      } finally {
+        setIsMatching (false);
+      }
+        );
+        setMatches(results)
+      } catch (error) {
+        console.error("Error during AI matching:", error);
+        toast({
+          title: "Matching Error"
+          description: "We couldn't find matches for your request. Please try again."
+          variant: "destructive"})
+      } finally {
+        setIsMatching(false)
+      }
+    }
+    }
+    
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
@@ -233,6 +256,7 @@ if (return) {
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
 
+  }
   },
   
   return (
@@ -463,7 +487,7 @@ if (return) {
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {;
     // Find the original MatchResult that contains this item;
-    const matchResult = matches && matches.find(match => match && match.item.id === item && item.id),;
+    const matchResult = matches && matches.find(match => match && match.item.id === item && item.id);
     if (matchResult) {;
       handleSelectMatch(matchResult);
     }
@@ -655,6 +679,7 @@ serviceType={formData.serviceType}
 
 
         matches={matchItems}
+              )}        matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
@@ -836,3 +861,12 @@ if ( {) {
 };
 }
 }
+                <Label className="text-zion-slate-light">Service Type</Label>;
+                <div className="text-white">{formData && formData.serviceType}</div>;
+              </div>;
+
+              {formData && formData.specificItem && (;
+                <div>;
+                  <Label className="text-zion-slate-light">Selected Item</Label>;
+                  <div className="text-white">{formData && formData.specificItem.title}</div>;                </div>;
+              )}

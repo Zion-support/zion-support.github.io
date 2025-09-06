@@ -5,6 +5,14 @@ export interface Job {;
 export interface Job {
   id: string;
   title: string;
+
+export interface Job {;
+
+export interface Job {export interface Job {;
+
+export interface Job {
+export interface Job {;
+  title: string,
   description: string;
   company_name?: string;
   budget?: string;
@@ -24,6 +32,9 @@ export interface ApplyToJobModalProps {;
 export interface Job {;
   id: string,;
   title: string,;
+export interface Job {;
+  id: string,;
+  title: string,,
   description: string,;
   company_name?: string,;
   budget?: string,;
@@ -37,6 +48,7 @@ export interface ApplyToJobModalProps {;
 
 
   onClose: () => void;
+  isOpen: boolean,;  onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
@@ -52,5 +64,7 @@ export interface ApplyToJobModalProps {;
 
 ;
 ;
+export interface ApplyToJobModalProps {
+  job: Job;
 export interface ApplyToJobModalProps {
   job: Job;

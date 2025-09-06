@@ -22,6 +22,7 @@ import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
   const { user } = useAuth();
+export function ConversationDetailView() {  const { user } = useAuth();
   const {
     activeConversation;
 
@@ -50,6 +51,7 @@ export function ConversationDetailView() {;
     setMessageText('')
   }
 import React, { useState, useEffect, useRef } from 'react',;
+  }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -68,6 +70,7 @@ export function ConversationDetailView() {;
     loadMessages;
   } = useMessaging(),;
   const [messageText, setMessageText] = useState(''),;
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
     if (activeConversation) {;
@@ -92,8 +95,11 @@ import {use_auth} from '@/hooks / use_auth';
   
   useEffect(() => {
     scrollToBottom()
-  }, [activeMessages]),
+  }, [activeMessages])
 
+
+
+  }, [activeConversation?.id, loadMessages]),
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -107,12 +113,16 @@ import {use_auth} from '@/hooks / use_auth';
     setMessageText('')
   },
   useEffect(() => {;
+  
+  if (!activeConversation) {  useEffect(() => {;
     scrollToBottom();
   }, [activeMessages]);
 
   const scrollToBottom = () => {;
     messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+};
 
   const handleSendMessage = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -121,6 +131,8 @@ import {use_auth} from '@/hooks / use_auth';
     await sendMessage(activeConversation && activeConversation.id, messageText);
     setMessageText('');
   };
+    setMessageText('')
+};
 
   if (!activeConversation) {;
   
@@ -135,6 +147,8 @@ import {use_auth} from '@/hooks / use_auth';
       </div>;
     );
   }
+
+  
 
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
@@ -184,6 +198,7 @@ import {use_auth} from '@/hooks / use_auth';
 
 
         date: messageDate,;
+  });        date: messageDate,;
         messages: [message];
       });
     }
@@ -479,6 +494,12 @@ import {use_auth} from '@/hooks / use_auth';
                     isUserMessage={message.sender_id === user?.id}
           >;
             Send;
+  return (
+    <div className="flex-1 flex flex-col h-full">;
+      {/* Header */}            </div>;
+          </div>;
+        </div>;
+      </div>;            Send;
           </Button>;
         </form>;
       </div>;

@@ -39,6 +39,9 @@ export interface PerformanceAlert {;
 export interface PerformanceAlert {}
 export interface PerformanceAlert {
   id: string;
+  totalBlockingTime: number;}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
@@ -197,7 +200,15 @@ export interface PerformanceMetrics {;
 
 
 
-      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {}
+export interface MonitoringConfig {}
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
+    try {
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+export interface PerformanceMetrics {;
+
+      }
+      return await response.json()      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
@@ -262,6 +273,7 @@ export interface PerformanceMetrics {;
 
 
     } catch (error) {
+      return await response && response.json()    } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
@@ -275,6 +287,9 @@ export interface PerformanceMetrics {;
     try {
 
 
+
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
 
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
@@ -324,7 +339,11 @@ export interface PerformanceMetrics {;
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
 
 
-      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {}
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);      }
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);
         headers: {
 
 ;
@@ -347,6 +366,7 @@ export interface PerformanceMetrics {;
 ;
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {;
     try {;
+      const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;
@@ -374,7 +394,8 @@ export interface PerformanceMetrics {;
 
       return await response && response.json()
 
-    } catch (error) {
+    } catch (error) {}
+      return await response.json()    } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
@@ -500,6 +521,7 @@ export interface PerformanceMetrics {;
 
       
       data && data.push({
+      timestamp: new Date();      data && data.push({
         url;
         timestamp: date;
         loadTime: Math && Math.random() * 2000 + 500;
@@ -806,6 +828,10 @@ if ( {) {
 
 
         type: 'warning';
+      {
+        id: '1';
+
+        url: url || 'https://example && example.com';        type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
@@ -916,6 +942,18 @@ export interface PerformanceMetrics {;
   }
 }
 // Pricing tiers for the Performance Monitor;
+        current_value: 2500;
+        timestamp: new Date (),
+        resolved: false;
+
+      }
+      {
+        id: '2';
+
+        url: url || 'https://example && example.com';
+        message: 'Performance score improved';
+        metric: 'performance_score';
+        threshold: 80;
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -955,6 +993,10 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 
   }
+    period: '/month',
+    features: [;
+      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
+    ];  }
   enterprise: {
     name: 'Enterprise';
     price: 149;
@@ -1013,6 +1055,32 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
 
+    period: '/month',;    features: [;
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 49,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 149,;
+    period: '/month',;
+    features: [;
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',;
+      'SLA guarantee';
+
+    ];
+
+      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
+      'SLA guarantee';
+
+    ];
 
     ];
   }
@@ -1029,4 +1097,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 };
 
 
+
+};
 

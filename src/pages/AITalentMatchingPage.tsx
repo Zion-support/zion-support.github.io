@@ -19,12 +19,19 @@ export default function AITalentMatchingPage() {;
   ];
 
 
+
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 
 export default function AITalentMatchingPage() {
+export default function AITalentMatchingPage() {
+
+  const benefits = [
+    {
+      title: "Precise Candidate Matching",
+      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
   const benefits = [
     {
 
@@ -32,6 +39,18 @@ export default function AITalentMatchingPage() {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
+      icon: <Bot className="h-8 w-8" />},
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Bot, Users, TrendingUp } from 'lucide-react';
+
+export default function AITalentMatchingPage() {
+title: 'Precise Candidate Matching',
+      description:
+        'Leverage AI algorithms to pair your roles with the most qualified experts.',
+      icon: <Bot className='h-8 w-8' />
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -51,10 +70,16 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
 >>>>>>> main
+>>>>>>> main
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
+>>>>>>> main
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
 >>>>>>> main
@@ -63,6 +88,8 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: "/placeholder.svg"}],
+
 
   const features = [;
     "Machine learning-based candidate matching",;
@@ -100,6 +127,12 @@ function AITalentMatchingPage() {
         "Advanced algorithms match the right talent with the right opportunities",
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      title: "AI - Powered Matching",
+      description: "Advanced algorithms match the right talent with the right opportunities";
+      title: "AI-Powered Matching",
+      description:
+        "Advanced algorithms match the right talent with the right opportunities",
+>>>>>>> main
     },
     {
       icon: Users,
@@ -111,6 +144,9 @@ ursor/automate-test-improve-and-merge-code-646c
       description: "All candidates are pre-screened and verified for quality",
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      description: "All candidates are pre - screened and verified for quality";
+      description: "All candidates are pre-screened and verified for quality",
+>>>>>>> main
     },
     {
       icon: TrendingUp,
@@ -126,6 +162,11 @@ ursor/automate-test-improve-and-merge-code-646c
   const features = [;
     "Machine learning - based candidate matching"
 
+      description: "Monitor performance and success rates of placements";
+    }
+      description: "Monitor performance and success rates of placements"
+    },
+>>>>>>> main
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -138,6 +179,9 @@ ursor/automate-test-improve-and-merge-code-646c
     "Custom matching criteria";
     "Custom matching criteria",
 >>>>>>> main
+    "Custom matching criteria";
+    "Custom matching criteria",
+>>>>>>> main
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
@@ -145,6 +189,34 @@ ursor/automate-test-improve-and-merge-code-646c
     { label: "Time to Hire", value: "50% faster" }
 
   ];
+    { label: "Time to Hire", value: "50% faster" }
+  ];
+      title: 'Scalable Talent Pools',
+      description:
+        'Access a global network of vetted professionals ready for your projects.',
+      icon: <TrendingUp className='h-8 w-8' />
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Emily Stone',
+      role: 'HR Director',
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      avatar: '/placeholder.svg'
+    },
+    {
+      name: 'Raj Patel',
+      role: 'Startup Founder',
+      text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: '/placeholder.svg'
+    }
+  ];
+
+  
+    />
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -159,7 +231,6 @@ ursor/automate-test-improve-and-merge-code-646c
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
-import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -194,6 +265,7 @@ export default function AITalentMatchingPage() {;
 
 
     { label: "Time to Hire", value: "50% faster" }
+    { label: "Time to Hire", value: "50% faster" }
   ];
   return (
     <ServiceLandingTemplate;
@@ -209,6 +281,13 @@ ursor/automate-test-improve-and-merge-code-646c
 
     />;
   );
+>>>>>>> main
+      benefits={benefits}
+      features={features}
+      stats={stats}
+
+    />;
+  );
 
       cta_text="Start Matching Talent";
       cta_link="/contact";
@@ -218,3 +297,13 @@ ursor/automate-test-improve-and-merge-code-646c
 
 }
 ;
+}
+
+}
+;
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -221,3 +221,4 @@ export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .s
 }export default useJobDetails;
 ;
 export default useJobDetails;
+}

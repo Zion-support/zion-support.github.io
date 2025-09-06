@@ -14,6 +14,7 @@ export async function createHireRequestNotifications({;
   adminId;
   requesterName;
 /**
+import { HireRequestNotificationParams } from './types',/**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
@@ -73,6 +74,9 @@ export async function createHireRequestNotifications({
   adminId,
   requesterName,
 
+
+  adminId,
+  requesterName,
 
       success: talentNotification.success && adminNotification.success;
       talentNotification

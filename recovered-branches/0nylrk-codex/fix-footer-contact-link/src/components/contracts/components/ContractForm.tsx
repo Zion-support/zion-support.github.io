@@ -59,6 +59,18 @@ export function ContractForm(): any ({;
 
 
   talent;
+  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
+  startDate: z.date({
+
+const formSchema = z && z.object({;
+  projectName: z && z.string().min(1, "Project name is required");
+  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
+  startDate: z && z.date({;
+    required_error: "Start date is required"}),;
+  endDate: z && z.date().optional(),;
+  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
+  paymentAmount: z && z.string().min(1, "Payment amount is required");
+  additionalClauses: z && z.array(z && z.string()).default([])}),;  talent;
   clientName;
   initialValues;
   onFormValuesChange;
@@ -126,6 +138,7 @@ export function ContractForm({
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
   
+
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
@@ -236,6 +249,9 @@ export function ContractForm({;
   
 
 
+          const typedKey = key as keyof ContractFormValues,
+        form.setValue(typedKey, initialValues[typedKey])
+      })
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -257,6 +273,7 @@ export function ContractForm({;
 
 
       );
+        generatedMilestones      );
       ),
       
       onContractGenerated(contract)
@@ -555,6 +572,10 @@ if (!== "milestone") {) {
           <Button 
             type="submit" 
 
+      console.error("Error generating contract:", error),            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -628,6 +649,7 @@ if (!== "milestone") {) {
           onClick={() => form.reset()}
           disabled={isGenerating}
         >;
+            )}        >;
           Reset Form;
         </Button>;
       </DialogFooter>;
@@ -684,3 +706,5 @@ talent.full name
   );
 }
 ;
+    </>);
+}

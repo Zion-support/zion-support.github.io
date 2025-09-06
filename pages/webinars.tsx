@@ -28,6 +28,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+
 ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
 import React from 'react',;
@@ -35,11 +37,15 @@ import SEO from '../components/SEO',;
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
 export default function WebinarsPage() {
-ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function WebinarsPage() {
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+export default function WebinarsPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -62,6 +68,11 @@ export default function WebinarsPage() {
 origin/main
 origin/automation-improvements-final
 ursor/automate-test-improve-and-merge-code-646c
+export default function WebinarsPage() {
+export default function WebinarsPage() {
+origin/main
+origin/automation-improvements-final
+ <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </> 
 export default function WebinarsPage() {
 export default function WebinarsPage() {
 origin/main
@@ -98,6 +109,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ursor/automate-test-improve-and-merge-code-646c
 }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -116,6 +129,7 @@ return (
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -136,3 +150,5 @@ origin/automation-improvements-final
 
 
 ursor/automate-test-improve-and-merge-code-646c
+ <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

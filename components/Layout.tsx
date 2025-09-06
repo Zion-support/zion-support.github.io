@@ -60,6 +60,7 @@ const Layout: React.FC < LayoutProps> = ({
   og_image = "https://ziontechgroup.com / og - image.jpg",
   no_index = false
   no_index = false
+  no_index = false
 }) => {
   const json_ld = {
     "@context": "https://schema.org",
@@ -76,11 +77,14 @@ const Layout: React.FC < LayoutProps> = ({
       postal_code: "19709",
       address_country: "US"
       address_country: "US"
+      address_country: "US"
     },
     contact_point: {
       "@type": "ContactPoint",
       telephone: "+1 - 302 - 464 - 0950",
       contact_type: "customer service",
+      email: "kleber@ziontechgroup.com"
+    }
       email: "kleber@ziontechgroup.com"
     }
       email: "kleber@ziontechgroup.com"
@@ -120,6 +124,7 @@ const Layout: React.FC < LayoutProps> = ({
 };
 
 interface LayoutProps {
+  children: ReactNode
   children: ReactNode
   children: ReactNode
 }
@@ -242,6 +247,15 @@ ursor/automate-test-improve-and-merge-code-646c
         <title>{title}</title>
         <meta name="description" content={description} />
 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -283,6 +297,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
+    <main className="min-h-screen">
+      {children}
+    </main>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 };
 
@@ -290,3 +313,6 @@ export default Layout;
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

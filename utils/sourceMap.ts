@@ -1,7 +1,7 @@
 
-
-
 }
+export interface DeployTemplateResult {}
+export interface DeployTemplateResult {}
 export interface DeployTemplateResult {
 
 // Mock source map utility
@@ -9,6 +9,56 @@ export function getSourceMapWithExistence() {
   return {}
 export function getGitStatus() {
   return {
+import fs from 'fs';
+import path from 'path';
+
+export type SourceNodeType = 'folder' | 'file';
+
+export interface SourceNode {
+  name: string;
+  path: string; // repo-relative path starting with '/'
+  type: SourceNodeType;
+  children?: SourceNode[];
+  exists?: boolean;
+
+export interface SourceMapStatus {
+  gitConnected: boolean;
+  gitBranch?: string;
+
+export interface SourceMapResponse {
+  nodes: SourceNode[];
+  status: SourceMapStatus;
+
+const ROOT = process.cwd();
+
+function withPath(base: string, segment: string): string {
+  if (base === '/') return `/${segment}`;
+  return `${base}/${segment}`;
+
+function folder(
+  name: string,
+  basePath: string,
+  children: string[] = []
+): SourceNode {
+  const fullPath = withPath(basePath, name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return {
+    nodes: []
+    edges: []
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export function getGitStatus() {
+  return {
+    connected: false
+    branch: 'main'
+  }
+}
+
+  return nodes && nodes.map(markExistenceRecursive);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -54,11 +104,22 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+
+    nodes: [],
+    edges: [];
+  };
+
+}
+export function getGitStatus() {
+  return {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     connected: false,
     branch: 'main';
   };
@@ -72,6 +133,13 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 export interface DeployTemplateResult {;
   createdPaths: string[];
   skippedPaths: string[];
+  createdPaths: string[];
+  skippedPaths: string[];
+
+ursor/fix-website-loading-errors-and-merge-6662
+  createdPaths: string[];
+  skippedPaths: string[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -86,6 +154,12 @@ export function deployBasicTemplateForPath(
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
 
+  } else {
+    skippedPaths.push(keepFile);
+  }
+  } else {
+    skippedPaths.push(keepFile);
+  }
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -105,6 +179,7 @@ export function deployBasicTemplateForPath(
     createdPaths && createdPaths.push(readmeFile);
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } else {
     skippedPaths.push(readmeFile);
   }
@@ -120,6 +195,9 @@ export function deployBasicTemplateForPath(
 
   return { createdPaths, skippedPaths }
 
+  return { createdPaths, skippedPaths }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   created_paths: string[];
@@ -140,3 +218,8 @@ export function ensure_directory (dir_path: string): void {
 ;
 
 
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return { createdPaths, skippedPaths };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

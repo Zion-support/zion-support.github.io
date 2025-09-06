@@ -70,6 +70,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState(''),;
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {;
     // Focus input when component mounts;
     inputRef.current?.focus();
@@ -137,6 +138,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
 
   return (
+  return (
+    <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
       <textarea
         ref={inputRef}
@@ -290,6 +293,12 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
 }
   )
 }
+}
+  )
+}
+        value={message}});
+  )
+
 }
   )
 }

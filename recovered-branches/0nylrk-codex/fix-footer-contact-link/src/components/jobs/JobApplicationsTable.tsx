@@ -31,12 +31,22 @@ interface JobApplicationsTableProps {;
 export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
 
   const { ;
+interface JobApplicationsTableProps {;
+  jobId: string;
+}
+
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
     applications, ;
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {} = useJobApplications(jobId);
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -96,6 +106,8 @@ import {
 
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
+    markApplicationAsViewed;
+    refetch;      // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
@@ -180,6 +192,16 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
     refetch();
   };
+    } finally {;
+      setProcessingId(null);
+    }
+  const handleViewApplication = async (applicationId: string) => {;
+    await markApplicationAsViewed(applicationId)
+};
+
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+    refetch()
+};
 
   if (isLoading) {;
     return <LoadingState />;
@@ -403,4 +425,7 @@ return (<> <ApplicationsTable applications= {
       />
     </>
   )
+}
+    </>;
+  );
 }

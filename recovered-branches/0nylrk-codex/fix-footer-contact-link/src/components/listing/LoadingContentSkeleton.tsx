@@ -4,6 +4,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export function LoadingContentSkeleton() {
+
+export function LoadingContentSkeleton() {;
+
+  return (export function LoadingContentSkeleton() {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
       <CardHeader>
@@ -21,6 +25,9 @@ export function LoadingContentSkeleton() {;
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
+
+export function LoadingContentSkeleton() {;
+  return (;
       <CardHeader>;
         <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
       </CardHeader>;
@@ -67,3 +74,4 @@ function LoadingContentSkeleton() {
       </CardContent>;
     </Card>);
 }
+

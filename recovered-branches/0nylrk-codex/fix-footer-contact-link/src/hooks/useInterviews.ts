@@ -164,6 +164,17 @@ if ( {) {
 
 
 import { useState } from 'react',;
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+    if (!user) {
+      toast({    try {
+      // Insert the interview into the database
+      const { data, error: insertError } = await supabase
+        .from('interviews')
+        .insert({      return data
+    } catch (err: any) {
+      console && console.error("Error in requestInterview:", err);
+      setError(err && err.message);
+      return null    } finally {import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
@@ -179,6 +190,8 @@ export function useInterviews() {;
       toast({;
         title: "Authentication required",;
         description: "You must be logged in to request interviews",;
+        title: "Authentication required",,
+  description: "You must be logged in to request interviews",;
         variant: "destructive";
       }),;
       return null;
@@ -267,6 +280,12 @@ if ( {) {
     setError(null),
 
     setIsLoading (true);
+    setIsLoading(true),
+    setError(null),
+
+      setIsLoading (false);
+    }
+  }    setIsLoading (true);
     set_error (null);
 ;
       setIsLoading (false);
@@ -287,6 +306,7 @@ if ( {) {
 
 
       if (fetchError) {
+        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)      if (fetchError) {
         console && console.error("Error fetching interviews:", fetchError);
         setError(fetchError && fetchError.message);
         return []
@@ -316,6 +336,7 @@ if ( {) {
 
 
         id: interview.id;
+      // Transform the data to match Interview type        id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
         scheduled_date: interview.scheduled_date;
@@ -438,6 +459,8 @@ if ( {) {
   },
 
 
+      setInterviews(formattedInterviews);
+      const formattedInterviews = data.map((interview: any): Interview => ({
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
@@ -480,6 +503,10 @@ if ( {) {
 
 
 
+      toast({        title: "Authentication required",
+        description: "You must be logged in to respond to interviews",
+
+        variant: "destructive"
     setIsLoading(true),
     setError(null),
 
@@ -519,6 +546,7 @@ if ( {) {
         setError(updateError && updateError.message);
         return false
       }
+        .update({}
       // Get the interview to notify the client
       const { data: interview, error: fetchError } = await supabase
         .from('interviews')
@@ -736,6 +764,7 @@ if ( {) {
       setError(err && err.message);
       return false
 ;
+        .eq('id', interviewId);
       // Check condition
 if ( {) {
   $2
@@ -778,6 +807,10 @@ if ( {) {
 
 
   const createInterviewNotification = async (
+    } finally {
+      setIsLoading (false);
+    }
+  }  const createInterviewNotification = async (
     user_id: string;
     type: string;
     title: string;
@@ -807,6 +840,7 @@ if ( {) {
     } catch (error) {
       console.error("Error creating notification:", error)
     }
+    try {}
   }
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
@@ -893,6 +927,7 @@ if ( {) {
       }
 
       // Check if user is part of this interview
+        return false;      // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
@@ -1079,3 +1114,4 @@ if ( {) {
 
     respondToInterview;
 }
+    fetch_interviews;

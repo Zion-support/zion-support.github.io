@@ -44,6 +44,7 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
+
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -56,6 +57,9 @@ async function fetchData() {
     jobs: jobPosts && jobPosts.data || [],
     resumes: resumes && resumes.data || [],
     logs: supportLogs && supportLogs.data || []
+  const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
+  const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
+  const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
   result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
   // US-style phone numbers
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
@@ -66,6 +70,10 @@ async function fetchData() {
 
 
 function buildTrainingPairs(records) {}
+  return result
+}
+
+}
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
   const jobPosts = await supabase.from('job_posts').select('title, description')
@@ -189,9 +197,14 @@ async function createFineTune(filePath) {
 
 
   // // // console.log('Fine-tune job created:', job.id)
+    })    })
+  }
+  return pairs
+}
+async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
-  const formData = new FormData(),;
+  const formData = new FormData();
   formData.append('purposefine-tune'),;
   formData.append('file', createReadStream(filePath), path.basename(filePath)),;
   const uploadRes = await fetch('https://api.openai.com/v1/files', {;
@@ -355,6 +368,7 @@ main ().catch ((err) => {
 
 
 }
+  // // // console.log('Fine-tune job created:', job.id);}
 async function main() {
 
   const records = await fetchData()

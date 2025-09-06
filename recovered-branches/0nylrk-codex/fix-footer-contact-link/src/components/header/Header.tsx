@@ -64,6 +64,7 @@ export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
   customTheme?: {
+import { useState } from "react";  customTheme?: {
 
     primaryColor: string
     backgroundColor: string
@@ -132,6 +133,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
           {!hideLogin && <UserMenu />}
+            <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
         </div>
       </div>
     </header>
@@ -262,7 +267,7 @@ export function Header({ hideLogin = false, customLogo, customTheme } HeaderProp
   const navigate = useNavigate();
   const navigate = useNavigate();
   const [query, setQuery] = useState(""),;
-  const searchSuggestions = generateSearchSuggestions(),;
+  const searchSuggestions = generateSearchSuggestions();
   ;
   // If we have a white-label tenant and no specific customTheme is provided,;
   // use the tenant's primary color;
@@ -352,3 +357,4 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 ;
 
 
+;

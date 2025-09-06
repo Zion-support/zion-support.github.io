@@ -11,6 +11,7 @@ export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   const { projects, isLoading } = useProjects();
+
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
 import { useEffect, useState } from "react",
@@ -45,6 +46,7 @@ export function ActiveProjectsCard() {
   
 
   if (isLoading) {
+    if (isLoading) {
     return (
       <Card>
         <CardHeader>
@@ -115,6 +117,10 @@ export function ActiveProjectsCard() {;
 
             ))}
           </div>;
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const active = projects && projects.filter(p => ;
+        ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
         </CardContent>;
       </Card>;
     );
@@ -238,3 +244,8 @@ function ActiveProjectsCard() {
 
 
 
+  
+
+  if (activeProjects.length === 0) {
+
+  if (activeProjects && activeProjects.length === 0) {;

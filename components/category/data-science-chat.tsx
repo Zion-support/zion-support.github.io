@@ -1,6 +1,7 @@
 
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,6 +15,7 @@ const DataScienceChat: NextPage = () => {
     <div>
       <Head>
 
+
 const DataScienceChat: NextPage = () => {;
   return (
     <div>;
@@ -22,6 +24,12 @@ const DataScienceChat: NextPage = () => {;
         <meta name="description" content="DataScienceChat blog post" />{" "}
 
 
+
+
+const DataScienceChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
 
       </Head>;
 
@@ -33,6 +41,8 @@ const DataScienceChat: NextPage = () => {;
       </Head>;
 
 
+        <meta name="description" content="DataScienceChat blog post" />
+      </Head>
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -40,6 +50,7 @@ const DataScienceChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
+
 
       <main>;
         <h1>DataScienceChat</h1>;
@@ -50,6 +61,15 @@ const DataScienceChat: NextPage = () => {;
   );
 }
 export default DataScienceChat;
+
+        <title>DataScienceChat - Zion Tech Solutions</title>
+
+
+
+
+        <title>DataScienceChat - Zion Tech Solutions</title>
+
+ursor/fix-website-loading-errors-and-merge-6662
 
         <title>DataScienceChat - Zion Tech Solutions</title>
 
@@ -74,6 +94,7 @@ const DataScienceChat: NextPage = () => {
 export default DataScienceChat;
 ;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <div>
       <Head>
         <title>DataScienceChat - Zion Tech Solutions</title>
@@ -114,3 +135,5 @@ export default DataScienceChat;
         <title>DataScienceChat - Zion Tech Solutions</title>
 
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -28,6 +28,8 @@ import {
 
 
 } from "../context/LanguageContext";
+  AlertDialogHeader,
+AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 import {;
   AlertDialog,;
@@ -99,6 +101,16 @@ export function LanguageDetectionPopup() {;
 
 
     );
+
+    // Get browser language;
+    const browserLang = navigator && navigator.language.substring(0, 2) as SupportedLanguage;
+
+    // Check if browser language is supported and different from current language;
+    const isSupported = supportedLanguages && supportedLanguages.some(;
+      (lang) => lang && lang.code === browserLang,;
+
+    );
+    if (isSupported && browserLang !== currentLanguage) {;    );
     if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang);
       setOpen(true);
@@ -110,6 +122,7 @@ export function LanguageDetectionPopup() {;
 
 
     await changeLanguage(detectedLanguage);
+  if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
     setOpen(false);
   }
 
@@ -131,6 +144,7 @@ export function LanguageDetectionPopup() {;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
   useEffect(() => {;
     // Check if this is first visit;
+    const hasVisited = localStorage.getItem('zion_has_visited');
     const hasVisited = localStorage.getItem('zion_has_visited');
     if (hasVisited) return,;
     // Mark as visited;
@@ -161,6 +175,7 @@ export function LanguageDetectionPopup() {;
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
   const languageName =;
+            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}  const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
 
@@ -219,6 +234,14 @@ export function LanguageDetectionPopup() {;
 );
 
             {t('general.no')}
+
+    await changeLanguage(detectedLanguage);
+    setOpen(false);
+  }export function LanguageDetectionPopup() {;
+  const [open, setOpen] = useState(false),;
+  const { t } = useTranslation(),;
+  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
+  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
             onClick={handleAccept}
@@ -257,6 +280,7 @@ export function LanguageDetectionPopup() {;
   );
 }
     // Mark as visited;
+  );    // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
 ;
     // Get browser language;
@@ -296,16 +320,24 @@ if (return null) {
             {t ("language.switch_to_detected", { language: language_name })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text - zion - slate - light">;
+      <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion-purple / 20">;
+        <AlertDialogHeader>;
+          <AlertDialogTitle className="text-white">;
+            {t ("language.switch_to_detected", { language: language_name })}
+          </AlertDialogTitle>;
+          <AlertDialogDescription className="text - zion - slate-light">;
             {`${supported_languages.find ((lang) => lang.code === detected_language)?.flag || ""} ${language_name}`}
           </AlertDialogDescription>;
         </AlertDialogHeader>;
         <AlertDialogFooter>;
           <AlertDialogCancel className="bg - transparent text - white border border - zion - purple / 20 hover:bg - zion - purple / 10">;
+          <AlertDialogCancel className="bg - transparent text - white border border - zion - purple / 20 hover:bg - zion-purple / 10">;
             {t ("general.no")}
           </AlertDialogCancel>;
           <AlertDialogAction;
             on_click={handle_accept}
             className="bg - zion - purple text - white hover:bg - zion - purple - dark";
+            className="bg - zion - purple text - white hover:bg - zion - purple-dark";
           >;
             {t ("general.yes")}
           </AlertDialogAction>;
@@ -314,6 +346,7 @@ if (return null) {
     </AlertDialog>);
 
 }
+}}
   ),; if (!detectedLanguage) return null;
 > {
   t ('general.yes') 

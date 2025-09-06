@@ -7,6 +7,7 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
     PORT?: string;
   }
 
+;
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -204,6 +205,7 @@ declare module 'lovable - tagger' {
 declare module '@/components / ui / badge' {
   export interface BadgeProps {}
     key?: number | string;
+// Add Node.js globals;    key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
@@ -329,6 +331,34 @@ declare module '@/components/ProductListingCard' {;
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
 declare module '@livekit / components - react' {
+declare module '@/components / ListingScoreCard' {
+  export interface ListingScoreCardProps {
+    title: string,
+    description: string,
+    category: string,
+    image?: string,
+    tags?: string[],
+    author?: string,
+    author_image?: string,
+    ai_score?: number,
+    rating?: number,
+    review_count?: number,
+    key?: string | number,
+    variant?: string;
+  }
+  export const ListingScoreCard: React.FC < ListingScoreCardProps>;
+}
+// ChatMessage type fixes;
+declare module '@/components / ChatAssistant / ChatMessage' {
+  export interface ChatMessageProps {
+    role: 'user' | 'assistant',
+    message: string,
+    timestamp?: Date,
+    key?: string | number;
+
+}
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
   export interface VideoCallProps {
     room?: string,
     token?: string,
@@ -399,3 +429,5 @@ declare module '@livekit/components-styles' {;
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
+  // Empty stub for the styles;
+}}

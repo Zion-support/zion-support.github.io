@@ -304,6 +304,10 @@ ursor/automate-test-improve-and-merge-code-646c
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
+  ];  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+    { \"number\": \'50+\', \"label\": \'Happy Clients\' },
+    { \"number\": \'5+\', \"label\": \'Years Experience\' },
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
@@ -450,6 +454,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               </div>
+                <div className="text-gray-600">{stat.label}</div>              </div>
             ))}
           </div>
         </div>
@@ -504,6 +509,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       {/* Values Section */}
+    </main>      {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -544,6 +550,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
             {values.map((value) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -1051,6 +1061,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1219,4 +1231,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+}
 }

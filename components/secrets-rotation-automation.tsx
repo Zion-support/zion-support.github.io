@@ -32,6 +32,30 @@ import { Check, ExternalLink } from "lucide-react";
 
 export default function SecretsRotationAutomationPage() {
 
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+  const features = [;
+export default function SecretsRotationAutomationPage() {;
+  const features = [;
+    "Automated key and secret rotation",;
+    "JIT credentials with expirations",;
+    "Policy approvals and audit trails",;
+    "CI/CD integration (GitHub Actions, CircleCI)",;
+    "Cloud KMS and Vault support",;
+  ];
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+
+
+
+export default function SecretsRotationAutomationPage() {
+
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -47,6 +71,7 @@ export default function SecretsRotationAutomationPage() {
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI / CD integration (GitHub Actions, CircleCI)",
+    "Cloud KMS and Vault support"
     "Cloud KMS and Vault support"
   ];
 ;
@@ -105,6 +130,36 @@ export default function SecretsRotationAutomationPage() {
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
   return (
   return (
+  return (
+
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+
+    </>);
+  return (
+    <>;
+      <SEO;
+        title="Secrets Rotation Automation";
+        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
+      />;
+      <main id="main" className="container mx - auto px - 4 py - 24">;
+        <section className="max - w-5xl mx - auto">;
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            Secrets Rotation Automation;
+          </h1>;
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Keep credentials short - lived and compliant. Automate rotations;
+            across providers with full auditability.;
+          </p>;
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+return (
+  return (
+  return (
+>>>>>>> main
   return (
     <>
       <SEO
@@ -171,12 +226,23 @@ export default function SecretsRotationAutomationPage() {
 
 
 
+}
+
+
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+
     </>);
 }
 
 	const features = [
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
+	const features = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
@@ -246,12 +312,15 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $199/mo
             </a>
             <a
               href="/pricing"
               className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              href='/pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
             >
               Pricing
             </a>
@@ -270,6 +339,20 @@ return (
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
             >
               <ExternalLink className="w-4 h-4" /> Google Cloud KMS
+              href='https://developer.hashicorp.com/vault'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
+            >
+              <ExternalLink className='w-4 h-4' /> HashiCorp Vault Docs
+            </a>
+            <a
+              href='https://cloud.google.com/kms'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
+            >
+              <ExternalLink className='w-4 h-4' /> Google Cloud KMS
             </a>
           </div>
         </section>
@@ -342,3 +425,4 @@ return (
           </div>;
         </section>;
       </main>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

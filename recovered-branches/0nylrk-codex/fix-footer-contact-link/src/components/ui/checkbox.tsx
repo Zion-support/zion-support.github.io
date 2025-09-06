@@ -1,6 +1,10 @@
 
 
 
+import {cn} from '@/lib/utils';
+
+"use client"
+"use client"
 ;
 
 import * as React from 'react';
@@ -15,7 +19,6 @@ import {Check} from 'lucide-react';
 'use client';
 
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import {cn} from '@/lib/utils';
 
 
 "use client"
@@ -26,6 +29,9 @@ import {cn} from '@/lib/utils';
 
 "use client"
 "use client"
+
+'use client';
+
 
 "use client"
 "use client"

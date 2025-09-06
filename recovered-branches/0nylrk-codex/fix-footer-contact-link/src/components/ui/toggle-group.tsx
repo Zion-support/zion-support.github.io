@@ -1,4 +1,5 @@
 
+
 import {cn} from '@/lib/utils';
 import {toggleVariants} from '@/components/ui/toggle';
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
@@ -39,6 +40,11 @@ const ToggleGroup = React && React.forwardRef<;
 
 
 import React from 'react';
+import { type VariantProps } from "class-variance-authority"const ToggleGroup = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
+    VariantProps<typeof toggleVariants>
+import * as React from 'react';import React from 'react';
 import * as React from 'react';
     ref={ref}
     className={cn('flex items-center justify-center gap-1', className)}
@@ -102,6 +108,7 @@ ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 
 import * as ToggleGroupPrimitive from '@radix - ui / react - toggle - group';
 import {type, VariantProps} from 'class - variance - authority';
+));import {type, VariantProps} from 'class - variance - authority';
 ;
 import {cn} from '@/lib / utils';
 import {toggle_variants} from '@/components / ui / toggle';
@@ -110,6 +117,7 @@ type ToggleGroupContextProps = VariantProps < typeof toggle_variants>;
 ;
 const ToggleGroupContext = React.create_context < ToggleGroupContextProps>({
   size: 'default',
+  variant: 'default'
   variant: 'default'
   variant: 'default'
 });
@@ -240,3 +248,4 @@ ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 export { ToggleGroup, ToggleGroupItem }
 export { ToggleGroup, ToggleGroupItem }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4ursor/fix-website-loading-errors-and-merge-6662

@@ -106,6 +106,7 @@ ursor/automate-test-improve-and-merge-code-646c
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
 >>>>>>> main
   timeline: any[];
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
@@ -113,6 +114,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 export interface ProjectNote {
 
+export interface ProjectNote {
   id: string;
   authorId: string;
   authorRole: string;

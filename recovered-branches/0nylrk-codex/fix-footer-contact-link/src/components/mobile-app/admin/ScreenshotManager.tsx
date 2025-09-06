@@ -22,6 +22,7 @@ type Screenshot = {
   file: File
 }
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {};
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {};
 
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -46,6 +47,7 @@ interface ScreenshotManagerProps {;
 }
 ;
 type Screenshot = {
+type Screenshot = {
   id: string,;
   url: string,;
   file: File;
@@ -53,6 +55,7 @@ type Screenshot = {
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
   const [isDragging, setIsDragging] = useState(false),;
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
     if (e.target.files) {;
@@ -75,7 +78,7 @@ type Screenshot = {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
-    if (imageFiles.length === 0) {
+    if (imageFiles.length === 0) {},    if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
@@ -179,6 +182,7 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
+  
 
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
@@ -251,6 +255,13 @@ type Screenshot = {;
   id: string,;
   url: string,;
   file: File;
+interface ScreenshotManagerProps {;
+  platform: AppPlatform;
+}
+type Screenshot = {;
+  id: string,;
+  url: string,;
+  file: File
 };
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
@@ -288,6 +299,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     e && e.preventDefault(),;
     setIsDragging(true);
   };
+    setIsDragging(true)
+};
     if (e && e.dataTransfer.files) {;
       addScreenshots(Array && Array.from(e && e.dataTransfer.files));
     }
@@ -385,6 +398,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 
     <Card className="bg-zion-blue border-zion-purple/30">;
+  return (    <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
@@ -405,10 +419,16 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
               : "border-zion-purple/30"
+            isDragging 
+              ? "border-zion-cyan bg-zion-cyan/10" 
+
+              : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}>;
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>;          onDrop={handleDrop}>;
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
           <input
@@ -603,6 +623,9 @@ if ( {) {
     <Card className="bg - zion - blue border - zion - purple / 30">;
       <CardHeader>;
         <CardTitle className="text - lg">App Screenshots</CardTitle>;
+    <Card className="bg - zion - blue border - zion-purple / 30">;
+      <CardHeader>;
+        <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
         <div;
@@ -617,6 +640,8 @@ if ( {) {
         >;
           <Upload className="mx - auto h - 8 w - 8 text - gray - 400 mb - 2" />;
           <p className="text - sm mb - 2">Drag & drop screenshots here</p>;
+          <Upload className="mx - auto h - 8 w - 8 text - gray - 400 mb-2" />;
+          <p className="text - sm mb-2">Drag & drop screenshots here</p>;
           <input;
             ref={fileInputRef}
             type="file";
@@ -635,12 +660,20 @@ if ( {) {
           </Button>;
         </div>;
         <div className="text - xs text - gray - 400 mb - 4">;
+            className="mt-2";
+          >;
+            <Plus className="mr - 2 h - 4 w-4" />;
+            Select Files;
+          </Button>;
+        </div>;
+        <div className="text - xs text - gray - 400 mb-4">;
           {platform === "ios";
             ? "Recommended size: 1290x2796 pixels for i_phone. Max 10 screenshots.";
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
           }
         </div>;
         <div className="grid grid - cols - 2 gap - 3">;
+        <div className="grid grid - cols - 2 gap-3">;
           {screenshots.map ((screenshot) => (
             <div key={screenshot.id} className="relative group">;
               <img;
@@ -653,6 +686,13 @@ if ( {) {
                 className="absolute top - 1 right - 1 bg - red - 500 / 80 text - white p - 1 rounded - full opacity - 0 group - hover:opacity - 100 transition - opacity";
               >;
                 <Trash2 className="h - 3 w - 3" />;
+                className="w - full h - auto rounded border border - zion-purple / 20";
+              />;
+              <button;
+                on_click={() => remove_screenshot (screenshot.id)}
+                className="absolute top - 1 right - 1 bg - red - 500 / 80 text - white p - 1 rounded - full opacity - 0 group - hover:opacity - 100 transition-opacity";
+              >;
+                <Trash2 className="h - 3 w-3" />;
               </button>;
             </div>))}
         </div>;
@@ -733,3 +773,4 @@ return filtered;
 };
 
 
+;

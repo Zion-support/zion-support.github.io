@@ -34,6 +34,14 @@ import Link from "next/link";
 
 
 
+import { 
+	Award, 
+	Brain, 
+	CheckCircle, 
+	Clock, 
+	ArrowRight, 
+	Cloud, 
+	Shield, 
 import { ;
 	Award, ;
 	Brain, ;
@@ -328,6 +336,7 @@ export default function Services() {;
 			{/* CTA Section */}
 			<section className=\"bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32\">;
 
+			<section className=\"bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32\">;
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">;
 					<div className=\"mx-auto max-w-2xl text-center\">;
 						<div className=\"flex items-center justify-center mb-4\">;

@@ -8,6 +8,7 @@ import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 
 import { cn } from "@/lib/utils"
 
@@ -85,6 +86,19 @@ Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Ro
 export { Separator }
 ;
 
+  (    ref
+  ) => (
+    <SeparatorPrimitive.Root
+
+import * as React from 'react';import React from 'react';
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(        className
+      className={cn(;
+        "shrink-0 bg-border",;
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
 export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;

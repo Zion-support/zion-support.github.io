@@ -11,6 +11,7 @@ import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
   const { user } = useAuth();
+export function useFetchResume() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -64,6 +65,10 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
           return null
 
 
+      // Otherwise, fetch the user's active resume or most recent resume          // No resume found, this is not a critical error for a new user
+          setResume(null);
+          setIsLoading(false);
+          return null
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -179,6 +184,7 @@ if ( {) {
 
 
       if (skillsError) throw skillsError;
+      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
@@ -209,6 +215,7 @@ if ( {) {
 
 
       setResume(fullResume);
+              setResume(fullResume);
       return fullResume
     } catch (e: any) {
       console && console.error('Error fetching resume:', e);
@@ -538,5 +545,9 @@ is active: resumeData.is active
 
     is_loading;
     error;
+    resume;
+}
+;
+
     resume;
 }

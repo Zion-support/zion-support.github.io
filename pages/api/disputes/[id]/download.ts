@@ -1,9 +1,21 @@
+import { getDisputeById } from '../../../../utils/fsdb';
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin
+} from '../../../../utils/auth';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
-import {
+
+  parseUserFromRequest
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  parseUserFromRequest,
 
   parseUserFromRequest
   ensureInvolvedOrAdmin,;
@@ -22,6 +34,7 @@ export default async function handler(
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,6 +48,7 @@ export default async function handler(
     typeof fileName !== "string"
   ) {
     return res.status(400).json({ error: "Invalid parameters" });
+    return res.status(400).json({ error: "Invalid parameters" });
   }
 
   const user = parseUserFromRequest(req);
@@ -44,6 +58,10 @@ export default async function handler(
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
+  const user = null;
+  stream.pipe(res)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const att = dispute.attachments.find((a) => a.fileName === fileName);
   if (!att) return res.status($1).json({ $2 });
@@ -54,10 +72,15 @@ export default async function handler(
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+  res.setHeader('Content-Type', att.mimeType);
+  res.setHeader('Content-Length', String(stat.size));
+res.setHeader(
+    'Content-Disposition',
+    `attachment; filename="${path.basename(att.fileName)}"`
+  );
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { getDisputeById } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -99,7 +122,6 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
 import { getDisputeById  } from '../../../../utils / fsdb';
-import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from '../../../../utils / auth';
@@ -140,14 +162,8 @@ if ( {) {
   stream.pipe (res);
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Download endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { getDisputeById } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
 export default async function handler(req, res) {
   try {
   const { id, fileName } = req.query as { id?: string, fileName?: string },;
@@ -215,3 +231,8 @@ export default async function handler(req, res) {
 }
 
 
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

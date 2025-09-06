@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -34,6 +35,7 @@ export default function AccountSettings() {
 
 
   const { user } = useAuth();
+export default function AccountSettings() {;
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
@@ -108,6 +110,7 @@ export default function AccountSettings() {;
   useEffect(() => {;
     try {;
       const saved = localStorage.getItem('account_settings');
+      const saved = localStorage.getItem('account_settings');
       if (saved) {;
         const parsed = JSON.parse(saved),;
         setDisplayWeb3(!!parsed.displayWeb3),;
@@ -122,6 +125,13 @@ export default function AccountSettings() {;
   const handleSave = () => {
     setIsSubmitting(true);
   }, [])
+        setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
+      console && console.error('Error loading account settings', e);
+    }
+  const handleSave = () => {
+    setIsSubmitting(true);
+  }, [])
+  }, [])  }, [])
   }, []),
 
   const handleSave = () => {
@@ -264,8 +274,12 @@ export default function AccountSettings() {;
   }
   }
   };
-  },
+  }
 
+
+  }
+  };
+  },
 
   return (
 
@@ -349,6 +363,7 @@ export default function AccountSettings() {;
                   >;
 
                     <Wallet className="h-4 w-4" />;
+                <Label htmlFor="email">Email Address</Label>;                    <Wallet className="h-4 w-4" />;
                     Connect;
                   </Button>;
                 </div>;
@@ -718,6 +733,15 @@ export default function AccountSettings() {;
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
                 </p>;
+              <div className="flex items-center justify-between">;
+                <div className="space-y-0 && 0.5">;
+                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>;
+                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
+                </div>;
+                <Switch
+                  id="displayWeb3"
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}                </p>;
               </div>;
             </CardContent>;
           </Card>;
@@ -778,3 +802,5 @@ try {
   );
 }
 ;
+    </>);
+}

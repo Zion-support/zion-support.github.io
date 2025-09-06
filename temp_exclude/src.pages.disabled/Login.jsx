@@ -3,7 +3,7 @@ import React from 'react';
 interface LoginProps {
   // Add props here as needed
 }
-export default function Login({ }: LoginProps) {
+export default function Login({}: LoginProps) {
   return (
     <div>
       <h1>Login</h1>
@@ -11,4 +11,5 @@ export default function Login({ }: LoginProps) {
     </div>
   );
 }
+}}
 }

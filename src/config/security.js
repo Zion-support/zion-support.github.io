@@ -8,6 +8,8 @@ export const security_config = {
 export const securityConfig = {
   // Content Security Policy
 >>>>>>> main
+
+
   csp: {
     directives: {
 
@@ -30,6 +32,9 @@ export const securityConfig = {
 
       upgradeInsecureRequests: []
     }
+
+      upgradeInsecureRequests: []
+    }
   },
 
   // Security Headers
@@ -37,6 +42,7 @@ export const securityConfig = {
     "X-Frame-Options": "DENY",
     "X-Content-Type-Options": "nosniff",
     "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
   },
@@ -99,3 +105,8 @@ ursor/automate-test-improve-and-merge-code-646c
 };
 
 export default securityConfig;
+  }
+};
+
+export default securityConfig;
+

@@ -6,6 +6,6 @@ const AIAutonomousApplicationSecurity = ({ className }) => {
       <h1>AIAutonomousApplicationSecurity</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

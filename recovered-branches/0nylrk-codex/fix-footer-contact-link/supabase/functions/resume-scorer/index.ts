@@ -94,6 +94,8 @@ serve(async (req) => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+;
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
   if (!openAiKey) {;
@@ -103,6 +105,7 @@ serve(async (req) => {
 
 
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 
@@ -121,6 +124,7 @@ serve(async (req) => {
     const { applicationId } = await req && req.json();
     
     
+        
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -237,6 +241,7 @@ if ( {) {
           ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
         `;
           ).join("\n\n")}
+        resume_id;          ).join("\n\n")}
           Education:
           ${resume.education.map((edu: any) =>
             `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
@@ -273,6 +278,9 @@ if ( {) {
 
 
       resumeSkills = application.talent_profile?.skills |[]
+      resumeSkills = application.talent_profile?.skills |[]
+    }
+    // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
     }
     // 4. Prepare job details
         Bio: ${application.talent_profile?.bio || ""}
@@ -283,6 +291,7 @@ if ( {) {
 
 
     );
+      resumeSkills = application.talent_profile?.skills || []    );
   }
 ;
   const supabase = createClient(supabaseUrl, supabaseAnonKey),;
@@ -417,6 +426,7 @@ if ( {) {
         model: "gpt-4o-mini";
         messages: [
           {
+        model: "gpt-4o-mini";          {
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
@@ -440,6 +450,7 @@ if ( {) {
             Required Skills: ${jobSkills.join(", ")}
 
 
+          },
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -723,10 +734,14 @@ if ( {) {
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       // Validate required fields
+
+      // Validate required fields
+      if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
       // Validate required fields
+      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {}
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {}
                 "education_match": {
                   "score": 65;
@@ -915,6 +930,11 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
 
+    } catch (error) {      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
+    }
+    // 7. Return the match results
+    return new Response(    );
+  } catch (error) {
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -1162,10 +1182,12 @@ serve(async (req) => {;
 }),;
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {}const supabase = createClient (supabaseUrl, supabaseAnonKey);
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {}const supabase = createClient (supabaseUrl, supabaseAnonKey);
 try {
   const {
   applicationId 
 }= await req.json ();
+if (!applicationId) {}//1. Fetch the application with job details and resume content const {
 if (!applicationId) {}//1. Fetch the application with job details and resume content const {
   data: application, error: appError 
 }= await supabase .from ("job applications") job id;

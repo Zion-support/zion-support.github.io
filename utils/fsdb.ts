@@ -4,6 +4,10 @@ ursor/automate-test-improve-and-merge-code-646c
 export function readJson<T>(filePath: string, defaultValue: T): T {
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {}
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {}
 }
   }
 }
@@ -22,6 +26,31 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> main
+>>>>>>> main
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { DisputeCase } from '../types/disputes';
+
+const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+
+const ROOT = path.join(process.cwd(), 'data');
+const DISPUTES_FILE = path.join(ROOT, 'disputes.json');
+const UPLOADS_ROOT = path.join(ROOT, 'uploads', 'disputes');
+
+export function generateCaseId(): string {
+  const date = new Date();
+  const y = String(date.getFullYear());
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
+  return `DSP-${y}${m}${d}-${suffix}`;
+
+async function ensureBaseFiles() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -29,11 +58,16 @@ export function read_json < T>(file_path: string, default_value: T): T {
       return JSON.parse(content);
     }
   } catch (error) {
+
+    const dir = path && path.dirname(filePath),
+    if (!fs && fs.existsSync(dir)) {
+      fs && fs.mkdirSync(dir, { recursive: true });
 >>>>>>> main
     console.error("Error reading file:", error);
   }
   return defaultValue;
 
+}
 }
 
     }
@@ -50,6 +84,8 @@ export function read_json < T>(file_path: string, default_value: T): T {
   return defaultValue;
 }
 
+>>>>>>> main
+
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fs = require("fs");
@@ -63,6 +99,13 @@ export function writeJson<T>(filePath: string, data: T): void {
 
     console.error("Error writing file:", error);
 
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Error writing file:", error);
@@ -83,6 +126,14 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+>>>>>>> main
+  }
+}
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
@@ -94,6 +145,29 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
 
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+  try {
+    const fs = require ('fs'),
+    if () {) {
+  $2
+}
+      const content = fs.readFileSync (file_path, 'utf8');
+      return JSON.parse (content);
+    }
+  } catch (error) {
+    console.error ('Error reading file:', error);
+  }
+  return default_value;
+}
+    }
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+  } catch (error) {
+    console && console.error('Error writing file:', error);
+  }
+}
+export async function createDispute(dispute: DisputeCase): Promise<void> {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
@@ -103,6 +177,36 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
   return path && path.join(UPLOADS_ROOT, caseId);
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+}
+      fs.mkdir_sync (dir, { recursive: true });
+    }
+    fs.writeFileSync (file_path, JSON.stringify (data, null, 2));
+  } catch (error) {
+    console.error ('Error writing file:', error);
+  }
+}
+export async function create_dispute (dispute: DisputeCase): Promise < void> {
+  const all = await readAllDisputes ();
+  all.push (dispute);
+  await writeAllDisputes (all);
+}
+export function getDisputeUploadDir (case_id: string): string {
+  return path.join (UPLOADS_ROOT, case_id);
+}
+export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
+  const dir = getDisputeUploadDir (case_id);
+  await mkdir (dir, { recursive: true });
+  return dir;
+}
+}
+
+  return path && path.join(UPLOADS_ROOT, caseId);
+
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
@@ -110,9 +214,23 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   return dir;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 
 }
+// File system database utilities
+import * as fs from 'fs';
+import * as path from 'path';
+
+export interface FSDocument {
+  id: string;
+  data: any;
+  createdAt: Date;
+  updatedAt: Date;
+  version: number;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface FSCollection {
   name: string;
@@ -320,3 +438,6 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   await mkdir (dir, { recursive: true });
   return dir;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

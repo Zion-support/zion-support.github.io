@@ -30,6 +30,9 @@ interface ConversationItemProps {;
 }
 }
 
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
   conversation: Conversation
   isActive: boolean
 
@@ -54,6 +57,8 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
 
 
+
+    <div 
 
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
@@ -129,6 +134,13 @@ import React from 'react';
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
 
+import React from 'react';import React from 'react';
+        {conversation.context_data?.title && (
+          <div className="text - xs mt - 1 text - zion-cyan truncate">;
+            Re: {conversation.context_data.title}
+      {conversation.unread_count > 0 && (
+        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text-xs">;
+          {conversation.unread_count}
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
@@ -240,5 +252,6 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
   )
 }
         </div>)}
+        conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";        </div>)}
     </div>);
 }

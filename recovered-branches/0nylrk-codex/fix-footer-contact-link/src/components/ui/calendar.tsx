@@ -133,6 +133,10 @@ function Calendar() {
       showOutsideDays={showOutsideDays}
 
 
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;  return (
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
 
@@ -169,6 +173,10 @@ function Calendar() {
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
       {...props}
     />;
@@ -214,6 +222,8 @@ export { Calendar };
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h - 4 w - 4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w - 4" />}}
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h - 4 w-4" />,
+        IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w-4" />}}
       {...props}
     />);
 }
@@ -317,4 +327,5 @@ day hidden: "invisible";
 }/>) 
 }
 export { Calendar };
+
 export { Calendar };

@@ -46,6 +46,8 @@ const Head = dynamic(() => import("next/head"), { "ssr": false })
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
   const demos = []
+  const [selectedDemo, setSelectedDemo] = useState("ai-services")import Head from "next/head"
+const Head = dynamic(() => import("next/head"), { "ssr": false })  const demos = []
 },
     {"
       "id": "it-services","

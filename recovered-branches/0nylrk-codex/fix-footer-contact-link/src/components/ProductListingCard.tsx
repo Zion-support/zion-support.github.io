@@ -42,6 +42,8 @@ interface ProductListingCardProps {
 
 export function ProductListingCard({ 
   onRequestQuote
+import React from 'react';import {useNavigate} from "react-router-dom";
+import {Star, DollarSign} from "lucide-react";  onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
@@ -67,6 +69,10 @@ export function ProductListingCard({
   }
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {},
+  // Get the first image or use a placeholder  // Format price display
+  const formatPrice = () => {
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency}${listing.price.toLocaleString()}`  },
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -97,6 +103,49 @@ interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
     } else {
+
+  onRequestQuote?: (id: string) => void;
+}
+export /**
+ * ProductListingCard - Function description
+ */
+function ProductListingCard() {
+  const is_grid = view === 'grid';
+  const navigate = use_navigate ();
+;
+  // Get the first image or use a placeholder;
+  const image_url = listing.images && listing.images.length > 0;
+    ? listing.images[0];
+    : '/placeholder.svg';
+;
+  // Format price display;
+  const format_price = () =>: any {
+    // Check condition
+if (return "Custom pricing") {
+  $2
+}
+    return `${listing.currency}${listing.price.toLocaleString ()}`;
+  }
+;
+  // Handle image loading errors;
+  const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
+    e.current_target.src = '/placeholder.svg';
+  }
+;
+  // Handle navigating to listing detail;
+  const handleViewListing = () =>: any {
+    navigate (`/listing/${listing.id}`);
+  }
+;
+  // Handle request quote button click;
+  const handleRequestQuote = (e: React.MouseEvent) =>: any {
+    e.prevent_default ();
+    e.stop_propagation (),
+    // Check condition
+if ( {) {
+  $2
+}
+      onRequestQuote (listing.id);
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
@@ -122,6 +171,16 @@ interface ProductListingCardProps {;
   const handleRequestQuote = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
+
+  // Format price display;
+  const formatPrice = () => {;
+    if (listing && listing.price === null) return "Custom pricing";
+    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`
+};
+  // Handle navigating to listing detail;
+  const handleViewListing = () => {;
+    navigate(`/listing/${listing && listing.id}`)
+};
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -251,6 +310,8 @@ export function ProductListingCard({;
           </div>;
 
 
+
+      {/* Image */}
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -307,6 +368,11 @@ export function ProductListingCard({;
           />;
           {listing.featured && (
             <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border - none">;
+            className="w - full h - full object-cover";
+            on_error={handleImageError}
+          />;
+          {listing.featured && (
+            <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border-none">;
               Featured;
             </Badge>)}
         </div>;
@@ -343,6 +409,27 @@ export function ProductListingCard({;
 
 
           </div>;
+
+          <div className="flex justify - between items - center mb-2">;
+            <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue-light">;
+              {listing.category}
+            </Badge>;
+            {listing.rating && (
+              <div className="flex items - center text - zion - slate-light">;
+                <Star className="h - 4 w - 4 fill - zion - cyan text - zion - cyan mr-1" />;
+                <span>{listing.rating}</span>;
+                {listing.review_count && (
+                  <span className="text - xs ml-1">({listing.review_count})</span>)}
+              </div>)}
+          </div>;
+          {/* Title & Description */}
+          <div on_click={handleViewListing} className="block">;
+            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition-colors">;
+              {listing.title}
+            </h3>;
+          </div>;
+          <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
+            {listing.description}
 
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
@@ -397,6 +484,7 @@ export function ProductListingCard({;
 
                 e.stopPropagation(),
                 navigate(`/listing/${listing.id}`)
+        </div>;                navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -438,7 +526,7 @@ export function ProductListingCard({ ;
   view = 'grid',;
   onRequestQuote;
 } ProductListingCardProps) {;
-  const isGrid = view === 'grid',;
+  const isGrid = view === 'grid';
   const navigate = useNavigate(),;
   ;
   // Get the first image or use a placeholder;
@@ -700,3 +788,5 @@ return (<div className= {
 
 
 }
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
+              </Button>;}

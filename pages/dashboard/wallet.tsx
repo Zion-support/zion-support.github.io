@@ -34,6 +34,8 @@ export default function WalletPage() {
 
 
 
+const WalletPanel = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -42,6 +44,7 @@ export default function WalletPage() {
       </div>
     </EnhancedLayout>
 
+  )
   )
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
 export default function WalletPage(req, res) {
@@ -99,3 +102,5 @@ export default function WalletPage(req, res) {
 
 
 
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

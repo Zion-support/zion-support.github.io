@@ -20,6 +20,7 @@ import { ModelConfig } from '@/utils/zion-gpt',
 
 
 import {useState, useEffect} from 'react';
+import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -31,6 +32,7 @@ import {ModelConfig} from '@/utils/zion-gpt';
 
 
 interface ModelVersionData extends ModelConfig {
+import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
@@ -161,7 +163,7 @@ if (throw error) {
 
 
 
-    } catch (error) {
+    } catch (error) {}    } catch (error) {
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
@@ -687,6 +689,26 @@ export function ZionGPTModelManager() {;
                   </TableCell>;
                 </TableRow>;
                     )}
+      const { data, error } = await supabase;
+        .from('model_versions');
+        .select('*');
+        .order('createdAt', { ascending: false }),;      // Also update in the database;
+      await supabase;
+        .from('model_versions');
+        .update({;
+          training_status: data && data.status,;
+          error_message: data && data.error || null,;
+          // If training succeeded, automatically set to active;
+          ...(data && data.status === 'succeeded' ? { active: true } : {});
+        });
+        .eq('id', modelId);
+
+    } catch (error) {;
+      console && console.error(`Error checking status for model ${modelId}:`, error);
+    } finally {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    }
+  };                    )}
 
                   </TableCell>;
                 </TableRow>;
@@ -711,6 +733,7 @@ export function ZionGPTModelManager() {;
     </Card>;
 ;
 ;
+        )};
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose;
@@ -739,6 +762,8 @@ if ( {) {
   return (
     <Card className="w - full">;
       <CardHeader className="flex flex - row items - center justify - between">;
+    <Card className="w-full">;
+      <CardHeader className="flex flex - row items - center justify-between">;
         <div>;
           <CardTitle > ZionGPT Models</CardTitle>;
           <CardDescription>;
@@ -747,12 +772,15 @@ if ( {) {
         </div>;
         <Button on_click={fetch_models} variant="outline" size="sm">;
           <RefreshCw className="h - 4 w - 4 mr - 2" /> Refresh;
+          <RefreshCw className="h - 4 w - 4 mr-2" /> Refresh;
         </Button>;
       </CardHeader>;
       <CardContent>;
         {is_loading ? (
           <div className="flex items - center justify - center h - 24">;
             <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+          <div className="flex items - center justify - center h-24">;
+            <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
           </div>) : (
           <Table>;
             <TableHeader>;
@@ -764,12 +792,14 @@ if ( {) {
                 <TableHead > Status</TableHead>;
                 <TableHead > Created</TableHead>;
                 <TableHead className="text - right">Actions</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
               {models.map ((model) => (
                 <TableRow key={model.id}>;
                   <TableCell className="font - medium">{model.id}</TableCell>;
+                  <TableCell className="font-medium">{model.id}</TableCell>;
                   <TableCell > v{model.version}</TableCell>;
                   <TableCell>{model.purpose}</TableCell>;
                   <TableCell>{model.base_model}</TableCell>;
@@ -783,6 +813,14 @@ if ( {) {
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
                   <TableCell className="text - right">;
+                      <Badge className="bg - green-500">Ready</Badge>) : model.training_status === 'failed' ? (
+                      <Badge className="bg - red-500">Failed</Badge>) : model.training_status === 'running' ? (
+                      <Badge className="bg - blue-500">Training</Badge>) : (
+                      <Badge className="bg - yellow-500">Queued</Badge>)}
+                    {model.active && <Badge className="ml - 2 bg - purple-500">Active</Badge>}
+                  </TableCell>;
+                  <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
+                  <TableCell className="text-right">;
                     {model.training_status === 'queued' || model.training_status === 'running' ? (
                       <Button;
                         variant="ghost";
@@ -794,6 +832,9 @@ if ( {) {
                           <Loader2 className="h - 4 w - 4 animate - spin" />) : (
                           <RefreshCw className="h - 4 w - 4" />)}
                         <span className="ml - 1">Check</span>;
+                          <Loader2 className="h - 4 w - 4 animate-spin" />) : (
+                          <RefreshCw className="h - 4 w-4" />)}
+                        <span className="ml-1">Check</span>;
                       </Button>) : model.training_status === 'succeeded' ? (
                       <Button;
                         variant={model.active ? "outline" : "default"}
@@ -806,6 +847,10 @@ if ( {) {
                           </>) : (
                           <>;
                             <Play className="h - 4 w - 4 mr - 1" /> Activate;
+                            <CheckCircle className="h - 4 w - 4 mr-1" /> Active;
+                          </>) : (
+                          <>;
+                            <Play className="h - 4 w - 4 mr-1" /> Activate;
                           </>)}
                       </Button>) : (
                       <Button;
@@ -815,6 +860,10 @@ if ( {) {
                         title={model.error_message || "Training failed"}
                       >;
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
+                        className="text - red-500";
+                        title={model.error_message || "Training failed"}
+                      >;
+                        <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
                       </Button>)}
                   </TableCell>;
                 </TableRow>))}
@@ -825,3 +874,46 @@ if ( {) {
 }
 
 
+};
+const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
+  try {
+  //If activating, deactivate all other models with the same purpose if (!currentActive) {
+  await supabase .from ('model versions') 
+}//Update this model await supabase .from ('model versions') return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  models.map ( (model) => (<TableRow key= {
+  model.id 
+}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>) 
+}onClick= {
+  () => checkTrainingStatus (model.id) 
+}disabled= {
+  activeJobs[model.id] 
+}>) : (<RefreshCw className="h-4 w-4" />) 
+}<span className="ml-1" >Check</span> </Button> > {
+  model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) 
+}</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) 
+}</TableCell> </TableRow>) ) 
+}</TableBody> </Table>) 
+}</CardContent> </Card>) 
+}
+                        title={model.errorMessage |"Training failed"}
+                      >
+                        <AlertCircle className="h-4 w-4 mr-1" /> Error
+                      </Button>
+                    )}
+                  </TableCell>
+                </TableRow>
+                  </TableCell>;
+                </TableRow>;
+              ))}
+            </TableBody>
+          </Table>
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+      </CardContent>;
+    </Card>;
+  );
+}
+;

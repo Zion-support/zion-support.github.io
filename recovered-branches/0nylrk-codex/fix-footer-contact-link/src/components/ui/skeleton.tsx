@@ -50,3 +50,4 @@ export { Skeleton }
 ;
 
 
+}: React.HTMLAttributes<HTMLDivElement>) {

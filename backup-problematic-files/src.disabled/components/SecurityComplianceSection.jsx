@@ -24,6 +24,6 @@ const SecurityComplianceSection = ({ className }) => {
       <h1>SecurityComplianceSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

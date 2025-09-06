@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ComprehensiveServicesProps {
   // Add props here as needed
-export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
+
+}
+
+export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
   return (
     <div>
       <h1>ComprehensiveServices</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/ComprehensiveServices.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/ComprehensiveServices.jsx

@@ -72,6 +72,9 @@ interface RequestBody {
 
 
 
+interface RequestBody {
+  messages: Message[];
+}
 
   try {
 
@@ -104,7 +107,7 @@ interface RequestBody {
       content: 'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don\'t know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.';
     },;
     // Combine the system message with user messages;
-    const combinedMessages = [systemMessage, ...messages],;
+    const combinedMessages = [systemMessage, ...messages];
     const response = await fetch('https://api.openai.com/v1/chat/completions', {;
       method: 'POST',;
       headers: {;
@@ -123,6 +126,10 @@ interface RequestBody {
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     return new Response(JSON.stringify({ message: assistantMessage }), {
+    console.log('AI chat interaction logged');    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in ai-chat function:', error);
@@ -153,6 +160,10 @@ interface RequestBody {
   }
 });
 
+  } catch (error) {
+    console && console.error('Error in ai-chat function:', error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
 serve (async (req) => {
   // Handle CORS preflight requests;
@@ -283,6 +294,7 @@ serve(async (req) => {;
 
 
 ;
+    return new Response (null, { headers: cors_headers });;
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
     console.log ('AI chat interaction logged');
@@ -298,3 +310,5 @@ serve(async (req) => {;
 });
 
 
+  }
+});

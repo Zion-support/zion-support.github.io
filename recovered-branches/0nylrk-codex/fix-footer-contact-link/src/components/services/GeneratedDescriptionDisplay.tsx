@@ -39,6 +39,8 @@ export function GeneratedDescriptionDisplay({
   const [editedDescription, setEditedDescription] = useState(description);
 
 
+  CardFooter
+} from "@/components/ui/card";
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
@@ -47,6 +49,9 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved."
     });
   };
+      description: "Your edited description has been saved."
+    })
+};
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -174,6 +179,18 @@ export function GeneratedDescriptionDisplay({ ;
           <Button ;
             variant="outline" ;
             size="sm" ;
+      title: "Description Saved",,
+  description: "Your edited description has been saved.";
+    })
+};
+
+  return (    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center justify-between">;
+          Generated Description;
+          <Button
+            variant="outline" 
+            size="sm" 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -191,6 +208,7 @@ export function GeneratedDescriptionDisplay({ ;
 
 
             ) :(;
+            ) : (;            ) :(;
               <>;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
@@ -205,6 +223,7 @@ import { Button  } from '@/components / ui / button';
   CardContent,
   CardHeader,
   CardTitle,
+  CardFooter
   CardFooter
 } from '@/components / ui / card';
 import { Textarea  } from '@/components / ui / textarea';
@@ -265,6 +284,10 @@ function GeneratedDescriptionDisplay() {
 }
 
 
+  on_save: (edited_description: string) => void;            Save Changes;
+          </Button>;
+        </CardFooter>;
+      )}
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -272,6 +295,9 @@ function GeneratedDescriptionDisplay() {
             className="bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none";
           />) : (
           <div className="bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap">;
+            className="bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize-none";
+          />) : (
+          <div className="bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre-wrap">;
             {edited_description}
           </div>)}
       </CardContent>;
@@ -280,6 +306,7 @@ function GeneratedDescriptionDisplay() {
           <Button;
             on_click={handle_save}
             className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
+            className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text-white";
           >;
             Save Changes;
           </Button>;

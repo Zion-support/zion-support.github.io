@@ -32,6 +32,17 @@ export function SidebarSection({
 
 
 import React from "react",;
+interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  title?: string,
+  children?: React.ReactNode
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+  className?: string;import React from './react';
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -63,6 +74,7 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
       )}
 
         </h3>;
+          {title}        </h3>;
       )}
       <div className="space-y-1">{children}</div>
     </div>
@@ -108,3 +120,4 @@ children?: React.ReactNode
 }
 ;
 ;
+ursor/fix-website-loading-errors-and-merge-6662

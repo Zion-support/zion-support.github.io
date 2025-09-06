@@ -28,6 +28,12 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
 /**
  * Theme configuration for PDF export */
 export interface PdfThemeColors {;
+  return theme === 'light' 
+    ? { ;
+
+* Theme configuration for PDF export;
+*/;
+export interface PdfThemeColors {
   background: string;
   text: string;
   heading: string;
@@ -72,4 +78,5 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         accent: '#9b87f5';
 
       }
+        heading: '#222222';      }
 }

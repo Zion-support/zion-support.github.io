@@ -115,12 +115,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
 
 
+              "fontSize": '2.5rem',import React from 'react';
 export default function Cookies() {;
 const contact = { ;
   "phone": '+1 302 464 0950', ;
   "email": 'kleber@ziontechgroup && ziontechgroup.com', ;
   "address": '364 E Main St STE 1008 Middletown DE 19709', ;
   "site": 'https://ziontechgroup && ziontechgroup.com';
+  "site": 'https://ziontechgroup && ziontechgroup.com'
 };
 const cookieTypes = [{;
     "type": "Essential Cookies",;
@@ -219,6 +221,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <divstyle={{
 ursor/automate-test-improve-and-merge-code-646c
               "background": '#f8fafc',
+            <div style={{              "background": '#f8fafc',
               "borderRadius": 12,
               "padding": 30,
               "border": '1px solid #e2e8f0',
@@ -254,6 +257,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 <divkey={index} style={{
 ursor/automate-test-improve-and-merge-code-646c
                   "background": '#f8fafc',
+                <div key={index} style={{                  "background": '#f8fafc',
                   "borderRadius": 12,
                   "padding": 30,
                   "border": '1px solid #e2e8f0'
@@ -362,6 +366,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <divstyle={{
 ursor/automate-test-improve-and-merge-code-646c
               "background": '#f8fafc',
+            <div style={{              "background": '#f8fafc',
               "borderRadius": 12,
               "padding": 30,
               "border": '1px solid #e2e8f0'
@@ -480,6 +485,7 @@ ursor/automate-test-improve-and-merge-code-646c
           <divstyle={{ 
 ursor/automate-test-improve-and-merge-code-646c
             "background": '#f8fafc',
+          <div style={{             "background": '#f8fafc',
             "borderRadius": 12,
             "padding": 30,
             "border": '1px solid #e2e8f0',
@@ -503,6 +509,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <Linkhref="/contact" style={{
 ursor/automate-test-improve-and-merge-code-646c
               "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            <Link href="/contact" style={{              "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               "color": 'white',
               "padding": '12px 24px',
               "textDecoration": 'none',

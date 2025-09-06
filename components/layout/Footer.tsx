@@ -458,6 +458,7 @@ ursor/automate-test-improve-and-merge-code-646c
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+
         </div>
       </div>
     </footer>

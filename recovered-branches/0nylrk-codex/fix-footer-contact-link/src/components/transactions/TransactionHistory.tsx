@@ -54,6 +54,7 @@ export function TransactionHistory() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
 
 interface Transaction {;
+import {formatDistanceToNow} from "date-fns";interface Transaction {;
   id: string,;
   user_id: string,;
   provider_id: string,;
@@ -64,10 +65,17 @@ interface Transaction {;
   in_escrow: boolean,;
   created_at: string,;
   service?: {;
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+  provider?: {;
+    display_name?: string
+};  service?: {;
     title?: string;
   }
 }
 
+export function TransactionHistory() {;
   const { user } = useAuth();
   const { toast } = useToast();
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
@@ -175,6 +183,8 @@ export function TransactionHistory() {;
       toast({;
         title:"Success",;
         description:data.message || "Transaction updated successfully"}),;
+        title:"Success",,
+  description:data.message || "Transaction updated successfully"}),;
       ;
       refetch(),;
     } catch (error) {;
@@ -182,6 +192,8 @@ export function TransactionHistory() {;
       toast({;
         title:"Error",;
         description:error.message || "Failed to update transaction",;
+        title:"Error",,
+  description:error.message || "Failed to update transaction",;
         variant:"destructive"}),;
     }
   },;
@@ -315,6 +327,7 @@ export function TransactionHistory() {;
           <div className="space-y-4">;
             {transactions.map((transaction) => {;
               const isClient = user?.id === transaction.user_id;
+              const isClient = user?.id === transaction.user_id;
               const isPending = transaction.status === 'pending',;
               const isInEscrow = transaction.in_escrow,;
               const canRelease = !isClient && isPending && isInEscrow,;
@@ -415,6 +428,7 @@ interface Transaction {_id: string;
   provider?: {
       
       
+
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -425,6 +439,7 @@ interface Transaction {_id: string;
 
 
       console.error("Error managing transaction:", error),
+      console.error("Error managing transaction:", error),      console.error("Error managing transaction:", error),
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
@@ -442,7 +457,7 @@ interface Transaction {_id: string;
   
 
 
-  const getStatusBadge = (status: string, inEscrow: boolean) => {
+  const getStatusBadge = (status: string, inEscrow: boolean) => {}  const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
         return inEscrow ? (
@@ -458,6 +473,7 @@ interface Transaction {_id: string;
 
 
         ),
+        ),        ),
       case 'completed':
         return (
           <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
@@ -468,6 +484,7 @@ interface Transaction {_id: string;
 
 
         ),
+        ),        ),
       case 'refunded':
         return (
           <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
@@ -478,6 +495,7 @@ interface Transaction {_id: string;
 
 
         ),
+        ),        ),
       case 'cancelled':
         return (
           <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
@@ -724,6 +742,7 @@ interface Transaction {_id: string;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
                           )}
+    }                          )}
                         </CardDescription>
                       </div>
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
@@ -751,6 +770,7 @@ interface Transaction {_id: string;
 
 
                       <div className="flex justify-between items-center text-sm mt-1">
+                    </div>                      <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
@@ -930,6 +950,17 @@ interface Transaction {_id: string;
                         onClick={() => handleManageTransaction(transaction.id, 'refund')}
 
                         size="sm";
+                      <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'release')}                        size="sm";
+                        className="bg-green-600 hover:bg-green-700 text-white";
+                      >;
+                        <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds;
+                      </Button>;
+                    )}
+
+                    {canRefund && (;
+                      <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}                        size="sm";
                         variant="outline";
                         className="text-zion-slate-light border-zion-blue-light";
                       >;
@@ -942,6 +973,12 @@ interface Transaction {_id: string;
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
 
                         size="sm";
+                      </Button>;
+                    )}
+
+                    {canCancel && (;
+                      <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}                        size="sm";
                         variant="outline";
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10";
                       >;
@@ -959,6 +996,11 @@ interface Transaction {_id: string;
         ) :(;
 
           <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
+              );
+            })}
+
+          </div>;
+        ) : (;          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
             <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">;
               <ArrowRight className="h-8 w-8 text-zion-slate-light" />;
               <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" />;
@@ -1027,6 +1069,31 @@ if (throw error) {
         return (
           <Badge variant="outline" className="bg - gray - 500 / 20 text - gray - 500 border - gray - 500">;
             <AlertCircle className="w - 3 h - 3 mr - 1" /> Unknown;
+          <Badge variant="outline" className="bg - yellow - 500 / 20 text - yellow - 500 border - yellow-500">;
+            <Clock className="w - 3 h - 3 mr-1" /> In Escrow;
+          </Badge>) : (
+          <Badge variant="outline" className="bg - blue - 500 / 20 text - blue - 500 border - blue-500">;
+            <Clock className="w - 3 h - 3 mr-1" /> Pending;
+          </Badge>);
+      case 'completed':;
+        return (
+          <Badge variant="outline" className="bg - green - 500 / 20 text - green - 500 border - green-500">;
+            <CheckCircle2 className="w - 3 h - 3 mr-1" /> Completed;
+          </Badge>);
+      case 'refunded':;
+        return (
+          <Badge variant="outline" className="bg - purple - 500 / 20 text - purple - 500 border - purple-500">;
+            <RefreshCcw className="w - 3 h - 3 mr-1" /> Refunded;
+          </Badge>);
+      case 'cancelled':;
+        return (
+          <Badge variant="outline" className="bg - red - 500 / 20 text - red - 500 border - red-500">;
+            <XCircle className="w - 3 h - 3 mr-1" /> Cancelled;
+          </Badge>),
+      default:;
+        return (
+          <Badge variant="outline" className="bg - gray - 500 / 20 text - gray - 500 border - gray-500">;
+            <AlertCircle className="w - 3 h - 3 mr-1" /> Unknown;
           </Badge>);
     }
   }
@@ -1050,6 +1117,13 @@ if ( {) {
           <p className="mb - 4">{error.message}</p>;
           <Button on_click={() => refetch ()} variant="outline">;
             <RefreshCcw className="mr - 2 h - 4 w - 4" />;
+      <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue-light">;
+        <div className="text - center text - zion - slate-light">;
+          <AlertCircle className="mx - auto h - 12 w - 12 text - red - 500 mb-4" />;
+          <h3 className="font - bold text - xl text - white mb-2">Failed to load transactions</h3>;
+          <p className="mb-4">{error.message}</p>;
+          <Button on_click={() => refetch ()} variant="outline">;
+            <RefreshCcw className="mr - 2 h - 4 w-4" />;
             Try Again;
           </Button>;
         </div>;
@@ -1061,6 +1135,11 @@ if ( {) {
         <div className="flex items - center justify - between mb - 6">;
           <h2 className="text - 2xl font - bold text - white">Transaction History</h2>;
           <div className="flex space - x-2">;
+    <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light overflow-hidden">;
+      <div className="p-6">;
+        <div className="flex items - center justify - between mb-6">;
+          <h2 className="text - 2xl font - bold text-white">Transaction History</h2>;
+          <div className="flex space-x-2">;
             <Button;
               size="sm";
               variant={filter === 'all' ? 'default' : 'outline'}
@@ -1116,6 +1195,25 @@ if ( {) {
               </Card>;
             </div>))) : transactions && transactions.length > 0 ? (
           <div className="space - y-4">;
+            <div key={i} className="mb-4">;
+              <Card className="bg - zion - blue - dark border - zion - blue-light">;
+                <CardHeader className="pb-2">;
+                  <Skeleton className="h - 6 w - 3/4 bg - zion - blue-light" />;
+                  <Skeleton className="h - 4 w - 1/4 bg - zion - blue - light mt-2" />;
+                </CardHeader>;
+                <CardContent>;
+                  <div className="flex justify - between mb-2">;
+                    <Skeleton className="h - 5 w - 1/3 bg - zion - blue-light" />;
+                    <Skeleton className="h - 5 w - 1/4 bg - zion - blue-light" />;
+                  </div>;
+                  <Skeleton className="h - 4 w - 2/3 bg - zion - blue-light" />;
+                </CardContent>;
+                <CardFooter>;
+                  <Skeleton className="h - 9 w - 28 bg - zion - blue - light rounded-md" />;
+                </CardFooter>;
+              </Card>;
+            </div>))) : transactions && transactions.length > 0 ? (
+          <div className="space-y-4">;
             {transactions.map ((transaction) => {
               const is_client = user?.id === transaction.user_id;
               const is_pending = transaction.status === 'pending';
@@ -1140,6 +1238,17 @@ if ( {) {
                           {is_client ? (
                             <span > Payment to <span className="text - zion - purple">{counterparty_name}</span></span>) : (
                             <span > Payment from <span className="text - zion - cyan">Client</span></span>)}
+                <Card key={transaction.id} className="bg - zion - blue - dark border - zion - blue - light overflow-hidden">;
+                  <CardHeader className="pb-3">;
+                    <div className="flex justify - between items-start">;
+                      <div>;
+                        <CardTitle className="text - white text-lg">;
+                          {transaction.service?.title || 'Service Payment'}
+                        </CardTitle>;
+                        <CardDescription className="text - zion - slate-light">;
+                          {is_client ? (
+                            <span > Payment to <span className="text - zion-purple">{counterparty_name}</span></span>) : (
+                            <span > Payment from <span className="text - zion-cyan">Client</span></span>)}
                         </CardDescription>;
                       </div>;
                       {getStatusBadge (transaction.status, transaction.in_escrow)}
@@ -1155,6 +1264,16 @@ if ( {) {
                     <div className="flex justify - between items - center text - sm">;
                       <span className="text - zion - slate - light">Date:</span>;
                       <span className="text - zion - slate - light">;
+                  <CardContent className="pb-3">;
+                    <div className="flex justify - between items - center mb-1">;
+                      <span className="text - zion - slate-light">Amount:</span>;
+                      <span className="text - white font - medium text-lg">;
+                        {format_currency (transaction.amount, transaction.currency)}
+                      </span>;
+                    </div>;
+                    <div className="flex justify - between items - center text-sm">;
+                      <span className="text - zion - slate-light">Date:</span>;
+                      <span className="text - zion - slate-light">;
                         {new Date (transaction.created_at).toLocaleDateString ()}
                         ({formatDistanceToNow (new Date (transaction.created_at), { add_suffix: true })});
                       </span>;
@@ -1166,6 +1285,12 @@ if ( {) {
                           transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>;
                         <span className="text - zion - slate - light">;
+                      <div className="flex justify - between items - center text - sm mt-1">;
+                        <span className="text - zion - slate-light">;
+                          {transaction.completed_at ? 'Completed:' :;
+                          transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
+                        </span>;
+                        <span className="text - zion - slate-light">;
                           {new Date (
                             transaction.completed_at ||;
                             transaction.refunded_at ||;
@@ -1174,6 +1299,7 @@ if ( {) {
                       </div>)}
                   </CardContent>;
                   <CardFooter className="flex justify - end gap - 2 bg - zion - blue / 20 pt - 3">;
+                  <CardFooter className="flex justify - end gap - 2 bg - zion - blue / 20 pt-3">;
                     {can_release && (
                       <Button;
                         on_click={() => handleManageTransaction (transaction.id, 'release')}
@@ -1181,6 +1307,9 @@ if ( {) {
                         className="bg - green - 600 hover:bg - green - 700 text - white";
                       >;
                         <CheckCircle2 className="mr - 1 h - 4 w - 4" /> Release Funds;
+                        className="bg - green - 600 hover:bg - green - 700 text-white";
+                      >;
+                        <CheckCircle2 className="mr - 1 h - 4 w-4" /> Release Funds;
                       </Button>)}
                     {can_refund && (
                       <Button;
@@ -1190,6 +1319,9 @@ if ( {) {
                         className="text - zion - slate - light border - zion - blue - light";
                       >;
                         <RefreshCcw className="mr - 1 h - 4 w - 4" /> Request Refund;
+                        className="text - zion - slate - light border - zion - blue-light";
+                      >;
+                        <RefreshCcw className="mr - 1 h - 4 w-4" /> Request Refund;
                       </Button>)}
                     {can_cancel && (
                       <Button;
@@ -1199,6 +1331,9 @@ if ( {) {
                         className="text - red - 400 border - red - 400 / 30 hover:bg - red - 400 / 10";
                       >;
                         <XCircle className="mr - 1 h - 4 w - 4" /> Cancel;
+                        className="text - red - 400 border - red - 400 / 30 hover:bg - red-400 / 10";
+                      >;
+                        <XCircle className="mr - 1 h - 4 w-4" /> Cancel;
                       </Button>)}
                   </CardFooter>;
                 </Card>);
@@ -1211,6 +1346,13 @@ if ( {) {
             </div>;
             <h3 className="text - xl font - medium text - white mb - 2">No transactions found</h3>;
             <p className="text - zion - slate - light max - w-md mx - auto">;
+          <div className="text - center py - 12 border border - dashed border - zion - blue - light rounded-lg">;
+            <div className="mx - auto w - 16 h - 16 bg - zion - blue - light / 30 rounded - full flex items - center justify - center mb-4">;
+              <ArrowRight className="h - 8 w - 8 text - zion - slate-light" />;
+              <ArrowLeft className="h - 8 w - 8 text - zion - slate - light -ml-4" />;
+            </div>;
+            <h3 className="text - xl font - medium text - white mb-2">No transactions found</h3>;
+            <p className="text - zion - slate - light max - w-md mx-auto">;
               {filter !== 'all';
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
@@ -1228,3 +1370,7 @@ if ( {) {
 
 
 ;
+}      </div>;
+    </div>;
+  );
+}

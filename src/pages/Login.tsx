@@ -53,3 +53,10 @@ const Login = () => {
 export default Login;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+import React, { useState } from 'react';""
+import { motion } from 'framer-motion';""
+import { Link } from 'react-router-dom';""
+import { SEO } from '../components/SEO';""
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

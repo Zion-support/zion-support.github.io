@@ -123,6 +123,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+
           >
             <div className="p-6">
               {/* Header */}
@@ -136,10 +137,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
+
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -175,6 +178,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                 ))}
               </nav>
+
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -212,6 +216,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
+
               </div>
             </div>
           </motion.div>
@@ -455,3 +460,43 @@ export default Sidebar;
 ;
 ursor/expand-services-advertise-and-build-project-c52f
 ursor/automate-test-improve-and-merge-code-646c
+
+  X, 
+  ChevronDown, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Building2,
+  User,
+  LogOut,
+  Search
+} from 'lucide-react';
+
+const navigation = {
+  'Services': [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Consulting', href: '/consulting' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise', href: '/enterprise' },
+    { name: 'Startup', href: '/startup' },
+    { name: 'Industry', href: '/industries' }
+  ],
+  'Company': [
+    { name: 'About', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ]
+};
+
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+

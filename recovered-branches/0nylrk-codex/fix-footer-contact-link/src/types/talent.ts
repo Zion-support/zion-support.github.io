@@ -23,6 +23,7 @@ export interface TalentProfile {
     title: string;
 
     description: string;
+    title: string,    description: string;
   }[];
 }
 export interface TalentProfileFilters {
@@ -128,3 +129,4 @@ export interface HireRequest {;
 
 
 }
+  skills?: string[];}

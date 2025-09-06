@@ -40,6 +40,9 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
+
+  actionText = null
+}: {
   actionText = null
 }: {
   userId: string;
@@ -57,6 +60,7 @@ export async function createNotification({
   sendEmail?: boolean,
   actionUrl?: string | null,
   actionText?: string | null
+  actionUrl?: string | null  actionText?: string | null
 }) {
   void actionUrl;
   void actionText;
@@ -123,6 +127,7 @@ export async function createNotification({;
     // If sendEmail is true, call the edge function to send an email;
     if (sendEmail && data) {;
       const notificationId = data;
+      const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
 
         body: { user_id: userId, notification_id: notificationId }
@@ -132,6 +137,9 @@ export async function createNotification({;
 
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+    return { success: false, error }
+  }
+}      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
 success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
@@ -516,6 +524,10 @@ function createTestNotification() {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
   const actions = {
+ */  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
+  }
+  const messages = {  const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
     'booking_confirmation': { url: '/bookings', text: 'View Booking' }
@@ -744,6 +756,7 @@ export async function createOnboardingNotification({;
 
 
 }
+  });}
 ;
 /**;
  * Creates a system notification for a user;

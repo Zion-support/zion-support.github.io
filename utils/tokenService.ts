@@ -22,6 +22,13 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 
 
 
+  addTransaction,
+  getAllTransactions,
+  getUserBalance
+} from "./tokenStore";
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
     userId
     type: 'earn'
     amount
@@ -52,6 +59,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
     description: reason
 
     description: reason
+    description: reason
   });
 }
 
@@ -63,6 +71,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
     userId,
     type: "spend",
     amount: actualAmount,
+    description: reason
     description: reason
     description: reason
   });

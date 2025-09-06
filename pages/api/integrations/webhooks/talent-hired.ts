@@ -9,6 +9,17 @@ try {
 
 
 
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+import { ats } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { talent } = req.body as { talent?: Record<string, any> },
+  if (!talent) return res.status(400).json({ error: 'Missing talent payload' });
+  const state = null;
+    results.push({ providerId: conn.providerId, ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -45,6 +56,8 @@ export default async function handler(
       c && c.providerId === "bamboohr",
 
 
+
+  const state = readState();
 
   const state = readState();
   const atsProviders = state && state.connections.filter(
@@ -120,7 +133,6 @@ function handler() {
     }
     await ats.update_status (conn, {
       applicant_id: talent.id,
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -138,6 +150,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
+
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
@@ -160,6 +173,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true, results });
 }
   res.status(200).json({ ok: true, results });
+const atsProviders = state.connections.filter(
+    c =>
+      c.providerId === 'greenhouse' ||
+      c.providerId === 'lever' ||
+      c.providerId === 'workable' ||
+      c.providerId === 'bamboohr'
+  );
+  const results: any[] = [];
+  const result = await ats.updateStatus(conn, {
+      applicantId: talent.id,
+      status: 'hired'
+    });
+    writeState((s) => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  res.status (200).json ({ ok: true, results });
+  res.status(200).json({ ok: true, results });
+}
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }
 }
 
@@ -168,3 +206,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

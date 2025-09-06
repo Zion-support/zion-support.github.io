@@ -8,6 +8,10 @@ import {
   FormLabel,
   FormControl,
   FormMessage
+  FormField
+  FormItem
+  FormLabel
+  FormControl
   FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -94,6 +98,8 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
+
+;
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   form: UseFormReturn<FormValues>;

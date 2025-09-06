@@ -35,6 +35,7 @@ export function PaymentButton(): any ({;
 
 
   amount;
+import {useNavigate} from "react-router-dom";  amount;
   serviceId;
   providerId;
 
@@ -173,6 +174,9 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
       }
+  amount: number
+  serviceId: string
+  providerId: string
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
@@ -186,6 +190,7 @@ export function PaymentButton({;
       
       
       if (error) {
+            if (error) {
         throw error
       }
       if (data?.url) {
@@ -290,6 +295,7 @@ if ( {) {
 
 
       // Reset button state after a short delay
+        window.open(data.url, '_blank')      // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
@@ -376,7 +382,17 @@ if ( {) {
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
+        "relative min-w-[120px]"
+      }      toast({;
+        title: "Payment error",,
+  description: "There was a problem initiating your payment. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      // Reset button state after a short delay;      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
         "relative min-w-[120px]",
+
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -399,6 +415,7 @@ if ( {) {
         buttonText;
       )}
 }
+        "relative min-w-[120px]"
     </Button>;
   );
     </Button>;
@@ -429,6 +446,7 @@ if ( {) {
       {is_processing ? (
         <>;
           <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+          <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
           Processing...;
         </>) : (
         button_text)}
@@ -456,7 +474,7 @@ export function PaymentButton({;
   redirectUrl} PaymentButtonProps) {;
   const [isProcessing, setIsProcessing] = useState(false),;
   const { isAuthenticated, user } = useAuth(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   ;
   const handlePaymentClick = async () => {;
     if (!isAuthenticated) {;
@@ -598,3 +616,4 @@ return (<Button)
 }
 ;
 ;
+}

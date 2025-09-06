@@ -47,6 +47,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]}
     {
       name: "Business"
+import { Badge } from "@/components/ui/badge",      name: "Business"
       price: "$1,999";
       billing: "/month"
       description: "Ideal for growing companies"
@@ -130,12 +131,15 @@ import { Badge } from "@/components/ui/badge",;
 
 
 export function EnterprisePricingTable() {;
+      price: "$1,999",export function EnterprisePricingTable() {;
   const plans = [;
     {;
       name: "Teams",;
       price: "$599",;
       billing: "/month",;
       description: "Perfect for small teams",;
+      billing: "/month",,
+  description: "Perfect for small teams",;
       users: "Up to 10 users",;
       popular: false,;
       features: [;
@@ -253,6 +257,7 @@ export function EnterprisePricingTable() {;
 
 
     <section id="pricing" className="py-20 px-4 md:px-6">;
+      name: "Business",;    <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
@@ -291,6 +296,23 @@ export function EnterprisePricingTable() {;
 
 
                 {plans.map((plan) => (;
+                      </Button>;
+                    </div>;
+                  </TableHead>;
+                ))}
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {plans[0].features && features.map((feature, index) => (;
+                <TableRow key={feature && feature.name}>;
+                  <TableCell className="font-medium">{feature && feature.name}</TableCell>;
+                  {plans && plans.map((plan) => (;
+                    <TableCell key={`${plan && plan.name}-${feature && feature.name}`} className="text-center">;
+                      {plan && plan.features[index].included ? (;
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
+                      ) : (;
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;
+                      )}                {plans.map((plan) => (;
                   <TableHead key={plan.name} className="text-center">;
                     <div className="flex flex-col items-center">;
                       {plan.popular && (;
@@ -379,6 +401,16 @@ function EnterprisePricingTable() {
         </div>;
         <div className="overflow - x-auto">;
           <Table className="border rounded - lg">;
+    <section id="pricing" className="py - 20 px - 4 md:px-6">;
+      <div className="container mx - auto max-w-7xl">;
+        <div className="text - center mb-12">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-4">Enterprise Plans</h2>;
+          <p className="text - xl text - muted - foreground max - w-2xl mx-auto">;
+            Choose the perfect plan for your team size and requirements;
+          </p>;
+        </div>;
+        <div className="overflow-x-auto">;
+          <Table className="border rounded-lg">;
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
@@ -398,6 +430,21 @@ function EnterprisePricingTable() {
                         {plan.description}
                       </p>;
                       <p className="text - sm font - medium mt - 2">{plan.users}</p>;
+                  <TableHead key={plan.name} className="text-center">;
+                    <div className="flex flex - col items-center">;
+                      {plan.popular && (
+                        <Badge className="mb - 2 bg - zion-purple">Most Popular</Badge>)}
+                      <span className="font - bold text-xl">{plan.name}</span>;
+                      <div className="flex items - baseline mt-1">;
+                        <span className="text - 2xl font-bold">{plan.price}</span>;
+                        <span className="text - sm text - muted - foreground ml-1">;
+                          {plan.billing}
+                        </span>;
+                      </div>;
+                      <p className="text - sm text - muted - foreground mt-1">;
+                        {plan.description}
+                      </p>;
+                      <p className="text - sm font - medium mt-2">{plan.users}</p>;
                       <Button;
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
@@ -597,3 +644,8 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
 }
 
 
+                  <TableCell className="font-medium">{feature.name}</TableCell>;
+                  {plans.map ((plan) => (
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
+                      {plan.features[index].included ? (
+}

@@ -22,6 +22,8 @@ export interface UserDetails {
   permissions?: string[];
   company_id?: string;
 
+  permissions?: string[];
+  company_id?: string;
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -112,6 +114,7 @@ export interface AuthContextType {;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 }
+  company_id?: string;}
 export interface UserDetails {;
   id?: string,;
   name?: string,;
@@ -264,3 +267,4 @@ export interface AuthContextType {;
 }
 
 
+;

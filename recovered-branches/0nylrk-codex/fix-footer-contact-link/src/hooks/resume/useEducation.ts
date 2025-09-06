@@ -13,6 +13,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
   const { user } = useAuth();
+export function useEducation() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -79,6 +80,10 @@ export function useEducation() {;
 
 
 ;
+      return false    try {
+      const { error } = await supabase
+        .from('education')
+        .insert({;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -93,6 +98,8 @@ export function useEducation() {;
           end_date: education.is_current ? null : formatDateForDB(education.end_date),;
           is_current: education.is_current,;
           description: education.description,;
+          is_current: education.is_current,,
+  description: education.description,;
           institution_logo_url: education.institution_logo_url,;
           location: education.location;
         }),;
@@ -403,6 +410,14 @@ deleteEducation
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
+          return showSuccessToast("Education updated", "Your education has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update education')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('education')
+        .delete()import {useState} from 'react';
 export /**
  * use_education - Function description
  */
@@ -416,6 +431,9 @@ function use_education() {
 if ( {) {
   $2
 }
+      set_error ('You must be logged in to add education'),
+      return false;
+    }
   },;
   return {;
     isLoading,;
@@ -532,6 +550,8 @@ if (throw error) {
     delete_education;
   }
   }
+  }
+}  }
 }
     setIsLoading (true);
     set_error (null);

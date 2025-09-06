@@ -447,6 +447,9 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
               className="text-gray-700 hover:text-blue-600 p-2"
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+    { name: 'Contact', href: '/contact', icon: Phone }
+
+  ];
 import { 
   Menu, 
   X, 
@@ -698,6 +701,12 @@ ursor/automate-test-improve-and-merge-code-646c
   ];
 
 
+
+
+    { name: 'Contact', href: '/contact', icon: Phone }
+
+  ];
+
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -720,6 +729,9 @@ ursor/automate-test-improve-and-merge-code-646c
 }
   ];
 
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
+}
+  ];
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',;
@@ -763,6 +775,9 @@ ursor/automate-test-improve-and-merge-code-646c
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
 
+  ];
+  const isActive = (path: string) => location && location.pathname === path;
+  const resourceCategories = [;
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -778,6 +793,13 @@ ursor/automate-test-improve-and-merge-code-646c
         : 'bg-transparent'
 
 
+
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
+}
+  ];
+  ];
+  const isActive = (path: string) => location && location.pathname === path;
+  const resourceCategories = [;
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
@@ -785,10 +807,12 @@ ursor/automate-test-improve-and-merge-code-646c
     { name: 'Data & Analytics', href: '/services / data' },
     { name: 'Micro SaaS', href: '/services / micro - saas' },
     { name: 'Digital Transformation', href: '/services / transformation' }
+    { name: 'Digital Transformation', href: '/services / transformation' }
   ];
   const solution_categories = [;
     { name: 'Enterprise', href: '/solutions / enterprise' },
     { name: 'SMB', href: '/solutions / smb' },
+    { name: 'Startup', href: '/solutions / startup' }
     { name: 'Startup', href: '/solutions / startup' }
   ];
   const resource_categories = [;
@@ -796,6 +820,7 @@ ursor/automate-test-improve-and-merge-code-646c
     { name: 'Blog', href: '/blog' },
     { name: 'Partners', href: '/partners' },
     { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' }
     { name: 'Careers', href: '/careers' }
   ];
   const is_active = (path: string) =>: any location.pathname === path;
@@ -806,6 +831,7 @@ ursor/automate-test-improve-and-merge-code-646c
     { name: 'Documentation', href: '/documentation' },
     { name: 'API Reference', href: '/api' },
     { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' }
     { name: 'FAQ', href: '/faq' }
   ];
   return (
@@ -819,11 +845,14 @@ ursor/automate-test-improve-and-merge-code-646c
           {/* Logo */}
 
 
+
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
+
+
 
 
 
@@ -843,6 +872,12 @@ ursor/automate-test-improve-and-merge-code-646c
           </div>;
 
 
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+            </div>;
+          </div>;
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -855,6 +890,9 @@ ursor/automate-test-improve-and-merge-code-646c
         </div>;
 
 
+            </button>;
+          </div>;
+        </div>;
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -883,6 +921,15 @@ ursor/automate-test-improve-and-merge-code-646c
   );
 
 
+}
+export default Header;
+import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' }]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
+export default Header;
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
@@ -936,6 +983,12 @@ ursor/automate-test-improve-and-merge-code-646c
     </header>);
 }
 
+;
+export default Header;
+import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' } ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
+export default Header;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>
             <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
               Zion Tech Group
@@ -953,6 +1006,45 @@ ursor/automate-test-improve-and-merge-code-646c
                 {item.name}
               </a>
             ))}
+import React from 'react';
+const Header: React.FC = () => {
+  return (
+    <header className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          <nav className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                href="/"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>{' '}
+            </div>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </nav>
 
           {/* CTA Button */}
@@ -975,6 +1067,7 @@ ursor/automate-test-improve-and-merge-code-646c
 },
 
 export default Header
+
 
 
 const Header: React.FC = () => {
@@ -1415,6 +1508,13 @@ const Header = () => {
         {/* Mobile Navigation */}
 
         {/* Mobile Menu */}
+
+        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
+        {/* Mobile Navigation */}
+
+        {/* Mobile Menu */}
+>>>>>>> main
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -1493,6 +1593,7 @@ const Header = () => {
                   </Link>
                 ))}
 >>>>>>> main
+>>>>>>> main
               </div>
             </motion.div>
           )}
@@ -1508,6 +1609,14 @@ export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' }]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 }
 export default Header;
+export default Header;
+
+}
+};
+
+export default Header;
+}
+export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' }]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 
@@ -1517,3 +1626,8 @@ export default Header;
 export default Header;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  );
+};
+
+export default Header;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

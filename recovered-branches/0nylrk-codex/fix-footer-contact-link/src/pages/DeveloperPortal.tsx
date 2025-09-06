@@ -18,6 +18,22 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",interface TabDefinition {
   id: string;
   label: string;
   icon: LucideIcon;
@@ -26,6 +42,16 @@ interface TabDefinition {
 
 
 
+interface TabDefinition {;
+  id: string,;
+  label: string,;
+  icon: LucideIcon;
+}
+
+export function DeveloperPortal() {;
+
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -69,6 +95,9 @@ export function DeveloperPortal() {
             const Icon = tab.icon,
 
             return (
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+              return (
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
@@ -245,3 +274,7 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 ;
+      <div className="border - b border - zinc - 800 mb-8">;
+        <div className="flex flex - wrap -mb-px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;

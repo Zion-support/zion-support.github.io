@@ -67,11 +67,18 @@
           onClick={() => loginWithTwitter()}
           disabled={isLoading}
   )
+          disabled={isLoading}  )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
     <div className="mt-6">;
+
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+    useAuth();
+
+  return (    <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
@@ -132,6 +139,15 @@ function SocialLogin() {
             aria - hidden="true";
             fill="current_color";
             view_box="0 0 24 24";
+        <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
+          disabled={is_loading}
+        >;
+          <span className="sr-only">Sign in with Google</span>;
+          <svg;
+            className="h - 5 w-5";
+            aria - hidden="true";
+            fill="current_color";
+            viewBox="0 0 24 24";
           >;
             <path;
               d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z";
@@ -160,6 +176,12 @@ function SocialLogin() {
         >;
           <span className="sr - only">Sign in with Facebook</span>;
           <Facebook className="h - 5 w - 5" />;
+          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion-cyan";
+          on_click={() => loginWithFacebook ()}
+          disabled={is_loading}
+        >;
+          <span className="sr-only">Sign in with Facebook</span>;
+          <Facebook className="h - 5 w-5" />;
         </Button>;
         <Button;
           type="button";
@@ -170,8 +192,15 @@ function SocialLogin() {
         >;
           <span className="sr - only">Sign in with Twitter</span>;
           <Twitter className="h - 5 w - 5" />;
+          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion-cyan";
+          on_click={() => loginWithTwitter ()}
+          disabled={is_loading}
+        >;
+          <span className="sr-only">Sign in with Twitter</span>;
+          <Twitter className="h - 5 w-5" />;
         </Button>;
         <Web3Login />;
       </div>;
     </div>);
 }
+;

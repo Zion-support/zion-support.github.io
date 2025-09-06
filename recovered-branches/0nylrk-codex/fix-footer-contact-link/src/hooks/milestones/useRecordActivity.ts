@@ -22,6 +22,9 @@ export const useRecordActivity = () => {
   
 
   const recordMilestoneActivity = async (
+export const useRecordActivity = () => {;
+  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
+export const useRecordActivity = () => {
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
@@ -110,6 +113,11 @@ if (throw error) {
 
 
     }
+        .insert({          comment})
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)    }
   };
   
   return {
@@ -168,6 +176,10 @@ export const useRecordActivity = () => {;
 
     }
   };
+  }
+
+}
+};
   return {;
     recordMilestoneActivity;
   }

@@ -26,6 +26,7 @@ import {toast} from '@/hooks/use-toast';
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   options;
+  size?: "default" | "sm" | "lg" | "icon";  options;
   onEnhanced;
 
   buttonText = "Enhance with AI";
@@ -157,12 +158,14 @@ export function AIEnhancementButton({;
 
       });
       return;
+        return;
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
 
 
+  },
 
   
 
@@ -178,6 +181,7 @@ export function AIEnhancementButton({;
     }
 ;
     const enhancedContent = await enhanceContent(options);
+    const enhancedContent = await enhanceContent(options);
     if (enhancedContent) {;
       setGeneratedContent(enhancedContent),;
       setShowActions(true);
@@ -186,7 +190,7 @@ export function AIEnhancementButton({;
 
 
   
-  const handleAccept = () => {
+  const handleAccept = () => {},  const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
@@ -209,6 +213,19 @@ export function AIEnhancementButton({;
   
 
   if (showActions) {
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
+    }
+    return (  },
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  },
+  
+
+  const handleCancel = () => {
+    setShowActions(false);
+    setGeneratedContent(null)  if (showActions) {
     return (
       <div className="flex gap-2 items-center">
         <Button
@@ -252,6 +269,8 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
+
+  },;
   const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent);
@@ -260,6 +279,8 @@ export function AIEnhancementButton({;
       toast({;
         title: "Content applied",;
         description: "AI-enhanced content has been applied."});
+        title: "Content applied",,
+  description: "AI-enhanced content has been applied."});
     }
   };
 
@@ -403,6 +424,15 @@ export function AIEnhancementButton({;
           Cancel;
         </Button>;
   return (
+    await handleEnhance()
+};
+
+  const handleCancel = () => {;
+    setShowActions(false);
+    setGeneratedContent(null)
+};
+
+  if (showActions) {;
     <Button;
       type="button";
       variant={variant}
@@ -503,3 +533,4 @@ return
 }
 ;
 }
+      size={size}

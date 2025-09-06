@@ -44,6 +44,7 @@ export default function JobDetails() {;
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
 import React, { useState, useEffect } from 'react',
+  const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -66,6 +67,8 @@ export default function JobDetails() {
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
 
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -109,6 +112,22 @@ export default function JobDetails() {
 
     );
   }
+    );
+  }
+  const handleApply = () => {
+    if (!isAuthenticated) {
+      toast.error("Please log in to apply for this job"),
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
+      return
+    }
+    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+      toast.error("Only job seekers can apply for jobs"),
+      return
+    }
+    setIsApplyModalOpen(true)
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+
   if (isLoading) {
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
@@ -123,6 +142,8 @@ export default function JobDetails() {
 
   if (error || !job) {;
       <>;
+
+    return (      <>;
         <Header />;
         <div className="container mx-auto px-4 py-16 text-center">;
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
@@ -131,6 +152,17 @@ export default function JobDetails() {
         </div>;
         <Footer />;
       </>;
+    );
+  }
+
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast && toast.error("Please log in to apply for this job");
+
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      return;
+    }
+
   },
 
   const handleApplySuccess = async (appliedJobId: string) => {
@@ -141,6 +173,11 @@ export default function JobDetails() {
   }
   const isOwnJob = user?.id === job.client_id;
 
+  },
+
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified"
+    return `$${budget.min} - $${budget.max}`
   },
 
   const isOwnJob = user?.id === job.client_id,
@@ -258,6 +295,7 @@ export default function JobDetails() {;
 
 
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
+                      <Badge key={i} variant="secondary">    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
@@ -269,6 +307,12 @@ export default function JobDetails() {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
+    setIsApplyModalOpen(false)
+};
+  const formatBudget = (budget: any) => {;
+    if (!budget) return "Not specified",;
+    return `$${budget && budget.min} - $${budget && budget.max}`
+};
   return (
     <>;
       <SEO
@@ -303,7 +347,7 @@ export default function JobDetails() {;
     return `$${budget.min} - $${budget.max}`,;
   },;
 ;
-  const isOwnJob = user?.id === job.client_id,;
+  const isOwnJob = user?.id === job.client_id;
 ;
   return (;
     <>;
@@ -356,6 +400,14 @@ export default function JobDetails() {;
 
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+      />;
+      <Header />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;            onClick={() => navigate('/jobs')}
+          >;
+            ← Back to Jobs;
+          </Button>;
+        </div>;        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
@@ -379,6 +431,13 @@ export default function JobDetails() {;
 
 
                 </div>;
+                    <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
+                    <div className="flex items-center text-muted-foreground">;
+                      <Calendar className="mr-2 h-4 w-4" />;
+                      <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
+                    </div>;
+                  </div>;
+                  <Badge>{job && job.category}</Badge>;                </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
@@ -473,6 +532,7 @@ export default function JobDetails() {;
                 </div>;
 
                 <div className="flex items-start">;
+                  <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
@@ -544,6 +604,8 @@ export default function JobDetails() {;
 
 
                 {isOwnJob && (
+                  <Button 
+                    className="w-full mt-4"                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
@@ -841,3 +903,4 @@ const isOwnJob = user?.id === job.client id;
 }
 
 
+      <Footer />

@@ -56,6 +56,17 @@ const config: Config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+      center: true;
+      padding: "2rem"  theme: {
+    container: {
+      center: true;
+      padding: "2rem"
+      screens: {
+        "2xl": "1400px"}}
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
+
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -65,6 +76,7 @@ const config: Config = {
         foreground: "hsl (var (--foreground))";
         primary: {
       keyframes: {
+        primary: {      keyframes: {
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
@@ -129,6 +141,7 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
   plugins: [
+      animation: {  plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
@@ -244,6 +257,8 @@ export default config;
 export default config;
 export default config;
           text_align: 'left'}}
+export default config;
+;
       add_utilities (new_utilities);
     })]}
 ;

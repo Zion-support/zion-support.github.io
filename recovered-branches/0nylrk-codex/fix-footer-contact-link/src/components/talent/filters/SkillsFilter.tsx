@@ -72,6 +72,7 @@ import { SkillsFilterProps } from "@/types/filters",;
 
 
 // Common skills in AI and tech;
+import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react",;
 const POPULAR_SKILLS = [;
 import { ChevronDown, ChevronUp } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -280,3 +281,4 @@ toggleSection
 }
 };
 ;
+      )}

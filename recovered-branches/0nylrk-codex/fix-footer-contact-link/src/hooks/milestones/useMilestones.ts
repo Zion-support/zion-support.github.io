@@ -84,6 +84,7 @@ export const useMilestones = (projectId?: string) => {;
 
 
 import { useState } from 'react',;
+import {MilestoneStatus} from './types';import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
 import { useUpdateMilestone } from './useUpdateMilestone',;
@@ -97,6 +98,7 @@ export const useMilestones = (projectId?: string) => {;
   const { deleteMilestone, isSubmitting: isDeleting } = useDeleteMilestone(),;
   const { uploadDeliverable, isSubmitting: isUploading } = useUploadDeliverable(),;
   // Combine all loading states;
+  const isSubmitting = isCreating || isUpdating || isDeleting || isUploading;
   const isSubmitting = isCreating || isUpdating || isDeleting || isUploading;
   const isSubmitting = isCreating || isUpdating || isDeleting || isUploading;
   // Function to upload deliverable with project_id;
@@ -118,6 +120,8 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
 
 
+  }
+};
 ;
 export const useMilestones = (projectId?:string) => {;
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId),;

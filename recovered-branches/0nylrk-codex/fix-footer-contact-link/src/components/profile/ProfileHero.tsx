@@ -19,6 +19,7 @@ interface ProfileHeroProps {
   title: string
 
   avatarUrl?: string;
+import {cn} from "@/lib/utils";  avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
@@ -39,6 +40,8 @@ interface ProfileHeroProps {
 
 
 interface ProfileHeroProps {
+
+export function ProfileHero(): any ({;interface ProfileHeroProps {
   name: string,
   title: string,
   avatarUrl?: string,
@@ -147,6 +150,7 @@ export function ProfileHero({;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
                   {name.substring(0, 2).toUpperCase()}
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;                  {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
             </Avatar>
@@ -256,6 +260,10 @@ export function ProfileHero({;
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
               ;
 
+                  className={cn(                </Badge>;
+              </div>;
+
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
               <div className="flex flex-wrap items-center gap-3 mt-2">;
                 {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
@@ -270,6 +278,12 @@ export function ProfileHero({;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
 
 
+                {rating && (;
+                  <div className="flex items-center gap-1">;
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
+                    <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
+                    {reviewCount && (;
+                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
@@ -294,6 +308,10 @@ export function ProfileHero({;
 
                 )}
 
+
+                  </div>;
+
+                )}
 
                 {aiScore && (;
                   <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
@@ -370,6 +388,7 @@ function ProfileHero() {
                   </div>)}
                 )}
               </div>;
+                )}              </div>;
             </div>;
           </div>;
         </div>;

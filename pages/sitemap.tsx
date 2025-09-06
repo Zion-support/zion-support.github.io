@@ -18,6 +18,8 @@ export default function SitemapPage() {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/automate-test-improve-and-merge-code-646c
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 
 
 import { 
@@ -317,6 +319,7 @@ origin/main
 
 ursor/automate-test-improve-and-merge-code-646c
 
+
   Home, Search, Rocket, FileText, Users, Mail, Map, 
   ArrowRight, ExternalLink, ChevronRight, Globe, Building
 
@@ -337,6 +340,7 @@ export default function SitemapPage() {
   ArrowRight,
   ExternalLink,
   ChevronRight
+  ChevronRight
 } from 'lucide-react';
 import SmartHeader from '../components / SmartHeader';
 import SmartFooter from '../components / SmartFooter';
@@ -349,6 +353,7 @@ function SitemapPage() {
       href: '/',
       label: '🏠 Home',
       description:;
+        'Main landing page with company overview and featured services'
         'Main landing page with company overview and featured services'
     },
 
@@ -375,6 +380,9 @@ ursor/automate-test-improve-and-merge-code-646c
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project'
+      href: '/contact',
+      label: '📧 Contact',
+      description: 'Get in touch and start your project'
     },;
   ];
 
@@ -384,50 +392,61 @@ ursor/automate-test-improve-and-merge-code-646c
       href: '/category / ai',
       label: '🧠 AI & Machine Learning',
       description: 'Artificial intelligence and machine learning solutions'
+      description: 'Artificial intelligence and machine learning solutions'
     },
     {
       href: '/category / quantum',
       label: '⚛️ Quantum Computing',
+      description: 'Quantum computing and quantum AI applications'
       description: 'Quantum computing and quantum AI applications'
     },
     {
       href: '/category / cybersecurity',
       label: '🛡️ Cybersecurity',
       description: 'Quantum - resistant security and threat detection'
+      description: 'Quantum - resistant security and threat detection'
     },
     {
       href: '/category / cloud',
       label: '☁️ Cloud & DevOps',
+      description: 'Cloud infrastructure and DevOps automation'
       description: 'Cloud infrastructure and DevOps automation'
     },
     {
       href: '/category / edge',
       label: '🌐 Edge Computing',
       description: 'Edge computing orchestration and IoT management'
+      description: 'Edge computing orchestration and IoT management'
     },
     {
       href: '/category / space',
       label: '🚀 Space Technology',
+      description: 'Space exploration and resource optimization'
       description: 'Space exploration and resource optimization'
     },
     {
       href: '/category / biotech',
       label: '🧬 Biotechnology',
       description: 'Neural interfaces and biomedical innovations'
+      description: 'Neural interfaces and biomedical innovations'
     },
     {
       href: '/category / blockchain',
       label: '⛓️ Blockchain',
+      description: 'AI - powered blockchain governance and DeFi'
       description: 'AI - powered blockchain governance and DeFi'
     },
     {
       href: '/category / automation',
       label: '⚡ Automation',
       description: 'Business process automation and AI agents'
+      description: 'Business process automation and AI agents'
     },
     {
       href: '/category / fintech',
       label: '💰 Financial Technology',
+      description: 'Quantum financial trading and AI analytics'
+    }
       description: 'Quantum financial trading and AI analytics'
     }
   ];
@@ -437,40 +456,49 @@ ursor/automate-test-improve-and-merge-code-646c
       href: '/ai - business - intelligence',
       label: 'AI Business Intelligence',
       category: 'AI & ML'
+      category: 'AI & ML'
     },
     {
       href: '/quantum - cybersecurity',
       label: 'Quantum Cybersecurity',
+      category: 'Cybersecurity'
       category: 'Cybersecurity'
     },
     {
       href: '/edge - computing - orchestration',
       label: 'Edge Computing Orchestration',
       category: 'Edge Computing'
+      category: 'Edge Computing'
     },
     {
       href: '/space - technology',
       label: 'Space Technology Innovation',
+      category: 'Space Technology'
       category: 'Space Technology'
     },
     {
       href: '/neural - interface',
       label: 'Neural Interface Development',
       category: 'Biotechnology'
+      category: 'Biotechnology'
     },
     {
       href: '/autonomous - devops',
       label: 'Autonomous DevOps',
+      category: 'Cloud & DevOps'
       category: 'Cloud & DevOps'
     },
     {
       href: '/ai - customer - experience',
       label: 'AI Customer Experience',
       category: 'AI & ML'
+      category: 'AI & ML'
     },
     {
       href: '/quantum - neural - networks',
       label: 'Quantum Neural Networks',
+      category: 'Quantum Computing'
+    }
       category: 'Quantum Computing'
     }
   ];
@@ -531,6 +559,17 @@ ursor/automate-test-improve-and-merge-code-646c
       value: 'kleber@ziontechgroup.com'
       action: 'mailto:kleber@ziontechgroup.com'
     }
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, Rocket, FileText, Users, Mail, Map;
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+ } from 'lucide-react';
+export default function SitemapPage() {
+  const mainPages = null;
+              resources, and information available at Zion Tech Group.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
 import {;
   Home,;
@@ -712,6 +751,7 @@ export default function SitemapPage() {;
       label: 'System Status',;
       description: 'Real-time system status and uptime',;
     }  ];
+    }  ];
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
     { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' };
     { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },
@@ -796,6 +836,14 @@ ursor/automate-test-improve-and-merge-code-646c
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
+        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />
+      </Head>
+
+      <SmartHeader />
+      {/* Hero Section */}
+<section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -839,6 +887,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 ursor/automate-test-improve-and-merge-code-646c
           >
+          >
 
 
             transition={{ duration: 0 && 0.8 }}>;
@@ -857,6 +906,16 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+<h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
@@ -871,6 +930,20 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Search Site
+                <Search className='w-5 h-5 ml-2' />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Main Pages */}
+<section id='main-pages' className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -906,6 +979,8 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 }
             className="mb-16"
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Main Pages
@@ -919,6 +994,11 @@ ursor/automate-test-improve-and-merge-code-646c
               <motion.div
                 key={page.href}
 ursor/automate-test-improve-and-merge-code-646c
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {mainPages.map((page, index) => (
+              <motion.div
+                key={page.href}
 
 
             className='mb-16'>;
@@ -986,6 +1066,8 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 }
                 className="group"
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={page.href}
@@ -1000,6 +1082,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
                   </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -1010,6 +1094,9 @@ ursor/automate-test-improve-and-merge-code-646c
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 ursor/automate-test-improve-and-merge-code-646c
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1058,6 +1145,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
       {/* Service Categories */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+
+      {/* Service Categories */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -1069,6 +1161,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -1081,6 +1175,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1089,6 +1185,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 viewport={{ once: true }}
                 className='group'
 ursor/automate-test-improve-and-merge-code-646c
+                className='group'
 
             className="mb-16"
           >
@@ -1125,6 +1222,8 @@ ursor/automate-test-improve-and-merge-code-646c
           <motion.div
 
 
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={category.href}
@@ -1139,6 +1238,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
                   </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1150,6 +1251,9 @@ ursor/automate-test-improve-and-merge-code-646c
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 ursor/automate-test-improve-and-merge-code-646c
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1175,6 +1279,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1184,6 +1293,17 @@ ursor/automate-test-improve-and-merge-code-646c
             </p>
           </motion.div>
 
+            className="mb-16"
+                key={category.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -1212,6 +1332,8 @@ ursor/automate-test-improve-and-merge-code-646c
             viewport={{ once: true }}
 
 
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -1220,6 +1342,13 @@ ursor/automate-test-improve-and-merge-code-646c
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1228,6 +1357,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 viewport={{ once: true }}
                 className='group'
 ursor/automate-test-improve-and-merge-code-646c
+                className='group'
 
             className="mb-16"
           >
@@ -1264,6 +1394,8 @@ ursor/automate-test-improve-and-merge-code-646c
           <motion.div
 
 
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={service.href}
@@ -1276,6 +1408,8 @@ ursor/automate-test-improve-and-merge-code-646c
                     <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
                   </div>
                   <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
+                  <p className='text-white/60 text-xs'>{service.category}</p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1287,6 +1421,9 @@ ursor/automate-test-improve-and-merge-code-646c
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 ursor/automate-test-improve-and-merge-code-646c
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1346,6 +1483,12 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -1363,6 +1506,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -1373,6 +1518,13 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources, tools, and information to help you succeed
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1381,6 +1533,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 viewport={{ once: true }}
                 className='group'
 ursor/automate-test-improve-and-merge-code-646c
+                className='group'
 
             className="mb-16"
           >
@@ -1417,6 +1570,8 @@ ursor/automate-test-improve-and-merge-code-646c
           <motion.div
 
 
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={resource.href}
@@ -1431,6 +1586,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
                   </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1442,6 +1599,9 @@ ursor/automate-test-improve-and-merge-code-646c
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 ursor/automate-test-improve-and-merge-code-646c
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1501,6 +1661,12 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
       {/* External Resources */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -1518,6 +1684,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -1528,6 +1696,13 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources and tools hosted on external platforms
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1536,6 +1711,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 viewport={{ once: true }}
                 className='group'
 ursor/automate-test-improve-and-merge-code-646c
+                className='group'
 
             className="mb-16"
           >
@@ -1572,6 +1748,8 @@ ursor/automate-test-improve-and-merge-code-646c
           <motion.div
 
 
+className='group'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <a
                   href={link.href}
@@ -1588,6 +1766,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
                   </p>                </a>
+                  </p>
+                </a>
               </motion.div>
 
             ))}
@@ -1599,6 +1779,9 @@ ursor/automate-test-improve-and-merge-code-646c
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>          <motion.div
 ursor/automate-test-improve-and-merge-code-646c
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-4xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1657,6 +1840,12 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-4xl mx-auto'>          <motion&& motion.div
@@ -1673,6 +1862,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+className='mb-16'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1685,6 +1876,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
                 initial={{ opacity: 0, y: 20 }}
@@ -1693,6 +1886,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 viewport={{ once: true }}
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
 ursor/automate-test-improve-and-merge-code-646c
+                className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
 
             className="mb-16"
           >
@@ -1711,6 +1905,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
                 key={contact.type}
 
+className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
@@ -1766,6 +1962,8 @@ ursor/automate-test-improve-and-merge-code-646c
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {contact.value}
                 </a>
@@ -1805,6 +2003,9 @@ ursor/automate-test-improve-and-merge-code-646c
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
+<section className='py-20 px-6'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1848,6 +2049,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+          >
+<h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
             </h2>
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
@@ -1882,6 +2085,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   )
 ursor/automate-test-improve-and-merge-code-646c
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Contact Support
+                <Mail className='w-5 h-5 ml-2' />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <SmartFooter />
+    </div>
+);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }animate= {
   {
   opacity: 1, y: 0
@@ -2294,3 +2511,12 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 }
 ursor/automate-test-improve-and-merge-code-646c
+}
+}
+  duration: 0.8
+}viewport= {
+  {
+  once: true 
+
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

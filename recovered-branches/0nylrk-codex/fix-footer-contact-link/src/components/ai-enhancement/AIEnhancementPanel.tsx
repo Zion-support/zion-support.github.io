@@ -7,6 +7,8 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+export function AIEnhancementPanel({;
+
 import React, { useState } from 'react';
   onClose?: () => void;
   showInstructions?: boolean;
@@ -27,11 +29,14 @@ export function AIEnhancementPanel({;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
     const result = await enhanceContent(options);
+export function AIEnhancementPanel({;    const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
 
   };
+  }
+};
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -106,6 +111,7 @@ export function AIEnhancementPanel({;
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
+  return (      <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Sparkles className="h-5 w-5 text-primary" />;
           {title}
@@ -328,6 +334,13 @@ export function AIEnhancementPanel({;
 
 
                 className="min-h-[200px]";
+          ) : (;
+            <>;
+              <Sparkles className="mr-2 h-4 w-4" />;
+              Generate Enhanced Content;
+            </>;
+          )}
+        </Button>;                className="min-h-[200px]";
               />;
             </div>;
           </div>;
@@ -347,6 +360,9 @@ export function AIEnhancementPanel({;
 
 
           <Button onClick={handleApply}>;
+            </Button>;
+
+          )}          <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
@@ -562,3 +578,6 @@ if ( {) {
 }
 
 
+    </Card>;
+  );
+}

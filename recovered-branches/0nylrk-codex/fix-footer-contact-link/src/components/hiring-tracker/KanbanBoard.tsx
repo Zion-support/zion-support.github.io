@@ -12,6 +12,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
+
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -51,6 +52,7 @@ interface DropResult {;
 
 
   droppableId: string
+  index: number;  droppableId: string
 
   index: number
 }
@@ -98,6 +100,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
+
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
@@ -166,6 +170,24 @@ const COLUMNS = [;
     id: "rejected",;
     title: "Rejected",;
     description: "Not moving forward"}],;
+    title: "Applied",,
+  description: "New applications"},;
+  {;
+    id: "shortlisted",;
+    title: "Shortlisted",,
+  description: "Candidates selected for review"},;
+  {;
+    id: "interview",;
+    title: "Interview",,
+  description: "Scheduled for interview"},;
+  {;
+    id: "hired",;
+    title: "Hired",,
+  description: "Successful candidates"},;
+  {;
+    id: "rejected",;
+    title: "Rejected",,
+  description: "Not moving forward"}],;
 
 interface KanbanBoardProps {;
   jobId?: string;
@@ -363,7 +385,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     }
     ;
     // Get the application that was dragged;
-    const application = applications.find(app => app.id === draggableId),;
+    const application = applications.find(app => app.id === draggableId);
     if (!application) return,;
     ;
     // Update the application status in the database;
@@ -404,6 +426,17 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
+  // Initialize columns with applications based on their status;
+  useEffect(() => {;
+    if (applications) {;
+      // Group applications by status;  }
+
+  },
+      // Get the application that was dragged;
+    const application = applications && applications.find(app => app && app.id === draggableId);
+    if (!application) return;
+
+    // Update the application status in the database;            <CardHeader>;
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
             <CardContent>;
@@ -431,6 +464,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     return (;
     return (
       <Card className="text-center py-16">;
+
+      </div>;
+    );
+  }
+    return (      <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
           <p className="text-muted-foreground mb-6">;
@@ -446,6 +484,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         {COLUMNS && COLUMNS.map(column => (;
           <KanbanColumn
 
+    );
+  }
 
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
@@ -572,6 +612,10 @@ if ( {) {
             </CardHeader>;
             <CardContent>;
               <Skeleton className="h-[400px] w - full" />;
+              <Skeleton className="h - 8 w-24" />;
+            </CardHeader>;
+            <CardContent>;
+              <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>))}
       </div>);
@@ -585,6 +629,10 @@ if ( {) {
         <CardContent>;
           <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;
           <p className="text - muted - foreground mb - 6">;
+      <Card className="text - center py-16">;
+        <CardContent>;
+          <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
+          <p className="text - muted - foreground mb-6">;
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
@@ -661,6 +709,7 @@ if ( {) {
 
 
             applications={columns[column.id] || []}
+          <KanbanColumn;            applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
@@ -764,3 +813,4 @@ if (isLoading) {
   );
 }
 ;
+}

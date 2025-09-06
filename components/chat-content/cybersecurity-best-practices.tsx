@@ -1,5 +1,7 @@
 
 
+
+
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Cybersecurity Best Practices</h1>;
@@ -16,6 +18,10 @@
   );
 
 
+
+}
+
+}
 import React from 'react';
 
 
@@ -57,11 +63,16 @@ function CybersecurityBestPracticesPage() {
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 
 
 
   )
 }
+
 
 
 export default function CybersecurityBestPracticesPage() {
@@ -81,6 +92,10 @@ export default function CybersecurityBestPracticesPage() {
     </div>
   );
 
+ursor/fix-website-loading-errors-and-merge-6662
+    </div>
+  );
+
     </div>;
   );
 }
@@ -92,3 +107,6 @@ export default function CybersecurityBestPracticesPage() {
 }
 
 
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

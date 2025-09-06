@@ -25,6 +25,16 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
+import React from "react",
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+
+export function ApiErrorCodes() {
+
+  const errorExample = `{
+export function ApiErrorCodes() {;
+  const errorExample = `{;
   "error": "validation_error";
   "message": "The request was invalid";
   "details": [;
@@ -42,10 +52,11 @@ export function ApiErrorCodes() {
   const errorExample = `{;
   "error": "validation_error";
   "message": "The request was invalid";
-import React from "react",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
+    },
+
+    {
+      "field": "budget.min";
+      "error": "Budget minimum must be greater than 0"import React from "react",
 
 
 
@@ -112,6 +123,7 @@ function ApiErrorCodes() {
 
 
   const errorCodes = [
+      "error": "Title is required"  const errorCodes = [
     {
       status: 400
       code: "validation_error"
@@ -135,9 +147,10 @@ function ApiErrorCodes() {
 
 
     }
+    }
+
+
     },
-
-
     {
       status: 401
       code: "invalid_token"
@@ -165,6 +178,7 @@ function ApiErrorCodes() {
 
 
     {
+      details: "The provided API key is incorrect, expired, or revoked."    {
       status: 404
       code: "not_found"
       message: "The requested resource was not found."
@@ -187,9 +201,10 @@ function ApiErrorCodes() {
 
 
     }
+    }
+
+
     },
-
-
     {
       status: 429
       code: "rate_limit_exceeded"
@@ -217,6 +232,7 @@ function ApiErrorCodes() {
 
 
     {
+      details: "Includes retry_after parameter indicating when to retry."    {
       status: 503
       code: "service_unavailable"
       message: "Service temporarily unavailable."
@@ -224,9 +240,11 @@ function ApiErrorCodes() {
     }
 
   ];
+  ]
+
+
+
   ],
-
-
 
   const rateLimits = [
     {
@@ -242,6 +260,7 @@ function ApiErrorCodes() {
 
 
     {
+      notes: "Aggregate limit across all GET endpoints"    {
       endpoint: "All POST endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all POST endpoints"
@@ -289,7 +308,11 @@ function ApiErrorCodes() {
     },
 
 
+    {},
     {
+      endpoint: "All DELETE endpoints"
+      limit: "15 requests per minute"
+      notes: "Aggregate limit across all DELETE endpoints"    {
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
@@ -515,6 +538,13 @@ export function ApiErrorCodes() {;
 
         <h2>Error Format</h2>;
         <p>;
+    },
+
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href="#" className="text-zion-cyan"> contact our support team</Link>.        </p>
+      </div>
+    </ApiDocsLayout>
+  )        <h2>Error Format</h2>;        <p>;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
@@ -585,6 +615,19 @@ export function ApiErrorCodes() {;
                 </tr>
 
               ))}
+              {errorCodes && errorCodes.map((error, index) => (;
+                <tr key={error && error.code} className={index < errorCodes && errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>;
+                  <td className="py-2 px-4 text-white">;
+                    <spanclassName={`inline-block px-2 rounded text-xs font-medium ${
+                      error && error.status < 500 ? "bg-orange-950 text-orange-500" : "bg-red-950 text-red-500"
+                    }`}>;
+                      {error && error.status}
+                    </span>;
+                  </td>;
+                  <td className="py-2 px-4 text-white font-mono">{error && error.code}</td>;
+                  <td className="py-2 px-4 text-zinc-300">{error && error.message}</td>;
+                  <td className="py-2 px-4 text-zinc-400 text-sm">{error && error.details}</td>;
+                </tr>;              ))}
             </tbody>;
           </table>;
         </div>;
@@ -665,6 +708,7 @@ export function ApiErrorCodes() {;
       details: "The API is temporarily unavailable due to maintenance or high load.";
 
     }
+        <h2>Rate Limits</h2>;    }
   ];
 }`;
   const rateLimitExample = `{
@@ -708,6 +752,30 @@ export function ApiErrorCodes() {;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         ;
         <h2>Rate Limits</h2>;
+                      {error.status}
+                    </span>;
+                  </td>;
+                  <td className="py - 2 px - 4 text - white font-mono">{error.code}</td>;
+                  <td className="py - 2 px - 4 text - zinc-300">{error.message}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 400 text-sm">{error.details}</td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>;
+        <h2 > Handling Errors</h2>;
+        <p>;
+          Your application should be prepared to handle error responses appropriately: </p>;
+        <ul>;
+          <li><strong > 401 and 403 errors</strong>: Check your API key and permissions</li>;
+          <li><strong > 429 errors</strong>: Implement retry logic with backoff</li>;
+          <li><strong > 5xx errors</strong>: These are server - side issues, retry with backoff</li>;
+        </ul>;
+        <h3 > Rate Limiting</h3>;
+        <p>;
+          When you exceed the rate limit, you'll receive a 429 response with details on when to retry:;
+        </p>;
+        <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
+        <h2 > Rate Limits</h2>;
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
@@ -724,6 +792,15 @@ export default ApiErrorCodes;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Endpoint</th>;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Limit</th>;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Notes</th>;
+}export default ApiErrorCodes;
+
+        <div className="overflow - x-auto mb-8">;
+          <table className="w - full border-collapse">;
+            <thead>;
+              <tr className="border - b border - zinc-800">;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Endpoint</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Limit</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Notes</th>;
               </tr>;
             </thead>;
             <tbody>;
@@ -732,6 +809,9 @@ export default ApiErrorCodes;
                   <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;
                   <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;
                   <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
+                  <td className="py - 2 px - 4 text - white font-mono">{limit.endpoint}</td>;
+                  <td className="py - 2 px - 4 text - zinc-300">{limit.limit}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 400 text-sm">{limit.notes}</td>;
                 </tr>))}
             </tbody>;
           </table>;

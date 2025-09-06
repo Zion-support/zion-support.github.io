@@ -39,6 +39,7 @@ export function Step(): any ({;
 
 
 interface StepProps {
+export function Step(): any ({;interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
@@ -215,6 +216,7 @@ export function Step({;
           </span>;
         )}
           {label}
+          <span>          {label}
         </h3>;
         {description && (;
           <p className="text-sm text-zion-slate-light">{description}</p>;
@@ -225,6 +227,8 @@ export function Step({;
 
 
 interface StepsProps {;
+  );
+}
   currentStep: number,;
   className?: string;
   children: React && React.ReactNode;
@@ -306,6 +310,10 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children);
   return (;
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
+            style={{;
+export function Steps({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React.Children.toArray(children);
+  return (;        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
@@ -316,6 +324,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
               width:`${(currentStep / (childrenArray.length - 1)) * 100}%`}}
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;
@@ -397,6 +406,8 @@ function Steps() {
   return (
     <div className={cn ("w - full", class_name)}>;
       <ol className="space - y-6 md:flex md:space - y-0 md:space - x-16">;
+    <div className={cn ("w - full", class_name)}>;
+      <ol className="space - y-6 md:flex md:space - y-0 md:space-x-16">;
         {React.Children.map (children_array, (child, index) => {
           if () return null) {
   $2
@@ -418,6 +429,10 @@ if (status = "current") {
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;
           <div;
             className="h - full bg - zion - purple transition - all";
+      <div className="hidden md:flex md:mt-4">;
+        <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue-light">;
+          <div;
+            className="h - full bg - zion - purple transition-all";
             style={{
               width: `${(current_step / (children_array.length - 1)) * 100}%`}}
           />;
@@ -450,3 +465,4 @@ if (status = "current") {
 ;
 
 
+}

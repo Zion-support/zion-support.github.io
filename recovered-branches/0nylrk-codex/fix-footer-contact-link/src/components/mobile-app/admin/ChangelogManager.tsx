@@ -29,6 +29,8 @@ import { AppPlatform } from "./MetadataManager",
 
 
 
+type ChangelogEntry = {import { Plus, Trash2 } from "lucide-react";
+
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -99,6 +101,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 name="date"
 
 import React, { useState } from "react",;
+    {import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -140,6 +143,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       ...newEntry,;
       id: Math && Math.random().toString(36).substring(2, 9),;
     };
+      id: Math && Math.random().toString(36).substring(2, 9)
+};
 
     setEntries([entry, ...entries]);
     setNewEntry({;
@@ -152,6 +157,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   const handleRemoveEntry = (id: string) => {;
     setEntries(entries && entries.filter((entry) => entry && entry.id !== id));
   };
+    })
+};
+
+  const handleRemoveEntry = (id: string) => {;
+    setEntries(entries && entries.filter((entry) => entry && entry.id !== id))
+};
 
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
@@ -230,6 +241,10 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
 value={newEntry.date}
 
                 onChange={handleInputChange}
+              <Input
+                placeholder="Version (e && e.g. 1 && 1.0.1)"
+                name="version"
+                value={newEntry && newEntry.version}                onChange={handleInputChange}
               />
             </div>
             <Button
@@ -248,6 +263,7 @@ onClick={handleAddEntry}
           </div>
 
 
+              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
               onClick={handleAddEntry}
 
             <Button
@@ -268,10 +284,12 @@ onClick={handleAddEntry}
             </div>;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
+            >;
               <Plus className="mr-2 h-4 w-4" />;
               Add;
             </Button>;
           </div>;
+
           
             <Button
               onClick={handleAddEntry}
@@ -522,6 +540,11 @@ if (return) {
 
 };
   );
+            rows={3}          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  )
 };
   ),;
 },; interface ChangelogManagerProps {
@@ -545,6 +568,7 @@ setEntries ([entry, ...entries]);
 setNewEntry ({
   version: "";
 date: new Date () .toISOString () .split ('T') [0];
+date: new Date () .toISOString () .split ('T') [0]
 };
   handleAddEntry 
 }disabled= {
@@ -561,3 +585,7 @@ date: new Date () .toISOString () .split ('T') [0];
 };
 
 
+  )
+};
+
+};

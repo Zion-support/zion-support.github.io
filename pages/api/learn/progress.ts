@@ -61,12 +61,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
     if (req && req.method === 'POST') {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const usersPath = null;
+    return res.status(405).end('Method Not Allowed')
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const users = readUsers()
+    if (req.method === 'GET') {
+      const { userId = 'demo-user' } = req.query;
+      const user = users[userId as string];
+return res.status(200).json({ progress: user?.progress ?? {} });
+    }
+    if (req.method === 'POST') {
       const {
         userId = 'demo-user'
         courseId
         lessonId
         percent
       } = req && req.body || {};
+      } = req.body |{}
       if (!courseId)
         return res.status(400).json({ error: 'courseId required' });
       const user = users[userId] |{
@@ -125,16 +140,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).end('Method Not Allowed');
 
+return res.status(200).json({ ok: true, progress: courseProgress });
+    }
+    res.setHeader('Allow', 'GET, POST');
+    return res.status(405).end('Method Not Allowed');
   } catch (e: any) {
     return res
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {;
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
   } catch (error) {
@@ -283,3 +299,6 @@ export default function handler(req, res) {
 
 }
 }
+  }
+
+}}

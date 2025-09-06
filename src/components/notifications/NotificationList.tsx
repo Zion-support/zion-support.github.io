@@ -12,7 +12,16 @@ import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 
 
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
 
 interface Notification {
   id: string;
@@ -36,6 +45,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications,
   onMarkAsRead,
   onMarkAllAsRead,
+  onClearAll
   onClearAll
 }) => {
   if (loading) {
@@ -129,10 +139,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 };
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-import { EmptyState } from '@/components/ui/empty-state';
+>>>>>>> main
 import { Bell } from 'lucide-react'
+interface NotificationListProps {}; import React from 'react'
 interface NotificationListProps {}; import React from 'react'
 interface NotificationListProps {}; import React from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -181,6 +190,7 @@ import { Button } from '@/components / ui / button';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 
+},) => {} import React from 'react';
 },) => {} import React from 'react';
 interface NotificationListProps {
   loading: boolean,
@@ -266,6 +276,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             className="mt - 2";
             on_click = {on_retry }
             on_click = {on_retry }
+            on_click = {on_retry }
           >;
             Try Again;
           </Button>;
@@ -279,6 +290,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           <EmptyState;
             icon = {<Bell className="h - 8 w - 8" /> }
             icon = {<Bell className="h - 8 w - 8" /> }
+            icon = {<Bell className="h - 8 w - 8" /> }
             title="No Notifications";
             description="You're all caught up.";
             action={{ text: 'Refresh', on_click: on_retry }}
@@ -287,6 +299,10 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         </div>) : (
         notifications.map ((notification, ) => (
           <NotificationItem;
+            key = {notification.id }
+            notification = {notification }
+            onMarkAsRead = {onMarkAsRead }
+            on_dismiss = {on_dismiss }
             key = {notification.id }
             notification = {notification }
             onMarkAsRead = {onMarkAsRead }
@@ -391,3 +407,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+  loading: boolean;
+  error: string | null;
+  notifications: Notification[];
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+  onRetry: () => void
+}
+export const NotificationList: React.FC<NotificationListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

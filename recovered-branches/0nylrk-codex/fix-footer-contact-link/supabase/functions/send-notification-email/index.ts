@@ -55,6 +55,15 @@ serve(async (req) => {
     const { user_id, notification_id } = await req.json() as EmailRequest,
     
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -123,6 +132,12 @@ serve(async (req) => {
   }
 });
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+      .eq('id', notification_id)      .from('profiles')
+      .select('display_name, email')
+      .eq('id', user_id)
+
+      .single(),
+
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",

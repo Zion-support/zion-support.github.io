@@ -43,6 +43,128 @@ const allServices = [
     description: 'Advanced AI and ML platforms'
   }
   {
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
+  Brain, Atom, Shield, Building, Globe;
+  Users, TrendingUp, Award, Phone, Mail, MapPin
+ } from 'lucide-react';
+// Import our new service data
+import { advancedEnterpriseServices2025  } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025  } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+const contactInfo = null;
+  Search
+  Grid
+  List
+  Star
+  CheckCircle
+  ArrowRight
+  Check
+  Brain
+  Atom
+  Shield
+  Building
+  Globe
+  Users
+  TrendingUp
+  Award
+  Phone
+  Mail
+  MapPin;
+} from 'lucide-react';
+// Mock service data
+const advancedEnterpriseServices2025 = [
+  {
+    id: "enterprise-1"
+    title: "Enterprise AI Solutions"
+    description: "Comprehensive AI implementation for large enterprises"
+    category: "enterprise"
+    price: "$50,000+"
+    rating: 4.9
+    tags: ["AI", "Machine Learning", "Enterprise"]
+    color: "from-blue-500 to-purple-500"
+    icon: "🤖"
+  }
+];
+const innovativeMicroSaasExpansion2025 = [
+  {
+    id: "micro-1"
+    title: "Micro SaaS Platform"
+    description: "Lightweight SaaS solutions for small businesses"
+    category: "micro-saas"
+    price: "$99/month"
+    rating: 4.7
+    tags: ["SaaS", "Micro Services", "Cloud"]
+    color: "from-green-500 to-teal-500"
+    icon: "⚡"
+  }
+];
+const cuttingEdgeITInfrastructureServices = [
+  {
+    id: "infra-1",
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud infrastructure solutions",
+    category: "infrastructure",
+    price: "$5,000/month",
+    rating: 4.8,
+    tags: ["Cloud", "Infrastructure", "DevOps"],
+    color: "from-orange-500 to-red-500",
+    icon: "☁️"
+  }
+];
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com'
+};
+
+const allServices = [
+  ...advancedEnterpriseServices2025,
+  ...innovativeMicroSaasExpansion2025,
+  ...cuttingEdgeITInfrastructureServices
+];
+
+const categories = [
+  {
+    id: 'all',
+    name: 'All Services',
+icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of advanced services'
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  {
+    id: 'enterprise',
+    name: 'Enterprise Solutions',
+    icon: <Building className='w-6 h-6' />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'Enterprise-grade AI and IT solutions'
+  },
+  {
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Globe className='w-6 h-6' />,
+    color: 'from-green-500 to-emerald-500',
+    description: 'Innovative micro SAAS solutions'
+  },
+  {
+    id: 'infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-orange-500 to-red-500',
+    description: 'Cutting-edge infrastructure services'
+  },
+  {
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Advanced AI and ML platforms'
+  },
+  {
     id: 'quantum'
     name: 'Quantum Computing'
     icon: <Atom className="w-6 h-6" />
@@ -52,7 +174,6 @@ const allServices = [
 ursor/automate-test-improve-and-merge-code-646c
 import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Zap, Shield, Building, Globe,
@@ -118,6 +239,13 @@ const categories = [
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
+    id: 'quantum',
+    name: 'Quantum Computing',
+    icon: <Atom className='w-6 h-6' />,
+    color: 'from-violet-500 to-indigo-500',
+    description: 'Quantum computing solutions'
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 const getServiceCategory = (service: any) => {
@@ -126,11 +254,15 @@ const getServiceCategory = (service: any) => {
 };
 
 
+  return 'Other';
+};
+
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -177,6 +309,12 @@ const allServices = [
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
+return 'Other';
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -193,6 +331,9 @@ const allServices = [;
   ...cuttingEdgeITInfrastructureServices;
 ursor/automate-test-improve-and-merge-code-646c
   return 'Contact for pricing';
+  return 'Contact for pricing';
+return 'Contact for pricing';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 const getServiceFeatures = (service: any) => {
@@ -209,6 +350,10 @@ const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+const allServices = [;
+  ...advancedEnterpriseServices2025,;
+  ...innovativeMicroSaasExpansion2025,;
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 const allServices = [;
   ...advancedEnterpriseServices2025;
@@ -217,6 +362,12 @@ const allServices = [;
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
+return [];
+};
+export default function AdvancedServicesShowcase() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -233,6 +384,8 @@ ursor/automate-test-improve-and-merge-code-646c
           </p>
         </div>
 ursor/automate-test-improve-and-merge-code-646c
+          </p>
+        </div>
 
   useEffect(() => {
     let filtered = allServices;
@@ -257,6 +410,53 @@ ursor/automate-test-improve-and-merge-code-646c
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
+if (selectedCategory === 'enterprise')
+          return (
+            category.includes('enterprise') |
+            category.includes('legal') |
+            category.includes('financial')
+          );
+        if (selectedCategory === 'micro-saas')
+          return (
+            category.includes('marketing') |
+            category.includes('social') |
+            category.includes('customer') |
+            category.includes('project')
+          );
+        if (selectedCategory === 'infrastructure')
+          return (
+            category.includes('infrastructure') |
+            category.includes('network') |
+            category.includes('data center') |
+            category.includes('edge')
+          );
+        if (selectedCategory === 'ai-ml')
+          return (
+            category.includes('ai') |
+            category.includes('machine learning') |
+            category.includes('nlp') |
+            category.includes('ml')
+          );
+        if (selectedCategory === 'quantum')
+          return (
+            category.includes('quantum') |
+            category.includes('quantum-resistant')
+          );
+        return false;
+      });
+    }
+    if (searchTerm) {
+      filtered = filtered.filter(
+        service =>
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) |
+          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
+          getServiceCategory(service)
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       );
     }
 
@@ -319,6 +519,51 @@ ursor/automate-test-improve-and-merge-code-646c
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
+<div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
+          <Star className='w-4 h-4' />
+          Popular
+        </div>
+      )}
+      <div
+        className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}
+      >
+        <span className='text-4xl'>{service.icon}</span>
+      </div>
+      <div className='p-6'>
+        <div className='flex items-start justify-between mb-3'>
+          <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
+            {service.name}
+          </h3>
+        </div>
+        <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>
+          {service.tagline}
+        </p>
+        <div className='flex items-center justify-between mb-4'>
+          <span className='text-2xl font-bold text-gray-900 dark:text-white'>
+            {getServicePricing(service)}
+          </span>
+          <span className='text-sm text-gray-500 dark:text-gray-400'>
+            {service.trialDays} day trial
+          </span>
+        </div>
+        <div className='space-y-3 mb-6'>
+          <div className='flex items-center gap-2'>
+            <CheckCircle className='w-4 h-4 text-green-500' />
+            <span className='text-sm text-gray-600 dark:text-gray-400'>
+              {service.setupTime} setup
+            </span>
+          </div>
+          <div className='flex items-center gap-2'>
+            <Users className='w-4 h-4 text-blue-500' />
+            <span className='text-sm text-gray-600 dark:text-gray-400'>
+              {service.customers ? service.customers.toLocaleString() : '1000'}+
+              customers
+            </span>
+          </div>
+          <div className='flex items-center gap-2'>
+            <Star className='w-4 h-4 text-yellow-500' />
+            <span className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
@@ -335,6 +580,24 @@ ursor/automate-test-improve-and-merge-code-646c
             ))}
             {getServiceFeatures(service).length > 3 && (
               <span className="text-sm text-gray-500 dark:text-gray-400">
+<div className='mb-6'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+            Key Features:
+          </h4>
+          <div className='space-y-1'>
+            {getServiceFeatures(service)
+              .slice(0, 3)
+              .map((feature: string, index: number) => (
+                <div key={index} className='flex items-center gap-2'>
+                  <Check className='w-3 h-3 text-green-500' />
+                  <span className='text-sm text-gray-600 dark:text-gray-400'>
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            {getServiceFeatures(service).length > 3 && (
+              <span className='text-sm text-gray-500 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 +{getServiceFeatures(service).length - 3} more features
               </span>
             )}
@@ -349,6 +612,16 @@ ursor/automate-test-improve-and-merge-code-646c
         </div>
         
 
+<div className='mb-6'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+            ROI & Benefits:
+          </h4>
+          <p className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            {service.roi}
+          </p>
+        </div>
+        
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -362,6 +635,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -377,6 +652,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
         
+        
+ursor/fix-netlify-build-and-merge-to-main-9571
+        
+>>>>>>> main
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -397,6 +676,33 @@ ursor/automate-test-improve-and-merge-code-646c
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+          
+ursor/fix-netlify-build-and-merge-to-main-9571
+          
+>>>>>>> main
+          <a
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+        <div className='mb-6'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+            Market Position:
+          </h4>
+          <p className='text-sm text-gray-600 dark:text-gray-400'>
+            {service.marketPosition}
+          </p>
+        </div>
+        <div className='flex items-center justify-between'>
+          <a
+            href={service.link}
+            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+          >
+            Learn More
+            <ArrowRight className='w-4 h-4' />
+          </a>
+          <a
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Contact
           </a>
@@ -428,6 +734,21 @@ ursor/automate-test-improve-and-merge-code-646c
                   {service.name}
                   {service.popular && (
                     <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+<div className='p-6'>
+        <div className='flex items-start gap-6'>
+          <div
+            className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}
+          >
+            <span className='text-3xl'>{service.icon}</span>
+          </div>
+          <div className='flex-1'>
+            <div className='flex items-start justify-between mb-3'>
+              <div>
+                <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
+                  {service.name}
+                  {service.popular && (
+                    <span className='ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       Popular
                     </span>
                   )}
@@ -442,6 +763,16 @@ ursor/automate-test-improve-and-merge-code-646c
                   {getServicePricing(service)}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
+<p className='text-gray-600 dark:text-gray-300 mb-3'>
+                  {service.tagline}
+                </p>
+              </div>
+              <div className='text-right'>
+                <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+                  {getServicePricing(service)}
+                </div>
+                <div className='text-sm text-gray-500 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.trialDays} day trial
                 </div>
               </div>
@@ -463,6 +794,26 @@ ursor/automate-test-improve-and-merge-code-646c
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
+<div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
+              <div className='flex items-center gap-2'>
+                <CheckCircle className='w-4 h-4 text-green-500' />
+                <span className='text-sm text-gray-600 dark:text-gray-400'>
+                  {service.setupTime} setup
+                </span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Users className='w-4 h-4 text-blue-500' />
+                <span className='text-sm text-gray-600 dark:text-gray-400'>
+                  {service.customers
+                    ? service.customers.toLocaleString()
+                    : '1000'}
+                  + customers
+                </span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Star className='w-4 h-4 text-yellow-500' />
+                <span className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
@@ -489,6 +840,36 @@ ursor/automate-test-improve-and-merge-code-646c
                 
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
+<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
+              <div>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                  Key Features:
+                </h4>
+                <div className='space-y-1'>
+                  {getServiceFeatures(service)
+                    .slice(0, 4)
+                    .map((feature: string, index: number) => (
+                      <div key={index} className='flex items-center gap-2'>
+                        <Check className='w-3 h-3 text-green-500' />
+                        <span className='text-sm text-gray-600 dark:text-gray-400'>
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                </div>
+              </div>
+              <div>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                  ROI & Benefits:
+                </h4>
+                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
+                  {service.roi}
+                </p>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                  Market Position:
+                </h4>
+                <p className='text-sm text-gray-600 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.marketPosition}
                 </p>
               </div>
@@ -506,6 +887,18 @@ ursor/automate-test-improve-and-merge-code-646c
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+<div className='flex items-center gap-4'>
+              <a
+                href={service.link}
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+              >
+                Learn More
+                <ArrowRight className='w-4 h-4' />
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Contact Sales
               </a>
@@ -522,6 +915,21 @@ ursor/automate-test-improve-and-merge-code-646c
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
+  )
+  return (
+<div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
+      <SEO
+        title='2025 Advanced Services Showcase - Zion Tech Group'
+        description='Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses.'
+        keywords={[
+          'AI services'
+          'micro SAAS'
+          'IT infrastructure'
+          'quantum computing'
+          'enterprise solutions'
+          'Zion Tech Group'
+        ]}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       />
       
       {/* Hero Section */}
@@ -562,6 +970,11 @@ ursor/automate-test-improve-and-merge-code-646c
               </div>
               <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
+              <div className="flex items-center gap-2 text-white">
+                <CheckCircle className="w-5 h-5 text-green-300" />
+              <div className='flex items-center gap-2 text-white'>
+                <CheckCircle className='w-5 h-5 text-green-300' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Market Validated</span>
               </div>
             </motion.div>
@@ -600,6 +1013,43 @@ ursor/automate-test-improve-and-merge-code-646c
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+<div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+            <div className='flex items-center gap-6'>
+              <div className='flex items-center gap-2'>
+                <Phone className='w-5 h-5 text-blue-600' />
+                <span className='text-gray-700 dark:text-gray-300'>
+                  {contactInfo.mobile}
+                </span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Mail className='w-5 h-5 text-blue-600' />
+                <span className='text-gray-700 dark:text-gray-300'>
+                  {contactInfo.email}
+                </span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <MapPin className='w-5 h-5 text-blue-600' />
+                <span className='text-gray-700 dark:text-gray-300'>
+                  {contactInfo.address}
+                </span>
+              </div>
+            </div>
+            <div className='flex items-center gap-4'>
+              <a
+                href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
+                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300'
+              >
+                Get Quote
+                <ArrowRight className='w-4 h-4' />
+              </a>
+              <a
+                href={contactInfo.website}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Visit Website
               </a>
@@ -610,6 +1060,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Filters and Search */}
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
@@ -637,6 +1090,9 @@ ursor/automate-test-improve-and-merge-code-646c
                   }`}
                 >
                   <LayoutGrid className="w-5 h-5" />
+                  <LayoutGrid className="w-5 h-5" />
+                  <Grid className='w-5 h-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -713,6 +1169,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   MapPin
   MapPin
 } from 'lucide-react';
+  MapPin} from 'lucide-react';
 ;
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
@@ -730,6 +1187,7 @@ const advancedEnterpriseServices2025 = [;
     icon: "🤖"
   }
 ];
+    icon: "🤖"}];
 ;
 const innovativeMicroSaasExpansion2025 = [;
   {
@@ -746,6 +1204,7 @@ const innovativeMicroSaasExpansion2025 = [;
     icon: "⚡"
   }
 ];
+    icon: "⚡"}];
 ;
 const cuttingEdgeITInfrastructureServices = [;
   {
@@ -762,6 +1221,7 @@ const cuttingEdgeITInfrastructureServices = [;
     icon: "☁️"
   }
 ];// Import our new service data;
+    icon: "☁️"}];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
@@ -771,12 +1231,14 @@ import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - 
   website: 'https://ziontechgroup.com'
   website: 'https://ziontechgroup.com'
 }
+  website: 'https://ziontechgroup.com'}
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
   ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
 ;
 const all_services = [;
@@ -828,6 +1290,7 @@ const categories = [;
     description: 'Quantum computing solutions'
     description: 'Quantum computing solutions'
   },
+    description: 'Quantum computing solutions'},
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
@@ -836,6 +1299,7 @@ const categories = [;
     description: 'Enterprise - grade AI and IT solutions'
     description: 'Enterprise - grade AI and IT solutions'
   },
+    description: 'Enterprise - grade AI and IT solutions'},
   {
     id: 'micro - saas',
     name: 'Micro SAAS',
@@ -844,6 +1308,7 @@ const categories = [;
     description: 'Innovative micro SAAS solutions'
     description: 'Innovative micro SAAS solutions'
   },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
@@ -852,6 +1317,7 @@ const categories = [;
     description: 'Cutting - edge infrastructure services'
     description: 'Cutting - edge infrastructure services'
   },
+    description: 'Cutting - edge infrastructure services'},
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
@@ -860,6 +1326,7 @@ const categories = [;
     description: 'Advanced AI and ML platforms'
     description: 'Advanced AI and ML platforms'
   },
+    description: 'Advanced AI and ML platforms'},
   {
     id: 'quantum',
     name: 'Quantum Computing',
@@ -869,6 +1336,7 @@ const categories = [;
   } ];
     description: 'Quantum computing solutions'
   } ];
+    description: 'Quantum computing solutions'}];
 ;
 const getServiceCategory = (service: any) =>: any {
   // Check condition
@@ -1285,6 +1753,7 @@ if ( {) {
                 </button>;
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -1480,6 +1949,12 @@ ursor/automate-test-improve-and-merge-code-646c
                 href={contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
+                Visit Website;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
                 Visit Website
@@ -1519,6 +1994,16 @@ ursor/automate-test-improve-and-merge-code-646c
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
+                >;
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
+                  }`}
+                >;
+                  <Grid className="w-5 h-5" />;
+                </button>;
+                >
+                  <LayoutGrid className="w-5 h-5" />
+                </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1531,6 +2016,31 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          {/* Category Filters */}
+          <div className="mt-6">;
+            <div className="flex flex-wrap gap-3">;
+              {categories && categories.map((category) => (;
+                  key={category && category.id}
+                  onClick={() => setSelectedCategory(category && category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
+                    selectedCategory === category && category.id;
+                      ? 'bg-gradient-to-r text-white shadow-lg';
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
+                  } ${category && category.color}`}
+                >;
+                  {category && category.icon}
+                  {category && category.name}
+                </button>;
+                >
+                  <List className="w-5 h-5" />
+>>>>>>> main
+viewMode === 'list'
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  <List className='w-5 h-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </div>
             </div>
@@ -1565,6 +2075,11 @@ ursor/automate-test-improve-and-merge-code-646c
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+{/* Category Filters */}
+          <div className='mt-6'>
+            <div className='flex flex-wrap gap-3'>
+              {categories.map(category => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -1588,6 +2103,14 @@ ursor/automate-test-improve-and-merge-code-646c
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
 
+        <div className="mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div className='mb-8'>
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+              <div>
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1614,6 +2137,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> main
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -1631,6 +2156,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
               
+              
+ursor/fix-netlify-build-and-merge-to-main-9571
+              
+>>>>>>> main
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -1638,6 +2167,16 @@ ursor/automate-test-improve-and-merge-code-646c
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-blue-500" />
+                </p>
+              </div>
+              <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
+                <div className='flex items-center gap-2'>
+                  <TrendingUp className='w-4 h-4 text-green-500' />
+                  <span>Market Growth: 150%+ YoY</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Award className='w-4 h-4 text-blue-500' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>4.8+ Average Rating</span>
                 </div>
               </div>
@@ -1645,6 +2184,8 @@ ursor/automate-test-improve-and-merge-code-646c
           </div>
         </div>
 
+
+        {/* Services Grid/List */}
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -1655,6 +2196,17 @@ ursor/automate-test-improve-and-merge-code-646c
                 No services found
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
+<div className='space-y-6'>
+          {filteredServices.length === 0 ? (
+            <div className='text-center py-12'>
+              <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
+                🔍
+              </div>
+              <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-gray-600 dark:text-gray-400'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Try adjusting your search terms or category filters.
               </p>
             </div>
@@ -1669,6 +2221,15 @@ ursor/automate-test-improve-and-merge-code-646c
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                  {filteredServices.map(service => (
+                    <ServiceCard key={service.id} service={service} />
+                  ))}
+                </div>
+              ) : (
+                <div className='space-y-6'>
+                  {filteredServices.map(service => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     <ServiceList key={service.id} service={service} />
                   ))}
                 </div>
@@ -1681,6 +2242,13 @@ ursor/automate-test-improve-and-merge-code-646c
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+<div className='mt-16 text-center'>
+          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -1787,6 +2355,10 @@ ursor/automate-test-improve-and-merge-code-646c
               Our team of experts is ready to help you implement these cutting-edge solutions.
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions.
+ursor/fix-netlify-build-and-merge-to-main-9571
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -1830,6 +2402,10 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions. 
+>>>>>>> main
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -1846,6 +2422,11 @@ ursor/automate-test-improve-and-merge-code-646c
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
+                href={`tel:${contactInfo.mobile}`}
+                className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'
+              >
+                <Phone className='w-5 h-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Call Now
               </a>
             </div>
@@ -1897,6 +2478,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 ursor/fix-netlify-build-and-merge-to-main-9571
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-netlify-build-and-merge-to-main-9571
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -1920,3 +2502,12 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+<button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
+            Get Started Today
+          </button>
+        </motion.div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

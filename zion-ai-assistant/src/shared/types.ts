@@ -40,6 +40,7 @@ export interface SuggestedMilestoneItem {
 
 
   suggestedDueDateIso: string;
+}  suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
 }
@@ -57,6 +58,11 @@ export interface MilestoneSuggestionResponse {
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
 }
 ;
 export interface MilestoneSuggestionResponse {;

@@ -85,6 +85,7 @@ export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 ursor/automate-test-improve-and-merge-code-646c
+
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -101,6 +102,7 @@ export default function AccessibilityEnhancer() {
     largeText: false,
     reducedMotion: false,
     focusVisible: false,
+    screenReader: false
     screenReader: false
     screenReader: false
   });
@@ -129,6 +131,7 @@ export default function AccessibilityEnhancer() {
       ...settings,
       reducedMotion: mediaQuery.matches,
       highContrast: highContrastQuery.matches,
+      screenReader: screenReaderDetected
       screenReader: screenReaderDetected
       screenReader: screenReaderDetected
     });
@@ -176,6 +179,7 @@ export default function AccessibilityEnhancer() {
   const toggleSetting = (setting: keyof AccessibilitySettings) => {
     const newSettings = {
       ...settings,
+      [setting]: !settings[setting]
       [setting]: !settings[setting]
       [setting]: !settings[setting]
     };

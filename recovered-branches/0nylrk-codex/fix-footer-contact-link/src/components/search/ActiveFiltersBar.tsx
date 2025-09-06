@@ -22,6 +22,7 @@ interface ActiveFiltersBarProps {
 }
 
 export function ActiveFiltersBar({;
+import { X } from "lucide-react",export function ActiveFiltersBar({;
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -44,6 +45,7 @@ export function ActiveFiltersBar({
   searchQuery;
   onRemoveFilter;
   onRemoveRating;
+
   onClearSearch
 }: ActiveFiltersBarProps) {
 
@@ -124,10 +126,18 @@ interface ActiveFiltersBarProps {;
   onRemoveRating:() => void,;
   onClearSearch:() => void;
 
+        >;
+          {type}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+      {selectedLocations && selectedLocations.map(location => (;
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+
 
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
@@ -399,3 +409,7 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 }
 
 
+      ))}          {location}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}

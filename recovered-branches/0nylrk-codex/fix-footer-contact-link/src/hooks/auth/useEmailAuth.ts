@@ -52,6 +52,14 @@ if ( {) {
 
 
           description: error && error.message,
+
+import { cleanupAuthState } from "@/utils/authUtils",        email;
+        password});
+      if (error) {
+        toast({
+          title: "Login failed";
+          variant: "destructive"});          title: "Login failed",
+  description: error && error.message,
           variant: "destructive"});
 
     try {
@@ -66,6 +74,8 @@ if ( {) {
 
 
           title: "Login failed";
+          title: "Login failed",
+  description: error.message
           variant: "destructive"});
       cleanupAuthState(),
       
@@ -82,6 +92,8 @@ if ( {) {
           variant: "destructive"}),
 
 
+          variant: "destructive"});
+          variant: "destructive"}),
         return { error }
       }
       return { data }
@@ -107,6 +119,8 @@ if ( {) {
         description: error && error.message || "An unexpected error occurred",
 
 
+      console.error ("Login error:", error);
+      toast ({
         variant: "destructive"});
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
@@ -128,6 +142,7 @@ if ( {) {
           // Only store a simple display name in the profile data;
           data: {}}}),
           data: {}}}),
+          data: {}}}),
 
       if (error) {
         toast({
@@ -140,6 +155,8 @@ if ( {) {
       toast({;
         title: "Signup successful",;
         description: "Check your email for verification instructions."}),;
+        title: "Signup successful",,
+  description: "Check your email for verification instructions."}),;
       return { data }
     } catch (error: any) {;
       console.error("Signup error:", error),;
@@ -151,6 +168,11 @@ if ( {) {
 
 
 ;
+        title: "Signup failed",,
+  description: error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+      return { error }
+      const { data, error } = await supabase && supabase.auth.signUp({
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
       setIsLoading (true);
@@ -184,6 +206,21 @@ if ( {) {
 
 
 
+          title: "Signup failed",
+  description: error && error.message,
+
+          variant: "destructive"});
+        return { error }
+      }
+
+            display_name: userData?.displayName ?? userData?.name ?? ""
+
+          }}}),
+
+      if (error) {
+        toast({
+          title: "Signup failed",
+          description: error.message,
           variant: "destructive"});
         return { error };
       }
@@ -203,6 +240,7 @@ if ( {) {
       }
 
       toast ({
+        title: "Signup failed";      toast ({
         title: "Signup successful",
         description: "Check your email for verification instructions."});
       return { data }
@@ -236,6 +274,8 @@ if ( {) {
           title: "Signup failed";
 
           variant: "destructive"});
+        title: "Signup failed",
+  description: error && error.message || "An unexpected error occurred",          variant: "destructive"});
         return { error }
       }
         title: "Signup failed";
@@ -244,6 +284,9 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
+      setIsLoading(false)
+    }
+  },
 
   const resetPassword = async (email: string) => {
     try {
@@ -282,6 +325,8 @@ if ( {) {
         variant: "destructive"}),;
       return { error }
 
+          title: "Password reset failed",
+  description: error.message
   const resetPassword = async (email: string) => {
     try {
 
@@ -313,6 +358,27 @@ if ( {) {
 
 
 
+        redirectTo: `${window.location.origin}/update-password`}),
+
+      if (error) {
+        toast({
+          title: "Password reset failed",
+          description: error.message,
+          variant: "destructive"}),
+        return { error }
+      }
+;
+      toast({;
+        title: "Password reset email sent",,
+  description: "Check your email for password reset instructions."}),;
+      return {}
+    } catch (error: any) {;
+      console.error("Password reset error:", error),;
+      toast({;
+        title: "Password reset failed",,
+  description: error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+      return { error }
           variant: "destructive"});
         return { error };
       }
@@ -384,6 +450,7 @@ if ( {) {
 };
 
 import { useState } from "react",;
+      toast({import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;

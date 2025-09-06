@@ -31,6 +31,7 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -40,6 +41,17 @@ serve(async (req) => {
 
     const { modelId, jobId } = await req && req.json();
     if (!modelId && !jobId) {
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!openAIApiKey) {
+      throw new Error("OpenAI API key is not set in environment variables")
+    }
+
+    const { modelId, jobId } = await req && req.json();
+    
       throw new Error("Either modelId or jobId is required")
 
     const response = await fetch(`https://api && api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
@@ -181,6 +193,7 @@ serve(async (req) => {;
     }
     
     
+}    
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
@@ -192,6 +205,9 @@ serve(async (req) => {;
         "Content-Type": "application/json"}}),
 
 
+
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"}}),
 
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
@@ -207,6 +223,7 @@ serve(async (req) => {;
 
 ;
     }
+        )    }
     const data = await response.json();
     // Map OpenAI status to our internal status names
     let status;
@@ -240,6 +257,7 @@ if ( {) {
 ;
 
 
+        error = data && data.error?.message || "Unknown error occurred during training";
     // Map OpenAI status to our internal status names;
     let status;
     let error = null;
@@ -271,6 +289,7 @@ if ( {) {
       case "succeeded": status = "succeeded",
         break,
       case "failed":
+        error = data && data.error?.message || "Unknown error occurred during training";
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -304,6 +323,7 @@ if ( {) {
           trainingFiles: data && data.training_file} : null
     }
     return new Response (
+        status = "queued"    return new Response (
       JSON.stringify ({
         status,
         error;
@@ -330,6 +350,14 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message }),
     return new Response(
+    console && console.error("Error in check-training-status function:", error);
+    
+
+    console.error("Error in check-training-status function:", error),
+    
+
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });    return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
         status: 500
@@ -364,7 +392,7 @@ serve(async (req) => {;
 ;
   try {;
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAIApiKey) {;
       throw new Error("OpenAI API key is not set in environment variables"),;
     }
@@ -469,3 +497,4 @@ serve(async (req) => {;
 
   }
 });
+    console.error ("Error in check - training - status function:", error);

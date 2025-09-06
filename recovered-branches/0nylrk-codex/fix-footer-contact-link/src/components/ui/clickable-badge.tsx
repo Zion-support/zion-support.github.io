@@ -2,6 +2,7 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
+export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   onRemove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
@@ -19,6 +20,13 @@ export function ClickableBadge({;
   variant = "default";
   onRemove;
 
+
+export function ClickableBadge(): any ({;  children;
+  className;
+  variant = "default";
+  onRemove;
+  ...props;
+}: ClickableBadgeProps) {;
 
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
@@ -60,6 +68,7 @@ export function ClickableBadge({
 }
 
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
+  variant;          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
@@ -171,3 +180,4 @@ onRemove && "pl-2.5 pr-1.5 py-1";
     </div>);
 }
 ;
+          }}

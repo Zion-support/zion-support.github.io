@@ -18,6 +18,10 @@ interface PaymentSectionProps {
     });
   };
 
+import { MapPin  } from './lucide-react';
+import { PaymentButton  } from '@/components / transactions / PaymentButton';
+import { CountryPricing  } from '@/data / onsiteServicePricing';
+import { toast  } from '@/hooks / use - toast';
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -44,6 +48,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
       title: "Processing your request";
       description: "You'll be redirected to our secure payment portal momentarily."});
   };
+      title: "Processing your request",
+  description: "You'll be redirected to our secure payment portal momentarily."})
+};
   return (;
     <div className="text-center">;
       <p className="text-zion-slate-light mb-2">Selected Country</p>;
@@ -91,6 +98,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       <PaymentButton
         amount={selectedCountry && selectedCountry.pricePerIncident}
         serviceId="it-onsite-service"
+        serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
@@ -120,3 +128,4 @@ function PaymentSection() {
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

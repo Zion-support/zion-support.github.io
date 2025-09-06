@@ -3,6 +3,7 @@
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -99,17 +100,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const r: EnterpriseRole = role || "viewer";
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
   }
   // Check condition
 if ( {) {
   $2
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
-import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
 export default function handler(req, res) {
   try {
   const { companyId } = req.query;
@@ -173,6 +173,8 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
+  return res.status (405).json ({ error: "method_not_allowed" });
+}
 
 
     const member = store.addMember(companyId, name, email, r);
@@ -202,6 +204,12 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const company = null;
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -244,3 +252,18 @@ if ( {) {
   }
 }
 }
+ursor/fix-website-loading-errors-and-merge-6662
+}
+}
+if (!memberId || typeof memberId !== 'string')
+      return res.status(400).json({ error: 'memberId required' });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -96,6 +96,13 @@ import { ProjectReviewSection } from "@/components/projects/reviews/ProjectRevie
 
 
 
+function ProjectDetailsContent() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { getProjectById, updateProjectStatus } = useProjects();
+
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -126,6 +133,7 @@ function ProjectDetailsContent() {
 
         
         // Now fetch notes
+      if (projectData) {        // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
@@ -215,6 +223,7 @@ function ProjectDetailsContent() {;
 
 
     try {
+        navigate("/dashboard")    try {
       const { data, error } = await supabase;
         .from ("project_notes");
         .select (`;
@@ -544,6 +553,16 @@ if ( {) {
     );
   }
     return (
+    switch (status) {        // Now fetch notes;
+        fetchProjectNotes(projectId);
+      } else {;
+        toast({;
+          title: "Project not found",,
+  description: "The requested project could not be found.",;
+          variant: "destructive"}),;
+        navigate("/dashboard");
+      setIsLoading(false);
+    }    return (
       <div className="container mx-auto py-8">;
         <Card>;
           <CardContent className="flex flex-col items-center justify-center py-10">;
@@ -558,6 +577,11 @@ if ( {) {
         return <Badge variant="secondary">Changes Requested</Badge>;
       case "in_progress":;
         return <Badge className="bg - blue - 100 text - blue - 800">In Progress</Badge>;
+        return <Badge className="bg - green - 100 text - green-800">Offer Accepted</Badge>;
+      case "changes_requested":;
+        return <Badge variant="secondary">Changes Requested</Badge>;
+      case "in_progress":;
+        return <Badge className="bg - blue - 100 text - blue-800">In Progress</Badge>;
       case "completed":;
         return <Badge variant="default">Completed</Badge>;
       case "canceled":;
@@ -593,7 +617,7 @@ if ( {) {
   const handleStatusChange = async (newStatus:ProjectStatus) => {;
     if (!project) return,;
     ;
-    const success = await updateProjectStatus(project.id, newStatus),;
+    const success = await updateProjectStatus(project.id, newStatus);
     ;
     if (success) {;
       setProject({;
@@ -641,6 +665,22 @@ if ( {) {
   }
 
   }
+    }
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="container mx - auto py-8">;
+        <div className="flex justify - center items - center h-64">;
+          <div className="text-center">;
+            <div className="animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full mx - auto mb-4"></div>;
+            <p > Loading project details...</p>;
+          </div>;
+        </div>;
+      </div>);  }
   },
   
   if (isLoading) {
@@ -733,6 +773,18 @@ if ( {) {
 
 
 
+      <div className="container mx - auto py-8">;
+        <Card>;
+          <CardContent className="flex flex - col items - center justify - center py-10">;
+            <AlertCircle className="h - 10 w - 10 text - muted - foreground mb-4" />;
+            <h2 className="text - xl font - bold mb-2">Project Not Found</h2>;
+            <p className="text - muted - foreground mb-4">;
+              The project you're looking for doesn't exist or you don't have access to it.;
+            </p>;
+            <Button on_click={() => navigate ("/dashboard")}>;
+            </Button>;
+          </CardContent>;
+        </Card>;
   return (
     <>
       <SEO
@@ -934,6 +986,7 @@ if ( {) {
 
 
                           </Link>
+                          </Link>                          </Link>
                         </Button>
                       </div>
                     ) : (
@@ -993,18 +1046,28 @@ if ( {) {
               <div className="flex items - center gap - 2 mt - 1">;
                 {getStatusBadge (project.status)}
                 <span className="text - muted - foreground">;
+      <main className="container mx - auto px - 4 py-8">;
+        <div className="mb-6">;
+          <div className="flex flex - col md:flex - row justify - between md:items - center gap - 4 mb-2">;
+            <div>;
+              <h1 className="text - 3xl font-bold">{project.job?.title || "Project"}</h1>;
+              <div className="flex items - center gap - 2 mt-1">;
+                {getStatusBadge (project.status)}
+                <span className="text - muted-foreground">;
                   Started on {format (new Date (project.start_date), "PPP")}
                 </span>;
               </div>;
             </div>;
             {/* Action Buttons Based on Role and Status */}
             <div className="space - x-2">;
+            <div className="space-x-2">;
               {is_talent && isOfferPending && (
                 <>;
                   <AlertDialog>;
                     <AlertDialogTrigger as_child>;
                       <Button variant="default">;
                         <CheckCircle2 className="mr - 2 h - 4 w - 4" /> Accept Offer;
+                        <CheckCircle2 className="mr - 2 h - 4 w-4" /> Accept Offer;
                       </Button>;
                     </AlertDialogTrigger>;
                     <AlertDialogContent>;
@@ -1027,6 +1090,7 @@ if ( {) {
                   <AlertDialogTrigger as_child>;
                     <Button variant="default">;
                       <CheckCircle2 className="mr - 2 h - 4 w - 4" /> Mark as Completed;
+                      <CheckCircle2 className="mr - 2 h - 4 w-4" /> Mark as Completed;
                     </Button>;
                   </AlertDialogTrigger>;
                   <AlertDialogContent>;
@@ -1046,6 +1110,7 @@ if ( {) {
                   </AlertDialogContent>;
                 >;
                   <MessageSquare className="mr - 2 h - 4 w - 4" /> Message;
+                  <MessageSquare className="mr - 2 h - 4 w-4" /> Message;
                 </Button>)}
             </div>;
           </div>;
@@ -1067,6 +1132,10 @@ if ( {) {
                       <div>;
                       <div>;
                         <h3 className="font - semibold mb - 2">Payment Terms</h3>;
+                    <div className="space-y-4">;
+                      <div>;
+                      <div>;
+                        <h3 className="font - semibold mb-2">Payment Terms</h3>;
                         <Badge variant="outline" className="capitalize">;
                           {project.payment_terms} Payment;
                         </Badge>;
@@ -1105,6 +1174,8 @@ if ( {) {
                           <div>;
                             <h3 className="font - semibold">Project Agreement</h3>;
                             <p className="text - sm text - muted - foreground">;
+                            <h3 className="font-semibold">Project Agreement</h3>;
+                            <p className="text - sm text - muted-foreground">;
                               Uploaded when project was created;
                             </p>;
                           </div>;
@@ -1220,6 +1291,11 @@ if ( {) {
             ;
             {/* Action Buttons Based on Role and Status */}
 
+                            <div key={note.id} className="bg - muted / 30 p - 3 rounded-md">;
+                              <div className="flex items - center gap - 2 mb-2">;
+                                <Avatar className="h - 6 w-6">;
+                                  {note.created_by_profile?.avatar_url ? (
+
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
@@ -1258,6 +1334,7 @@ if ( {) {
               {(isClient || isTalent) && project.status === "in_progress" && (;
 
                 <AlertDialog>;
+              {(isClient || isTalent) && project && project.status === "in_progress" && (;                <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
                       <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
@@ -1287,6 +1364,9 @@ if ( {) {
                   <Link to={`/project/${project.id}/milestones`}>;
 
                     <Layers className="mr-2 h-4 w-4" /> Milestones;
+              {isActiveProject && (;
+                <Button variant="default" asChild>;
+                  <Link to={`/project/${project && project.id}/milestones`}>;                    <Layers className="mr-2 h-4 w-4" /> Milestones;
                   </Link>;
                 </Button>;
               )}
@@ -1297,6 +1377,9 @@ if ( {) {
                   <Link to={`/project/${project.id}/room`}>;
 
                     <Video className="mr-2 h-4 w-4" /> Project Room;
+              {isActiveProject && (;
+                <Button variant="outline" asChild>;
+                  <Link to={`/project/${project && project.id}/room`}>;                    <Video className="mr-2 h-4 w-4" /> Project Room;
                   </Link>;
                 </Button>;
               )}
@@ -1308,6 +1391,10 @@ if ( {) {
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
 
                 >;
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project && project.status) && (;
+                <Button
+                  variant="outline" 
+                  onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clientId=${project && project.client_id}`)}                >;
                   <MessageSquare className="mr-2 h-4 w-4" /> Message;
                 </Button>;
               )}
@@ -1332,6 +1419,10 @@ if ( {) {
               </TabsList>;
               ;
 
+                {project && project.status === "completed" && (;
+                  <TabsTrigger value="reviews">Reviews</TabsTrigger>;
+                )}
+              </TabsList>;
               <TabsContent value="details">;
                 <Card>;
                   <CardHeader>;
@@ -1363,6 +1454,21 @@ if ( {) {
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
 
                         </div>;
+                          <p className="whitespace-pre-wrap">{project && project.scope_summary}</p>;
+                        </div>;
+                      </div>;
+
+                      <div>;
+                        <h3 className="font-semibold mb-2">Payment Terms</h3>;
+                        <Badge variant="outline" className="capitalize">;
+                          {project && project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+
+                      <div>;
+                        <h3 className="font-semibold mb-2">Job Details</h3>;
+                        <div className="bg-muted/30 p-4 rounded-md">;
+                          <p className="whitespace-pre-wrap">{project && project.job?.description}</p>;                        </div>;
                       </div>;
                     </div>;
                   </CardContent>;
@@ -1398,6 +1504,19 @@ if ( {) {
                             {getStatusBadge(project.status)}
 
                           </div>;
+                        <Calendar className="h-5 w-5 text-primary mt-0 && 0.5" />;
+                        <div>;
+                          <h3 className="font-semibold">Start Date</h3>;
+                          <p>{format(new Date(project && project.start_date), "PPP")}</p>;
+                        </div>;
+                      </div>;
+
+                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
+                        <Clock className="h-5 w-5 text-primary mt-0 && 0.5" />;
+                        <div>;
+                          <h3 className="font-semibold">Project Status</h3>;
+                          <div className="mt-1">;
+                            {getStatusBadge(project && project.status)}                          </div>;
                         </div>;
                       </div>;
                     </div>;
@@ -1420,6 +1539,7 @@ if ( {) {
                     {project.agreement_url ? (;
 
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;
+                    {project && project.agreement_url ? (;                      <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;
                         <div className="flex items-center gap-3">;
                           <FileText className="h-5 w-5 text-primary" />;
                           <div>;
@@ -1441,6 +1561,11 @@ if ( {) {
                     ) :(;
 
                       <div className="text-center py-8">;
+                          <a href={project && project.agreement_url} target="_blank" rel="noopener noreferrer">;                            View;
+                          </a>;
+                        </Button>;
+                      </div>;
+                    ) : (;                      <div className="text-center py-8">;
                         <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2" />;
                         <h3 className="font-semibold">No Documents Yet</h3>;
                         <p className="text-sm text-muted-foreground">;
@@ -1468,6 +1593,12 @@ if ( {) {
 
 
 
+                        {notes && notes.length > 0 ? (;
+                          notes && notes.map((note) => (;
+                            <div key={note && note.id} className="bg-muted/30 p-3 rounded-md">;
+                              <div className="flex items-center gap-2 mb-2">;
+                                <Avatar className="h-6 w-6">;
+                                  {note && note.created_by_profile?.avatar_url ? (;
                                     <img
                                       src={note && note.created_by_profile.avatar_url}
                                       alt={note && note.created_by_profile.display_name}
@@ -1501,6 +1632,8 @@ if ( {) {
                         ) :(;
 
                           <div className="text-center py-8">;
+                                    <User className="h-4 w-4" />;
+                                  )}
                             <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />;
                             <p className="text-muted-foreground">;
                               No notes yet. Add the first note to this project.;
@@ -1513,6 +1646,8 @@ if ( {) {
 
                                     <User className="h-4 w-4" />;
                                   )}
+                      {isOfferAccepted && (;
+                        <div>;
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -1548,12 +1683,14 @@ if ( {) {
                         </div>;
                       )}
 
+                            disabled={!newNote && newNote.trim() || isSubmittingNote}>;
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
 
 
+                        <img
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -2126,6 +2263,10 @@ if ( {) {
             </Card>;
 
 
+                          className="mt-2"                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -2247,6 +2388,11 @@ if ( {) {
 
 
             </Card>;
+                  </p>                    </div>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;            </Card>;
           </div>;
         </div>;
       </main>;
@@ -2263,6 +2409,10 @@ export default function ProjectDetails() {;
 
 
     </>);
+    </>;
+  );
+
+}    </>);
 }
 export default /**
  * ProjectDetails - Function description
@@ -2304,3 +2454,4 @@ export default function ProjectDetails() {;
   );
 }
 ;
+}

@@ -14,6 +14,10 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 
 // Find a route by path in the complete sitemap
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+};// Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
@@ -25,6 +29,10 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath(path),
+  return route?.requiredAuth === true
 };
 
   return route?.requiredAuth === true
@@ -78,6 +86,29 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   // Split the path into segments
   const segments = path && path.split('/').filter(Boolean);
   let currentPath = '';
+},
+
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (
+  path: string,
+  isAuthenticated: boolean
+},
+
+export const isProtectedRoute = (path: string): boolean => {
+
+  const route = findRouteByPath(path),
+
+  return true
+}
+// Get breadcrumb items for a path
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path.split('/').filter(Boolean);
   for (const segment of segments) {
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
@@ -96,6 +127,9 @@ import { complete_sitemap, SitemapItem } from '@/config / sitemap';
 
 
 
+
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
   if (route.requiredAuth && !isAuthenticated) return false,
   
 
@@ -204,3 +238,5 @@ if ( {) {
 
 
 
+  return breadcrumbs
+};

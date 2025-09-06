@@ -34,6 +34,16 @@ function handler() {
     session_id: string;
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '[^']*';
+import { tagOperatorSession } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string },
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+  const requests = null;
+  return res.status(200).json({ ok: true, id })
+}
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -100,7 +110,6 @@ export default async function handler(
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Session escalated' });
@@ -122,4 +131,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
+    reason?: string;
+    tag?: string;
+  };
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+const record = {
+    id,
+    sessionId,
+    reason: reason ?? 'User requested escalation',
+    tag: tag ?? 'escalate',
+    status: 'open',
+    createdAt: Date.now()
+  };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+
+return res.status(200).json({ ok: true, id });
+
 }

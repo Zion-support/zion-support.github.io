@@ -36,6 +36,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
   const { conversation, message } = sendMessage({
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { sendMessage } from '../../../utils/messaging/storage';
+import { ConversationContext } from '../../../utils/messaging/types';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
     senderId: user.id,
     recipientId,
     body,
@@ -45,3 +50,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+    attachmentName,
+context
+  });
+  res.status(200).json({ conversation, message });
+
+}

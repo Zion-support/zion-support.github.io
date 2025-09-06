@@ -92,6 +92,11 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
   } catch (error) {
     throw error
   }
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Use OpenAI to find best matches
+    const bestMatches = await findBestMatches(jobDetails, talents);
+    return bestMatches
+  } catch (error) {
+    console && console.error("Error in processJobMatching:", error);  }
 }
 /**
  * Stores match results in the database and creates notifications
@@ -108,6 +113,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       .insert({
 
     if (matchError) {
+export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {    if (matchError) {
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
@@ -165,7 +171,7 @@ import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
 // Initialize the Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
 /**;
  * Main function to process job-talent matching;
@@ -224,6 +230,10 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
   await Promise.all(matchInsertPromises);
+      await supabase && supabase.rpc('create_notification', {
+        _user_id: match && match.talentId;
+        _title: "New Job Match",  
+  await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);
 
 }
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
@@ -249,6 +259,8 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
     const job_details = {
       title: job.title;
       description: job.description;
+      title: job.title,
+  description: job.description;
       category: job.category;
       skills: jobSkillsNormalized,
       budget: job.budget;
@@ -300,6 +312,7 @@ if ( {) {
 }
 ;
 /**;
+  });/**;
  * Stores match results in the database and creates notifications;
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
@@ -335,6 +348,8 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
 ;
 // Initialize the Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+;
+// Initialize the Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
@@ -354,6 +369,8 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
     const jobDetails = {;
       title:job.title,;
       description:job.description,;
+      title:job.title,,
+  description:job.description,;
       category:job.category,;
       skills:jobSkillsNormalized,;
       budget:job.budget;

@@ -13,6 +13,12 @@ export interface ProfileSkill {
   image_url?: string;
   tags?: string[];
 
+}
+  id: string;
+  title: string,
+  description: string;
+  image_url?: string;
+  tags?: string[];
   url?: string;
   date: string;
 }
@@ -74,6 +80,13 @@ export interface Availability {
 
 
 export interface Availability {}
+  company: string,
+  description: string;
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+}
 export interface ProfileData {
   id: string;
   name: string;
@@ -139,6 +152,12 @@ export interface ProfileSkill {;
 export interface ProfileProject {;
   id: string,;
   title: string,;
+  hourlyRate?: number;
+  contactEmail?: string
+};
+export interface ProfileProject {;
+  id: string,;
+  title: string,,
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -150,6 +169,7 @@ export interface ProfileExperience {;
   id: string,;
   role: string,;
   company: string,;
+  company: string,,
   description: string,;
   startDate: string,;
   endDate?: string,;

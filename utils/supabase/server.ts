@@ -1,6 +1,7 @@
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl =
@@ -15,10 +16,17 @@ export function getServerSupabase() {
 
 import { createClient } from '@supabase/supabase-js';
 
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
 const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
+
+// Supabase server utilities
 
 // Supabase server utilities
 
@@ -33,6 +41,17 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 }
@@ -57,6 +76,8 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
@@ -79,6 +100,10 @@ function getServerSupabase() {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 export function getServerSupabase() {;
@@ -94,3 +119,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main

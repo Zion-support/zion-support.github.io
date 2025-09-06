@@ -1,6 +1,7 @@
 
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,6 +15,7 @@ const ApiDevelopmentChat: NextPage = () => {
     <div>
       <Head>
 
+
 const ApiDevelopmentChat: NextPage = () => {;
   return (
     <div>;
@@ -22,6 +24,12 @@ const ApiDevelopmentChat: NextPage = () => {;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}
 
 
+
+
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
 
       </Head>;
 
@@ -33,6 +41,8 @@ const ApiDevelopmentChat: NextPage = () => {;
       </Head>;
 
 
+        <meta name="description" content="ApiDevelopmentChat service" />
+      </Head>
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -40,6 +50,7 @@ const ApiDevelopmentChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
+
 
       <main>;
         <h1>ApiDevelopmentChat</h1>;
@@ -50,6 +61,15 @@ const ApiDevelopmentChat: NextPage = () => {;
   );
 }
 export default ApiDevelopmentChat;
+
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+
+
+
+
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+
+ursor/fix-website-loading-errors-and-merge-6662
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
 
@@ -74,6 +94,7 @@ const ApiDevelopmentChat: NextPage = () => {
 export default ApiDevelopmentChat;
 ;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
@@ -114,3 +135,5 @@ export default ApiDevelopmentChat;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
 
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -43,6 +43,11 @@ const NavigationMenu = React.forwardRef<;
 
 
 import { cn } from "@/lib/utils"
+    {...props}>;
+    {children}
+    <NavigationMenuViewport />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+));import { cn } from "@/lib/utils"
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
@@ -101,6 +106,12 @@ const NavigationMenuList = React.forwardRef<;
 
     ref={ref}
     className={cn(
+    ref={ref}
+    className={cn(
+      'relative z-10 flex max-w-max flex-1 items-center justify-center'
+      "relative z-10 flex max-w-max flex-1 items-center justify-center",
+
+    className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
       className
     )}
@@ -110,6 +121,7 @@ const NavigationMenuList = React.forwardRef<;
 
 
 const NavigationMenuList = React.forwardRef<;
+));const NavigationMenuList = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
@@ -117,6 +129,10 @@ const NavigationMenuList = React.forwardRef<;
 
 
     ref={ref}
+    className={cn(
+    ref={ref}
+    className={cn(
+      "group flex flex-1 list-none items-center justify-center space-x-1",    ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
 
@@ -144,6 +160,7 @@ const NavigationMenuTrigger = React.forwardRef<
 
 
 ))
+      "group flex flex-1 list-none items-center justify-center space-x-1",))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
@@ -157,6 +174,11 @@ const NavigationMenuTrigger = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
 >(({ className, children, ...props }, ref) => (
+  React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+
+>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Trigger>(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
 NavigationMenuList && NavigationMenuList.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.List.displayName;
 
@@ -199,6 +221,7 @@ const NavigationMenuContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof Navigat</typeof>ionMenuPrimitive.Content>
 
 ))
+    <ChevronDown))
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 
 const NavigationMenuContent = React.forwardRef<
@@ -207,6 +230,8 @@ const NavigationMenuContent = React.forwardRef<
 
 
 >(({ className, ...props }, ref) => (
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.Content>(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
 NavigationMenuTrigger && NavigationMenuTrigger.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger.displayName;
 
@@ -281,6 +306,9 @@ const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>
   React.ComponentPropsWithoutRef<typeof</typeof> NavigationMenuPrimitive.Viewport>
 
+    ref={ref}    className={cn(
+      'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto '
+      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
@@ -333,6 +361,11 @@ const NavigationMenuViewport = React.forwardRef<;
     className={cn(
         className
       )}
+>(({ className, ...props }, ref) => (
+  <div className={cn('absolute left-0 top-full flex justify-center')}>
+    <NavigationMenuPrimitive.Viewport
+      className={cn(
+        className      )}
       ref={ref}
       {...props}
     />;
@@ -405,6 +438,7 @@ NavigationMenuIndicator.displayName =
 
 
     ref={ref}
+  NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;    ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
@@ -425,6 +459,7 @@ NavigationMenuIndicator.displayName =
   </NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
 ));
 export {;
+));export {;
   navigationMenuTriggerStyle,;
   NavigationMenu,;
   NavigationMenuList,;
@@ -433,6 +468,8 @@ export {;
   NavigationMenuTrigger,;
   NavigationMenuLink,;
   NavigationMenuIndicator,;
+  NavigationMenuViewport
+};
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -602,4 +639,8 @@ React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator> > ( ({
 
   NavigationMenuViewport
 }
+;
+;  NavigationMenuViewport
+};
+  NavigationMenuViewport}
 ;

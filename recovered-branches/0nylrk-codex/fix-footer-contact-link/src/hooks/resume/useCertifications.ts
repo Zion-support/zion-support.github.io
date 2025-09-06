@@ -13,6 +13,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
   const { user } = useAuth();
+export function useCertifications() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -76,6 +77,10 @@ export function useCertifications() {;
 
 
 ;
+      return false    try {
+      const { error } = await supabase
+        .from('certifications')
+        .insert({;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -382,6 +387,14 @@ deleteCertification
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
+          return showSuccessToast("Certification updated", "Your certification has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update certification')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('certifications')
+        .delete()import {useState} from 'react';
 export /**
  * use_certifications - Function description
  */
@@ -395,6 +408,9 @@ function use_certifications() {
 if ( {) {
   $2
 }
+      set_error ('You must be logged in to add certifications'),
+      return false;
+    }
   },;
   return {;
     isLoading,;
@@ -505,6 +521,8 @@ if (throw error) {
     delete_certification;
   }
   }
+  }
+}  }
 }
     setIsLoading (true);
     set_error (null);

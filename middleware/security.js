@@ -13,6 +13,17 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+>>>>>>> origin/automation-improvements-final
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+
+>>>>>>> main
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -42,6 +53,10 @@ export function securityMiddleware(request) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+}
+>>>>>>> origin/main
+>>>>>>> main
+>>>>>>> origin/main
 
 
 export function securityMiddleware(request) {;
@@ -50,6 +65,12 @@ export function securityMiddleware(request) {;
   const response = NextResponse.next();
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
+  const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
@@ -71,6 +92,12 @@ export function securityMiddleware(request) {;
 
 
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return response;// Security headers middleware
 // Security headers middleware
 
@@ -78,6 +105,7 @@ export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -87,6 +115,15 @@ export function securityHeaders(req, res, next) {
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
@@ -97,6 +134,15 @@ export function securityHeaders(req, res, next) {
 
 
 
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -109,6 +155,14 @@ export function securityHeaders(req, res, next) {
 
 
 
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 }
@@ -156,6 +210,17 @@ function security_headers() {
 }
 
 }
+}
+>>>>>>> origin/main
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -180,3 +245,8 @@ export function securityMiddleware(request) {
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/main
+>>>>>>> main
+>>>>>>> origin/main
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

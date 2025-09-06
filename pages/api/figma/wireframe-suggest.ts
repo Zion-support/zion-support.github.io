@@ -100,7 +100,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const { screenName, role } = req.body || {  } catch (error) {
+  const { screenName, role } = req.body || {} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -134,6 +134,7 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
+
 
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
@@ -240,7 +241,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const { screenName, role } = req.body || {  } catch (error) {
+  const { screenName, role } = req.body || {} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -318,3 +319,6 @@ export default async function handler(req, res) {
   }
 
 
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

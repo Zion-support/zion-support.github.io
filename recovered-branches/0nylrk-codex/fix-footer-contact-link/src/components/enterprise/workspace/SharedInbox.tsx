@@ -44,6 +44,7 @@ export function SharedInbox() {;
     {;
       id: "msg-1",
 import React from './react';
+import { Badge } from "@/components/ui/badge",import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 export /**
@@ -82,6 +83,7 @@ function SharedInbox() {
 
   return (
 import React from "react",;
+  return (import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
@@ -143,6 +145,7 @@ export function SharedInbox() {;
 
 
     <Card>;
+  return (;    <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
           <div>;
@@ -228,6 +231,10 @@ export function SharedInbox() {;
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
             View All Messages;
+          <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;        </div>;
+      </CardHeader>;
+      <CardContent className="p-0">;
+        <div className="divide-y divide-border">;            View All Messages;
           </button>;
         </div>;
       </CardContent>;
@@ -245,6 +252,10 @@ export function SharedInbox() {;
     </Card>);
 }
 }
+}
+;
+    </Card>);
+}}
     </Card>);
 }
     </Card>);

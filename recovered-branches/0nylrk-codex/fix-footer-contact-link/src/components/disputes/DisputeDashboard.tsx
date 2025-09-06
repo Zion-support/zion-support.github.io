@@ -73,6 +73,15 @@ export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes(),
 
   useEffect(() => {
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+import {} from "@/components/ui/card";
+
     refetch()
   }, [refetch]),
 
@@ -89,6 +98,9 @@ export function DisputeDashboard() {
         </div>
         
 } from "@/components/ui/card";
+
+        
+
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
@@ -140,7 +152,7 @@ export function DisputeDashboard() {;
 ;
   const openDisputes = disputes.filter(d => d.status === 'open');
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review');
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved');
 ;
   return (;
 
@@ -521,4 +533,20 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
   );
 }
 ;
+          <CardContent>        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Under Review</span>
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+            </CardTitle>
+            <CardDescription>Being actively processed</CardDescription>
+          </CardHeader>
+          <CardContent>            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+
+      <DisputesList disputes={disputes} is_loading={is_loading} />;
+    </div>);
+
 }

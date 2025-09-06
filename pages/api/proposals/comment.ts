@@ -3,6 +3,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
+const FILE_PATH = path.join(
+  process.cwd(),
+  'data',
+  'proposals',
+  'comments.json'
+);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 async function ensure() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
@@ -65,12 +73,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const comment = {
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
+      id: Date.now().toString(),
+id: Date.now().toString(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      proposalId: body.proposalId,
+      region: body.region || 'Global',
+      author: body.author || 'anon',
+      text: body.text || '',
+      id: Date.now().toString(), proposalId: body.proposalId
+      region: body.region || 'Global', author: body.author || 'anon'
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
       author: body.author || 'anon'
       text: body.text || ''
       createdAt: new Date().toISOString()
+      text: body.text || ''
+      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -80,13 +101,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 res.status(405).json({ error: "Method not allowed" });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
 async function ensure() {;
   await fs.ensureFile(FILE_PATH);
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
@@ -155,12 +172,8 @@ if ( {) {
 }
 res.status(405).json({ error: "Method not allowed" });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
 async function ensure() {;
   await fs.ensureFile(FILE_PATH);
@@ -250,3 +263,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  }
+  res.status(405).json({ error: 'Method not allowed' });
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,6 +9,13 @@ import {
   CardHeader
   CardTitle
   Card,
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
   CardContent,
   CardDescription,
   CardHeader,
@@ -40,6 +47,8 @@ export function TeamStats() {;
               </p>
 
 import React from "react",
+export function TeamStats() {;
+  return (import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
 export function TeamStats() {
@@ -60,6 +69,7 @@ export function TeamStats() {
         </div>
 
 
+        
 
               <p className="text-xl font-bold">24</p>
             </div>
@@ -82,6 +92,7 @@ export function TeamStats() {
         
         
         <div className="pt-4 text-center border-t border-border mt-4">
+        </div>        <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
@@ -91,6 +102,7 @@ export function TeamStats() {
     </Card>
 
   );
+      </CardContent>  );
 }
   )
 import React from "react",;
@@ -104,6 +116,8 @@ export function TeamStats() {;
       </CardHeader>;
       <CardContent className="space-y-4">;
           <div className="flex items-center justify-between text-sm">;
+export function TeamStats() {;
+  return (;          <div className="flex items-center justify-between text-sm">;
             <span>Team capacity</span>;
             <span className="font-medium">32 / 50 seats used</span>;
           </div>;
@@ -227,5 +241,17 @@ function TeamStats() {
 }
 ;
   );
+        <div className="pt-4 text-center border-t border-border mt-4">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View Full Analytics;
+          </button>;
+        </div>;
+      </CardContent>;
+  );
+}
+;
+    </Card>
+
+    </Card>;
+  );}  );
 }
 ;

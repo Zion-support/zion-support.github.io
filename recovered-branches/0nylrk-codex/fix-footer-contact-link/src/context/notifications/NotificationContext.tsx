@@ -2,6 +2,10 @@
 
 
 export const useNotifications = (): NotificationContextType => {
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {useNotificationOperations} from './useNotificationOperations';
+import {NotificationContextType} from './types';export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
@@ -19,9 +23,7 @@ export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-import {useNotificationOperations} from './useNotificationOperations';
+    notificationOps.fetchNotifications();import {supabase} from '@/integrations/supabase/client';
 import {NotificationContextType} from './types';
 
 
@@ -30,6 +32,10 @@ export const useNotifications = (): NotificationContextType => {;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
@@ -80,6 +86,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  fetchNotifications: async () => {}},;export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
   
@@ -87,6 +94,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {
     // Set up real-time subscription for new notifications
     if (user) {
+  useEffect(() => {    if (user) {
       const channel = supabase
         .channel('notifications-changes')
         .on('postgres_changes'
@@ -158,7 +166,7 @@ export const useNotifications = ():NotificationContextType => {;
 ;
 export const NotificationProvider = ({ children } { children:ReactNode }):JSX.Element => {;
   const { user } = useAuth(),;
-  const notificationOps = useNotificationOperations(user?.id),;
+  const notificationOps = useNotificationOperations(user?.id);
   ;
   // Load notifications when user changes;
   useEffect(() => {;
@@ -305,6 +313,23 @@ if ( {) {
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;
       {children}
 ;
+            filter: `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;
+    if (user) {;
+      const channel = supabase;
+        .channel('notifications-changes');
+        .on('postgres_changes', ;
+          {;
+            event: '*', ;
+            schema: 'public',;
+            table: 'notifications',;
+            filter: `user_id=eq.${user && user.id}`
+};
+          (payload) => {;
+            console && console.log('Notification change received:', payload);
+            notificationOps && notificationOps.fetchNotifications();
+          }
+        );
+        .subscribe();;
   return (
     <NotificationContext.Provider value={notification_ops}>;
       {children}
@@ -313,3 +338,45 @@ if ( {) {
 ;
 
 
+            event:'*', ;
+            schema:'public',;
+            table:'notifications',;
+            filter:`user_id=eq.${user.id}`;
+          },;
+          (payload) => {;
+            // // // console.log('Notification change received:', payload),;
+            notificationOps.fetchNotifications(),;
+          }
+        );
+        .subscribe(),;
+        ;
+      return () => {;
+        supabase.removeChannel(channel),;
+      },;
+    }
+  }, [user]),;
+  ;
+        .on('postgres_changes',;
+          {;
+            event: '*',;
+            schema: 'public',;
+            table: 'notifications',;
+            filter: `user_id=eq.${user.id}`;
+          },;
+          (payload) => {;
+            // // // console.log('Notification change received:', payload),;
+            notificationOps.fetchNotifications();
+          }
+        );
+        .subscribe(),;
+      return () => {;
+        supabase.removeChannel(channel);
+      }
+    }
+  }, [user]);
+  return (;
+    <NotificationContext.Provider value={notificationOps}>;
+      {children}
+    </NotificationContext.Provider>;
+  )
+};

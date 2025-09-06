@@ -70,6 +70,10 @@ interface ApireferenceProps {;
 export default function Apireference(): any ({}: ApireferenceProps) {;
 }
 export default function Apireference({}: ApireferenceProps) {
+interface ApireferenceProps {;
+  // Add props here as needed;
+}
+export default function Apireference(): any ({}: ApireferenceProps) {;
   return (
     <div>
       <h1>Apireference</h1>

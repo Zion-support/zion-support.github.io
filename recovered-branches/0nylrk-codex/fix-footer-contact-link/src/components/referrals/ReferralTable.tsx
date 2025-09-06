@@ -91,6 +91,10 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
               {referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
 
+import { formatDate } from "@/utils/referralUtils",      case "expired":
+        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
+      default:
+        return nullimport { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 interface ReferralTableProps {;
   referrals: Referral[],;
   isLoading: boolean;
@@ -316,3 +320,4 @@ isLoading: boolean
 }
 
 
+  }

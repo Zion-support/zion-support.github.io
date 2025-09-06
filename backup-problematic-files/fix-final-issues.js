@@ -141,19 +141,19 @@ ${is_page ? `import Link from './next / link';
 import { ArrowRight, Phone  } from './lucide-react';
 export default function ${component_name}() {
   return (
-    <div className="min - h-screen bg - white">;
-      <div className="max - w-4xl mx - auto px - 6 py - 16">;
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">${component_name}</h1>;
-        <p className="text - lg text - gray - 600 mb - 8">;
+    <div className="min-h-screen bg-white">;
+      <div className="max - w-4xl mx - auto px-6 py-16">;
+        <h1 className="text - 4xl font - bold text - gray-900 mb-8">${component_name}</h1>;
+        <p className="text - lg text - gray-600 mb-8">;
           This is a placeholder component for ${component_name.toLowerCase ()}.;
         </p>;
         ${is_page ? ";
-        <div className="flex flex - col "sm": flex - row gap - 4">;
-          <Link href="/contact" className="px - 6 py - 3 bg - indigo - 600 text - white rounded - lg hover:bg - indigo - 700 transition - colors inline - flex items - center">;
-            Contact Us <ArrowRight className="w - 4 h - 4 ml - 2" />;
+        <div className="flex flex-col "sm": flex - row gap - 4">;
+          <Link href="/contact" className="px - 6 py - 3 bg - indigo - 600 text - white rounded - lg hover:bg - indigo - 700 transition - colors inline-flex items-center">;
+            Contact Us <ArrowRight className="w - 4 h-4 ml-2" />;
           </Link>;
-          <Link href="/" className="px - 6 py - 3 border border - indigo - 600 text - indigo - 600 rounded - lg hover:bg - indigo - 50 transition - colors inline - flex items - center">;
-            Go Home <Phone className="w - 4 h - 4 ml - 2" />;
+          <Link href="/" className="px - 6 py - 3 border border - indigo - 600 text - indigo - 600 rounded - lg hover:bg - indigo - 50 transition - colors inline-flex items-center">;
+            Go Home <Phone className="w - 4 h-4 ml-2" />;
           </Link>;
         </div>" : ""}
       </div>;
@@ -184,8 +184,6 @@ function getComponentName(filePath) {
     .split(/[-_]/);
     .map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1).toLowerCase());
     .join("")}
-
-
 
 // Fix remaining corrupted files;
 remainingCorruptedFiles && remainingCorruptedFiles.forEach(filePath => {

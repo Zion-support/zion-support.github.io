@@ -51,6 +51,38 @@ interface ApplyToJobFormProps {
   job: Job
 
   onSuccess?: () => void
+}interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+}
+
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();  const navigate = useNavigate();
+
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+
+    if (!user) {;
+      toast && toast.error("You must be logged in to apply"),;
+      navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
+      return;import { useState } from "react",
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+}
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
 }
 interface ApplyToJobFormProps {;
   job: Job,;
@@ -103,12 +135,16 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
     
     setIsSubmitting(true),
+      toast.error("You must be logged in to apply")
+      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
+      return    setIsSubmitting(true),
     setError(null),
     
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
       if (success) {
+        toast.success("Your application has been submitted!"),      if (success) {
         toast.success("Your application has been submitted!"),
         if (onSuccess) {
           onSuccess()
@@ -271,12 +307,20 @@ if ( {) {
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
+
+      <div className="space-y-4">;
+        <div>;
+          <Label htmlFor="coverLetter">Cover Letter</Label>;
+          {isResumesLoading ? (
+            <div className="flex items - center gap - 2 mt-2">;
+              <Loader2 className="h - 4 w - 4 animate-spin" />;
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
                 type="button"
+              onValueChange={setSelectedResumeId}                type="button"
                 onClick={() => navigate("/dashboard/talent/portfolio")}
               >
                 Create Resume
@@ -424,7 +468,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth(),;
   const { applyToJob } = useJobApplications(),;
   const { resumes, isLoading: isResumesLoading } = useResume(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),;
   const [selectedResumeId, setSelectedResumeId] = useState<string>(""),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -507,6 +551,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
+            <Select
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}>;
+              <SelectTrigger className="mt-1">;            placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
           />;
           <p className="text-xs text-muted-foreground mt-1">;

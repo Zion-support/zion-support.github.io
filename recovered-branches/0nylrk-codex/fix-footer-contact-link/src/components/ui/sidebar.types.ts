@@ -141,7 +141,7 @@ export type SafeRef<T> = React.Ref<T>,
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed",
 
-export type SidebarContext = {;
+export type SidebarContext = {
   state: SidebarState;
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -162,7 +162,7 @@ export type SidebarContext = {
 },
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
-export const SIDEBAR_REF_TYPE_FIX = true,;
+export const SIDEBAR_REF_TYPE_FIX = true;
 // Define a type that makes the ref forwards compatible;
 export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
 // Helper type for component refs;
@@ -186,4 +186,6 @@ export type SidebarContext = {;
   isMobile: boolean;
   toggleSidebar: () => void;
 };
+};
+  setOpenMobile: (open: boolean) => void
 };

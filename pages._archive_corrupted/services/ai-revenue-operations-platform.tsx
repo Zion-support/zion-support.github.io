@@ -113,6 +113,10 @@ export default function AiRevenueOperationsPlatform() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function AiRevenueOperationsPlatform() {;
+  return (
+
+
     <>;
       <Head>;
         <title>AI Revenue Optimization Platform — Zion Tech Group</title>;

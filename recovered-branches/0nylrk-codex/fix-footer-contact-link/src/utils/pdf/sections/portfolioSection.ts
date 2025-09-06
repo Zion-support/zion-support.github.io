@@ -9,6 +9,7 @@ import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
   doc: jsPDF;
+export function addPortfolioSection(  doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
@@ -165,7 +166,7 @@ export function addPortfolioSection(;
 ;
     if (project.description) {;
       doc.setFontSize(10),;
-      const descriptionLines = doc.splitTextToSize(project.description, 170),;
+      const descriptionLines = doc.splitTextToSize(project.description, 170);
       doc.text(descriptionLines, 20, yPos),;
       yPos += (descriptionLines.length * 5);
     }
@@ -244,6 +245,7 @@ if ( {) {
 
 
 ;
+): number {;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
     doc.setFontSize(10),;
@@ -398,3 +400,59 @@ yPos += 4
 ;
 
 
+    // Check condition
+if ( {) {
+  $2
+}
+      doc.setFontSize (10);
+      doc.setTextColor (colors.text);
+      doc.text (`Technologies: ${project.technologies.join ()}`, 20, y_pos);
+      y_pos += 5;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      doc.setFontSize (10);
+      const description_lines = doc.splitTextToSize (project.description, 170);
+      doc.text (description_lines, 20, y_pos);
+      y_pos += (description_lines.length * 5);
+    }
+    // Add links if available;
+    // Check condition
+if ( {) {
+  $2
+}
+      y_pos += 5;
+      doc.setFontSize (9);
+      doc.setTextColor (colors.accent);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        doc.text (`GitHub: ${project.github_url}`, 20, y_pos);
+        y_pos += 4;
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        doc.text (`Demo: ${project.demo_url}`, 20, y_pos);
+        y_pos += 4;
+      }
+    }
+    y_pos += 10, // Add space between projects;
+  }
+  // If there are more projects than we're displaying;
+  // Check condition
+if ( {) {
+  $2
+}
+    doc.setFontSize (10);
+    doc.setTextColor (colors.text);
+    doc.text (`+ ${projects.length - max_projects} more projects not shown`, 20, y_pos);
+    y_pos += 6;
+  }
+  return y_pos + 5;
+}

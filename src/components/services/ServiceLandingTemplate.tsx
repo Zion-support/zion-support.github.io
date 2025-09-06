@@ -4,6 +4,24 @@ name: string;
   text: string;
   avatar?: string
 
+name: string;
+import React from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import Image from 'next/image';
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+}
+export interface Testimonial {
+  name: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  role?: string;
+  text: string;
+  avatar?: string
 }
 
 
@@ -25,7 +43,6 @@ export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-import React from 'react';
 export interface Benefit {
   title: string;
   description: string;
@@ -78,6 +95,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title,
   subtitle,
+  heroImage,
+>>>>>>> main
   heroImage,
 >>>>>>> main
   description,
@@ -154,6 +173,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
@@ -205,6 +225,78 @@ ursor/automate-test-improve-and-merge-code-646c
                       {benefit && benefit.icon}
                     </div>;
 
+  title;
+  subtitle;
+  heroImage;
+  description;
+  benefits;
+  testimonials;
+  ctaText;
+  ctaLink}) => {
+  return (
+    <div className;
+            {description}
+          </p>
+        </div>
+      </section>
+
+<section className='py-16 bg-zion-blue-light'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-2xl font-bold text-white text-center mb-8'>
+            Benefits
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {benefits.map((benefit, idx) => (
+              <div
+                key={idx}
+                className='bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center'
+              >
+                {benefit.icon && (
+                  <div className='mb-4 flex justify-center text-zion-cyan'>
+                    {benefit.icon}
+                  </div>
+                )}
+                <h3 className='text-lg font-bold mb-2'>{benefit.title}</h3>
+                <p className='text-zion-slate-light'>{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<section className='py-16 bg-zion-blue'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-2xl font-bold text-white text-center mb-8'>
+            What Our Clients Say
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {testimonials.map((t, idx) => (
+              <Card
+                key={idx}
+                className='bg-zion-blue-dark border-zion-purple/30'
+              >
+                <CardContent className='pt-6'>
+                  <p className='text-gray-200 mb-6'>"{t.text}"</p>
+                </CardContent>
+                <CardFooter className='border-t border-zion-purple/20 pt-4'>
+                  <div className='flex items-center'>
+                    {t.avatar && (
+                      <Image
+                        src={t.avatar}
+                        alt={t.name}
+                        width={40}
+                        height={40}
+className='rounded-full mr-4'
+                        loading='lazy'
+                      />
+                    )}
+                    <div>
+                      <p className='font-semibold text-white'>{t.name}</p>
+                      {t.role && (
+                        <p className='text-sm text-gray-400'>{t.role}</p>
+                      )}
+                    </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -231,6 +323,15 @@ ursor/automate-test-improve-and-merge-code-646c
                 </div>;
 
               ))}
+            </div>;
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
             </div>;
           </div>;
         </section>;
@@ -306,6 +407,15 @@ ursor/automate-test-improve-and-merge-code-646c
             </div>
           </div>
         </section>
+            </div>;
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
 >>>>>>> main
       )}
 
@@ -321,6 +431,10 @@ ursor/automate-test-improve-and-merge-code-646c
 
           <a
             href={ctaLink}
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+          >
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
@@ -349,6 +463,11 @@ ursor/automate-test-improve-and-merge-code-646c
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
+                  </div>
+                  </div>
+                  </div>;
+>>>>>>> main
+                  </div>
                   </div>
                   </div>
                   </div>;
@@ -394,6 +513,7 @@ ursor/automate-test-improve-and-merge-code-646c
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
 >>>>>>> main
+>>>>>>> main
                     </div>
                   </div>
                 </CardFooter>
@@ -402,6 +522,7 @@ ursor/automate-test-improve-and-merge-code-646c
                   </div>;
                 </CardFooter>;
               </Card>;
+>>>>>>> main
 >>>>>>> main
             ))}
           </div>
@@ -422,6 +543,11 @@ ursor/automate-test-improve-and-merge-code-646c
       </section>
     </div>
 
+          <a href={ctaLink}>{ctaText}</a>
+          <a href={ctaLink}>{ctaText}</a>
+          <a href={ctaLink}>{ctaText}</a>
+          <a href={ctaLink}>{ctaText}</Link>
+>>>>>>> main
         </Button>
       </section>
     </div>
@@ -454,4 +580,19 @@ ursor/automate-test-improve-and-merge-code-646c
 
 }
 
+}
 },
+<section className='py-12 bg-zion-blue-dark text-center'>
+        <Button
+          size='lg'
+          className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
+          asChild
+        >
+          <a href={ctaLink}>{ctaText}</a>
+        </Button>
+      </section>
+    </div>
+);
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

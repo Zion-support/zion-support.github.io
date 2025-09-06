@@ -3,6 +3,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import OpenAI from 'openai';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
@@ -67,6 +68,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [sysMessage, ...messages]
 
 
+const matchedArticles = articles.filter(a =>
+    intent.matchedArticleIds.includes(a.id)
+  );
+  const context = matchedArticles
+    .map((a) => `- ${a.title}: /help/${a.slug}`)
+    .join("\n");
+    .map(a => `- ${a.title}: /help/${a.slug}`)
+    .join('\n');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+  const sysMessage = {
+    role: 'system' as const,
+    content:
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
+  };
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [sysMessage, ...messages],
+      temperature: 0.2,
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
@@ -111,6 +133,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       model: "gpt - 4o - mini"
       messages: [sys_message, ...messages]
       temperature: 0.2
+      model: "gpt - 4o - mini"
+      messages: [sys_message, ...messages]
+      temperature: 0.2
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '')
+  };
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+messages: [sysMessage, ...messages],
+      temperature: 0.2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
 
     const assistantMessage =
@@ -143,6 +177,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       payload: { intent }
     });
       meta: {
+        intentMatched: intent.intentMatched,
+        matchedArticleIds: intent.matchedArticleIds,
+        links: matchedArticles.map((a) => ({
+          title: a.title,
+          href: `/help/${a.slug}`
+        }))
+      },
         intent_matched: intent.intent_matched
         matchedArticleIds: intent.matchedArticleIds
 
@@ -159,8 +200,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }))
       }
   } catch (e: any) {});
+  } catch (e: any) {} catch (e: any) {});
   } catch (e: any) {
-
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment."
@@ -174,3 +215,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
+  }
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

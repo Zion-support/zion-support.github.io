@@ -1,6 +1,28 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -39,6 +61,7 @@ import { X } from "lucide-react",
   // Use our custom hook to manage state
   const {
     filteredTalents;
+  const navigate = useNavigate();    filteredTalents;
     isLoading;
     searchTerm;
 import React, { useState } from './react';
@@ -117,6 +140,8 @@ export default function TalentDirectory() {
     handleToggleSave} = useTalentDirectory();
 
     filteredTalents,
+    selected_talent;
+    setSelectedTalent;
     isLoading,
     searchTerm,
     setSearchTerm,
@@ -267,7 +292,7 @@ export default function TalentDirectory() {;
 
 ;
 export default function TalentDirectory() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
 ;
   // Use our custom hook to manage state;
   const {;
@@ -436,6 +461,11 @@ export default function TalentDirectory() {;
               </Button>;
             </div>;
             {/* Results */}
+          </div>          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">;
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
+              <FilterSidebar            {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
               is_loading={is_loading}
@@ -460,6 +490,9 @@ export default function TalentDirectory() {;
               activeFiltersProps={{
 
                 selected_skills;
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
                 toggle_skill;
                 selected_availability;
                 toggle_availability;
@@ -471,6 +504,8 @@ export default function TalentDirectory() {;
 
 
               activeFiltersProps={{;
+                setPriceRange;
+                experience_range;              activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
                 selectedAvailability,;
@@ -484,6 +519,8 @@ export default function TalentDirectory() {;
 
                 setPriceRange;
                 experience_range;
+
+                experienceRange;
                 setExperienceRange;
                 selectedSkills
                 toggleSkill
@@ -640,6 +677,10 @@ export default function TalentDirectory() {;
 ;
 
               </div>;
+                  />;
+                </div>;
+
+              </div>)}              </div>;
             )}
           </div>
         </div>

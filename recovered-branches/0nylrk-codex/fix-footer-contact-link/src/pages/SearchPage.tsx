@@ -1,6 +1,29 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -84,6 +107,12 @@ export default function SearchPage() {
         <form onSubmit={handleSubmit} className="mb-6">
 
 
+export default function SearchPage() {;    if (initial) {
+      search(initial)
+    }  return (
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -105,7 +134,7 @@ export default function SearchPage() {;
   const [params] = useSearchParams(),;
   const navigate = useNavigate();
   const navigate = useNavigate();
-  const initial = params.get("q") || "",;
+  const initial = params.get("q") || "";
   const [query, setQuery] = useState(initial),;
   const { results, loading, search } = useAISearch(),;
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
@@ -269,3 +298,10 @@ if ( {) {
 }
 
 
+          </div>;
+        )}
+
+      </main>;
+    </AppLayout>;
+  );
+}

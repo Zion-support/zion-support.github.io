@@ -34,6 +34,12 @@ i18n
     debug: process.env.NODE_ENV === 'development'
 
 
+import {initReactI18next} from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import enTranslation from './locales/en/translation ;
+import esTranslation from './locales/es/translation ;
+import ptTranslation from './locales/pt/translation ;
+import arTranslation from './locales/ar/translation ;
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -174,3 +180,4 @@ i18n.on('languageChanged', (lng) => {;
   // This will be implemented in the LanguageContext;
 }),;
 export default i18n;
+;

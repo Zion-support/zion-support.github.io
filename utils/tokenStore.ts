@@ -2,11 +2,12 @@
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 import fs from "fs";
+import fs from 'fs';
+import path from 'path';import fs from "fs";
 import path from "path";
 
 ;
 
-import fs from 'fs';
 import path from 'path';
 >>>>>>> main
 export interface TokenTransaction {
@@ -34,6 +35,13 @@ export interface TokenTransaction {;
   userId: string;
   type: "earn" | "spend" | "transfer";
   amount: number;
+export interface TokenTransaction {
+
+export interface TokenTransaction {;
+  id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number,
   description: string;
   timestamp: string;
   metadata?: Record < string, any>;
@@ -43,6 +51,8 @@ export interface TokenTransaction {;
 
 export interface TokenConfig {;
 
+
+export interface TokenConfig {;
 
   name: string;
   symbol: string;
@@ -70,6 +80,7 @@ const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+function ensureDataDir() {
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -256,6 +267,7 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     timestamp: new Date().toISOString()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+}  }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);

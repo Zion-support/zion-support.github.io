@@ -18,6 +18,7 @@ const LoadingSpinner = () =>
 
 
       className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary"
+      className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary"
     }),
   );
 
@@ -29,6 +30,7 @@ const LoadingSkeleton = () =>
     React.createElement("div", { className: "h-4 bg-gray-200 rounded w-1/2" }),
     React.createElement("div", { className: "h-32 bg-gray-200 rounded" }),
   );
+
 }
 
   () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
@@ -37,6 +39,7 @@ export const DynamicBarChart = dynamic (
   () => import ('recharts').then (mod => ({ default: mod.BarChart })),
 
   {    loading: LoadingSkeleton,
+    ssr: false
     ssr: false
   }
 
@@ -72,6 +75,7 @@ export const DynamicVirtualList = dynamic (
   () => import ('react - window').then (mod => ({ default: mod.FixedSizeList })),
 
   {    loading: LoadingSkeleton,
+    ssr: false
     ssr: false
   }
 
@@ -175,3 +179,9 @@ ursor/automate-test-improve-and-merge-code-646c
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+// Usage examples: // Replace: import Chart from '../components/charts/Chart';
+
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+// Replace: import Chart from '../components/charts/Chart';
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

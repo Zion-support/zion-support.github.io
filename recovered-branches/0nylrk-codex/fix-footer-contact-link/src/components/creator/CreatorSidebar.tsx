@@ -2,6 +2,15 @@
 
 
   Bell,
+import {
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;  Bell,
   FileText,
   Home,
   Mail,
@@ -13,6 +22,8 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
 
   Bell,
+  Users,;
+} from "lucide-react";  Bell,
   FileText,
   Home,
   Mail,
@@ -20,7 +31,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
   Settings,
   Users,;
 } from "lucide-react";
-import {;
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -40,7 +50,6 @@ export function AppSidebar() {;
   return (
   Users,;
 } from "lucide-react";
-import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -88,6 +97,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
         
         
 
+  SidebarGroupContent,;
 
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
@@ -103,6 +113,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
 
                   </Link>
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -115,6 +126,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
 
                   </Link>
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -151,6 +163,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
                   </Link>
                 </SidebarMenuButton>
+        </SidebarGroup>                </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
@@ -162,6 +175,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
 
                   </Link>
+                  </Link>                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -171,6 +185,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
     </Sidebar>
 
+  );
+}
+  )
   );
 }
   )
@@ -317,3 +334,7 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
+  return (;                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;

@@ -48,6 +48,9 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 
 
 
+  size = 44;
+
+  badge: BadgeKey
 
 interface BadgeEarnedProps {
   badge: BadgeKey,
@@ -93,6 +96,9 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           height: size,
           display: "flex",
           alignItems: "center",
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
+      <div
+        style={{
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
@@ -117,7 +123,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   earnedDate}) => {;
   const meta = getBadgeMeta(badge);
   if (!meta) return null,;
-  const Icon = meta.icon,;
+  const Icon = meta.icon;
   return (;
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div;
@@ -308,3 +314,4 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 };
 
 
+      )}

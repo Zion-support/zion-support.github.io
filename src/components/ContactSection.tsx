@@ -98,6 +98,40 @@ fetch("/api/contact", {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "";
+    email: "";
+    subject: "";
+    message: ""});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string
+  }>({}),
+
+  const handleChange = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
@@ -530,6 +564,9 @@ if ( {) {
 export default ContactSection;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export default ContactSection;
+export default ContactSection;
+>>>>>>> main
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -550,6 +587,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }set_errors (field_errors);
 toast ({
   return;
+}set_errors ({});
 }set_errors ({});
 }set_errors ({});
 setIsSubmitting (true);
@@ -577,3 +615,38 @@ description: err.message;
 ursor/automate-test-improve-and-merge-code-646c
 export default ContactSection;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default ContactSection;

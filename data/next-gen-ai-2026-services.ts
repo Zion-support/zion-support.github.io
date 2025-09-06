@@ -6,6 +6,10 @@ export interface NextGenAi2026Service {;
   name: string;
   tagline: string;
   price: string;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string,
   description: string;
   features: string[];
   link: string;
@@ -88,6 +92,13 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
+      address: "364 E Main St STE 1008 Middletown DE 19709"]
+
+],
+      mobile: "+1 302 464 0950",      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   },;
 ];      mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
@@ -104,5 +115,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 
 
 ],
-      mobile: "+1 302 464 0950",
+      mobile: "+1 302 464 0950"
 
+]
+];

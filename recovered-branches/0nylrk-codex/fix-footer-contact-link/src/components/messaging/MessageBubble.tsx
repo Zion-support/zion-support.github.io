@@ -31,12 +31,16 @@ interface MessageBubbleProps {;
 }
 }
 
+  message: Message,
+  isUserMessage: boolean
   message: Message
 
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
+    <div className={cn(
+      "flex",
 
       isUserMessage ? "justify-end" : "justify-start"
     )}>
@@ -48,6 +52,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       "flex",
 
 
+
+    <div className={cn(
+      "flex",
 
       isUserMessage ? "justify-end" : "justify-start"
     )}>
@@ -85,6 +92,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
 
 
+        "max-w-[75%] rounded-lg px-4 py-2",
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>

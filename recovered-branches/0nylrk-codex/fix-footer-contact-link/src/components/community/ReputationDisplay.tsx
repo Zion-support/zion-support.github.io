@@ -1,11 +1,12 @@
 
 
-import { Trophy } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+import { Trophy } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
+
 
 
 
@@ -109,6 +110,7 @@ import { Trophy } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
 
 
+import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
@@ -122,7 +124,7 @@ export const ReputationDisplay = ({;
   // Calculate next milestone;
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100,;
+  const progress = ((reputation % 100) / 100) * 100;
 
 
   // Styling based on size;
@@ -141,6 +143,14 @@ export const ReputationDisplay = ({;
 
 
     lg: {;
+export const ReputationDisplay = ({ ;
+  reputation;
+  size = 'md' ;
+}: ReputationDisplayProps) => {;
+  // Calculate next milestone;
+  const currentLevel = Math && Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;    lg: {;
       container: "text-base",;
       icon: "w-5 h-5",;
       progress: "h-3";
@@ -148,6 +158,9 @@ export const ReputationDisplay = ({;
 
 
     <div className="space-y-1">;
+  };
+
+  return (    <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
         <span className="font-semibold">{reputation}</span>;
@@ -227,6 +240,7 @@ export const ReputationDisplay = ({ ;
 
 
       </div>;
+      <div className="text-xs text-muted-foreground">;      </div>;
     </div>;
 size = 'md' 
 }: ReputationDisplayProps) => {
@@ -248,3 +262,9 @@ export default ReputationDisplay;
 export default ReputationDisplay;
 
 
+  )
+};
+
+},
+
+export default ReputationDisplay;

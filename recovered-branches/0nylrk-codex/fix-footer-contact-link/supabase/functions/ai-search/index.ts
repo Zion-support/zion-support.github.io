@@ -36,6 +36,12 @@ const corsHeaders = {
 
 
 serve(async (req) => {
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -244,7 +250,7 @@ serve(async (req) => {;
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),;
 ;
-    const configuration = new Configuration({ apiKey:openAiKey }),;
+    const configuration = new Configuration({ apiKey:openAiKey });
     const openai = new OpenAIApi(configuration),;
 ;
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery:"${query}"\nReturn JSON with fields:type, skills, location, budget, availability. Use null if a value is not provided.`,;
@@ -288,5 +294,9 @@ serve(async (req) => {;
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
     );
+  }
+});
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
   }
 });

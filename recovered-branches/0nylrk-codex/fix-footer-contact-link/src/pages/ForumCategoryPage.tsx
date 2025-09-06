@@ -48,6 +48,10 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Briefcase"
   },
     adminOnly: false,
+    adminOnly: false
+
+    icon: "Briefcase"
+  }    adminOnly: false,
     icon: "Briefcase"
   },
   "project-help": {
@@ -136,6 +140,7 @@ const postsByCategory: Record<string ForumPost[]> = {
 
 
     {}
+    icon: "MessageSquare"    }
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
@@ -181,6 +186,9 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2
+      downvotes: 2,
+
+      replyCount: 6
     }
   ];
   "project - help": [;
@@ -983,7 +991,7 @@ export default function ForumCategoryPage() {;
   }
 ;
   const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,;
+  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [],;
   // Filter posts based on search query;
   const filteredPosts = searchQuery;
@@ -1047,3 +1055,36 @@ export default function ForumCategoryPage() {;
   "Megaphone": Megaphone;
 }
 ;
+      id: "7",
+      title: "Comparing different vector embedding models",
+      content: "I've been experimenting with these different embedding models and here are my findings...",
+      author_id: "user7",
+      author_name: "Lisa Park",
+      category_id: "ai - tools",
+      tags: ["embeddings", "vectors", "similarity - search"];
+      created_at: "2025 - 04 - 05T16:40:00Z",
+      updated_at: "2025 - 04 - 05T16:40:00Z",
+      upvotes: 31,
+      downvotes: 0,
+
+      replyCount: 9    {
+      id: "8",
+      title: "Suggestion for improving the jobs matching algorithm",
+      content: "I think the job matching could be improved by considering these additional factors...",
+      author_id: "user8",
+      author_name: "Ryan Mitchell",
+      category_id: "feedback",
+      tags: ["matching", "jobs", "algorithm"];
+      created_at: "2025 - 04 - 04T08:10:00Z",
+      updated_at: "2025 - 04 - 04T08:10:00Z",
+      upvotes: 17,
+      downvotes: 3,
+
+      replyCount: 5  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;              value={searchQuery}
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}

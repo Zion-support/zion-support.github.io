@@ -39,12 +39,18 @@ export function FilterSidebar(): any ({;
   isMobileFilterOpen}: FilterSidebarProps) {;
   return (
     <>
+  isMobileFilterOpen}: FilterSidebarProps) {;
+  return (
+    <>;
+    <>
       {/* Filter header */}
 
       <div className='flex items-center justify-between mb-6'>;
         <h3 className='text-lg font-semibold text-white flex items-center'>;
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
 
+  searchTerm;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   setSearchTerm;
   selectedSkills;
   toggleSkill;
@@ -135,6 +141,63 @@ export function FilterSidebar({
           size="sm" 
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+  isMobileFilterOpen
+}: FilterSidebarProps) {
+  searchTerm
+  setSearchTerm
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  expandedSections
+  toggleSection
+  sortOption
+  setSortOption
+  clearFilters
+  isMobileFilterOpen}: FilterSidebarProps) {
+  return (
+    <>
+      {/* Filter header */}
+      <div className='flex items-center justify-between mb-6'>
+        <h3 className='text-lg font-semibold text-white flex items-center'>
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm
+  setSearchTerm
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  expandedSections
+  toggleSection
+  sortOption
+  setSortOption
+  clearFilters
+  isMobileFilterOpen
+  return (
+    <>
+      {/* Filter header */}
+<div className='flex items-center justify-between mb-6'>
+        <h3 className='text-lg font-semibold text-white flex items-center'>
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />
+          Filters
+        </h3>
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={clearFilters}
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         >
           Clear All
         </Button>
@@ -192,6 +255,8 @@ export function FilterSidebar({;
 
 
       {/* Search */}
+{/* Search */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
@@ -393,6 +458,7 @@ function FilterSidebar() {
           className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
         <Button;
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }
+          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
       {/* Search */}
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
@@ -414,10 +480,20 @@ function FilterSidebar() {
 
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+        <Button
+          onClick={() =>
+            window.dispatchEvent(new CustomEvent('closeMobileFilter'))
+          }
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         >
           Apply Filters
         </Button>
       )}
+
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
+        <Button
+          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -486,3 +562,26 @@ function FilterSidebar() {
   );
 
 
+}
+
+  );
+}
+        <Button;
+          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
+          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
+        >;
+          Apply Filters;
+        </Button>)}
+    </>);
+}
+
+
+    </>;
+  );
+
+}
+;
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

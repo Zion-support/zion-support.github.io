@@ -137,6 +137,9 @@ export type ProposalPayload = {
   metadata?: Record<string, any>;
 };
 const dataDir = path.join(process.cwd(), 'dataproposals');
+  metadata?: Record<string, any>
+};
+const dataDir = path.join(process.cwd(), 'dataproposals');
 const publicDir = path.join(process.cwd(), 'publicproposals'),;
 function ensureDirs() {;
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -467,6 +470,7 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 
 }
 }
+}}
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
@@ -496,6 +500,7 @@ export function updateArtifacts(
 ): ProposalMeta {
   return updateProposalMeta(id, meta => ({
     ...meta,
+    artifacts: { ...meta.artifacts, ...artifacts }
     artifacts: { ...meta.artifacts, ...artifacts }
     artifacts: { ...meta.artifacts, ...artifacts }
   }));
@@ -630,3 +635,4 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
 
 
 }
+}}

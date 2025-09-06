@@ -194,6 +194,12 @@ const CommandInput = React.forwardRef<
 };
 
 
+const CommandInput = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Input>,
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>>(({ className, ...props }, ref) => (
+  <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
+    <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
+    <CommandPrimitive.Input
 };
 const CommandInput = React && React.forwardRef<;
   React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.Input>,;
@@ -253,6 +259,7 @@ CommandInput.displayName = CommandPrimitive.Input.displayName;
 
 
 const CommandList = React.forwardRef<
+    <CommandPrimitive&& CommandPrimitive.Inputconst CommandList = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.List>
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
@@ -428,6 +435,9 @@ const CommandGroup = React.forwardRef<;
     {...props}
 
 
+    className={cn(
+      'overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground'
+
 CommandEmpty && CommandEmpty.displayName = CommandPrimitive && CommandPrimitive.Empty.displayName;
 
 const CommandGroup = React && React.forwardRef<;
@@ -547,6 +557,7 @@ export {;
   CommandItem,;
   CommandShortcut,;
   />));
+  <CommandPrimitive&& CommandPrimitive.Separator
 ;
 CommandEmpty.display_name = CommandPrimitive.Empty.display_name;
 ;
@@ -570,6 +581,12 @@ const CommandSeparator = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <CommandPrimitive.Separator;
 const CommandSeparator = React.forwardRef<;
+
+    ref={ref}
+    className={cn ('-mx - 1 h - px bg - border', class_name)}
+    {...props}
+      className
+    )}const CommandSeparator = React.forwardRef<;
   React.ElementRef<typeof CommandPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
@@ -606,6 +623,9 @@ const CommandItem = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
 
+    {...props}
+  />
+));
 
     ref={ref}
     className={cn(
@@ -769,4 +789,8 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
 
   CommandSeparator
 }
+;
+  CommandSeparator
+};
+  CommandSeparator}
 ;

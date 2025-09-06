@@ -1,3 +1,7 @@
+
+
+export function useResumeEnhancer() {;
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
@@ -41,6 +45,10 @@ export function useResumeEnhancer() {
 
 
       return null
+export function useResumeEnhancer() {;          context
+        }
+      });
+      if (error) {      return null
     } finally {
       setIsEnhancing(false)
     }
@@ -74,6 +82,7 @@ function useResumeEnhancer() {
           content,
           enhancement_type: type,
           context;
+    error          context;
         }
       });
 ;
@@ -157,6 +166,7 @@ export function useResumeEnhancer() {;
 } const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {
   setIsEnhancing (true);
 setError (null);
+try {}
 try {}
 try {}
           context;

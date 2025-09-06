@@ -31,6 +31,9 @@ type CarouselContextProps = {
 } & Omit<CarouselProps "orientation">
 
 
+  orientation: "horizontal" | "vertical"
+} & Omit<CarouselProps "orientation">
+
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
 
 function useCarousel(): CarouselContextProps {
@@ -45,6 +48,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1];
+type CarouselOptions = {
 type CarouselOptions = {
   axis?: 'x' | 'y';
   [key: string]: any;
@@ -407,6 +411,7 @@ const CarouselPrevious = React.forward_ref<;
 
         className
 
+        className
       )}
       className={cn (
         &quot;absolute h - 8 w - 8 rounded - full & quot;,
@@ -467,6 +472,7 @@ const CarouselNext = React.forward_ref<;
 
         className
 
+        className
       )}
       className={cn (
         &quot;absolute h - 8 w - 8 rounded - full & quot;,

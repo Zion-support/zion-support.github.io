@@ -328,6 +328,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
       </div>
     </MainLayout>
   );
+  )
 };
 
 export default Accessibility;

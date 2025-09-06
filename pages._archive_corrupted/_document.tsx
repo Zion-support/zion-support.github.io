@@ -96,6 +96,10 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
       </Head>
       <body>
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />      <body>
         <Main  />
         <NextScript  />
       </body>
@@ -126,3 +130,6 @@ import React from "react" import { Html,Head,Main,NextScript } from "next/docume
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+;}
+
+;

@@ -62,7 +62,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
-    });
+  if (typeof window === 'undefined' || !window && window.ethereum) {});
     return accounts;
   } catch (error) {
     throw new Error("Failed to connect to MetaMask");
@@ -125,6 +125,10 @@ if ( {) {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
     });
+  if (typeof window === 'undefined' || !window && window.ethereum) {}
+  try {
+    const accounts = await window.ethereum.request({
+      method: "eth_accounts"    });
     return accounts;
   } catch (error) {
     return [];
@@ -196,7 +200,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
-    });
+  if (typeof window === 'undefined' || !window && window.ethereum) {});
     return balance;
   } catch (error) {
     throw new Error("Failed to get balance");
@@ -213,6 +217,8 @@ if ( {) {
 }
 
 export async function signMessage(
+  }
+}
   message: string,
   address: string,
 ): Promise<string> {
@@ -290,7 +296,7 @@ if ( {) {
 
       method: 'personal_sign',
       params: [message, address]
-    });
+  if (typeof window === 'undefined' || !window && window.ethereum) {});
     return signature;
   } catch (error) {
     throw new Error("Failed to sign message");
@@ -330,6 +336,15 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+    }      removeListener: (
+        event: string,
+        callback: (accounts: string[]) => void,
+      ) => void;
+      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
+
+    }
+      removeListener: (event: string, callback: (accounts: string[]) => void) => void
+};
 
     }
 

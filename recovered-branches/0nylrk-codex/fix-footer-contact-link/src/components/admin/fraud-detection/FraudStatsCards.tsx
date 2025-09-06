@@ -63,12 +63,18 @@ interface FraudStatsCardsProps {
 
       
 
+interface FraudStatsCardsProps {;
+  stats: FraudStats;      
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold">
 import React from './react';
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription
   Card,
   CardHeader,
   CardTitle,
@@ -85,6 +91,10 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
       <Card>;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - 2xl font - bold">;
+    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb-8">;
+      <Card>;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text - 2xl font-bold">;
             {stats.total_flags}
           </CardTitle>;
           <CardDescription > Total Flags</CardDescription>;
@@ -94,6 +104,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
         <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
           <div>;
             <CardTitle className="text - 2xl font - bold">;
+        <CardHeader className="pb - 2 flex flex - row items - center justify-between">;
+          <div>;
+            <CardTitle className="text - 2xl font-bold">;
               {stats.pending_flags}
             </CardTitle>;
             <CardDescription > Pending Review</CardDescription>;
@@ -111,6 +124,10 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
 
             <CardTitle className="text-2xl font-bold text-amber-500">
+              {stats.suspicious_count}
+            <CardTitle className="text-2xl font-bold text-amber-500">
+              {stats.suspicious_count}
+            </CardTitle>            <CardTitle className="text-2xl font-bold text-amber-500">
               {stats.suspicious_count}
             </CardTitle>
             <CardDescription>Suspicious</CardDescription>
@@ -145,6 +162,10 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
       </Card>
       
 
+      </Card>          </div>
+          <AlertCircle className="h-5 w-5 text-red-500" />
+        </CardHeader>
+      </Card>
 
       <Card>
         <CardHeader className="pb-2">
@@ -174,6 +195,11 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           </CardTitle>
 
       
+          </CardTitle>      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-2xl font-bold">
+            {stats.false_positives}
+          </CardTitle>      
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -233,6 +259,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
       </Card>;
 
 
+;            <ShieldAlert className="h - 5 w - 5 text - amber-500" />)}
+        </CardHeader>;
+      </Card>
 };
 
 export default FraudStatsCards;
@@ -261,6 +290,9 @@ export default FraudStatsCards;
         <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
           <div>;
             <CardTitle className="text - 2xl font - bold text - amber - 500">;
+        <CardHeader className="pb - 2 flex flex - row items - center justify-between">;
+          <div>;
+            <CardTitle className="text - 2xl font - bold text - amber-500">;
               {stats.suspicious_count}
             </CardTitle>;
             <CardDescription > Suspicious</CardDescription>;
@@ -272,6 +304,13 @@ export default FraudStatsCards;
         <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
           <div>;
             <CardTitle className="text - 2xl font - bold text - red - 500">;
+          <AlertTriangle className="h - 5 w - 5 text - amber-500" />;
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb - 2 flex flex - row items - center justify-between">;
+          <div>;
+            <CardTitle className="text - 2xl font - bold text - red-500">;
               {stats.dangerous_count}
             </CardTitle>;
             <CardDescription > Dangerous</CardDescription>;
@@ -282,6 +321,12 @@ export default FraudStatsCards;
       <Card>;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - 2xl font - bold">;
+          <AlertCircle className="h - 5 w - 5 text - red-500" />;
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text - 2xl font-bold">;
             {stats.actioned_count}
           </CardTitle>;
           <CardDescription > Actions Taken</CardDescription>;
@@ -290,6 +335,8 @@ export default FraudStatsCards;
       <Card>;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - 2xl font - bold">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text - 2xl font-bold">;
             {stats.false_positives}
           </CardTitle>;
           <CardDescription > False Positives</CardDescription>;
@@ -318,6 +365,9 @@ export default FraudStatsCards;
 };
 
 
+  )
+};
+
 export default FraudStatsCards;
 
   ),;
@@ -341,3 +391,8 @@ export default FraudStatsCards;
 };
 
 export default FraudStatsCards;
+)
+};
+
+export default FraudStatsCards;
+

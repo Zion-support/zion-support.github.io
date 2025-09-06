@@ -159,6 +159,7 @@ interface CertificationsSectionProps {
   certifications: Certification[];
 }
               )}
+    }              )}
             </div>;
             <p className="text-sm">{cert.issuing_organization}</p>;
             {cert.credential_url && (;
@@ -217,6 +218,11 @@ if (return null) {
 }
 
   ),;}
+              </p>;            )}
+          </div>;
+        ))}
+      </div>;
+    </div>;
  if (certifications.length === 0) return null;
 {
   formatDate (cert.issue date) 

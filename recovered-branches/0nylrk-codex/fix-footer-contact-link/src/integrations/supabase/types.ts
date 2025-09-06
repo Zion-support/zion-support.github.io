@@ -289,6 +289,8 @@ export type Database = {
         Row: {;
 
           api_key_id: string | null;
+  | { [key: string]: Json | undefined }
+  | Json[];          api_key_id: string | null;
           created_at: string;
           endpoint: string;
           id: string;
@@ -304,6 +306,7 @@ export type Database = {
 
 
         Insert: {
+        Insert: {        Insert: {
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -1338,6 +1341,10 @@ export type Database = {
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
+        }            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"            columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
@@ -1346,6 +1353,12 @@ export type Database = {
 
           },
 
+            foreignKeyName: "job_applications_job_id_fkey";
+            columns: ["job_id"];
+            isOneToOne: false;
+            referenced_relation: "jobs";
+            referenced_columns: ["id"];
+          }          },
 
           {
             foreignKeyName: "job_applications_resume_id_fkey";
@@ -1370,6 +1383,8 @@ export type Database = {
           created_at: string;
           deadline: string | null;
           description: string;
+          deadline: string | null,
+  description: string;
           id: string;
           skills: string[];
           status: string;
@@ -1383,6 +1398,8 @@ export type Database = {
           created_at?: string;
           deadline?: string | null;
           description: string;
+          deadline?: string | null,
+  description: string;
           id?: string;
           skills?: string[];
           status?: string;
@@ -1543,6 +1560,7 @@ export type Database = {
 
           {
 
+          {
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
             isOneToOne: false;
@@ -2158,6 +2176,10 @@ export type Database = {
 
           }
 
+          }          }
+
+          }
+
           },
           {
             foreignKeyName: "project_milestones_project_id_fkey";
@@ -2207,6 +2229,7 @@ export type Database = {
 
           {
 
+          {
             foreignKeyName: "project_notes_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
@@ -2355,6 +2378,14 @@ export type Database = {
             referenced_columns: ["user_id"];
 
           }
+          }          }
+
+          },
+
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]          }
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -2491,6 +2522,29 @@ export type Database = {
 
         Update: {
 
+        Update: {
+          budget_display?: string | null;
+          budget_max?: number | null;
+          budget_min?: number | null;
+          created_at?: string;
+          id?: string;
+          is_archived?: boolean;
+          project_description?: string | null;
+          project_name?: string;
+          project_summary?: string;
+          replied_at?: string | null;
+          requester_email?: string;
+          requester_id?: string | null;
+          requester_name?: string;
+          start_date?: string | null;
+          status?: Database["public"]["Enums"]["quote_request_status"];
+          talent_id?: string | null;
+          timeline?: string;
+          updated_at?: string;
+          viewed_at?: string | null;
+        }
+        Relationships: [;
+          {
             foreignKeyName: "quote_requests_requester_id_fkey";
             columns: ["requester_id"];
             isOneToOne: false;
@@ -2577,6 +2631,11 @@ export type Database = {
 
         }
         Relationships: [;
+      }          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;        Relationships: [;
           {
             foreignKeyName: "referral_codes_user_id_fkey";
             columns: ["user_id"];
@@ -2678,6 +2737,7 @@ export type Database = {
 
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
+          {            foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
@@ -2886,6 +2946,7 @@ export type Database = {
 
 
           }
+          }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
             columns: ["referrer_id"];
@@ -2940,6 +3001,7 @@ export type Database = {
 
 
           clicked_at: string | null;
+      }          clicked_at: string | null;
           email_body: string;
           email_subject: string;
           id: string;
@@ -2953,6 +3015,7 @@ export type Database = {
 
 
         Insert: {
+        Insert: {        Insert: {
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -2978,6 +3041,7 @@ export type Database = {
 
         }
         Relationships: [;
+        }        Relationships: [;
           {
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
@@ -3101,6 +3165,7 @@ export type Database = {
 
           {
 
+          {
             foreignKeyName: "review_reports_reporter_id_fkey";
             columns: ["reporter_id"];
             isOneToOne: false;
@@ -3266,6 +3331,10 @@ export type Database = {
 
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
+          }          }
+
+          },
+
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
@@ -6669,6 +6738,7 @@ export type Database = {
 
 
       api_key_scope:;
+        Returns: string;      api_key_scope:;
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
@@ -6679,6 +6749,7 @@ export type Database = {
 
 
       fraud_severity: "safe" | "suspicious" | "dangerous";
+      fraud_severity: "safe" | "suspicious" | "dangerous";      fraud_severity: "safe" | "suspicious" | "dangerous";
       quote_request_status:;
         | "new";
         | "in_review";
@@ -7104,6 +7175,7 @@ export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
     | { schema: keyof Database }
+  DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
   }
@@ -7140,6 +7212,7 @@ export type CompositeTypes<;
 
 
     | { schema: keyof Database }
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
   }
@@ -7156,6 +7229,10 @@ export type CompositeTypes<;
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
   }
+    | keyof DefaultSchema["CompositeTypes"]
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database  }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
@@ -7189,6 +7266,7 @@ export const Constants = {
 
 
 ;
+;
 export const Constants = {
   public: {
     Enums: {
@@ -7197,6 +7275,7 @@ export const Constants = {
 
 
         "archived"],
+;        "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
       referral_status:"pending" | "completed" | "expired";

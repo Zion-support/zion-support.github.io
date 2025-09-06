@@ -13,6 +13,18 @@ export default function Onboarding() {;
 
 
   const { user, updateProfile, isLoading } = useAuth();
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
+import { Steps, Step } from "@/components/ui/steps",
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+export default function Onboarding() {  const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
@@ -39,17 +51,6 @@ export default function Onboarding() {;
       case "serviceProvider": return "creator";
       case "talent":;
         return "jobSeeker";
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
-import { Steps, Step } from "@/components/ui/steps",
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
@@ -60,6 +61,20 @@ export default function Onboarding() {
 
 
 
+  // Convert our user types to match what's expected in the database
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
+    switch (type) {
+      case "serviceProvider": return "creator",
+      case "talent":
+        return "jobSeeker",
+      case "client":
+        return "employer"
+      default:
+        return "buyer"
+    }
+  }
+  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
+    setUserType(type);
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
@@ -118,7 +133,14 @@ export default function Onboarding() {
     const dbUserType = mapUserTypeToDatabase(userType);
 
 
-        title: "Authentication Error",
+        title: "Authentication Error"
+    } else if (type === "talent") {}
+
+  },
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
+    if (!user |!userType) {
+      toast({        title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
       navigate('/login'),
@@ -151,6 +173,7 @@ export default function Onboarding() {
 
 
       // Update onboarding milestone
+          // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
@@ -422,6 +445,16 @@ export default function Onboarding() {;
 
 
                 <Button
+        description: 'There was a problem updating your profile. Please try again.'
+        variant: 'destructive'})
+    }
+
+  },
+
+  const steps = [
+    { label: "Select Role", description: "Choose how you'll use the platform" }
+    { label: "Create Profile", description: "Tell us about yourself" }]
+  if (!user) {                <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
@@ -558,6 +591,18 @@ if ( {) {
           </div>;
           <div className="mb - 12">;
             <Steps current_step={current_step} className="max - w-xl mx - auto">;
+      <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+        <div className="max - w-4xl mx-auto">;
+          <div className="text - center mb-12">;
+            <h1 className="text - 4xl font - bold text - white mb-4">;
+              Welcome to Zion;
+            </h1>;
+            <p className="text - zion - slate - light text-xl">;
+              Complete your profile to get started;
+            </p>;
+          </div>;
+          <div className="mb-12">;
+            <Steps current_step={current_step} className="max - w-xl mx-auto">;
               {steps.map ((step, index) => (
                 <Step;
                   key={index}
@@ -574,6 +619,7 @@ if ( {) {
             </Steps>;
           </div>;
           <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue - light">;
+          <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue-light">;
             {current_step === 0 ? (
               <UserTypeSelection on_select={handleUserTypeSelect} selected_type={user_type} />) : (
               <ProfileSetup on_complete={handleProfileComplete} user_type={user_type!} />)}
@@ -582,11 +628,17 @@ if ( {) {
                 <Button;
                   variant="outline";
                   className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light";
+              <div className="mt-6">;
+                <Button;
+                  variant="outline";
+                  className="w - full border - zion - blue - light text - white hover:bg - zion - blue-light";
                   on_click={() => setCurrentStep (0)}
                 >;
                   Back to Role Selection;
                 </Button>;
 
+              </div>;
+            )}
 
 ;
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;

@@ -17,6 +17,53 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 function toSlug(name: string): string {;
   return name;
     .toLowerCase();
+export interface DeployConfig {
+  instanceName: string;
+  governanceMode: string;
+  tokenActivation: boolean;
+  modules: {
+    token: boolean;
+    [key: string]: boolean
+};
+}
+
+export interface DeployResult {
+  success: boolean;
+  instanceId: string;
+  configPath: string;
+  message?: string;
+}
+
+export function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export async function deployInstance(config: DeployConfig): Promise<DeployResult> {
+  try {
+    const instanceSlug = toSlug(config.instanceName);
+    const instanceId = `${instanceSlug}-${Date.now()}`;
+    
+    // Mock deployment logic
+    const result: DeployResult = {
+      success: true,
+      instanceId,
+      configPath: `/configs/${instanceId}.json`,
+      message: 'Instance deployed successfully'
+    };
+    
+    return result;
+  } catch (error) {
+    return {
+      success: false,
+      instanceId: '',
+      configPath: '',
+      message: error instanceof Error ? error.message : 'Deployment failed'
+    };
+  }
+}    .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
@@ -69,7 +116,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const logs: DeployLogEntry[] = [];
   const assets: GeneratedAsset[] = [];
   const instanceSlug = toSlug(input.instanceName);
-  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;
+  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug);
   const docsDir = path.join(process.cwd(), "docs"),;
   const eventsDir = path.join(process.cwd(), "data", "events"),;
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
@@ -241,6 +288,18 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+        {treasury: `${instanceSlug}-treasury`;
+          governanceMode: input.governanceMode;
+          quorum: 0.6;
+          votingPeriodDays: 7;
+          constitutionDoc: `/constitution`;
+          createdAt: nowIso()}
+        null;
+        2;
+      );
+    );
+    assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
 }
 ;
   if (input.modules.token || input.tokenActivation) {;
@@ -266,6 +325,18 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+        {symbol: "ZION$";
+          decimals: 18;
+          enabled: input.tokenActivation;
+          stakingEnabled: input.modules.token;
+          escrowEnabled: true;
+          createdAt: nowIso()}
+        null;
+        2;
+      );
+    );
+    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
 }
 ;
 
@@ -414,6 +485,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 }
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
+    writeTextFile(;    ensureDir(docsDir);
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
@@ -474,4 +546,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

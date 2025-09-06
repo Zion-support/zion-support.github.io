@@ -10,6 +10,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export interface Service {
   id: string;
   name: string;
+export interface Service {
+  id: string;
+  name: string,
   description: string;
   category: string;
   price?: number;
@@ -22,11 +25,13 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.description.toLowerCase().includes(searchTerm) ||
     service.category.toLowerCase().includes(searchTerm)
   );
+  )
 };
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   );
+  )
 };
 export default {
   findService,
@@ -65,3 +70,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+  return null
+};

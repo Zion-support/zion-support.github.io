@@ -63,6 +63,7 @@ function useJobMatches() {
             years_experience;
           *,
           talent_profile:talent_id(
+  const [isProcessing, setIsProcessing] = useState(false),          talent_profile:talent_id(
             id,
             user_id,
             full_name,
@@ -164,6 +165,13 @@ if (throw error) {
 
 
 
+            key_projects,            skills
+          )
+        `)
+        .eq("job_id", jobId)  const triggerAIMatching = async () => {
+    setIsProcessing(true),
+    try {
+      const response = await supabase.functions.invoke('job-talent-matcher', {
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
@@ -268,6 +276,8 @@ export function useJobMatches(jobId: string) {;
   }
 }
 
+  }
+}
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -283,6 +293,8 @@ export function useJobMatches(jobId: string) {;
       toast ({
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later.",
+        title: "Matching Failed",
+  description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
     } finally {
       setIsProcessing (false);
@@ -314,3 +326,4 @@ export function useJobMatches(jobId: string) {;
 
 
 }
+}}

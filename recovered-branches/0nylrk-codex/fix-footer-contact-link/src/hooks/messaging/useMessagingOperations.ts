@@ -187,4 +187,9 @@ export function useMessagingOperations(user: UserWithProfile) {;
 
 
   }
+import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
+
+type UserWithProfile = UserProfile | UserDetails | null;
+/**
+ * Hook that combines all messaging operations  }
 }

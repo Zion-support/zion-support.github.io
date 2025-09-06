@@ -1,6 +1,16 @@
 
 
 
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-pulse.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-pulse.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
+// @ts-ignore;
 
 
 export default function GithubPulsePage() {
@@ -8,6 +18,8 @@ export default function GithubPulsePage() {
   const repo = data?.repo |{}
   const last24h = data?.last24h |{}
 
+  const repo = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -35,6 +47,7 @@ function Metric({ label, value }: { label: string, value: any }) {
   }
 }
 
+}
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
@@ -109,3 +122,8 @@ export default function GithubPulsePage() {
 
 
 
+}
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

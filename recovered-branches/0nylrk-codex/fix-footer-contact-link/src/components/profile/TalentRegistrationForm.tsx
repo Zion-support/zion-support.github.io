@@ -101,6 +101,7 @@ interface CategorizedSkills {
   other: string[]
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
+import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -147,6 +148,7 @@ export function TalentRegistrationForm() {
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
+import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
     defaultValues: {
       name: user?.displayName |""
@@ -170,6 +172,7 @@ export function TalentRegistrationForm() {
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {};
     if (!formData.bio |formData.bio.length < 20) {};
 ;
 export function TalentRegistrationForm() {;
@@ -199,6 +202,9 @@ export function TalentRegistrationForm() {;
       form && form.setValue("skills", "");
     }
 
+
+    const skillInput = form.getValues("skills");
+    }
 
     const skillInput = form.getValues("skills");
     if (skillInput && !skillTags.includes(skillInput)) {;
@@ -248,6 +254,10 @@ export function TalentRegistrationForm() {;
   const handleRemoveSkill = (skill: string) => {;
     setSkillTags(skillTags && skillTags.filter((s) => s !== skill));
   };
+  // Handle removing skill tags;
+  const handleRemoveSkill = (skill: string) => {;
+    setSkillTags(skillTags && skillTags.filter((s) => s !== skill))
+};
 
   // Handle key press in skills input (add on enter);
   const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;
@@ -266,6 +276,8 @@ export function TalentRegistrationForm() {;
       reader && reader.onloadend = () => {;
         setUploadedAvatar(reader && reader.result as string);
       };
+        setUploadedAvatar(reader && reader.result as string)
+};
       reader && reader.readAsDataURL(file);
     }
   };
@@ -419,6 +431,16 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
       }
       setGeneratedContent(data as EnhancedProfile);
 
+        title: "More information needed",,
+  description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+
+      }
+
+        throw new Error(error && error.message);
+      }
+      setGeneratedContent(data as EnhancedProfile);
 ;
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
@@ -426,6 +448,10 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
 if ( {) {
   $2
 }
+      setSkillTags ([...skill_tags, skill_input]);
+      form.set_value ("skills", "");
+    }
+
             }
           });
         }
@@ -721,6 +747,10 @@ export function TalentRegistrationForm() {;
 
   };
 
+    switch (category) {;      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
+      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
+      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
+      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -820,6 +850,8 @@ export function TalentRegistrationForm() {;
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
 ;
+  // Send notification email
+  const sendEnhancementNotification = async (userId: string, email: string) => {
       // Check condition
 if ( {) {
   $2
@@ -846,6 +878,23 @@ if ( {) {
     try {
       await supabase.functions.invoke ('send - email', {
         body: {}
+        body: {
+
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+
+        }
+      });
+    } catch (error) {;
+      console && console.error("Failed to send notification email:", error);
+    }
+
+  };
+
+  // Handle form submission;
+  const onSubmit = async (values: TalentFormValues) => {;
+    if (skillTags && skillTags.length === 0) {;              }
             }
           });
           if (aiData) {
@@ -865,6 +914,7 @@ if ( {) {
     try {
       await supabase.functions.invoke ('send - email', {
         body: {}
+        body: {}
       });
     } catch (error) {;
       console && console.error("Failed to send notification email:", error);
@@ -874,6 +924,18 @@ if ( {) {
         description: "Please add at least one skill to your profile.",;
         variant: "destructive"}),;
       return;
+  },;
+  // Handle form submission;
+  const onSubmit = async (values: TalentFormValues) => {;
+    if (skillTags.length === 0) {;
+      toast({;
+        title: "Skills required",,
+  description: "Please add at least one skill to your profile.",;
+        variant: "destructive"}),;
+      return;
+
+    }
+    setIsSubmitting(true);
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
           html: `;
@@ -984,6 +1046,14 @@ if ( {) {
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
                   if (typeof skill === 'string' && skill) {;
+      }                  }
+                });
+              }
+
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+
+          }                  if (typeof skill === 'string' && skill) {;
                     aiSkills && aiSkills.push(skill);
               talent_data: {
                 name: values.name,
@@ -1090,6 +1160,27 @@ if ( {) {
 
 
       // Create the talent profile
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+          }
+
+            }),;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+
+                  }
+                })
+              }
+            });
+            // Create a unique set of skills
+            finalSkills = [...new Set([...skillTags, ...aiSkills])]
+            }),;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+        } catch (error) {
+          console.error("Error enhancing profile:", error),
+          // Continue with submission even if enhancement fails
+          finalSummary = ""      // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
@@ -1102,9 +1193,11 @@ if ( {) {
         setIsSubmitting(false)
 
       }, 1500);
+      }, 1500)
+
+
+
       }, 1500),
-
-
 
       // Here would be the actual code to save the profile to Supabase
       /*
@@ -1328,6 +1421,7 @@ if ( {) {
   };
   return (;
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
+          // Other fields would be handled here    <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>;
@@ -1342,6 +1436,10 @@ if ( {) {
             <CardContent className="space-y-8">;
 
 
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
+            <CardContent className="space-y-8">;
+
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1354,6 +1452,10 @@ if ( {) {
 
 
                     <FormField
+                      control={form && form.control}
+                    <FormField
+                      control={form && form.control}
+                      name="name"                    <FormField
                       control={form && form.control}
                       name="name"
                       render={({ field }) => (;
@@ -1787,6 +1889,15 @@ if (throw error) {
                       ) :(;
 
                         <div className="flex items-center justify-center h-full">;
+                              <Input;
+                                className="pl-8 bg-zion-blue border-zion-blue-light text-white";
+                                placeholder="e.g., 85";
+                            src={uploadedAvatar}
+                            alt="Avatar preview"
+                            className="w-full h-full object-cover"
+                          />;
+                        </AspectRatio>;
+                      ) : (;                        <div className="flex items-center justify-center h-full">;
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
@@ -1849,6 +1960,13 @@ if (throw error) {
               <Separator className="bg-zion-blue-light/50" />;
 ;
 
+
+                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
+                      <Upload className="mr-2 h-4 w-4" />;
+                      <span>Upload Photo</span>;                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
+                  </p>;
+                </div>;
+              </div>;
               {/* Bio Section */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>;
@@ -1960,6 +2078,10 @@ if (throw error) {
                   <div className="flex justify-end">
 
 
+                        {field && field.value?.length || 0}/1000 characters;                      </FormDescription>;
+                    </FormItem>;
+                  )}
+                />;
                     <Button
                       type="button"
                       variant="outline"
@@ -2059,6 +2181,7 @@ if (throw error) {
 
 
                                 <Badge
+                      onClick={generateEnhancedProfile}                                <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
                                 </Badge>;
@@ -2315,6 +2438,8 @@ if (throw error) {
                     name="availability";
 
 
+
+              <Separator className="bg-zion-blue-light/50" />;
                     render={({ field }) => (;
                       <FormItem className="space-y-4">;
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>;
@@ -2449,6 +2574,7 @@ if (throw error) {
                                 onChange={() => field.onChange("available")}
 
                                 className="text-zion-purple focus:ring-zion-purple";
+                                onChange={() => field && field.onChange("available")}                                className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="available" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-green-500"></div>;
@@ -2596,6 +2722,19 @@ if (throw error) {
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
 
 
+                            <div className="flex items-center space-x-2">;                              <input
+                                type="radio"
+                                id="unavailable"
+                                value="unavailable"                              <input;
+                                type="radio";
+                                id="unavailable";
+                                value="unavailable";
+                                checked={field.value === "unavailable"}
+                                on_change={() => field.on_change ("unavailable")}
+                                className="text - zion - purple focus:ring - zion-purple";
+                              />;
+                              <label html_for="unavailable" className="text - white flex items - center gap-2">;
+                                <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
                                 Currently Unavailable;
                               </label>;
                             </div>;
@@ -2891,3 +3030,5 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 }
 ;
+                    />;
+                    <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;

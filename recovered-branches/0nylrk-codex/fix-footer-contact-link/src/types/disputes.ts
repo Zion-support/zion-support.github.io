@@ -55,6 +55,10 @@ export interface DisputeMessage {;
 
 
 export interface DisputeMessage {
+export interface Dispute {
+export interface DisputeMessage {;
+
+export interface DisputeMessage {export interface DisputeMessage {
   id: string;
   dispute_id: string;
   user_id: string;
@@ -85,6 +89,15 @@ export interface DisputeAttachment {;
 
 
 export interface DisputeAttachment {
+    display_name: string,
+    avatar_url?: string;
+
+  }
+}
+
+export interface DisputeAttachment {;
+
+export interface DisputeAttachment {export interface DisputeAttachment {
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -117,6 +130,7 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 
+export const disputeReasonLabels: Record<DisputeReason, string> = {;
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
@@ -141,6 +155,7 @@ export interface Dispute {;
   milestone_id?: string,;
   raised_by: string,;
   reason_code: string,;
+  reason_code: string,,
   description: string,;
   created_at: string,;
   updated_at: string,;

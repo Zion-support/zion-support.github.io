@@ -1,6 +1,7 @@
 
 
 import { Button } from "@/components/ui/button";
+import React from 'react';import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 import { useState } from "react";
@@ -67,6 +68,7 @@ export function EnhancedNewsletterForm() {
 
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+  const [isSubmitted, setIsSubmitted] = useState(false);        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">
             We'll keep you updated with the latest from Zion.
@@ -143,6 +145,7 @@ function EnhancedNewsletterForm() {
 
 
             Get exclusive offers, trending AI news, and early access to best;
+          <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
             deals;
           </p>;
         </div>;
@@ -209,6 +212,7 @@ function EnhancedNewsletterForm() {
               {String.fromCharCode(65 + i)}
 
             </div>;
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">            </div>;
           ))}
         </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
@@ -263,6 +267,7 @@ function EnhancedNewsletterForm() {
 
 }
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+  );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
           <Button 
@@ -283,6 +288,7 @@ function EnhancedNewsletterForm() {
 
 
             <div
+      )}            <div
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
             >
@@ -294,6 +300,7 @@ function EnhancedNewsletterForm() {
       </div>
     </div>
 
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 export function EnhancedNewsletterForm() {;
@@ -310,6 +317,8 @@ export function EnhancedNewsletterForm() {;
       setEmail("");
     }, 1000);
   };
+    }, 1000)
+};
   return (;
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
       <div className="flex items-center mb-4">;
@@ -364,6 +373,7 @@ export function EnhancedNewsletterForm() {;
   ),; const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ();
 setIsSubmitting (true);
+//Simulate API call setTimeout ( () => {};
 //Simulate API call setTimeout ( () => {};
 //Simulate API call setTimeout ( () => {};
 }</div>) ) 

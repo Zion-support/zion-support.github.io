@@ -78,6 +78,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+
   ArrowRight,
   Server,
   Lock,
@@ -549,6 +554,8 @@ export default function APIDocsPage() {;
   );
 }
 export default function APIDocsPage() {
+export default function APIDocsPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApiDocsPage() {
   return (
     <>
@@ -588,6 +595,20 @@ export default function ApiDocsPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
+<meta name='description' content='API reference and guides.' />
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      </Head>
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+      </div>
 );
 origin/main
     </>
@@ -615,3 +636,6 @@ export default function ApiDocsPage(req, res) {
 
 
 ursor/automate-test-improve-and-merge-code-646c
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

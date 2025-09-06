@@ -43,6 +43,31 @@ export function HelpArticleList({
           article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
   return (
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
+  if (!category) {;
+    return <div>Category not found</div>;  return (
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
@@ -136,9 +161,6 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
 
       {filteredArticles && filteredArticles.length === 0 ? (;
 
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { HELP_CATEGORIES } from "./help-content",;
 ;
 interface HelpArticleListProps {;
   categoryId:string,;
@@ -172,6 +194,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
       {filteredArticles.length === 0 ? (;
 
         <div className="text-center py-8">;
+      {filteredArticles && filteredArticles.length === 0 ? (;        <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
           <p className="text-zion-slate-light">;
             Try adjusting your search query or browse another category.;
@@ -180,6 +203,9 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
 
 
             <Card
+      ) : (;
+        <div className="space-y-4">;
+          {filteredArticles && filteredArticles.map(article => (;
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
             >;
@@ -343,3 +369,9 @@ function formatDate(date: string): string {;
   });
 }
 ;
+    day: "numeric"
+
+    </div>;
+  );  })
+  })
+

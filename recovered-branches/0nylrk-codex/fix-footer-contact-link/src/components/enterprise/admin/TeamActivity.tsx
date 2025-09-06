@@ -17,6 +17,10 @@ import {;
 
 
   Table
+  TableRow,;
+
+
+  Table
   TableBody
   TableCell
   TableHead
@@ -203,6 +207,7 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
 
+  TableRow} from "@/components/ui/table";
   },
 
   const getCategoryBadge = (category: string) => {
@@ -265,7 +270,7 @@ export function TeamActivity() {;
   const formatDate = (date:Date) => {;
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / (1000 * 60)),;
+    const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),;
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),;
 ;
@@ -294,6 +299,7 @@ export function TeamActivity() {;
 
 
   return (
+  return (  return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
@@ -350,6 +356,11 @@ export function TeamActivity() {;
               className="w-[200px] md:w-[300px] pl-9"
 
 
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+            <Input
+              type="search"
+              placeholder="Search activities..."
+              className="w-[200px] md:w-[300px] pl-9"import React from "react",;
   Table,;
   TableBody,;
   TableCell,;
@@ -430,6 +441,8 @@ export function TeamActivity() {;
       billing: { variant: "destructive" }};
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   };
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
+};
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -455,6 +468,39 @@ export function TeamActivity() {;
 ;
 
 
+;
+  const getCategoryBadge = (category: string) =>: any {
+    const category_styles: Record<;
+      string,
+      { variant: "default" | "outline" | "secondary" | "destructive" }
+    > = {
+      jobs: { variant: "default" },
+      candidates: { variant: "outline" },
+      team: { variant: "secondary" },
+      billing: { variant: "destructive" }
+    }
+;
+    return <Badge variant={category_styles[category].variant}>{category}</Badge>;
+  }
+;
+  return (
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Recent Team Activity</h3>;
+        <div className="flex items - center gap-2">;
+          <div className="relative">;
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+            <Input;
+              type="search";
+              placeholder="Search activities...";
+              className="w-[200px] md:w-[300px] pl-9";
+            />;
+          </div>;
+          <Button variant="outline" size="icon" className="h - 10 w-10">;
+            <CalendarIcon className="h - 4 w-4" />;
+          </Button>;
+        </div>;
+      </div>;
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -469,6 +515,15 @@ export function TeamActivity() {;
           <TableBody>;
 
             {activities.map((activity) => (;
+              <TableHead > User</TableHead>;
+              <TableHead > Activity</TableHead>;
+              <TableHead > Target</TableHead>;
+              <TableHead > Category</TableHead>;
+              <TableHead > Time</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {activities.map ((activity) => (
               <TableRow key={activity.id}>;
                 <TableCell className="font-medium">{activity.user}</TableCell>;
                 <TableCell>{activity.action}</TableCell>;
@@ -565,6 +620,10 @@ function TeamActivity() {
 if ( {) {
   $2
                   {formatDate(activity.timestamp)}
+
+    </div>);
+
+}                  {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
             ))}
@@ -731,3 +790,4 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 ;
 }
+      </div>}

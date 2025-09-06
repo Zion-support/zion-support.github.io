@@ -1,11 +1,23 @@
 
 
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/remote-roles.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/remote-roles.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/remote-roles.json',
+// @ts-ignore;
 
 
 export default function RemoteRolesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
 
+  const items: any[] = (data?.items || []).slice(0, 60);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -53,6 +65,8 @@ export default function RemoteRolesPage() {
       </div>
     </EnhancedLayout>
 
+  );
+};
 
                 {it.position} — {it.company  } catch (error) {
     console.error("Error:", error);
@@ -83,3 +97,6 @@ export default function RemoteRolesPage() {
 
 
 
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

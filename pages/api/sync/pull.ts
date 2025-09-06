@@ -55,6 +55,7 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
+ursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -117,6 +118,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt
     events
     scope: requestedScope})
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+    instanceId: state.config.instanceId
+    lastSyncedAt: state.lastSyncedAt
+    events
+  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+  const state = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    scope: requestedScope})
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -145,6 +156,8 @@ export default function handler(req, res) {
 }
 
 }
+
+
 
 
 

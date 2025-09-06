@@ -12,6 +12,8 @@ export interface FontConfig {
 export interface FontConfig {;
 
 
+export interface FontConfig {;
+
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -94,3 +96,6 @@ if (return, ) {
 }
 
 
+    switch (fontFamily) {    doc.set_font ('helvetica');
+  }
+}

@@ -20,6 +20,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {}
 };
@@ -29,6 +31,15 @@ export const messageChannelHandler: MessageHandler = {
   },
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    // eslint-disable-next-line no-console
+    console.log('Sending message: ', message);
+  }, receiveMessage: (_callback: (message: string) => void) => {
+    // Implementation for receiving messages
+    // eslint-disable-next-line no-console
+    console.log('Setting up message receiver');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 };
 };

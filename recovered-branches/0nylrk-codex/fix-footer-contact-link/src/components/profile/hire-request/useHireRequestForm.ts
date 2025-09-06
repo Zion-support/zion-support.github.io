@@ -43,6 +43,11 @@ interface UseHireRequestFormProps {
   }
 }
 export interface FormValues {}
+    name?: string;interface UseHireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,
+  initialJobTitle?: string,
+  userDetails?: {}
 }
 
 export interface FormValues {;
@@ -73,6 +78,11 @@ interface UseHireRequestFormProps {;
     email?: string,
     id?: string;
     id?: string;
+    email?: string,
+    id?: string;
+
+  }
+}    id?: string;
   }
 }
 ;
@@ -125,7 +135,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     path: ["budgetMax"]
   });
 
-    requesterName: z.string().min(2, "Name is required"),
+    requesterName: z.string().min(2, "Name is required")
+}    requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
     timeline: z.string().min(5, "Please specify your timeline"),
@@ -218,6 +229,9 @@ function useHireRequestForm() {
         onClose()
           id: talent.id || "",
           full_name: talent.full_name,
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema);
+    defaultValues: {          full_name: talent.full_name,
           professional_title: talent.professional_title},
         requester: {
           name: values.requesterName,
@@ -297,6 +311,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }
 }
       }
+          budgetMax: values.budgetMax      }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
           id: talent.id || "";
@@ -325,6 +340,11 @@ if ( {) {
     } catch (error) {
       console.error ("Error submitting hire request:", error);
     } finally {} catch (error) {;
+    } finally {
+
+      setIsSubmitting(false)
+
+    } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
       setIsSubmitting(false);
@@ -347,6 +367,12 @@ if ( {) {
 }
   }
 ;
+  }
+}
+;
+
+  }
+}
   return {
     form;
     is_submitting;
@@ -507,5 +533,7 @@ onSubmit
 
   }
   }
+  }
+}  }
 }
 ;

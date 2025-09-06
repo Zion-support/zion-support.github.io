@@ -183,6 +183,100 @@ export default function TenantOnboarding() {
     company_size: ""
     industry: ""
     custom_domain: ""
+    is_co_branded: true  });
+
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSelectChange = (name: string, value: string) => {;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSwitchChange = (name: string, checked: boolean) => {;
+    setFormData(prev => ({ ...prev, [name]: checked }))
+};
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true),;
+
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline: "AI Hiring Assistant",;
+        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
+        cta: "Get Started"
+};
+      // Submit to Supabase;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .insert({;
+          brand_name: formData && formData.brand_name,;
+          subdomain: subdomain,;
+          custom_domain: formData && formData.custom_domain || null,;
+          primary_color: formData && formData.primary_color,;
+          logo_url: formData && formData.logo_url || null,;
+          theme_preset: formData && formData.theme_preset,;
+          landing_page_copy: landingPageCopy,;
+          is_active: true,;
+          account_manager_id: user && user.id,;
+          dns_verified: false,;
+          email_template_override: null;
+        });
+        .select('id, brand_name, subdomain');
+        .single();
+
+      if (error) throw error;
+
+      toast && toast.success("Tenant created successfully!", {,
+  description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
+      });
+
+      // Reset form;
+      setFormData({;
+        brand_name: "",;
+        subdomain: "",;
+        logo_url: "",;
+        primary_color: "#9b87f5",;
+        theme_preset: "light",;
+        company_size: "",;
+        industry: "",;
+        custom_domain: "",;
+        is_co_branded: true;
+      });
+
+    } catch (error: any) {;
+      console && console.error("Error creating tenant:", error);
+      toast && toast.error("Failed to create tenant", { ,
+  description: error && error.message ;
+      });
+    } finally {;
+      setIsSubmitting(false);import React, { useState } from "react",
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
     is_co_branded: true
   });
 
@@ -232,6 +326,7 @@ export default function TenantOnboarding() {
 
 
       // Submit to Supabase
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
@@ -267,6 +362,7 @@ export default function TenantOnboarding() {
 
 
       // Reset form
+        .select('id, brand_name, subdomain')      // Reset form
       setFormData({
         brand_name: ""
         subdomain: ""
@@ -292,6 +388,7 @@ export default function TenantOnboarding() {
 
 
       })
+    } catch (error: any) {})
     } finally {
       setIsSubmitting(false)
     }
@@ -535,6 +632,13 @@ if (throw error) {
   }
 
                     <TabsTrigger value="company">Company Info</TabsTrigger>;
+  },
+
+  return (
+    <>;
+      <SEO
+        title="Tenant Onboarding - Zion AI Marketplace"
+        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."                    <TabsTrigger value="company">Company Info</TabsTrigger>;
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
@@ -547,11 +651,18 @@ if (throw error) {
                         name="brand_name";
                         value={form_data.brand_name}
                         on_change={handleInputChange}
+                        placeholder="hire && hire.yourcompany.com"
 
                         placeholder="Acme Corporation";
                         required;
                       />;
                     </div>;
+                    <div className="space-y-2">;
+                      <Label html_for="industry">Industry</Label>;
+                      <Select;
+                        name="industry";
+                        value={form_data.industry}
+                        onValueChange={(value) => handleSelectChange ("industry", value)}
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
@@ -568,21 +679,40 @@ if (throw error) {
                         </SelectContent>;
                       </Select>;
                     </div>;
+
+                    <div className="space-y-2">;
+                      <Label html_for="company_size">Company Size</Label>;
+                      <Select;
+                        name="company_size";
+                        value={form_data.company_size}
+                        onValueChange={(value) => handleSelectChange ("company_size", value)}
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select company size" />;
                         </SelectTrigger>;
                         <SelectContent>;
+
+                          <SelectItem value="1 - 10">1 - 10 employees</SelectItem>;
+                          <SelectItem value="11 - 50">11 - 50 employees</SelectItem>;
+                          <SelectItem value="51 - 200">51 - 200 employees</SelectItem>;
+                          <SelectItem value="201 - 500">201 - 500 employees</SelectItem>;
+                          <SelectItem value="501 - 1000">501 - 1000 employees</SelectItem>;
                           <SelectItem value="1000+">1000+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
                   </TabsContent>;
                       />;
+
+                        placeholder="https://example && example.com/logo && logo.png"                      />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
                     </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="primary_color">Primary Brand Color</Label>;
+                      <div className="flex items-center gap-2">;
                         <Input
                           id="primary_color"
                           name="primary_color"
@@ -593,6 +723,29 @@ if (throw error) {
 
                         placeholder="hire && hire.yourcompany.com"
 
+
+                          value={formData && formData.primary_color}
+                          onChange={handleInputChange}
+                          className="w-12 p-1 h-10"
+                        />;
+                        <Input
+                          name="primary_color"
+                          value={formData && formData.primary_color}
+                          onChange={handleInputChange}
+                          placeholder="#9b87f5"
+
+                        />;
+                      </div>;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="theme_preset">Theme Preset</Label>;
+                      <Select
+                        name="theme_preset" 
+                        value={formData && formData.theme_preset} 
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}                        placeholder="hire && hire.yourcompany.com"
+
+                        placeholder="hire && hire.yourcompany.com"
 
 export default function TenantOnboarding() {;
   const { user } = useAuth(),;
@@ -610,7 +763,7 @@ export default function TenantOnboarding() {;
     is_co_branded: true;
   }),;
   // Check if user has admin role;
-  const isAdmin = user?.role === "admin",;
+  const isAdmin = user?.role === "admin";
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
   }
@@ -658,6 +811,8 @@ export default function TenantOnboarding() {;
       if (error) throw error,;
       toast.success("Tenant created successfully!", {;
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
+      toast.success("Tenant created successfully!", {,
+  description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
       }),;
       // Reset form;
       setFormData({;
@@ -675,6 +830,8 @@ export default function TenantOnboarding() {;
       console.error("Error creating tenant:", error);
       toast.error("Failed to create tenant", {;
         description: error.message;
+      toast.error("Failed to create tenant", {,
+  description: error.message;
       });
     } finally {;
       setIsSubmitting(false);
@@ -878,6 +1035,7 @@ export default function TenantOnboarding() {;
 
 
                   </Button>;
+                        onChange={handleInputChange}                  </Button>;
                 </div>;
               </form>;
             </CardContent>;
@@ -945,6 +1103,8 @@ data, error
 }) .select ('id, brand name, subdomain') .single ();
 if (error) throw error;
 description: error.message 
+if (error) throw error,
+  description: error.message 
 }) 
 }finally {
   setIsSubmitting (false) 

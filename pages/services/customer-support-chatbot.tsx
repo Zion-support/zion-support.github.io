@@ -68,8 +68,24 @@ export default CustomerSupportChatbot,
       </main>
     </div>
   )
+}
+
+
+
+
+},
+export default CustomerSupportChatbot
+}
+
+},
+export default CustomerSupportChatbot
+
+},
+export default CustomerSupportChatbot
 },
 
+export default CustomerSupportChatbot,;
+export default CustomerSupportChatbot,
 
-
-
+const CustomerSupportChatbot: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

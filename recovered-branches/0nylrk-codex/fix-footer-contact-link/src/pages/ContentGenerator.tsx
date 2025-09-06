@@ -1,6 +1,28 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -77,6 +99,11 @@ export default function ContentGenerator() {
 
 
 
+  // Redirect if not logged in
+  React.useEffect(() => {
+    if (!isLoading && !user) {
+      toast.error("You must be logged in to access this page");
+      navigate("/login?redirect=/content-generator")
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -293,7 +320,7 @@ export default function ContentGenerator() {;
 ;
 export default function ContentGenerator() {;
   const { user, isLoading } = useAuth(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),;
   const [customPrompt, setCustomPrompt] = useState(''),;
   const [topic, setTopic] = useState(''),;
@@ -390,6 +417,20 @@ export default function ContentGenerator() {;
   }
   return (
                     <Input
+  // Redirect if not logged in;
+  React && React.useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast && toast.error("You must be logged in to access this page");
+      navigate("/login?redirect=/content-generator");
+    }
+  }, [user, isLoading, navigate]);      setPreviewContent(data);
+      toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
+    } catch (error) {;
+      console && console.error("Error generating content:", error);
+      toast && toast.error("Failed to generate content. Please try again.");
+    } finally {;
+      setIsGenerating(false);
+    }                    <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -482,6 +523,8 @@ export default function ContentGenerator() {;
 
 
                     <Input
+                  <div className="space-y-2">;
+                    <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -623,6 +666,18 @@ export default function ContentGenerator() {;
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 
+                        <Switch
+                          id="autoPublish"
+                          checked={autoPublish}
+                          onCheckedChange={setAutoPublish}
+                        />;
+                      </div>;
+                      <div className="flex items-center justify-between">;
+                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
+                        <Switch;
+                          id="includeImage";                    onClick={generateContent}
+                    disabled={isGenerating}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
                   <Button;
                     onClick={generateContent}
                     disabled={isGenerating}
@@ -647,6 +702,9 @@ export default function ContentGenerator() {;
 
             ;
 
+                </CardFooter>;
+              </Card>;
+            </div>;
             <div className="lg:col-span-2">;
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">;
                 <CardHeader>;
@@ -665,6 +723,7 @@ export default function ContentGenerator() {;
                   ) :previewContent ? (;
 
                     contentType === 'blog' ? (;
+                  ) : previewContent ? (;                    contentType === 'blog' ? (;
                       <div className="space-y-4">;
                         <Tabs defaultValue="preview" className="w-full">;
                           <TabsList className="bg-zion-blue-light/30 w-full">;
@@ -685,6 +744,15 @@ export default function ContentGenerator() {;
                                     __html:previewContent.body;
 
                                       .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>");
+                          <TabsContent value="preview" className="pt-4">;
+                            <ScrollArea className="h-[500px] pr-4">;
+                              <div className="space-y-4">;
+                                <h2 className="text-2xl font-bold text-white">{previewContent && previewContent.title}</h2>;
+                                <p className="text-zion-slate-light">{previewContent && previewContent.metaDescription}</p>;
+                                <div
+                                  className="prose prose-invert max-w-none"
+                                  dangerouslySetInnerHTML={{ 
+                                    __html: previewContent && previewContent.body                                      .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>");
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>");
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>");
@@ -705,6 +773,13 @@ export default function ContentGenerator() {;
                           </TabsContent>;
                           ;
 
+                          <TabsContent value="markdown" className="pt-4">;
+                            <ScrollArea className="h-[500px]">;
+                              <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">;
+                                {previewContent && previewContent.body}
+                              </pre>;
+                            </ScrollArea>;
+                          </TabsContent>;
                           <TabsContent value="metadata" className="pt-4">;
                             <div className="space-y-4">;
                               <div>;
@@ -715,6 +790,18 @@ export default function ContentGenerator() {;
                     ) : (;
                       <>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>;
                     )}
+                                <p className="text-zion-slate-light">{previewContent && previewContent.title}</p>;
+                              </div>;
+
+                              <div>;
+                                <h3 className="text-white font-semibold mb-1">Meta Description</h3>;
+                                <p className="text-zion-slate-light">{previewContent && previewContent.metaDescription}</p>;
+                              </div>;
+
+                              <div>;
+                                <h3 className="text-white font-semibold mb-1">Tags</h3>;
+                                <div className="flex flex-wrap gap-2">;
+                                  {previewContent && previewContent.tags.map((tag: string, index: number) => (;
                                     <span
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan">;
@@ -754,6 +841,8 @@ export default function ContentGenerator() {;
                                   <p className="text-zion-slate-light">{previewContent.imagePrompt}</p>;
 
                                 </div>;
+                                    </span>;
+                                  ))}
                               )}
                             </div>;
                           </TabsContent>;
@@ -763,6 +852,7 @@ export default function ContentGenerator() {;
                     ) :(;
 
                       <div className="space-y-4">;
+                    ) : (;                      <div className="space-y-4">;
                         <Tabs defaultValue="preview" className="w-full">;
                           <TabsList className="bg-zion-blue-light/30 w-full">;
                             <TabsTrigger value="preview">Preview</TabsTrigger>;
@@ -794,6 +884,27 @@ export default function ContentGenerator() {;
                               >;
 
                                 Send Test to {testEmail || "your email"}
+                          <TabsContent value="preview" className="pt-4">;
+                            <div className="bg-white rounded-lg p-6 text-black">;
+                              <h2 className="text-xl font-bold">{previewContent && previewContent.subject}</h2>;
+                              <p className="text-gray-500 text-sm mt-2">{previewContent && previewContent.previewText}</p>;
+                              <div className="border-t border-gray-200 my-4"></div>;
+                              <div
+                                className="prose max-w-none"
+                                dangerouslySetInnerHTML={{ __html: previewContent && previewContent.body }}
+                              />;
+                              <div className="mt-6">;
+                                <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
+                                  {previewContent && previewContent.cta || "Visit Zion Marketplace"}
+                                </Button>;
+                              </div>;
+                            </div>;
+
+                            <div className="mt-4 flex justify-end">;
+                              <Button
+                                onClick={sendTestNewsletter}
+                                disabled={!testEmail}
+                                className="bg-zion-blue-light hover:bg-zion-blue text-white">;                                Send Test to {testEmail || "your email"}
                               </Button>;
                             </div>;
                           </TabsContent>;
@@ -805,6 +916,10 @@ export default function ContentGenerator() {;
                                 {previewContent.body}
 
                               </pre>;
+                          <TabsContent value="html" className="pt-4">;
+                            <ScrollArea className="h-[500px]">;
+                              <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">;
+                                {previewContent && previewContent.body}                              </pre>;
                             </ScrollArea>;
                           </TabsContent>;
                         </Tabs>;
@@ -990,6 +1105,12 @@ export default function ContentGenerator() {;
 
 
                                     </span>;
+                  ) : (;
+                    <div className="flex flex-col items-center justify-center py-12 text-center">;
+                      <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">;
+
+                        <svg
+                          xmlns="http://www && www.w3.org/2000/svg"                                    </span>;
                                   ))}
                         <svg
                           xmlns="http://www && www.w3.org/2000/svg"
@@ -1425,6 +1546,7 @@ if ( {) {
   )
 }
                 </CardContent>;
+                          strokeLinejoin="round"                </CardContent>;
               </Card>;
             </div>;
           </div>;
@@ -1527,3 +1649,5 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
+    </>);
+}

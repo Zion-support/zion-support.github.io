@@ -32,6 +32,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
   // If still loading auth status, show loading
   if (isLoading) {
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
@@ -258,3 +259,4 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 ;
 }
+  }

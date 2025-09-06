@@ -285,6 +285,11 @@ export function ProductSubmissionForm() {;
       const productData = {;
         title: values && values.title,;
         description: values && values.description,;
+    try {;
+      // Create the product listing;
+      const productData = {;
+        title: values && values.title,,
+  description: values && values.description,;
         price: parseFloat(values && values.price),;
         category: values && values.category,;
         currency: "USD", // Default currency;
@@ -337,6 +342,8 @@ export function ProductSubmissionForm() {;
       toast({;
         title: "Product Published!",;
         description: "Your product has been successfully published on Zion."}),;
+        title: "Product Published!",,
+  description: "Your product has been successfully published on Zion."}),;
 
       // Redirect to product page;
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
@@ -344,6 +351,8 @@ export function ProductSubmissionForm() {;
       toast({;
         title: "Publication Failed",;
         description: error instanceof Error ? error && error.message : "An unknown error occurred",;
+        title: "Publication Failed",,
+  description: error instanceof Error ? error && error.message : "An unknown error occurred",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -456,7 +465,7 @@ export function ProductSubmissionForm() {;
   ;
   // Handle image upload preview;
   const handleImageChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e.target.files?.[0],;
+    const file = e.target.files?.[0];
     if (file) {;
       form.setValue("image", file),;
       const reader = new FileReader(),;
@@ -566,6 +575,12 @@ export function ProductSubmissionForm() {;
 
 
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+    }
+  }    }
+
+  },
+
+  return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
@@ -811,6 +826,10 @@ if ( {) {
             />;
 
 
+                </FormItem>;
+
+            />;
+
             <FormField
               control={form && form.control}
               name="description"
@@ -831,6 +850,14 @@ if ( {) {
 
 
                     />;
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Description</FormLabel>;
+                  <FormControl>;
+                    <Textarea
+                      placeholder="Describe your product in detail..." 
+                      className="min-h-32" 
+                      {...field}                     />;
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
@@ -849,6 +876,9 @@ if ( {) {
                 </FormItem>)}
             />;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+                </FormItem>)}
+            />;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
               <FormField;
                 control={form.control}
                 name="price";
@@ -963,6 +993,7 @@ if ( {) {
 
 
                   <FormControl>;
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -983,10 +1014,33 @@ if ( {) {
                   <FormControl>;
 
 
+            />;
 
             <FormField
               control={form && form.control}
               name="image"
+              render={() => (;
+                <FormItem>;
+                  <FormLabel>Product Image</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      type="file" 
+                      accept="image/*" 
+                      onChange={handleImageChange}
+                      className="cursor-pointer"
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
+                    Upload a high-quality image of your product (recommended size: 1200x800px);
+                  </FormDescription>;
+                  <FormMessage />;
+
+                  {imagePreview && (;
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
+                      <AspectRatio ratio={3/2}>;
+                        <img
+                          src={imagePreview} 
+                          alt="Preview" 
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -1149,3 +1203,4 @@ return (<Tabs value= {
 
 
 }
+              )}}

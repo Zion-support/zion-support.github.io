@@ -3,10 +3,22 @@
 
 
 
+
+
+
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 
+
+import fs from 'fs';
+import path from 'path';
+import { IntegrationsState } from './types';
+const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
+const STATE_FILE = path.join(DATA_DIR, 'state.json');
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
@@ -37,6 +49,16 @@ function ensureDataDir (): void {
       overrides: []
 
 
+      connections: []
+      logs: []
+      overrides: []
+      events: []
+
+      connections: [],
+      logs: [],
+      overrides: [],
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 export function readState(): IntegrationsState {
@@ -48,12 +70,26 @@ export function readState(): IntegrationsState {
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
+  }
+}
+    const raw = fs.readFileSync (STATE_FILE, "utf8");
+    return JSON.parse (raw) as IntegrationsState;
+
+const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+const STATE_FILE = path.join(DATA_DIR, "state.json");
+const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
+const STATE_FILE = path.join(DATA_DIR, 'state.json');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
+      connections: []
+      logs: []
+      overrides: []
       connections: []
       logs: []
       overrides: []
@@ -70,11 +106,25 @@ function ensureDataDir(): void {
 export function readState(): IntegrationsState {;
 
 
+      connections: [],
+      logs: [],
+      overrides: [],
+      events: []
+    };
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
+  }
+}
+
+export function readState(): IntegrationsState {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ensureDataDir();
   const current = readState();
   (mutator(current),
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
   return current;
+export function read_state (): IntegrationsState {
+  ensureDataDir ();
+  try {
 export function read_state (): IntegrationsState {
   ensureDataDir ();
   try {
@@ -91,6 +141,20 @@ export function read_state (): IntegrationsState {
 export function writeState(
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    const raw = fs.readFileSync(STATE_FILE, 'utf8');
+return JSON.parse(raw) as IntegrationsState;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (error) {
+    return { connections: [], logs: [], overrides: [], events: [] };
+  }
+}
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export function writeState(
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
@@ -127,3 +191,12 @@ export function write_state (
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  mutator(current);
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

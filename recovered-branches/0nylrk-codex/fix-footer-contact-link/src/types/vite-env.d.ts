@@ -76,3 +76,9 @@ declare let process: {;
 };
   }
 };
+;
+declare module 'lovable-tagger' {;
+
+  export function componentTagger(): Plugin;
+}
+// Add Node.js globals

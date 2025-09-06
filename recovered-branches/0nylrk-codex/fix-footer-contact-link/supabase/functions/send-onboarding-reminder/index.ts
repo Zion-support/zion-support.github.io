@@ -21,6 +21,10 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
@@ -74,6 +78,11 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
       return new Response(
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}      return new Response(
+        JSON && JSON.stringify({ error: "Missing required fields" });      return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
@@ -159,6 +168,11 @@ serve(async (req: Request) => {
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
       html: `
+      return new Response(
+        JSON && JSON.stringify({ error: "User not found", details: userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+    // Send email      html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
           <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
@@ -195,6 +209,7 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
+          <div style="margin: 30px 0,">          status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
@@ -374,6 +389,11 @@ if ( {) {
       {
 
 
+    const { data: notification, error: notificationError } = await supabase && supabase.rpc(      "create_notification";
+      {
+
+      JSON && JSON.stringify({        message: "Reminder sent successfully",
+        notification_id: notification});
       {
 
         status: 200,
@@ -385,6 +405,7 @@ if ( {) {
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -716,3 +737,6 @@ if (notificationError) {
 });
 
 
+  }
+});
+;

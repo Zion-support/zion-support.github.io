@@ -1,11 +1,23 @@
 
 
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/arxiv-research.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/arxiv-research.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/arxiv-research.json',
+// @ts-ignore;
 
 
 export default function ArxivResearchPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 40)
 
+  const items: any[] = (data?.items || []).slice(0, 40);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -54,6 +66,8 @@ export default function ArxivResearchPage() {
       </div>
     </EnhancedLayout>
 
+  );
+};
 
                 {it.title  } catch (error) {
     console.error("Error:", error);
@@ -85,3 +99,6 @@ export default function ArxivResearchPage() {
 
 
 
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

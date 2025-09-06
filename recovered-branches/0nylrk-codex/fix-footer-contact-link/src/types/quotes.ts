@@ -36,6 +36,24 @@ export interface ContactInfo {;
   company: string;
 }
 export interface Budget {
+export interface ContactInfo {
+
+export interface ListingItem {;
+  id: string;
+  title: string;
+  category: string,
+  image?: string
+}
+
+export interface ContactInfo {;
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+
+;
+export interface ListingItem {
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -82,6 +100,10 @@ export interface QuoteRequest {;
   timeline: TimelineType;
 export interface QuoteRequest {
   id: string;
+  endDate?: Date;  timeline: TimelineType;
+export interface QuoteRequest {
+
+export interface QuoteRequest {;
   talent_id: string;
   talent_name?: string;
   requester_id?: string;

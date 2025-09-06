@@ -6,6 +6,6 @@ const ErrorBoundary = ({ className }) => {
       <h1>ErrorBoundary</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

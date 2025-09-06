@@ -18,6 +18,11 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <p>Blog content coming soon...</p>
 
 
+      </main>
+    </div>
+  )
+}
+export default Chat5gTechnologyAndItsImpactOnIotChat;
 
 
 
@@ -36,3 +41,9 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
 
 
+export default Chat5gTechnologyAndItsImpactOnIotChat,;
+export default Chat5gTechnologyAndItsImpactOnIotChat,
+
+
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -16,6 +16,14 @@ export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {
 // ZionGPT Utility Functions
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
+
+export type ZionGPTUsage = {export type ZionGPTUsage = {
+
+export type ZionGPTUsage = {
+
+export type ZionGPTUsage = {
+export type ZionGPTUsage = {// ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
 import {supabase} from '@/integrations/supabase/client';
@@ -236,6 +244,7 @@ export async function callZionGPT({
     // Call the edge function that will use the model
     const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
       body: {
+        case 'support': return 'zion-support-v1';      body: {
         prompt;
         modelId;
         maxTokens
@@ -254,6 +263,7 @@ export async function callZionGPT({
 
 
         `${purpose}-generation`;
+    // Log usage for analytics        `${purpose}-generation`;
         userId
       )
     }
@@ -447,6 +457,11 @@ export async function getActiveModelId(purpose:'job' | 'resume' | 'support'):Pro
 
 
   }
+    
+    return data && data.completion
+  } catch (error) {
+    console && console.error('Error calling ZionGPT:', error);  }
+}  }
 }
 ;
 // Log usage of the fine-tuned model;
@@ -458,7 +473,7 @@ export async function logModelUsage(;
 ):Promise<void> {;
   try {;
     const cost = calculateCost(modelId, tokensUsed);
-    const cost = calculateCost(modelId, tokensUsed),;
+    const cost = calculateCost(modelId, tokensUsed);
     ;
     await supabase;
       .from('model_usage_logs');

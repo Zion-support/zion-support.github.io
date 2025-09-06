@@ -57,6 +57,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+}
+
+}
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../lib / integrations / file_store';
 ;
@@ -86,3 +90,12 @@ function handler() {
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
+import { readState } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const { providerId } = req.query as { providerId?: string },
+  const state = null;
+  res.status(200).json({ logs })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,6 +9,8 @@ export interface SmartContractInfo {;
 export interface SmartContractInfo {;
 
 
+export interface SmartContractInfo {;
+
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -33,6 +35,16 @@ export interface EscrowContractDetails {;
 
 
   client: string;
+  createdBy: string
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+;
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
+
+export interface EscrowContractDetails {;
+
+export interface EscrowContractDetails {
+
+export interface EscrowContractDetails {;
   talent: string;
   amount: number;
   currency: string;
@@ -61,6 +73,14 @@ export interface DeploymentOptions {;
   deployToChain: boolean;
 
 }
+export interface DeploymentOptions {;
+
+  network: BlockchainNetwork;
+  walletAddress?: string;
+  useEscrow: boolean
+
+  deployToChain: boolean
+  arbitrator?: string;}
 export interface DeploymentOptions {
   network: BlockchainNetwork;
   wallet_address?: string;
@@ -74,6 +94,7 @@ export interface DeploymentOptions {
 
 
   arbitrator?: string;
+}  arbitrator?: string;
 }
 ;
 export interface DeploymentOptions {;

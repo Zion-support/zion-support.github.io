@@ -45,7 +45,13 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 export function get_state (): IntegrationState {
   return { ...state }
 }
-};
+  connections: [],
+  logs: [],
+  overrides: []}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {};
 
 export function getState(): IntegrationState {;
   return { ...state };
@@ -112,6 +118,14 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
     connections: [],
+    logs: [],
+    overrides: []
+  };
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+  updater(state);
+  return { ...state }
+}    connections: [],
     logs: [],
     overrides: []
   };

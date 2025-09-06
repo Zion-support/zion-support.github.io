@@ -9,6 +9,7 @@ import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
@@ -29,6 +30,7 @@ export function use_conversations (
 
 
   user: UserWithProfile;
+ */  user: UserWithProfile;
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
       if (error) throw error;
@@ -103,6 +105,10 @@ export function useConversations(;
 
 
           }
+      const formattedConversations: Conversation[] = data && data.map(conv => {
+        const isUserOne = conv && conv.user_one_id === user && user.id;
+        const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+                  }
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
@@ -310,7 +316,7 @@ export function useConversations(;
       const formattedConversations: Conversation[] = data.map(conv => {;
         const isUserOne = conv.user_one_id === user.id;
         const isUserOne = conv.user_one_id === user.id;
-        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id,;
+        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
         return {;
           id: conv.id,;
           user_id: otherUserId,;
@@ -421,6 +427,13 @@ export function useConversations(;
 
       }
       
+            created_at: conv.last_message_time;        }
+      });
+      setConversations(formattedConversations);
+      // Calculate total unread count      }
+      
+      }
+      
       }
       
       }
@@ -452,6 +465,15 @@ export function useConversations(;
       
 
 
+      // Return the conversation ID
+      return conversationId
+    } catch (error) {
+      console && console.error('Error creating conversation:', error);
+      toast({
+
+          read: false
+        });
+      // Update conversations list
       // Return the conversation ID
       return conversationId
     } catch (error) {
@@ -855,3 +877,4 @@ conversationId = newConversation.id
     createConversation}
 }
 }
+      toast({}

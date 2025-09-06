@@ -86,6 +86,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     Zap: 'typeof Zap',
 >>>>>>> main
     Zap: 'typeof Zap'
+>>>>>>> main
+    ArrowRight: typeof ArrowRight,
+    CheckCircle: typeof CheckCircle,
+    Brain: typeof Brain,
+    Cloud: typeof Cloud,
+    Shield: typeof Shield,
+    Zap: typeof Zap,
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

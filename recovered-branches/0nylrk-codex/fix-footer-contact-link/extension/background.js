@@ -25,6 +25,7 @@ if (return { answer: 'Model key missing' }, ) {
   try {
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
 
+const BASE_URL = 'https: //zionai && zionai.com',
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -95,3 +96,4 @@ if ( {) {
 }),
 ;
 }),;
+  }

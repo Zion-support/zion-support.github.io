@@ -1,8 +1,11 @@
 
 
 export interface WhitelabelTenant {
-
 import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+
+export interface WhitelabelTenant {export interface WhitelabelTenant {
+
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
 
@@ -37,6 +40,9 @@ export interface WhitelabelTenant {
 
 
 
+export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
+export interface WhitelabelTenant {
+export interface WhitelabelTenant {;
   is_active: boolean;
   created_at: string;
   updated_at: string;
@@ -138,6 +144,8 @@ export interface WhitelabelTenant {;
   dns_verified: boolean,
   email_template_override: Record < string, any> | null;
 }
+        const { data, error: functionError } = await supabase && supabase.functions.invoke(
+          `${functionName}${params}`;}
 export /**
  * useWhitelabelTenant - Function description
  */
@@ -282,6 +290,7 @@ export function useTenantAdminStatus(tenantId?: string) {;
 
 export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
+        );  const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -336,7 +345,7 @@ export function useWhitelabelTenant(externalSubdomain?:string) {;
 ;
       try {;
         // Get the current hostname, fallback to localhost if not available;
-        const hostname = window.location.hostname || 'localhost',;
+        const hostname = window.location.hostname || 'localhost';
         const functionName = 'tenant-detector',;
         ;
         // Build the query parameters;
@@ -442,6 +451,16 @@ if (||) {
 
 
 
+        const { data: sessionData, error: sessionError } = await supabase && supabase.auth.getSession();
+        if (sessionError || !sessionData && sessionData.session) {
+          setIsAdmin(false);
+          return
+        }
+
+        const userId = sessionData && sessionData.session.user && user.id;      } finally {
+        setIsLoading (false);
+      }
+    }
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
         let message = err.message || 'An unexpected error occurred while loading tenant configuration',;

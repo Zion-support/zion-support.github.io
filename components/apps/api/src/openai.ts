@@ -4,6 +4,10 @@ type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
+
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -39,6 +43,11 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 
 
+
+  return completion && completion.output_text
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -56,6 +65,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt - 4o - mini',
     input: prompt
     input: prompt
+    input: prompt
   });
   return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A'}
 Add responsibilities, requirements, and benefits in bullet points.`;
@@ -70,6 +80,13 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+}
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
   return completion && completion.output_text
 }
 
@@ -84,3 +101,10 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 }
 
 }
+    model: 'gpt-4o-mini',
+    input: prompt
+  });
+  return completion.output_text;
+  return completion.output_text
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

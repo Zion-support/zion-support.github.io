@@ -31,6 +31,8 @@ export const useAdminQuotes = () => {;
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
     enabled: true});
+export const useAdminQuotes = () => {
+export const useAdminQuotes = () => {;    enabled: true});
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
@@ -147,7 +149,7 @@ export const useAdminQuotes = () => {;
 ;
     // Search filter;
     if (searchQuery) {;
-      const query = searchQuery.toLowerCase(),;
+      const query = searchQuery.toLowerCase();
       if (;
         !quote.requester_name.toLowerCase().includes(query) &&;
         !quote.project_name.toLowerCase().includes(query) &&;
@@ -185,6 +187,11 @@ export const useAdminQuotes = () => {;
   const updateStatusMutation = useMutation({
 
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      return false    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
@@ -244,7 +251,11 @@ export const useAdminQuotes = () => {;
 
 
 
-    onSuccess: (_, variables) => {
+    onSuccess: (_, variables) => {};
+    onError: (error: Error) => {
+      toast({
+        title: "Error",
+  description: "Failed to update status: " + error && error.message,    onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
@@ -509,7 +520,20 @@ if ( {) {
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
-    },
+    }
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })        variant: "destructive"
+      })
+    }
+  });      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    };
+    onError: (error: Error) => {
+      toast({
+        title: "Error",
+  description: "Failed to delete quote: " + error && error.message,        variant: "destructive"
+      })
+    }
+  });    },
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -527,6 +551,8 @@ if ( {) {
       toast({;
         title: "Status updated",;
         description: "The quote request status has been updated";
+        title: "Status updated",,
+  description: "The quote request status has been updated";
       }),;
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] });
     },;
@@ -534,6 +560,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to update status: " + error.message,;
+        title: "Error",,
+  description: "Failed to update status: " + error.message,;
         variant: "destructive";
       });
     }
@@ -546,6 +574,8 @@ if ( {) {
       toast({;
         title: variables.isArchived ? "Quote archived" : "Quote unarchived",;
         description: variables.isArchived;
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",,
+  description: variables.isArchived;
           ? "The quote request has been archived";
           : "The quote request has been moved back to active quotes";
       }),;
@@ -555,6 +585,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to update quote: " + error.message,;
+        title: "Error",,
+  description: "Failed to update quote: " + error.message,;
         variant: "destructive";
       });
     }
@@ -566,6 +598,8 @@ if ( {) {
       toast({;
         title: "Quote deleted",;
         description: "The quote request has been permanently deleted";
+        title: "Quote deleted",,
+  description: "The quote request has been permanently deleted";
       }),;
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] });
     },;
@@ -573,6 +607,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to delete quote: " + error.message,;
+        title: "Error",,
+  description: "Failed to delete quote: " + error.message,;
         variant: "destructive";
       });
     }

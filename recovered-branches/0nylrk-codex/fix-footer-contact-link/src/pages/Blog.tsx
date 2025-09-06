@@ -11,6 +11,7 @@ import {Input} from "@/components/ui/input";
 import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {BlogPost} from "@/types/blog";
 import {Search} from "lucide-react";
+
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -44,6 +45,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 <h2>1. Multimodal AI Systems</h2>
+import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
 <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
@@ -57,6 +59,9 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
 
       name: "Dr. Alicia Zhang",
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
+    author: {
+
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     },
@@ -184,6 +189,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 
   {
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
     slug: "ai-ethics-frameworks"
@@ -270,6 +276,11 @@ const BLOG_POSTS: BlogPost[] = [
 
 
   {
+<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
+    author: {
+      name: "Dr. James Peterson"
+      title: "AI Ethics Officer"
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
     slug: "ai-compute-optimization"
@@ -327,6 +338,11 @@ const CATEGORIES = [
 ],
 
   return (
+<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
+    author: {
+      name: "Michael Wong"
+      title: "ML Infrastructure Architect"
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"  return (
     <>
       <SEO
         title="Blog - AI & Tech Insights"
@@ -883,6 +899,16 @@ export default function Blog() {;
                     src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
                     alt={featuredPosts[0].title}
+
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts && featuredPosts.length > 0 && (;            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+                <div className="aspect-video overflow-hidden rounded-lg">;
+                  <img
+                    src={featuredPosts[0].featuredImage} 
+                    alt={featuredPosts[0].title}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"                    alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />;
                 </div>;
@@ -899,6 +925,9 @@ export default function Blog() {;
                   </p>;
                   <div className="flex items-center mb-6">;
 
+                    <img
+                      src={featuredPosts[0].author && author.avatarUrl} 
+                      alt={featuredPosts[0].author && author.name}
                       className="w-10 h-10 rounded-full mr-3"
                     />;
                     <div>;
@@ -988,6 +1017,17 @@ function Blog() {
 
 
                     <img ;
+                      <p className="text-sm text-zion-slate-light">;
+                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+
+                      </p>;
+                    </div>;
+                  </div>;
+
+                  <Button
+                    asChild
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>;                    <img ;
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
                       className="w-10 h-10 rounded-full mr-3";
                     />;
@@ -1291,6 +1331,10 @@ function Blog() {
 
 
           )}
+                <Input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}          )}
         </div>
       </div>
       <Footer />
@@ -1341,6 +1385,12 @@ function Blog() {
     </>;
 
 
+}        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
   );
 }
                 </Card>))}
@@ -1348,6 +1398,9 @@ function Blog() {
             <div className="text - center py - 16">;
               <h3 className="text - xl font - bold text - white mb - 2">No articles found</h3>;
               <p className="text - zion - slate - light mb - 6">Try adjusting your search or filter criteria</p>;
+            <div className="text - center py-16">;
+              <h3 className="text - xl font - bold text - white mb-2">No articles found</h3>;
+              <p className="text - zion - slate - light mb-6">Try adjusting your search or filter criteria</p>;
               <Button;
                 variant="outline";
                 on_click={() => {
@@ -1355,6 +1408,7 @@ function Blog() {
                   setSelectedCategory ("All Categories");
                 }}
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
               >;
                 Clear all filters;
               </Button>;
@@ -1454,4 +1508,5 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 ;
 
 
+}
 }

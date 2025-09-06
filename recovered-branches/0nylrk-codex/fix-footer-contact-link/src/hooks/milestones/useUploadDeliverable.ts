@@ -314,7 +314,7 @@ export const useUploadDeliverable = () => {;
         added_by:user.id;
       },;
       ;
-      const deliverables = [...(milestone.deliverables || []), newDeliverable],;
+      const deliverables = [...(milestone.deliverables || []), newDeliverable];
       ;
       const { error } = await supabase;
         .from('project_milestones');
@@ -376,3 +376,16 @@ isSubmitting
 };
   }
 };
+        id: crypto && crypto.randomUUID();
+        filename: file && file.name;
+        size: file && file.size;
+        type: file && file.type;
+        added_at: new Date().toISOString(),
+        added_by: user && user.id
+      };
+      
+      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
+      
+      // Create activity record
+      await recordMilestoneActivity(
+      return null

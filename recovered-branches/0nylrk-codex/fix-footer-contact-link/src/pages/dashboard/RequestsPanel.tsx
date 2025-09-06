@@ -1,6 +1,28 @@
 
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -12,6 +34,15 @@ import {RequestsHeader, QuoteRequestsList} from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
 
 
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function RequestsPanel() {;
+  const { user } = useAuth();
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const {;
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -171,11 +202,14 @@ import { ;
 ;
 export default function RequestsPanel() {;
   const { user } = useAuth(),;
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
   ;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 ;
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+  const [showDetails, setShowDetails] = useState(false),;
   const {;
     quotes,;
     unreadCount,;
@@ -222,16 +256,20 @@ function RequestsPanel() {
     markAsResponded;
   return (
     <ProtectedRoute>;
+  return (    <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
             <RequestsHeader
+            <RequestsHeader            <RequestsHeader
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+
+            />;
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -261,6 +299,8 @@ function RequestsPanel() {
 
 
                 <QuoteRequestsList
+
+              <TabsContent value="active">;                <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
@@ -449,3 +489,8 @@ const [showDetails, setShowDetails] = useState (false);
 }
 
 
+
+        {/* Quote Details Modal */}
+        <QuoteDetails
+          quote={selectedQuote}
+          isOpen={showDetails}

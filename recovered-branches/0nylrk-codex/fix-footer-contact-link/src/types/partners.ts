@@ -9,6 +9,8 @@ export interface PartnerProfile {;
 
 
 export interface PartnerProfile {
+export interface PartnerProfile {;
+export interface PartnerProfile {export interface PartnerProfile {
 
 export interface PartnerProfile {;
 export interface PartnerProfile {
@@ -28,6 +30,9 @@ export interface PartnerProfile {
     linkedin?: string;
     [key: string]: string | undefined;
   };
+    linkedin?: string;
+    [key: string]: string | undefined
+};
   niche: string;
   audience_size: string;
   payout_method: string;
@@ -62,6 +67,10 @@ export interface PartnerReferralLink {;
 
   commission_rate?: number
 }
+}
+
+export interface PartnerReferralLink {;
+
 export interface PartnerSettings {
 
 export interface PartnerSettings {;
@@ -91,6 +100,10 @@ export interface PartnerPayout {;
 
 
   conversions: number
+export interface PartnerPayout {
+
+export interface PartnerPayout {;
+export interface PartnerPayout {  conversions: number
 
   created_at: string
 }

@@ -16,6 +16,14 @@ export interface BlogAuthor {
   name: string;
 }
   id: string;
+export interface BlogAuthor {
+  name: string;
+}export interface BlogAuthor {
+  name: string;
+}
+export interface BlogPost {
+
+export interface BlogPost {;
   title: string;
   slug: string;
   excerpt: string;
@@ -93,6 +101,9 @@ export interface BlogAuthor {;
 
 
   name: string,;
+  tweet_summary?: string,
+  image_prompt?: string;
+}  name: string,;
   title: string,;
   avatarUrl: string;
 }

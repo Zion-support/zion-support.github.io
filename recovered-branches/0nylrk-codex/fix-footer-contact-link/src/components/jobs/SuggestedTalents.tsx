@@ -31,6 +31,8 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
   const [talents, setTalents] = useState([]);
+export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
+
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -92,6 +94,7 @@ function SuggestedTalents() {
 
 
             id;
+          `;            id;
             user_id;
             full_name;
             professional_title;
@@ -138,6 +141,10 @@ function SuggestedTalents() {
       if (error) throw error;
       setTalents(data |[]);
 
+        title: "Error",,
+  description:;
+          "Failed to load suggested talents. Please try again later.",;
+        variant: "destructive",;
         .select(`
           *,
           talent_profile:talent_id(
@@ -174,6 +181,12 @@ function SuggestedTalents() {
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
 
+    } finally {
+      setIsLoading(false)
+    }
+
+  },
+
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
@@ -206,6 +219,10 @@ function SuggestedTalents() {
       setIsProcessing(false);
     });
   };
+  const handleViewProfile = (talentId: string) => {
+    // Implement logic to view talent profile
+    // // // console.log("View talent profile:", talentId),
+    toast({};
 
   const handleViewProfile = (talentId: string) => {;
     // Implement logic to view talent profile;
@@ -215,6 +232,10 @@ function SuggestedTalents() {
       description: `Navigating to talent profile: ${talentId}`,;
     });
   };
+      title: "View Profile",,
+  description: `Navigating to talent profile: ${talentId}`,;
+    })
+};
 
   const handleInvite = (talentId: string) => {;
     // Implement logic to invite talent;
@@ -401,6 +422,20 @@ interface SuggestedTalentsProps {;
 
 
         </CardTitle>;
+      title: "Invite Talent",,
+  description: `Inviting talent: ${talentId}`,;
+    })
+};
+
+  const handleRefresh = () => {;
+    setIsProcessing(true);
+    fetchSuggestedTalents().finally(() => {;
+      setIsProcessing(false);
+    });      <CardContent className="pt-6">
+        {isLoading ? (
+          <div>Loading suggested talents...</div>
+        ) : talents.length === 0 ? (
+  return (        </CardTitle>;
       </CardHeader>;
 
       <CardContent className="pt-6">;
@@ -438,12 +473,14 @@ interface SuggestedTalentsProps {;
     </Card>;
   );
     <Card className="border - zion - blue - light bg - zion - blue">;
+    <Card className="border - zion - blue - light bg - zion-blue">;
       <CardHeader>;
         <CardTitle>;
           {job_title ? `Talents for ${job_title}` : "Suggested Talents"}
         </CardTitle>;
       </CardHeader>;
       <CardContent className="pt - 6">;
+      <CardContent className="pt-6">;
         {is_loading ? (
           <div > Loading suggested talents...</div>) : talents.length === 0 ? (
           <EmptyMatchesCard;
@@ -451,6 +488,7 @@ interface SuggestedTalentsProps {;
             is_processing={is_processing}
           />) : (
           <div className="space - y-4">;
+          <div className="space-y-4">;
             {transformed_talents.map ((talent) => (
               <JobMatchCard;
                 key={talent.id}
@@ -588,6 +626,8 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
                 skills={talent.skills}
 
                 onApply={() => handleViewProfile(talent.id)}
+                match_percent={talent.match_percent}
+                skills={talent.skills}
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}
               />
@@ -694,3 +734,4 @@ const handleViewProfile = (talentId: string) => {
 
 
 
+        )}

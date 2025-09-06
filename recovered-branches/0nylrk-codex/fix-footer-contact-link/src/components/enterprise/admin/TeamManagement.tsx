@@ -27,6 +27,7 @@ export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
 import React, { useState } from "react",
+  DialogTitle;import React, { useState } from "react",
   Table,
   TableBody,
   TableCell,
@@ -43,6 +44,7 @@ import React, { useState } from "react",
 
 
   DialogTrigger} from "@/components/ui/dialog",
+  DialogTitle,  DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
@@ -130,9 +132,11 @@ export function TeamManagement() {
       description: "The team member has been removed from your workspace."})
 
   }
+  }
+
+
+
   },
-
-
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
@@ -147,6 +151,7 @@ export function TeamManagement() {
 
 
   return (
+      description: `A new invitation has been sent to ${memberEmail}`})  return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Team Members</h3>;
@@ -241,6 +246,13 @@ if ( {) {
           <DialogTrigger as_child>;
             <Button className="gap - 2">;
               <UserPlus className="h - 4 w - 4" />;
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Team Members</h3>;
+        <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
+          <DialogTrigger as_child>;
+            <Button className="gap-2">;
+              <UserPlus className="h - 4 w-4" />;
               Add Team Member;
             </Button>;
           </DialogTrigger>;
@@ -257,6 +269,7 @@ if ( {) {
 
 
                           .join("")}
+                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;                          .join("")}
                       </span>
                     </div>
                     <div>
@@ -413,6 +426,12 @@ export function TeamManagement() {;
                   Role;
                 </Label>;
                   <option value="admin">Admin</option>;
+                  className="col - span-3";
+                  value={newMemberEmail}
+                  on_change={(e) => setNewMemberEmail (e.target.value)}                />;
+              </div>;
+              <div className="grid grid - cols - 4 items - center gap-4">;
+                <Label html_for="role" className="text-right">;                  <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
                   <option value="viewer">Viewer</option>;
@@ -483,6 +502,16 @@ export function TeamManagement() {;
                   </Badge>;
                 </TableCell>;
 
+              <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
+                Cancel;
+              </Button>;
+              <Button on_click={handleAddMember}>Send Invitation</Button>;                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" : "outline"}
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" :"outline"}
 
                         onClick={() => handleRemoveMember(member.id)}
                       >
@@ -571,4 +600,6 @@ setIsAddingMember (false);
 }
 
 
+}
+}
 }

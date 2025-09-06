@@ -38,6 +38,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       default: return ''
     }
   };
+
+  }
+  };
 import { Badge } from "@/components/ui/badge",
 import { Calendar, Clock, Check } from "lucide-react",
 
@@ -123,6 +126,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
           variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
+  },        >
           {getStatusText(availability.status)}
         </Badge>
         {availability.nextAvailable && availability.status !== 'available' && (
@@ -270,3 +274,10 @@ function ProfileAvailability() {
 }
 
 
+          </div>;
+        </div>;
+      )}
+
+    </div>;
+  );
+}

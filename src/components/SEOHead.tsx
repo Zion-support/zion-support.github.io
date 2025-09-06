@@ -17,7 +17,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of cutting-edge IT services, AI solutions, and digital transformation services. Expert cybersecurity, cloud migration, and custom software development.',
   keywords = 'IT services, AI solutions, cybersecurity, cloud migration, software development, digital transformation, micro SaaS, mobile development',
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage = '/og-image.jpg'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || window.location.href;
@@ -73,3 +73,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+ import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {;
+   title?: string;
+   description?: string;
+   keywords?: string;
+   image?: string;
+   url?: string;""
+   type?: 'website' | 'article' | 'service';""
+   structuredData?: object} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https: '''
+}
+ import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {
+   title?: string
+   description?: string
+   keywords?: string
+   image?: string
+   url?: string
+   type?: 'website' | 'article' | 'service'
+   structuredData?: object
+} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https:'''

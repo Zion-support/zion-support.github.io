@@ -87,6 +87,186 @@ const BenefitsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
+            <div key={index} className="text-center p-6">
+              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+              <p className="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BenefitsSection;
+>>>>>>> main
+const getBenefits = (t: any) => [
+
+
+  {
+
+    title: t('benefits.ai_matchmaking'),
+    description: t('benefits.ai_matchmaking_desc'),
+    icon: <Bot className="w-8 h-8" />},
+  {
+    title: t('benefits.global_availability'),
+    description: t('benefits.global_availability_desc'),
+    icon: <Globe className="w-8 h-8" />},
+  {
+    title: t('benefits.support_24_7'),
+    description: t('benefits.support_24_7_desc'),
+    icon: <Clock className="w-8 h-8" />},
+  {
+    title: t('benefits.cost_reduction'),
+    description: t('benefits.cost_reduction_desc')
+
+}
+
+const getBenefits = null;
+  return (
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
+            {t('home.benefits_subtitle')}
+          </p>
+        </div>
+
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+          {benefits.map((benefit, index) => (
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import { GradientHeading } from './GradientHeading';
+import { FeatureCard } from './FeatureCard';
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
+interface BenefitsSectionProps {;
+  className?: string;
+  style?: React && React.CSSProperties;
+
+const getBenefits = (t: any,) => [;
+  {;
+    title: t('benefits && benefits.ai_matchmaking'),;
+    description: t('benefits && benefits.ai_matchmaking_desc'),;
+    icon: <Bot className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.global_availability'),;
+    description: t('benefits && benefits.global_availability_desc'),;
+    icon: <Globe className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.support_24_7'),;
+    description: t('benefits && benefits.support_24_7_desc'),;
+    icon: <Clock className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.cost_reduction'),;
+    description: t('benefits && benefits.cost_reduction_desc'),;
+    icon: <TrendingDown className='w-8 h-8' />,;
+  },;
+];
+
+export function BenefitsSection(): any ({ className, style }: BenefitsSectionProps) {;
+  const { t } = useTranslation();
+  const benefits = getBenefits(t);
+
+
+    >;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-16'>;
+          <GradientHeading>{t('home && home.benefits_title')}</GradientHeading>;
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>;
+            {t('home && home.benefits_subtitle')}
+          </p>;
+        </div>;
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+
+import { cn } from '@/lib / utils';
+import { use_translation } from 'react - i18next';
+interface BenefitsSectionProps {
+  class_name?: string;
+  style?: React.CSSProperties;
+const get_benefits = (t: any, ) =>: any [;
+  {
+    title: t ('benefits.ai_matchmaking'),
+    description: t ('benefits.ai_matchmaking_desc'),
+    icon: <Bot className='w - 8 h - 8' />
+  },
+  {
+    title: t ('benefits.global_availability'),
+    description: t ('benefits.global_availability_desc'),
+    icon: <Globe className='w - 8 h - 8' />
+  },
+  {
+    title: t ('benefits.support_24_7'),
+    description: t ('benefits.support_24_7_desc'),
+    icon: <Clock className='w - 8 h - 8' />
+  },
+  {
+    title: t ('benefits.cost_reduction'),
+    description: t ('benefits.cost_reduction_desc'),
+    icon: <TrendingDown className='w - 8 h - 8' />
+  }
+];
+export /**
+ * BenefitsSection - Function description
+ */
+function BenefitsSection() {
+  const { t } = use_translation ();
+  const benefits = get_benefits (t);
+    >;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 16'>;
+          <GradientHeading>{t ('home.benefits_title')}</GradientHeading>;
+          <p className='text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto'>;
+            {t ('home.benefits_subtitle')}
+          </p>;
+        </div>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto'>          {benefits.map ((benefit, index) => (
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
+          {benefits.map ((benefit, index) => (
+            <FeatureCard;
+
+          {benefits.map((benefit, index) => (;
+            <FeatureCard;
+
+
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
@@ -101,6 +281,12 @@ const BenefitsSection: React.FC = () => {
                 {benefit.description}
               </p>
             </div>
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
+            />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -183,11 +369,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import { GradientHeading } from './GradientHeading';
-import { FeatureCard } from './FeatureCard';
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
 interface BenefitsSectionProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -232,8 +413,6 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
 
-import { cn } from '@/lib / utils';
-import { use_translation } from 'react - i18next';
 interface BenefitsSectionProps {
   class_name?: string;
   style?: React.CSSProperties;
@@ -363,3 +542,7 @@ function Page() {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

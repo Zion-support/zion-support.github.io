@@ -21,6 +21,7 @@ const Sidebar: React.FC = () => {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 const "Sidebar": React.FC = () => {
+import { servicesCatalog } from '../../data/services';const "Sidebar": React.FC = () => {
   const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
   const quickLinks = servicesCatalog.slice(0, 6);
   return (

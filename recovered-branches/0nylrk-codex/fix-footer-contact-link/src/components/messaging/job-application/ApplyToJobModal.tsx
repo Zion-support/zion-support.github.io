@@ -8,6 +8,7 @@ import {
   DialogTitle
 
 
+
   Dialog,
   DialogContent,
   DialogDescription,
@@ -21,6 +22,7 @@ import {
   DialogDescription,
   DialogHeader
 } from "@/components/ui/dialog";
+  DialogHeader} from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({
@@ -86,6 +88,7 @@ import React from './react';
   DialogHeader,
   DialogTitle
   DialogTitle
+  DialogTitle
 } from '@/components / ui / dialog';
 import { ApplyForm  } from './ApplyForm';
 import { ApplyToJobModalProps  } from './types';
@@ -111,6 +114,9 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
 
 
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
@@ -173,3 +179,4 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
   );
     </Dialog>);
 }
+        <ApplyForm;

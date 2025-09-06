@@ -195,6 +195,10 @@ if ( {) {
 
 
       minRate += 20;
+export interface ClientBudgetParams {
+  job_title: string;
+  category: string;
+  timeline?: string;      minRate += 20;
       maxRate += 30
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
@@ -211,6 +215,7 @@ if ( {) {
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
 ;
     // Adjust based on job title keywords;
+    const lowercaseTitle = jobTitle.toLowerCase();
     const lowercaseTitle = jobTitle.toLowerCase();
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
       minRate += 20,;
@@ -235,6 +240,11 @@ if ( {) {
 
 
 ;
+    }
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+    ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
@@ -248,6 +258,11 @@ if ( {) {
     
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`
+
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`
+
     }
     // Generate explanation;
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
@@ -264,6 +279,14 @@ if ( {) {
     }
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    };  }
+}
+
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+  try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    }
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     };
   }
 }
@@ -275,6 +298,8 @@ if ( {) {
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;
     const { skills, yearsExperience, location } = params;
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+  try {;
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Base rate calculation based on years of experience
@@ -321,6 +346,9 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
 ;
+
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
     const { skills, yearsExperience, location } = params,;
@@ -405,6 +433,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (hasInDemandSkills) {
       explanation += ` and your in-demand skills (${skills && skills.join()})`
     }
+        locationFactor = 0.8;    }
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
@@ -419,6 +448,9 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
     console.error ("Error generating budget suggestion:", error);
+    
+
+    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     // Return a fallback suggestion;
     return {
     
@@ -433,6 +465,12 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.";
 ;
+    }
+  }
+}
+export async function getTalentRateSuggestion (params: TalentRateParams): Promise < PricingSuggestion> {
+  try {
+    const { skills, years_experience, location } = params;;
     // Simulate API call delay;
     await new Promise (resolve => set_timeout (resolve, 1000));
 ;
@@ -712,6 +750,16 @@ export async function trackPricingSuggestion(data: {;
     }
 
   }
+    }
+  } catch (error) {
+    console.error("Error generating rate suggestion:", error),
+    return {}) {
+  try {
+    // In a real implementation, this would save to the database
+    // For now, we'll just log it
+
+    console && console.error("Error tracking pricing suggestion:", error);
+
 }
 // Function to save pricing analytics data;
 export async /**
@@ -813,3 +861,12 @@ explanation
 
 
   }
+    // In a real implementation with Supabase: // await supabase;
+    //  .from ('pricing_suggestions');
+    //  .insert ([data]),
+    return true;
+  } catch (error) {
+    console.error ("Error tracking pricing suggestion:", error);
+    return false;
+  }
+}

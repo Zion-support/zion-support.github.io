@@ -18,6 +18,9 @@ export type TokenSymbol = "ZION$",
 
 
 
+export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",;
+export type TokenSymbol = "ZION$";
 export type TokenTransactionType =;
   | "earn";
   | "burn";
@@ -162,3 +165,4 @@ export interface WalletSummary {;
 
 
 
+}

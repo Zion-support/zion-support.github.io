@@ -68,8 +68,24 @@ export default PriceIntelligenceService,
       </main>
     </div>
   )
+}
+
+
+
+
+},
+export default PriceIntelligenceService
+}
+
+},
+export default PriceIntelligenceService
+
+},
+export default PriceIntelligenceService
 },
 
+export default PriceIntelligenceService,;
+export default PriceIntelligenceService,
 
-
-
+const PriceIntelligenceService: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

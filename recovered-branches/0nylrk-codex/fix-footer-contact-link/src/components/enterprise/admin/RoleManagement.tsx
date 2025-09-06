@@ -30,6 +30,7 @@ import { InfoIcon } from "lucide-react",
 
 export function RoleManagement() {
   // Mock team members data
+
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -78,6 +79,7 @@ export function RoleManagement() {
 
 
     {
+      permissions: {    {
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
@@ -210,6 +212,10 @@ export function RoleManagement() {
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  },
+  description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
   }
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
@@ -652,6 +658,10 @@ export function RoleManagement() {;
 
 
                     }
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;                    }
                   />;
                 </TableCell>;
               </TableRow>;
@@ -883,3 +893,8 @@ TooltipProvider;
 }
 
 
+        </Table>;
+      </div>;
+    </div>;
+  );
+}

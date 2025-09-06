@@ -13,6 +13,10 @@ export default function SecurityAudit({ report }: Props) {};
 </pre> </div>)
 
 export default function SecurityAudit({ report }: Props) {};
+export default function SecurityAudit({ report }: Props) {};
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 </pre> </div>)
  
 };
@@ -45,6 +49,8 @@ export default function SecurityAudit({ report }: Props) {
     </div>;
   );
 }
+
+
   );
 }
 
@@ -70,6 +76,7 @@ function SecurityAudit() {
     </div>);
 }
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
 </pre> </div>)
@@ -79,6 +86,19 @@ function SecurityAudit() {
  
 };
 </pre> </div>) 
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -101,3 +121,6 @@ export default function SecurityAudit({ report }: Props) {
 }
 
 
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

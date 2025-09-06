@@ -48,6 +48,26 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const hasLeftReview = userReview != null;
 
   
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+
+
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
+import { useReviews } from "@/hooks/useReviews",
+import { Project } from "@/types/projects",
+import { useAuth } from "@/hooks/useAuth",  
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -237,6 +257,17 @@ function ProjectReviewSection() {
               isLoading={isLoading}
               onReportReview={reportReview}
 
+                        : "pending approval"}      {(isClient || isTalent) && (;
+
+      {(isClient || isTalent) && (
+
+        <LeaveReviewModal
+          projectId={project && project.id}
+      ;
+      {/* Review Modal */}
+      {(isClient || isTalent) && (;
+        <LeaveReviewModal;
+          projectId={project.id}
             />
           </div>
         ) : (
@@ -304,6 +335,10 @@ function ProjectReviewSection() {
 }
 
 
+      {(isClient |isTalent) && (
+      {(isClient || isTalent) && (
+        <LeaveReviewModal
+          projectId={project.id}
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;
@@ -325,6 +360,11 @@ function ProjectReviewSection() {
               Reviews will be available once the project is completed;
             </h3>;
             <p className="text - sm text - muted - foreground">;
+          <div className="bg - muted / 20 rounded - lg p - 6 text-center">;
+            <h3 className="font - medium mb-2">;
+              Reviews will be available once the project is completed;
+            </h3>;
+            <p className="text - sm text - muted-foreground">;
               After the project is marked as completed, both parties will be;
               able to leave reviews;
             </p>;

@@ -9,6 +9,17 @@ try {
 
 
 
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+import { crm } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { resume } = req.body as { resume?: Record<string, any> },
+  if (!resume) return res.status(400).json({ error: 'Missing resume payload' });
+  const state = null;
+    results.push({ providerId: conn.providerId, ok: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -45,6 +56,8 @@ export default async function handler(
       c && c.providerId === "pipedrive",
 
 
+
+  const state = readState();
 
   const state = readState();
   const crms = state && state.connections.filter(
@@ -120,7 +133,6 @@ function handler() {
     }
     await crm.addEmailTouchpoint (conn, {
       subject: "Resume viewed",
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -138,6 +150,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
+
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
@@ -160,6 +173,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true, results });
 }
   res.status(200).json({ ok: true, results });
+const crms = state.connections.filter(
+    c =>
+      c.providerId === 'salesforce' ||
+      c.providerId === 'hubspot' ||
+      c.providerId === 'zoho' ||
+      c.providerId === 'pipedrive'
+  );
+  const results: any[] = [];
+  const result = await crm.addEmailTouchpoint(conn, {
+      subject: 'Resume viewed',
+      resumeId: resume.id
+    });
+    writeState((s) => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  res.status (200).json ({ ok: true, results });
+  res.status(200).json({ ok: true, results });
+}
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }
 }
 
@@ -168,3 +206,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

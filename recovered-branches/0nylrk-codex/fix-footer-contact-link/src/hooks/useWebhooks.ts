@@ -36,6 +36,7 @@ export interface Webhook {
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
+
   created_at: string,
   last_triggered_at: string | null
 }
@@ -119,6 +120,7 @@ export function useWebhooks() {
 
 
     return `${url}/functions/v1/webhook-manager`
+export function useWebhooks() {;    return `${url}/functions/v1/webhook-manager`
   }
   // Fetch user's webhooks
   const fetchWebhooks = async () => {
@@ -128,6 +130,7 @@ export function useWebhooks() {
 
 
 
+      setWebhooks(result.webhooks |[])
 
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
@@ -159,6 +162,18 @@ export function useWebhooks() {
       toast({
         variant: "destructive";
         title: "Error fetching webhooks",
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to fetch webhooks')
+      }
+
+      setWebhooks(result && result.webhooks || [])
+      }
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {
+        method: 'GET'
+        headers: {
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
   created_at: string,
   last_triggered_at: string | null;
@@ -429,6 +444,34 @@ if ( {) {
   },;
   // Create new webhook;
   const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {;
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch webhooks')
+      }
+      setWebhooks(result.webhooks |[])
+
+;
+export function useWebhooks() {;
+  const { user } = useAuth(),;
+  const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
+  // Helper to get the base URL for webhook functions;
+  const getWebhookUrl = () => {;
+    // import.meta may be undefined when this hook is executed in a Node;
+    // environment (e.g. during server side rendering or tests). Using optional;
+    // chaining avoids a TypeError in those cases and falls back to process.env.;
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/webhook-manager`;
+  },;
+  // Fetch user's webhooks;
+  const fetchWebhooks = async () => {;
     if (!user) return,;
     setLoading(true),;
     setError(null),;
@@ -550,6 +593,66 @@ if ( {) {
       toast({;
         title: "Webhook Created",;
         description: "Your webhook has been created successfully."}),;
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {;
+        method: 'GET',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch webhooks');
+      }
+
+      setWebhooks(result.webhooks || [])
+    } catch (err) {
+      console.error('Error fetching webhooks:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({          name;
+          url;
+          eventTypes
+          secret
+        })
+      });
+    } catch (err) {
+      console && console.error('Error creating webhook:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+        variant: "destructive";
+
+        title: "Error creating webhook",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})      // Add the new webhook to the list
+      setWebhooks(prev => [result.webhook, ...prev]),
+      
+      toast({
+      // Add the new webhook to the list;
+      set_webhooks (prev => [result.webhook, ...prev]);        title: "Webhook Created",;
+      toast ({
+        title: "Webhook Created"
+    } catch (err) {
+
+      console.error('Error creating webhook:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+
+        variant: "destructive",
+        title: "Error creating webhook",
+
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+
+    } finally {
+      set_loading (false);
+    }
+  }  },
+
+  // Toggle webhook active status
+  const toggleWebhook = async (webhookId: string, isActive: boolean) => {;
+      // Add the new webhook to the list;
+      setWebhooks(prev => [result.webhook, ...prev]),;
+      toast({;
+        title: "Webhook Created",,
+  description: "Your webhook has been created successfully."}),;
       return result.webhook;
     } catch (err) {;
       console.error('Error creating webhook:', err),;
@@ -558,6 +661,8 @@ if ( {) {
         variant: "destructive",;
         title: "Error creating webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        title: "Error creating webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
       setLoading(false);
     }
@@ -613,12 +718,20 @@ if ( {) {
 
 
       )),
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to update webhook');
+      }
+      toast({
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated"
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
       return result
+
     } catch (err) {
       console && console.error('Error toggling webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -630,6 +743,8 @@ if ( {) {
         return
       });
 
+        title: "Error updating webhook",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
       const result = await response && response.json();
       
       if (!response && response.ok) {
@@ -702,6 +817,8 @@ if ( {) {
         variant: "destructive",
         title: "Error updating webhook",
 
+        variant: "destructive",
+        title: "Error updating webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -760,6 +877,10 @@ if ( {) {
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
 
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
+      toast({
+        title: "Webhook Deleted"
+        description: "The webhook has been deleted successfully."});
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
@@ -771,6 +892,8 @@ if ( {) {
       toast({;
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",;
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),;
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated",,
+  description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),;
       return result;
     } catch (err) {;
       console.error('Error toggling webhook:', err),;
@@ -779,6 +902,8 @@ if ( {) {
         variant: "destructive",;
         title: "Error updating webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        title: "Error updating webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
       setLoading(false);
     }
@@ -842,6 +967,7 @@ if ( {) {
 
         variant: "destructive";
 ;
+      ;
   // Delete webhook;
   const delete_webhook = async (webhook_id: string) => {
     // Check condition
@@ -907,6 +1033,8 @@ if ( {) {
         variant: "destructive",
         title: "Error deleting webhook",
 
+        variant: "destructive",
+        title: "Error deleting webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -961,6 +1089,11 @@ if ( {) {
       toast({;
         title: "Webhook Deleted",;
         description: "The webhook has been deleted successfully."}),;
+      // Remove the webhook from the list;
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
+      toast({;
+        title: "Webhook Deleted",,
+  description: "The webhook has been deleted successfully."}),;
       return result;
     } catch (err) {;
       console.error('Error deleting webhook:', err),;
@@ -969,6 +1102,8 @@ if ( {) {
         variant: "destructive",;
         title: "Error deleting webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        title: "Error deleting webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
       setLoading(false);
     }
@@ -1045,6 +1180,7 @@ if ( {) {
       console && console.error('Error testing webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({} finally {
+        responseBody: result.responseBody    } finally {
       set_loading (false);
     }
   }
@@ -1611,9 +1747,18 @@ clearTestResult: () => setTestResult (null)
   }
 }
   }
+        variant: "destructive";
+        title: "Error testing webhook"
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {}
+  }
+    webhooks;
+    loading;
+    error;  }
 }
 ;
   }
 }
 
 
+;

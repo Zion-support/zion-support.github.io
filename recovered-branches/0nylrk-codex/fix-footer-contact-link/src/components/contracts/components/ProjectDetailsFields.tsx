@@ -12,6 +12,7 @@ import {
   FormMessage,;
 import { format } from "date-fns",
 
+
   FormField
   FormItem
   FormLabel
@@ -33,6 +34,29 @@ interface ProjectDetailsFieldsProps {} from "@/components/ui/form";
 
 } from "@/components/ui/popover";
 
+} from "@/components/ui/popover";
+
+interface ProjectDetailsFieldsProps {
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
   FormItem,;
@@ -64,6 +88,18 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
   form: UseFormReturn<ContractFormValues>;
 }
+  FormMessage,;
+} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";} from "@/components/ui/popover";
+
+interface ProjectDetailsFieldsProps {;
+  form: UseFormReturn<ContractFormValues>;
+}
+
+  form: UseFormReturn<ContractFormValues>;
+}
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
     <>;
       <FormField
@@ -86,9 +122,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         name="scopeSummary"
 
 
-import { format } from "date-fns",;
-import { CalendarIcon } from "lucide-react",;
-import { UseFormReturn } from "react-hook-form",;
 import { ;
   FormField,;
   FormItem, ;
@@ -130,6 +163,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
       <FormField
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"      <FormField
         control={form && form.control}
         name="scopeSummary"
         render={({ field }) => (;
@@ -139,6 +175,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
 
+              <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
           </FormItem>)}
       />;
       <FormField;
@@ -158,6 +197,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
                 {...field}
+                className="min-h-[120px]";                {...field}
               />;
             </FormControl>;
             <FormDescription>;
@@ -220,6 +260,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control={form && form.control}
           name="startDate"
           render={({ field }) => (;
+            <FormMessage />;        <FormField
+          control={form && form.control}
+          name="startDate"          render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
@@ -257,6 +300,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     onSelect={field.onChange}
 
                     disabled={(date) => date < new Date()}
+                  <Calendar
+                    mode="single"
+                    selected={field && field.value}
+                    onSelect={field && field.onChange}                    disabled={(date) => date < new Date()}
                     initialFocus;
                   />;
                 </PopoverContent>;
@@ -264,6 +311,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />;
 
 
+            </FormItem>;
+          )}
+
+        />;
+
+        <FormField
+          control={form && form.control}
         />;
         <FormField;
 
@@ -278,6 +332,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control={form.control}
           name="endDate";
                   <Calendar
+          name="endDate"                  <Calendar
                     mode="single"
           control={form.control}
         <FormField
@@ -396,6 +451,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
                   <Calendar
+                  <Calendar
+                    mode="single"                  <Calendar
                     mode="single"
     </>
         />;
@@ -409,11 +466,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
         <FormField;
           control={form.control}
           name="start_date";
           render={({ field }) => (
             <FormItem className="flex flex - col">;
+            <FormItem className="flex flex-col">;
               <FormLabel > Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -430,6 +489,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p-0" align="start">;
                   <Calendar;
                     mode="single";
                     selected={field.value}
@@ -447,6 +511,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           name="end_date";
           render={({ field }) => (
             <FormItem className="flex flex - col">;
+            <FormItem className="flex flex-col">;
               <FormLabel > End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -463,6 +528,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p-0" align="start">;
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}

@@ -1,13 +1,15 @@
 
+
+import { AdminHeader } from "./AdminHeader";
+import { TeamManagement } from "./TeamManagement";
+import { UsageStats } from "./UsageStats";
+
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
 
 import React from "react";
-import { AdminHeader } from "./AdminHeader";
-import { TeamManagement } from "./TeamManagement";
-import { UsageStats } from "./UsageStats";
 
 
 import { RoleManagement } from "./RoleManagement";
@@ -53,6 +55,7 @@ import {
           <UsageStats />
         </TabsContent>
         
+        </TabsList>        
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -116,6 +119,15 @@ export function AdminDashboard() {;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
 
+
+        <TabsContent value="activity" className="space-y-8">
+          <TeamActivity />
+        </TabsContent>
+      </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>;
+        </TabsList>;
+}
 }
         ;
         <TabsContent value="team" className="space-y-8">;

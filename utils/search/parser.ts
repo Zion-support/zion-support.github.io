@@ -20,6 +20,11 @@ export const parseSearchQuery = (query: string) =>: any {
     return filters;
 
 
+  };
+
+  query: string,
+): Promise<SearchFilters> {
+  const filters: SearchFilters = {};
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -100,6 +105,7 @@ export const parseSearchQuery = (query: string) =>: any {
     "photoshop",
     "illustrator"
     "illustrator"
+    "illustrator"
   ];
 
   for (const word of words) {
@@ -119,6 +125,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     keywords: [],
+  return filters,
+  keywords: [],
     skills: [],
     location: null,
     type: null;
@@ -144,6 +152,17 @@ export const suggestDidYouMean = (query: string) => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+    projects: []
+};
+};
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null
+};
+
+}
+  }}
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
@@ -158,4 +177,5 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+}
 }

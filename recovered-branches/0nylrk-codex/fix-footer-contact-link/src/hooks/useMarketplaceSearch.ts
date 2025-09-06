@@ -44,6 +44,7 @@ export function useMarketplaceSearch() {
         (listing.location && selectedLocations.includes(listing.location));
       // Availability filter
       const matchesSearch = !searchQuery || 
+  );      const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -60,6 +61,7 @@ export function useMarketplaceSearch() {
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
+
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -73,6 +75,7 @@ export function useMarketplaceSearch() {
       const matchesSearch = !searchQuery || 
 const matchesSearch = !searchQuery || 
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        matchesAvailability &&        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       // Product type filter
@@ -94,9 +97,12 @@ const matchesSearch = !searchQuery ||
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
-  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating])
   
 
+
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
+  
 
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
@@ -109,6 +115,7 @@ const matchesSearch = !searchQuery ||
 
 
 import { useState, useMemo } from './react';
+        setSelectedProductTypes((prev: string[]) =>import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from '@/data / marketplace_data';
@@ -202,6 +209,10 @@ function useMarketplaceSearch() {
 
 
   return {
+        break;
+      default: break;
+    }
+  }  return {
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -226,6 +237,7 @@ function useMarketplaceSearch() {
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
 
+    filter_options;
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
@@ -236,9 +248,11 @@ function useMarketplaceSearch() {
   
 
   }
-  },
+  }
   
 
+  },
+  
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -286,6 +300,8 @@ function useMarketplaceSearch() {
   }
 }
 import { useState, useMemo } from "react",;
+  }
+}import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
@@ -378,3 +394,6 @@ export function useMarketplaceSearch() {;
 ;
 
 
+  }
+}
+;

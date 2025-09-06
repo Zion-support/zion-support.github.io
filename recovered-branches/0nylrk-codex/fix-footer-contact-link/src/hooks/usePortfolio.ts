@@ -13,6 +13,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
   const { user } = useAuth();
+export function usePortfolio() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -33,6 +34,7 @@ export function usePortfolio() {;
 
 
         .eq('user_id', user && user.id)
+        .eq('user_id', user && user.id)        .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
       setProjects(data |[]);
@@ -215,6 +217,16 @@ if ( {) {
 
 
         variant: "destructive"
+    }    
+    try {
+      const { data, error } = await supabase
+        .from('portfolio_projects')
+        .insert({      console && console.error('Error adding portfolio project:', e);
+      setError(e && e.message);
+      toast({        title: "Error",
+
+        description: `Could not add project: ${e.message}`,
+
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
         });
@@ -251,6 +263,10 @@ if (throw error) {
     setError(null);
 
 
+    }
+    setIsLoading(true);
+    setError(null);
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -261,6 +277,8 @@ if (throw error) {
           user_id: user.id,;
           title: project.title,;
           description: project.description,;
+          title: project.title,,
+  description: project.description,;
           technologies: project.technologies,;
           image_url: project.image_url,;
           github_url: project.github_url,;
@@ -273,6 +291,8 @@ if (throw error) {
       toast({;
         title: "Project added",;
         description: "Your project has been added to your portfolio";
+        title: "Project added",,
+  description: "Your project has been added to your portfolio";
       }),;
       await fetchProjects(),;
       return data.id;
@@ -282,6 +302,8 @@ if (throw error) {
       toast({;
         title: "Error",;
         description: `Could not add project: ${e.message}`,;
+        title: "Error",,
+  description: `Could not add project: ${e.message}`,;
         variant: "destructive";
       }),;
       return null;
@@ -380,6 +402,10 @@ if ( {) {
       
 
       toast({
+    try {
+      const { error } = await supabase
+        .from('portfolio_projects')
+        .update({      toast({
         title: "Project updated"
         description: "Your portfolio project has been updated"
       });
@@ -436,6 +462,10 @@ if (throw error) {
     setError(null);
 
 
+      }),        title: "Error",
+
+        description: `Could not update project: ${e.message}`,
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -445,6 +475,8 @@ if (throw error) {
         .update({;
           title: project.title,;
           description: project.description,;
+          title: project.title,,
+  description: project.description,;
           technologies: project.technologies,;
           image_url: project.image_url,;
           github_url: project.github_url,;
@@ -457,6 +489,8 @@ if (throw error) {
       toast({;
         title: "Project updated",;
         description: "Your portfolio project has been updated";
+        title: "Project updated",,
+  description: "Your portfolio project has been updated";
       }),;
       await fetchProjects(),;
       return true;
@@ -466,6 +500,8 @@ if (throw error) {
       toast({;
         title: "Error",;
         description: `Could not update project: ${e.message}`,;
+        title: "Error",,
+  description: `Could not update project: ${e.message}`,;
         variant: "destructive";
       }),;
       return false;
@@ -542,6 +578,13 @@ if (throw error) {
         title: "Error",
         description: `Could not delete project: ${e.message}`
 
+        .eq('id', projectId)      toast({
+        title: "Project deleted"
+        description: "Your portfolio project has been deleted"
+      });      return true
+    } catch (e: any) {
+      console && console.error('Error deleting portfolio project:', e);
+      setError(e && e.message);
       toast({
         variant: "destructive"
       }),
@@ -675,6 +718,10 @@ if (throw error) {
 
 
 ;
+    is_loading;
+    error;
+    projects;  }
+};
 export function usePortfolio() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
@@ -726,6 +773,8 @@ export function usePortfolio() {;
           user_id:user.id,;
           title:project.title,;
           description:project.description,;
+          title:project.title,,
+  description:project.description,;
           technologies:project.technologies,;
           image_url:project.image_url,;
           github_url:project.github_url,;
@@ -740,6 +789,8 @@ export function usePortfolio() {;
       toast({;
         title:"Project added",;
         description:"Your project has been added to your portfolio";
+        title:"Project added",,
+  description:"Your project has been added to your portfolio";
       }),;
       ;
       await fetchProjects(),;
@@ -750,6 +801,8 @@ export function usePortfolio() {;
       toast({;
         title:"Error",;
         description:`Could not add project:${e.message}`,;
+        title:"Error",,
+  description:`Could not add project:${e.message}`,;
         variant:"destructive";
       }),;
       return null,;
@@ -772,6 +825,8 @@ export function usePortfolio() {;
         .update({;
           title:project.title,;
           description:project.description,;
+          title:project.title,,
+  description:project.description,;
           technologies:project.technologies,;
           image_url:project.image_url,;
           github_url:project.github_url,;
@@ -786,6 +841,8 @@ export function usePortfolio() {;
       toast({;
         title:"Project updated",;
         description:"Your portfolio project has been updated";
+        title:"Project updated",,
+  description:"Your portfolio project has been updated";
       }),;
       ;
       await fetchProjects(),;
@@ -796,6 +853,8 @@ export function usePortfolio() {;
       toast({;
         title:"Error",;
         description:`Could not update project:${e.message}`,;
+        title:"Error",,
+  description:`Could not update project:${e.message}`,;
         variant:"destructive";
       }),;
       return false,;
@@ -824,6 +883,8 @@ export function usePortfolio() {;
       toast({;
         title:"Project deleted",;
         description:"Your portfolio project has been deleted";
+        title:"Project deleted",,
+  description:"Your portfolio project has been deleted";
       }),;
       ;
       setProjects(projects.filter(p => p.id !== projectId)),;
@@ -834,6 +895,8 @@ export function usePortfolio() {;
       toast({;
         title:"Error",;
         description:`Could not delete project:${e.message}`,;
+        title:"Error",,
+  description:`Could not delete project:${e.message}`,;
         variant:"destructive";
       }),;
       return false,;

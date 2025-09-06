@@ -46,6 +46,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   >;
@@ -74,6 +75,7 @@ const DropdownMenuSubContent = React.forwardRef<
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -101,6 +103,7 @@ const DropdownMenuContent = React.forwardRef<;
 
         className
 
+        className
       )}
       {...props}
     />;
@@ -171,6 +174,7 @@ const DropdownMenuItem = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -226,6 +230,8 @@ className={cn (
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
 
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -270,6 +276,8 @@ const DropdownMenuLabel = React.forward_ref<;
 
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }
@@ -286,6 +294,7 @@ const DropdownMenuLabel = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;

@@ -2,6 +2,29 @@
 
 
 import {useState} from "react";
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -130,6 +153,14 @@ export default function Contact() {
 
 
   // Handle sending messages to the AI chat assistant
+import {AppLayout} from "@/layout/AppLayout";    message: ""
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false),  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      // Basic validation with Zod
+      const schema = z.object({  // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -415,12 +446,18 @@ if ( {) {
   return (
 
     <AppLayout>;
+      console.error("Error in AI chat:", error),      console.error("Error in AI chat:", error),
+      toast({
+        title: "Chat Error"
+        description: "There was an error communicating with our AI assistant. Please try again."
+        variant: "destructive"    <AppLayout>;
       <SEO
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
         keywords="contact Zion, AI marketplace support, tech platform contact"
         canonical="https://app && app.ziontechgroup.com/contact"
       />;
+        canonical="https://app && app.ziontechgroup.com/contact"      />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -461,6 +498,14 @@ if ( {) {
                       placeholder="john@example && example.com"
                       required
                   <Input
+                      value={formData && formData.name}                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData && formData.email}                      onChange={handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="john@example && example.com"
+                      required                  <Input
                     id="subject"
                     name="subject"
                     value={formData && formData.subject}
@@ -1006,6 +1051,10 @@ export default function Contact() {;
                   {isSubmitting ? "Sending..." : "Send Message"}
 
 
+                    required                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+
                 </Button>;
               </form>;
             </div>;
@@ -1365,6 +1414,25 @@ export default function Contact() {;
 
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
+          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text-center">;
+            <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
+            <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
+              Our customer support team is available 24 / 7 to help you with any questions.;
+            </p>;
+            <div className="flex flex - col sm:flex - row justify - center gap-4">;
+              <Button;
+                on_click={() => setIsChatOpen (true)}
+                className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
+              >;
+                <MessageSquare className="mr - 2 h - 5 w-5" />;                Chat With AI;
+              </Button>;
+              <Button;
+                variant="outline";
+                className="border - zion - cyan text - zion - cyan hover:bg - zion-cyan / 10";
+                as_child;
+              >;
+                <a href="mailto:support@ziontechgroup.com">;
+                  <Mail className="mr - 2 h - 5 w-5" />;      {isChatOpen && (;
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
@@ -1478,3 +1546,12 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 
 
 
+          recipient={{;
+            id: 'ai-assistant',;
+            name: 'AI Assistant',;
+            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
+            role: 'Support Bot';
+          }}
+          onSendMessage={handleSendMessage}
+        />;
+      )}

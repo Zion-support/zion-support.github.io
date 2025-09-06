@@ -15,7 +15,7 @@ import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions(),;
+  const resumeActions = useResumeActions();
   return {;
     // From useFetchResume;
     isLoading: fetchResumeOperations.isLoading || resumeActions.isLoading,;
@@ -31,6 +31,7 @@ export function useResumeBasic() {;
 }
     isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+    // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     

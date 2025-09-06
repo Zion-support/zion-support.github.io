@@ -92,3 +92,19 @@ const Solutions = () => {
 export default Solutions;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+import { SEO } from '../components/SEO';
+export default function Page() {
+const Solutions: React.FC = () => {
+  return (<>""
+      <SEO title='Solutions - Zion Tech Group' /" >"
+      <div className='min-h-screen bg-white py-20'>""
+        <div className='max-w-4xl mx-auto px-4'>""
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Solutions</h1>""
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+        </div>
+      </div>
+</>
+  )}
+;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

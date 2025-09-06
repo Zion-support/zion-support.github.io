@@ -171,6 +171,14 @@ export function useReviews(projectId?: string) {
 
         variant: "destructive"})
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
+          .eq("reviewer_id", user.id)    } finally {
+      setIsLoading(false)
+    }
+  }
+        title: "Error",
+        description: "Failed to load reviews",
+
+        variant: "destructive"})
         `);
         .eq ("project_id", project_id);
         .eq ("is_visible", true);
@@ -206,6 +214,8 @@ if ( {) {
       toast ({
         title: "Error";
         description: "Failed to load reviews",
+        title: "Error",
+  description: "Failed to load reviews",
         variant: "destructive"});
     } finally {
       setIsLoading (false);
@@ -221,6 +231,7 @@ if (return) {
     setIsLoading (true)
     setIsLoading (true)
 
+    setIsLoading (true)
 
   },
   
@@ -292,6 +303,7 @@ if (return) {
   // Submit a review
   const submitReview = async (review: {}
     project_id: string;
+        project_id: string;
     reviewee_id: string;
     rating: number;
     review_text: string;
@@ -301,6 +313,39 @@ if (return) {
 
 
           reviewer_id: user.id});
+    would_work_again?: boolean,
+    is_anonymous: boolean;
+
+  }) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Error",
+  description: "You must be logged in to submit a review"
+        variant: "destructive"});
+      return false;
+    }
+
+    setIsSubmitting (true);
+;
+
+    try {
+      const { data, error } = await supabase;
+        .from ("reviews");
+        .insert ({
+          ...review;
+
+      console && console.error("Error submitting review:", err);
+      
+
+      // Check for unique constraint violation
+      if (err && err.code === "23505") {
+        toast({
+          title: "Error",
+  description: "You have already submitted a review for this project"
+          variant: "destructive"})          reviewer_id: user.id});
         .select ();
         .single ();
 ;
@@ -366,6 +411,15 @@ if ( {) {
     setIsSubmitting(true);
 
 
+          title: "Error",
+  description: "You have already submitted a review for this project",
+          variant: "destructive"});
+      } else {
+        toast ({
+          title: "Error",
+  description: "Failed to submit review",
+          variant: "destructive"});
+
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -403,6 +457,7 @@ if ( {) {
           variant: "destructive"})
         .single(),
         
+        .select()        
       if (error) throw error,
       
       toast({
@@ -426,6 +481,7 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"})
 import { useState } from "react",;
+          variant: "destructive"})import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Review, ReviewReport } from "@/types/reviews",;
@@ -492,6 +548,15 @@ if ( {) {
       } else {
         toast ({
           title: "Error";
+          title: "Error",
+  description: "You have already submitted a review for this project",
+          variant: "destructive"});
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to submit review",
+          variant: "destructive"})
+
       }
       return false;
     } finally {
@@ -508,6 +573,7 @@ if ( {) {
   };
 
   },;
+    }  },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
     if (!userId) return,;
@@ -530,6 +596,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "Failed to load reviews",;
+        title: "Error",,
+  description: "Failed to load reviews",;
         variant: "destructive"});
     } finally {;
       setIsLoading(false);
@@ -551,6 +619,8 @@ if ( {) {
       toast({;
         title: "Error",;
         description: "You must be logged in to submit a review",;
+        title: "Error",,
+  description: "You must be logged in to submit a review",;
         variant: "destructive"}),;
       return false;
     }
@@ -568,6 +638,8 @@ if ( {) {
       toast({;
         title: "Success",;
         description: "Your review has been submitted and is pending approval"}),;
+        title: "Success",,
+  description: "Your review has been submitted and is pending approval"}),;
       setUserReview(data),;
       return true;
     } catch (err: any) {;
@@ -582,6 +654,13 @@ if ( {) {
         toast({;
           title: "Error",;
           description: "Failed to submit review",;
+          title: "Error",,
+  description: "You have already submitted a review for this project",;
+          variant: "destructive"});
+      } else {;
+        toast({;
+          title: "Error",,
+  description: "Failed to submit review",;
           variant: "destructive"});
       }
       return false;
@@ -590,6 +669,8 @@ if ( {) {
     }
   },
   
+
+    
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
@@ -626,6 +707,7 @@ if ( {) {
 
 
       if (userReview) {
+          if (userReview) {
         setUserReview({ ...userReview, ...updates })
       }
       return true
@@ -633,6 +715,7 @@ if ( {) {
 
 
 ;
+  };
   // Update a review;
   const update_review = async (review_id: string, updates: Partial < Review>) => {
     // Check condition
@@ -668,6 +751,9 @@ if ( {) {
       toast ({}
         title: "Error";
         description: "Failed to update review"
+      toast ({
+        title: "Error",
+  description: "Failed to update review"
         variant: "destructive"});
       return false;
     } finally {
@@ -692,6 +778,7 @@ if ( {) {
 
 
   }
+  }  }
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -713,6 +800,16 @@ if ( {) {
             description: "You have already reported this review",
 
 
+          reporter_id: user && user.id,
+
+          reason});          review_id: reviewId,
+          reporter_id: user.id,
+          reason}),
+        
+
+        // Check for unique constraint violation
+        if (error && error.code === "23505") {
+          toast({
             variant: "destructive"})
 ;
   // Report a review;
@@ -741,6 +838,8 @@ if ( {) {
           toast ({
             title: "Error";
             description: "You have already reported this review",
+            title: "Error",
+  description: "You have already reported this review",
             variant: "destructive"});
         } else {
           throw error;
@@ -784,6 +883,7 @@ if ( {) {
   if (projectId && reviews.length === 0 && !isLoading) {
     fetchProjectReviews(projectId)
   }
+    fetchProjectReviews(projectId)  }
   return {
     reviews;
     user_review;
@@ -896,4 +996,5 @@ if ( {) {
     is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
+}
 }

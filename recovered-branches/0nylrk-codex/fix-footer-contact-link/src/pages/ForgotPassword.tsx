@@ -11,6 +11,7 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -56,6 +57,7 @@ export default function ForgotPassword() {
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
 export default function ForgotPassword() {;
+  const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
 export default function ForgotPassword() {
@@ -141,6 +143,7 @@ export default function ForgotPassword() {;
 
 
             <div className="bg-zion-blue-dark rounded-lg p-6">;
+              <div className="bg-zion-blue-dark rounded-lg p-6">;
               {submitted ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -162,6 +165,9 @@ export default function ForgotPassword() {;
 
 
                     <Link
+                    <Link
+                      to="/login"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;                    <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
                       Back to login;
@@ -178,6 +184,12 @@ export default function ForgotPassword() {;
 
 
                       render={({ field }) => (;
+              ) : (;
+                <Form {...form}>;
+                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+                    <FormField
+                      control={form && form.control}
+                      name="email"                      render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
                           <FormControl>;
@@ -189,6 +201,9 @@ export default function ForgotPassword() {;
 
 
                                 {...field}
+                              <Input
+                                placeholder="you@example && example.com"
+                                className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"                                {...field}
                               />;
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             </div>;
@@ -199,6 +214,11 @@ export default function ForgotPassword() {;
 
                     />;
 
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={isLoading}>;
+                      {isLoading ? "Sending..." : "Reset Password"}
                     </Button>;
 
                     <div className="text-center">;
@@ -347,12 +367,15 @@ function ForgotPassword() {
 
 
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
+                        to="/login"                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
                         Back to login
                       </Link>
                     </div>
                   </form>
                 </Form>
+
+;
 
 ;
 
@@ -391,6 +414,8 @@ export default function ForgotPassword() {;
     await resetPassword(data.email);
     setSubmitted(true);
   };
+    setSubmitted(true)
+};
   return (;
     <>;
       <Header />;
@@ -448,3 +473,4 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 }
 
 
+                    <FormField;

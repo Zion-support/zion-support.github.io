@@ -42,6 +42,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   resetFilters,
   onAction
 }) => {
+import { EmptyFraudState } from "./EmptyFraudState"}) => {
   if (isLoading) {
     return (
 
@@ -50,6 +51,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </div>
     )
 import React from "react",;
+    )import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { FraudFlag } from "@/types/fraud",;
@@ -101,6 +103,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
       <div className="flex justify-center items-center h-64">;
+import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
@@ -163,6 +166,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               {flag.gpt_explanation || (
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
     <Table>;
+  }
+  if (flags.length === 0) {
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
+  }    <Table>;
       <TableHeader>;
         <TableRow>;
           <TableHead>Severity</TableHead>;
@@ -204,6 +211,19 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
                 <span className="text-muted-foreground text-xs">Not analyzed</span>;
+        {flags && flags.map((flag) => (;
+          <TableRow key={flag && flag.id}>;
+            <TableCell>;
+              <SeverityDisplay severity={flag && flag.severity} />;
+            </TableCell>;
+            <TableCell className="font-medium">;
+              {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
+            </TableCell>;
+            <TableCell className="max-w-xs truncate">;
+              {flag && flag.content_excerpt}
+            </TableCell>;
+            <TableCell>;
+              <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;
   }
   return (
               )}
@@ -442,3 +462,4 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 };
 
 
+                onAction={onAction} 

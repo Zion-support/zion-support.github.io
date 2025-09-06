@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
   description: 'Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.',
@@ -33,6 +32,7 @@ ursor/automate-test-improve-and-merge-code-646c
           Improve code quality, catch bugs early, and maintain consistent coding
           standards across your team.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+          Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.
         </p>
       </div>
 
@@ -49,6 +49,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/automate-test-improve-and-merge-code-646c
           <div className="space-y-4">
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Features & Capabilities</h2>
+          <div className="space-y-6">
             <FeatureItem
               title="Intelligent Code Analysis"
               description="AI-powered analysis of code quality, complexity, and maintainability with detailed recommendations."
@@ -167,6 +169,8 @@ ursor/automate-test-improve-and-merge-code-646c
           How It Works
         </h2>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our AI Code Reviewer?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BenefitCard
             title="Reduce Review Time by 80%"
@@ -206,6 +210,9 @@ ursor/automate-test-improve-and-merge-code-646c
           platform to maintain high-quality codebases.
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Improve Your Code Quality?</h2>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Get started with our AI Code Reviewer and see immediate improvements in your code quality and security.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -247,6 +254,7 @@ function FeatureItem({
 }) {
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+function FeatureItem({ title, description }: { title: string; description: string }) {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-1">
@@ -279,6 +287,7 @@ function PricingCard({
 }: {
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+function PricingCard({ plan, price, description, features }: {
   plan: string;
   price: string;
   description: string;
@@ -338,6 +347,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+function BenefitCard({ title, description }: { title: string; description: string }) {
   return (
     <div className="text-center">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

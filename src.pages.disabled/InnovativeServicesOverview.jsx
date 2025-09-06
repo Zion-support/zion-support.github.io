@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface InnovativeServicesOverviewProps {
   // Add props here as needed
-export default function InnovativeServicesOverview({ }: InnovativeServicesOverviewProps) {
+
+}
+
+export default function InnovativeServicesOverview({}: InnovativeServicesOverviewProps) {
   return (
     <div>
       <h1>InnovativeServicesOverview</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/InnovativeServicesOverview.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function InnovativeServicesOverview({ }: InnovativeServicesOvervi
 }
 }
 }
+:temp_exclude/src.pages.disabled/InnovativeServicesOverview.jsx

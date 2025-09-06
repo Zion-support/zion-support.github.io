@@ -13,6 +13,24 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
+  CertificationsSection
+} from "./preview";
+
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
+  resume: Resume;
+  onBack: () => void;import { Resume } from "@/types/resume";
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -36,6 +54,7 @@ interface PreviewResumeProps {
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
+  CertificationsSection
   CertificationsSection
   CertificationsSection
 } from "./preview";
@@ -74,6 +93,9 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 
 
 
+
+}  );
+}
 
     </div>;
   ),;}

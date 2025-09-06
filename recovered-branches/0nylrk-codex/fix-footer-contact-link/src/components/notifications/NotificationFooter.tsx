@@ -24,6 +24,16 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 interface NotificationFooterProps {
   onClose: () => void;
 }
+  on_close: () => void;
+}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+interface NotificationFooterProps {
+  onClose: () => void;
+}
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate(),
   
   const handleViewAll = () => {
     onClose(),
@@ -31,6 +41,7 @@ interface NotificationFooterProps {
   },
   
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose
   onClose
   onClose
 }) => {
@@ -47,6 +58,12 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
 
       <Button
+    onClose();
+    navigate("/notifications")
+};
+
+  return (
+    <div className="p-3 text-center border-t border-zion-blue-light">
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
@@ -75,6 +92,8 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
 };
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close
+export const NotificationFooter: React.FC < NotificationFooterProps> = ({
+  on_close
 }) => {
   const navigate = use_navigate ();
 ;
@@ -89,6 +108,11 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
         variant="link";
         size="sm";
         className="text - zion - slate - light text - xs";
+    <div className="p - 3 text - center border - t border - zion - blue-light">;
+      <Button;
+        variant="link";
+        size="sm";
+        className="text - zion - slate - light text-xs";
         on_click={handleViewAll}
       >;
         View all notifications;

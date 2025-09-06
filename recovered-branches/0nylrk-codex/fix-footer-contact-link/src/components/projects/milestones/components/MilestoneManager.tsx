@@ -7,6 +7,8 @@ import {PaymentSummary} from '../PaymentSummary';
 
 
   projectId: string
+
+  projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
@@ -25,6 +27,7 @@ import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
 interface MilestoneManagerProps {
+import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,
@@ -45,6 +48,7 @@ export function MilestoneManager({;
 
 export function MilestoneManager({;
   projectId;
+}  projectId;
   milestones;
   activities;
   isLoading;
@@ -140,6 +144,7 @@ function MilestoneManager() {
       <div className="lg:col - span - 2">;
         <MilestonesList;
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+  onUploadDeliverable,      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch()
     } catch (error) {
@@ -184,6 +189,7 @@ function MilestoneManager() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
 import React from 'react',;
+  },
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -265,6 +271,12 @@ export function MilestoneManager({;
         />;
       </div>;
     </div>;
+          onUploadDeliverable={onUploadDeliverable}          paymentTerms={paymentTerms}
+        />;
+      </div>;
+    </div>;
+  );
+}
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -282,7 +294,7 @@ export function MilestoneManager({;
 
 
 
-  ),; interface MilestoneManagerProps {
+  ),; interface MilestoneManagerProps {}  ),; interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];
 activities: Record<string MilestoneActivity[]>;
@@ -303,3 +315,48 @@ refetch: () => Promise<void>
 
 
   try {}
+  try {}
+
+};
+const handleMilestoneRejected = async (milestoneId: string) => {
+  try {}
+};
+grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <MilestonesList milestones= {
+  milestones 
+}activities= {
+  activities 
+}isLoading= {
+  isLoading 
+}isClient= {
+  isClient 
+}onCreateMilestone= {
+  onCreateMilestone 
+}onUpdateStatus= {
+  onUpdateStatus 
+}onDeleteMilestone= {
+  onDeleteMilestone 
+}onUploadDeliverable= {
+  onUploadDeliverable 
+}isSubmitting= {
+  isSubmitting 
+}onApprove= {
+  isClient ? handleMilestoneApproved : undefined 
+}onReject= {
+  isClient ? handleMilestoneRejected : undefined 
+}/> </div> <div> <PaymentSummary milestones= {
+  milestones 
+}paymentTerms= {
+  paymentTerms 
+}/> </div> </div>) 
+}
+        />
+      </div>
+    </div>
+  )
+}
+        />;
+      </div>;
+    </div>;
+  );
+}
+;

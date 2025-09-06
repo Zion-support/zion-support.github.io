@@ -62,6 +62,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
     info: "bg-blue-50 border-blue-400 text-blue-800"
+    info: "bg-blue-50 border-blue-400 text-blue-800"
 
   };
   return `${baseStyles} ${typeStyles[type]}`;
@@ -204,6 +205,10 @@ const NotificationItem: React.FC<{
 
   const Icon = icons[notification.type];
 >>>>>>> main
+    info: 'bg-blue-500'
+  };
+
+  const Icon = icons[notification.type];
 
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>

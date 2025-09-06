@@ -57,6 +57,26 @@ import {Footer} from "@/components/Footer";
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+
+// Form validation schema;
+const signupSchema = z;
+  .object({;
+    displayName: z && z.string().min(2, "Name must be at least 2 characters");
+    email: z && z.string().email("Please enter a valid email"),;
+    password: z && z.string();
+      .min(8, "Password must be at least 8 characters");
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
+      .regex(/[0-9]/, "Password must contain at least one number");
+    confirmPassword: z && z.string(),;
+    termsAccepted: z && z.boolean().refine(val => val === true, {;
+      message: "You must accept the terms and conditions"})});
+  .refine(data => data && data.password === data && data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -98,6 +118,12 @@ import {Footer} from "@/components/Footer";
   },
 
 
+type SignupFormValues = z && z.infer<typeof signupSchema>;
+
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
@@ -267,6 +293,10 @@ export default function Signup() {;
     }
   }
 import { useState } from './react';
+      await signup(data && data.email, data && data.password, data && data.displayName);
+    } finally {;
+      setIsSubmitting(false);    }
+  }import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -444,6 +474,7 @@ if ( {) {
 
 
                             />;
+      <Header />;                            />;
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
@@ -462,6 +493,14 @@ if ( {) {
 
 
                   <FormField
+                      </FormItem>;
+                    )}
+
+                  />;
+
+                  <FormField
+                    control={form && form.control}
+                    name="password"                  <FormField
                     control={form && form.control}
                     name="password"
                     render={({ field }) => (;
@@ -500,6 +539,8 @@ if ( {) {
 
 
                             />;
+                            />;
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;                            />;
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             <Button
                               type="button"
@@ -525,6 +566,7 @@ if ( {) {
                               {showPassword ? (;
                                 <EyeOff className="h-4 w-4" />;
                         <FormMessage className="text - red - 400" />;
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"                        <FormMessage className="text - red-400" />;
                       </FormItem>)}
                   />;
                   <FormField;
@@ -535,6 +577,41 @@ if ( {) {
                               auto_complete="new - password";
                             />;
                             <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                    name="email";
+                    render={({ field }) => (
+                      <FormItem>;
+                        <FormLabel className="text - zion - slate-light">Email address</FormLabel>;
+                        <FormControl>;
+                          <div className="relative">;
+                            <Input;
+                              placeholder="you@example.com";
+                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+                              {...field}
+                              auto_complete="off";
+                              aria - autocomplete="none";
+                              type="email";
+                            />;
+                            <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text - red-400" />;
+                      </FormItem>)}
+                  />;
+                  <FormField;
+                    control={form.control}
+                    name="password";
+                    render={({ field }) => (
+                      <FormItem>;
+                        <FormLabel className="text - zion - slate-light">Password</FormLabel>;
+                        <FormControl>;
+                          <div className="relative">;
+                            <Input;
+                              type={show_password ? "text" : "password"}                              placeholder="••••••••";
+                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion-purple";
+                              {...field}
+                              auto_complete="new - password";
+                            />;
+                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
                             <Button;
                               type="button";
                               variant="ghost";
@@ -655,6 +732,15 @@ if ( {) {
                               )}
                               <span className="sr-only">;
                                 {showConfirmPassword ? "Hide password" :"Show password"}
+                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion-cyan";
+                              on_click={() => setShowPassword (!show_password)}
+                            >;
+                              {show_password ? (
+                                <EyeOff className="h - 4 w-4" />) : (
+                                <Eye className="h - 4 w-4" />)}
+                              <span className="sr-only">;
+                                {show_password ? "Hide password" : "Show password"}
+                            >;
                               </span>;
                             </Button>;
                           </div>;
@@ -814,7 +900,16 @@ if ( {) {
                 </div>
                 <div className="mt-6 grid grid-cols-3 gap-3">
 
+                  />;
+
                   <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                    onClick={() => loginWithTwitter()}
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -834,6 +929,38 @@ if ( {) {
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
+                    disabled={isLoading |isSubmitting}
+                  >
+                    <span className="sr-only">Sign in with Twitter</span>
+                    <Twitter className="h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:block relative w-0 flex-1">
+          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-cyan to-zion-purple opacity-80">
+            <div className="flex flex-col justify-center items-center h-full px-8">
+              <div className="max-w-md text-center">
+                <h3 className="text-3xl font-bold text-white mb-4">Join the Future of AI Marketplace</h3>
+                <p className="text-lg text-white/80">
+                  Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+
+                  <Button;
+                    type="button";
+                    variant="outline";
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+                    onClick={() => loginWithTwitter()}
                     disabled={isLoading || isSubmitting}
                   >;
                     <span className="sr-only">Sign in with Twitter</span>;
@@ -844,6 +971,13 @@ if ( {) {
             </div>;
           </div>;
         </div>;
+
+        <div className="hidden lg:block relative w - 0 flex-1">;
+          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity-80">;
+            <div className="flex flex - col justify - center items - center h - full px-8">;
+              <div className="max - w-md text-center">;
+                <h3 className="text - 3xl font - bold text - white mb-4">Join the Future of AI Marketplace</h3>;
+                <p className="text - lg text-white / 80">;
                   Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
                 </p>;
               </div>;
@@ -856,3 +990,7 @@ if ( {) {
 }
 }
 ;
+    </>);}
+}
+;
+

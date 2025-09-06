@@ -63,6 +63,8 @@ import { TalentProfile } from "@/types/talent",
     id: string
 
 
+    id: string
+
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
@@ -90,6 +92,10 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   }
 }
 
+  const handleOpenModal = () => {
+    setModalOpen(true)
+
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
   },
 
   const handleCloseModal = () => {
@@ -105,6 +111,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
+
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
@@ -163,7 +170,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   // Check if we have minimum required data;
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
   // Calculate talent profile completeness (simplified);
-  const profileCompleteness = calculateProfileCompleteness(talentProfile),;
+  const profileCompleteness = calculateProfileCompleteness(talentProfile);
   return (;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
@@ -203,6 +210,10 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
 
       <HireRequestModal;
 
+      </div>        <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+          Schedule Interview;
+        </Button>;
+      </div>;
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -220,6 +231,9 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
 
       <HireRequestModal
 
+      <HireRequestModal
+
+      <HireRequestModal
 
       <HireRequestModal 
       <HireRequestModal 
@@ -312,6 +326,14 @@ function calculateProfileCompleteness(): any (profile: any) {;
     'availability_type';
   ];
 
+
+// Helper function to calculate profile completeness;
+function calculateProfileCompleteness(): any (profile: any) {;
+  if (!profile) return 0;
+
+  const fields = [;
+    'availability_type';
+  ];
 
     }
     totalFields++;
@@ -432,4 +454,5 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
 }
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
 }
+;
 ;

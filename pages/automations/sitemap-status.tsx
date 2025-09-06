@@ -48,3 +48,37 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
 export default SitemapStatus,;
 
 
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(process.cwd(), 'publicsitemap.xml')
+  let urlCount = 0
+  try {
+    const raw = fs.readFileSync(p, 'utf8')
+    urlCount = (raw.match(/<url>/g) |[]).length
+  } catch {}
+  return { props: { urlCount } }
+}
+export default SitemapStatus;
+
+
+
+    const raw = fs.readFileSync(p, 'utf8'),
+    urlCount = (raw.match(/<url>/g) || []).length
+    const raw = fs.readFileSync(p, 'utf8'),
+    urlCount = (raw.match(/<url>/g) || []).length
+  } catch {} catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { urlCount }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default SitemapStatus;
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

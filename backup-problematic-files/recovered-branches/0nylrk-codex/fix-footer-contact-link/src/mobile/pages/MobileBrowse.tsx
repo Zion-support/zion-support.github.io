@@ -12,8 +12,8 @@ const jobsData = [;
   {;
     id:"1",;
     title:"Senior React Developer",;
-    subtitle:"TechCorp Inc.",;
-    description:"Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",;
+    subtitle:"TechCorp Inc.",,
+  description:"Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",;
     location:"Remote",;
     badges:["React", "TypeScript", "GraphQL"],;
     price:"$70-90/hr",;
@@ -23,8 +23,8 @@ const jobsData = [;
   {;
     id:"2",;
     title:"UX/UI Designer",;
-    subtitle:"Creative Studios",;
-    description:"Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications.",;
+    subtitle:"Creative Studios",,
+  description:"Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications.",;
     location:"New York, US (Hybrid)",;
     badges:["Figma", "Design System", "Mobile Apps"],;
     price:"$60-80/hr",;
@@ -34,8 +34,8 @@ const jobsData = [;
   {;
     id:"3",;
     title:"Full Stack Engineer",;
-    subtitle:"StartupXYZ",;
-    description:"Looking for a full stack engineer who can work with React, Node.js and AWS. Must have experience building scalable applications.",;
+    subtitle:"StartupXYZ",,
+  description:"Looking for a full stack engineer who can work with React, Node.js and AWS. Must have experience building scalable applications.",;
     location:"San Francisco, CA",;
     badges:["React", "Node.js", "AWS"],;
     price:"$75-100/hr",;
@@ -48,8 +48,8 @@ const talentsData = [;
   {;
     id:"1",;
     title:"Sarah Johnson",;
-    subtitle:"UX Designer  5 years exp",;
-    description:"Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",;
+    subtitle:"UX Designer  5 years exp",,
+  description:"Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",;
     location:"London, UK",;
     badges:["UI/UX", "Figma", "User Testing"],;
     price:"$75/hr",;
@@ -59,8 +59,8 @@ const talentsData = [;
   {;
     id:"2",;
     title:"Michael Chen",;
-    subtitle:"Full Stack Dev  8 years exp",;
-    description:"Full stack developer with expertise in React, Node.js and AWS. Built multiple applications from ground up.",;
+    subtitle:"Full Stack Dev  8 years exp",,
+  description:"Full stack developer with expertise in React, Node.js and AWS. Built multiple applications from ground up.",;
     location:"Remote",;
     badges:["React", "Node.js", "AWS"],;
     price:"$90/hr",;
@@ -70,8 +70,8 @@ const talentsData = [;
   {;
     id:"3",;
     title:"Elena Rodriguez",;
-    subtitle:"Project Manager  10 years exp",;
-    description:"PMP certified project manager with experience in leading agile teams. Successfully delivered over 15 large-scale projects.",;
+    subtitle:"Project Manager  10 years exp",,
+  description:"PMP certified project manager with experience in leading agile teams. Successfully delivered over 15 large-scale projects.",;
     location:"Madrid, Spain",;
     badges:["Agile", "Scrum", "JIRA"],;
     price:"$85/hr",;

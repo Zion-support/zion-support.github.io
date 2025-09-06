@@ -11,6 +11,8 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 
 const Tabs = TabsPrimitive.Root;
+const Tabs = TabsPrimitive.Root;import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
 
 import { cn } from "@/lib/utils"
 
@@ -226,6 +228,7 @@ TabsContent && TabsContent.displayName = TabsPrimitive && TabsPrimitive.Content.
 
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
+      classNameexport { Tabs, TabsList, TabsTrigger, TabsContent };
 import * as TabsPrimitive from '@radix - ui / react - tabs';
 ;
 import {cn} from '@/lib / utils';

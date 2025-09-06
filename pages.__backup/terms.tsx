@@ -41,6 +41,13 @@ interface TermsProps {
   // Add props here as needed
 }
 export default function Terms({}: TermsProps) {
+interface TermsProps {
+  // Add props here as needed
+
+interface TermsProps {
+  // Add props here as needed
+}
+export default function Terms({}: TermsProps) {
   return (
     <div>
       <h1>Terms</h1>
@@ -131,3 +138,4 @@ export default function Terms(): any ({}: TermsProps) {;
 ursor/automate-test-improve-and-merge-code-646c
 }
 }
+}}

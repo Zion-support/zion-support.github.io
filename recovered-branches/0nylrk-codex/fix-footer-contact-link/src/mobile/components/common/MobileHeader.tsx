@@ -18,10 +18,13 @@ interface MobileHeaderProps {
   title: string
 
   showBack?: boolean;
+import {Button} from "@/components/ui/button";  showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+  onSettingsClick?: () => void;
+}
   onSettingsClick?: () => void;
 }
   title;
@@ -40,6 +43,7 @@ import { Button } from "@/components/ui/button",
 
 
 interface MobileHeaderProps {
+  return (interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
   showNotifications?: boolean,
@@ -54,6 +58,7 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 }
 export function MobileHeader({;
+  onNotificationsClick?: () => void,export function MobileHeader({;
   title;
   showBack = false;
   showNotifications = false;
@@ -87,6 +92,7 @@ export function MobileHeader({
               size="icon"
               className="mr-2"
               onClick={() => navigate(-1)}
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -118,6 +124,7 @@ export function MobileHeader({
             </Button>
 }
 
+}
 
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -160,6 +167,8 @@ export function MobileHeader({;
       className;
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate();
+  onSettingsClick} MobileHeaderProps) {;
+  const navigate = useNavigate();
 ;
   return (;
     <header className={cn(;
@@ -194,6 +203,9 @@ export function MobileHeader({;
 
 
               size="icon"
+      <div className="flex items-center justify-between h-14 px-4">;
+        <div className="flex items-center">;
+          {showBack && (;              size="icon"
               onClick={onNotificationsClick}>;
             <Button ;
               variant="ghost" ;
@@ -224,6 +236,9 @@ export function MobileHeader({;
             >;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
+              <span className="sr-only">Notifications</span>;
+            </Button>;
+          )}              <span className="sr-only">Settings</span>;
             </Button>;
           )}
         </div>;
@@ -333,4 +348,5 @@ className)
     </header>;
   );
 }
+;
 ;

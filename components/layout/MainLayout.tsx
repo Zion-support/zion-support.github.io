@@ -203,6 +203,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -219,3 +220,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
 export default MainLayout;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+

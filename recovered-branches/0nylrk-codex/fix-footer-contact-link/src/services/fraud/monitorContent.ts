@@ -72,6 +72,14 @@ export const monitorContent = async (;
 
 
     }
+  
+  if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+        // If contains highly suspicious phrases, mark as dangerous
+    if (analysis && analysis.reasons.some(r => 
+      r && r.includes('payment') || 
+      r && r.includes('external') || 
+      r && r.includes('bypass')    }
     
     )) {
       severity = 'dangerous'
@@ -181,3 +189,4 @@ if ( {) {
 };
 
 
+      undefined // IP address would be added in a real implementation);

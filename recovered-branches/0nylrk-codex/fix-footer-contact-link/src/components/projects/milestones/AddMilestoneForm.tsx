@@ -1,5 +1,7 @@
 
 
+import {use_form} from 'react - hook - form';
+import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -11,8 +13,6 @@ import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
 
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
 
 
 const formSchema = z && z.object({;
@@ -72,6 +72,9 @@ export function AddMilestoneForm({;
 
 
   onSubmit;
+import {AIMilestoneGenerator} from './AIMilestoneGenerator';  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string;  onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
@@ -105,6 +108,7 @@ import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
 const formSchema = z.object({;
   title: z.string().min(1, 'Title is required'),;
+  title: z.string().min(1, 'Title is required'),,
   description: z.string().optional(),;
   due_date: z.date().optional(),;
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
@@ -257,7 +261,7 @@ export function AddMilestoneForm({;
   const handleAddMilestones = (milestones:GeneratedMilestone[]) => {;
     // If there's only one milestone, submit it directly;
     if (milestones.length === 1) {;
-      const milestone = milestones[0],;
+      const milestone = milestones[0];
       onSubmit({;
         title:milestone.title,;
         description:milestone.description,;
@@ -306,6 +310,9 @@ export function AddMilestoneForm({;
 
 
   return (
+      title: '',,
+  description: '',;
+      amount: 0}}),;  return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
@@ -324,6 +331,7 @@ export function AddMilestoneForm({;
 
 
       <Form {...form}>
+          onAddMilestone={handleAddMilestone}      <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 
       <Form {...form}>;
@@ -337,6 +345,7 @@ export function AddMilestoneForm({;
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required');
+  title: z.string ().min (1, 'Title is required'),
   description: z.string ().optional (),
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
@@ -404,6 +413,7 @@ if ( {) {
 ;
   return (
     <div className="space - y-6">;
+    <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {project_scope && projectStartDate && (
         <AIMilestoneGenerator;
@@ -416,6 +426,7 @@ if ( {) {
         />)}
       <Form {...form}>;
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
+        <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
           <FormField;
             control={form.control}
             name="title";
@@ -505,6 +516,7 @@ if ( {) {
               control={form && form.control}
               name="due_date"
               render={({ field }) => (;
+                <FormMessage />;              render={({ field }) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
@@ -723,6 +735,11 @@ if ( {) {
 
 
                 Cancel;
+            />;
+          </div>;
+
+          <div className="flex justify-end space-x-2 pt-4">;
+            {onCancel && (;                Cancel;
               </Button>;
             )}
             <Button type="submit" disabled={isSubmitting}>;
@@ -736,6 +753,14 @@ if ( {) {
             />;
           </div>;
           <div className="flex justify - end space - x-2 pt - 4">;
+                </>;
+              ) : (;
+                "Add Milestone";
+              )}
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="flex justify - end space - x-2 pt-4">;
             {on_cancel && (
               <Button;
                 type="button";
@@ -813,3 +838,7 @@ const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
 }
 
 
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
+                  Saving...;
+                </>) : (
+                "Add Milestone")}

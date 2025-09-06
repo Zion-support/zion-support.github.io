@@ -11,12 +11,14 @@ export function formatDate(date: Date | string | number): string {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
+    day: 'numeric'
   });
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
+    currency
     currency
   }).format(amount);
 }
@@ -30,6 +32,8 @@ export function debounce<T extends (...args: any[]) => any>(
     clearTimeout(timeout);
     timeout = setTimeout(() => func(..._args), wait);
   };
+    timeout = setTimeout(() => func(..._args), wait)
+};
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -81,6 +85,7 @@ export function slugify(str: string): string {
     .replace(/^-+|-+$/g, '');
 }
   return twMerge(clsx(inputs));}
+}  return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
 }
@@ -92,6 +97,7 @@ origin/automation-improvements-final
 
 export function formatDate(date: Date | string | number): string {},
 
+export function formatDate(date: Date | string | number): string {},
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -109,6 +115,7 @@ export function cn(...inputs: ClassValue[]) {;
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 import { type ClassValue, clsx } from 'clsx';,
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
 import { twMerge } from 'tailwind-merge';,
 
 export function cn(...inputs: ClassValue[]) {}
@@ -149,6 +156,12 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+}export function formatDate(date: Date | string | number): string {
+
+  return new Intl && Intl.DateTimeFormat("en-US", {
+    month: "long", day: "numeric",
+    year: "numeric"
+}
 
 };
 
@@ -210,6 +223,7 @@ export function format_currency (amount: number, currency = "USD"): string {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+ursor/integrate-build-improve-and-re-verify-8f7d}
 }
 }
 }

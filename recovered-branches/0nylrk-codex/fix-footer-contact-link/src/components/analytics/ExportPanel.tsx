@@ -38,6 +38,19 @@ export function ExportPanel() {
 
 
   const { toast } = useToast();
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;} from "@/components/ui/card";
+
+import { useToast } from "@/hooks/use-toast";  const { toast } = useToast();
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -57,6 +70,7 @@ export function ExportPanel() {
         });
       }, 1500));
   }
+      title: `Exporting as ${format.toUpperCase()}`
 
         });
       }, 1500));
@@ -175,6 +189,11 @@ export function ExportPanel() {;
     </Card>);
 }
 
+  );
+    </Card>);
+}  );
+    </Card>);
+}
     </Card>;
   ),;}
  export function ExportPanel () {

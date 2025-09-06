@@ -468,6 +468,8 @@ export default function MicroSaaS() {;
       \"category\": \'Development SaaS\';
 >>>>>>> origin/main
 >>>>>>> main
+      "category": 'Development SaaS';      \"pricing\": \'$299 - $1,200/month\',
+      \"delivery\": \'3-5 weeks\',
       "pricing": '$3,000 - $10,000/month',;
       "delivery": '4-6 weeks',;
       "category": 'Event SaaS';
@@ -718,6 +720,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       \"delivery\": \'3-5 weeks\',
 
 ursor/automate-test-improve-and-merge-code-646c
+      \"pricing\": \'$299 - $1,200/month\',
+      \"delivery\": \'3-5 weeks\',
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -859,6 +864,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
     },
+      "category": 'Analytics SaaS'    },
     {
       \"title\": \'AI-Powered Password Manager\',
       \"description\": \'Intelligent password management with security monitoring and breach detection\',
@@ -1205,6 +1211,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
     },
+      category: 'LegalTech SaaS'    },
     {
       \"title\": \'Intelligent Inventory Forecasting System\',
       \"description\": \'AI-driven inventory optimization with demand prediction and automated reordering\',
@@ -1891,6 +1898,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/main
   ];
   const benefits = [{
+      \"category\": \'Pet Care SaaS\';  const benefits = [{
       \"title\": \'Faster Development\',
       \"description\": \'Rapid prototyping and deployment\',
       \"icon\": Za p,
@@ -2154,7 +2162,7 @@ ursor/automate-test-improve-and-merge-code-646c
     { \"name\": \'Mobile\', \"icon\": Smartphon e, \"description\": \'React Native, Flutter, PWA\' }
 
 
-  const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' },;
+  const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' };
     { "name": 'Backend', "icon": Serve r, "description": 'Node && Node.js, Python, Go, Java' },;
     { "name": 'Database', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },;
     { "name": 'Cloud', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },;

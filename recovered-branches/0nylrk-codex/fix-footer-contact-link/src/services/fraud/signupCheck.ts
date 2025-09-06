@@ -6,6 +6,7 @@ export const checkSignupPatterns = async (
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
   }
+  const reasons: string[] = [];  }
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
     try {
@@ -19,6 +20,9 @@ export const checkSignupPatterns = async (
       if (!error && recentSignups && recentSignups.length >= 3) {
 
 
+        .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
+        .order('created_at', { ascending: false });
+      if (!error && recentSignups && recentSignups.length >= 3) {
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
@@ -36,6 +40,7 @@ export const checkSignupPatterns = async (;
 ): Promise<SignupCheckResult> => {;
   const reasons: string[] = [],;
   // Check email against suspicious patterns;
+  const emailCheck = analyzeEmail(email);
   const emailCheck = analyzeEmail(email);
   const emailCheck = analyzeEmail(email);
   if (emailCheck.isSuspicious) {;
@@ -65,6 +70,10 @@ export const checkSignupPatterns = async (;
   }
 }
 
+    isSuspicious: reasons && reasons.length > 0,
+
+    reasons
+  }
 ;
   // Check email against suspicious patterns;
   const email_check = analyze_email (email),
@@ -170,3 +179,4 @@ export const checkSignupPatterns = async (;
 }
 
 };
+  $2

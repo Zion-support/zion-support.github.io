@@ -24,6 +24,14 @@ import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
 
   fullName: string
+  professionalTitle: string  profilePicture?: string;
+  availabilityType: string,;
+  yearsExperience: number;
+}
+  availabilityType;import React from "react",
+interface TalentCardHeaderProps {
+
+  fullName: string
   professionalTitle: string
   profilePicture?: string;
   availabilityType: string,;
@@ -31,6 +39,8 @@ interface TalentCardHeaderProps {
 }
   availabilityType;
 interface TalentCardHeaderProps {
+import { TalentCardAvatar } from "./TalentCardAvatar",
+import { TalentCardAvailability } from "./TalentCardAvailability",
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
@@ -67,6 +77,7 @@ interface TalentCardHeaderProps {
 
 }
 
+  return (  return (
 
     <div className="flex items-start gap-4 mb-4">;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
@@ -237,3 +248,8 @@ yearsExperience
 }/> </div> </div> </div>) 
 }
 ;
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (;
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
+            )}

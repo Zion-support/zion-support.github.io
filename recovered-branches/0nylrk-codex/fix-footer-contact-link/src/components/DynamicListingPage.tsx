@@ -2,6 +2,7 @@
 
 
 import {useState, useEffect} from "react";
+import React from 'react';import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
 import {ProductListingCard} from "@/components/ProductListingCard";
@@ -83,6 +84,10 @@ interface PriceRange {;
 
 interface DynamicListingPageProps {;
   title: string,;
+import {toast} from "@/hooks/use-toast";  min: number,;
+  max: number;
+}interface DynamicListingPageProps {;
+  title: string,,
   description: string,;
   categorySlug: string,;
   listings: ProductListing[],;
@@ -203,6 +208,7 @@ export function DynamicListingPage({;
 
 
 }: DynamicListingPageProps) {;
+  const navigate = useNavigate();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedCategory, setSelectedCategory] = useState("all"),;
@@ -360,6 +366,14 @@ if ( {) {
 
 
               id: listing.id,;
+          title: "Quote Requested",,
+  description: `Your quote request for ${listing && listing.title} has been sent.`;
+        });
+
+        navigate("/request-quote", {;
+          state: { ;
+            serviceType: categorySlug, ;
+            specificItem: {;              id: listing.id,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
@@ -401,6 +415,10 @@ if ( {) {
   },;
   return (;
   return (
+            }
+          }
+        });
+      }  return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
@@ -430,6 +448,7 @@ if ( {) {
 
 
           </p>;
+                      <SelectItem key={filter.value} value={filter.value} className="text-white">          </p>;
         </div>;
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
@@ -484,6 +503,8 @@ if ( {) {
 
 
                   <Slider
+                <Select
+            {description}                    setSelectedCategory(value);
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
                     max={priceRange && priceRange.max}
@@ -498,6 +519,13 @@ if ( {) {
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
+              </div>
+              
+              <div className="mb-6">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  Minimum Rating
+                </label>
+                <div className="mt-6 px-2">
                   <Slider
                     defaultValue={[priceRange.min, priceRange.max]}
                     min={priceRange.min}
@@ -811,6 +839,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
                       )}
                         </div>;                      )}
                     </Button>;
+                        </div>;
+
+                      )}                    </Button>;
                   ))}
 
                 </div>;
@@ -818,6 +849,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 
 
+              <Button
+                variant="outline" 
                       )}
                     </Button>;
                   ))}
@@ -853,6 +886,11 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
                   setSelectedRating(null)
+                onClick={() => {
+                  console.log("Resetting filters");
+                  setSearchQuery("");
+                  setSelectedCategory("all")
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]);                  setSelectedRating(null)
                 }}
               >
                 Reset Filters
@@ -1023,6 +1061,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
             {isLoading ? (;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />            {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {[1, 2, 3, 4].map((i) => (;
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -1045,6 +1084,11 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   <ProductListingCard
                     key={listing && listing.id}
 
+            ) : filteredListings && filteredListings.length > 0 ? (;
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+                {filteredListings && filteredListings.map((listing) => (;
+                  <ProductListingCard
+                    key={listing && listing.id}
                   <ProductListingCard 
 
                     key={listing.id}
@@ -1085,6 +1129,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setSelectedRating(null)
 
               </div>;
+                    setSelectedRating(null)              </div>;
             ) : (;
               <div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
@@ -1143,6 +1188,11 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 
                   onClick={() => {;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );                  onClick={() => {;
                     setSearchQuery(""),;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
@@ -1154,6 +1204,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setSelectedRating (null);
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+
+                  }}
+                  className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
                 >;
                   Clear all filters;
                 </Button>;
@@ -1248,3 +1301,4 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
     </div>
   )
 }
+    </div>);}

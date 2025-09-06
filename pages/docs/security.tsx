@@ -27,6 +27,12 @@ export default function SecurityDocRedirect() {
     <>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />
+;
+;
+
+
+
+
       </Head>
       <main style={{ padding: 24 }}>
         <p>Redirecting to Security documentation…</p>
@@ -58,3 +64,5 @@ export default function SecurityDocRedirect(req, res) {
 
 
 
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -8,6 +8,7 @@ import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 
 import { cn } from "@/lib/utils"
 
@@ -82,6 +83,10 @@ Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 
 
+    className={cn(    {...props}
+  />;
+));
+
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
@@ -91,6 +96,7 @@ const AvatarImage = React.forwardRef<
 
 
 const AvatarImage = React.forwardRef<;
+  <AvatarPrimitive.Imageconst AvatarImage = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
@@ -154,6 +160,12 @@ const AvatarImage = React.forward_ref<;
 
 
 const AvatarImage = React.forwardRef<;
+    ref={ref}
+    className={cn ('aspect - square h - full w - full', class_name)}
+    {...props}
+    ref={ref}
+    className={cn(
+      'flex h-full w-full items-center justify-center rounded-full bg-muted'const AvatarImage = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;

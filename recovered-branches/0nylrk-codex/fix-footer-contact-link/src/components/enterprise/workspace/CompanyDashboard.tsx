@@ -31,6 +31,7 @@ export interface Company {
   logoUrl?: string,
   theme?: {
     primaryColor: string,
+import { TalentPool } from "./TalentPool",    primaryColor: string,
     backgroundColor: string,
     textColor: string
   },
@@ -59,6 +60,7 @@ export interface Company {;
 
 
   teamLimit: number;
+    textColor: string;  teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
 }
@@ -85,6 +87,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
       
       
+  company: Company;
+}
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
@@ -242,5 +246,10 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
 }
 ;
   );
+    <div className="container mx - auto max - w-7xl py - 8 px - 4 md:px-6">;
+      <WorkspaceHeader company={company} />;
+      <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap-6">;
+        <div className="lg:col - span - 2 space-y-6">;
+}  );
 }
 ;

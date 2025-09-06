@@ -233,7 +233,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 ;
     // Filter by price range;
     result = result.filter(talent => {;
-      const hourlyRate = talent.hourly_rate || 0,;
+      const hourlyRate = talent.hourly_rate || 0;
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1];
     }),;
     // Filter by experience range;
@@ -277,6 +277,12 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
         break;
+    
+
+    // Filter by price range
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+    });
+    // Filter by experience range        break;
       default: // Default sorting by relevance (no specific order)
         break
     }
@@ -291,6 +297,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     
     
 
+
+    
 
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
@@ -623,6 +631,7 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 
 
     toggleAvailability;
+    toggleSkill;    toggleAvailability;
     toggleRegion;
 
     clearFilters}

@@ -2,6 +2,7 @@
 
 
 import {useState} from "react";
+import React from 'react';import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -24,6 +25,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
 // Example listing type
 import { useState } from "react",
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -178,6 +180,15 @@ interface Listing {;
   createdAt: string;
 
 }
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,,
+  description: string,;
+  category: string,;
+
+// Example listing type;
+// Example listing type}
 ;
 
 }
@@ -185,6 +196,7 @@ interface Listing {;
 
 interface CategoryListingPageProps {;
   title: string,;
+  title: string,,
   description: string,;
   listings: Listing[],;
   sortOptions?: { label: string, value: string }[],;
@@ -436,6 +448,7 @@ export function CategoryListingPage({;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
 
+              {description}
                 </SelectContent>;
               </Select>;
             </div>;
@@ -473,6 +486,11 @@ export function CategoryListingPage({;
 
                   key={listing.id}
                   title={listing.title}
+                <ListingScoreCard          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}                  title={listing.title}
                   description={listing.description}
                   category={listing.subcategory |listing.category}
                   image={listing.image}
@@ -495,6 +513,9 @@ export function CategoryListingPage({;
                 onClick={() => {
 
 
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
             </p>;
           </div>;
 
@@ -584,6 +605,7 @@ export function CategoryListingPage({;
             </div>;
 
           )}
+            </div>          )}
         </div>;
       </div>;
       <Footer />;
@@ -595,6 +617,9 @@ export function CategoryListingPage({;
             <div className="text - center py - 20">;
               <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
               <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
+            <div className="text - center py-20">;
+              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
+              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
               <Button;
                 variant="outline";
                 on_click={() => {
@@ -749,4 +774,13 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
   )
 
 
+                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>)}
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
 }

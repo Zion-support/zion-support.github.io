@@ -53,6 +53,14 @@ const Card = React.forwardRef<
     className={cn(
       'rounded-lg border bg-card text-card-foreground shadow-sm'
       className
+import React from 'react';
+    ref={ref}
+    className={cn(
+      'rounded-lg border bg-card text-card-foreground shadow-sm'  <div
+    ref={ref}
+    className={cn(
+      'rounded-lg border bg-card text-card-foreground shadow-sm'
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
     )}
     {...props}
   />
@@ -98,6 +106,7 @@ const CardTitle = React.forwardRef<
 
 
 CardHeader && CardHeader.displayName = 'CardHeader';
+  React.HTMLAttributes<HTMLDivElement>CardHeader && CardHeader.displayName = 'CardHeader';
 
 const CardTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
@@ -123,6 +132,8 @@ const CardHeader = React.forwardRef<;
 
   <h3
   />;
+  <h3
+    ref={ref}  />;
 ));
   <h3
     ref={ref}
@@ -163,6 +174,7 @@ const Card = React.forward_ref<;
   <p
     ref={ref}
     className={cn (
+  HTMLParagraphElement,    className={cn (
       'rounded - lg border bg - card text - card - foreground shadow - sm',
       class_name)}
     {...props}
@@ -395,3 +407,4 @@ export {
 };
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
+    {...props}

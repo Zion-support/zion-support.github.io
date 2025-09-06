@@ -14,6 +14,7 @@ import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "../components/ProtectedRoute";
 import { Fragment } from "react",
+const CommunityRoutes = () => {import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import CommunityPage from "../pages/CommunityPage",
@@ -39,6 +40,21 @@ const CommunityRoutes = () => {;
 
 
 
+
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;  return (
+    <Routes>
+      {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;
+  return (
     <Routes>;
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -137,6 +153,9 @@ const CommunityRoutes = () =>: any {
 
           <ProtectedRoute>;
             <EditPostPage />;
+  )
+};
+
           </ProtectedRoute>;
         }
 
@@ -205,3 +224,4 @@ export default CommunityRoutes;
 
 export default CommunityRoutes;
 ;
+  );

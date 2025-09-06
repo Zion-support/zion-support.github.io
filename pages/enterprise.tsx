@@ -72,6 +72,63 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+const features = [
+  {
+    icon: Building,
+    title: 'Scalable Architecture',
+    description: 'Enterprise-grade solutions designed to scale with your business growth and requirements.'
+  },
+  {
+    icon: Shield,
+    title: 'Security & Compliance',
+    description: 'Comprehensive security measures and compliance with industry standards and regulations.'
+  },
+  {
+    icon: Users,
+    title: 'Team Collaboration',
+    description: 'Advanced collaboration tools and workflows to enhance team productivity and communication.'
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description: 'High-performance solutions optimized for speed, reliability, and efficiency.'
+  }
+];
+
+const solutions = [
+  {
+    title: 'Enterprise Resource Planning',
+    description: 'Comprehensive ERP solutions integrating all business processes and departments.',
+    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations'],
+    pricing: 'Starting at $50,000'
+  },
+  {
+    title: 'Customer Relationship Management',
+    description: 'Advanced CRM systems to manage customer relationships and sales processes.',
+    features: ['Lead Management', 'Sales Pipeline', 'Customer Analytics', 'Marketing Automation'],
+    pricing: 'Starting at $25,000'
+  },
+  {
+    title: 'Business Intelligence',
+    description: 'Data analytics and reporting solutions for informed business decision making.',
+    features: ['Data Visualization', 'Real-time Dashboards', 'Predictive Analytics', 'Custom Reports'],
+    pricing: 'Starting at $30,000'
+  },
+  {
+    title: 'Cloud Migration',
+    description: 'Seamless migration of enterprise systems to cloud infrastructure.',
+    features: ['Infrastructure Migration', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
+    pricing: 'Starting at $40,000'
+  }
+];
+
+const stats = [
+  { number: '200+', label: 'Enterprise Clients' },
+  { number: '500+', label: 'Large-scale Projects' },
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Enterprise Support' }
+];
+
 export default function EnterprisePage() {
   return (
     <MainLayout
@@ -261,10 +318,16 @@ export default function EnterprisePage() {
 }
 
 
+
+
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
 
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -276,6 +339,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 export default function EnterpriseRedirect() { return null }
 
+
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -284,6 +348,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 export default function EnterpriseRedirect() { return null }
 
+},
+;
+export default function EnterpriseRedirect() { return null };
 },
 ;
 export default function EnterpriseRedirect() { return null };
@@ -305,3 +372,8 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
+
+export const getServerSideProps: GetServerSideProps;
+export default function EnterpriseRedirect() { return null }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

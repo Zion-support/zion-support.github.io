@@ -17,6 +17,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -60,6 +62,9 @@ serve(async (req) => {
     
 
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
     if (!prompt) {
       throw new Error("Prompt is required")
     }
@@ -203,6 +208,7 @@ if ( {) {
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
+    // Default to base model if no specific model provided      {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
@@ -211,6 +217,7 @@ if ( {) {
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+    console.error ("Error in zion - gpt function:", error);import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
@@ -224,6 +231,7 @@ serve(async (req) => {;
 });
 
 
+});
     console.error ("Error in zion - gpt function:", error);
 ;
     return new Response (
@@ -262,7 +270,7 @@ serve(async (req) => {;
         max_tokens: maxTokens,;
         temperature: temperature})}),;
     if (!response.ok) {;
-      const errorData = await response.json(),;
+      const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
     }
 ;
@@ -279,6 +287,8 @@ serve(async (req) => {;
     );
 
   } catch (error) {;
+  }
+});  } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
@@ -402,4 +412,7 @@ return new Response (JSON.stringify ({
 
 
   }
+  }
+});
+;
 });

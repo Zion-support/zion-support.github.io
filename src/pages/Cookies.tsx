@@ -53,3 +53,7 @@ const Cookies = () => {
 export default Cookies;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+import { motion } from 'framer-motion';""
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

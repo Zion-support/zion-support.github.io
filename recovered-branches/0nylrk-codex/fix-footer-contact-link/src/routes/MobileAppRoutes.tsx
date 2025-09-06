@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
 const MobileAppRoutes = () => {;
 import {Route, Routes} from "react-router-dom";
+const MobileAppRoutes = () => {import {Route, Routes} from "react-router-dom";
 
 import MobileLaunchPage from "../pages/MobileLaunchPage",
 import OpenAppRedirect from "../pages/OpenAppRedirect",
@@ -58,7 +59,8 @@ const MobileAppRoutes = () => {;
 
 
 
-};
+const MobileAppRoutes = () => {
+const MobileAppRoutes = () => {};
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
 import MobileLaunchPage from "../pages / MobileLaunchPage";
@@ -98,3 +100,4 @@ export default MobileAppRoutes;
 export default MobileAppRoutes;
 
 
+;

@@ -46,6 +46,7 @@ const ContextMenuSubTrigger = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   >;
@@ -73,6 +74,7 @@ const ContextMenuSubContent = React.forwardRef<
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -98,6 +100,7 @@ const ContextMenuContent = React.forwardRef<;
 
         className
 
+        className
       )}
       {...props}
     />;
@@ -165,6 +168,7 @@ const ContextMenuItem = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -220,6 +224,8 @@ className={cn (
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
 
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
@@ -264,6 +270,8 @@ const ContextMenuLabel = React.forward_ref<;
 
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
 
+    {children}
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
   }
@@ -280,6 +288,7 @@ const ContextMenuLabel = React.forward_ref<;
 
       className
 
+      className
     )}
     {...props}
   />;
@@ -320,6 +329,7 @@ const ContextMenuSeparator = React.forward_ref<;
 
         className
 
+        className
       )}
 />));
 ContextMenuSeparator.display_name = ContextMenuPrimitive.Separator.display_name;

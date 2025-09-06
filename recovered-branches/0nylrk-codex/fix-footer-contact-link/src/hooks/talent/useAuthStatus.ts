@@ -12,11 +12,15 @@ export function useAuthStatus() {
   // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
+
+export function useAuthStatus() {
+  // Mock authenticated status  // Mock user details
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
 
 
+    email: 'demo@example && example.com',
     avatar: ''
   });
   // Mock saved talents
@@ -133,6 +137,8 @@ export function useAuthStatus() {;
     }
 
   },;
+  }
+;  },;
   // For demo purposes, let's provide a login/logout toggle;
   const toggleAuth = () => {;
     setIsAuthenticated(prev => !prev);
@@ -230,4 +236,5 @@ toggleAuth
 
 
   }
+}  }
 ;

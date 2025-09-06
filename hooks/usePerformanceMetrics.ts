@@ -77,6 +77,7 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
 
 ursor/expand-services-advertise-and-build-project-4b36
       const fcp = paintEntries && paintEntries.find(
+      return      const fcp = paintEntries && paintEntries.find(
         (entry) => entry && entry.name === "first-contentful-paint",
       );
       const lcpEntries = window && window.performance.getEntriesByType(
@@ -96,6 +97,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 
 ursor/expand-services-advertise-and-build-project-4b36
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+      setMetrics({        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: cls,

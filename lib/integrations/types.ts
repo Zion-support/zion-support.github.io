@@ -4,6 +4,14 @@ export type IntegrationCategory = 'crm' | 'ats';
 
 
 export type IntegrationCategory = 'crm' | 'ats';
+
+export type IntegrationCategory = 'crm' | 'ats';
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+export type IntegrationCategory = 'crm' | 'ats';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type IntegrationProviderId =;
@@ -15,6 +23,8 @@ export type IntegrationProviderId =;
   | 'lever';
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
@@ -37,6 +47,7 @@ export interface IntegrationProviderMeta {
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
@@ -48,6 +59,26 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
+;
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
+  icon?: string;
+;
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
+  icon?: string;
+  id: IntegrationProviderId, name: string
+  id: IntegrationProviderId, name: string,;
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export type IntegrationCategory = any;
+  events: ZapierEvent[]
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
@@ -58,6 +89,17 @@ export interface SyncRules {
 
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+autoUploadResumes?: boolean;
+
+export interface ProviderConnection {
+  providerId: IntegrationProviderId;
+  status: SyncStatus;
+  accessToken?: string;
+  refreshToken?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -67,6 +109,14 @@ export interface SyncRules {
 
 export interface SyncLogEntry {
 
+
+lastError?: string | null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+export interface SyncLogEntry {
+  lastError?: string | null;
+export interface SyncLogEntry {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;
@@ -78,6 +128,7 @@ export interface SyncLogEntry {
 ;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
@@ -87,6 +138,12 @@ export interface ManualOverride {
 ;
 
 export interface ZapierEvent {
+
+
+;
+
+export interface ZapierEvent {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface ManualOverride {;
   jobId: string;
@@ -102,6 +159,8 @@ export interface ZapierEvent {;
 ;
 
 export interface IntegrationsState {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface ManualOverride {;
   jobId: string;
@@ -127,6 +186,7 @@ export interface ZapierEvent {;
 
 export interface IntegrationsState {;
 
+ursor/fix-website-loading-errors-and-merge-6662
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
@@ -135,6 +195,10 @@ export interface IntegrationsState {;
 
 
 
+
+  lastError?: string | null
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface SyncLogEntry {
   id: string, timestamp: number,
   providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
@@ -156,3 +220,7 @@ export interface IntegrationsState {
   events: ZapierEvent[]
 }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  events: ZapierEvent[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

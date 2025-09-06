@@ -80,6 +80,7 @@ export const flagContent = async (
 
 
     // // // console.log('Flagging content for review:', {
+  content_excerpt: string;    // // // console.log('Flagging content for review:', {
       userId,
       contentType,
       contentId,
@@ -90,6 +91,7 @@ export const flagContent = async (
     });
       severity;
       reason;
+    });      reason;
       ip_address: ipAddress;
       timestamp: new Date().toISOString()
       status: 'pending'
@@ -166,6 +168,12 @@ export const flagContent = async (;
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
   }
+  } catch (error) {    console && console.error('Error flagging content:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error && error.message : 'Unknown error' 
+
+    }  }
 }
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
@@ -227,6 +235,9 @@ if (throw error) {
 };
     }
   }
+    }
+  }
+}
 };
     }
   }

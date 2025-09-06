@@ -104,6 +104,10 @@ document.getElementById('signIn').addEventListener('click', async () => {
 
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
+;
+document.querySelectorAll('.example').forEach((btn) => {;
+  btn.addEventListener('click', () => {;
+    document.getElementById('prompt').value = btn.dataset.text || '';
 
 /**
  * getUserId - Function description
@@ -124,6 +128,7 @@ document.querySelectorAll ('.example').for_each ((btn) => {
 
 }),;
 document.getElementById('askBtn').addEventListener('click', async () => {;
+  const prompt = document.getElementById('prompt').value.trim();
   const prompt = document.getElementById('prompt').value.trim();
   if (!prompt) return,;
   const userId = await new Promise((r) => getUserId(r)),;
@@ -175,3 +180,4 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 
 
 
+}),;

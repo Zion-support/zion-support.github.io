@@ -3,6 +3,83 @@ import { motion } from 'framer-motion';
 
 
 
+import {
+  Brain, Shield, Rocket, Globe, Cpu, Database
+  TrendingUp, Users, Star, Zap, Lock, Target
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+} from 'lucide-react'
+// Import our new innovative services
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+const Innovative2025ServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  // Combine all innovative services
+  const allInnovativeServices = [
+    ...innovativeMicroSaasExpansionV32025
+    ...innovativeITServicesExpansion2025V3
+    ...innovativeAIServicesExpansion2025V3
+  ]
+  const categories = [
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length }
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length }
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') |s.category.includes('FinOps')).length }
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
+  ]
+  const filteredServices = allInnovativeServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' |
+      service.category.toLowerCase().includes(selectedCategory) |
+      (selectedCategory === 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning'))) |
+      (selectedCategory === 'it' && (service.category.includes('IT') |service.category.includes('Infrastructure'))) |
+      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) |
+      (selectedCategory === 'cloud' && (service.category.includes('Cloud') |service.category.includes('FinOps'))) |
+      (selectedCategory === 'developer' && service.category.includes('Developer'))
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch
+  })
+  const stats = [
+    { number: "15+", label: "Innovative Services", icon: Star }
+    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle }
+    { number: "24/7", label: "AI Support Available", icon: Brain }
+    { number: "200+", label: "Countries Served", icon: Globe }
+  ]
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 }
+    animate: { opacity: 1, y: 0 }
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+import {;
+  Brain, Shield, Rocket, Globe, Cpu, Database,;
+  TrendingUp, Users, Star, Zap, Lock, Target,;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink;
+} from 'lucide-react',;
+// Import our new innovative services;
+const Innovative2025ServicesShowcase: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  // Combine all innovative services;
+  const allInnovativeServices = [;
+    ...innovativeMicroSaasExpansionV32025;
+    ...innovativeITServicesExpansion2025V3;
+    ...innovativeAIServicesExpansion2025V3;
+  ];
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },;
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },;
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },;
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 
   ],
   const categories = [;
@@ -119,6 +196,20 @@ import { motion } from 'framer-motion';
 
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
 
+          {/* Floating Particles */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`
                   top: `${Math.random() * 100}%`
@@ -136,6 +227,11 @@ import { motion } from 'framer-motion';
 
 
 
+          <motion.header
+            className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
   ],;
   const filteredServices = allInnovativeServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' ||;
@@ -335,6 +431,7 @@ import { motion } from 'framer-motion';
   }
 }
             transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -350,6 +447,15 @@ import { motion } from 'framer-motion';
 
 
 
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
+            autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >;
+            <div className="max - w-7xl mx - auto">;
+              {/* Search Bar */}
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
@@ -522,6 +628,42 @@ import { motion } from 'framer-motion';
 
 
 
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="group relative"
+                    variants={fadeInUp  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    whileHover={{ y: -10 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
+                      {/* Service Icon and Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="p-8">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
+                            {(service as any).icon || '🚀'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
@@ -564,6 +706,36 @@ import { motion } from 'framer-motion';
                             </div>))}
 
 
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                        {/* Service Name and Tagline */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                          {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </h3>
+                        <p className="text-gray-300 mb-6 leading-relaxed">
+                          {(service as any).tagline || service.description?.substring(0, 100) || 'Innovative service solution'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </p>;
+                        {/* Price */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
@@ -616,6 +788,42 @@ import { motion } from 'framer-motion';
 
 
 
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                        {/* Service Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).customers || '1000'}+</div>
+                            <div className="text-xs text-gray-400">Customers</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).rating || '4.8'}</div>
+                            <div className="text-xs text-gray-400">Rating</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).reviews || '500'}</div>
+                            <div className="text-xs text-gray-400">Reviews</div>
+                          </div>
+                        </div>
+                        {/* CTA Button */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <Link;
+                          href={`/services/${service.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
@@ -831,6 +1039,10 @@ import { motion } from 'framer-motion';
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
 
+                  © 2025 Zion Tech Group. All rights reserved. | 
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
+                  © 2025 Zion Tech Group. All rights reserved. |
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
@@ -848,6 +1060,9 @@ import { motion } from 'framer-motion';
 
 export default Innovative2025ServicesShowcase;
 
+export default Innovative2025ServicesShowcase,;
+;
+export default Innovative2025ServicesShowcase,
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;
@@ -999,3 +1214,15 @@ export default Innovative2025ServicesShowcase,
 
 
 
+},
+
+import { Brain, Shield, Rocket, Globe, Cpu, Database;
+  TrendingUp, Users, Star, Zap, Lock, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+// Import our new innovative services
+import { innovativeMicroSaasExpansionV32025  } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+const Innovative2025ServicesShowcase: React.FC;
+export default Innovative2025ServicesShowcase;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

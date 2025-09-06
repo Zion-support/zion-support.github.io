@@ -47,6 +47,7 @@ export function StickyAction({
 }
   className;
   children;
+  showAfterScroll?: number;  children;
 
   showAfterScroll = 300;
   position = "bottom";
@@ -97,6 +98,10 @@ function StickyAction() {
   }, [showAfterScroll]),
 
   return (
+  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > showAfterScroll) {
+        setIsVisible(true)  return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
@@ -173,6 +178,15 @@ export function StickyAction({;
       )}
 
 
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0 && 0.2 }}
+          className={cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
 ;
   const position_classes = {
     bottom: "bottom - 4",
@@ -193,6 +207,7 @@ export function StickyAction({;
             class_name)}
         >;
           <div className="rounded - lg bg - zion - blue - dark border border - zion - blue - light shadow - lg shadow - zion - purple / 10 flex items - center">;
+          <div className="rounded - lg bg - zion - blue - dark border border - zion - blue - light shadow - lg shadow - zion - purple / 10 flex items-center">;
             {children}
           </div>;
         </motion.div>)}

@@ -24,13 +24,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
-export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
+
+}
+
+export default function SOC2ComplianceAutomation({}: SOC2ComplianceAutomationProps) {
   return (
     <div>
       <h1>SOC2ComplianceAutomation</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
@@ -50,3 +55,4 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
 }
 }
 }
+:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx

@@ -55,6 +55,8 @@ export function ApiLogs() {
 
 
   
+  
+  
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -70,6 +72,7 @@ export function ApiLogs() {
   
 
 
+  },
   
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
@@ -183,6 +186,7 @@ import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
 ;
 
 
+    }import { useState, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -221,7 +225,7 @@ export function ApiLogs() {;
   // Calculate pagination info;
   const totalPages = Math.ceil(totalLogs / pageSize);
   const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1,;
+  const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
   return (;
 
@@ -262,6 +266,10 @@ export function ApiLogs() {;
 
 
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
+  const totalPages = Math.ceil(totalLogs / pageSize),;
+  const hasNextPage = currentPage < totalPages - 1,;
+  const hasPrevPage = currentPage > 0;
+  return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <List className="mr-2" size={20} /> API Request Logs;
@@ -436,6 +444,17 @@ export function ApiLogs() {;
 
 
                         }>;
+              ) : (;
+                logs && logs.map((log) => (;
+                  <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log && log.created_at)}</td>;
+                    <td className="px-4 py-3">;
+                      <Badge
+                        variant="outline"
+                        className={
+                          log && log.method === 'GET' 
+                            ? "border-green-500 text-green-400" 
+                            : log && log.method === 'POST' 
                         {log && log.method}
                       </Badge>;
                     </td>;
@@ -533,7 +552,9 @@ export function ApiLogs() {;
 
 
 import { useState, useEffect } from './react';
+                    <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;
+

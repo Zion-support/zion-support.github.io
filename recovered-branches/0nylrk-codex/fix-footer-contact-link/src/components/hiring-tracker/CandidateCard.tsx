@@ -75,12 +75,18 @@ interface CandidateCardProps {
   index: number
 }
 
+import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
   
 
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+
+export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application && application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
 
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -149,6 +155,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   index: number
 }
     });
+      title: "Notes saved",,
+  description: "Your notes have been saved",;
+    });
+    setShowNotes(false)
+};
+
+  const handleHireConfirmed = () => {;
+    // Hiring process completed via the modal;
+    toast({;
+      title: "Hiring process initiated",,
+  description: "Offer has been sent to the talent.",;
   }
 
   return (
@@ -164,6 +181,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
+        {(provided) => (;                <div className="flex items-center gap-2">;
                   <Avatar className="h-8 w-8">;
                     {application && application.talent_profile?.profile_picture_url ? (;
                       <img
@@ -245,6 +263,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
                     )}
                       {application.talent_profile?.professional_title |
+                        alt={}
+                      />;
+                    ) : (;                      {application.talent_profile?.professional_title |
                         "Applicant"}
                     </p>
                   </div>
@@ -254,6 +275,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>
                 </div>
                 <DropdownMenu>
+                
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
                       <MoreVertical className="h-4 w-4" />
@@ -287,6 +309,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
                       {showNotes ? "Hide notes" : "Add notes"}
                       {showNotes ? "Hide notes" :"Add notes"}
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -304,6 +327,16 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
                           View Resume;
+                      <Link to={`/messages?talentId=${application && application.talent_id}`}>;
+                        Message;
+                      </Link>;
+                    </DropdownMenuItem>;
+                    {application && application.resume?.file_url && (;
+                      <DropdownMenuItem asChild>;
+                        <a
+                          href={application && application.resume.file_url}
+                          target="_blank"
+                          rel="noopener noreferrer">;                          View Resume;
                         </a>;
                       </DropdownMenuItem>;
                     )}
@@ -372,6 +405,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+              {/* Action Buttons */}
 
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
@@ -482,6 +516,29 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
                 </Button>
 
+                </Button>;
+
+                <Button
+                  variant="default"
+                  size="sm"                </Button>        on_confirm={handleHireConfirmed}
+      />;
+    </>);
+}
+      ;
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal;
+<Button variant="outline" size="sm" className="flex-1" asChild>
+
+                  {application.resume?.file_url ? (
+                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
+                      <FileText className="h-3 w-3 mr-1" /> Resume
+                    </Link>
+                  ) : (
+                    <span>
+                      <FileText className="h-3 w-3 mr-1" /> No Resume
+                    </span>
+                  )}
+                </Button>
                 <Button
                   variant="default"
                   size="sm"
@@ -713,3 +770,28 @@ function CandidateCard() {
 
 
 
+                  onClick={() => setShowHireModal(true)}
+                >
+                  <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </Draggable>
+      </Draggable>;
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal
+        isOpen={showHireModal}
+        onClose={() => setShowHireModal(false)}
+        application={application}
+        onConfirm={handleHireConfirmed}
+/>
+    </>
+
+      />
+    </>
+      />;
+    </>;
+  );
+}

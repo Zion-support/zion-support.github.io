@@ -21,6 +21,15 @@ export async function createOnboardingNotification({;
   userRole
 }: OnboardingNotificationParams) {
 
+
+/**
+ * Creates an onboarding notification for a user
+ */
+export async function createOnboardingNotification({  missingMilestone;
+  userRole
+}: OnboardingNotificationParams) {
+
+  try {
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -106,6 +115,7 @@ if ( {) {
 
 
 import { createNotification } from './createNotification',;
+      case 'profile_completed':import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;
@@ -229,5 +239,9 @@ case 'talent invited':
 }
 ;
 }
+    }
+  }
+  ;
+;
 ;
 }

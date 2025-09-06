@@ -20,6 +20,13 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
+import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
 
 import {
   createMilestone,
@@ -30,6 +37,14 @@ import {
 
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {;
 
+
+  if (typeof window === 'undefined') return 'client';
+import { Milestone  } from '../../../utils/types/milestones';
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+  if (typeof window;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
 
   if (typeof window === 'undefined') return 'client';
 
@@ -47,6 +62,33 @@ export default function ProjectMilestonesPage() {;
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>;
     getRoleFromEnvOrQuery();
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (r === 'talent' || r === 'admin') return r;
+return 'client';
+
+export default function ProjectMilestonesPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+
+const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
+    getRoleFromEnvOrQuery()
+  );
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
+  if (typeof window === 'undefined') return 'client',;
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+export default function ProjectMilestonesPage(req, res) {
+  try {
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -55,11 +97,31 @@ export default function ProjectMilestonesPage() {;
 
 
 
+    setRole(getRoleFromEnvOrQuery());
+  }, []),;
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
     if (!role) return;
 
 
+  useEffect(() => {
+setRole(getRoleFromEnvOrQuery());
+  }, []);
+
+  // Demo cookie-based auth to hit API successfully
+  useEffect(() => {
+    if (!role) return;
+    try {
+const userId =
+        role === 'talent'
+          ? 'talent-1'
+          : role === 'client'
+            ? 'client-1'
+            : 'client-1';
+      document.cookie = `x-user-id=${userId}; path=/`;
+      document.cookie = `x-user-role=${role}; path=/`;
+    } catch {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }, [role]);
 
 
@@ -68,9 +130,7 @@ export default function ProjectMilestonesPage() {;
 
     if (!projectId) return;
 
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
-import { Milestone } from '../../../utils/types/milestones';
 
 
 
@@ -82,6 +142,14 @@ import { Milestone } from '../../../utils/types/milestones';
       setError(null);
 
 
+      try {
+        const data = await fetchMilestones(projectId as string);
+if (!cancelled) setMilestones(data.milestones || []);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
+      } finally {
+        if (!cancelled) setLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
     })();
     return () => {;
@@ -115,11 +183,119 @@ import { Milestone } from '../../../utils/types/milestones';
       cancelled = true
     }
 
+  }, [projectId]);
 
 
     setMilestones(prev => [res.milestone, ...prev]);  };
 
 
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [projectId]),
+
+  const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
+    if (!projectId) return;
+    const res = await createMilestone(projectId as string, payload);
+    setMilestones(prev => [res.milestone, ...prev]);
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  const handleAction = async (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
+    milestoneId: string
+  ) => {
+    if (!projectId) return
+    const map: Record<string, string> = {
+      in_progress: 'In Progress',
+      submitted: 'Submitted',
+      approved: 'Approved',
+paid: 'Paid'
+    };
+    const status = map[action];
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, {
+      status
+    });
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold">Milestones</h1>
+          <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+    setMilestones(prev =>
+      prev.map(m => (m.id === milestoneId ? res.milestone : m))
+    );
+  };
+
+  return (
+    <div>
+      <Head>
+        <title>Project Milestones</title>
+<meta
+          name='description'
+          content='Track project deliverables and milestone payments'
+        />
+      </Head>
+      <div className='max-w-5xl mx-auto px-4 py-8'>
+        <div className='mb-6'>
+          <h1 className='text-2xl font-bold'>Milestones</h1>
+          <p className='text-sm text-gray-600'>
+            Project: {projectId as string}
+          </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+        </div>
+
+        {role !== 'talent' && (
+          <div className="mb-8 p-4 rounded bg-gray-50 border">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-semibold">Add Milestone</h2>
+              <span className="text-xs text-gray-500">Role: {role}</span>
+          <div className='mb-8 p-4 rounded bg-gray-50 border'>
+            <div className='flex items-center justify-between mb-3'>
+              <h2 className='text-lg font-semibold'>Add Milestone</h2>
+              <span className='text-xs text-gray-500'>Role: {role}</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            </div>
+            <MilestoneForm onSubmit={handleCreate} />
+          </div>
+        )}
+        {loading && <div>Loading milestones...</div>}
+  }, [project_id]);
+
+
+
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+;
+  const handle_create = async (payload: {
+    title: string;
+    description?: string;
+    due_date: string;
+    amount_usd: number;
+  }) => {
+    // Check condition
+if (return) {
+  $2
+}
+    const res = await create_milestone (project_id as string, payload);
+    set_milestones (prev => [res.milestone, ...prev]);  }
+;
+  const handle_action = async (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    milestone_id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+
+
+
+{error && <div className='text-red-600'>{error}</div>}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
         {!loading && !error && (
           <div className='space - y-4'>;
@@ -160,6 +336,82 @@ import { Milestone } from '../../../utils/types/milestones';
 );
 
 
+              <div className='text - gray - 600'>;
+                No milestones yet.{' '}
+                {role !== 'talent' ? 'Create the first one.' : ''}
+              </div>)}
+            {milestones.map (m => (
+              <MilestoneCard;
+                key={m.id}
+
+                milestone={m}
+                project_id={String (project_id)}
+                role={role}
+                on_action={handle_action}
+              />            ))}
+
+
+
+        <div className='mt-12 text-xs text-gray-500'>;
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on;
+          Paid &rarr; capture via Stripe/PayPal/Escrow.;
+        </div>;
+      </div>;
+    </div>;
+  );
+
+
+
+
+}
+}
+
+        {error && <div className="text-red-600">{error}</div>}
+
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
+              <div className='text-gray-600'>
+                No milestones yet.{' '}
+                {role !== 'talent' ? 'Create the first one.' : ''}
+              </div>
+            )}
+            {milestones.map((m) => (
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
+            {milestones.map(m => (
+              <MilestoneCard
+                key={m.id}
+                milestone={m}
+                projectId={String(projectId)}
+                role={role}
+                onAction={handleAction}
+              />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            ))}
+          </div>
+        )}
+
+}
+}
+              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {milestones.map((m) => (;
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
@@ -168,3 +420,25 @@ import { Milestone } from '../../../utils/types/milestones';
 
   )
 
+          </div>)}
+        <div className='mt - 12 text - xs text - gray - 500'>;
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on;
+          Paid &rarr; capture via Stripe / PayPal / Escrow.;
+        </div>;
+      </div>;
+
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<div className='mt-12 text-xs text-gray-500'>
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on
+          Paid &rarr; capture via Stripe/PayPal/Escrow.
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

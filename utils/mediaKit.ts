@@ -1,11 +1,19 @@
 
 
 
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
   };
 
 
 
   }
+  };
+}
+
+
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   }
@@ -16,6 +24,25 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
       path: '',
 
       filename: 'legal / terms - of - use.md',
@@ -24,11 +51,13 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     },;
   ];
   const web3Extras: MediaAsset[] = [
 
       type: 'text',
+      content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`
       content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`
       content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`
     },
@@ -40,6 +69,10 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
     {
       path: '',
 
+      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`
+    },
+    {
+      path: '',
 
       filename: 'legal / jurisdictional - disclosures.md',
 
@@ -51,6 +84,9 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
     },
     {
       path: ''
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
 ;
@@ -60,6 +96,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
       path: ''
       path: ''
+      path: ''
 
   ];
 
@@ -67,6 +104,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 export function buildPressRelease(
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   type: PressReleaseType
 ;
   // Check condition
@@ -78,6 +116,20 @@ if (return [...base, ...web3Extras]) {
 export function buildPressRelease (
   type: PressReleaseType,
   params: {
+  type: PressReleaseType,
+  params: {;
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     company_name: string;
 export function buildPressRelease(
 
@@ -87,6 +139,8 @@ export function buildPressRelease(
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     date: string;
     raiseAmount?: string;
     tokenName?: string;
@@ -100,6 +154,7 @@ export function buildPressRelease(
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
@@ -116,6 +171,7 @@ export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -137,6 +193,34 @@ function titleCase(s: string) {
 
 
 
+
+
+function titleCase(s: string) {
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+
+
+function titleCase(s: string) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+function titleCase(s: string) {
+
+  return s && s.replace(
+    /\w\S*/g,
+    w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  );}
+
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
@@ -167,6 +251,9 @@ function build_timeline() {
       date: fmt (add_days (start_date, 14))
     },
     { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) }
+      date: fmt (add_days (start_date, 14))
+    },
+    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) }
   ];
 ;
 /**
@@ -180,3 +267,7 @@ function title_case() {
 
 
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

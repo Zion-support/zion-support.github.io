@@ -18,11 +18,13 @@ interface PricingSuggestionAnalytics {
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 interface PricingSuggestionAnalytics {
+import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
   recent_suggestions: {
+
     id: string;
     user_id: string;
     suggested_min: number;
@@ -59,6 +61,8 @@ import {supabase} from "@/integrations/supabase/client";
 
 
 interface PricingSuggestionAnalytics {
+    accepted: boolean;import {useState, useEffect} from 'react';
+import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
   averagePriceGap: number,
@@ -137,6 +141,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 
         setAnalytics({
+    type: 'client' | 'talent'        setAnalytics({
           ...mockData;
           isLoading: false
           error: null
@@ -389,3 +394,4 @@ export function usePricingSuggestionAnalytics(days = 30) {;
   return analytics;
 }
 }
+        //   .select(...)

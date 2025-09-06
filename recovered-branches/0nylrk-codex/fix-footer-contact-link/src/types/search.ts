@@ -22,6 +22,14 @@ export interface FilterOptions {
 
     label: string;
 
+;
+export interface SearchHighlight {;
+  before: string,;
+  match: string,;
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+}  }[];
+  locations: {
     label: string;
     value: string;
   }[];
@@ -37,6 +45,8 @@ export interface FilterOptions {
 
 
 
+  ratingOptions: number[];
+}
 export interface SearchSuggestion {;
 
 }

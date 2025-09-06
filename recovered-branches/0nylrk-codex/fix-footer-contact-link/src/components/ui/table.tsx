@@ -15,6 +15,7 @@ const Table = React.forwardRef<
       className={cn("w-full caption-bottom text-sm", className)}
       {...props}
 import * as React from &quot;react & quot;
+>(({ className, ...props }, ref) => (import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 ;
@@ -47,6 +48,8 @@ TableHeader.displayName = "TableHeader"
 
 
 
+Table.displayName = "Table"
+
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -64,6 +67,9 @@ TableBody.displayName = "TableBody"
 
 
 />;
+    ref={ref}
+    className={cn("[&_tr:last-child]:border-0", className)}
+    {...props}/>;
   </div>));
 Table.display_name = &quot;Table & quot;
 ;
@@ -82,6 +88,9 @@ const TableBody = React.forward_ref<;
     ref={ref}
     className={cn (&quot;[&_tr:last - child]:border - 0&quot;, class_name)}
     {...props}
+
+TableBody.displayName = "TableBody"
+
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
@@ -138,6 +147,7 @@ TableRow.displayName = "TableRow"
 
 
 const TableHead = React.forwardRef<
+    className={cn(const TableHead = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
@@ -180,6 +190,7 @@ TableCell.displayName = "TableCell"
 
 
 />));
+    ref={ref}/>));
 TableBody.display_name = &quot;TableBody & quot;
 ;
 const TableFooter = React.forward_ref<;
@@ -230,6 +241,9 @@ const TableCell = React.forward_ref<;
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
     ref={ref}
+
+TableCell.displayName = "TableCell"
+
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
@@ -238,6 +252,10 @@ const TableCaption = React.forwardRef<
     ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
+    className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
+    {...props}
+/>
+))
 />));
 TableCell.display_name = &quot;TableCell & quot;
 ;

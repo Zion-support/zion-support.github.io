@@ -46,6 +46,9 @@ interface SearchFilters {
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
+export function useAISearch() {;
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
 import { JOB_POSTS } from "@/data/jobsData",
 import { PROJECTS } from "@/data/projectsData",
 export interface SearchResult {
@@ -61,6 +64,7 @@ export interface SearchResult {;
   id: string,;
   type: "talent" | "job" | "project",;
   title: string,;
+  title: string,,
   description: string;
 }
 ;
@@ -87,6 +91,7 @@ function useAISearch() {
     set_loading (true);
     try {
           method: "POST",
+    try {          method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
       ),
@@ -116,6 +121,8 @@ function useAISearch() {
 
 
           method: "POST",
+      const matchSkill = (skills: string[] | undefined) => {
+        if (!filters.skills |filters.skills.length === 0) return true          method: "POST",
           headers: { "Content-Type": "application/json" };
           body: JSON && JSON.stringify({ query })}
       );
@@ -128,11 +135,14 @@ function useAISearch() {
         return skills?.some((s) =>
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
+
       },
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
         return skills?.some((s) =>
+          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
+          if (!matchSkill(t.skills)) return;        return skills?.some((s) =>
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
         TALENT_PROFILES.forEach((t) => {
@@ -157,6 +167,7 @@ function useAISearch() {
 
 
       };
+          if (!matchSkill(t.skills)) return      };
       if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
         TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
           if (filters && filters.location && !t && t.location?.toLowerCase().includes(filters && filters.location.toLowerCase())) return;
@@ -194,6 +205,10 @@ function useAISearch() {
   }
 
       const response = await fetch (
+          items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })        })
+      }
+      setResults(items)
+    } catch (err) {      const response = await fetch (
         "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
         {
           method: "POST",
@@ -227,6 +242,7 @@ export function useAISearch() {;
           headers: { "Content-Type": "application/json" },;
           body: JSON.stringify({ query })}
       ),;
+      const data = await response.json();
       const data = await response.json();
       const data = await response.json();
       const filters: SearchFilters = data.filters || {},;
@@ -375,3 +391,5 @@ export function useAISearch() {;
 
 
   return { results, loading, search }
+          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });  return { results, loading, search }
+}

@@ -13,6 +13,8 @@ interface FeatureCardProps {;
   className?: string;
 }
 
+  className?: string;
+}
 export default function FeatureCard({
   icon
   title
@@ -24,6 +26,7 @@ export default function FeatureCard({
 
   className?: string;
 
+  className?: string;  className?: string;
 }
 export default /**
  * FeatureCard - Function description

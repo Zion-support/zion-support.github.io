@@ -94,6 +94,7 @@ export function TemplateSaveForm({
           templateData: currentValues
           isDefault: values.isDefault})
 import { useState } from "react",
+export function TemplateSaveForm(): any ({;import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
@@ -224,6 +225,7 @@ export function TemplateSaveForm({;
   }
   
   };
+  currentValues?: ContractFormValues  };
   },
   
   return (

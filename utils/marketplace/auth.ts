@@ -2,6 +2,21 @@
 
 
 
+      name: 'Test User'
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer(
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -13,12 +28,51 @@
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
 
 
+
+
+
+
+
+
+// Marketplace authentication utilities
+export interface MarketplaceUser {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
+  email: string;
+  name: string;
+  slug: string;
+  isVerified: boolean;
+  profile?: {
+    bio?: string;
+    skills?: string[];
+    experience?: string;
+    portfolio?: string[];
+    hourlyRate?: number;
+    availability?: 'available' | 'busy' | 'unavailable';
+  };
+  business?: {
+    name: string;
+    industry: string;
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+    website?: string;
+  };
+  createdAt: string;
+  lastActiveAt: string;
+}
+
+export interface AuthContext {
+  user: MarketplaceUser | null;
+  isAuthenticated: boolean;
+  permissions: string[];
+  sessionId?: string;
+}
   err && err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {
 
@@ -34,6 +88,19 @@
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     return null;
   }
@@ -87,3 +154,12 @@ if ( {) {
   }
   return user;
 }
+    throw new Error ('Authentication required')
+  }
+  return user;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  err.statusCode = 403;
+  throw err;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

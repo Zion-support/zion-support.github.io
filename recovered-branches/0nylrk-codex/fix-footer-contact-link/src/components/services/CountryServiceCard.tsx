@@ -3,6 +3,8 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+
+
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -74,6 +76,10 @@ function CountryServiceCard() {
 
 
       "Germany": "🇩🇪", ;
+      "United Kingdom": "🇬🇧";
+      "Canada": "🇨🇦";
+      "Australia": "🇦🇺";
+      "Germany": "🇩🇪",      "Germany": "🇩🇪", ;
 
       "Germany": "🇩🇪", ;
       "Germany": "🇩🇪",
@@ -121,6 +127,7 @@ function CountryServiceCard() {
 
     
     if (tier1.includes(countryName)) {
+  const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
       return "6 hours"
@@ -146,6 +153,10 @@ function CountryServiceCard() {
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
 
 
+    }  return (
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
           }`}
         >
           Select Service
@@ -244,7 +255,7 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
   const getResponseTime = (countryName:string):string => {;
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],;
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     ;
     if (tier1.includes(countryName)) {;
       return "4 hours",;
@@ -450,3 +461,15 @@ isPopular?: boolean
 }
 ;
 ;
+  return (
+    <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular 
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+        : "bg-zion-blue-dark border-zion-blue-light"        : "bg-zion-blue-dark border-zion-blue-light"
+    }`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex items-center justify-between">;
+          <div className="flex items-center space-x-2">;          </div>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;

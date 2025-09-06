@@ -2,6 +2,7 @@
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
+
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,6 +43,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
     {
+import { Button } from "@/components/ui/button",    {
 
       id: "talent"
       name: "Talent"
@@ -125,6 +127,9 @@ function UserTypeSelection() {
           const is_selected = selected_type === type.id,
 
 
+      icon: Star          const Icon = type.icon;
+          const is_selected = selected_type === type.id,
+
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
@@ -136,6 +141,13 @@ function UserTypeSelection() {
               key={type.id}
 
 
+
+          return (
+          return (
+            <Button;
+              key={type.id}          return (
+            <Button;
+              key={type.id}
 
           return (
             <Button;
@@ -247,6 +259,10 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
         {userTypes && userTypes.map((type) => {;
           const Icon = type && type.icon;
           const isSelected = selectedType === type && type.id;
+      <div className="grid gap-4 md: grid-cols-3">;
+        {userTypes && userTypes.map((type) => {;
+          const Icon = type && type.icon;
+          const isSelected = selectedType === type && type.id;
 
           return (
             <Button
@@ -288,6 +304,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
             <Button;
               key={type.id}
               }`}
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;              }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
@@ -296,6 +313,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 
 
       </div>;
+}      </div>;
     </div>;
   );
 

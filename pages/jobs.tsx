@@ -53,6 +53,47 @@ const Jobs: NextPage = () => {
         hiring_organization={job.hiring_organization}
         jobLocationType={job.jobLocationType}
         title={job.title}
+  return (
+        datePosted={job.datePosted  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        description={job.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        employmentType={job.employmentType  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        hiringOrganization={job.hiringOrganization  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        jobLocationType={job.jobLocationType  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        title={job.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        validThrough={job.validThrough  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        baseSalary={job.baseSalary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         valid_through={job.valid_through}
         base_salary={job.base_salary}
       />;
@@ -120,6 +161,13 @@ const Jobs: NextPage = () => {
         datePosted={job.datePosted}
 
 
+
+    </div>;
+  );
+},;
+const Jobs: NextPage;
+      <JobPostingJsonLd
+        datePosted={job.datePosted}
         description={job.description}
         employmentType={job.employmentType}
         hiringOrganization={job.hiringOrganization}
@@ -148,3 +196,17 @@ export default Jobs;
 
 
 
+        validThrough={job.validThrough}
+        baseSalary={job.baseSalary}
+      />
+      <main>
+        <h1>Jobs</h1>
+        <p>{job.title}</p>
+        <p>{job.description}</p>
+      </main>
+    </div>
+);
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export default Jobs;

@@ -94,6 +94,7 @@ export function TalentCard(): any ({;
 
 
   isAuthenticated;
+  onToggleSave;  isAuthenticated;
 }: TalentCardProps) {;
   const navigate = useNavigate();
 
@@ -252,6 +253,12 @@ export function TalentCard({;
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
 
 
+  const skills = talent && talent.skills?.slice(0, 5) || [];
+
+  return (              <Button
+                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
@@ -281,6 +288,8 @@ export function TalentCard({;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
 
+                </div>;
+              )}
 
             </div>;
           </div>;
@@ -288,6 +297,12 @@ export function TalentCard({;
                 </div>;
               )}
                 <span
+
+        {/* Skills */}
+        {skills && skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills && skills.map((skill, index) => (;
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
@@ -312,6 +327,14 @@ export function TalentCard({;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
+              ))}              )}
+            </div>;
+          </div>;
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
 
           </div>;
 
@@ -340,6 +363,10 @@ export function TalentCard({;
 
 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+              </Button>;                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
               </Button>;
             )}
@@ -561,6 +588,7 @@ if ( {) {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
             </Button>;
+              variant="ghost"            </Button>;
           </div>;
         </div>;
       </div>;
@@ -627,3 +655,5 @@ isAuthenticated
 }
 
 
+    </Card>);
+}

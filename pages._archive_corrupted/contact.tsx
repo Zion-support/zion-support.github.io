@@ -151,6 +151,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/main
   ]
   return (
+    "Consulting & Strategy"  return (
     <>
       <SEO title=\"Contact Us - Zion Tech Group\"
         description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
@@ -244,7 +245,7 @@ const "ContactPage": React.FC = () => {;
     \"Digital Transformation\",;
     \"Consulting & Strategy\";
   const services = ["AI & Machine Learning Solutions";
-  const services = ["AI & Machine Learning Solutions",;
+  const services = ["AI & Machine Learning Solutions";
     "IT Infrastructure & Support",;
     "Micro SaaS Development",;
     "Cybersecurity Services",;
@@ -331,6 +332,7 @@ const "Contact": NextPage = () => {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   const contactInfo = [{
+const "Contact": NextPage = () => {  const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -509,6 +511,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
       {/* Hero Section */}
+                    </label>      {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center\">;
@@ -581,6 +584,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     </label>;
 ursor/automate-test-improve-and-merge-code-646c
                     <input
+                    </label>                    <input
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
@@ -603,6 +607,7 @@ ursor/automate-test-improve-and-merge-code-646c
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
                   <input
+                  </label>                  <input
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
@@ -623,6 +628,7 @@ ursor/automate-test-improve-and-merge-code-646c
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
                   <input
+                  </label>                  <input
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
@@ -642,6 +648,7 @@ ursor/automate-test-improve-and-merge-code-646c
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
                   <input
+                  </label>                  <input
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -702,6 +709,7 @@ ursor/automate-test-improve-and-merge-code-646c
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
                   <textarea
+                  </label>                  <textarea
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -850,6 +858,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 What is your typical project timeline?
+      {/* FAQ Section */}                What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -894,6 +903,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 Do you provide ongoing support?
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -938,6 +951,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 What technologies do you specialize in?
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -982,6 +999,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 How do you ensure project quality?
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -994,6 +1015,7 @@ ursor/automate-test-improve-and-merge-code-646c
       </section>
     </MainLayout>
   );
+  )
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -1373,6 +1395,14 @@ ursor/automate-test-improve-and-merge-code-646c
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+                      <input type=\"email\"                        id=\"email\"
+                        name=\"email\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                       />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                     <div>
@@ -1458,6 +1488,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> origin/main
                       Service Interest
+                      <input type=\"text\"                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"                      Service Interest
                     </label>
                     <select
                       id=\"service\"
@@ -1532,6 +1566,11 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                       Message *
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
+                    </label>                      Message *
                     </label>
                     </select>;
                   </div>;
@@ -1561,6 +1600,7 @@ ursor/automate-test-improve-and-merge-code-646c
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/automate-test-improve-and-merge-code-646c
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -1604,6 +1644,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
         {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -1703,6 +1744,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
                 {isSubmitted ? (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
@@ -1747,6 +1792,7 @@ ursor/automate-test-improve-and-merge-code-646c
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
                         <input
+                        </label>                        <input
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1774,6 +1820,7 @@ ursor/automate-test-improve-and-merge-code-646c
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
                         <input
+                        </label>                        <input
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1812,6 +1859,13 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
                           value={formData && formData.email}
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
@@ -1869,6 +1923,7 @@ ursor/automate-test-improve-and-merge-code-646c
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
                         <input
+                        </label>                        <input
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
@@ -1930,6 +1985,7 @@ ursor/automate-test-improve-and-merge-code-646c
                       </label>;
 ursor/automate-test-improve-and-merge-code-646c
                       <textarea
+                      </label>                      <textarea
                         id=\"message\"
                         name=\"message\"
                         required
@@ -2034,6 +2090,7 @@ ursor/automate-test-improve-and-merge-code-646c
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+                <div className="space-y-6">                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
                       </div>
@@ -2177,6 +2234,7 @@ export default ContactPage
 export default ContactPage
 ursor/automate-test-improve-and-merge-code-646c
           </div>
+export default ContactPage
         </section>
       </div>
     </>
@@ -2198,6 +2256,7 @@ export default ContactPage
       </div>
     </>
 ursor/automate-test-improve-and-merge-code-646c
+              </div>;
               </div>;
             </div>;
           </section>;

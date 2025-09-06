@@ -46,9 +46,12 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     setTopCountries(top)
 
 
-  }, []),
+  }, [])
   
 
+
+  }, []),
+  
 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));
@@ -57,6 +60,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   }, []),
   
   // Handle country selection
+    // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null
     onCountryChange(country)
@@ -88,6 +92,9 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         onValueChange={handleCountryChange} 
 
 
+      <Select 
+        onValueChange={handleCountryChange} 
+
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -108,6 +115,7 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 
 
 
+              <SelectItem key={item.country} value={item.country} className="text-white">import { useState, useEffect } from "react",;
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
   selectedCountry: CountryPricing | null;
@@ -143,7 +151,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),;
   // Set top/popular countries;
   useEffect(() => {;
-    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],;
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
     const top = onsiteServicePricing.filter(item =>;
       popular.includes(item.country);
     ).sort((a, b) => a.country.localeCompare(b.country)),;
@@ -276,6 +284,8 @@ function CountrySelector() {
     </div>);
 }
   ),;}
+  );
+}
  interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
 selectedCountry: CountryPricing | null 

@@ -3,6 +3,8 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Search, Filter} from "lucide-react";
+
+
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -287,6 +289,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       ;
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
+import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
         <SelectContent>;
@@ -320,6 +323,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 
 
         <SelectTrigger className="w-[180px]">;
+      <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;        <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
         <SelectContent>;
@@ -353,3 +357,10 @@ export default FraudFilters;
 };
 
 export default FraudFilters;
+      <Button variant="outline" on_click={reset_filters} className="md: w-auto">;
+        <Filter className="h - 4 w - 4 mr-2" /> Reset Filters;
+      </Button>;
+    </div>);
+}
+;
+ursor/fix-website-loading-errors-and-merge-6662

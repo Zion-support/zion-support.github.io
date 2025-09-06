@@ -25,6 +25,17 @@ export interface SupabaseUser {
   email?: string | null
 }
 
+
+
+  id: string,
+  email?: string | null;
+}
+/**;
+* Maps Supabase profile data to our app's user model;
+*/;
+export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
+
+  return {
 /**
  * Maps Supabase profile data to our app's user model
  */
@@ -74,8 +85,11 @@ import type { UserProfile } from "@/types/auth",;
     updatedAt: new Date(profile.updated_at).toISOString();
     bio: profile.bio || undefined;
     headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined,
+    avatar_url: profile.avatar_url || undefined
 
+}
+
+  return {
 
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
@@ -87,3 +101,4 @@ import type { UserProfile } from "@/types/auth",;
 }
 
 
+;

@@ -2,6 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
 
+
+
+
 import {useNavigate} from 'react-router-dom';
 import {toast} from "sonner";
 import {Input} from "@/components/ui/input";
@@ -62,6 +65,10 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 
 
 
+import { Button } from "@/components/ui/button",  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("");
 interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
@@ -123,6 +130,7 @@ function JobPostingForm() {
 
 
   useEffect(() => {
+    submitJob  useEffect(() => {
     if (jobId) {
       setIsFormLoading(true),
       getJobById(jobId)
@@ -205,7 +213,7 @@ interface JobPostingFormProps {;
 }
 ;
 export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs(),;
   const [isFormLoading, setIsFormLoading] = useState(false),;
   const [editorContent, setEditorContent] = useState(""),;
@@ -243,6 +251,10 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
                 setIsRemote(value as boolean);
               } else if (key === 'description') {;
                 setEditorContent(value as string),;
+                  // Skip fields that don't exist in our form      setIsFormLoading(true);              } else if (key === 'is_remote') {;
+                setIsRemote(value as boolean);
+              } else if (key === 'description') {;
+                setEditorContent(value as string),;                setEditorContent(value as string),;
                 setValue('description', value as string);
               } else {;
                 try {;
@@ -343,7 +355,8 @@ if ( {) {
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
 
-  }, [setValue]),
+  }, [setValue])
+                } catch (e) {}, [setValue]),
 
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
@@ -381,6 +394,14 @@ if ( {) {
       if (jobId) {;
 
         await updateJob(jobId, jobData);
+
+    try {;
+      const jobData = await submitJob(values),;
+
+      if (jobId) {;
+
+        await updateJob(jobId, jobData);
+        toast && toast.success("Job updated successfully!");        await updateJob(jobId, jobData);
         toast && toast.success("Job updated successfully!");
       } else {;
         await createJob(jobData);
@@ -389,6 +410,9 @@ if ( {) {
         setEditorContent("");
       }
       } else {;
+      if (onSuccess) {;
+        onSuccess();
+      }
         await createJob(jobData),;
         toast.success("Job posted successfully!"),;
         form.reset(),;
@@ -567,6 +591,9 @@ if ( {) {
               type="checkbox";
               id="isRemote";
               checked={isRemote}
+      }              type="checkbox"
+              id="isRemote"
+              checked={isRemote}              className="mr-2"
 
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
@@ -759,3 +786,10 @@ if (isLoading || isFormLoading) {}return (<Form {
 ;
 ;
 }
+          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
+            Remote;
+          </Label>;
+        </div>;
+}}
+}
+

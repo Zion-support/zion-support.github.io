@@ -64,6 +64,9 @@ const "services": Service[] = [// Existing-style Micro SaaS (kept) + new
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 class ErrorBoundary extends React.Component {
+  { "title": 'Cloud Platforms & SRE', "href": '/cloud-platforms', "price": 'Project: $8k–$60k', "bullets": ['Kubernetes', 'Serverless', 'IaC'], "category": 'IT Services' },
+  { "title": 'Cybersecurity & Zero Trust', "href": '/cybersecurity', "price": 'Project: $6k–$40k', "bullets": ['ZTA', 'SOC2/GDPR', 'IR plan'], "category": 'IT Services' },
+  { "title": 'Data Platform & MLOps', "href": '/data-analytics', "price": 'Project: $12k–$80k', "bullets": ['Data mesh', 'Feature store', 'ML pipelines'], "category": 'IT Services' },class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -89,6 +92,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 // Minimal, readable Services page. Preserves existing offerings concept and adds more without removing.;
+type Service = {
 type Service = {
 type Service = {
   "title": string;
@@ -193,6 +197,8 @@ import React from 'react' import Head from 'next/head' import Link from 'next/li
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          ))}}
+
 ;
           <div className="mt-12 border-t pt-6">;
             <h2 className="text-xl font-semibold mb-2">Contact</h2>;

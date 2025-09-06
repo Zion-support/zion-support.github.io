@@ -107,12 +107,14 @@ export interface GeneratedAsset {;
 
 
 }
+  // Bonus;}
 ;
 export interface DeployInput {;
   instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
+
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -256,3 +258,4 @@ export interface AccessControlConfig {;
 
   adminKeyConfigured: boolean;
 }
+  adminKeyConfigured: boolean;

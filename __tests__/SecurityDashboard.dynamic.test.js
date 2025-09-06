@@ -58,8 +58,13 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { render, screen, fireEvent } from '@testing-library/react';
 import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic';
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('SecurityDashboarddynamic', () => {
   test('renders without crashing', () => {
     render(<SecurityDashboarddynamic />);
@@ -96,3 +101,21 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> main
+
+  test('displays correct content', () => {
+    render(<SecurityDashboarddynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<SecurityDashboarddynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<SecurityDashboarddynamic />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

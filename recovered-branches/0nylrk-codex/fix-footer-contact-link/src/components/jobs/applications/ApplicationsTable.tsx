@@ -59,6 +59,7 @@ interface ApplicationsTableProps {;
   onViewScore: (application: JobApplication) => void;
 }
 export function ApplicationsTable({
+import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
   applications
   processingId
   onViewApplication
@@ -194,6 +195,13 @@ export function ApplicationsTable({;
     });
   };
 
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application)
+    setHireModalOpen(true)
   return (
     <>;
       <div className="rounded-md border">;
@@ -242,6 +250,7 @@ export function ApplicationsTable({;
                   {application && application.match_score !== undefined && application && application.match_score !== null ? (;
                     <ClickableBadge
                       variant="outline"
+          <TableBody>;                      variant="outline"
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >;
@@ -301,12 +310,24 @@ export function ApplicationsTable({;
 
 
       {/* Hire Confirmation Modal */}
+          </TableBody>;
+        </Table>;
+      </div>;
+
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal
+        isOpen={hireModalOpen}
+        onClose={() => setHireModalOpen(false)}
+        application={selectedApplication |undefined}
+        onConfirm={handleHireConfirmed}
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
               </TableRow>))}
+      />;
+    </>;
           </TableBody>;
         </Table>;
       </div>;
@@ -371,4 +392,5 @@ export function ApplicationsTable({;
       />
     </>
   )
+}
 }

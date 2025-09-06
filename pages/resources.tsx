@@ -20,6 +20,11 @@ export default function ResourcesPage() {
 ursor/automate-test-improve-and-merge-code-646c
 import SEO from '../components/SEO';
 
+
+
+import React from 'react',
+import SEO from '../components/SEO',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {
@@ -60,7 +65,6 @@ ursor/automate-test-improve-and-merge-code-646c
               <div className="mt-3 text-cyan-300">Open →</div>
             </Link>
 
-import React from 'react',
 import SEO from '../components / SEO',
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
 import Link from 'next / link',
@@ -743,6 +747,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
       {/* CTA */}
 ursor/automate-test-improve-and-merge-code-646c
+      {/* CTA */}
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -795,6 +800,8 @@ ursor/automate-test-improve-and-merge-code-646c
               Can't find what you're looking for? Our team is here to help with custom research, 
               Can't find what you're looking for? Our team is here to help with custom research,
 ursor/automate-test-improve-and-merge-code-646c
+    <UltraFuturisticBackground intensity;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -863,3 +870,5 @@ ursor/automate-test-improve-and-merge-code-646c
               </Link>
 
 ursor/automate-test-improve-and-merge-code-646c
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

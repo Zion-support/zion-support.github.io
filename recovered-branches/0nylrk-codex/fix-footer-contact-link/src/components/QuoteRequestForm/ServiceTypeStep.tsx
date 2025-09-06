@@ -88,6 +88,16 @@ export function ServiceTypeStep({
       serviceType: item.category.toLowerCase() as ServiceType
     });
   };
+import { useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",  const handleItemSelect = (item: ListingItem) => {
+    updateFormData({
+      specificItem: item,
+      serviceCategory: item.category,
+      serviceType: item.category.toLowerCase() as ServiceType
+    })
+};
 
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
     // Filter by category only when a service type has been selected
@@ -146,6 +156,7 @@ export function ServiceTypeStep({
 
           <Card
 
+          <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -228,6 +239,16 @@ export function ServiceTypeStep({
           >;
             <h4 className="font - medium text - white">Services</h4>;
             <p className="text - sm text - zion - slate - light">;
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+            on_click={() => handleTypeSelect ("service")}
+          >;
+            <h4 className="font - medium text-white">Services</h4>;
+            <p className="text - sm text - zion - slate-light">;
               AI solutions, consulting, development;
             </p>;
           </Card>;
@@ -241,6 +262,8 @@ export function ServiceTypeStep({
           >;
             <h4 className="font - medium text - white">Talent</h4>;
             <p className="text - sm text - zion - slate - light">;
+            <h4 className="font - medium text-white">Talent</h4>;
+            <p className="text - sm text - zion - slate-light">;
               AI specialists, developers, consultants;
             </p>;
           </Card>;
@@ -254,6 +277,8 @@ export function ServiceTypeStep({
           >;
             <h4 className="font - medium text - white">Equipment</h4>;
             <p className="text - sm text - zion - slate - light">;
+            <h4 className="font - medium text-white">Equipment</h4>;
+            <p className="text - sm text - zion - slate-light">;
               Servers, workstations, specialized hardware;
             </p>;
           </Card>;
@@ -266,6 +291,12 @@ export function ServiceTypeStep({
           </h3>;
           <div className="relative">;
             <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate - light h - 4 w - 4" />;
+        <div className="space-y-4">;
+          <h3 className="text - xl font - semibold text-white">;
+            Select a specific {form_data.service_type}
+          </h3>;
+          <div className="relative">;
+            <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate - light h - 4 w-4" />;
             <Input;
               placeholder={`Search ${form_data.service_type}...`}
               value={search_query}
@@ -274,6 +305,10 @@ export function ServiceTypeStep({
             />;
           </div>;
           <div className="grid grid - cols - 1 gap - 4 mt - 4">;
+              className="pl - 10 bg - zion - blue border border - zion - blue - light focus:border - zion-purple";
+            />;
+          </div>;
+          <div className="grid grid - cols - 1 gap - 4 mt-4">;
             {filtered_listings.length > 0 ? (
               filtered_listings.map ((item) => (
                 <div;
@@ -311,3 +346,4 @@ export function ServiceTypeStep({
 }
 
 
+                    image={item.image}}

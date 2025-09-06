@@ -16,6 +16,8 @@ import type { SidebarContext as SidebarContextType, SidebarState } from "../side
 
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
+import * as React from "react"
+import type { CSSProperties } from "react"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 const SidebarContext = React.createContext<SidebarContextType | null>(null)
@@ -31,6 +33,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
+import * as React from './react';
+import type { CSSProperties } from './react';
+import { TooltipProvider } from '@/components / ui / tooltip';
+import { useIsMobile } from '@/hooks / use - mobile';
+import { cn } from '@/lib / utils';import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -231,6 +238,26 @@ if ( {) {
 
 
 ;
+const SidebarContext = React.create_context < SidebarContextType | null>(null);
+export function use_sidebar (): SidebarContextType {
+  const context = React.useContext (SidebarContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ("use_sidebar must be used within a SidebarProvider.");
+  }
+  return context as SidebarContextType;
+
+}
+
+  return context as SidebarContextType
+}
+
+  SidebarProviderProps
+>(
+  (
+    {;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
       },;
@@ -261,6 +288,9 @@ if ( {) {
 
 
 
+
+        }
+      }
 
         }
       }
@@ -311,6 +341,8 @@ if (
       children;
       ...props;
     };
+      ...props
+};
     ref;
   ) => {;
     const isMobile = useIsMobile();
@@ -546,6 +578,9 @@ SidebarProviderProps > ( ({
             className={cn(
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
+
+      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
+    );
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
               className
             )}

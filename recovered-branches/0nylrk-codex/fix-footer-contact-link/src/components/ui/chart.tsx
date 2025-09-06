@@ -14,6 +14,7 @@ export type ChartConfig = Record<;
 
 
 import { useReactId } from "@/hooks/useReactId"
+  string;import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
@@ -62,7 +63,15 @@ export type ChartConfig = Record<;
 
 
 
+    | { color?: never, theme: Record < keyof typeof THEMES, string> }
   );
+>;
+
+type ChartContextProps = {
+  config: ChartConfig;
+}
+
+const ChartContainer = React.forwardRef<  );
 >;
 
 type ChartContextProps = {
@@ -144,6 +153,7 @@ const ChartContainer = React.forwardRef<
 
 
   return (
+    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
         data-chart={chartId}
@@ -287,6 +297,7 @@ ${colorConfig;
 
 
         __html: Object.entries (THEMES);
+        className={cn(        __html: Object.entries (THEMES);
           .map (
             ([theme, prefix]) => `;
 ${prefix} [data - chart=${id}] {
@@ -406,6 +417,8 @@ const ChartTooltipContent = React.forwardRef<
 
 
     }
+      labelKey},
+
     ref
   ) => {
     const { config } = useChart()
@@ -444,6 +457,7 @@ const ChartTooltipContent = React.forwardRef<
 
       if (labelFormatter) {;
         return (
+      if (labelFormatter) {        return (
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
           </div>;
@@ -1008,6 +1022,14 @@ const ChartLegendContent = React.forward_ref<;
 
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+                        <span className="text-muted-foreground">;
+                          {itemConfig?.label || item && item.name}
+                        </span>;
+                      </div>;
+                      {item && item.value && (;
+                        <span className="font-mono font-medium tabular-nums text-foreground">;
+                          {item && item.value.toLocaleString()}
+                        </span>;
     ref
   ) => {
     const { config } = useChart()
@@ -1216,6 +1238,7 @@ function getPayloadConfigFromPayload(
 
 
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
     ref) => {
     const { config } = use_chart ();
     // Check condition
@@ -1247,6 +1270,7 @@ export {;
                 <item_config.icon />) : (
                 <div;
                   className="h - 2 w - 2 shrink - 0 rounded-[2px]";
+                  className="h - 2 w - 2 shrink-0 rounded-[2px]";
                   style={{
                     background_color: item.color}}
                 />)}
@@ -1333,6 +1357,7 @@ function getPayloadConfigFromPayload(): any (;
 
 
 ;
+;
 
   return configLabelKey in config;
     ? config[configLabelKey];
@@ -1354,6 +1379,11 @@ export {
   ChartLegend;
   ChartLegendContent;
   ChartLegend;
+  ChartStyle}  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
+}
+export {  ChartLegend;
   ChartLegendContent;
 
   ChartStyle}

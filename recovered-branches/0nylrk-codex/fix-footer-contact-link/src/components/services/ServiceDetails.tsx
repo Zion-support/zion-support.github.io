@@ -1,4 +1,6 @@
 
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -22,6 +24,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
 interface ServiceDetailsProps {
   country: string;
 }
+
+
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -43,6 +47,7 @@ function ServiceDetails() {
 
 
     const dataCenters: Record<string string[]> = {
+    const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -57,7 +62,10 @@ function ServiceDetails() {
     return dataCenters[country] |dataCenters["default"]
   }
 
-    },
+    }
+    }
+    return regions[country] |regions["default"]
+  }    },
     
     return dataCenters[country] || dataCenters["default"]
   },
@@ -156,6 +164,24 @@ function ServiceDetails() {
       "Japan": "JST";
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
+  // Get region-specific image
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region
+    const regions: Record<string, string> = {
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa";
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk";
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany";
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan";
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia";
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+      "United States": "EST/CST/PST depending on location";
+      "United Kingdom": "GMT/BST";
+      "Germany": "CET/CEST";      "Japan": "JST";
+      "Australia": "AEST / ACDT / AWST depending on location";
+      "Singapore": "SGT";
+
     }
     return regions[country] |regions["default"]
   }
@@ -290,7 +316,7 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
            `For remote locations, additional travel fees may apply.`,;
   },;
   ;
-  const datacenters = getDatacenters(country),;
+  const datacenters = getDatacenters(country);
   ;
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -453,6 +479,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
 
 
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
@@ -462,6 +491,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
                   {dc}
                 </div>;
+                >;                </div>;
               ))}
 
             </div>;

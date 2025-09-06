@@ -4,6 +4,16 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL') || '';
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
@@ -43,7 +53,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
 ;
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 ;
@@ -87,6 +97,7 @@ interface QuoteDetails {
 interface QuoteDetails {
   description: string;
 }
+
 interface QuoteDetails {
   description: string;
   email: string;
@@ -94,6 +105,7 @@ interface QuoteDetails {
   timeframe: string;
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+  timeframe: string;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;
@@ -108,6 +120,7 @@ interface Service {;
 }
 ;
 interface QuoteDetails {;
+interface QuoteDetails {,
   description: string,;
   email: string,;
   budget: string,;
@@ -294,6 +307,12 @@ serve(async (req) => {
 
               }
             ],;
+        const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${openAIApiKey}`;
+            'Content-Type': 'application/json'};
+          body: JSON && JSON.stringify({            ],;
             temperature: 0.5;
           });
         }),;
@@ -393,6 +412,10 @@ if ( {) {
 
 
           status: 'pending'
+          aiAnalysis = aiResult.choices[0].message.content;            ];
+            temperature: 0 && 0.5
+          })
+        });          status: 'pending'
         }
       ])
       .select();
@@ -409,6 +432,7 @@ if ( {) {
 
 
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 });
 
@@ -416,6 +440,8 @@ if ( {) {
 });
 
           description: quote_details.description;
+}),
+  description: quote_details.description;
           email: quote_details.email;
           budget: quote_details.budget;
           timeframe: quote_details.timeframe;
@@ -534,3 +560,4 @@ if (error) throw error;
 });
 
 
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});

@@ -33,6 +33,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-646c
 
 interface EnhancedLayoutProps {
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+}interface EnhancedLayoutProps {
   \"children\": ReactNode;
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
@@ -71,6 +74,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 }
 
+}
+} import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de

@@ -8,6 +8,7 @@ import {Button} from "@/components/ui/button";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {FraudFlag, FraudStats} from "@/types/fraud";
+
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -272,6 +273,11 @@ export default function FraudDetection() {;
     actioned_count: 0}),;
 
       toast({
+    setIsLoading(true);    setIsLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from("fraud_flags")
+        .select("*")      toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
       // Refresh the data
@@ -282,6 +288,7 @@ export default function FraudDetection() {;
 
 
       console.error("Error updating fraud flag:", error),
+      console.error("Error updating fraud flag:", error),      console.error("Error updating fraud flag:", error),
       toast({
         title: "Error"
         description: "Failed to update flag"
@@ -336,7 +343,7 @@ export default function FraudDetection() {;
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {;
     try {;
-      const status = action === 'ignore' ? 'ignored' : 'actioned',;
+      const status = action === 'ignore' ? 'ignored' : 'actioned';
       const actionTaken = action === 'ignore' ? 'none' : action,;
       const { error } = await supabase;
         .from("fraud_flags");
@@ -421,6 +428,8 @@ export default function FraudDetection() {;
       toast({;
         title: "Flag updated",;
         description: `Action '${action}' was applied successfully.`}),;
+          </TabsList>        title: "Flag updated",,
+  description: `Action '${action}' was applied successfully.`}),;
 
       // Refresh the data;
       fetchFraudFlags();
@@ -430,6 +439,8 @@ export default function FraudDetection() {;
       toast({;
         title: "Error",;
         description: "Failed to update flag",;
+        title: "Error",,
+  description: "Failed to update flag",;
         variant: "destructive"});
     }
   };
@@ -440,6 +451,8 @@ export default function FraudDetection() {;
     setSeverityFilter(null);
     setContentTypeFilter(null);
   };
+    setContentTypeFilter(null)
+};
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
 
@@ -860,6 +873,7 @@ if (throw error) {
             {/* Flags Table */}
             <Card>;
               <CardContent className="p - 0">;
+              <CardContent className="p-0">;
                 <FraudFlagsTable;
                   flags={filtered_flags}
                   is_loading={is_loading}
@@ -975,3 +989,17 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }
 }
 ;
+
+          <TabsContent value="pending">;
+            <FraudTabContent tab_value="pending" />;
+          </TabsContent>;
+          <TabsContent value="dangerous">;
+            <FraudTabContent tab_value="dangerous" />;
+          </TabsContent>;
+          <TabsContent value="actioned">;
+            <FraudTabContent tab_value="actioned" />;
+          </TabsContent>;
+        </Tabs>;
+      </div>;
+    </AppLayout>);
+}

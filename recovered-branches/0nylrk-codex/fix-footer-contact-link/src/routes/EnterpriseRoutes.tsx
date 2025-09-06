@@ -12,6 +12,7 @@ const EnterpriseRoutes = () => {
 const EnterpriseRoutes = () => {;
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
+const EnterpriseRoutes = () => {import {Fragment} from "react";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import EnterprisePlans from "../pages/EnterprisePlans",
@@ -85,6 +86,14 @@ const EnterpriseRoutes = () => {;
 
 
 
+const EnterpriseRoutes = () => {
+const EnterpriseRoutes = () => {;
+      <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+      <Route path="/hire-ai" element={<ZionHireAI />} />
+    </Routes>
+  )
+};
+
 };
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
@@ -140,3 +149,4 @@ export default EnterpriseRoutes;
 export default EnterpriseRoutes;
 
 
+;

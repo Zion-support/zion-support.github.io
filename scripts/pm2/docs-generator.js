@@ -386,6 +386,13 @@ ${packageJson.description || 'A modern web application built with Next.js'};
 ;
 }}; async generateReadme() {try {; this.log('📝 Generating README.md...'); const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
 ${packageJson.description |'A modern web application built with Next.js'}
+}};
+; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
+;
+${packageJson.description || 'A modern web application built with Next.js'};
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ## 🚀 Getting Started;
 ### Prerequisites;
 - Node.js ${process.version}
@@ -1484,7 +1491,8 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
-Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,
+### Build;
 \`\`\`bash;
 npm run build;
 npm start;
@@ -1733,7 +1741,7 @@ Generated on ${new Date().toISOString()},;
       ,;
 ,;
       // Scan for API routes,;
-      const pagesDir = path.join(this.projectRoot, 'pages/api'),;
+      const pagesDir = path.join(this.projectRoot, 'pages/api');
       if (fs.existsSync(pagesDir)) {,;
         const apiFiles = this.getApiFiles(pagesDir),;
 ,;
@@ -2466,7 +2474,8 @@ ${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: 
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies |{}).map(dep = > `- ${dep}`).join('\n')}
 ### Development Dependencies;
-${Object.keys(packageJson.devDependencies |{}).map(dep = > `- ${dep}`).join('\n')}
+${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};
+;
 ## 🔧 Configuration;
 This project uses Next.js with the following configuration:  , - TypeScript support
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')};
@@ -2599,6 +2608,8 @@ This project uses Next.js with the following configuration:  , - TypeScript supp
 ## 📊 Monitoring;
 The project includes automated monitoring with PM2:  ,- Code quality monitoring;
 The project includes automated monitoring with PM2: ;
+The project includes automated monitoring with PM2:  ,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 - Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
@@ -2615,21 +2626,34 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support;
 For support, email support@example.com or create an issue in the repository.;
 ---;
-Generated on ${new Date().toISOString()}
-`; fs.writeFileSync('README.md', readmeContent); return {success: true
-    message: 'README.md generated successfully'}} catch (error) {return {; success: false
-    error: error.message}}}; async generateApiDocs() {try {; this.log('🔌 Generating API documentation...'); const apiDocs = {; title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', baseUrl: 'http: //localhost: 3000', endpoints: []
-    generatedAt: new Date().toISOString()}; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {const apiFiles = this.getApiFiles(pagesDir); apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})}; const docsContent = `# API Documentation;## Overview;
-- **Base URL**: ${apiDocs.baseUrl}
-- **Version**: ${apiDocs.version}
-- **Generated**: ${apiDocs.generatedAt}
+Generated on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('README.md', readmeContent);
+; return {; success: true,
+    message: 'README.md generated successfully'}} catch (error) {; return {; success: false,
+    error: error.message}}};
+; async generateApiDocs() {; try {; this.log('🔌 Generating API documentation...');
+; const apiDocs = {; title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', baseUrl: 'http: //localhost: 3000', endpoints: [],
+    generatedAt: new Date().toISOString()};
+; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {; const apiFiles = this.getApiFiles(pagesDir);
+; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
+; const docsContent = `# API Documentation;
+## Overview;
+- **Base URL**: ${apiDocs.baseUrl};
+- **Version**: ${apiDocs.version};
+- **Generated**: ${apiDocs.generatedAt};
+;
 ## Endpoints;
-${apiDocs.endpoints.map(endpoint = > `;### ${endpoint.method} ${endpoint.path}
-${endpoint.description}
-**Parameters: **
-${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')}
-**Response: **, \`\`\`json
-${JSON.stringify(endpoint.response, null, 2)}
+${apiDocs.endpoints.map(endpoint = > `;
+### ${endpoint.method} ${endpoint.path};
+;
+${endpoint.description};
+;
+**Parameters: **,
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
+;
+**Response: **, \`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
 \`\`\`;
 `).join('\n')}
 ## Error Handling;
@@ -2641,9 +2665,24 @@ All endpoints return appropriate HTTP status codes:  , - \`200\`: Success
 ## Rate Limiting;
 API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
 ---;
-Generated by Docs Generator on ${new Date().toISOString()}
-`; fs.writeFileSync('docs/API.md', docsContent); return {success: true, message: 'API documentation generated successfully', endpoints: apiDocs.endpoints.length}} catch (error) {return {; success: false
-    error: error.message}}}; getApiFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.ts')) {files.push(fullPath)}})}; scanDirectory(dir); return files}; extractApiEndpoint(filePath, content) {const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') |'/'; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST'; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint'; return {; method: method, path: path, description: description, parameters: [], response: {, success: true, data: {}}}}; async generateComponentDocs() {try {; this.log('🧩 Generating component documentation...'); const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = []; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir); componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})}; const docsContent = `# Component Documentation;
+Generated by Docs Generator on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('docs/API.md', docsContent);
+; return {; success: true, message: 'API documentation generated successfully', endpoints: apiDocs.endpoints.length}} catch (error) {; return {; success: false,
+    error: error.message}}};
+; getApiFiles(dir) {; const files = [];
+; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.ts')) {; files.push(fullPath)}})};
+; scanDirectory(dir); return files};
+; extractApiEndpoint(filePath, content) {; const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/';
+; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST';
+; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint';
+; return {; method: method, path: path, description: description, parameters: [], response: {, success: true, data: {}}}};
+; async generateComponentDocs() {; try {; this.log('🧩 Generating component documentation...');
+; const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = [];
+; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir);
+; componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})};
+; const docsContent = `# Component Documentation;
 ## Overview;
 This document describes all React components in the application.;
 ## Components;
@@ -4302,3 +4341,7 @@ ursor/automate-test-improve-and-merge-code-646c
 docsGenerator.run().catch(error = > {process.exit(1)});
   process.exit(1)
 }),
+>>>>>>> origin/main
+>>>>>>> main
+docsGenerator.run().catch(error = > {; process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

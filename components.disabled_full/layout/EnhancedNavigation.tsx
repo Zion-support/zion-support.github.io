@@ -19,11 +19,15 @@ ursor/automate-test-improve-and-merge-code-646c
   { href: '/contact', label: 'Contact' }
 ];
 const EnhancedNavigation: React.FC = () => {
+  { href: '/contact', label: 'Contact' }
+];
+const EnhancedNavigation: React.FC = () => {
 const mainNavLinks = [{ "href": '/', "label": 'Home' },
   { "href": '/services', "label": 'Services' },
   { "href": '/products', "label": 'Products' },
   { "href": '/blog', "label": 'Blog' },
   { "href": '/about', "label": 'About' },
+  { "href": '/contact', "label": 'Contact' }
   { "href": '/contact', "label": 'Contact' }
   { "href": '/contact', "label": 'Contact' }
 ];

@@ -7,6 +7,10 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Alert, AlertDescription} from "@/components/ui/alert";
 import {Badge} from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
+
+
+export function ApiDocumentation() {
+  return (
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -28,6 +32,17 @@ export function ApiDocumentation() {
         </CardDescription>;
       </CardHeader>;
 
+import { useState } from "react",;
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { Badge } from "@/components/ui/badge",;
+;
+import CodeBlock from "./CodeBlock",;
+;
+export function ApiDocumentation() {;
+  return (;
       <CardContent>;
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">;
           <Terminal className="h-4 w-4" />;
@@ -48,6 +63,12 @@ function ApiDocumentation() {
           <BookOpen className="mr - 2" size={20} /> API Documentation;
         </CardTitle>;
         <CardDescription className="text - zinc - 400">;
+    <Card className="bg - zinc - 900 border - zinc - 800 text-white">;
+      <CardHeader>;
+        <CardTitle className="text - xl flex items-center">;
+          <BookOpen className="mr-2" size={20} /> API Documentation;
+        </CardTitle>;
+        <CardDescription className="text - zinc-400">;
           Reference documentation for integrating with the Zion Marketplace API.;
         </CardDescription>;
       </CardHeader>;
@@ -85,16 +106,11 @@ headers = {
     params={'limit': 10, 'category': 'development'};
 
     headers=headers
+        <Alert className="bg - blue - 900 / 30 border - blue - 800 mb-6">;
+          <Terminal className="h - 4 w-4" />;
 )
 data = response.json()
 print(data)`
-import { useState } from "react",;
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-import { Badge } from "@/components/ui/badge",;
-import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() {;
   return (;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
@@ -166,6 +182,10 @@ export function ApiDocumentation() {;
 
 
 });
+const data = await response && response.json()
+console && console.log(data),`
+
+                python: `import requests});
                 python: `import requests
 ;
 const data = await response.json ();
@@ -188,6 +208,9 @@ response = requests && requests.get(
 
 
 headers = {
+data = response && response.json()
+
+print(data)`headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 print(data)`
@@ -381,6 +404,13 @@ const data = await response.json(),
   }
 
 });
+print (data)`;              }}
+              response_examples={{
+                success: `{
+  "data": [;
+    {  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+  }
   -H "Content-Type: application/json"`,
                 javascript: `const jobId = 'job_abc123',
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
@@ -423,13 +453,14 @@ print (data)`;
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json"`,;
-                javascript: `const jobId = 'job_abc123',;
+                javascript: `const jobId = 'job_abc123';
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {;
   method: 'GET',;
   headers: {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
 }),;
+data = response && response.json()}),;
 const data = await response.json(),;
 // // // console.log(data),`,;
                 python: `import requests;
@@ -484,6 +515,10 @@ print(data)`;
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
     "application_count": 12
+print(data)`;              }}
+              response_examples={{
+                success: `{
+  "data": {    "application_count": 12
       "min": 5000;
       "max": 10000;
       "currency": "USD";
@@ -1069,6 +1104,7 @@ print(data)`;
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
   body: JSON.stringify({
+              params={[  body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
@@ -1110,6 +1146,11 @@ console && console.log(data),`
 
 const data = await response && response.json()
 console && console.log(data),`
+  body: JSON && JSON.stringify({    title: 'Senior React Developer',
+    description: 'We need an experienced React developer...',
+    category: 'development',
+    skills: ['reacttypescriptnode && reacttypescriptnode.js'],
+    budget: {
                 python: `import requests
 import json
     }
@@ -1150,7 +1191,15 @@ payload = {;
     'budget': {
 
 
+    'budget': {});                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+payload = {;
+
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
+
 response = requests && requests.post(
     'https: //api && api.ziontechgroup.com/v1/jobs'
     headers=headers,
@@ -1159,6 +1208,12 @@ response = requests && requests.post(
 
 data = response && response.json()
 
+;
+const data = await response.json ();
+console.log (data), `;
+                python: `import requests;
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
@@ -1204,6 +1259,8 @@ print(data)`
   body: JSON.stringify({;
     title: 'Senior React Developer',;
     description: 'We need an experienced React developer...',;
+    title: 'Senior React Developer',,
+  description: 'We need an experienced React developer...',;
     category: 'development',;
     skills: ['reacttypescriptnode.js'],;
     budget: {;
@@ -1244,6 +1301,7 @@ print(data)`;
 
 
 response = requests.post (
+        'max': 10000,;response = requests.post (
     'https: //api.ziontechgroup.com / v1 / jobs';
     headers = headers,
     data = json.dumps (payload));
@@ -1506,6 +1564,7 @@ print(data)`;
 
 
       "id": "talent_abc123",
+    {      "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
       "skills": ["react", "typescript", "javascript"],
@@ -1516,9 +1575,11 @@ print(data)`;
     // More talent profiles...
 
   ];
+  ]
+
+
+  ];
   ],
-
-
       "rating_count": 15
     }
     // More talent profiles...
@@ -1587,6 +1648,9 @@ const data = await response.json(),
   }
 
 });
+              }}  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+  }
   -H "Content-Type: application/json"`,
                 javascript: `const talentId = 'talent_abc123',
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
@@ -1636,6 +1700,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
 }),;
+data = response && response.json()}),;
 const data = await response.json(),;
 // // // console.log(data),`,;
                 python: `import requests;
@@ -1721,6 +1786,10 @@ print(data)`;
 
 
         "issue_date": "2024-01-15"
+print(data)`;              }}
+              response_examples={{
+                success: `{
+  "data": {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
@@ -2266,6 +2335,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
     "requester_name": "John Doe",
+  body: JSON && JSON.stringify({    "requester_name": "John Doe",
     "requester_email": "john@example.com";
   }'`;
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
@@ -2430,6 +2500,7 @@ console && console.log(data),`
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
+
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -2442,6 +2513,11 @@ response = requests && requests.get(
     headers=headers
 )
 print(data)`
+    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
+    'budget_max': 12000;
+    'requester_name': 'John Doerequester_email': 'john@example.com'
+
+}
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / quotes',
     headers = headers);
@@ -2575,6 +2651,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
 
   // Process the webhook event
+
+              <CodeBlock
+                code={`import crypto from 'crypto'  // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt
@@ -2585,6 +2664,17 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   const signature = req && req.headers['x-zion-signature'];
   const payload = req && req.body.toString();
   const webhookSecret = process && process.env.WEBHOOK_SECRET;
+
+  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
+    return res && res.status(401).send('Invalid signature');
+  }
+
+  // Process the webhook event;
+  const event = JSON && JSON.parse(payload);
+  console && console.log('Received valid webhook:', event);
+
+  // Respond to acknowledge receipt;
+  res && res.status(200).send('Webhook received');
 }),`}
                 language="javascript";
                 showLineNumbers={true}
@@ -2661,6 +2751,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
             />;
           </TabsContent>;
           <TabsContent value="quotes" className="space - y-6">;
+          <TabsContent value="quotes" className="space-y-6">;
             <EndpointSection;
               method="POST";
               endpoint="/api / quotes";
@@ -3327,11 +3418,78 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 
 
 
+            <div className="prose prose-invert max-w-none">;
+              <h3 className="text-lg font-semibold mb-2">Error Responses</h3>;
+              <p className="text-zinc-400 mb-4">;
+                The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
+                In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
+                provided information, and codes in the 5xx range indicate an error with our servers.;
+              </p>;
+              <table className="w - full border - collapse mt-4">;
+                <thead>;
+                  <tr className="border - b border - zinc-800">;
+                    <th className="py - 2 px - 4 text-left">Status Code</th>;
+                    <th className="py - 2 px - 4 text-left">Description</th>;
+                  </tr>;
+                </thead>;
+                <tbody>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">200 OK</code></td>;
+                    <td className="py - 2 px-4">The request was successful.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">201 Created</code></td>;
+                    <td className="py - 2 px-4">The resource was successfully created.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">400 Bad Request</code></td>;
+                    <td className="py - 2 px-4">The request was invalid or cannot be otherwise served.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">401 Unauthorized</code></td>;
+                    <td className="py - 2 px-4">Authentication credentials were missing or invalid.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">403 Forbidden</code></td>;
+                    <td className="py - 2 px-4">The request is understood, but it has been refused or access is not allowed.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">404 Not Found</code></td>;
+                    <td className="py - 2 px-4">The requested resource does not exist.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">422 Unprocessable Entity</code></td>;
+                    <td className="py - 2 px-4">The request was well - formed but was unable to be followed due to semantic errors.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">429 Too Many Requests</code></td>;
+                    <td className="py - 2 px-4">The request was rejected due to rate limiting.</td>;
+                  </tr>;
+                  <tr className="border - b border - zinc-800">;
+                    <td className="py - 2 px-4"><code className="bg - zinc - 800 px - 1 py-0.5 rounded">500 Internal Server Error</code></td>;
+                    <td className="py - 2 px-4">Something went wrong on our end.</td>;
+                  </tr>;
+                </tbody>;
+              </table>;
+              <h4 className="text - md font - semibold mt - 6 mb-2">Error Response Format</h4>;
+              <p className="text - zinc - 400 mb-2">;
+                Error responses include a consistent JSON object with the following format: </p>;
+              <CodeBlock;
+                code={`{
+  "error": {
+    "code": "invalid_request";
+    "message": "The request was invalid";  description;
+  note;
+  params = [];
+  codeExamples;
   description;
   note;
   params = [];
   codeExamples;
 function EndpointSection({ 
+  responseExamples;
+}) {;
+  const [activeTab, setActiveTab] = useState("curl");function EndpointSection({ 
   method, 
   endpoint, 
   description,
@@ -3361,12 +3519,16 @@ function EndpointSection({
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
               </p>;
+                a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">429 Too Many Requests</code> response.;              </p>;
 
               <p className="text-zinc-400 mb-2">;
                 Rate limit information is included in the response headers: </p>;
 
               <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
               </ul>;
+                <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;
+                <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
+                <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;              </ul>;
             </div>;
           </TabsContent>;
         </Tabs>;
@@ -3386,6 +3548,14 @@ function EndpointSection({;
   note,;
   params = [],;
   description;
+
+// Helper component for API endpoint documentation;
+function EndpointSection(): any ({ ;
+  method, ;
+  endpoint, ;
+  description;
+  note;
+  params = [];  description;
   note;
   params = [];
   codeExamples;
@@ -3440,6 +3610,37 @@ function EndpointSection({;
                 <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Limit</code>: Number of requests allowed in the time window</li>;
                 <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Remaining</code>: Number of requests remaining in the current window</li>;
                 <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Reset</code>: Unix timestamp when the rate limit resets</li>;
+;
+// Helper component for API endpoint documentation;
+function EndpointSection({ ;
+  method, ;
+  endpoint, ;
+  description,;
+  note,;
+  params = [],;
+  codeExamples,;
+  responseExamples;
+}) {;
+  const [activeTab, setActiveTab] = useState("curl"),;
+  ;
+  return (;
+    <div className="border border-zinc-800 rounded-md">;
+      <div className="p-4">;
+        <div className="flex items-center">;
+                language="json";
+              />;
+              <h4 className="text - md font - semibold mt - 6 mb-2">Rate Limiting</h4>;
+              <p className="text - zinc - 400 mb-4">;
+                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
+                Rate limits are applied on a per - API key basis. If you exceed the rate limits, you will receive;
+                a <code className="bg - zinc - 800 px - 1 py-0.5 rounded">429 Too Many Requests</code> response.;
+              </p>;
+              <p className="text - zinc - 400 mb-2">;
+                Rate limit information is included in the response headers: </p>;
+              <ul className="list - disc pl - 6 space - y-1 text - zinc-400">;
+                <li><code className="bg - zinc - 800 px - 1 py-0.5 rounded">X - RateLimit - Limit</code>: Number of requests allowed in the time window</li>;
+                <li><code className="bg - zinc - 800 px - 1 py-0.5 rounded">X - RateLimit - Remaining</code>: Number of requests remaining in the current window</li>;
+                <li><code className="bg - zinc - 800 px - 1 py-0.5 rounded">X - RateLimit - Reset</code>: Unix timestamp when the rate limit resets</li>;
               </ul>;
             </div>;
           </TabsContent>;
@@ -3458,6 +3659,9 @@ function EndpointSection() {
     <div className="border border - zinc - 800 rounded - md">;
       <div className="p - 4">;
         <div className="flex items - center">;
+    <div className="border border - zinc - 800 rounded-md">;
+      <div className="p-4">;
+        <div className="flex items-center">;
           <Badge;
             variant="outline";
             className={
@@ -3501,6 +3705,12 @@ function EndpointSection() {
           <table className="w-full">;
             <thead>;
               <tr className="text-left border-b border-zinc-800 text-sm">;
+          >;      {params.length > 0 && (
+        <div className="border - t border - zinc - 800 p-4">;
+          <h4 className="font - medium mb-2">Parameters</h4>;
+          <table className="w-full">;
+            <thead>;
+              <tr className="text - left border - b border - zinc - 800 text-sm">;
                 <th className="pb-2">Name</th>;
                 <th className="pb-2">Type</th>;
                 <th className="pb-2">Description</th>;
@@ -3608,6 +3818,14 @@ function EndpointSection() {
 
 
       {codeExamples && (
+              {params.map ((param, index) => (
+                <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
+                  <td className="py - 2 font - mono text-sm">;
+                    {param.name}
+              ))}            </tbody>;
+          </table>;
+        </div>;
+      )}      {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
@@ -3643,6 +3861,7 @@ function EndpointSection() {
 
 
                 <button
+              {Object.keys(codeExamples).map((lang) => (                <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
@@ -3775,3 +3994,9 @@ function EndpointSection() {
   );
 }
 ;
+  );
+}    </div>;
+  );
+}
+;
+

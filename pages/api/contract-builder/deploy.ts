@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { Interface } from 'ethers';
 
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -15,6 +16,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+    return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+import { Interface } from '[^']*';
+// Simple ABI for demonstration (release/refund)
+const abi = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
     const iface = new Interface(abi)
@@ -33,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       data: bytecode + data.slice(2),
       // gas and value are intentionally left for client to estimate via MetaMask
     },
+
   try {
     const iface = new Interface(abi)
     const data = iface.encodeDeploy(constructorArgs)
@@ -48,6 +55,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 // Simple ABI for demonstration (release/refund);
 // Simple ABI for demonstration (release/refund);
 // Simple ABI for demonstration (release/refund);
+// Simple ABI for demonstration (release/refund);
+// Simple ABI for demonstration (release/refund);
+    };
+return res.status(200).json({ abi, tx });
+  } catch (e: any) {
+    return res
+      .status(400)
+      .json({ error: e?.message || 'Failed to prepare deployment tx' });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
@@ -67,6 +84,7 @@ const abi = [;
 ],
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Interface } from 'ethers'
+// Simple ABI for demonstration (release / refund);
 // Simple ABI for demonstration (release / refund);
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
@@ -127,6 +145,7 @@ if ( {) {
 }
 
 
+ursor/fix-website-loading-errors-and-merge-6662
 ;
   const { bytecode, constructorArgs } = req.body || {};
   if (!bytecode || !constructorArgs) {;

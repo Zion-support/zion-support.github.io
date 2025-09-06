@@ -3,16 +3,16 @@
 
 
 
+import {Button} from '@/components/ui/button';
+import {Link} from 'react-router-dom';
+import {ShieldAlert} from "lucide-react";
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
   projectId: string
   isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
 
-import {Button} from '@/components/ui/button';
-import {Link} from 'react-router-dom';
-import {ShieldAlert} from "lucide-react";
-import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
@@ -72,6 +72,12 @@ export function ProjectActions({
 
 
 
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (        <RaiseDisputeButton
+          projectId={projectId}
+          variant="outline"
+        />
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -168,6 +174,16 @@ export function ProjectActions({;
   );
 }
 import {Button} from '@/components / ui / button';
+  disputeId;
+  isTalent;
+  onAddMilestone;
+}: ProjectActionsProps) {;        <RaiseDisputeButton
+          projectId={projectId}
+          variant="outline"        />;
+
+    </div>
+  )
+}import {Button} from '@/components / ui / button';
 import { ShieldAlert } from './lucide-react';
 import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';
 interface ProjectActionsProps {
@@ -187,6 +203,11 @@ function ProjectActions() {
         <Button variant="outline" as_child>;
           <Link to={`/dashboard / disputes/${dispute_id}`}>;
             <ShieldAlert className="h - 4 w - 4 mr - 2" />;
+    <div className="flex gap-2">;
+      {isUnderDispute && dispute_id ? (
+        <Button variant="outline" as_child>;
+          <Link to={`/dashboard / disputes/${dispute_id}`}>;
+            <ShieldAlert className="h - 4 w - 4 mr-2" />;
             View Active Dispute;
           </Link>;
         </Button>) : (
@@ -230,3 +251,6 @@ onAddMilestone
 }
 
 
+        </Button>)}
+    </div>);
+}

@@ -16,6 +16,17 @@ export const fsDb = {
   delete: (path: string) => null
 
 
+const DATA_DIR = path.join(process.cwd(), "data");
+  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
@@ -52,6 +63,21 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 export function readJson<T>(filePath: string, defaultValue: T): T {
 
 
+  delete: (path: string) => null
+};
+
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+
+  try {
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
 
   try {
     const fullPath = path.join(DATA_DIR, filePath);

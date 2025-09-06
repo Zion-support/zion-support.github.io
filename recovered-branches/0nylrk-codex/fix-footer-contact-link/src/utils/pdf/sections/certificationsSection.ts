@@ -11,6 +11,7 @@ import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
   doc: jsPDF;
+export function addCertificationsSection(  doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
@@ -33,6 +34,9 @@ export function addCertificationsSection(;
 
 
   let yPos = startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {  let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
   yPos += 8;
@@ -40,6 +44,9 @@ export function addCertificationsSection(;
     // Check if we need to add a new page
     if (yPos > 260) {
 
+      doc && doc.addPage();
+      yPos = 20
+    }
       doc.addPage();
       yPos = 20
     }
@@ -94,6 +101,7 @@ export function addCertificationsSection(;
     doc.setTextColor(colors.text),;
     doc.text(cert.issuing_organization, 20, yPos + 5),;
     if (cert.issue_date) {;
+      const issueDate = formatDate(cert.issue_date);
       const issueDate = formatDate(cert.issue_date);
       const issueDate = formatDate(cert.issue_date);
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';

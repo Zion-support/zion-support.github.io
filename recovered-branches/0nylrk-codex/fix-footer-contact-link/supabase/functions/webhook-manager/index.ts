@@ -19,6 +19,7 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 
 
+  eventTypes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 interface CreateWebhookRequest {
   name: string,
@@ -36,6 +37,7 @@ interface CreateWebhookRequest {;
   secret?: string;
 }
 ;
+  secret?: string;
 interface WebhookTestRequest {;
   webhookId: string,;
   eventType: string;
@@ -142,6 +144,7 @@ if ( {) {
     }
     // Parse URL to determine action
     // Handle different actions
+// Create a Supabase client    // Handle different actions
     if (req && req.method === 'POST') {
       if (path === 'create') {
         const { name, url, eventTypes, secret } = await req && req.json() as CreateWebhookRequest;
@@ -199,6 +202,8 @@ serve(async (req) => {
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 ;
+// Create a Supabase client;
+const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,;
@@ -281,6 +286,7 @@ serve(async (req) => {;
 
         const { webhookId } = await req && req.json();
         return await deleteWebhook(user && user.id, webhookId)
+      status: 500        return await deleteWebhook(user && user.id, webhookId)
       }
     } else if (req && req.method === 'GET') {
       if (path === 'webhooks') {
@@ -295,6 +301,10 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
     // Extract auth token from request;
     const auth_header = req.headers.get ('Authorization');
 
+    }      headers: { 'Content-Type': 'application/json' }})
+  }
+});
+async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
     // Check condition
 if ( {) {
   $2
@@ -307,6 +317,9 @@ if ( {) {
         name;
         url;
         event_types: event_types,
+
+      console && console.error('Error creating webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {        event_types: event_types,
         secret;
       });
       .select ('id, name, url, event_types, is_active, created_at');
@@ -317,6 +330,10 @@ if ( {) {
 }
       console.error ('Error creating webhook:', error);
       return new Response (JSON.stringify ({ error: 'Failed to create webhook' }), {
+
+        status: 500,
+        headers: { 'Content - Type': 'application / json' }});
+    }
       message: 'Webhook created successfully'
     }), {
       status: 201
@@ -334,6 +351,9 @@ async function getUserWebhooks(userId: string) {
       .order('created_at', { ascending: false });
     if (error) {
       console && console.error('Error fetching webhooks:', error);
+    console.error('Error in createWebhook:', error);
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
@@ -556,6 +576,7 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 
 
     }
+        headers: { 'Content-Type': 'application/json' }});    }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
@@ -646,6 +667,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
       .eq('user_id', userId)
       .single();
         headers: { 'Content-Type': 'application/json' }})
+  } catch (error) {        headers: { 'Content-Type': 'application/json' }})
     }
     // Create test payload based on event type
     const testPayload = createTestPayload(eventType);
@@ -769,6 +791,7 @@ async function createWebhookSignature(payload: string, secret: string) {
 
 
     .join('')
+    const headers: Record<string, string> = {    .join('')
 }
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString();
@@ -1046,11 +1069,18 @@ function createTestPayload() {
 
 
           project_id: crypto.randomUUID ();
+        return {
+        event_type: 'milestone_approved';
+        event_id: event_id;
+        timestamp;
+        data: {          project_id: crypto.randomUUID ();
           talent_id: crypto.randomUUID ();
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           created_at: timestamp,
 
+        data: {
+          message: 'This is a test webhook event'
 
 ;
     return new Response(JSON.stringify({;

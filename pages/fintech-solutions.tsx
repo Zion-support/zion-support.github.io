@@ -5,6 +5,23 @@
 			subtitle="Smarter finance with lower risk and faster time to yes."
 
 
+			implementationWeeks="Implementation: 4–8 weeks"
+			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
+			features={[
+				"Transaction anomaly detection and entity resolution"
+				"Credit risk models with explainability"
+				"KYC/AML case automation and SAR drafts"
+				"Collections optimization and next-best-action"
+				"Realtime rules with feature store integration"
+
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function FintechSolutions() {
+			title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: Core banking, KYC, payments, CRMs"
+			]}
+			industries={["Fintech", "Banking", "Lending", "Payments"]}
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -38,6 +55,11 @@ return (
 
 
 
+			pricePerMonthUSD={2799  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
 			features={[
@@ -56,3 +78,28 @@ return (
 };
 
 
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Fintech", "Banking", "Lending", "Payments"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			canonical="https: //ziontechgroup.com/fintech-solutions"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/fintech-solutions";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -46,6 +46,10 @@ export default tseslint && tseslint.config(
 
 
       "react-refresh/only-export-components": [
+      globals: globals.browser}    plugins: {
+      "react-hooks": reactHooks
+      "react-refresh": reactRefresh}
+    rules: {      "react-refresh/only-export-components": [
 
         "warn"
         { allowConstantExport: true }]
@@ -80,6 +84,8 @@ export default tseslint.config(;
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
+
+)
 import js from "@eslint / js";
 import globals from './globals';
 import react_hooks from './eslint - plugin - react - hooks';
@@ -127,3 +133,6 @@ export default tseslint.config(;
 ),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
 }
 });
+        { allowConstantExport: true }];
+      "@typescript-eslint/no-unused-vars": "off"}}
+);

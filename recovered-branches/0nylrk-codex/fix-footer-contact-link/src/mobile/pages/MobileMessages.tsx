@@ -3,6 +3,8 @@ import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileConversationList} from "../components/messaging/MobileConversationList";
 import {MobileChatView} from "../components/messaging/MobileChatView";
+
+
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -116,6 +118,7 @@ import { MobileChatView } from "../components/messaging/MobileChatView",;
 
 // Mock data for demonstration;
 const mockConversations = [;
+import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
   {;
     id: "1",;
     name: "Sarah Johnson",;
@@ -150,6 +153,7 @@ interface Message {;
   status: "read" | "sent" | "delivered";
 }
 ;
+;;
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -207,6 +211,7 @@ export function MobileMessages() {;
 
 
   return (
+    id: "4",;  return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView;
@@ -368,18 +373,24 @@ export function MobileMessages() {;
 
           ;
 
+              onSelectConversation={handleSelectConversation}
+            />;
+          </main>;
           <BottomNavigation />;
         </>;
       )}
     </div>;
 
 
+  );
+}
         />) : (
         <>;
           <MobileHeader;
             title="Messages";
           />;
           <main className="flex - 1 overflow - y-auto">;
+          <main className="flex - 1 overflow-y-auto">;
             <MobileConversationList;
               conversations={mock_conversations}
               onSelectConversation={handleSelectConversation}
