@@ -1,87 +1,77 @@
-// Performance optimizations
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  trailingSlash: true,
-  output: 'export',
-  generateBuildId: async () => 'build-' + Date.now(),
-  
-  // Include all page types
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
-  
-  // Image optimization
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    unoptimized: true,
   },
-  
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-  
-  // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      };
-    }
-    
+    // Exclude problematic directories from webpack compilation
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        '**/node_modules/**',
+        '**/.git/**',
+        '**/pages_backup*/**',
+        '**/pages.*/**',
+        '**/pages-*/**',
+        '**/pages_disabled*/**',
+        '**/pages.disabled*/**',
+        '**/pages.broken*/**',
+        '**/pages.corrupted*/**',
+        '**/pages.old*/**',
+        '**/pages._*/**',
+        '**/pages.__*/**',
+        '**/backup-pages/**',
+        '**/src.pages.disabled/**',
+        '**/lib_backup*/**',
+        '**/src_backup*/**',
+        '**/corrupted-files-backup*/**',
+        '**/performance-reports*/**',
+        '**/log-analysis-reports*/**',
+        '**/link-reports*/**',
+        '**/lint-target*/**',
+        '**/monitoring*/**',
+        '**/pm2-automation*/**',
+        '**/automation/logs*/**',
+        '**/automation/backup*/**',
+        '**/performance-*.json',
+        '**/performance-*.js',
+        '**/performance-*.cjs',
+        '**/performance-*.sh',
+        '**/performance-*.html',
+        '**/performance-*.md',
+        '**/performance-*.txt'
+      ],
+      poll: 1000,
+      aggregateTimeout: 300
+    };
+
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+
     return config;
   },
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
-        ]
-      }
-    ];
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
   },
-  
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-
-  }
 };
 
 export default nextConfig;

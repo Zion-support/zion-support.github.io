@@ -1,1 +1,266 @@
-import React from 'react'; import Head from 'next/head'; ; export default function Terms() {; return (; <> <Head> <title>Terms of Service — Zion Tech Group></div> <meta name="description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." /> <meta property="og:title" content="Terms of Service — Zion Tech Group" /> <meta property="og:description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." /> ></div> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className="container mx-auto px-6 py-12"> <section className="text-center mb-16"> <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Terms of Service; ></div> <p className="text-xl text-white/80 max-w-3xl mx-auto"> Please read these terms carefully before using our autonomous systems and services.; ></div> <p className="text-sm text-white/60 mt-4">Last updated: January 2025></div> ></div> <div className="max-w-4xl mx-auto"> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-cyan-400">1. Acceptance of Terms></div> <p className="text-white/80 mb-4"> By accessing and using Zion Tech Group's services,you accept and agree to be bound by the terms and provision of this agreement. ; If you do not agree to abide by the above,please do not use this service.; ></div> <p className="text-white/80"> These terms apply to all visitors,users,and others who access or use our autonomous systems,automation services,; and cloud infrastructure solutions.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-fuchsia-400">2. Description of Service></div> <p className="text-white/80 mb-4"> Zion Tech Group provides autonomous innovation systems,including but not limited to:; ></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>AI-powered automation workflows and systems></div> <li>Cloud infrastructure and deployment solutions></div> <li>Content generation and management services></div> <li>Monitoring and analytics platforms></div> <li>API access and integration services></div> <li>Technical consulting and support></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-green-400">3. User Accounts></div> <p className="text-white/80 mb-4"> When you create an account with us,you must provide information that is accurate,complete,and current at all times. ; You are responsible for safeguarding the password and for all activities that occur under your account.; ></div> <p className="text-white/80 mb-4"> You agree not to disclose your password to any third party and to take sole responsibility for any activities or actions ; under your account,whether or not you have authorized such activities or actions.; ></div> <p className="text-white/80"> You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-yellow-400">4. Acceptable Use></div> <p className="text-white/80 mb-4"> You may not use our services for any illegal or unauthorized purpose. You must not,in the use of the service,; violate any laws in your jurisdiction (including but not limited to copyright or trademark laws).; ></div> <p className="text-white/80 mb-4">You agree not to:></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>Use the service to transmit any viruses,malware,or other malicious code></div> <li>Attempt to gain unauthorized access to our systems or networks></div> <li>Interfere with or disrupt the service or servers></div> <li>Use the service for any commercial purpose without our express written consent></div> <li>Reverse engineer,decompile,or disassemble any portion of our services></div> <li>Use automated systems to access our services in a manner that sends more requests than a human could reasonably produce></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-purple-400">5. Intellectual Property></div> <p className="text-white/80 mb-4"> The service and its original content,features,and functionality are and will remain the exclusive property of ; Zion Tech Group and its licensors. The service is protected by copyright,trademark,and other laws.; ></div> <p className="text-white/80 mb-4"> Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.; ></div> <p className="text-white/80"> You retain ownership of any content you submit,post,or display on or through the service. By submitting content,; you grant us a worldwide,non-exclusive,royalty-free license to use,reproduce,modify,and distribute such content.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Privacy Policy></div> <p className="text-white/80 mb-4"> Your privacy is important to us. Please review our Privacy Policy,which also governs your use of the service,; to understand our practices.; ></div> <p className="text-white/80"> By using our service,you consent to the collection and use of information in accordance with our Privacy Policy.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-red-400">7. Termination></div> <p className="text-white/80 mb-4"> We may terminate or suspend your account and bar access to the service immediately,without prior notice or liability,; under our sole discretion,for any reason whatsoever and without limitation,including but not limited to a breach of the Terms.; ></div> <p className="text-white/80 mb-4"> If you wish to terminate your account,you may simply discontinue using the service.; ></div> <p className="text-white/80"> All provisions of the Terms which by their nature should survive termination shall survive termination,; including,without limitation,ownership provisions,warranty disclaimers,indemnity,and limitations of liability.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-orange-400">8. Limitation of Liability></div> <p className="text-white/80 mb-4"> In no event shall Zion Tech Group,nor its directors,employees,partners,agents,suppliers,or affiliates,; be liable for any indirect,incidental,special,consequential,or punitive damages,including without limitation,; loss of profits,data,use,goodwill,or other intangible losses,resulting from:; ></div> <ul className="list-disc list-inside space-y-2 text-white/80 ml-4"> <li>Your use or inability to use the service></div> <li>Any unauthorized access to or use of our servers and/or any personal information stored therein></div> <li>Any interruption or cessation of transmission to or from the service></div> <li>Any bugs,viruses,trojan horses,or the like that may be transmitted to or through the service></div> <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content></div> ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-indigo-400">9. Disclaimers></div> <p className="text-white/80 mb-4"> The information on this service is provided on an "as is" basis. Zion Tech Group makes no warranties,; expressed or implied,and hereby disclaims and negates all other warranties including without limitation,; implied warranties or conditions of merchantability,fitness for a particular purpose,or non-infringement of intellectual property.; ></div> <p className="text-white/80"> We do not warrant that the service will be uninterrupted or error-free,that defects will be corrected,; or that the service or the server that makes it available are free of viruses or other harmful components.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-teal-400">10. Governing Law></div> <p className="text-white/80 mb-4"> These Terms shall be interpreted and governed by the laws of the jurisdiction in which Zion Tech Group operates,; without regard to its conflict of law provisions.; ></div> <p className="text-white/80"> Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. ; If any provision of these Terms is held to be invalid or unenforceable by a court,the remaining provisions ; of these Terms will remain in effect.; ></div> ></div> {} <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10"> <h2 className="text-2xl font-bold mb-4 text-pink-400">11. Changes to Terms></div> <p className="text-white/80 mb-4"> We reserve the right,at our sole discretion,to modify or replace these Terms at any time. ; If a revision is material,we will try to provide at least 30 days notice prior to any new terms taking effect.; ></div> <p className="text-white/80"> What constitutes a material change will be determined at our sole discretion. By continuing to access or use our service ; after any revisions become effective,you agree to be bound by the revised terms.; ></div> ></div> {} <section className="p-8 bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl border border-cyan-500/20"> <h2 className="text-2xl font-bold mb-4 text-cyan-400">12. Contact Information></div> <p className="text-white/80 mb-6"> If you have any questions about these Terms of Service,please contact us:; ></div> <div className="space-y-2 text-white/80"> <p>Email: legal@zion.tech></div> <p>Address: Zion Tech Group Legal Department></div> <p>Website: <a href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact Form</a>></div> ></div> ></div> {} <div className="mt-12 text-center"> <div className="flex flex-wrap justify-center gap-4"> <a href="/privacy" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors"> Privacy Policy; ></div> <a href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"> Contact Us; ></div> <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors"> Back to Home; ></div> ></div> ></div> ></div> ></div> ></div> ></div> );,}
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';
+
+export default function Terms() {
+  return (
+    <>
+      <Head>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our services."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <main className="min-h-screen bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Terms of Service
+          </h1>
+
+          <div className="prose prose-lg max-w-none">
+            <p className="text-gray-600 mb-8">
+              <strong>Last updated:</strong> January 27, 2025
+            </p>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                1. Agreement to Terms
+              </h2>
+              <p className="text-gray-700 mb-4">
+                By accessing and using Zion Tech Group's website and services,
+                you accept and agree to be bound by the terms and provision of
+                this agreement. If you do not agree to abide by the above,
+                please do not use this service.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                2. Use License
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Permission is granted to temporarily download one copy of the
+                materials on Zion Tech Group's website for personal,
+                non-commercial transitory viewing only. This is the grant of a
+                license, not a transfer of title, and under this license you may
+                not:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Modify or copy the materials</li>
+                <li>
+                  Use the materials for any commercial purpose or for any public
+                  display
+                </li>
+                <li>
+                  Attempt to reverse engineer any software contained on the
+                  website
+                </li>
+                <li>
+                  Remove any copyright or other proprietary notations from the
+                  materials
+                </li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                3. Service Description
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Zion Tech Group provides technology consulting, development, and
+                implementation services including but not limited to:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>AI and machine learning solutions</li>
+                <li>Cloud infrastructure and migration services</li>
+                <li>Custom software development</li>
+                <li>IT consulting and support</li>
+                <li>Micro SaaS development and deployment</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                4. Client Responsibilities
+              </h2>
+              <p className="text-gray-700 mb-4">As a client, you agree to:</p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>
+                  Provide accurate and complete information necessary for
+                  project execution
+                </li>
+                <li>
+                  Respond to requests for feedback and approvals in a timely
+                  manner
+                </li>
+                <li>Make payments according to the agreed schedule</li>
+                <li>Comply with all applicable laws and regulations</li>
+                <li>Respect intellectual property rights</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                5. Payment Terms
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Payment terms will be specified in individual service
+                agreements. Generally:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Invoices are due within 30 days of receipt</li>
+                <li>Late payments may incur additional charges</li>
+                <li>Services may be suspended for non-payment</li>
+                <li>All prices are exclusive of applicable taxes</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                6. Intellectual Property
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Unless otherwise specified in a separate agreement:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>
+                  Client retains ownership of their existing intellectual
+                  property
+                </li>
+                <li>
+                  Zion Tech Group retains ownership of pre-existing intellectual
+                  property
+                </li>
+                <li>
+                  Work product ownership will be specified in individual service
+                  agreements
+                </li>
+                <li>
+                  Both parties agree to respect each other's intellectual
+                  property rights
+                </li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                7. Confidentiality
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Both parties agree to maintain the confidentiality of sensitive
+                information shared during the course of business. This includes
+                but is not limited to:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Business strategies and plans</li>
+                <li>Technical specifications and designs</li>
+                <li>Customer and vendor information</li>
+                <li>Financial information</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                8. Limitation of Liability
+              </h2>
+              <p className="text-gray-700 mb-4">
+                In no event shall Zion Tech Group or its suppliers be liable for
+                any damages (including, without limitation, damages for loss of
+                data or profit, or due to business interruption) arising out of
+                the use or inability to use the materials on Zion Tech Group's
+                website, even if Zion Tech Group or an authorized representative
+                has been notified orally or in writing of the possibility of
+                such damage.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                9. Disclaimer
+              </h2>
+              <p className="text-gray-700 mb-4">
+                The materials on Zion Tech Group's website are provided on an
+                'as is' basis. Zion Tech Group makes no warranties, expressed or
+                implied, and hereby disclaims and negates all other warranties
+                including without limitation, implied warranties or conditions
+                of merchantability, fitness for a particular purpose, or
+                non-infringement of intellectual property or other violation of
+                rights.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                10. Termination
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Either party may terminate services with written notice. Upon
+                termination:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>All outstanding payments become immediately due</li>
+                <li>Confidentiality obligations continue</li>
+                <li>
+                  Work product will be delivered as specified in the agreement
+                </li>
+                <li>
+                  Each party will return or destroy confidential information
+                </li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                11. Governing Law
+              </h2>
+              <p className="text-gray-700 mb-4">
+                These terms and conditions are governed by and construed in
+                accordance with the laws of Delaware, USA, and you irrevocably
+                submit to the exclusive jurisdiction of the courts in that state
+                or location.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                12. Changes to Terms
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Zion Tech Group reserves the right to revise these terms of
+                service at any time without notice. By using this website, you
+                are agreeing to be bound by the then current version of these
+                terms of service.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                13. Contact Information
+              </h2>
+              <p className="text-gray-700 mb-4">
+                If you have any questions about these Terms of Service, please
+                contact us at:
+              </p>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-700 mb-2">
+                  <strong>Email:</strong> legal@ziontechgroup.com
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Phone:</strong> +1 (302) 464-0950
+                </p>
+                <p className="text-gray-700">
+                  <strong>Address:</strong> Delaware, USA
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

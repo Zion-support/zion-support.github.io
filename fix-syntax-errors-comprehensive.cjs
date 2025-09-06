@@ -1,10 +1,3 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-
-console.log('🔧 Starting comprehensive syntax error fixing...');
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
@@ -72,7 +65,6 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -82,92 +74,104 @@ function fixSyntaxErrors(content, filePath) {
     const [${isLoading}] = useState(true);
     const navigate = useNavigate();
     
-    useEffect(() => {
-        const fetchSavedTalents = async () => {
-            if (!user) return;
-            try {
-                setIsLoading(true);
-                // Fetch saved talents logic here
-            } catch (error) {
-                console.error('Error fetching saved talents:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchSavedTalents();
-    }, [user]);
-    
-    const handleRequestHire = (talentId) => {
-        // Handle hire request logic here
-    };
-    
-    return (
-        <div className="min-h-screen bg-gray-50">
-            ${content}
-        </div>
-    );`;
-    });
-
-    return { content, fixes };
-}
-
-// Function to process a single file
-function processFile(filePath) {
     try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const { content: fixedContent, fixes } = fixSyntaxErrors(content, filePath);
+        const originalContent = fs.readFileSync(filePath, 'utf8');
+        const fixedContent = fixFunction(originalContent);
         
-        if (fixes > 0) {
+        if (originalContent !== fixedContent) {
             fs.writeFileSync(filePath, fixedContent, 'utf8');
-            console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
-            return fixes;
+            console.log(`✅ Fixed: ${description}`);
+            fixes.push({ file: filePath, description });
+        } else {
+            console.log(`✅ No issues found: ${description}`);
         }
-        return 0;
     } catch (error) {
-        console.error(`❌ Error processing ${filePath}:`, error.message);
-        return 0;
+        console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     }
 }
 
-// Main execution
-async function main() {
-    const patterns = [
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'src/**/*.jsx',
-        'src/**/*.js',
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'pages/**/*.tsx',
-        'pages/**/*.ts',
-        'pages/**/*.jsx',
-        'pages/**/*.js'
-    ];
+// Fix _app.tsx button syntax
+fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
+    return content.replace(
+        /style=\{\{\s*background:\s*'none',\s*border:\s*'none',\s*color:\s*'white',\s*fontSize:\s*'1\.2rem',\s*cursor:\s*'pointer',\s*padding:\s*'6px',\s*borderRadius:\s*4\s*\}\s*onClick/g,
+        'style={{\n              background: \'none\', border: \'none\', color: \'white\', fontSize: \'1.2rem\',\n              cursor: \'pointer\', padding: \'6px\', borderRadius: 4\n            }}\n            onClick'
+    );
+});
 
-    let totalFixes = 0;
-    let filesProcessed = 0;
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
 
-    for (const pattern of patterns) {
-        const files = glob.sync(pattern, { ignore: ['node_modules/**', '.next/**', 'dist/**'] });
-        
-        for (const file of files) {
-            if (fs.existsSync(file)) {
-                const fixes = processFile(file);
-                totalFixes += fixes;
-                filesProcessed++;
-            }
-        }
-    }
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
 
-    console.log(`\n📊 Summary:`);
-    console.log(`   Files processed: ${filesProcessed}`);
-    console.log(`   Total fixes applied: ${totalFixes}`);
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+
+    fixed = fixed.replace(
+        /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
+        'return this.props.children;\n  }\n}\n\nexport default'
+    );
     
-    if (totalFixes > 0) {
-        console.log(`\n✨ Syntax error fixing completed!`);
-    } else {
-        console.log(`\n✨ No syntax errors found to fix.`);
+    return fixed;
+});
+
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
     }
+
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+
+    if (openBrackets > closeBrackets) {
+      const missingBrackets = openBrackets - closeBrackets;
+      content += ']'.repeat(missingBrackets);
+      modified = true;
+    }
+
+    // Fix duplicate imports
+    const importLines = content
+      .split('\n')
+      .filter(line => line.trim().startsWith('import'));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {
+      const nonImportLines = content
+        .split('\n')
+        .filter(line => !line.trim().startsWith('import'));
+      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
+      modified = true;
+    }
+
+    // Fix missing React import
+    if (content.includes('React') && !content.includes('import React')) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    // Fix semicolons in object properties
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+
+    // Fix semicolons in array elements
+    content = content.replace(/([^}]);/g, '$1,');
+
+    // Fix semicolons in function parameters
+    content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
+
+    // Fix semicolons in JSX
+    content = content.replace(/<(\w+)\s*;\s*>/g, '<$1>');
+    content = content.replace(/<\/(\w+)\s*;\s*>/g, '</$1>');
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+    }
+
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-main().catch(console.error);

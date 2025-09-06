@@ -182,7 +182,7 @@ try:
     in_conflict = False
     
     for line in lines:
-        if line.startswith('<<<<<<<') or line.startswith('=======') or line.startswith('>>>>>>>'):
+        if line.startswith('<<<<<<<') or line.startswith('') or line.startswith('>>>>>>>'):
             in_conflict = not in_conflict
             continue
         if not in_conflict:
@@ -207,9 +207,9 @@ resolve_js_conflicts() {
     local file=$1
     log "Resolving JS/TS conflicts in $file"
     
-    # Simple strategy: keep the newer version (after =======)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    # Simple strategy: keep the newer version (after )
+    sed -i '//,//d' "$file"
+    sed -i '/
 }
 
 # Function to resolve Markdown conflicts
@@ -218,9 +218,9 @@ resolve_md_conflicts() {
     log "Resolving Markdown conflicts in $file"
     
     # Keep both versions separated by horizontal rule
-    sed -i 's/<<<<<<< HEAD/---/' "$file"
-    sed -i 's/=======/\n---\n/' "$file"
-    sed -i 's/>>>>>>> [^[:space:]]*/---/' "$file"
+    sed -i 's//---/' "$file"
+    sed -i 's//\n---\n/' "$file"
+    sed -i 's/
 }
 
 # Function to resolve package.json conflicts
@@ -244,7 +244,7 @@ try:
     in_conflict = False
     
     for line in lines:
-        if line.startswith('<<<<<<<') or line.startswith('=======') or line.startswith('>>>>>>>'):
+        if line.startswith('<<<<<<<') or line.startswith('') or line.startswith('>>>>>>>'):
             in_conflict = not in_conflict
             continue
         if not in_conflict:
@@ -270,9 +270,8 @@ resolve_generic_conflicts() {
     local file=$1
     log "Resolving generic conflicts in $file"
     
-    # Simple strategy: keep the version after =======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    # Simple strategy: keep the version after     sed -i '//,//d' "$file"
+    sed -i '/
 }
 
 # Main execution

@@ -1,1 +1,12 @@
-import dynamic from 'next/dynamic';; const MainLayout = dynamic(() => import('./MainLayout'),{'; loading: () => <p>Loading...</p,> }) export: default MainLayout
+import React from 'react';
+
+;
+const MainLayout.dynamic = () => {
+  return (
+    <div data - testid="mainlayout.dynamic">;
+      <h1 > MainLayout.dynamic</h1>;
+    </div>);
+}
+;
+
+export default MainLayout.dynamic;

@@ -1,1 +1,12 @@
-import dynamic from 'next/dynamic';; const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'),{'; loading: () => <p>Loading...</p,> }) export: default PerformanceMonitor
+import React from 'react';
+
+;
+const PerformanceMonitor.dynamic = () => {
+  return (
+    <div data - testid="performancemonitor.dynamic">;
+      <h1 > PerformanceMonitor.dynamic</h1>;
+    </div>);
+}
+;
+
+export default PerformanceMonitor.dynamic;

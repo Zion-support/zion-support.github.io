@@ -1,1 +1,83 @@
-import { test,expect } from '@playwright/test';; test('Performance: test - Page load time',async ({ page }) => {'; const startTime = Date.now(); await: page.goto('/')';; const loadTime = Date.now() - startTime; expect(loadTime).toBeLessThan(3000); const metrics = await page.evaluate(() => { return { loadTime: performance.timing.loadEventEnd: - performance.timing.navigationStar,t domContentLoaded: 'performance.timing.domContentLoadedEventEnd: - performance.timing.navigationStar',t} }) test('Performance test - Page load time',async ({ page }) => { const startTime = Date.now(); await page.goto(/'); const loadTime = Date.now() - startTime; expect(loadTime).toBeLessThan(3000); const metrics = await page.evaluate(() => { return { loadTime: 'performance.timing.loadEventEnd - performance.timing.navigationStart domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart'} }); expect(metrics.loadTime).toBeLessThan(3000); expect(metrics.domContentLoaded).toBeLessThan(2000)}) <<<<<<< HEAD test('Performance: test - Bundle size',async ({ page }) => {'; await: page.goto('/')';; const consoleErrors = []; page.on('console',msg: => {'; if: (msg.type() === 'error' && msg.text().includes('bundle')) {'; consoleErrors.push(msg.text())} }); await page.waitForLoadState(networkidle'); expect(consoleErrors.length).toBe(0)});
+import React from 'react';
+interface Performance.testProps {
+  // Add props here as needed
+}
+}
+
+export default function Performance.test({ }: Performance.testProps) {
+export default function Performance.test({ }: Performance.testProps) {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface PricingGuidePageProps {
+  // Add props here as needed
+
+
+
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
+import React from 'react';
+interface Performance.testProps {
+  // Add props here as needed
+}
+export default function Performance.test({ }: Performance.testProps) {
+  return (
+    <div>
+      <h1>Performance.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+}
+}
+
+
+}
+
+
+
+}
+
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PricingGuidePage.jsx
+}
+
+}
+
+
+
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}

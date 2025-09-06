@@ -1,1 +1,47 @@
-import { useEffect } from 'react';'''; import { useNavigate,useLocation } from 'react-router-dom';'''; import { useAuth } from '@/hooks/useAuth';'''; import { safeStorage } from '@/utils/safeStorage';'''; import { LoginContent } from '@/components/auth/login';'''; import { ErrorBoundary } from 'react-error-boundary';'''; import { useCart } from '@/context/CartContext';''; '''; import { toast } from '@/hooks/use-toast';'''; import { useDispatch } from 'react-redux';'''; import { setLoggedIn } from '@/store/authSlice'; ; useEffect ( () => {} const queryString = location.search; const params = new URLSearchParams(queryString);'; const token = params.get('token'); if (token) {} '; ''; '''; safeStorage.setItem('zion_token',token);'''; navigate (location.pathname,{ replace: 'true' }) ;,} },[location.search,location.pathname,navigate]) ; ; useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));'; const next = location.state?.from?.pathname || '/dashboard'; navigate (next,{ replace: 'true' }) ;,} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.state]) ; ; if (!isAuthenticated && !isLoading) {} return(); <div>Broken JSX</div> fallback={<div>Something went wrong. Please try again.</div>} > <LoginContent /> </ErrorBoundary>) ;,} ; if (isLoading) {} return <div className="p-4 text-center text-foreground">Loading...</div>} ; return null;,} ; export { Login }; ; export { Login }; ; export { Login }; ; export { Login };
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface LoginProps {
+  // Add props here as needed
+
+
+}
+
+export default function Login({ }: LoginProps) {
+  return (
+    <div>
+      <h1>Login</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+:src.disabled/src/pages.disabled/Login.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/Login.jsx
+}

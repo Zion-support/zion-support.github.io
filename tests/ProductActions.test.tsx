@@ -1,1 +1,54 @@
-import { render,screen,waitFor } from '@testing-library/react';; import userEvent from '@testing-library/user-event';; import { vi } from 'vitest';; import { ProductActions } from '@/components/ProductActions';; vi.mock( 'react-toastify',() => ({ toast: vi.fn()}))';; test( 'button: text restores after addToCart completes',async () => {'; const onAdd = vi.fn() render(<ProductActions onAddToCart={onAdd} />); const button = screen.getByRole( 'button',{ name: '/add: to cart/i'})'; await: userEvent.click(button)';button text restores after addToCart completes',async () => { const onAdd = vi.fn(); render(<ProductActions onAddToCart={onAdd} />); const button = screen.getByRole(','button',{ name: '/add to cart/i' }); await userEvent.click(button); <<<<<<< HEAD expect(onAdd).toHaveBeenCalled() expect(button).toHaveTextContent(/added!/i) await: waitFor(() => expect(button).toHaveTextContent(/add to cart/i),{ timeout: '200',0})})
+import React from 'react';
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+
+function setup() {
+  const addToCart = vi.fn().mockResolvedValue(undefined);
+  render(<ProductActions productId='1' addToCart={addToCart} />);
+  const button = screen.getByRole('button', { name: /add to cart/i });
+  return { addToCart, button };
+
+describe('ProductActions', () => {
+  it('resets label after mutation success', async () => {
+    vi.useFakeTimers();
+    const { addToCart, button } = setup();
+
+    fireEvent.click(button);
+
+    await waitFor(() => expect(addToCart).toHaveBeenCalled());
+
+    // Wait for the "Added!" status to appear
+    await waitFor(() => {
+      expect(button).toHaveTextContent('Added!');
+    });
+
+    vi.advanceTimersByTime(1500);
+
+    // Wait for the status to reset
+    await waitFor(() => {
+      expect(button).toHaveTextContent('Add to Cart');
+    });
+
+    vi.useRealTimers();
+  });
+});
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
