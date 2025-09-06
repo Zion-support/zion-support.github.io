@@ -1,5 +1,8 @@
 #!/bin/bash
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 echo "Resolving merge conflicts..."
 
@@ -35,6 +38,8 @@ git status --porcelain | grep "^UU" | grep -v -E "(disabled|backup|temp|\.disabl
 done
 
 echo "Conflict resolution completed!"
+<<<<<<< HEAD
+=======
 =======
 echo "🔧 Resolving merge conflicts automatically..."
 CONFLICTED_FILES=$(git status --porcelain | grep -E "^UU |^AA |^DD " | awk '{print $2}')
@@ -53,3 +58,4 @@ echo "Committing merge..."
 git commit -m "Resolve merge conflicts - accept incoming changes"
 echo "✅ Merge completed successfully!"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

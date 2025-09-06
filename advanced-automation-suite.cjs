@@ -507,6 +507,9 @@ function createDashboard() {
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         body { font-family: Arial, sans-serif; margin: 0, padding: 20px, background: #f5f5f5
   }
         .container { max-width: 1200px, margin: 0 auto, }
@@ -526,6 +529,8 @@ function createDashboard() {
   }
         .recommendations { background: white, padding: 20px, border-radius: 8px, margin-top: 20px, }
         .recommendation { padding: 10px, margin: 5px 0, background: #ecf0f1, border-radius: 4px, }
+<<<<<<< HEAD
+=======
 =======
         body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
         .container { max-width: 1200px; margin: 0 auto; }
@@ -540,6 +545,7 @@ function createDashboard() {
         .recommendations { background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
         .recommendation { padding: 10px; margin: 5px 0; background: #ecf0f1; border-radius: 4px; }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     </style>
 </head>
 <body>

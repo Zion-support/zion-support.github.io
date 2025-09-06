@@ -1,3 +1,4 @@
+  title = "Complete Your Profile", 
 
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from 'lucide-react'
@@ -73,5 +74,21 @@ export function OnboardingTracker({
     </div>
   );
 
-
+}></div> </div> {;
+  /* Steps list */ ";
+}<div className="space-y-3" > {;
+  steps.map ( (step) => (<div key= {;
+  step.id ";
+}className="flex items-center" > <div className="mr-3" > {";
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) ;
+}</div> </div> {";
+  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {;
+  step.link ;
+}> </Link> </Button>) ;
+}</div>) ) ;
+}</div> </div>) ;
+}"
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

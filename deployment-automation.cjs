@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,6 +15,9 @@ const { execSync } = require('child_process')
       console.error(' Rollback "failed")
       "status"
   console.log(' Deployment report "generated")
+<<<<<<< HEAD
+  console.error(' Deployment automation "failed")
+=======
   console.error(' Deployment automation "failed")
 =======
 =======
@@ -138,3 +144,4 @@ deployApplication();
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

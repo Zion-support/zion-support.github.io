@@ -1,7 +1,4 @@
-
-import React from "react";
-import {CheckCircle, Smartphone, Users, Star, Mail} from 'lucide-react'
-import {Star} from 'lucide-react';
+};
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -62,4 +59,7 @@ export const MobileFeatureShowcase: React.FC = () => {
     </section>
   )
 };
-
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

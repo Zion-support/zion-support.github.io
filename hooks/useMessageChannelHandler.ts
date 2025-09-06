@@ -1,9 +1,21 @@
-import {useEffect, useCallback} from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
+export const useMessageChannelHandler = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+
+export default useMessageChannelHandler;
+import { useEffect, useCallback } from 'react';
 
 // Define MessageEvent type if not available
 interface Event {
-  type: string;
-  target: EventTarget | null,
+  type: string, target: EventTarget | null,
 }
 
 interface EventTarget {
@@ -17,14 +29,12 @@ interface Window extends EventTarget {
 }
 
 interface MessageEvent<T = unknown> extends Event {
-  data: T;
-  origin: string;
+  data: T, origin: string,
   source: Window | null,
 }
 
 interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void;
-  onError?: (error: Error) => void,
+  onMessage?: (message: unknown) => void, onError?: (error: Error) => void,
 }
 
 export function useMessageChannelHandler({
@@ -50,3 +60,5 @@ export function useMessageChannelHandler({
     };
   }, [handleMessage]);
 }
+>>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

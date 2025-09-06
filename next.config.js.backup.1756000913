@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 const path = require('path');
@@ -12,10 +15,13 @@ const path = require('path');
 const path = require('path');
 const os = require('os');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 const path = require('path');
 const os = require('os');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
@@ -23,12 +29,18 @@ const nextConfig = {
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -36,6 +48,9 @@ const nextConfig = {
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   productionBrowserSourceMaps: false, // Disable for faster builds
 =======
@@ -72,9 +87,12 @@ const nextConfig = {
 =======
   productionBrowserSourceMaps: false, // Disable for faster builds  experimental: {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   productionBrowserSourceMaps: false, // Disable for faster builds  experimental: {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     optimizeCss: true,
     optimizePackageImports: [
       'lucide-react', 
@@ -84,12 +102,18 @@ const nextConfig = {
       'fuse.js'
     ],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // ESM configuration for problematic packages
     esmExternals: 'loose', // Allow loose ESM handling
     
@@ -180,6 +204,9 @@ const nextConfig = {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     // Add polyfills for Node.js APIs
 =======
@@ -233,9 +260,12 @@ const nextConfig = {
 =======
     // Add polyfills for Node.js APIs    config.resolve.fallback = {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     // Add polyfills for Node.js APIs    config.resolve.fallback = {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -255,12 +285,18 @@ const nextConfig = {
       zlib: false,
       url: false,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     // Optimize bundle size
@@ -275,6 +311,9 @@ const nextConfig = {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     // PERFORMANCE: Add bundle optimization
 =======
@@ -300,9 +339,12 @@ const nextConfig = {
 =======
     // PERFORMANCE: Add bundle optimization    if (!dev) {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     // PERFORMANCE: Add bundle optimization    if (!dev) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       config.optimization = {
         ...config.optimization,
         moduleIds: 'deterministic',

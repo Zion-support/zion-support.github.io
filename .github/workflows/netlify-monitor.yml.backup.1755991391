@@ -30,12 +30,18 @@ jobs:
         run: npm ci
       - name: Netlify status check
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         id: netlify_check
         continue-on-error: true
         env:
@@ -52,6 +58,9 @@ jobs:
         id: cpr
         if: steps.netlify_check.outcome == 'failure'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
         uses: peter-evans/create-pull-request@v6
 =======
@@ -64,9 +73,12 @@ jobs:
 =======
         uses: peter-evans/create-pull-request@v6        with:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         uses: peter-evans/create-pull-request@v6        with:
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "fix(netlify): automated attempt to remediate Netlify build issues"
           title: "fix(netlify): attempt automated remediation"

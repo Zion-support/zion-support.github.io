@@ -1,11 +1,10 @@
-// Placeholder for i18n utilities
-export const supportedLocales = ['en', 'pt', 'es', 'ar'];
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 
-export const isRtl = (locale: string) => {
-  return locale === 'ar',
-};
+export function isRtl(locale: string): boolean {
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
 
-export default {
-  supportedLocales,
-  isRtl
+export const i18n = {
+  language: 'en',
+  resolvedLanguage: 'en'
 };

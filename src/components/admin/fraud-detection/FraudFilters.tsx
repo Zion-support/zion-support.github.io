@@ -1,10 +1,4 @@
-
-import React from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Search, Filter} from 'lucide-react'
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
+};
 
 interface FraudFiltersProps {
   searchQuery: string,
@@ -85,4 +79,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   )
 };
-
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

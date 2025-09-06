@@ -1,10 +1,15 @@
-
-import React, { useState } from "react";
-import {Control, UseFormSetValue} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
-import {Card, CardContent} from "@/components/ui/card";
+};
+import {
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface RateOptimizationSectionProps {
   control: Control<any>,
@@ -65,4 +70,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>
   )
 };
-
+"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -2,17 +2,26 @@
   "summary": {
     "totalChecks": 6,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     "timestamp": "2025-08-19T17:38:03.158Z"
 =======
@@ -26,9 +35,12 @@
 =======
     "timestamp": "2025-08-19T17:38:03.158Z"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "timestamp": "2025-08-19T17:38:03.158Z"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "results": [
     {
       "name": "Page Structure Validation",
@@ -51,6 +63,9 @@
     {
       "name": "Environment Variables",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "status": "PASS",
@@ -64,10 +79,13 @@
       "status": "PASS",
       "result": "Environment variables check completed",      "critical": false
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "status": "PASS",
       "result": "Environment variables check completed",      "critical": false
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "name": "File Permissions",
@@ -83,6 +101,9 @@
     }
   ],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   "recommendations": []
@@ -95,6 +116,9 @@
 =======
   "recommendations": []}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   "recommendations": []}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

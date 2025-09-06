@@ -1,7 +1,14 @@
+}};
+export const apiClient = new ApiClient();
+};
+export const apiClient = new ApiClient();
+export type { ApiResponse, RequestOptions };
+;
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }
 
 interface RequestOptions extends RequestInit {
@@ -24,21 +31,20 @@ interface AbortSignal {
 }
 
 class AbortController {
-  signal: AbortSignal;
-  abort(): void,
+  signal: AbortSignal, abort(): void,
 }
 
 class ApiClient {
-  private baseUrl: string;
-  private defaultTimeout: number,
+  private baseUrl: string, private defaultTimeout: number,
 
   constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
-    this.baseUrl = baseUrl;
-    this.defaultTimeout = defaultTimeout,
+    this.baseUrl = baseUrl,
+    this.defaultTimeout = defaultTimeout
   }
 
   private async request<T>(
     endpoint: string,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = this.defaultTimeout, ...fetchOptions } = options;
@@ -49,11 +55,12 @@ class ApiClient {
 
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
         ...fetchOptions;
-        signal: controller.signal;
+        signal: controller.signal,
         headers: {
-          'Content-Type': 'application/json';
-          ...fetchOptions.headers,
-        };
+    'Content-Type': 'application/json',
+    ...fetchOptions.headers
+  };
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
 
       clearTimeout(timeoutId);
@@ -68,8 +75,8 @@ class ApiClient {
       // eslint-disable-next-line no-console
       console.error('API request failed:', error);
       return {
-        error: error instanceof Error ? error.message : 'Unknown error occurred';
-        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error occurred', success: false,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -81,16 +88,16 @@ class ApiClient {
   async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options;
-      method: 'POST';
-      body: data ? JSON.stringify(data) : undefined,
+      method: 'POST', body: data ? JSON.stringify(data) : undefined,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     });
   }
 
   async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options;
-      method: 'PUT';
-      body: data ? JSON.stringify(data) : undefined,
+      method: 'PUT', body: data ? JSON.stringify(data) : undefined,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     });
   }
 
@@ -101,3 +108,4 @@ class ApiClient {
 
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

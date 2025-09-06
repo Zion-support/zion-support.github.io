@@ -81,6 +81,9 @@
 [[scheduled.functions]]
   name = "autonomous-meta-orchestrator"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   schedule = "*/1 * * * *" # every minute
@@ -92,9 +95,12 @@
 =======
   schedule = "*/1 * * * *" # every minute[[scheduled.functions]]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   schedule = "*/1 * * * *" # every minute[[scheduled.functions]]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   name = "trigger-all-and-commit"
   schedule = "*/1 * * * *" # every minute
 

@@ -1,5 +1,6 @@
-import {useRouter} from 'next/router', // Changed from useParams
-import {useEffect, useState} from 'react';
+
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/button';
 import {NEW_PRODUCTS} from '@/data/newProductsData';
@@ -94,4 +95,31 @@ export default function ProductPage() {
     </>
   );
 
+};
+//Only fetch if id is available (from router) ;
+}const inCart = items.some (i => i.id === product.id);
+const handleAdd = () => {;
+  if (inCart) return;
+setAdding (true);
+dispatch ({;
+  type: 'ADD ITEM';
+payload: {;
+  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
+
+});
+toast.success (`1× $ {;
+  product.title ;
+}added`);
+setTimeout ( () => setAdding (false), 500) ;
+};
+product.title ;
+}description= {;
+  product.description ;
+}ogImage= {;
+  product.images?.[0] ;
+}/> </Button> </div> </>) ;
+}'
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

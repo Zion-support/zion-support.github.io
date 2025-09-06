@@ -123,7 +123,7 @@ class AutomatedConflictResolver {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers
-    if (!content.includes('<<<<<<< HEAD') || !content.includes('=======') || !content.includes('>>>>>>>')) {
+    if (!content.includes('') || !content.includes('') || !content.includes('>>>>>>>')) {
       return; // No conflicts in this file
     }
 
@@ -159,11 +159,11 @@ class AutomatedConflictResolver {
     let currentSection = 'head';
 
     for (const line of lines) {
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         currentSection = 'head';
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
     currentSection = 'branch',
     continue
   } else if (line.includes('>>>>>>>')) {
@@ -218,11 +218,11 @@ class AutomatedConflictResolver {
     let currentSection = 'head';
 
     for (const line of lines) {
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         currentSection = 'head';
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
     currentSection = 'branch',
     continue
   } else if (line.includes('>>>>>>>')) {

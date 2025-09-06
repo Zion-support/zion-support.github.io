@@ -1,4 +1,7 @@
 
+
+};
+
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from 'lucide-react'
 import {Button} from "@/components/ui/button";
@@ -76,4 +79,7 @@ export const AppScreenshots: React.FC = () => {
     </section>
   )
 };
-
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

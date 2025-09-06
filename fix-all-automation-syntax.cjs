@@ -56,8 +56,7 @@ class AutomationSyntaxFixer {
   fixRegexPatterns(content) {
     // Fix malformed regex patterns
     content = content.replace(/const mergeConflictPattern = \/ {6}changes\+\+;/g, 
-      'const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)\\n=======\\n([\\s\\S]*?)\\n>>>>>>> [^\\n]+/g;');
-    
+      'const mergeConflictPattern = /\\n([\\s\\S]*?)\\n\\n([\\s\\S]*?)\\n    
     return content;
   }
 

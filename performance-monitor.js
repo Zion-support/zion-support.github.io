@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 class PerformanceMonitor {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   constructor() {
     this.metrics = {
       bundleSize: 0,
@@ -29,37 +30,7 @@ class PerformanceMonitor {
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString()
-    };
-  }
-
-  async measureBundleSize() {
-    try {
-      const buildDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(buildDir)) {
-    const stats = fs.statSync(buildDir),
-    this.metrics.bundleSize = stats.size
-  }
-    } catch(error) {
-      console.error('Error measuring bundle size:', error);
-    }
-  }
-
-  async measureMemoryUsage() {
-    const usage = process.memoryUsage();
-    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
-  }
-
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
@@ -86,3 +57,6 @@ const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 console.log('Performance report generated:', reportPath);
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

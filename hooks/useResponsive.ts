@@ -1,4 +1,5 @@
-import {useState, useEffect} from 'react';
+        "isDesktop": width >= 1024})};
+import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
   isMobile: boolean;
@@ -41,3 +42,11 @@ const useResponsive = (): ResponsiveState => {
 };
 
 export default useResponsive;
+    updateDimensions();
+    window.addEventListener(;
+  'resize', updateDimensions);
+    return () => window.removeEventListener(;
+  'resize', updateDimensions)}, []);
+  return state};
+export default useResponsive;
+;

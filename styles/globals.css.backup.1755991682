@@ -203,12 +203,18 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 /* New Futuristic Effects */
 
 /* Holographic effect */
@@ -404,6 +410,9 @@ h3 {
 
 .glitch::before,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 .glitch::after {
 =======
@@ -473,9 +482,12 @@ h3 {
 =======
 .glitch::after {  content: attr(data-text);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 .glitch::after {  content: attr(data-text);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   position: absolute;
   top: 0;
   left: 0;
@@ -487,13 +499,24 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 .glitch::before {
-  animation: glitch-1 2s infinite;  color: #ff0000;
+  animation: glitch-1 2s infinite;
+=======
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+  color: #ff0000;
   z-index: -1;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 .glitch::before {
@@ -502,8 +525,11 @@ h3 {
 }
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
@@ -520,6 +546,9 @@ h3 {
 
 @keyframes glitch-1 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   0%, 100% { transform: translate(0); }
 =======
@@ -533,20 +562,35 @@ h3 {
   0% { transform: translate(0); }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   20% { transform: translate(-2px, 2px); }
+<<<<<<< HEAD
+=======
 =======
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
+<<<<<<< HEAD
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }  20% { transform: translate(2px, -2px); }
+  0%, 100% { transform: translate(0); }
+=======
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+  0% { transform: translate(0); }
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+  20% { transform: translate(2px, -2px); }
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
@@ -561,8 +605,11 @@ h3 {
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }
 
 /* Enhanced component styles */
@@ -584,6 +631,9 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 .button::before {
 =======
@@ -603,9 +653,12 @@ h3 {
 =======
 .button::before {  content: '';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 .button::before {  content: '';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   position: absolute;
   top: 0;
   left: -100%;
@@ -621,12 +674,18 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 .button:hover::before {
   left: 100%;
 }
@@ -640,6 +699,9 @@ h3 {
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   background-size: 300% 300%;
 =======
@@ -829,21 +891,30 @@ h3 {
 =======
   background-size: 300% 300%;  -webkit-background-clip: text;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   background-size: 300% 300%;  -webkit-background-clip: text;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -904,6 +975,9 @@ h3 {
   .quantum-tunnel,
   .floating-orbs,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   .matrix-rain {
 =======
@@ -918,13 +992,70 @@ h3 {
 @media (max-width: 768px) {
   .futuristic-card:hover {
     transform: none;
+<<<<<<< HEAD
+=======
 =======
   .matrix-rain {    background: none !important;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
   
+  .quantum-particles::before {
+    animation-duration: 30s;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .futuristic-card {
+    border-width: 2px;
+  }
+  
+  .neon-glow {
+    text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .futuristic-card:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .futuristic-bg,
+  .quantum-neural-bg,
+  .particles-bg {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+    background: none !important;
+  }
+  
+<<<<<<< HEAD
   .cyber-grid {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     background-size: 15px 15px;
 =======
   .futuristic-card {
@@ -939,9 +1070,12 @@ h3 {
   .cyber-grid {
     background-size: 15px 15px;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     background-size: 15px 15px;  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }
 
 /* Dark mode enhancements */

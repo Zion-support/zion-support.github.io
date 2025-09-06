@@ -5,12 +5,3 @@ const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), {
 
 export default function BookBuilderPage() {
   return <BookBuilder />;
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false }),
-export default function BookBuilderPage() {
-  return <BookBuilder />
-}
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false }),
-export default function BookBuilderPage() {
-  return <BookBuilder />
-}
-ursor/integrate-build-improve-and-re-verify-b76c

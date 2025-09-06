@@ -577,6 +577,9 @@
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",
@@ -587,9 +590,12 @@
 =======
     "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
     "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
@@ -722,12 +728,18 @@
       "eslint --fix"
     ]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

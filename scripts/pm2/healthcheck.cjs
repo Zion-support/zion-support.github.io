@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -17,6 +16,9 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
+<<<<<<< HEAD
+	console.log('Healthy')})();    // Check disk space
+=======
 	console.log('Healthy')})();
 =======
 #!/usr/bin/env node
@@ -203,6 +205,7 @@ class HealthChecker {
     
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
@@ -264,4 +267,3 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

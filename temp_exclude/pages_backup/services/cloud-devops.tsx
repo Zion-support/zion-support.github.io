@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import {Cloud,, Server,, Database,, Shield,, Zap} from 'lucide-react';
 import React from 'react';
@@ -13,27 +9,17 @@ const features = [;
     title: 'Cloud Migration,',
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
-import {Cloud,, Server,, GitBranch,, Shield,, Zap,, CheckCircle,, ArrowRight} from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-=======
+import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -167,12 +153,8 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
-<<<<<<< HEAD
-=======
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -197,10 +179,6 @@ export default function CloudDevOpsPage() {
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -210,10 +188,6 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-<<<<<<< HEAD
-=======
-=======
-=======
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -227,8 +201,6 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
-<<<<<<< HEAD
-=======
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -270,15 +242,9 @@ export default function CloudDevOpsPage() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
-=======
-<<<<<<< HEAD
             </div>
-=======
             </motion.div>
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -297,10 +263,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -333,10 +295,6 @@ export default function CloudDevOpsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -404,8 +362,6 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -431,15 +387,9 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   ),
 }

@@ -1,3 +1,5 @@
+  quotes;
+  isArchived = false;
 
 import React from "react";
 import {Eye, MoreHorizontal, Archive, Trash2} from 'lucide-react'
@@ -174,4 +176,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
     </div>
   )
 };
-
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

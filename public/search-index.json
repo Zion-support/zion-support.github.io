@@ -8,42 +8,78 @@
       "title": "Home",
       "url": "/",
       "description": "Zion Tech Group - AI and Technology Solutions",
-      "keywords": ["AI", "technology", "solutions", "automation"],
+      "keywords": [
+        "AI",
+        "technology",
+        "solutions",
+        "automation"
+      ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 1
     },
     {
       "title": "About",
       "url": "/about",
       "description": "About Zion Tech Group - Leading AI and Technology Company",
-      "keywords": ["about", "company", "team", "mission"],
+      "keywords": [
+        "about",
+        "company",
+        "team",
+        "mission"
+      ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 2
     },
     {
       "title": "Services",
       "url": "/services",
       "description": "Our Services - AI Development, Automation, and Technology Solutions",
-      "keywords": ["services", "AI", "automation", "development"],
+      "keywords": [
+        "services",
+        "AI",
+        "automation",
+        "development"
+      ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 3
     },
     {
       "title": "Contact",
       "url": "/contact",
       "description": "Contact Us - Get in Touch with Zion Tech Group",
-      "keywords": ["contact", "support", "help"],
+      "keywords": [
+        "contact",
+        "support",
+        "help"
+      ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 4
     },
     {
       "title": "Portfolio",
       "url": "/portfolio",
       "description": "Our Portfolio - AI and Technology Projects",
-      "keywords": ["portfolio", "projects", "work", "examples"],
+      "keywords": [
+        "portfolio",
+        "projects",
+        "work",
+        "examples"
+      ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 5
     },
     {
       "title": "Blog",
       "url": "/blog",
       "description": "Blog - Latest AI and Technology Insights",
-      "keywords": ["blog", "articles", "insights", "news"],
-      "id": 6    }
+      "keywords": [
+        "blog",
+        "articles",
+        "insights",
+        "news"
+      ],
+      "id": 6
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ]
 }

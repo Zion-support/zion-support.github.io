@@ -24,9 +24,13 @@ function fixCriticalParsing(content) {
 <<<<<<< HEAD
   fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
 =======
+<<<<<<< HEAD
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
+=======
   fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4');
   
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Fix missing semicolons
   fixed = fixed.replace(/(\s+return\s+[^;]+)\n(\s*})/g, '$1;\n$2');
   

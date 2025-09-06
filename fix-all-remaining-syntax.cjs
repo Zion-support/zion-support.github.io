@@ -20,10 +20,7 @@ class ComprehensiveSyntaxFixer {
     let fixed = content;
 
     // Remove merge conflict markers
-    fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+    fixed = fixed.replace(/[\s\S]*?[\s\S]*?    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?    fixed = fixed.replace(/[\s\S]*?    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?/g, '');
 
     // Fix malformed object syntax
     fixed = fixed.replace(/}\s*hasDropdown:\s*true,/g, ',\n      hasDropdown: true,');

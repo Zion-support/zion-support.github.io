@@ -8,6 +8,9 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+<<<<<<< HEAD
+  trailingSlash: true,  images: {
+=======
   trailingSlash: true,
 =======
     ignoreDuringBuilds: true,
@@ -33,10 +36,18 @@ const nextConfig = {
   ],
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   images: {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     domains: [
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
+<<<<<<< HEAD
+      'via.placeholder.com'    ],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000  },
+=======
 <<<<<<< HEAD
       'via.placeholder.com'
 =======
@@ -52,6 +63,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -93,12 +105,16 @@ const nextConfig = {
         poll: 1000,
 <<<<<<< HEAD
         aggregateTimeout: 300
+<<<<<<< HEAD
+      }    }
+=======
       }
 =======
         aggregateTimeout: 300,
       };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     // Exclude apps directory from compilation
     config.module.rules.push({

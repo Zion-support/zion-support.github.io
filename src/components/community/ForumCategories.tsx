@@ -1,8 +1,3 @@
-import Link from "next/link";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone} from 'lucide-react'
-import {ForumCategoryInfo} from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -82,4 +77,11 @@ export const ForumCategories = () => {
 };
 
 export default ForumCategories;
+"
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
 
+
+export default ForumCategories;
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

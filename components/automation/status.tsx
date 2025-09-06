@@ -1,4 +1,6 @@
-import {useEffect, useState} from 'react';
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+}</div>) 
+import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
@@ -25,3 +27,5 @@ export default function AutomationStatusPage() {
     </div>
   );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

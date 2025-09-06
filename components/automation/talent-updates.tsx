@@ -1,3 +1,5 @@
+ </div>) ) 
+}</div> </div>) 
 import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
@@ -5,7 +7,7 @@ type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
-  let summaries: TalentSummary[] = [],
+  let summaries: TalentSummary[] = [];
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
@@ -33,3 +35,5 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
     </div>
   );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

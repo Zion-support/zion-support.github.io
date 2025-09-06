@@ -23,7 +23,7 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
   }
 
   // Check if file has syntax errors
@@ -49,10 +49,7 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-=======
-    fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
-    
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -296,7 +293,6 @@ if (require.main === module) {
   }
 }
 
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

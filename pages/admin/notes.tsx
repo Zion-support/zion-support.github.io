@@ -1,38 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import {useEffect, useState} from 'react';
-ursor/integrate-build-improve-and-re-verify-b76c
 
-type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
-};
+interface Note {
+  id: string;
+  title: string;
+  content: string;
+  author: string;
+  createdAt: string;
+  updatedAt: string;
+  tags: string[];
+  isPrivate: boolean;
 
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true);
-import {useEffect, useState} from 'react';
+const mockNotes: Note[] = [
+  {
+    id: '1',
+    title: 'Project Alpha Status Update',
+    content: 'The Alpha project is progressing well. We have completed 75% of the planned features and are on track for the Q1 release.',
+    author: 'John Doe',
+    createdAt: '2025-01-15T09:00:00Z',
+    updatedAt: '2025-01-15T09:00:00Z',
+    tags: ['project', 'alpha', 'status'],
+    isPrivate: false
+  },
+  {
+    id: '2',
+    title: 'Security Audit Findings',
+    content: 'Critical security vulnerabilities found in the authentication system. Immediate action required.',
+    author: 'Jane Smith',
+    createdAt: '2025-01-15T10:30:00Z',
+    updatedAt: '2025-01-15T10:30:00Z',
+    tags: ['security', 'audit', 'critical'],
+    isPrivate: true
+  },
+  {
+    id: '3',
+    title: 'Team Meeting Notes',
+    content: 'Discussed upcoming features and resource allocation. Need to hire 2 additional developers.',
+    author: 'Mike Johnson',
+    createdAt: '2025-01-15T14:00:00Z',
+    updatedAt: '2025-01-15T14:00:00Z',
+    tags: ['meeting', 'team', 'hiring'],
+    isPrivate: false
+  }
+];
 
-type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
-};
-
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true);
+const AdminNotesPage: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-ursor/integrate-build-improve-and-re-verify-b76c
-
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterTag, setFilterTag] = useState('');
+  const [showPrivate, setShowPrivate] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
   useEffect(() => {
     async function load() {
       setLoading(true);
@@ -40,16 +58,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
         const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-ursor/integrate-build-improve-and-re-verify-b76c
         if (!res.ok) return;
         const data = await res.json();
-        setNotes(data.notes || [])
+        setNotes(data.notes || []);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
-    if (isAdmin) load()
+    if (isAdmin) load();
   }, [isAdmin]);
 
   return (
@@ -61,27 +77,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
-          />
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || [])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin]);
-
-  return (
-ursor/integrate-build-improve-and-re-verify-b76c
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Admin Notes</h1>
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-ursor/integrate-build-improve-and-re-verify-b76c
-          <span>Admin</span>
+          />          <span>Admin</span>
         </label>
       </div>
 
@@ -98,19 +94,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className='font-medium mb-1'>
                 {n.targetType} • {n.targetId}
-              </div>
-        <div className="opacity-70">No notes found.</div>
-      ) : (
-        <div className="opacity-70">No notes found.</div>
-      ) : (
-ursor/integrate-build-improve-and-re-verify-b76c
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
-ursor/integrate-build-improve-and-re-verify-b76c
-              <div>{n.text}</div>
+              </div>              <div>{n.text}</div>
             </div>
           ))}
         </div>
@@ -218,12 +202,3 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </>
   );
-      )}
-    </div>
-  )
-}
-      )}
-    </div>
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c

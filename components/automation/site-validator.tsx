@@ -1,25 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },
-interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
+ 
 
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }
-  }
 };
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },
-interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 
 type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -69,3 +50,5 @@ export default function SiteValidator({ report }: Props) {
     </div>
   );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

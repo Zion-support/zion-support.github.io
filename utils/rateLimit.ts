@@ -4,4 +4,5 @@ export function rateLimit(req: any, res: any, next: any) {
   if (next) {
     next();
   }
-}
+
+  return true;

@@ -1,3 +1,4 @@
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Placeholder() {
@@ -16,3 +17,6 @@ export default function Placeholder() {
     </div>
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

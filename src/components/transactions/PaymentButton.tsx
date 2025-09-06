@@ -1,11 +1,6 @@
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {useAuth} from "@/hooks/useAuth";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2} from 'lucide-react'
-import {useRouter} from 'next/router';
+        description: "Please sign in to make a purchase."}),
+
+import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
   amount: number,
@@ -100,6 +95,27 @@ export function PaymentButton({
         buttonText
       )}
     </Button>
+  );
 
+}catch (error) {';
+  logErrorToProduction ('Payment error:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  //Reset button state after a short delay setTimeout ( () => {;
+  setIsProcessing (false) ;
+}, 1500) ;
+
+};
+
+}> {";
+  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
+}</Button>) ;
+}'"
+=======
   )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

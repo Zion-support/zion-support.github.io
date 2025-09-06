@@ -1,14 +1,5 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import {useTranslation} from "react-i18next";
-import {Search, X} from 'lucide-react'
-import {Input} from "@/components/ui/input";
-import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
-import {SearchSuggestion} from "@/types/search";
-import {useDebounce} from "@/hooks/useDebounce";
-import {useRouter} from "next/router";
-import {slugify} from "@/lib/slugify";
-import {debounce} from "lodash";
-import {logInfo, logWarn} from '@/utils/productionLogger';
+          
+import { logInfo, logWarn } from '@/utils/productionLogger';
 
 
 interface EnhancedSearchInputProps {
@@ -265,6 +256,32 @@ export function EnhancedSearchInput({
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
+  );
 
+}setIsFocused (false);
+inputRef.current?.blur ();
+setHighlightedIndex (-1) ;
+};
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  switch (e.key) {';
+  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
+  case 'Escape': e.preventDefault ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+inputRef.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break ;
+
+};
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestions /> </div>) ;
+}'"
+=======
   )
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

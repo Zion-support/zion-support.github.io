@@ -7,13 +7,7 @@ export default function LearnMarketplace() {
     category: '',
     level: '',
     isFree: '',
-  });
-export default function LearnMarketplace() {
-  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
-export default function LearnMarketplace() {
-  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
-ursor/integrate-build-improve-and-re-verify-b76c
-  const [courses, setCourses] = useState<Course[]>([]);
+  });  const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,35 +21,18 @@ ursor/integrate-build-improve-and-re-verify-b76c
       const data = await resp.json();
       setCourses(data.courses || []);
       setLoading(false);
-      setLoading(false)
-ursor/integrate-build-improve-and-re-verify-b76c
     }
-    load()
+    load();
   }, [filters]);
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-end justify-between gap-4">
+    <div className='space-y-6'>
+      <div className='flex items-end justify-between gap-4'>
         <div>
           <h1 className='text-2xl font-semibold'>Zion Academy</h1>
           <div className='text-gray-500 text-sm'>
             Courses • Certifications • Career Boost
-          </div>
-      setLoading(false)
-    }
-    load()
-  }, [filters]);
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-end justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold">Zion Academy</h1>
-          <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
-          <h1 className="text-2xl font-semibold">Zion Academy</h1>
-          <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
-ursor/integrate-build-improve-and-re-verify-b76c
-        </div>
+          </div>        </div>
       </div>
 
       <FilterBar {...filters} onChange={setFilters} />
@@ -64,20 +41,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <div>Loading...</div>
       ) : (
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {courses.map(c => (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((c) => (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((c) => (
-ursor/integrate-build-improve-and-re-verify-b76c
-            <CourseCard key={c.id} course={c} />
+          {courses.map(c => (            <CourseCard key={c.id} course={c} />
           ))}
         </div>
       )}
     </div>
   );
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c

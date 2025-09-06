@@ -206,6 +206,9 @@
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
@@ -222,10 +225,13 @@
     "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
     "cloud:auto": "node automation/cloud-autonomous-orchestrator.cjs"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
     "cloud:auto": "node automation/cloud-autonomous-orchestrator.cjs"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -262,6 +268,9 @@
     "postcss": "^8.4.32",
     "react": "^17.0.2",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "react-chartjs-2": "^3.3.0",
@@ -276,11 +285,14 @@
     "chart.js": "^3.9.1",
     "html-to-image": "^1.11.11",    "react-datepicker": "^8.4.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "react-chartjs-2": "^3.3.0",
     "chart.js": "^3.9.1",
     "html-to-image": "^1.11.11",    "react-datepicker": "^8.4.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0"
   },
@@ -300,12 +312,18 @@
   },
   "type": "module"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

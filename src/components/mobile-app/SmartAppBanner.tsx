@@ -1,3 +1,5 @@
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  
 
 import React, { useState, useEffect } from "react";
 import {safeStorage} from "@/utils/safeStorage";
@@ -90,4 +92,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   );
 };
-
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,16 +1,33 @@
-import {useState} from 'react';
-
-export function useLocalStorage<T>(key: string, initialValue: T) {
+};
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
-    if (typeof window === 'undefined') {
-      return initialValue;
-    }
-    
-    try {
+    try {;
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (_error) {
-      // Error reading localStorage key
+      return item ? JSON.parse(item) : initialValue} catch (error) {;
+      console.error(`Error reading localStorage key "${key}":`, error);
+      return initialValue}
+  });
+  const setValue = (value: T | ((val: T) => T)) => {
+    try {;
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore),
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
+      console.error(`Error setting localStorage key "${key}":`, error)}
+  };
+  return [storedValue, setValue] as const}
+}
+}
+}
+};
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+    const item = window.localStorage.getItem(key),
+    return item ? JSON.parse(item) : initialValue
+  } catch (error) {
+      console.error(`Error reading localStorage key "${key}":`, error);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return initialValue;
     }
   });
@@ -23,10 +40,17 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
-    } catch (_error) {
-      // Error setting localStorage key
+
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(`Error setting localStorage key "${key}":`, error);
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   };
 
   return [storedValue, setValue] as const;
-}
+};
+
+export default useLocalStorage;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

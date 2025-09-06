@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 name: Workflow Auto-Healer
@@ -10,9 +13,12 @@ name: Workflow Auto Healer
 =======
 name: Workflow Auto-Healer
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 name: Workflow Auto-Healer
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 on:
   workflow_run:
     workflows: ["*"]
@@ -53,12 +59,18 @@ jobs:
         run: |
           echo "Validating all workflow files..."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           invalid_files=()
 
           while IFS= read -r workflow_file; do
@@ -77,6 +89,9 @@ PY
             echo "needs_fix=true" >> "$GITHUB_OUTPUT"
             echo "invalid_count=${#invalid_files[@]}" >> "$GITHUB_OUTPUT"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
             echo "Found ${#invalid_files[@]} invalid workflows"
 =======
@@ -100,9 +115,12 @@ PY
 =======
             echo "Found ${#invalid_files[@]} invalid workflows"          else
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
             echo "Found ${#invalid_files[@]} invalid workflows"          else
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             echo "needs_fix=false" >> "$GITHUB_OUTPUT"
             echo "All workflows are valid"
           fi
@@ -110,14 +128,20 @@ PY
         run: |
           echo "📊 Auto-Heal Report" > auto-heal-report.md
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           echo "===================" >> auto-heal-report.md
 =======
           echo "=====" >> auto-heal-report.md
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           echo "=====" >> auto-heal-report.md
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           echo "" >> auto-heal-report.md
           echo "**Timestamp:** $(date)" >> auto-heal-report.md
           echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md

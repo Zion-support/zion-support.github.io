@@ -10,20 +10,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const {
       projectId,
-    fromRole,
+      fromRole,
       fromId,
-    rating,
+      rating,
       text,
-    categories,
-      anonymous} = req.body as {
-      projectId: string,
-      fromRole: 'client' | 'talent',
-      fromId: string,
-      rating: number,
-      text: string,
-      categories?: Review['categories'];
+      categories,
+      anonymous
+    } = req.body as {
+      projectId: string, fromRole: 'client' | 'talent',
+      fromId: string, rating: number,
+      text: string, categories?: Review['categories'],
       anonymous?: boolean
     };
+
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
@@ -42,8 +41,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
     }
 
-    const toRole = counterpartRole(fromRole),
+    const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
+
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
@@ -58,20 +58,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const review: Review = {
       id: uuidv4(),
       projectId,
-    fromRole,
+      fromRole,
       fromId,
-    toRole,
+      toRole,
       toId,
-    rating,
+      rating,
       text: String(text).trim(),
-      categories;
+      categories,
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
-      reported: false,
-      reports: [],
+      reported: false, reports: [],
       removed: false,
-      createdAt: now},
+      createdAt: now};
+
     await upsertReview(review);
+
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })

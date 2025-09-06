@@ -1,20 +1,46 @@
-// Placeholder for fsDb utilities
-export const getSupportTickets = async () => {
-  // Placeholder implementation
-  return [];
-};
+import { promises as fs } from 'fs';
+import path from 'path';
 
-export const createSupportTicket = async (ticket: any) => {
-  // Placeholder implementation
-  return { id: Date.now().toString(), ...ticket };
-};
+const DATA_DIR = path.join(process.cwd(), 'data');
 
-export const updateSupportTicket = async (id: string, updates: any) => {
-  // Placeholder implementation
-  return { id, ...updates };
-};
+export function readJson<T>(filePath: string, defaultValue: T): T {
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const data = fs.readFileSync(fullPath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    return defaultValue;
+  }
+}
 
-export const deleteSupportTicket = async (id: string) => {
-  // Placeholder implementation
-  return { success: true };
-};
+export function writeJson<T>(filePath: string, data: T): void {
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const dir = path.dirname(fullPath);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error('Error writing JSON file:', error);
+  }
+}
+
+export async function readJsonAsync<T>(filePath: string, defaultValue: T): Promise<T> {
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const data = await fs.readFile(fullPath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    return defaultValue;
+  }
+}
+
+export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void> {
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const dir = path.dirname(fullPath);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(fullPath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error('Error writing JSON file:', error);
+  }
+}

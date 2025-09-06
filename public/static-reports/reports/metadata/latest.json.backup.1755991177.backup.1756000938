@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   "generatedAt": "2025-08-14T09:38:10.923Z",
@@ -13,10 +16,13 @@
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,  "items": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,  "items": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       "route": "/404",
       "missing": [
@@ -119,6 +125,9 @@
       "route": "/reports/ai-lab",
       "missing": [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
         "description",
@@ -511,9 +520,12 @@
 =======
         "description",        "og:title",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "description",        "og:title",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:description",
         "og:image",
         "twitter:card"
@@ -525,6 +537,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/ai-trends",
@@ -728,9 +743,12 @@
 =======
       "route": "/reports/ai-trends",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/ai-trends",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -2257,13 +2275,19 @@
         "title": "Reference Architecture — Autonomous Content Mesh",
         "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
     },
     {
@@ -21714,12 +21738,18 @@
         "title": "Guide — Cloud Improving Implementation",
         "description": "Guide — Cloud Improving Implementation — auto-suggested description"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
     },
     {
@@ -21964,6 +21994,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",
@@ -22144,9 +22177,12 @@
 =======
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -26839,13 +26875,19 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Ultra-Fast Guide: Real-time collaboration tools",
@@ -27150,12 +27192,18 @@
         "og:image",
         "twitter:card"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Guide — Techcrunch Pebble Implementation",
@@ -27164,6 +27212,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/guides/guide-2025-08-14-093804",
@@ -27171,14 +27222,21 @@
       "route": "/reports/guides/ultra-1755575056351-5e3sob",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
+<<<<<<< HEAD
         "title": "Guide — Techcrunch Pebble Implementation",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"
 =======
         "title": "Ultra-Fast Guide: Lightning deployment pipelines",
@@ -27206,9 +27264,12 @@
         "title": "Guide — Techcrunch Pebble Implementation",
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/reports/",
@@ -27242,6 +27303,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/innovations/insight-2025-08-13-2021",
@@ -30072,9 +30136,12 @@
 =======
       "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -34524,6 +34591,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/patterns/pattern-2025-08-14-093258",
@@ -34624,9 +34694,12 @@
 =======
       "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -34831,6 +34904,9 @@
       ],
       "suggestion": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
         "title": "Playbook — Autonomous Delivery",
@@ -48503,10 +48579,13 @@
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-13-223717",
@@ -50013,13 +50092,19 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Pattern: Real-time collaboration tools Architecture",
@@ -50354,12 +50439,18 @@
         "og:image",
         "twitter:card"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
@@ -50368,6 +50459,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-040018",
@@ -50385,18 +50479,24 @@
       ],
       "suggestion": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/playbooks/playbook-2025-08-14-040018",      "missing": [
         "og:image"
       ],
       "suggestion": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-041113",
 =======
@@ -50418,12 +50518,15 @@
       ],
       "suggestion": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/playbooks/playbook-2025-08-14-041113",      "missing": [
         "og:image"
       ],
       "suggestion": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
@@ -50446,6 +50549,9 @@
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
 =======
@@ -50456,9 +50562,12 @@
 =======
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-14-043123",
@@ -55632,6 +55741,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-0544",
@@ -55812,9 +55924,12 @@
 =======
       "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -60517,13 +60632,19 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Rapid Technology Advancement",
@@ -60848,12 +60969,18 @@
         "og:image",
         "twitter:card"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-13 19:45",
@@ -60862,6 +60989,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1946",
@@ -60879,18 +61009,24 @@
       ],
       "suggestion": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/updates/update-2025-08-13-1946",      "missing": [
         "og:image"
       ],
       "suggestion": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "title": "Autonomous Update — 2025-08-13 19:46",
         "description": "Autonomous Update — 2025-08-13 19:46 — auto-suggested description"
       }
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1947",
 =======
@@ -60902,14 +61038,21 @@
       "route": "/reports/updates/ultra-1755575057167-q5tp5b",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
+<<<<<<< HEAD
         "title": "Autonomous Update — 2025-08-13 19:47",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"
 =======
         "title": "Lightning Innovation Cycle",
@@ -60924,9 +61067,12 @@
         "title": "Autonomous Update — 2025-08-13 19:47",
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/reports/updates/update-2025-08-13-1948",
@@ -67860,6 +68006,9 @@
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-14T09-30",
@@ -68013,9 +68162,12 @@
 =======
       "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "og:image"
       ],
       "suggestion": {
@@ -68087,12 +68239,18 @@
       "route": "/services/",
       "missing": [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "description",
         "og:title",
         "og:description",
@@ -68102,6 +68260,9 @@
       "suggestion": {
         "title": "Services",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
         "description": "Services — auto-suggested description"
 =======
@@ -69684,9 +69845,12 @@
 =======
         "description": "Services — auto-suggested description"      }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "description": "Services — auto-suggested description"      }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/site-health",
@@ -69698,13 +69862,19 @@
         "description": "Site Health — auto-suggested description"
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "route": "/sitemap",
@@ -72439,12 +72609,18 @@
         "description": "User Management — auto-suggested description"
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   ]
 }

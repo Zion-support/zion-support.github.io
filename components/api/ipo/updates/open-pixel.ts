@@ -5,20 +5,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id || ''),
   if (id) {
     const updates = readJsonFile('updates.json', [] as any[]);
-    const idx = updates.findIndex((x: any) => x.id === id),
+    const idx = updates.findIndex((x: any) => x.id === id);
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens || 0) + 1;
-      writeJsonFile('updates.json', updates)
+      writeJsonFile('updates.json', updates);
     }
   }
   const pixel = Buffer.from(
-    'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==base64'
+    'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+    'base64'
   );
+  res.setHeader('Content-Type', 'image/gif');
+  res.setHeader(
+    'Cache-Control',
+    'no-store, no-cache, must-revalidate, proxy-revalidate'
+  );
+  res.status(200).send(pixel);
+=======
   res.setHeader('Content-Typeimage/gif');
   res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate');
   res.status(200).send(pixel)
 }
-  res.setHeader('Content-Typeimage/gif');
-  res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate');
-  res.status(200).send(pixel)
-}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

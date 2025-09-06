@@ -1,11 +1,5 @@
 
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from 'lucide-react'
+
 
 interface TalentRateRecommenderProps {
   skills: string[],
@@ -91,4 +85,21 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     </div>
   )
 };
-
+return (<div className="space-y-4" > <div> {";
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
+  generateSuggestion ";
+}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
+  suggestion ;
+}isLoading= {;
+  isLoading ;
+}onApplySuggestion= {;
+  handleApplySuggestion ;
+}rateType= {;
+  rateType ;
+}/>) ;
+}</div> </div>) ;
+};
+'"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

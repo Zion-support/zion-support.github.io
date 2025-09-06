@@ -2,12 +2,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 name: Autonomous Cloud Ops
+=======
+name: Autonomous Cloud Automations
+>>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
+
 on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 name: Autonomous Cloud Ops
@@ -15,13 +25,19 @@ on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   workflow_dispatch: {}
 
 permissions:
   contents: write
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
   workflow_dispatch:
@@ -31,8 +47,11 @@ permissions:
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 jobs:
   run-automations:
     runs-on: ubuntu-latest
@@ -40,6 +59,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
         with:
@@ -104,7 +126,10 @@ jobs:
         with:
           persist-credentials: true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         with:
           persist-credentials: true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

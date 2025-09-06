@@ -3,37 +3,42 @@ import React, {
   useContext,
   useEffect,
   useMemo,
-  useState
+  useState,;} from 'react';
 } from 'react';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-  id: string, name: string,
-  role: UserRole, avatarUrl?: string,
-  onboardingCompleted: boolean,
+  id: string;
+  name: string;
+  role: UserRole;
+  avatarUrl?: string;
+  onboardingCompleted: boolean;
 };
 
 export type UserContextValue = {
-  user: User | null, setUser: (user: User | null) => void,
-  logout: () => void, completeOnboarding: () => void,
+  user: User | null;
+  setUser: (user: User | null) => void;
+  logout: () => void;
+<<<<<<< HEAD
+  completeOnboarding: () => void;};
 };
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
 const DEFAULT_USER: User = {
-  id: 'u001',
+  id: 'u_001',
   name: 'Jordan Lee',
   role: 'client',
-  onboardingCompleted: false
+  onboardingCompleted: false,
 };
 
-export function UserProvider({
-  children
-}: {
-  children: React.ReactNode,
-}) {
+<<<<<<< HEAD
+export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);
   const [user, setUser] = useState<User | null>(null);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     try {
@@ -50,15 +55,12 @@ export function UserProvider({
 
   useEffect(() => {
     try {
-      if (user) {
-        localStorage.setItem('zion.user', JSON.stringify(user));
-      } else {
-        localStorage.removeItem('zion.user');
-      }
-    } catch {
-      // Ignore localStorage errors
-    }
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+      else localStorage.removeItem('zion.user');
+<<<<<<< HEAD
+    } catch {}  }, [user]);
   }, [user]);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const value = useMemo<UserContextValue>(
     () => ({
@@ -66,29 +68,17 @@ export function UserProvider({
       setUser,
       logout: () => setUser(null),
       completeOnboarding: () =>
-        setUser(prev =>
-          prev
-            ? {
-                ...prev,
-                onboardingCompleted: true
-              }
-            : prev
-        )
+        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),
     }),
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     [user]
   );
 
-  return (
-    <UserContext.Provider value={value}>
-      {children}
-    </UserContext.Provider>
-  );
-}
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
 export function useUser() {
   const ctx = useContext(UserContext);
-  if (!ctx) {
-    throw new Error('useUser must be used within UserProvider');
-  }
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+<<<<<<< HEAD
   return ctx;
-}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

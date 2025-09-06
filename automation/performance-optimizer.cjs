@@ -339,14 +339,8 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
 // Run the performance optimizer
 if (require.main === module) {
-<<<<<<< HEAD
-    const optimizer = new PerformanceOptimizer(),
-    optimizer.run().catch(console.error)
-  }
-=======
   const optimizer = new PerformanceOptimizer();
   optimizer.run().catch(console.error);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = PerformanceOptimizer;

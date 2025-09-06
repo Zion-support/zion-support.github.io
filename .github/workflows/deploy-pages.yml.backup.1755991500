@@ -12,6 +12,9 @@ permissions:
 
 concurrency:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   group: "pages"
@@ -22,9 +25,12 @@ concurrency:
 =======
   group: "pages"  cancel-in-progress: true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   group: "pages"  cancel-in-progress: true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 jobs:
   build:
@@ -33,12 +39,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -54,6 +66,9 @@ jobs:
     environment:
       name: github-pages
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       url: ${{ steps.deployment.outputs.page_url }}
 =======
@@ -89,9 +104,12 @@ jobs:
 =======
       url: ${{ steps.deployment.outputs.page_url }}    steps:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       url: ${{ steps.deployment.outputs.page_url }}    steps:
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

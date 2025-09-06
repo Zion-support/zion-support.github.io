@@ -52,6 +52,9 @@
   {
     "route": "/404",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "title": "404 - Page Not Found | Zion Tech Group",
@@ -65,10 +68,13 @@
     "title": "404 - Page Not Found | Zion Tech Group",
     "h1": "404"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "title": "404 - Page Not Found | Zion Tech Group",
     "h1": "404"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/500",
     "title": "",
@@ -87,6 +93,9 @@
   {
     "route": "/_document",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "title": "",
@@ -94,14 +103,21 @@
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
     "h1": ""
+<<<<<<< HEAD
+=======
 =======
     "title": "",    "h1": ""
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
   {
     "route": "/about",
+<<<<<<< HEAD
     "title": "About Us | Zion Tech Group",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "h1": "About Zion Tech Group"
 =======
     "title": "About Us - Zion Tech Group",
@@ -116,9 +132,12 @@
     "title": "About Us | Zion Tech Group",
     "h1": "About Zion Tech Group"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "h1": "About Zion Tech Group"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/agency-dashboard",
     "title": "",
@@ -332,6 +351,9 @@
   {
     "route": "/contact",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "title": "Contact Us | Zion Tech Group",
@@ -345,10 +367,13 @@
     "title": "Contact Us | Zion Tech Group",
     "h1": "Get in Touch"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "title": "Contact Us | Zion Tech Group",
     "h1": "Get in Touch"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/cutting-edge-pricing-2025",
     "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
@@ -421,17 +446,26 @@
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "route": "/explore",
     "title": "Explore Technology Categories | Zion Tech Group",
     "h1": "Explore Technology Categories"
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   {
 =======
@@ -493,9 +527,12 @@
 =======
   {  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   {  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/innovative-services-showcase-2025",
     "title": "Innovative Services Showcase 2025 | Zion Tech Group",
@@ -708,17 +745,26 @@
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "route": "/search",
     "title": "Search | Zion Tech Group",
     "h1": "Search Our Services"
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   {
 =======
@@ -760,9 +806,12 @@
 =======
   {  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   {  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/site-health",
     "title": "Site Health — A11y, Performance, Links",
@@ -772,6 +821,9 @@
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "h1": "Site Map"
@@ -782,9 +834,12 @@
 =======
     "h1": "Site Map"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "h1": "Site Map"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
     "route": "/soc2-compliance-automation",
     "title": "",

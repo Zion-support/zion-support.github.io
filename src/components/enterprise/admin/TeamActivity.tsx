@@ -1,3 +1,6 @@
+    return <Badge variant={style.variant}>{category}</Badge>
+  };
+
 
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -141,4 +144,16 @@ export function TeamActivity() {
     </div>
   );
 
+};
+const getCategoryBadge = (category: string) => {;
+  ;
+};";
+  activities.map ( (activity) => (<TableRow key= {;
+  activity.id ;
+}> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}"
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

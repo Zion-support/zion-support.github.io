@@ -1,22 +1,17 @@
-
-import React from "react";
-import {Clock} from 'lucide-react'
-
-interface TalentCardAvailabilityProps {
-  availabilityType: string
-}
-
-
-import React from "react";
-import {Clock} from 'lucide-react'
+import React from 'react';
+import { Clock } from 'lucide-react';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface TalentCardAvailabilityProps {
-  availabilityType: string
-}
+  availabilityType: string;
 
-export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+export function TalentCardAvailability({
+  availabilityType,
+}: TalentCardAvailabilityProps) {  // Format availability status
+=======
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':
@@ -26,14 +21,16 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':
         return 'bg-blue-500/20 text-blue-400',
       default:
+        return 'bg-gray-500/20 text-gray-400';
+    }
+  };
+=======
         return 'bg-gray-500/20 text-gray-400'
     }
   };
   
-        return 'bg-gray-500/20 text-gray-400'
-    }
-  };
-  
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
     switch (status) {
@@ -44,26 +41,18 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':
         return 'Project',
       default:
-        return status
+        return status;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   };
 
-  return (
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className="h-3 w-3" />
+  
+    >
+      <Clock className='h-3 w-3' />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   );
-        return status
-    }
-  };
-
-
-  return (
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className="h-3 w-3" />
-      <span>{getAvailabilityLabel(availabilityType)}</span>
-    </div>
-  );
+=======
 }
-}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

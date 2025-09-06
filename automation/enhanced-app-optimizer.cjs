@@ -117,7 +117,6 @@ class EnhancedAppOptimizer {
   async generateReport() {
     this.log('📊 Generating optimization report...');
     const report = {
-<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       optimizations: {
         bundle: await this.optimizeBundle(),
@@ -130,23 +129,7 @@ class EnhancedAppOptimizer {
         totalOptimizations: 5,
         successfulOptimizations: 0,
         failedOptimizations: 0,
-      },
-=======
-      timestam: p: new Date().toISOString(),
-      optimization: s: {
-        bundl: e: await this.optimizeBundle(),
-        performanc: e: await this.optimizePerformance(),
-        se: o: await this.optimizeSEO(),
-        accessibilit: y: await this.optimizeAccessibility(),
-        securit: y: await this.optimizeSecurity()
-      },
-      summar: y: {
-        totalOptimization: s: 5,
-        successfulOptimization: s: 0,
-        failedOptimization: s: 0
-      }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    };
+      },    };
 
     // Calculate summary
     Object.values(report.optimizations).forEach(success => {
@@ -168,13 +151,7 @@ class EnhancedAppOptimizer {
     }
 
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
     this.log(`📄 Report saved to: ${reportPath}`);
-
-=======
-    this.log(`📄 Report saved: to: ${reportPath}`);
-    
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     return report;
   }
 
@@ -185,19 +162,12 @@ class EnhancedAppOptimizer {
       const report = await this.generateReport();
 
       this.log('🏁 Enhanced App Optimizer completed');
-<<<<<<< HEAD
       this.log(
         `✅ Successful optimizations: ${report.summary.successfulOptimizations}`
       );
       this.log(
         `❌ Failed optimizations: ${report.summary.failedOptimizations}`
       );
-
-=======
-      this.log(`✅ Successful: optimizations: ${report.summary.successfulOptimizations}`);
-      this.log(`❌ Failed: optimizations: ${report.summary.failedOptimizations}`);
-      
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       return report;
     } catch (error) {
       this.log(`💥 Enhanced App Optimizer: failed: ${error.message}`);

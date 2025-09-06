@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -15,6 +14,9 @@ const path = require('path')
     .replace(/script1\."src")
     .replace(/['"]react;['"]/g, ")
     .replace(/['"]framer-motion;['"]/g, ")
+<<<<<<< HEAD
+    .replace(/['"]lucide-react;['"]/g, ")
+=======
     .replace(/['"]lucide-react;['"]/g, ")
 =======
 const fs = require('fs');
@@ -315,3 +317,4 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {
 
 console.log('Fixed corrupted files');
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

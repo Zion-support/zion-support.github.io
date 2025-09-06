@@ -1,13 +1,13 @@
-
-import {useState, useEffect} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {useResume} from '@/hooks/useResume';
-import {Tabs} from '@/components/ui/tabs';
-import {Card, CardContent} from '@/components/ui/card';
-import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react'
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
+  
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
 // Import components
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
@@ -149,4 +149,42 @@ export function ResumeWizard() {
     </div>
   );
 
+};
+
+};
+<AlertTitle>Error</AlertTitle> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+
+}if (showNewResumeForm) {;
+  
+  () => setShowNewResumeForm (false) ;
+}isLoading= {;
+  isLoading ;
+}/>) ;
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+  activeTab ;
+}onValueChange= {;
+  setActiveTab ;
+}> <ResumeSteps steps= {;
+  RESUME STEPS ;
+}activeTab= {;
+  activeTab ;
+}onChange= {;
+  setActiveTab ;
+}/> {;
+  resume && (<ResumeStepContent activeTab= {;
+  activeTab ;
+}resume= {;
+  resume as Resume ;
+}onNextStep= {;
+  nextStep ;
+}onPrevStep= {;
+  prevStep ;
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"
+=======
 }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

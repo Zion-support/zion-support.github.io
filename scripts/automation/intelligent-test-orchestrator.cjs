@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Intelligent Test Orchestrator;
@@ -31,6 +30,9 @@ const { execSync, spawn } = require('child_process')
           const result = execSync(`grep -r "${pattern}"`)
         const documentedTests = execSync(`grep -r "describe\\|it\\|test" src/ | grep -c "//" 2>/dev/null || echo "0"`)
           const result = execSync(`grep -r "${pattern}"`)
+<<<<<<< HEAD
+      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
+=======
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
 =======
 const fs = require('fs');
@@ -155,3 +157,4 @@ if (require.main === module) {
 
 module.exports = IntelligentTestOrchestrator;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
