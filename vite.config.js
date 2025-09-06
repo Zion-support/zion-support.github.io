@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-=======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default defineConfig({
   plugins: [react()],
@@ -17,22 +12,13 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-<<<<<<< HEAD
-  build: {
-    outDir: "dist",
-    sourcemap: true,
-    minify: "terser",
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
+          vendor: ['react', 'react-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          router: ['react-router-dom']
         }
       }
     },
@@ -44,9 +30,10 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"]
-  }
-});
-=======
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
 })
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
