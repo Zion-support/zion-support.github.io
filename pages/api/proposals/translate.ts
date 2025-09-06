@@ -28,7 +28,7 @@
     if (!markdown) return res && res.status($1).json({ $2 });
     const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
     const completion = await openai && openai.chat.completions && completions.create({
-      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
+      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini"
 
 
       messages: [

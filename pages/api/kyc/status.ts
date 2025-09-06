@@ -38,10 +38,10 @@ function handler() {
   $2
 }
   res.status (200).json ({
-    ok: true,
-    profile,
-    required_documents: getRequiredDocuments (profile.role),
-    optional_documents: getOptionalDocuments (profile.role),
+    ok: true
+    profile
+    required_documents: getRequiredDocuments (profile.role)
+    optional_documents: getOptionalDocuments (profile.role)
   });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';

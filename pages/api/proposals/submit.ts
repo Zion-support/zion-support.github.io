@@ -42,8 +42,8 @@ export default async function handler(
 }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
@@ -95,9 +95,9 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import nodemailer from './nodemailer';
 import crypto from './crypto';
 import {
-  get_proposal,
-  updateProposalMeta,
-  update_artifacts,
+  get_proposal
+  updateProposalMeta
+  update_artifacts
 } from '../../../utils / data / proposals';
 async /**
  * submitByEmail - Function description
@@ -113,10 +113,10 @@ function submitByEmail() {
 }
   const transporter = nodemailer.create_transport ({
 
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
+    host
+    port
+    secure: port === 465
+    auth: { user, pass }
   });
 
   try {

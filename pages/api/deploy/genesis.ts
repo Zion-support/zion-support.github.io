@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+    return;
+  }
+
+=======
 
 
 function summarizeModules(
@@ -48,7 +59,7 @@ export default async function handler(
 
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
-        error: "Missing required fields: instanceName, deploymentRegion",
+        error: "Missing required fields: instanceName, deploymentRegion"
 
       });
     }
@@ -75,10 +86,10 @@ function summarize_modules() {
   const active = [;
     ...Object.entries (modules);
       .filter (([, v]) => v);
-      .map (([k]) => `/${k}`),
+      .map (([k]) => `/${k}`)
     ...Object.entries (bonus);
       .filter (([, v]) => v);
-      .map (([k]) => `/${k}`),
+      .map (([k]) => `/${k}`)
   ];
   return active.length ? active.sort ().join (", ") : "None";
 }
@@ -104,14 +115,14 @@ if ( {) {
   try {
     const body = req.body || {}
     const {
-      instance_name,
-      default_language = "en",
-      deployment_region,
-      token_activation = false,
-      governance_mode = "democratic",
-      branding = {},
-      modules = {},
-      bonus_modules = {},
+      instance_name
+      default_language = "en"
+      deployment_region
+      token_activation = false
+      governance_mode = "democratic"
+      branding = {}
+      modules = {}
+      bonus_modules = {}
     } = body;
 ;
     // Check condition
@@ -119,7 +130,7 @@ if ( {) {
   $2
 }
       return res.status (400).json ({
-        error: "Missing required fields: instance_name, deployment_region",
+        error: "Missing required fields: instance_name, deployment_region"
       });
     }
     // Simulated provisioning operations;
@@ -128,16 +139,16 @@ if ( {) {
 ;
     const output_actions = {
       zionGPT: {
-        initialized: true,
-        routes: ["/gpt", "/gpt / router"],
-        agents: ["proposal - writer", "resume - generator"],
-      },
+        initialized: true
+        routes: ["/gpt", "/gpt / router"]
+        agents: ["proposal - writer", "resume - generator"]
+      }
       daoAndToken: {
-        token: token_activation ? "ZION$" : "disabled",
-        treasury: token_activation ? `${provision_id}-treasury` : null,
-        governance_mode,
-        voting_dashboard: "/dao",
-      },
+        token: token_activation ? "ZION$" : "disabled"
+        treasury: token_activation ? `${provision_id}-treasury` : null
+        governance_mode
+        voting_dashboard: "/dao"
+      }
       assets: {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
@@ -162,38 +173,38 @@ if ( {) {
         bonusModules
       )
     }
-          pdf: "/book / manifesto.pdf",
-          trailer_script: "/trailer / script",
-        },
-        summit: "/summit",
-      },
+          pdf: "/book / manifesto.pdf"
+          trailer_script: "/trailer / script"
+        }
+        summit: "/summit"
+      }
       public_pages: [;
-        "/about",
-        "/manifesto",
-        "/constitution",
-        "/partners",
-        "/academy",
-        "/marketplace",
-        "/dao",
-        `/nation/${default_language || "en"}`,
-      ],
+        "/about"
+        "/manifesto"
+        "/constitution"
+        "/partners"
+        "/academy"
+        "/marketplace"
+        "/dao"
+        `/nation/${default_language || "en"}`
+      ]
     }
 ;
     const operator = {
-      activeModulesSummary: summarize_modules (modules, bonus_modules),
+      activeModulesSummary: summarize_modules (modules, bonus_modules)
       mission: mission_paragraph (
-        deployment_region,
-        instance_name,
-        modules,
-        bonus_modules,
-      ),
+        deployment_region
+        instance_name
+        modules
+        bonus_modules
+      )
     }
 ;
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
-      operator,
-      access,
+      operator
+      access
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -216,13 +227,13 @@ export default async function handler(req, res) {
       version: 'Zion OS v1.0.0'};
 
     const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules),
+      activeModulesSummary: summarizeModules(modules, bonusModules)
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
 
     const access = {
-      roles: ['FounderSuperadminDAO Multisig'],
+      roles: ['FounderSuperadminDAO Multisig']
       export: {
-        type: 'application/json',
+        type: 'application/json'
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
 
     return res.status(200).json({ outputActions, deployLog, access, operator })
@@ -230,16 +241,35 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   try {
     const body = req.body || {};
     const {
+<<<<<<< HEAD
       instanceName,
+<<<<<<< HEAD
+      tokenActivation
+    } = body;
+
+    const now = new Date().toISOString();
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+    
+=======
       defaultLanguage,
       deploymentRegion,
       tokenActivation,
       governanceMode,
       branding,
       modules = {},
+=======
+      instanceName
+      defaultLanguage
+      deploymentRegion
+      tokenActivation
+      governanceMode
+      branding
+      modules = {}
+>>>>>>> main
       bonusModules = {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -274,32 +304,48 @@ export default async function handler(req, res) {
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     const outputActions = {
       zionGPT: {
-        initialized: true,
-        routes: ['/gpt/gpt/router'],
+        initialized: true
+        routes: ['/gpt/gpt/router']
         agents: ['proposal-writer', 'resume-generator']
-      },
+      }
       daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled',
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
+        token: tokenActivation ? 'ZION$' : 'disabled'
+        treasury: tokenActivation ? `${provisionId}-treasury` : null
         votingDashboard: '/dao'
-      },
+      }
       assets: {
-        whitepaper: '/whitepaper',
-        roadmap: '/roadmap',
+        whitepaper: '/whitepaper'
+        roadmap: '/roadmap'
         book: {
-          pdf: '/book/manifesto.pdf',
+          pdf: '/book/manifesto.pdf'
           trailerScript: '/trailer/script'
-        },
+        }
         summit: '/summit'
-      },
+      }
       publicPages: []
     };
+<<<<<<< HEAD
+
     res.status(200).json({
       success: true,
       provisionId,
-      actions: outputActions,
+      outputActions,
+      timestamp: now
+    });
+    return;
+  } catch (_error) {
+    res.status(500).json({ error: 'Failed to process genesis request' });
+    return;
+  }
+}
+=======
+    res.status(200).json({
+      success: true
+      provisionId
+      actions: outputActions
       timestamp: now
     });
   } catch (error) {
@@ -326,7 +372,7 @@ function summarizeModules(modules: Record<string, boolean>, bonus: Record<string
   }
 }
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length,
+  const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
 ;
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
@@ -448,3 +494,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

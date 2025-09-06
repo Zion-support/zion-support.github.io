@@ -8,8 +8,8 @@
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
-      ],
-      temperature: 0.7,
+      ]
+      temperature: 0.7
     });
 
     const content = response.choices?.[0]?.message?.content || "";
@@ -21,25 +21,25 @@ Do not include <html>, <body>, or scripts.`;
 }
 
         { role: 'user', content: user }
-      ],
-      temperature: 0.7,
+      ]
+      temperature: 0.7
     });
 const content = response.choices?.[0]?.message?.content || '';
     const title = `Zion Marketplace — ${prompt}`;
 
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-4o-mini"
       messages: [
-      ],
-      temperature: 0.5,
+      ]
+      temperature: 0.5
     });
 let faq: Array<{ q: string; a: string }> = [];
 
     let faq: Array<{ q: string, a: string }> = [];
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
-      temperature: 0.5}),
-    let faq: Array<{ q: string, a: string }> = [],
+        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }]
+      temperature: 0.5})
+    let faq: Array<{ q: string, a: string }> = []
     let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");

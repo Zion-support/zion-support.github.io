@@ -37,10 +37,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
-    role,
-    fullLegalName,
-    business_name,
-    businessRegistrationNumber,
+    role
+    fullLegalName
+    business_name
+    businessRegistrationNumber
     userId?: string;
   } = req.body as {
     user_id?: string;
@@ -87,8 +87,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({
-    ok: true, profile,
-    requiredDocuments: getRequiredDocuments(role),
+    ok: true, profile
+    requiredDocuments: getRequiredDocuments(role)
     optionalDocuments: getOptionalDocuments(role)})
 }
 
@@ -109,17 +109,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const profile: KycProfile =;
     existing ||;
     ({
-      user_id,
-      role,
-      fullLegalName,
-      business_name,
-      businessRegistrationNumber,
-      documents: [],
-      status: 'in_progress',
-      aml_status: 'unknown',
-      created_at: now,
-      lastUpdatedAt: now,
-      audit_trail: [{ at: now, by: user_id, action: 'kyc_started' }],
+      user_id
+      role
+      fullLegalName
+      business_name
+      businessRegistrationNumber
+      documents: []
+      status: 'in_progress'
+      aml_status: 'unknown'
+      created_at: now
+      lastUpdatedAt: now
+      audit_trail: [{ at: now, by: user_id, action: 'kyc_started' }]
     } as KycProfile);
   profile.role = role;
   // Check condition
@@ -138,9 +138,9 @@ if (
   db[user_id] = profile;
   save (db);
   res.status (200).json ({
-    ok: true,
-    profile,
-    required_documents: getRequiredDocuments (role),
-optional_documents: getOptionalDocuments (role),
+    ok: true
+    profile
+    required_documents: getRequiredDocuments (role)
+optional_documents: getOptionalDocuments (role)
   });
 }

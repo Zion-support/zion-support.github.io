@@ -14,7 +14,7 @@ export default async function handler(
   writeState((s) => {
 
     s && s.logs.push({
-      id: `${now}-${providerId}-resync`,
+      id: `${now}-${providerId}-resync`
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +33,14 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -44,11 +57,25 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.';
     launch_date: '2024 - 09 - 01';
+<<<<<<< HEAD
+=======
+
+    customers: 123;
+
+    rating: 4 && 4.8,
+
+    reviews: 52
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeITService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -745,22 +772,34 @@ export interface InnovativeITService2025 {
     marketSize: '$19B blockchain market', growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: {
+<<<<<<< HEAD
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+<<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     reviews: 52;
+=======
+    reviews: 52;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-    realImplementation: true;
-    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
-    launchDate: '2024-09-01';
-    customers: 123;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -1815,5 +1854,15 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

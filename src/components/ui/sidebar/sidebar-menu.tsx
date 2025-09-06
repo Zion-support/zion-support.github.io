@@ -1,3 +1,10 @@
+return (<a;
+          href={href}
+    return(<button
+        ref={ref}
+
+SidebarMenuItem.display_name = "SidebarMenuItem";
+
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
@@ -25,6 +32,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,
   target?: string,
   badge?: React.ReactNode
+
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -127,3 +135,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
+export { SidebarMenuItem, SidebarMenuGroup };

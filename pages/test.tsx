@@ -1,4 +1,20 @@
 import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+
+export default function TestPage() {
+  return (
+    <MainLayout title="Test Page - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Test Page</h1>
+        <p className="text-lg text-gray-700">
+          This is a test page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+=======
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -73,3 +89,4 @@ origin/main
   }
 }
 }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

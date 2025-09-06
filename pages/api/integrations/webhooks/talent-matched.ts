@@ -7,9 +7,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
     s && s.events.push({
-      id: eventId,
-      type: "zion && zion.talent.matched",
-      timestamp: Date && Date.now(),
+      id: eventId
+      type: "zion && zion.talent.matched"
+      timestamp: Date && Date.now()
     });
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
@@ -21,18 +21,18 @@ export default async function handler(
   // log to connected CRMs as a note;
   const state = read_state ();
   const crms = state.connections.filter ((c) =>;
-    ["salesforce", "hubspot", "zoho", "pipedrive"].includes (c.provider_id),
+    ["salesforce", "hubspot", "zoho", "pipedrive"].includes (c.provider_id)
   );
   for (const conn of crms) {
     const log = {
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
-      provider_id: conn.provider_id,
-      level: "info",
-      action: "add_project_note",
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
+      provider_id: conn.provider_id
+      level: "info"
+      action: "add_project_note"
     }
     await crm.addProjectNote (conn, {
-      job_id: match.job_id,
-      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
+      job_id: match.job_id
+      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim ()
     });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

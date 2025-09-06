@@ -1,5 +1,94 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact.site}/services-overview`} />\"<meta property=\""og\": title\" content=\"Services Overview - Zion Tech Group\" />\"<meta property=\"og:description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries.\" />\"<meta property=\""og\": url\" content={`${contact.site}/services-overview`} />\"<meta property=\""og\": type\" content=\"website\" />></div> \"<main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\" role=\"main\">{}\"<div className=\"text-center bg-slate-900/60 rounded-xl border border-white/10 p-12\">\"<h2 className=\"text-3xl font-bold mb-6\">Ready to Transform Your Business?</h2>\"<p className=\"text-xl text-slate-300 mb-8 max-w-2xl mx-auto\"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>\"<div className=\"flex flex-col \"sm\": flex-row items-center justify-center gap-4\"><Link \"; href=\"/contact; className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Contact us for a consultation\"> Get Free Consultation</Link><Link \"; href=\"/services-catalog; className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Browse our services catalog\"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>
 const Link from "next/link"; import Head from "next/head"; export default function ServicesOverview() { const contact = { phone: "+1 302 464 0950,",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown D,E 19709,",site: "https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries." />"<meta name="keywords" content="services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions" />"<meta name="viewport" content="width=device-width,initial-scale=1" />"<meta name="robots" content="index,follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site}/services-overview`} />"<meta property="og: type" content="website" />></div> "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{}"<div className="text-center bg-slate-900/60 rounded-xl border border-white/10 p-12">"<h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><Link "; href="/contact; className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Contact us for a consultation"> Get Free Consultation</Link><Link "; href="/services-catalog; className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Browse our services catalog"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>""`"`
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import React from 'react';
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+interface ServicesoverviewProps {
+  // Add props here as needed
+}
+export default function Servicesoverview({ }: ServicesoverviewProps) {
+  return (
+    <div>
+      <h1>Servicesoverview</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact.site}/services-overview`} />\"<meta property=\""og\": title\" content=\"Services Overview - Zion Tech Group\" />\"<meta property=\"og:description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries.\" />\"<meta property=\""og\": url\" content={`${contact.site}/services-overview`} />\"<meta property=\""og\": type\" content=\"website\" />></div> \"<main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\" role=\"main\">{}\"<div className=\"text-center bg-slate-900/60 rounded-xl border border-white/10 p-12\">\"<h2 className=\"text-3xl font-bold mb-6\">Ready to Transform Your Business?</h2>\"<p className=\"text-xl text-slate-300 mb-8 max-w-2xl mx-auto\"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>\"<div className=\"flex flex-col \"sm\": flex-row items-center justify-center gap-4\"><Link \"; href=\"/contact; className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Contact us for a consultation\"> Get Free Consultation</Link><Link \"; href=\"/services-catalog; className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Browse our services catalog\"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>
+const Link from "next/link"; import Head from "next/head"; export default function ServicesOverview() { const contact = { phone: "+1 302 464 0950,",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown D,E 19709,",site: "https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries." />"<meta name="keywords" content="services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions" />"<meta name="viewport" content="width=device-width,initial-scale=1" />"<meta name="robots" content="index,follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site}/services-overview`} />"<meta property="og: type" content="website" />></div> "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{}"<div className="text-center bg-slate-900/60 rounded-xl border border-white/10 p-12">"<h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><Link "; href="/contact; className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Contact us for a consultation"> Get Free Consultation</Link><Link "; href="/services-catalog; className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Browse our services catalog"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>""`"`
+>>>>>>> main
+=======
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact.site}/services-overview`} />\"<meta property=\""og\": title\" content=\"Services Overview - Zion Tech Group\" />\"<meta property=\"og:description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries.\" />\"<meta property=\""og\": url\" content={`${contact.site}/services-overview`} />\"<meta property=\""og\": type\" content=\"website\" />></div> \"<main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\" role=\"main\">{}\"<div className=\"text-center bg-slate-900/60 rounded-xl border border-white/10 p-12\">\"<h2 className=\"text-3xl font-bold mb-6\">Ready to Transform Your Business?</h2>\"<p className=\"text-xl text-slate-300 mb-8 max-w-2xl mx-auto\"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>\"<div className=\"flex flex-col \"sm\": flex-row items-center justify-center gap-4\"><Link \"; href=\"/contact; className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Contact us for a consultation\"> Get Free Consultation</Link><Link \"; href=\"/services-catalog; className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Browse our services catalog\"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>
+const Link from "next/link"; import Head from "next/head"; export default function ServicesOverview() { const contact = { phone: "+1 302 464 0950,",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown D,E 19709,",site: "https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries." />"<meta name="keywords" content="services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions" />"<meta name="viewport" content="width=device-width,initial-scale=1" />"<meta name="robots" content="index,follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site}/services-overview`} />"<meta property="og: type" content="website" />></div> "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{}"<div className="text-center bg-slate-900/60 rounded-xl border border-white/10 p-12">"<h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><Link "; href="/contact; className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Contact us for a consultation"> Get Free Consultation</Link><Link "; href="/services-catalog; className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Browse our services catalog"> Browse Catalog</Link></div></div></div></section></mai,n>></div> );} </div></div></div></div></div></div></div></div>""`"`
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface ServicesoverviewProps {
+  // Add props here as needed
+
+
+
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import React from 'react';
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+interface ServicesoverviewProps {
+  // Add props here as needed
+}
+>>>>>>> main
+export default function Servicesoverview({ }: ServicesoverviewProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,3 +130,33 @@ export default function Servicesoverview(): any ({ }: ServicesoverviewProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

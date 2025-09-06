@@ -99,8 +99,8 @@ export default async function handler(
   }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   } catch (error) {
@@ -115,9 +115,9 @@ export default async function handler(
     const meta = getProposal(id);
     if (!meta) return res && res.status($1).json({ $2 });
     const markdownPath = path && path.join(
-      process && process.cwd(),
-      "public",
-      meta && meta.artifacts.markdownPath || "",
+      process && process.cwd()
+      "public"
+      meta && meta.artifacts.markdownPath || ""
 
     );
     const markdown = fs && fs.existsSync(markdownPath)
@@ -178,9 +178,9 @@ function handler() {
   $2
 }
     const markdown_path = path.join (
-      process.cwd (),
-      "public",
-      meta.artifacts.markdown_path || "",
+      process.cwd ()
+      "public"
+      meta.artifacts.markdown_path || ""
     );
     const markdown = fs.exists_sync (markdown_path);
       ? fs.readFileSync (markdown_path, "utf8");

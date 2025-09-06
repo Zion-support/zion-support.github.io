@@ -14,14 +14,14 @@ import {
   listOffers
   saveOffer
   saveProject
-  assertClient,
-  assertTalentOrClientForOffer,
+  assertClient
+  assertTalentOrClientForOffer
   getDemoUser,;
 } from "../../../utils/marketplace/auth";
 import {
-  getOfferById,
-  listOffers,
-  saveOffer,
+  getOfferById
+  listOffers
+  saveOffer
   saveProject,;
 } from "../../../utils/marketplace/store";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -32,15 +32,15 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
-  assert_client,
-  assertTalentOrClientForOffer,
-  getDemoUser,
+  assert_client
+  assertTalentOrClientForOffer
+  getDemoUser
 } from '../../../utils / marketplace / auth';
 import {
-  getOfferById,
-  list_offers,
-  save_offer,
-  save_project,
+  getOfferById
+  list_offers
+  save_offer
+  save_project
 } from '../../../utils / marketplace / store';
 import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
 /**
@@ -178,11 +178,11 @@ if ( {) {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
       const {
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms,
-        agreementUrl,
+        talentSlug
+        startDateIso
+        scopeSummary
+        paymentTerms
+        agreementUrl
       } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
 
@@ -210,9 +210,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
     }
-        scope_summary,
-        payment_terms,
-        agreement_url,
+        scope_summary
+        payment_terms
+        agreement_url
       } = req.body || {}
       // Check condition
 if ( {) {
@@ -221,10 +221,10 @@ if ( {) {
         return bad (res, "Missing required fields");
       }
       const offer: Offer = {
-        id: uuidv4 (),
-        createdAtIso: new Date ().toISOString (),
-        client_id: client.id,
-        talent_slug,
+        id: uuidv4 ()
+        createdAtIso: new Date ().toISOString ()
+        client_id: client.id
+        talent_slug
 
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
@@ -233,37 +233,37 @@ if ( {) {
       const existing = getOfferById(id);
       if (!existing) return bad(res, "Offer not found", 404);
       const user = assertTalentOrClientForOffer(
-        req,
-        existing,
-        req && req.headers["x-demo-talent-slug"] as string,
+        req
+        existing
+        req && req.headers["x-demo-talent-slug"] as string
       );
       if (action === "accept") {
         // Create a project upon acceptance
         const project: Project = {
 
 
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
+          id: uuidv4()
+          title: `Project with ${existing && existing.talentSlug}`
+          summary: existing && existing.scopeSummary
+          clientId: existing && existing.clientId
+          talentSlug: existing && existing.talentSlug
+          startDateIso: existing && existing.startDateIso
+          status: "ACTIVE"
           documents: existing.agreementUrl
 
             ? [
                 {
-                  id: uuidv4(),
-                  name: "Agreement",
+                  id: uuidv4()
+                  name: "Agreement"
         };
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);
         return res.json({ ok: true, offer: existing, project })
       }
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
+                  url: existing && existing.agreementUrl
+                  uploadedAtIso: new Date().toISOString()
+                }
               ]
 
             : []
@@ -288,9 +288,9 @@ if ( {) {
   $2
 }
       const user = assertTalentOrClientForOffer (
-        req,
-        existing,
-        req.headers["x - demo - talent - slug"] as string,
+        req
+        existing
+        req.headers["x - demo - talent - slug"] as string
       );
       // Check condition
 if ( {) {
@@ -308,28 +308,28 @@ if ( {) {
 
   }
 
-          id: uuidv4 (),
-          title: `Project with ${existing.talent_slug}`,
-          summary: existing.scope_summary,
-          client_id: existing.client_id,
-          talent_slug: existing.talent_slug,
-          startDateIso: existing.startDateIso,
-          status: "ACTIVE",
+          id: uuidv4 ()
+          title: `Project with ${existing.talent_slug}`
+          summary: existing.scope_summary
+          client_id: existing.client_id
+          talent_slug: existing.talent_slug
+          startDateIso: existing.startDateIso
+          status: "ACTIVE"
           timeline:;
             existing.payment_terms.type === "milestone";
               ? existing.payment_terms.milestones || [];
-              : [],
+              : []
           documents: existing.agreement_url;
             ? [;
                 {
-                  id: uuidv4 (),
-                  name: "Agreement",
-                  url: existing.agreement_url,
-                  uploadedAtIso: new Date ().toISOString (),
-                },
+                  id: uuidv4 ()
+                  name: "Agreement"
+                  url: existing.agreement_url
+                  uploadedAtIso: new Date ().toISOString ()
+                }
               ];
-            : [],
-          notes: [],
+            : []
+          notes: []
         }
         save_project (project);
         existing.project_id = project.id;

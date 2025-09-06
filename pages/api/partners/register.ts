@@ -48,13 +48,13 @@ if ( {) {
   $2
 }
     const { error } = await supabase.from ("partners").insert ({
-      code,
-      name,
+      code
+      name
 
   }
 }
-      niche: niche || null, socials: socials || null,
-      payout_method: payout_method || null, status: 'pending',
+      niche: niche || null, socials: socials || null
+      payout_method: payout_method || null, status: 'pending'
       commission_rate: 0.15});
 
     if (error) return res.status(500).json({ error: error.message });

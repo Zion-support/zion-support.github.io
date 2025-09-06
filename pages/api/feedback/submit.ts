@@ -15,13 +15,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-    id: responseId,
-    rating,
-    comment: String(comment || "").slice(0, 2000),
-    pagePath: String(pagePath || ""),
-    aiModel: String(aiModel || ""),
-    userAgent: req && req.headers["user-agent"] || "",
-    ts: Date && Date.now(),
+    id: responseId
+    rating
+    comment: String(comment || "").slice(0, 2000)
+    pagePath: String(pagePath || "")
+    aiModel: String(aiModel || "")
+    userAgent: req && req.headers["user-agent"] || ""
+    ts: Date && Date.now()
   };
 
 
@@ -146,13 +146,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
   const entry = {
-    id: response_id,
-    rating,
-    comment: String (comment || "").slice (0, 2000),
-    page_path: String (page_path || ""),
-    ai_model: String (ai_model || ""),
-    user_agent: req.headers["user - agent"] || "",
-    ts: Date.now (),
+    id: response_id
+    rating
+    comment: String (comment || "").slice (0, 2000)
+    page_path: String (page_path || "")
+    ai_model: String (ai_model || "")
+    user_agent: req.headers["user - agent"] || ""
+    ts: Date.now ()
   }
   const rows = read_all ();
   rows.push (entry);

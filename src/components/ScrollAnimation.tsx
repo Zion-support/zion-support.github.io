@@ -16,7 +16,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   delay = 0,
   duration = 0.6,
   threshold = 0.1,
-  className = ''
+  className = '',
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { threshold, once: true });
@@ -35,9 +35,9 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
         transition: {
           duration,
           delay,
-          ease: "easeOut"
-        }
-      }
+          ease: 'easeOut',
+        },
+      },
     };
 
     switch (animation) {
@@ -45,43 +45,43 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
         return {
           ...baseVariants,
           hidden: { opacity: 0 },
-          visible: { ...baseVariants.visible, opacity: 1 }
+          visible: { ...baseVariants.visible, opacity: 1 },
         };
       case 'slideUp':
         return {
           ...baseVariants,
           hidden: { opacity: 0, y: 50 },
-          visible: { ...baseVariants.visible, opacity: 1, y: 0 }
+          visible: { ...baseVariants.visible, opacity: 1, y: 0 },
         };
       case 'slideDown':
         return {
           ...baseVariants,
           hidden: { opacity: 0, y: -50 },
-          visible: { ...baseVariants.visible, opacity: 1, y: 0 }
+          visible: { ...baseVariants.visible, opacity: 1, y: 0 },
         };
       case 'slideLeft':
         return {
           ...baseVariants,
           hidden: { opacity: 0, x: 50 },
-          visible: { ...baseVariants.visible, opacity: 1, x: 0 }
+          visible: { ...baseVariants.visible, opacity: 1, x: 0 },
         };
       case 'slideRight':
         return {
           ...baseVariants,
           hidden: { opacity: 0, x: -50 },
-          visible: { ...baseVariants.visible, opacity: 1, x: 0 }
+          visible: { ...baseVariants.visible, opacity: 1, x: 0 },
         };
       case 'scale':
         return {
           ...baseVariants,
           hidden: { opacity: 0, scale: 0.8 },
-          visible: { ...baseVariants.visible, opacity: 1, scale: 1 }
+          visible: { ...baseVariants.visible, opacity: 1, scale: 1 },
         };
       case 'rotate':
         return {
           ...baseVariants,
           hidden: { opacity: 0, rotate: -180 },
-          visible: { ...baseVariants.visible, opacity: 1, rotate: 0 }
+          visible: { ...baseVariants.visible, opacity: 1, rotate: 0 },
         };
       default:
         return baseVariants;

@@ -15,7 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const updated = writeState((state) => {
 
     const existingIdx = state && state.connections.findIndex(
-      (c) => c && c.providerId === providerId,
+      (c) => c && c.providerId === providerId
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -40,34 +40,34 @@ function handler() {
   const now = Date.now ();
   const updated = write_state ((state) => {
     const existing_idx = state.connections.find_index (
-      (c) => c.provider_id === provider_id,
+      (c) => c.provider_id === provider_id
 
     );
     const connection: ProviderConnection = {
-      provider_id: provider_id as any,
-      status: "connected",
-      access_token: "mock_access_token",
-      refresh_token: "mock_refresh_token",
-      expires_at: now + 1000 * 60 * 60,
-      connected_at: now,
-      sync_rules: sync_rules || {},
-      lastSyncAt: undefined,
-      timestamp: now,
-      provider_id: provider_id as any,
-      level: "info",
-      action: "connect",
-      details: { sync_rules },
+      provider_id: provider_id as any
+      status: "connected"
+      access_token: "mock_access_token"
+      refresh_token: "mock_refresh_token"
+      expires_at: now + 1000 * 60 * 60
+      connected_at: now
+      sync_rules: sync_rules || {}
+      lastSyncAt: undefined
+      timestamp: now
+      provider_id: provider_id as any
+      level: "info"
+      action: "connect"
+      details: { sync_rules }
     });
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const connection = {
-    providerId: req.body?.providerId || 'unknown',
-    status: 'connected',
-    accessToken: 'mock access token',
-    refreshToken: 'mock refresh token',
-    expiresAt: Date.now() + 1000 * 60 * 60,
-    connectedAt: Date.now(),
-    syncRules: req.body?.syncRules || {},
+    providerId: req.body?.providerId || 'unknown'
+    status: 'connected'
+    accessToken: 'mock access token'
+    refreshToken: 'mock refresh token'
+    expiresAt: Date.now() + 1000 * 60 * 60
+    connectedAt: Date.now()
+    syncRules: req.body?.syncRules || {}
     lastSyncAt: undefined
   };
   res.status(200).json({ connection });
@@ -97,11 +97,11 @@ export default function handler(req, res) {
   const updated = writeState(state => {
     const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
     const connection: ProviderConnection = {
-      providerId: providerId as any, status: 'connected',
-      accessToken: 'mock_access_token', refreshToken: 'mock_refresh_token',
-      expiresAt: now + 1000 * 60 * 60, connectedAt: now,
-      syncRules: syncRules || {},
-      lastSyncAt: undefined,
+      providerId: providerId as any, status: 'connected'
+      accessToken: 'mock_access_token', refreshToken: 'mock_refresh_token'
+      expiresAt: now + 1000 * 60 * 60, connectedAt: now
+      syncRules: syncRules || {}
+      lastSyncAt: undefined
       lastError: null};
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })

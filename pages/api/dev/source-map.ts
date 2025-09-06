@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Source map endpoint' });
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> main
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -11,12 +29,13 @@ import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
 ;
 export default function handler(req: any, res: any) {
   res.status(200).json({ message: 'Source map endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
-import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
+import { getGitStatus, requireRoles } from "../../../utils/devAccess"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const identity = requireRoles(req, res, ["admin", "maintainer"]),
-  if (!identity) return,
+  const identity = requireRoles(req, res, ["admin", "maintainer"])
+  if (!identity) return
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence()
     const git = getGitStatus()
@@ -35,15 +54,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
-import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';
 ;
 export default /**
  * handler - Function description
  */
 function handler() {
-  const identity = require_roles (req, res, ["admin", "maintainer"]),
+  const identity = require_roles (req, res, ["admin", "maintainer"])
   // Check condition
 if (return, ) {
   $2
@@ -52,19 +74,19 @@ if (return, ) {
 if ( {) {
   $2
 }
-    const nodes = getSourceMapWithExistence (),
-    const git = getGitStatus (),
-    res.status (200).json ({ nodes, status: { git_connected: git.connected, git_branch: git.branch } }),
+    const nodes = getSourceMapWithExistence ()
+    const git = getGitStatus ()
+    res.status (200).json ({ nodes, status: { git_connected: git.connected, git_branch: git.branch } })
     return;
   }
   // Check condition
 if ( {) {
   $2
 }
-    const { path: repoRelativePath } = req.body || {},
+    const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-      res.status(400).json({ error: "Invalid path" }),
+      res.status(400).json({ error: "Invalid path" })
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -126,7 +148,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  res.setHeader("Allow", "GET, POST"),
+  res.setHeader("Allow", "GET, POST")
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");
@@ -145,7 +167,15 @@ export default function handler(req, res) {
   }
 }
 }
+=======
 }
 }
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> main

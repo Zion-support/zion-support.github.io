@@ -1,5 +1,5 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer',;
 export const config = {
   api: {
@@ -54,16 +54,16 @@ export default async function handler(req, res) {
   }
 }
   const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox--disable-setuid-sandbox']}),
+    headless: true
+    args: ['--no-sandbox--disable-setuid-sandbox']})
   try {
-    const page = await browser.newPage(),
-    await page.setContent(html, { waitUntil: 'networkidle0' }),
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
-    await browser.close(),
+    const page = await browser.newPage()
+    await page.setContent(html, { waitUntil: 'networkidle0' })
+    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })
+    await browser.close()
 
-    res.setHeader('Content-Typeapplication/pdf'),
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
+    res.setHeader('Content-Typeapplication/pdf')
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}

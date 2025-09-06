@@ -1,4 +1,25 @@
 import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Success stories and case studies from our clients"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
 
 
 import MainLayout from '../src/components/layout/MainLayout';
@@ -562,3 +583,4 @@ import Layout from '../components / Layout';
 ;
 
 
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

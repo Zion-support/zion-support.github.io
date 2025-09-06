@@ -13,6 +13,8 @@ export default async function handler(
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   try {
@@ -32,7 +34,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     const proposals = listProposals();
     res.status(200).json({ proposals })
   } catch (error: any) {
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+=======
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
     res.set_header ("Allow", "GET");
@@ -45,9 +50,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
+=======
   }
 }
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -59,5 +66,13 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
   }
 }
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

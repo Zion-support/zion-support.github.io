@@ -1,100 +1,88 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-=======
-<<<<<<< HEAD
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-=======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
->>>>>>> origin/main
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
-    files: ['src/**/*.{js,jsx,ts,tsx}', '*.{js,jsx,ts,tsx}'],
-    ignores: ['dist/**', 'node_modules/**', 'build/**'],
-=======
-    files: ['**/*.{js,jsx,ts,tsx}'],
-<<<<<<< HEAD
     ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
       'node_modules/**',
-      'temp_exclude/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
       'src.disabled/**',
-      'src.pages.disabled/**'
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'types/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**',
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js'
     ],
->>>>>>> origin/main
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        performance: 'readonly',
-        Performance: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        KeyboardEvent: 'readonly',
-        reportError: 'readonly',
-        __REACT_DEVTOOLS_GLOBAL_HOOK__: 'readonly',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      // Additional rules or overrides can be added here
-    },
-    settings: {
-      react: {
-<<<<<<< HEAD
-        version: 'detect',
-      },
-    },
   },
-=======
-        version: 'detect'
-      }
-    }
-  }
-=======
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+      ecmaVersion: 2020,
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -106,51 +94,96 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
+      parser: tsparser,
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
+export default [
+  ...compat.extends('next/core-web-vitals'),
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> main
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint,
-      react,
+      '@typescript-eslint': typescript,
+<<<<<<< HEAD
+      'react': react,
       'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
+      ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
       'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
     },
     settings: {
       react: {
-        version: "detect"
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
       globals: {
-        ...globals.node,
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
       },
     },
     rules: {
       'no-console': 'off',
     },
   },
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> origin/main
+=======
+      react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+  },
+>>>>>>> main
 ];

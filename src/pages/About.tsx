@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import Card from '../components/Card';
+
+const About: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
@@ -7,33 +17,33 @@ const About: React.FC = () => {
 
   const teamMembers = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief Technology Officer",
-      expertise: "AI & Machine Learning",
-      image: "👩‍💼",
-      description: "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+      name: 'Dr. Sarah Chen',
+      role: 'Chief Technology Officer',
+      expertise: 'AI & Machine Learning',
+      image: '👩‍💼',
+      description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.',
     },
     {
-      name: "Michael Rodriguez",
-      role: "Head of Engineering",
-      expertise: "Cloud Architecture",
-      image: "👨‍💻",
-      description: "Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments."
+      name: 'Michael Rodriguez',
+      role: 'Head of Engineering',
+      expertise: 'Cloud Architecture',
+      image: '👨‍💻',
+      description: 'Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments.',
     },
     {
-      name: "Emily Johnson",
-      role: "Security Director",
-      expertise: "Cybersecurity",
-      image: "👩‍🔬",
-      description: "Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements."
+      name: 'Emily Johnson',
+      role: 'Security Director',
+      expertise: 'Cybersecurity',
+      image: '👩‍🔬',
+      description: 'Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements.',
     },
     {
-      name: "David Kim",
-      role: "Product Manager",
-      expertise: "Digital Transformation",
-      image: "👨‍💼",
-      description: "Driving product strategy and digital transformation initiatives for our enterprise clients."
-    }
+      name: 'David Kim',
+      role: 'Product Manager',
+      expertise: 'Digital Transformation',
+      image: '👨‍💼',
+      description: 'Driving product strategy and digital transformation initiatives for our enterprise clients.',
+    },
   ];
 
   const containerVariants = {
@@ -41,9 +51,9 @@ const About: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -53,13 +63,13 @@ const About: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
       variants={containerVariants}
       initial="hidden"
@@ -67,12 +77,37 @@ const About: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-16">
         <motion.div className="text-center mb-16" variants={itemVariants}>
+>>>>>>> main
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
             We are a leading technology company specializing in AI solutions, cybersecurity, 
             and cloud infrastructure. Our mission is to transform businesses through 
+            innovative technology solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <Card
+            title="Our Mission"
+            description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
+          />
+          <Card
+            title="Our Vision"
+            description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
+          />
+          <Card
+            title="Our Values"
+            description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
+          />
+        </div>
+      </div>
+    </div>
+=======
+            We are a leading technology company specializing in AI solutions, cybersecurity,
+            and cloud infrastructure. Our mission is to transform businesses through
             innovative technology solutions.
           </p>
         </motion.div>
@@ -82,8 +117,8 @@ const About: React.FC = () => {
           {[
             { id: 'mission', label: 'Our Mission' },
             { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' }
-          ].map((tab) => (
+            { id: 'values', label: 'Our Values' },
+          ].map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
@@ -156,6 +191,7 @@ const About: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
+>>>>>>> main
   );
 };
 

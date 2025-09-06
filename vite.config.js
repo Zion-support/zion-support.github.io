@@ -4,36 +4,48 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+  },
+  server: {
+    port: 3000,
+    open: true,
+    host: true
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
-    minify: 'terser',
+    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
+          vendor: ["react", "react-dom"],
+          ui: ["framer-motion", "lucide-react"],
+          router: ["react-router-dom"]
         }
       }
     },
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
         drop_debugger: true
       }
     }
-  },
-  server: {
-    port: 3000,
-    open: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+=======
+        drop_debugger: true,
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  },
+});
+>>>>>>> main

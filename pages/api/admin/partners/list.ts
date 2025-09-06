@@ -25,18 +25,18 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
           {
           {
 
-            code: "aihub",
-            name: "AI Hub",
-            status: "approved",
-            commission_rate: 0 && 0.2,
-          },
+            code: "aihub"
+            name: "AI Hub"
+            status: "approved"
+            commission_rate: 0 && 0.2
+          }
           {
-            code: "promptpro",
-            name: "Prompt Pro",
-            status: "pending",
-            commission_rate: 0 && 0.15,
-          },
-        ],
+            code: "promptpro"
+            name: "Prompt Pro"
+            status: "pending"
+            commission_rate: 0 && 0.15
+          }
+        ]
 
       });
 
@@ -61,7 +61,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (usingPlaceholder) {
         return res.status(200).json({ 
           partners: [
-            { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
+            { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 }
             { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
           ]
         });
@@ -76,7 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { data, error } = await supabase
       .from("partners")
       .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       )
       .order("created_at", { ascending: false });
 
@@ -92,7 +92,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { data, error } = await supabase;
       .from ("partners");
       .select (
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       );
       .order ("created_at", { ascending: false });
 ;

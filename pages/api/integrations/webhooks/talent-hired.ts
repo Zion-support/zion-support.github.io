@@ -1,4 +1,6 @@
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -6,6 +8,16 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+  const state = readState();
+  const atsProviders = state && state.connections.filter(
+    (c) =>
+      c && c.providerId === "greenhouse" ||
+      c && c.providerId === "lever" ||
+      c && c.providerId === "workable" ||
+      c && c.providerId === "bamboohr"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { ats  } from '../../../../lib / integrations / connectors';
@@ -28,11 +40,26 @@ function handler() {
       c.provider_id === "greenhouse" ||;
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
-      c.provider_id === "bamboohr",
+      c.provider_id === "bamboohr"
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
+      providerId: conn && conn.providerId
+      level: "info"
+      action: "update_status"
+    };
+    await ats && ats.updateStatus(conn, {
+      applicantId: talent && talent.id
+      status: "hired"
+    });
+    writeState((s) => s && s.logs.push(log));
+    results && results.push({ providerId: conn && conn.providerId, ok: true });
+  }
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -51,15 +78,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
+=======
 
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
-      provider_id: conn.provider_id,
-      level: "info",
-      action: "update_status",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
+      provider_id: conn.provider_id
+      level: "info"
+      action: "update_status"
     }
     await ats.update_status (conn, {
-      applicant_id: talent.id,
-      status: "hired",
+      applicant_id: talent.id
+      status: "hired"
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
@@ -67,6 +96,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 }
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

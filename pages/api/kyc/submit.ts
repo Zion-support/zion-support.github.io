@@ -98,13 +98,13 @@ if (
   const aml_result =;
     profile.role === 'enterprise';
       ? await aml.check_business ({
-          business_name: profile.business_name || '',
-          country: profile.country,
+          business_name: profile.business_name || ''
+          country: profile.country
         });
       : await aml.check_person ({
-          fullLegalName: profile.fullLegalName || '',
-          country: profile.country,
-          dob: profile.dateOfBirth,
+          fullLegalName: profile.fullLegalName || ''
+          country: profile.country
+          dob: profile.dateOfBirth
         });
 ;
   profile.aml_status =;
@@ -172,10 +172,10 @@ if ( {) {
   }
 }
   profile.audit_trail.push ({
-    at: now,
-    by: user_id,
-    action: 'kyc_submitted',
-    details: { aml: aml_result, ip },
+    at: now
+    by: user_id
+    action: 'kyc_submitted'
+    details: { aml: aml_result, ip }
   });
   db[user_id] = profile;
   save (db);

@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+
+import Link from 'next / link';
+export default /**
+ * ServicesPage - Function description
+ */
+function ServicesPage() {
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import Link from 'next/link';
+export default function ServicesPage() {return (;
+export default function ServicesPage() {;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;

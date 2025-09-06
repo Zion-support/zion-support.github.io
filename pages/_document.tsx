@@ -1,5 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
+<<<<<<< HEAD
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head />
+=======
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
@@ -35,12 +41,16 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </Head>
+>>>>>>> main
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
   );
+<<<<<<< HEAD
+}
+=======
 }
   );
   );
@@ -105,3 +115,4 @@ function Document() {
 
 
 
+>>>>>>> main

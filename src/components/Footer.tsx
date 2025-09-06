@@ -1,4 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-800 text-white py-8 mt-auto">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -11,6 +38,14 @@ const Footer: React.FC = () => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+=======
+>>>>>>> main
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-slate-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -67,13 +102,47 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+=======
+        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        <div className='mt-8 flex justify-end'>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+          <button
+            type='button'
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+            className='flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer'
+            aria-label='Back to top'
+          >
+            <ChevronUp className='h-4 w-4' aria-hidden='true' />
+            <span>Back to Top</span>
+          </button>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
+>>>>>>> origin/fix-website-loading-errors-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
