@@ -1,8 +1,7 @@
- 
 };
 ) ) 
 }</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
+}</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
@@ -33,5 +32,5 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+);
 }

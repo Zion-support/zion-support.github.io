@@ -17,7 +17,6 @@ import {
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
 import { ServiceCategory, ServiceSolution } from '@/types/services';
-
 export function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -678,5 +677,5 @@ function ServiceCard({ service }: ServiceCardProps) {
         )}
       </div>
     </div>
-  );  )
+);  )
 }

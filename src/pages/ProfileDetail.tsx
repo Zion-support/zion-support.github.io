@@ -1,3 +1,4 @@
+
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -7,7 +8,7 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect((,) => {
+  useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setError(null);
@@ -287,7 +288,7 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-  );
+);
 
 };
 }, [profileId]);

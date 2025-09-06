@@ -24,14 +24,14 @@ interface SidebarProps {
   isOpen: boolean, onClose: () => void,
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-        : [...prev, title]
+        : [...prev, title];
     );
   };
 
@@ -55,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Finance', href: '/industries/finance', icon: CreditCard },
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],
+    ],;
   };
 
   const quickLinks = [
@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' },;
   ];
 
   return (
@@ -80,7 +80,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
           />
 
-          
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}

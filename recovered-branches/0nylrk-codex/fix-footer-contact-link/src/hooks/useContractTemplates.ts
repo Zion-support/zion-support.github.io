@@ -244,4 +244,4 @@ export function useContractTemplates() {
     deleteTemplate,
     setDefaultTemplate
   }
-}
+};

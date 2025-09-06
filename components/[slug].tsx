@@ -251,8 +251,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
 
-  
-
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)

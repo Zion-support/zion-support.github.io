@@ -4,7 +4,6 @@ import {
   getWhitepaperSections,
   OPERATOR_PROMPT,;
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage(),
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true });

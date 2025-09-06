@@ -240,7 +240,7 @@ export default function SecurityPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Compliance Details
-                </Link>
+</Link>
               </div>
             </motion.div>
           </div>
@@ -248,6 +248,7 @@ export default function SecurityPage() {
       </div>
     </Layout>
   );
+}  )
 }
-  )
+)
 }

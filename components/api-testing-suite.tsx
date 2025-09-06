@@ -768,5 +768,5 @@ export default function APITestingSuitePage() {
         </div>
       </section>
     </>
-  );
+);
 }

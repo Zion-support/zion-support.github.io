@@ -131,4 +131,4 @@ export function useProjects() {
     getProjectById,
     updateProjectStatus
   }
-}
+};

@@ -7,4 +7,4 @@ import { useToast } from '../../components/ui/NotificationSystem';
         )}
       </EnhancedCard>
     </div>
-  );
+);

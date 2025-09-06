@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   RefreshCw,
   Wifi,
@@ -6,11 +6,11 @@ import {
   ShoppingCart,
   Users,
   Wrench,
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+  Lightbulb,
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 export interface EmptyStateProps {
   type:
     | 'products'
@@ -20,15 +20,14 @@ export interface EmptyStateProps {
     | 'search'
     | 'error'
     | 'network'
-    | 'loading';
-  title?: string;
-  description?: string;
+    | 'loading'
+  title?: string
+  description?: string
   action?: {
-    label: string;
-    onClick: () => void;
-  };
-  icon?: React.ReactNode;
-
+    label: string
+    onClick: () => void
+  }
+  icon?: React.ReactNode
 const defaultContent = {
   products: {
     icon: <ShoppingCart className='w-16 h-16 text-gray-400' />,
@@ -78,8 +77,7 @@ const defaultContent = {
     description:
       "We're fetching the latest data for you. This should only take a moment.",
   },
-};
-
+}
 export function EmptyState({
   type,
   title,
@@ -87,12 +85,11 @@ export function EmptyState({
   action,
   icon,
 }: EmptyStateProps) {
-  const { t } = useTranslation();  const content = defaultContent[type];
-  const content = defaultContent[type];
-  const displayTitle = title || content.title;
-  const displayDescription = description || content.description;
-  const displayIcon = icon || content.icon;
-
+  const { t } = useTranslation();  const content = defaultContent[type]
+  const content = defaultContent[type]
+  const displayTitle = title || content.title
+  const displayDescription = description || content.description
+  const displayIcon = icon || content.icon
   return (
     <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
       <div className='mb-4'>{displayIcon}</div>
@@ -133,17 +130,16 @@ export function EmptyState({
         </div>
       )}
     </div>
-  );
-
+  )
 // Specific empty state variants for quick use
 export function ProductsEmptyState({
   onRetry,
   onAddProduct,
   isAuthenticated = false,
 }: {
-  onRetry?: () => void;
-  onAddProduct?: () => void;
-  isAuthenticated?: boolean;}) {
+  onRetry?: () => void
+  onAddProduct?: () => void
+  isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
@@ -151,37 +147,29 @@ export function ProductsEmptyState({
       }
     : onRetry
       ? { label: 'Try Again', onClick: onRetry }
-      : undefined;
-
+      : undefined
   const customDescription = isAuthenticated
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
-  );
-
+  )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
-
+  )
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
-
+  )
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
-
+  )
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
-
+  )
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
-
+  )
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
-  );
+  )
 } 
-} 
+}

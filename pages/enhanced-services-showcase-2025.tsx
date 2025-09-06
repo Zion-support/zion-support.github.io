@@ -153,7 +153,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     },
   };
 
-  
     >
       <div className='min-h-screen'>
         <Head>
@@ -494,4 +493,4 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         </section>
       </div>
     </EnhancedFuturisticBackground>
-  );
+);

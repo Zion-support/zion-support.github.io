@@ -1,21 +1,15 @@
-import React from 'react';
-import {Button} from '@/components/ui/button';
-import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import React from 'react'
+import {Button} from '@/components/ui/button'
+import Link from 'next/link'
+import { ShieldAlert } from 'lucide-react'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton'
+import { Button } from '@/components/ui/button'
 interface ProjectActionsProps {
-  projectId: string;
-  isUnderDispute: boolean;
-  disputeId?: string;
-  isTalent: boolean;
-  onAddMilestone: () => void;
-
+  projectId: string
+  isUnderDispute: boolean
+  disputeId?: string
+  isTalent: boolean
+  onAddMilestone: () => void
 export function ProjectActions({
   projectId,
   isUnderDispute,
@@ -42,9 +36,8 @@ export function ProjectActions({
         <Button onClick={onAddMilestone}>Add Milestone</Button>
       )}
     </div>
-  );
-};
-;
+  )
+}
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
@@ -52,5 +45,5 @@ export function ProjectActions({
         </Button>
       )}
     </div>
-  );
+  )
 }

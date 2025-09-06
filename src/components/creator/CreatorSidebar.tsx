@@ -1,3 +1,4 @@
+
 import {
   Bell,
   FileText,
@@ -5,8 +6,8 @@ import {
   Mail,
   Search,
   Settings,
-  Users,;
-} from 'lucide-react';import {
+  Users,
+} from 'lucide-react'; import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -14,21 +15,19 @@ import {
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed;
-} from '@/components/ui/sidebar';
   // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
-import {
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
-
+} from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -87,5 +86,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }

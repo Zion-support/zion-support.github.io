@@ -705,7 +705,6 @@ export default function UltraFuturisticBackground2038({
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
   particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex && Math.random () > 0.99) {
-  
 
 }) 
 }// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
@@ -732,3 +731,4 @@ animate ();
   children 
 }</div>)   )
 }
+;

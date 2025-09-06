@@ -3,7 +3,6 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
@@ -102,4 +101,4 @@ export default function AdminDisputesDashboard() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+);

@@ -1,4 +1,4 @@
- resizeCanvas ();
+resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles 
 }particlesRef.current = particles 
@@ -560,5 +560,5 @@ export default function UltraFuturisticBackground2029() {
         ))}
       </div>
     </div>
-  );  )
+);  )
 }

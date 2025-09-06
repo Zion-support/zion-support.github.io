@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useParams, useNavigateimport { Header } from '@/components/Header';
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -263,3 +264,4 @@ const isOwnJob = user?.id === job.client id;
 }'"
 }
 }
+;

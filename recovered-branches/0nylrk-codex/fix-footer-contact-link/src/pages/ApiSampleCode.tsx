@@ -143,7 +143,7 @@ if __name__ == "__main__":
         print(f"Error: {e}")`,
 
   // Node.js example with fetch
-  const nodeFetchExample = `// Using node-fetch with Node.js
+const nodeFetchExample = `// Using node-fetch with Node.js
 import fetch from 'node-fetch';
 const API_KEY = 'YOUR_API_KEY';
 const BASE_URL = 'https: //api.zionai.com/v1',

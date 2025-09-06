@@ -1,94 +1,146 @@
-import React from "react";
+import React from 'react';
+import { cn } from '../../lib/utils';
 
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
+// Define HTML element types
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
 }
 
-const Card: React.FC<CardProps> = ({ children, className = "" }) => {
+interface HTMLDivElement extends HTMLElement {
+  tagName: 'DIV';
+}
+
+interface HTMLParagraphElement extends HTMLElement {
+  tagName: 'P';
+}
+
+interface HTMLHeadingElement extends HTMLElement {
+  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
+}
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      className
+    )}
+    {...props}
+  />;
+));
+Card.displayName = "Card";
+
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />;
+));
+CardHeader.displayName = "CardHeader";
+
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  />;
+));
+CardTitle.displayName = "CardTitle";
+
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />;
+));
+CardDescription.displayName = "CardDescription";
+
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
+));
+CardContent.displayName = "CardContent";
+
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />;
+));
+CardFooter.displayName = "CardFooter";
+
+import React from 'react',;
+interface CardProps {
+  children: React.ReactNode,
+  className?: string,
+  style?: React.CSSProperties,
+  onClick?: () => void,
+  hover?: boolean
+}
+
+const Card: React.FC<CardProps> = ({
+  children,
+  className = '',
+  style,
+  onClick,
+  hover = true}) => {
+  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden',
+  const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '',
+  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '',
+  
+  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`,
+
   return (
     <div
-      className={`rounded-lg border border-gray-200 bg-white text-gray-950 shadow-sm ${className}`}
+      className={classes}
+      style={style}
+      onClick={onClick}
     >
-      {children}
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      
+      {/* Content wrapper */}
+      <div className="relative z-10">
+        {children}
+      </div>
+      
+      {/* Hover glow effect */}
+      {hover && (
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      )}
     </div>
-  );
-};
+  )
+},
 
-interface CardHeaderProps {
-  children: React.ReactNode;
-  className?: string;
-}
+export default Card,
+;
 
-const CardHeader: React.FC<CardHeaderProps> = ({
-  children,
-  className = "",
-}) => {
-  return (
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
-      {children}
-    </div>
-  );
-};
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-interface CardTitleProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const CardTitle: React.FC<CardTitleProps> = ({ children, className = "" }) => {
-  return (
-    <h3
-      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
-    >
-      {children}
-    </h3>
-  );
-};
-
-interface CardDescriptionProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const CardDescription: React.FC<CardDescriptionProps> = ({
-  children,
-  className = "",
-}) => {
-  return <p className={`text-sm text-gray-500 ${className}`}>{children}</p>;
-};
-
-interface CardContentProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const CardContent: React.FC<CardContentProps> = ({
-  children,
-  className = "",
-}) => {
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
-};
-
-interface CardFooterProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const CardFooter: React.FC<CardFooterProps> = ({
-  children,
-  className = "",
-}) => {
-  return (
-    <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
-  );
-};
-
-export {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-};

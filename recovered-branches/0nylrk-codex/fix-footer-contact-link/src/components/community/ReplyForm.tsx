@@ -10,7 +10,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;

@@ -75,7 +75,7 @@ import {
   ZapIcon,
   SparklesIcon,
   BrainIcon,
-  AtomIcon,;} from 'lucide-react';import { 
+  AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
@@ -696,7 +696,7 @@ export default function UltraFuturisticNavigation2031() {
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
-  );      <div className="h-32 lg: h-40"></div>
+);      <div className="h-32 lg: h-40"></div>
     </>
   ),
 }

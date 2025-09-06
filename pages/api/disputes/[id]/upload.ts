@@ -9,7 +9,6 @@ import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,
 } from "../../../../utils/auth";
-
 export const config = {
   api: { bodyParser: { sizeLimit: "20mb" } },
 };

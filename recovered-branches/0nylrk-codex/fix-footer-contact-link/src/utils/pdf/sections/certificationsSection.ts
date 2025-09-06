@@ -55,3 +55,4 @@ export function addCertificationsSection(
   
   return yPos
 }
+;

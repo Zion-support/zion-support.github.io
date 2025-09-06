@@ -249,4 +249,4 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       )}
     </div>
   )
-}
+};

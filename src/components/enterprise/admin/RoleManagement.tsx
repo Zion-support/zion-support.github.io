@@ -1,22 +1,20 @@
-import React from 'react';
+import React from 'react'
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
-import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
-import {
+  TableRow,
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Switch } from '@/components/ui/switch'
+import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -76,8 +74,7 @@ export function RoleManagement() {
         manageBilling: false,
       },
     },
-  ];
-
+  ]
   const handlePermissionChange = (
     _memberId: number,
     permission: string,
@@ -86,16 +83,14 @@ export function RoleManagement() {
     toast({
       title: 'Permission updated',
       description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
-    });
-  };
-
+    })
+  }
   const roleDescriptions: Record<string, string> = {
     Admin: 'Full access to all features and settings',
     Recruiter: 'Can manage candidates and job postings',
     Manager: 'Can view candidates and create jobs',
     Viewer: 'Read-only access to candidates',
-  };
-
+  }
   return (
     <div className='space-y-6'>
       <div>
@@ -271,6 +266,6 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  );
-;
+  )
 }
+;

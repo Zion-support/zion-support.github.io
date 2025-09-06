@@ -160,7 +160,6 @@ const stats = [
   { number: "25+", label: "Countries Represented" },
   { number: "95%", label: "Employee Satisfaction" },
 ];
-
 export default function TeamPage() {
   return (
     <Layout
@@ -528,4 +527,5 @@ export default function TeamPage() {
       </div>
     </>
   );
+
 }

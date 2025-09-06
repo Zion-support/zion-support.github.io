@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-#!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -15,18 +14,7 @@ class AdvancedAppImprovementSuite {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-    }  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n");
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.improvements = [];
-    this.errors = [];
+    }
   }
 
   log(message) {
@@ -257,15 +245,7 @@ class AdvancedAppImprovementSuite {
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
-      throw error;    }
-  }
-}
-
-      this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;
-      this.log(`❌ Fatal error: ${error.message}`);
-      this.errors.push({ type: 'fatal', message: error.message });
-      process.exit(1);
     }
   }
 }

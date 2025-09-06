@@ -563,4 +563,4 @@ export default function ExplorePage() {
 
       <SmartFooter />
     </div>
-  );
+);

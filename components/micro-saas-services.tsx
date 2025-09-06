@@ -998,5 +998,5 @@ export default function MicroSaasServicesPage() {
         </div>
       </section>
     </>
-  );
+);
 }

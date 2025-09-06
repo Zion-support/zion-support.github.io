@@ -1,14 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import {
   ArrowRight,
   BookOpen,
   Code,
   Webhook,
   AlertCircle,
-  Zap,;
-} from 'lucide-react';
-import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+  Zap,
+} from 'lucide-react'
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
 export function ApiDocsHub() {
   const sections = [
     {
@@ -46,8 +46,7 @@ export function ApiDocsHub() {
       path: '/developers/docs/errors',
       color: 'from-red-500 to-rose-500',
     },
-  ];
-
+  ]
   return (
     <ApiDocsLayout>
       <div className='max-w-4xl'>
@@ -101,6 +100,5 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
-  );
-
-export default ApiDocsHub;
+  )
+export default ApiDocsHub

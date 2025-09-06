@@ -120,7 +120,7 @@ export default function MicroSaasPage() {
                 </Link>
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
-                </Link>
+</Link>
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -171,7 +171,6 @@ import {
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
-
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -740,7 +739,7 @@ export default function MicroSaas() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Transform Your Business?
+Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Discover how our micro SaaS solutions can solve your specific business challenges

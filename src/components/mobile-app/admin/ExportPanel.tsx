@@ -1,6 +1,4 @@
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues
@@ -12,24 +10,21 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       let content: string,
       let fileName: string,
       if (format === 'json') {
-        content = JSON.stringify(metadata, null, 2);
+        content = JSON.stringify(metadata, null, 2)
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
         const values = [
-          metadata.appTitle;
-          metadata.shortDescription;
-          metadata.longDescription;
-          metadata.version;
+          metadata.appTitle
+          metadata.shortDescription
+          metadata.longDescription
+          metadata.version
           metadata.platform
-        ];
-        
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-        
+        ]
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join()
         // Add keywords as additional rows
-        content += '\n\nKeywords:\n' + metadata.keywords.join();
-        
+        content += '\n\nKeywords:\n' + metadata.keywords.join()
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
@@ -94,3 +89,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>
   )
 },
+;

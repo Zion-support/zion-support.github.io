@@ -1,21 +1,18 @@
-import { useState, useEffect } from 'react';
-import { Globe } from 'lucide-react';
+import { useState, useEffect } from 'react'
+import { Globe } from 'lucide-react'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import {
+  SelectValue,
+} from '@/components/ui/select'
   CountryPricing,
-  onsiteServicePricing,;
-} from '@/data/onsiteServicePricing';
-
+  onsiteServicePricing,
+} from '@/data/onsiteServicePricing'
 interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void;
-  selectedCountry: CountryPricing | null;
-
+  onCountryChange: (country: CountryPricing | null) => void
+  selectedCountry: CountryPricing | null
 export function CountrySelector({
   onCountryChange,
   selectedCountry,
@@ -35,19 +32,18 @@ export function CountrySelector({
       'Australia',
       'Japan',
       'Singapore',
-    ];
+    ]
     const top = onsiteServicePricing
       .filter(item => popular.includes(item.country))
-      .sort((a, b) => a.country.localeCompare(b.country));
-    setTopCountries(top);
-  }, []);
-
+      .sort((a, b) => a.country.localeCompare(b.country))
+    setTopCountries(top)
+  }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country =
-      onsiteServicePricing.find(item => item.country === countryName) || null;
-    onCountryChange(country);
-  };
+      onsiteServicePricing.find(item => item.country === countryName) || null
+    onCountryChange(country)
+  }
   return (
     <div className='mb-6'>
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>
@@ -106,5 +102,6 @@ export function CountrySelector({
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }
+;

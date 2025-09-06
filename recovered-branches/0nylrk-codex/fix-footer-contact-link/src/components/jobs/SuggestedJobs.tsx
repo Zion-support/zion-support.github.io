@@ -111,3 +111,4 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   )
 }
+;

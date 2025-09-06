@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
 const SAMPLE_QUERIES = [
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",

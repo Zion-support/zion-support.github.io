@@ -38,5 +38,5 @@ class MockAmlProvider implements AmlProvider {
 }
 
 export function getAmlProvider(): AmlProvider {
-  return provider;  return new MockAmlProvider();
+  return new MockAmlProvider();
 }

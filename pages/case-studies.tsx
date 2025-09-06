@@ -81,7 +81,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function CaseStudiesPage() {
   return (
     <MainLayout

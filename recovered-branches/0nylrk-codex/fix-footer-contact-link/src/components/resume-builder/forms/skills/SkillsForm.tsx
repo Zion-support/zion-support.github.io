@@ -83,3 +83,4 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     </div>
   )
 }
+;

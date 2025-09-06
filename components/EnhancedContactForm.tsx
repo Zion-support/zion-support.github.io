@@ -4,7 +4,6 @@
 setIsSubmitting (true);
 const handleInputBlur = (name: keyof FormData) => {
   //Validate individual field on blur if (formData[name] && errors[name]) {
-  
 
 };
 > <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button 

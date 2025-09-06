@@ -37,6 +37,5 @@ export const defaultSEO = {
       content: '#1e40af',
     },
   ],
-};
-
-export default defaultSEO;
+}
+export default defaultSEO

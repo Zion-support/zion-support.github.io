@@ -417,4 +417,4 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         </tbody>
       </table>
     </section>
-  );
+);

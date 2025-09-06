@@ -1,4 +1,4 @@
- const [isSubmitting, setIsSubmitting] = useState (false);
+const [isSubmitting, setIsSubmitting] = useState (false);
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
 ...quantumSpaceInnovations2029.filter (s => s.popular);
@@ -19,7 +19,7 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion.div>) ) 
 }</motion.div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, x: -30 
+  opacity: 0, x: -30
 
 }whileInView= {
   {
@@ -431,3 +431,4 @@ setSubmitSuccess (true);
     </UltraFuturisticBackground2029>
   ),
 }
+;

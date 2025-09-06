@@ -91,6 +91,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
 
-  writeGrant(existing);
+writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }

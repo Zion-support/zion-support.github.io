@@ -23,7 +23,6 @@ import {
   RefreshCw,;
 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface LogEntry {
   id: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';

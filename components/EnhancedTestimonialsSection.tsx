@@ -7,7 +7,6 @@ import {
   TrendingUp,
   CheckCircle,;
 } from 'lucide-react';
-
 interface Testimonial {
   id: string;
   name: string;

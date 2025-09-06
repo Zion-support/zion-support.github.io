@@ -34,7 +34,7 @@ import {
   Target,
   Users,
   Clock,
-  Globe2,;} from 'lucide-react';import { 
+  Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
@@ -767,5 +767,5 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
+);
 }

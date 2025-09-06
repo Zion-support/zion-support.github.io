@@ -353,7 +353,6 @@ export default function CookiePolicyPage() {
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -377,7 +376,7 @@ export default function CookiesPage() {
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>

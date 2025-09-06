@@ -22,7 +22,7 @@ import {
   RefreshCw,
   Pause,
   StopCircle,
-  MapPin,;
+  MapPin,
 } from 'lucide-react';
 
 interface Deployment {
@@ -126,7 +126,7 @@ export default function DeploymentsPage() {
     }
   };
 
-  const getVerticalIcon = (vertical: string) => {
+const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
       case 'HEALTH':
         return <Shield className='w-4 h-4 text-blue-400' />;

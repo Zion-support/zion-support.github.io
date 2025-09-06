@@ -53,3 +53,4 @@ export function EducationSection({ education }: EducationSectionProps) {
     </div>
   )
 }
+;

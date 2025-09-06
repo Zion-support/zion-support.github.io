@@ -1,27 +1,26 @@
-import React from 'react';
-
+import React from 'react'
 export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
+  title: string
+  description: string
+  icon?: React.ReactNode
 }
 
 export interface Testimonial {
-  name: string;
-  role?: string;
-  text: string;
-  avatar?: string;
+  name: string
+  role?: string
+  text: string
+  avatar?: string
 }
 
 interface ServiceLandingTemplateProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  benefits: Benefit[];
-  features?: string[];
-  stats?: Array<{ label: string; value: string }>;
-  ctaText: string;
-  ctaLink: string;
+  title: string
+  subtitle: string
+  description: string
+  benefits: Benefit[]
+  features?: string[]
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -125,5 +124,5 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </div>
       </section>
     </div>
-  );
-};
+  )
+}

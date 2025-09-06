@@ -10,3 +10,4 @@ export default function TeamPage() {
 export default function TeamPage() {
   return <OrgChartPage />;
 }
+;

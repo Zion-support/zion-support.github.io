@@ -5,7 +5,6 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import useResponsive from '../../hooks/useResponsive';
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
-
 export default function JobDetailsPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
@@ -76,4 +75,4 @@ export default function JobDetailsPage() {
         </div>
       )}
     </div>
-  );
+);

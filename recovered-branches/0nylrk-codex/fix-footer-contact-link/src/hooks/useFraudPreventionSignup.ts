@@ -79,3 +79,4 @@ export function useFraudPreventionSignup() {
     isCheckingFraud;
     checkFraudBeforeSignup}
 }
+;

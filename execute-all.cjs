@@ -52,7 +52,7 @@ async function runAll() {
   console.log(
     '3. Run: git add . && git commit -m "feat: Comprehensive automation improvements"'
   );
-  console.log('4. Run: git push origin main'),
+  console.log('4. Run: git push origin main');
 }
 
 runAll().catch(console.error);

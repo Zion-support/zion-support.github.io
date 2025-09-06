@@ -14,7 +14,6 @@ import {
   Cpu,
   Network,;
 } from 'lucide-react';
-
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
     'Quantum-enhanced neural network architecture',

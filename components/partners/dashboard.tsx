@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -191,5 +190,5 @@ export default function PartnerDashboard() {
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
       </div>
     </div>
-  );
+);
 }

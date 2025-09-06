@@ -2,7 +2,6 @@ import Head from 'next/head';
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
-
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({
   className = 'w-5 h-5 text-yellow-500',
@@ -553,7 +552,7 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
-  );
+);
 
 }return (<EnhancedLayout> <Head> <title>Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
   IOS APP URL 

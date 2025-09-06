@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 interface TextAnalysisResult {
   text: string;
   statistics: {

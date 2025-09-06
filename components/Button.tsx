@@ -58,5 +58,5 @@ export default function Button({
       disabled={disabled}
       {children}
     </button>
-  );
+);
 }

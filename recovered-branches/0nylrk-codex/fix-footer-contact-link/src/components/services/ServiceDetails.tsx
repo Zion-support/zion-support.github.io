@@ -1,7 +1,6 @@
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
-
 interface ServiceDetailsProps {
   country: string
 }
@@ -133,3 +132,4 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     </Card>
   )
 }
+;

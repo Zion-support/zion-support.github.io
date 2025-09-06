@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
 import {ArrowRight, Play, Star, Zap, Shield, Users} from 'lucide-react';
-
 interface HeroProps {
   title: string;
   subtitle: string;

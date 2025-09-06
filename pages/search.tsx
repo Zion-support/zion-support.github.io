@@ -106,7 +106,6 @@ const filters = [
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
-
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -217,7 +216,7 @@ export default function SearchPage() {
                     >
                       {filter.name} ({filter.count})
                     </button>
-                  ))}
+))}
                 </div>
               </motion.div>
             )}
@@ -274,7 +273,7 @@ export default function SearchPage() {
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <ArrowRight className="w-5 h-5" />
-                      </Link>
+</Link>
                     </div>
                   </motion.div>
                 ))}
@@ -353,6 +352,7 @@ export default function SearchPage() {
       </div>
     </Layout>
   );
+}  )
 }
-  )
+)
 }

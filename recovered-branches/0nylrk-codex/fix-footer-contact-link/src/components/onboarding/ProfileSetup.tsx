@@ -131,3 +131,4 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     </div>
   )
 }
+;

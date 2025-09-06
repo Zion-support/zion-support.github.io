@@ -12,7 +12,7 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
-  // Get from local storage then parse stored json or return initialValue
+// Get from local storage then parse stored json or return initialValue
 
 interface UseLocalStorageProps {
   // Add props here as needed

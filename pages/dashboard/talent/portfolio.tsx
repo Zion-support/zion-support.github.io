@@ -67,5 +67,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-  return { props: {} };
+return { props: {} };
 };

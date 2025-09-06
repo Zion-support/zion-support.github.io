@@ -1,26 +1,22 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/hooks/useTheme';
-import { Moon, Sun, Check } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { useTheme } from '@/hooks/useTheme'
+import { Moon, Sun, Check } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
 interface Language {
-  code: string;
-  name: string;
-  flag: string;
-
+  code: string
+  name: string
+  flag: string
 const languages: Language[] = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'zh', name: '中文', flag: '🇨🇳' },
-];
-
+]
 export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
-
+  const { theme, setTheme } = useTheme()
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('en')
   return (
     <div className='space-y-8 px-4'>
       <div className='space-y-2'>
@@ -123,7 +119,7 @@ export function LanguageThemeSelector() {
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
-                : "border-border hover:border-primary/40";
+                : "border-border hover:border-primary/40"
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -138,5 +134,6 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+;

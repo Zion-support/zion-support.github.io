@@ -23,7 +23,7 @@ import {
   Palette,
   Target,
   CheckCircle,
-  Sparkles,;} from 'lucide-react';import { 
+  Sparkles,;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock, 
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
@@ -33,7 +33,6 @@ import {
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
 import { realITServices2025 } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
-
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025

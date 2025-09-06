@@ -871,7 +871,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     closeDropdowns();
   };
 
-  
     >
       {/* Background Effects */}
       <div className='absolute inset-0'>

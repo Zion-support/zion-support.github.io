@@ -1,7 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",

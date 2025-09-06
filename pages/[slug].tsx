@@ -235,5 +235,5 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+);
 ;

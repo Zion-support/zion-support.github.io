@@ -439,7 +439,7 @@ export const MOCK_TALENTS: ProfileData[] = [
       ],
     },
     hourlyRate: 125,
-    contactEmail: 'david.martinez@example.com',
+contactEmail: 'david.martinez@example.com',
   },
 ];
 };

@@ -26,6 +26,7 @@ export default async function handler(
         categories?: Review["categories"];
         anonymous?: boolean;
       };
+
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: "Missing required fields" });
     }
@@ -48,6 +49,7 @@ export default async function handler(
 
     const toRole = counterpartRole(fromRole);
     const toId = toRole === "talent" ? project.talentSlug : project.clientId;
+
     const expectedFromId =
       fromRole === "client" ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
@@ -81,7 +83,9 @@ export default async function handler(
       removed: false,
       createdAt: now,
     };
+
     await upsertReview(review);
+
     return res
       .status(201)
       .json({ message: "Review submitted", reviewId: review.id });

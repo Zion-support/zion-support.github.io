@@ -1,29 +1,27 @@
-import React from 'react';
+import React from 'react'
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
+  CardDescription,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
   ChevronRight,
   FileText,
   Image,
   Clock,
   Zap,
-  BookOpen,;
-} from 'lucide-react';
-import Link from 'next/link';
-
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
-import Link from "next/link";
+  BookOpen,
+} from 'lucide-react'
+import Link from 'next/link'
+import React from "react"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
+import Link from "next/link"
 export function TalentDashboard() {
   return (
     <div className='space-y-6 px-4 pb-24'>
@@ -274,5 +272,5 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
-  );
+  )
 }

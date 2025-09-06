@@ -83,3 +83,4 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
     </Table>
   )
 }
+;

@@ -124,7 +124,6 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import {revolutionaryAI2025Services} from '../data/revolutionary-2025-ai-services';
 import {revolutionaryITInfrastructure2025Services} from '../data/revolutionary-2025-it-infrastructure';
 import {revolutionary2025MicroSaasServices} from '../data/revolutionary-2025-micro-saas';
-
 export default function Revolutionary2025Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
@@ -706,4 +705,4 @@ export default function Revolutionary2025Pricing() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
+);

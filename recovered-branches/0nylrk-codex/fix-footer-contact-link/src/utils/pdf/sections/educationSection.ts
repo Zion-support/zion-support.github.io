@@ -78,3 +78,4 @@ export function addEducationSection(
   
   return yPos + 5
 }
+;

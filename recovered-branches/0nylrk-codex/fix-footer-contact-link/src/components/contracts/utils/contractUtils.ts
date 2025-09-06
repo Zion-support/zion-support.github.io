@@ -52,3 +52,4 @@ export async function generateContract(
     throw new Error("Failed to generate contract")
   }
 }
+;

@@ -165,3 +165,4 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
   )
 }
+;

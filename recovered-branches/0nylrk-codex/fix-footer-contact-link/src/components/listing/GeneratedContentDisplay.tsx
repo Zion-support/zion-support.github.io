@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 interface GeneratedContent {
   description: string;
   tags: string[];

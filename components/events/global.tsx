@@ -9,3 +9,4 @@ export default function GlobalEventRoute() {
 export default function GlobalEventRoute() {
   return <ExpoPage />;
 }
+;

@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("AllowPOST");
     return res.status(405).json({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body || {};
@@ -18,11 +19,13 @@ export default async function handler(
 - Short paragraphs, bullet lists
 - Strong call-to-action for Zion Marketplace
 Do not include <html>, <body>, or scripts.`;
+
     const user = `Topic: ${prompt}
 Region: ${region || "global"}
 Service focus: ${service || "general"}
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`;
+
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
@@ -31,8 +34,10 @@ Tone: professional, modern, trustworthy`;
       ],
       temperature: 0.7,
     });
+
     const content = response.choices?.[0]?.message?.content || "";
     const title = `Zion Marketplace — ${prompt}`;
+
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
       model: "gpt-4o-mini",
@@ -49,6 +54,7 @@ Tone: professional, modern, trustworthy`;
       ],
       temperature: 0.5,
     });
+
     let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
@@ -61,6 +67,7 @@ Tone: professional, modern, trustworthy`;
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "");
+
     return res.status(200).json({
       slug,
       payload: {

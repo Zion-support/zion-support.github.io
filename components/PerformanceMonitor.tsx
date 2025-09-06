@@ -68,9 +68,49 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   navigationStart: number,
 }
 
+// Define Performance types if not available
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[];
+  now(): number;
+}
+
+interface PerformanceEntry {
+  name: string;
+  entryType: string;
+  startTime: number;
+  duration: number;
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  readonly connectEnd: number;
+  readonly connectStart: number;
+  readonly domComplete: number;
+  readonly domContentLoadedEventEnd: number;
+  readonly domContentLoadedEventStart: number;
+  readonly domInteractive: number;
+  readonly domLoading: number;
+  readonly domainLookupEnd: number;
+  readonly domainLookupStart: number;
+  readonly fetchStart: number;
+  readonly loadEventEnd: number;
+  readonly loadEventStart: number;
+  readonly navigationStart: number;
+  readonly redirectCount: number;
+  readonly redirectEnd: number;
+  readonly redirectStart: number;
+  readonly requestStart: number;
+  readonly responseEnd: number;
+  readonly responseStart: number;
+  readonly secureConnectionStart: number;
+  readonly transferSize: number;
+  readonly type: string;
+  readonly unloadEventEnd: number;
+  readonly unloadEventStart: number;
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    // Only run on client side
+// Only run on client side
 
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
@@ -78,7 +118,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigationEntries = window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
-
       const performanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -88,11 +127,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
 
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length,
-        // Memory usage (if available)
+// Memory usage (if available)
 
         memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
           used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,

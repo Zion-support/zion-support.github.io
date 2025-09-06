@@ -377,7 +377,7 @@ export default function HomePage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through innovation, expertise, and dedication
+We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
 
@@ -394,7 +394,7 @@ export default function HomePage() {
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+<p className="text-gray-600">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -429,7 +429,7 @@ export default function HomePage() {
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-                </Link>
+</Link>
               </div>
             </motion.div>
           </div>
@@ -438,5 +438,5 @@ export default function HomePage() {
     </MainLayout>
   );
 }
-      </main>
+</main>
     </>

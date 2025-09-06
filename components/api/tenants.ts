@@ -6,7 +6,6 @@ import {
   rotateTenantApiKey,
   updateTenant,;
 } from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
@@ -54,5 +53,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tenant: result })
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
 }

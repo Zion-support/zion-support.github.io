@@ -1,38 +1,37 @@
-import React, { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ProductListing } from '@/types/listings';
-import { DollarSign } from 'lucide-react';
-import { RatingStars } from '@/components/RatingStars';
-import { FavoriteButton } from '@/components/FavoriteButton';import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
-import { toast } from '@/hooks/use-toast';
-import { useCurrency } from '@/hooks/useCurrency';
+import React, { useState } from 'react'
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import { useRouter } from 'next/router'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ProductListing } from '@/types/listings'
+import { DollarSign } from 'lucide-react'
+import { RatingStars } from '@/components/RatingStars'
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast'
+import { useCurrency } from '@/hooks/useCurrency'
 import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  detailBasePath?: string;
+  listing: ProductListing
+  view?: 'grid' | 'list'
+  onRequestQuote?: (id: string) => void
+  detailBasePath?: string
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
-  const isGrid = view === 'grid';
-  const router = useRouter();
+  const isGrid = view === 'grid'
+  const router = useRouter()
   const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
       ? listing.images[0]
       : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
-
+  )
+  const [imageError, setImageError] = useState(false)
   const stockStatus =
     listing.stock === undefined
       ? 'In stock'
@@ -40,8 +39,7 @@ const ProductListingCardComponent = ({
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
-          : 'In stock';
-
+          : 'In stock'
   const stockVariant =
     listing.stock === undefined
       ? 'success'
@@ -49,31 +47,27 @@ const ProductListingCardComponent = ({
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
-          : 'success';
-
-  const { formatPrice } = useCurrency();
-
+          : 'success'
+  const { formatPrice } = useCurrency()
   const getPrice = () => {
-    if (listing.price === null) return 'Custom pricing';
-    return formatPrice(listing.price);
-  };
-
+    if (listing.price === null) return 'Custom pricing'
+    return formatPrice(listing.price)
+  }
   const handleImageError = () => {
     if (!imageError) {
       // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg');
-      setImageError(true);
+      setImageSrc('/placeholder.svg')
+      setImageError(true)
     }
-  };
-
+  }
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
       logDebug('[ProductCard] Navigating to:', {
         path: `${detailBasePath}/${listing.id}`,
-      });
-      logDebug('[ProductCard] Listing ID:', { id: listing.id });
-      logDebug('[ProductCard] Listing Title:', { title: listing.title });
+      })
+      logDebug('[ProductCard] Listing ID:', { id: listing.id })
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
     }
 
     // Validate listing ID exists before navigation
@@ -82,56 +76,49 @@ const ProductListingCardComponent = ({
         '[ProductCard] Missing listing ID, cannot navigate',
         new Error('Missing listing ID'),
         { component: 'ProductListingCard' }
-      );
+      )
       toast({
         title: 'Navigation Error',
         description: 'Product information is incomplete',
         variant: 'destructive',
-      });
-      return;
+      })
+      return
     }
 
-    router.push(`${detailBasePath}/${listing.id}`);
-  };
-
-  const dispatch = useDispatch<AppDispatch>();
-
+    router.push(`${detailBasePath}/${listing.id}`)
+  }
+  const dispatch = useDispatch<AppDispatch>()
   const addToCart = () => {
-    setLoading(true);
+    setLoading(true)
     dispatch(
       addItem({
         id: listing.id,
         title: listing.title,
         price: listing.price ?? 0,
       })
-    );
+    )
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
         onClick: () => router.push('/cart'),
       },
-    });
-    setLoading(false);
-  };
-
+    })
+    setLoading(false)
+  }
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+    e.preventDefault()
+    e.stopPropagation()
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
-      router.push(`/request-quote?listing=${listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`)
     }
-  };
-
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
-  
+  }
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          handleViewListing();
+          e.preventDefault()
+          handleViewListing()
         }      }}
     >
       {/* Image */}
@@ -142,28 +129,28 @@ const ProductListingCardComponent = ({
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={e => {
           if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
-          }  return ();
-    <div;
-      data-testid= "equipment-link";'`;
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
-      onClick={handleViewListing};
-      tabIndex={0};";
-      onKeyDown={(e) => {;
-        if(e.key === 'Enter' || e.key === ' ') {;
-          e.preventDefault () ;
+            e.preventDefault()
+            handleViewListing()
+          }  return ()
+    <div
+      data-testid= "equipment-link";'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0};"
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault () 
           handleViewListing () }
       }}
 
       {/* Image */}
-      <div';
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
-        onClick={handleViewListing} // Keep existing onClick for navigation;";
-        tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;
-          if(e.key === 'Enter' || e.key === ' ') {;
-            e.preventDefault () ;
+      <div'
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation;"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+        onKeyDown={(e) => {
+          if(e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault () 
             handleViewListing () }
         }}
       >
@@ -265,7 +252,7 @@ const ProductListingCardComponent = ({
               className='bg-primary hover:bg-primary/80 text-primary-foreground'
               onClick={e => {
                 e.stopPropagation(); // Prevent card click event
-                addToCart();              }}
+                addToCart() }}
               disabled = {loading,}
             >
               {loading ? (
@@ -309,8 +296,8 @@ const ProductListingCardComponent = ({
                     title: listing.title,
                     price: listing.price ?? 0,
                   })
-                );
-                router.push('/checkout');
+                )
+                router.push('/checkout')
               }}
               disabled = {loading,}
             >
@@ -330,96 +317,90 @@ const ProductListingCardComponent = ({
         </div>
       </div>
     </div>
-  );
-const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';
-const handleImageError = () => {;
-  if (!imageError) {';
-  //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');
-setImageError (true) ;
-
-};';
-//Debug logging for development if (process.env.NODE ENV === 'development') {;
-  return;
-
-};
-
-}> {;
-  /* Image */ ;
-}<div ;
-
-}> <div className= {;
-  `relative $ {;
-  imageContainerClasses ;
-}` ;
-}> {;
-  /* Ensure this container has dimensions */ ;
-}<Image Featured </Badge>) ;
-}{;
-  stockStatus && (<Badge variant= {;
-  stockVariant as any ;
-}className="absolute top-2 left-2" > {;
-  stockStatus ;
-}</Badge>) ;
-}<FavoriteButton itemId= {;
-  listing.id ;
-}/> </div> </div> {;
-  /* Content */ ;
-}<div className= {;
-  `flex flex-col justify-between $ {';
-  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' ;
-}` ;
-}> <div> </Badge> {;
-  listing.rating && (<RatingStars value= {;
-  listing.rating ;
-}count= {;
-  listing.reviewCount ;
-}/>) ;
-}</div> <span key= {;
-  idx ";
-}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;
-  tag ;
-}</span>) ) ;
-}</div>) ;
-}</div> </span>) ";
-}</div> <div className="flex gap-2" > <Button onClick={;
-  (e) => {;
-  e.stopPropagation (), //Prevent card click event addToCart () ;
-
-}disabled= {;
-  loading ";
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;
-}</Button> <Button onClick={;
-  (e) => {;
-  e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({;
-  id: listing.id,  title: listing.title, price: listing.price ?? 0 ;
-}) );';
-router.push ('/checkout') ;
-
-}disabled= {;
-  loading ;
-}> Buy Now </Button> {";
-  onRequestQuote && (<Button size="sm" variant="outline" onClick={;
-  handleRequestQuote ";
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
-}</div> </div> </div> </div>) ;
-};
+  )
+const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success'
+const handleImageError = () => {
+  if (!imageError) {'
+  //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg')
+setImageError (true) 
+};'
+//Debug logging for development if (process.env.NODE ENV === 'development') {
+  return
+}
+}> {
+  /* Image */ 
+}<div 
+}> <div className= {
+  `relative $ {
+  imageContainerClasses 
+}` 
+}> {
+  /* Ensure this container has dimensions */ 
+}<Image Featured </Badge>) 
+}{
+  stockStatus && (<Badge variant= {
+  stockVariant as any 
+}className="absolute top-2 left-2" > {
+  stockStatus 
+}</Badge>) 
+}<FavoriteButton itemId= {
+  listing.id 
+}/> </div> </div> {
+  /* Content */ 
+}<div className= {
+  `flex flex-col justify-between $ {'
+  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' 
+}` 
+}> <div> </Badge> {
+  listing.rating && (<RatingStars value= {
+  listing.rating 
+}count= {
+  listing.reviewCount 
+}/>) 
+}</div> <span key= {
+  idx "
+}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {
+  tag 
+}</span>) ) 
+}</div>) 
+}</div> </span>) "
+}</div> <div className="flex gap-2" > <Button onClick={
+  (e) => {
+  e.stopPropagation (), //Prevent card click event addToCart () 
+}disabled= {
+  loading "
+}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") 
+}</Button> <Button onClick={
+  (e) => {
+  e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({
+  id: listing.id,  title: listing.title, price: listing.price ?? 0 
+}) );'
+router.push ('/checkout') 
+}disabled= {
+  loading 
+}> Buy Now </Button> {"
+  onRequestQuote && (<Button size="sm" variant="outline" onClick={
+  handleRequestQuote "
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) 
+}</div> </div> </div> </div>) 
+}
 '"
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-                Request Quote;
-              </Button>) };
-          </div>;
-        </div>;
-      </div>;
+export const ProductListingCard = React.memo(ProductListingCardComponent)
+ProductListingCard.displayName = 'ProductListingCard'
+                Request Quote
+              </Button>) }
+          </div>
+        </div>
+      </div>
     </div>;) }
-export default React.memo(ProductListingCard);
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-'"`;
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
+export default React.memo(ProductListingCard)
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+'"`
+export const ProductListingCard = React.memo(ProductListingCardComponent)
+ProductListingCard.displayName = 'ProductListingCard'

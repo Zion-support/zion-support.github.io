@@ -9,7 +9,6 @@ undefined
 - [Error Handling](#error-handling)
 - [Rate Limiting](#rate-limiting)
 - [Examples](#examples)
- 
 
 ## Overview
 
@@ -32,7 +31,6 @@ https://api.zion.app/v1
 ## Rate Limiting
 
 API requests are limited to 1000 requests per hour per API key.
- 
 
 ## Getting Started
 
@@ -72,7 +70,6 @@ API requests are limited to 1000 requests per hour per API key.
 2. Explore the application features
 3. Check the documentation for more details
 4. Start contributing to the project
- 
 
 ## Examples
 
@@ -111,7 +108,6 @@ const app = new Application();
 app.configure(API);
 app.start();
 ```
- 
 
 ## API Reference
 
@@ -145,7 +141,6 @@ Description of this property.
 ```typescript
 console.log(instance.propertyName);
 ```
- 
 
 ## Contributing
 
@@ -173,7 +168,6 @@ If you need help or have questions:
 - Search through existing issues
 - Create a new issue with a clear description
 - Join our community discussions
- 
 
 ## License
 

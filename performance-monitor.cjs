@@ -1,54 +1,57 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('📊 Performance Monitor Started...');
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: 0,
+      loadTime: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString()
+    };
+  }
 
-// Monitor build performance
-function monitorBuildPerformance() {
-  const startTime = Date.now();
-  
-  try {
-    const { execSync } = require('child_process');
-    execSync('npm run build', { stdio: 'pipe', cwd: '/workspace' });
-    
-    const endTime = Date.now();
-    const duration = endTime - startTime;
-    
-    console.log(`✅ Build completed in ${duration}ms`);
-    
-    // Save performance data
-    const performanceData = {
-      timestamp: new Date().toISOString(),
-      buildDuration: duration,
-      status: 'success'
+  async measureBundleSize() {
+    try {
+      const buildDir = path.join(process.cwd(), '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = fs.statSync(buildDir);
+        this.metrics.bundleSize = stats.size;
+      }
+    } catch(error) {
+      console.error('Error measuring bundle size:', error);
+    }
+  }
+
+  async measureMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: this.metrics.timestamp,
+      bundleSize: this.metrics.bundleSize,
+      memoryUsage: this.metrics.memoryUsage,
+      recommendations: []
     };
     
-    fs.writeFileSync('/workspace/performance-data.json', JSON.stringify(performanceData, null, 2));
+    if (this.metrics.bundleSize > 1000000) {
+      report.recommendations.push('Consider code splitting to reduce bundle size');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      report.recommendations.push('Consider optimizing memory usage');
+    }
     
-  } catch (error) {
-    console.log(`❌ Build failed: ${error.message}`);
+    return report;
   }
 }
 
-// Monitor file changes
-function monitorFileChanges() {
-  const chokidar = require('chokidar');
-  
-  const watcher = chokidar.watch('/workspace/src', {
-    ignored: /(^|[/\\])../, // ignore dotfiles
-    persistent: true
-  });
-  
-  watcher.on('change', (filePath) => {
-    console.log(`📝 File changed: ${filePath}`);
-    // Trigger rebuild or other actions
-  });
-  
-  console.log('👀 Watching for file changes...');
-}
-
-// Start monitoring
-monitorBuildPerformance();
-monitorFileChanges();
+const monitor = new PerformanceMonitor();
+monitor.measureBundleSize();
+monitor.measureMemoryUsage();
+const report = monitor.generateReport();
+const reportPath = path.join(process.cwd(), 'performance-report.json');
+fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+console.log('Performance report generated:', reportPath);

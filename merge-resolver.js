@@ -63,6 +63,7 @@ async function main() {
   for (const file of files) {
     try {
       const content = fs.readFileSync(file, 'utf8');
+
         if (fixMergeConflicts(file)) {
           fixedCount++;
         }

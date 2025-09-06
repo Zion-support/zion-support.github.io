@@ -1,7 +1,6 @@
- canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
 canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
 if (ctx) {
-  
 
 export default function UltraFuturisticBackground2035({
   children,

@@ -14,7 +14,6 @@ import {TALENT_PROFILES} from '@/data/talentData';
 import {BLOG_POSTS} from '@/data/blog-posts';
 import {useDebounce} from '@/hooks/useDebounce';
 import {logInfo, logErrorToProduction} from '@/utils/productionLogger';
-
 interface BaseSearchResult {
   id: string;
   title: string;
@@ -634,7 +633,7 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: offline.results,
         query,
         slug,
-        totalCount: offline.totalCount,
+totalCount: offline.totalCount,
       },
     };  }
 };

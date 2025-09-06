@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
-
 export type GenerateServiceDescriptionRequest = {
   title: string;
   keyFeatures: string[];

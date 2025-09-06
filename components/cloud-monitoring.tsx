@@ -29,7 +29,6 @@ export default function CloudMonitoringPage() {
   const features = [
     {
       icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -799,5 +798,5 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
-  );
+);
 }

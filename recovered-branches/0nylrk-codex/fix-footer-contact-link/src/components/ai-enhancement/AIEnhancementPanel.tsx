@@ -6,7 +6,6 @@ import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-
 interface AIEnhancementPanelProps {
   title: string,
   defaultOptions: AIEnhancementOptions,
@@ -164,3 +163,4 @@ export function AIEnhancementPanel({
     </Card>
   )
 }
+;

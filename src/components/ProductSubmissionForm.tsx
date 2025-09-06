@@ -1,14 +1,13 @@
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
+import React from 'react'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import z from 'zod'
+import { supabase } from '@/integrations/supabase/client'
+import { useAuth } from '@/hooks/useAuth'
+import { useToast } from '@/hooks/use-toast'
+import { useRouter } from 'next/router'
 import Image from 'next/image'; // Import next/image
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   Form,
   FormControl,
@@ -16,15 +15,15 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
-import { Sparkles } from 'lucide-react';
+  FormMessage,
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator'
+import { Sparkles } from 'lucide-react'
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters'),
@@ -48,18 +47,16 @@ const productSchema = z.object({
       ? z.any().optional()
       : z.instanceof(File).optional(),
   tags: z.string().optional(),
-});
+})
 // Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>;
-
+type ProductFormValues = z.infer<typeof productSchema>
 export function ProductSubmissionForm() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState('manual');
-
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [imagePreview, setImagePreview] = React.useState(null as string | null)
+  const [activeTab, setActiveTab] = React.useState('manual')
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
@@ -72,47 +69,41 @@ export function ProductSubmissionForm() {
       model: undefined,
       tags: '',
     },
-  });
-
+  })
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];    if (file) {
-      form.setValue('image', file);
-      const reader = new FileReader();
+      form.setValue('image', file)
+      const reader = new FileReader()
       reader.onloadend = () => {
-        setImagePreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+        setImagePreview(reader.result as string)
+      }
+      reader.readAsDataURL(file)
     }
-  };
-
+  }
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];    if (file) {
-      form.setValue('video', file);
+      form.setValue('video', file)
     }
-  };
-
+  }
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];    if (file) {
-      form.setValue('model', file);
+      form.setValue('model', file)
     }
-  };
-
+  }
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
-    form.setValue('description', content.description);
-    form.setValue('tags', content.tags.join(', '));
+    form.setValue('description', content.description)
+    form.setValue('tags', content.tags.join(', '))
     // Set a default price as the middle of the suggested range
     const averagePrice = (
       (content.suggestedPrice.min + content.suggestedPrice.max) /
       2
-    ).toFixed(2);
-    form.setValue('price', averagePrice);
-
+    ).toFixed(2)
+    form.setValue('price', averagePrice)
     // Switch to the manual tab to show applied content
-    setActiveTab('manual');
-  };
-
+    setActiveTab('manual')
+  }
   // Handle form submission
   const onSubmit = async (values: ProductFormValues,) => {
     if (!user) {
@@ -120,12 +111,11 @@ export function ProductSubmissionForm() {
         title: 'Authentication Required',
         description: 'You must be logged in to publish products',
         variant: 'destructive',
-      });
-      return;
+      })
+      return
     }
 
-    setIsSubmitting(true);
-
+    setIsSubmitting(true)
     try {
       // Create the product listing
       const productData = {
@@ -140,97 +130,85 @@ export function ProductSubmissionForm() {
           id: user.id,
         },
         createdAt: new Date().toISOString(),
-      };
-
+      }
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-        .single();
-
+        .single()
       if (productError) {
-        throw new Error(productError.message);
+        throw new Error(productError.message)
       }
 
-      let imagePublicUrl: string | undefined;
-
+      let imagePublicUrl: string | undefined
       // If we have an image, upload it
       if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(imagePath, values.image);
-
+          .upload(imagePath, values.image)
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
 
         // Get the public URL for the image
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(imagePath);
-        imagePublicUrl = publicUrlData.publicUrl;
-
+          .getPublicUrl(imagePath)
+        imagePublicUrl = publicUrlData.publicUrl
         // Update the product with the image URL
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({
             images: [imagePublicUrl],
           })
-          .eq('id', productRecord.id);
-
+          .eq('id', productRecord.id)
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message)
         }
       }
 
       // Upload video if provided
       if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
+        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(videoPath, values.video);
-
+          .upload(videoPath, values.video)
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(videoPath);
-
+          .getPublicUrl(videoPath)
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id);
-
+          .eq('id', productRecord.id)
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message)
         }
       }
 
       // Upload model if provided
       if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(modelPath, values.model);
-
+          .upload(modelPath, values.model)
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(modelPath);
-
+          .getPublicUrl(modelPath)
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id);
-
+          .eq('id', productRecord.id)
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message)
         }
       }
 
@@ -244,31 +222,29 @@ export function ProductSubmissionForm() {
             images: imagePublicUrl ? [imagePublicUrl] : [],
             sellerId: user.id,
           },
-        });
+        })
       } catch (err) {
-        logErrorToProduction('Error invoking moderation:', { data: err });
+        logErrorToProduction('Error invoking moderation:', { data: err })
       }
 
       // Show success message
       toast({
         title: 'Product Published!',
         description: 'Your product has been successfully published on Zion.',
-      });
-
+      })
       // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`);
+      router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
         title: 'Publication Failed',
         description:
           error instanceof Error ? error.message : 'An unknown error occurred',
         variant: 'destructive',
-      });
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>
       <TabsList className='grid grid-cols-2 mb-6'>
@@ -296,9 +272,9 @@ export function ProductSubmissionForm() {
               render={({
                 field,
               }: {
-                field: ControllerRenderProps<ProductFormValues, 'title'>;
+                field: ControllerRenderProps<ProductFormValues, 'title'>
               }) => {
-                const { onChange, onBlur, value, ref } = field;                return (
+                const { onChange, onBlur, value, ref } = field; return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -314,7 +290,7 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-                );
+                )
               }}
             />
 
@@ -324,7 +300,7 @@ export function ProductSubmissionForm() {
               render={({
                 field,
               }: {
-                field: ControllerRenderProps<ProductFormValues, 'description'>;
+                field: ControllerRenderProps<ProductFormValues, 'description'>
               }) => (                <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
@@ -349,7 +325,7 @@ export function ProductSubmissionForm() {
                 render={({
                   field,
                 }: {
-                  field: ControllerRenderProps<ProductFormValues, 'price'>;
+                  field: ControllerRenderProps<ProductFormValues, 'price'>
                 }) => (                  <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
@@ -373,7 +349,7 @@ export function ProductSubmissionForm() {
                 render={({
                   field,
                 }: {
-                  field: ControllerRenderProps<ProductFormValues, 'category'>;
+                  field: ControllerRenderProps<ProductFormValues, 'category'>
                 }) => (                  <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
@@ -402,7 +378,7 @@ export function ProductSubmissionForm() {
               render={({
                 field,
               }: {
-                field: ControllerRenderProps<ProductFormValues, 'tags'>;
+                field: ControllerRenderProps<ProductFormValues, 'tags'>
               }) => (                <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -522,93 +498,85 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-  );
-
-  const file = e.target.files?.[0];
-if (file) {;
-  reader.onloadend = () => {;
-  setImagePreview (reader.result as string) ;
-};
-reader.readAsDataURL (file) ;
-
-};
-
-};
-const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-  const file = e.target.files?.[0];
-if (file) {;
-  ;
-
-};
-//Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
-  if (!user) {;
-  toast ({;
-  return;
-}setIsSubmitting (true);
-author: {";
-  name: user.displayName || "Anonymous Creator";
-id: user.id ;
-};
-createdAt: new Date () .toISOString () ;
-};
-data: productRecord, error: productError ';
-}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
-let imagePublicUrl: string | undefined;';
-//If we have an image, upload it .from ('products') .upload (imagePath, values.image);
-//Get the public window.URL for the image const {;
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (imagePath);
-imagePublicUrl = publicUrlData.publicUrl;
-//Update the product with the image window.URL const {;
-  error: updateError ';
-}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video);
-const {;
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (videoPath);
-const {;
-  error: updateError ';
-}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model);
-const {;
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (modelPath);
-const {;
-  error: updateError ';
-}= await supabase .from ('product listings') ;
-}//Send listing to moderation service try {';
-  await supabase.functions.invoke ('moderate-listing', {;
-  body: {;
-  //Redirect to product page router.push (`/marketplace/listing/$ {;
-  productRecord.id ;
-}`) ;
-}catch (error) {;
-  toast ({;
-  ;
-}finally {;
-  setIsSubmitting (false) ;
-
-};
-
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
-}";
-}/> <FormField Describe your product in detail..." className="min-h-32" {;
-  ...field ';
-}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
-  ...field ;
-}/> ";
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {;
-  ...field ;
-}/> ";
-}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {;
-  handleImageChange ";
-}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
-//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
-}</FormItem>) ";
-}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {;
-  handleVideoChange ";
-}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
-}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+  )
+  const file = e.target.files?.[0]
+if (file) {
+  reader.onloadend = () => {
+  setImagePreview (reader.result as string) 
+}
+reader.readAsDataURL (file) 
+}
+}
+const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0]
+if (file) {
+}
+//Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {
+  if (!user) {
+  toast ({
+  return
+}setIsSubmitting (true)
+author: {"
+  name: user.displayName || "Anonymous Creator"
+id: user.id 
+}
+createdAt: new Date () .toISOString () 
+}
+data: productRecord, error: productError '
+}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ()
+let imagePublicUrl: string | undefined;'
+//If we have an image, upload it .from ('products') .upload (imagePath, values.image)
+//Get the public window.URL for the image const {
+  data: publicUrlData '
+}= supabase.storage.from ('products') .getPublicUrl (imagePath)
+imagePublicUrl = publicUrlData.publicUrl
+//Update the product with the image window.URL const {
+  error: updateError '
+}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video)
+const {
+  data: publicUrlData '
+}= supabase.storage.from ('products') .getPublicUrl (videoPath)
+const {
+  error: updateError '
+}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model)
+const {
+  data: publicUrlData '
+}= supabase.storage.from ('products') .getPublicUrl (modelPath)
+const {
+  error: updateError '
+}= await supabase .from ('product listings') 
+}//Send listing to moderation service try {'
+  await supabase.functions.invoke ('moderate-listing', {
+  body: {
+  //Redirect to product page router.push (`/marketplace/listing/$ {
+  productRecord.id 
+}`) 
+}catch (error) {
+  toast ({
+}finally {
+  setIsSubmitting (false) 
+}
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> 
+}"
+}/> <FormField Describe your product in detail..." className="min-h-32" {
+  ...field '
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) "
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {
+  ...field 
+}/> "
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
+  ...field 
+}/> "
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {
+  handleImageChange "
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;'
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) 
+}</FormItem>) "
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video/mp4" onChange= {
+  handleVideoChange "
+}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) "
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
 }'"  )
 }

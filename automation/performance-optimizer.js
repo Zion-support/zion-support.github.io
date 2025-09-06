@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node;
   "fs");
   "path");
@@ -141,7 +140,7 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
       // Placeholder for bundle analysis
       return {
   "totalSize": "2.1MB, "gzippedSize": ;
-  "650KB"
+"650KB"
 "totalSize": '2.1MB',
         "gzippedSize": '650KB',
         "recommendations": ['Consider code splitting', 'Remove unused dependencies']
@@ -159,7 +158,7 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     }
   }
   analyzeDependencies() {
-  try {
+try {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
@@ -182,7 +181,7 @@ try {
     return ['example-unused-package'];
   }
   generateRecommendations() {
-  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
+return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
     // // // // // // // // console.log(;
   "Performance report:", report);
 }
