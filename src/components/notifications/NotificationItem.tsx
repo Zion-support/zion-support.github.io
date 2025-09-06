@@ -60,6 +60,17 @@ import {
   TooltipContent,
   TooltipProvider,
 
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { useNavigate } from 'react-router-dom';
+import { Notification, NotificationType } from '@/context/notifications';
+import { Check, Trash2, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { formatDistanceToNow } from 'date-fns';
+import { cn } from '@/lib/utils';
+
+
   TooltipTrigger} from '@/components/ui/tooltip',
 import { useRouter } from 'next/router',
 import { Notification, NotificationType } from '@/context/notifications',
@@ -134,17 +145,27 @@ interface NotificationItemProps {
   onDismiss: (id: string,) => Promise<void>
 }
 export const NotificationItem: React.FC<NotificationItemProps> = ({
-  notification
-  onMarkAsRead
-  onDismiss},) => {
-  const router = useRouter(), // Changed from useNavigate to useRouter
-  const handleClick = () => {
+
+  notification,
+  onMarkAsRead,
+  onDismiss,
+}) => {
+  const navigate = useNavigate();
+
+  const handleMarkAsRead = async () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id)
+      await onMarkAsRead(notification.id);
     }
-    // If there's an action URL, navigate to it
-    if (notification.action_url) {
-      router.push(notification.action_url), // Changed to router.push
+  };
+
+  const handleDismiss = async () => {
+    await onDismiss(notification.id);
+  };
+
+  const handleClick = () => {
+    if (notification.actionUrl) {
+      navigate(notification.actionUrl);
+
     }
 
 

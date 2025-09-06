@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -124,6 +125,7 @@ const Home: React.FC = () => {
       description: 'We provide ongoing support and optimization to ensure continued success.'
     }
   ];
+
 
 
 export default function Home() {
