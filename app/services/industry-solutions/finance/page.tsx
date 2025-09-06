@@ -583,7 +583,7 @@ function CTASection() {
         Ready to Build Secure Financial Technology?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your financial technology needs and create a secure,
+        Let&apos;s discuss your financial technology needs and create a secure,
         compliant solution that powers your financial services. Our fintech
         experts are ready to help.
       </p>

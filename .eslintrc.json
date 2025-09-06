@@ -1,6 +1,5 @@
 {
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -10,23 +9,17 @@
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
-<<<<<<< HEAD
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
-=======
-    "jest": true,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "es2021": true
   },
   "globals": {
@@ -36,7 +29,6 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
     "es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -45,15 +37,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
-<<<<<<< HEAD
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -74,11 +63,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
-    "no-console": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
   "ignorePatterns": [
     "node_modules/",
@@ -152,7 +136,6 @@ origin/automation-improvements-final
     "pages.__backup/",
     "pages-disabled/",
     "pages.disabled_auto/"
-<<<<<<< HEAD
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -410,7 +393,5 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ]
 }

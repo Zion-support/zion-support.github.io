@@ -1,23 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { JSX } from 'react';
-=======
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
+import Sidebar from './src/components/layout/Sidebar';
 import Footer from './src/components/Footer';
-import ServiceCard from './src/components/ServiceCard';
-import TestimonialCarousel from './src/components/TestimonialCarousel';
-import ContactSection from './src/components/ContactSection';
+import HomePage from './src/pages/Home';
+import AboutPage from './src/pages/About';
+import ContactPage from './src/pages/Contact';
+import ServicesPage from './src/pages/Services';
+import PricingPage from './src/pages/Pricing';
 import BenefitsSection from './src/components/BenefitsSection';
 import HowItWorksSection from './src/components/HowItWorksSection';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
 import FaqSection from './src/components/FaqSection';
+import ContactSection from './src/components/ContactSection';
 import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
+import ServiceCard from './src/components/ServiceCard';
 
 export default function App() {
   const services = [
@@ -60,102 +60,87 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <ParticleBackground />
-      <Header />
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+          <ParticleBackground />
+          <Header />
+          <Sidebar />
+          <main className="flex-1 lg:ml-80 relative">
+            <Routes>
+              <Route path="/" element={
+                <div>
+                  {/* Hero Section */}
+                  <section className="relative py-20 px-4 text-center">
+                    <div className="container mx-auto max-w-6xl">
+                      <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Welcome to Zion Tech
+                      </h1>
+                      <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                        Your trusted partner for AI and IT solutions. We help businesses transform through
+                        cutting-edge technology and innovative solutions.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                          Get Started
+                        </button>
+                        <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </section>
 
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center">
-          <div className="container mx-auto max-w-6xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your trusted partner for AI and IT solutions. We help businesses transform through
-              cutting-edge technology and innovative solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                Get Started
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
+                  {/* Services Section */}
+                  <section className="py-16 px-4 bg-white">
+                    <div className="container mx-auto max-w-6xl">
+                      <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {services.map((service, index) => (
+                          <ServiceCard
+                            key={index}
+                            title={service.title}
+                            description={service.description}
+                            icon={service.icon}
+                            features={service.features}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </section>
 
-        {/* Services Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  features={service.features}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+                  {/* Benefits Section */}
+                  <BenefitsSection />
 
-        {/* Benefits Section */}
-        <BenefitsSection />
+                  {/* How It Works Section */}
+                  <HowItWorksSection />
 
-        {/* How It Works Section */}
-        <HowItWorksSection />
+                  {/* Testimonials Section */}
+                  <section className="py-16 px-4 bg-gray-50">
+                    <div className="container mx-auto max-w-6xl">
+                      <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+                      <TestimonialCarousel />
+                    </div>
+                  </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <TestimonialCarousel />
-          </div>
-        </section>
+                  {/* FAQ Section */}
+                  <FaqSection />
 
-        {/* FAQ Section */}
-        <FaqSection />
-
-        {/* Contact Section */}
-        <ContactSection />
-      </main>
-
-      <Footer />
-      <ChatAssistant />
-      <ScrollToTop />
-    </div>
+                  {/* Contact Section */}
+                  <ContactSection />
+                </div>
+              } />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <ChatAssistant />
+          <ScrollToTop />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export default function App() {
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-
-<<<<<<< HEAD
-export default function App(): React.JSX.Element {
-=======
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-
-export default function App(): React.JSX.Element {
-  return (
-    <main>
-      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
-      <p>Building the future with innovative technology solutions</p>
-    </main>
-  );
-}
-=======
->>>>>>> main
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

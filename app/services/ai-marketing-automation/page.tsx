@@ -241,7 +241,7 @@ function ContactSection() {
         Ready to Automate Your Marketing?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your marketing needs and create an AI-powered automation
+        Let&apos;s discuss your marketing needs and create an AI-powered automation
         platform that drives growth and engagement.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
