@@ -208,19 +208,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-  return res.status(405).json({ error: "Method not allowed" });
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   return res.status(405).json({ error: "Method not allowed" })
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -593,3 +582,6 @@ if (state.config.instance_id = instance_id, ) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

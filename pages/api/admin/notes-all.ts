@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getAllNotes } from './notes',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true',
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' }),
+<<<<<<< HEAD
   return res.status(200).json({ notes: getAllNotes() });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -54,3 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return res.status(200).json({ notes: getAllNotes() })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

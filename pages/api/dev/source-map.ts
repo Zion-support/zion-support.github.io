@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Source map endpoint' });
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,4 +374,8 @@ export default function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

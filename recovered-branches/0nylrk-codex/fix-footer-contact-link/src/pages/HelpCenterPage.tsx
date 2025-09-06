@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -60,34 +61,19 @@ export default function HelpCenterPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
-import {SEO} from "@/components/SEO";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function HelpCenterPage() {;
-  return (
-    <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React from "react",
-import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
-import HelpCenter from "@/components/support/HelpCenter",
-import { SEO } from "@/components/SEO",
 export default function HelpCenterPage() {
   return (
     <>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export default function HelpCenterPage() {;
-  return (
-    <>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -120,6 +106,11 @@ export default function HelpCenterPage() {;
       />;
       <HelpCenter />;
     </>;
+=======
+      />
+      <HelpCenter />
+    </>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 }
 <<<<<<< HEAD

@@ -122,38 +122,12 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    totalRevenue: 850.00,
-
-    pendingRevenue: 200.00
-  },
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <div className="space-y-6">;
-      {/* Stats Overview */}
-
-=======
-<<<<<<< HEAD
-    totalRevenue: 850.00,
-    pendingRevenue: 200.00;
-  };
-    pendingRevenue: 200.00
-  },
-  
-=======
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
   };
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <div className="space-y-6">
+    <div className="space-y-6">;
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -171,6 +145,7 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -185,6 +160,7 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -200,6 +176,13 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
       </div>
+
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -217,6 +200,13 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+
+=======
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -239,6 +229,7 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -552,6 +543,9 @@ export function PartnerDashboard() {;
   )
 
 
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

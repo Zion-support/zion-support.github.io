@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -15,11 +16,14 @@ import {SortFilterProps} from "@/types/filters";
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
 <<<<<<< HEAD
@@ -33,6 +37,11 @@ import { SortFilterProps } from "@/types/filters";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { SortFilterProps } from "@/types/filters";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -52,6 +61,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -99,6 +109,8 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 }
 

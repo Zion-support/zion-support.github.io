@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
+import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
 
 =======
 <<<<<<< HEAD
@@ -51,30 +52,20 @@ export const AppStoreBanner: React.FC = () => {
     if (isMobile && !localStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
+        setIsVisible(true);
+      }, 2000);
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        setIsVisible(true)
-      }, 2000),
-      
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     }
-  }, [isMobile]),
-  
-  const dismissBanner = () => {
-    setIsVisible(false),
-    localStorage.setItem("appBannerDismissed", "true")
-  },
-  
-  // Only render on mobile devices
-  if (!isMobile || !isVisible) return null,
-  
-<<<<<<< HEAD
+  }, [isMobile]);
 
+  const dismissBanner = () => {
+    setIsVisible(false);
+    localStorage.setItem("appBannerDismissed", "true");
+  };
+
+  // Only render on mobile devices
+  if (!isMobile || !isVisible) return null;
 
 =======
 =======
@@ -128,6 +119,7 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -244,6 +236,8 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 };
 

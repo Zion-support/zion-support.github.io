@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,6 +14,8 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -266,6 +269,7 @@ export default function handler(req, res) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
@@ -277,3 +281,16 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(([subjectId, score]) => ({ subjectId, score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10),
+
+  return res.status(200).json({
+    treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt})
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

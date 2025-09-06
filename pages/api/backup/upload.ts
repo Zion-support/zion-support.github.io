@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +78,9 @@ export default async function handler(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Web3Storage, File } from 'web3.storage',
 ;
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
@@ -101,6 +105,7 @@ function handler() {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || 'Backup failed' });
   }
+<<<<<<< HEAD
 }
 
 ;
@@ -163,3 +168,6 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

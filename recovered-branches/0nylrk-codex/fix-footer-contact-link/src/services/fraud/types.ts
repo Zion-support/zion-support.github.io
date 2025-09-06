@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,9 +15,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Types used across fraud detection modules;
 import {FraudSeverity} from '@/types / fraud';
+=======
+// Types used across fraud detection modules
+import { FraudSeverity } from "@/types/fraud";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AnalysisResult {
-  is_suspicious: boolean,
+  isSuspicious: boolean;
   reasons: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -31,6 +37,8 @@ export interface AnalysisResult {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
@@ -65,7 +73,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface MessageAnalysisResult extends AnalysisResult {
-  severity: FraudSeverity
+  severity: FraudSeverity;
 }
 
 
@@ -110,10 +118,8 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
-
-  success: boolean
-
-  error?: string
+  success: boolean;
+  error?: string;
 }
 export interface SignupCheckResult extends AnalysisResult {}
 =======

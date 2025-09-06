@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,12 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { Route, Routes } from "react-router-dom";
+import MobileAppPage from "../pages/MobileAppPage";
+import MobileLaunchPage from "../pages/MobileLaunchPage";
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const MobileAppRoutes = () => {
 =======
 const MobileAppRoutes = () => {;
@@ -65,32 +72,11 @@ const MobileAppRoutes = () => {;
   return (
     <Routes>;
       {/* Mobile App Routes */}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const MobileAppRoutes = () => {;
-  return (
-import { Route, Routes } from "react-router-dom",;
-import MobileAppPage from "../pages/MobileAppPage",;
-import MobileLaunchPage from "../pages/MobileLaunchPage",;
-import OpenAppRedirect from "../pages/OpenAppRedirect",;
-;
-const MobileAppRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Mobile App Routes */}
-const MobileAppRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Mobile App Routes */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Route path="/download" element={<MobileAppPage />} />;
-      <Route path="/mobile-app" element={<MobileAppPage />} />;
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />;
-      <Route path="/open-app" element={<OpenAppRedirect />} />;
-    </Routes>;
-<<<<<<< HEAD
+      <Route path="/download" element={<MobileAppPage />} />
+      <Route path="/mobile-app" element={<MobileAppPage />} />
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+      <Route path="/open-app" element={<OpenAppRedirect />} />
+    </Routes>
   );
 },;
 

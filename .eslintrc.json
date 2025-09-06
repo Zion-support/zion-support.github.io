@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -21,21 +22,16 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
-<<<<<<< HEAD
     "es6": true,
-    "jest": true
-    "es6": true,
-    "jest": true
-    "es6": true,
-    "jest": true
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    "jest": true,
     "es2021": true
   },
   "globals": {
@@ -45,6 +41,7 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
+<<<<<<< HEAD
 <<<<<<< HEAD
     "es6": true,
     "jest": true
@@ -59,25 +56,17 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn",
     "react/react-in-jsx-scope": "off",
+<<<<<<< HEAD
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
 <<<<<<< HEAD
@@ -102,6 +91,9 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    "no-undef": "error"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   },
   "ignorePatterns": [
     "node_modules/",
@@ -174,8 +166,8 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
-<<<<<<< HEAD
     "pages.disabled_auto/"
+<<<<<<< HEAD
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -444,5 +436,7 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   ]
 }

@@ -1,17 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
 =======
 <<<<<<< HEAD
 =======
+=======
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
       {
-        message: 'Onboarding completed successfully'
+        message: "Onboarding completed successfully",
         user: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -19,9 +27,10 @@ import { prisma } from "@/lib/prisma";
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted,
         },
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -132,11 +141,12 @@ export async function POST(request: NextRequest) { try {
       }
     });
   } catch (_error) {
+=======
+    console.error("Onboarding completion error:", error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return NextResponse.json(
-      { error: 'Failed to complete onboarding' },
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }

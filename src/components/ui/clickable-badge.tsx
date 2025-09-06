@@ -73,9 +73,12 @@ export function ClickableBadge({;
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       )}
       {...props}
     >;

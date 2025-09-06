@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -32,25 +33,20 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-export default function PublishProduct() {;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-  // Show loading while checking authentication;
-  if (isLoading) {;
-
-=======
-
 
   // Show loading while checking authentication
   if (isLoading) {
@@ -61,14 +57,17 @@ export default function PublishProduct() {;
   if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
-        <div className="animate-pulse text-zion-purple text-lg">;
-          Loading...;
-        </div>;
-      </div>;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
+      </div>
     );
   }
 <<<<<<< HEAD
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: "/publish" }} replace />;
+  }
 
 
   // Redirect to login if not authenticated;
@@ -77,6 +76,7 @@ export default function PublishProduct() {;
 
   }
   return (
+<<<<<<< HEAD
 
 =======
 
@@ -130,6 +130,8 @@ import { useAuth } from "@/hooks/useAuth",
     return <Navigate to="/login" state={{ from: '/publish' }} replace />
   }
   return (
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     <div className="min-h-screen flex flex-col bg-zion-blue">
 <<<<<<< HEAD
 =======
@@ -141,10 +143,14 @@ import { useAuth } from "@/hooks/useAuth",
       <Header />
       <main className="flex-1 p-6 md:p-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Publish on Zion</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">
+            Publish on Zion
+          </h1>
           <p className="text-zion-slate mb-8">
-            Share your products, services, or digital assets with the Zion community.
+            Share your products, services, or digital assets with the Zion
+            community.
           </p>
+
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
             <ProductSubmissionForm />
           </div>
@@ -152,6 +158,7 @@ import { useAuth } from "@/hooks/useAuth",
       </main>
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 
 
@@ -286,6 +293,9 @@ export default function PublishProduct() {;
   // Check condition
 if ( {) {
   $2
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
     return (
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;

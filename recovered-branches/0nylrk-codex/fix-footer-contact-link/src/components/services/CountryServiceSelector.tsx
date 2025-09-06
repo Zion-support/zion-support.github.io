@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   onsiteServicePricing
@@ -54,6 +55,8 @@ export function CountryServiceSelector({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
   onsiteServicePricing,
   CountryPricing,
@@ -69,15 +72,12 @@ interface CountryServiceSelectorProps {
 export function CountryServiceSelector({
   onCountryChange,
   selectedCountry: initialCountry,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           onCountryChange={onCountryChange |(() => {})}
@@ -106,20 +106,19 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           onCountryChange={onCountryChange || (() => {})}
           selectedCountry={initialCountry || null}
         />
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
-<<<<<<< HEAD
+
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -146,40 +145,9 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
 
       {initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-}
-
-=======
-  onsiteServicePricing,
-  CountryPricing,
-} from '@/data / onsiteServicePricing';
-import { CountrySelector  } from './CountrySelector';
-import { PaymentSection  } from './PaymentSection';
-import { ServiceDetails  } from './ServiceDetails';
-interface CountryServiceSelectorProps {
-  onCountryChange?: (country: CountryPricing | null) => void;
-  selected_country?: CountryPricing | null;
-}
-export /**
- * CountryServiceSelector - Function description
- */
-function CountryServiceSelector() {
-  return (
-    <div className="space - y-6">;
-      <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light">;
-        <CountrySelector;
-          onCountryChange={onCountryChange || (() => {})}
-          selected_country={initial_country || null}
-        />;
-        {initial_country && <PaymentSection selected_country={initial_country} />}
-      </div>;
-      {initial_country && <ServiceDetails country={initial_country.country} />}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
 }
 ;
 

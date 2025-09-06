@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export { useMilestones } from './milestones/useMilestones';
@@ -39,3 +40,11 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { useMilestones } from "./milestones/useMilestones";
+export type {
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,
+} from "./milestones/types";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

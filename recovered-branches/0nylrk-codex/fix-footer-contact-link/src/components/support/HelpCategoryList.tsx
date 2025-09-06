@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -52,6 +53,8 @@ export function HelpCategoryList({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import {
   Card,
@@ -71,49 +74,21 @@ export function HelpCategoryList({
   categories,
   onCategorySelect,
   searchQuery,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-=======
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           category.description
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) ||
           category.articles.some(
             (article) =>
-<<<<<<< HEAD
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-              article.content.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HelpCategory} from "./types";
-=======
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-              article.content.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-<<<<<<< HEAD
-      );
-=======
               article.content.toLowerCase().includes(searchQuery.toLowerCase()),
           ),
-      )
->>>>>>> main
-    : categories;
-=======
-
       )
     : categories,
 
@@ -249,6 +224,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -399,15 +375,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
-
-    </div>;
-=======
-      ))}
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
 

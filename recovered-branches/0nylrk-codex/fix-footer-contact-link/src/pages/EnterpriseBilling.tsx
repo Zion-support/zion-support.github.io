@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -152,23 +153,34 @@ export default function EnterpriseBilling() {;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes('billing_access'));
   if (!hasBillingAccess) {;
-    return <Navigate to="/unauthorized" />;
-  }
-;
-  return (;
-<<<<<<< HEAD
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
 <<<<<<< HEAD
 
-=======
+  // Check if user has billing permissions
+  const hasBillingAccess =
+    user?.role === "enterprise_admin" ||
+    (user?.permissions && user.permissions.includes("billing_access"));
+
+  if (!hasBillingAccess) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+    return <Navigate to="/unauthorized" />;
   }
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <ProtectedRoute>;
+    <ProtectedRoute>
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -224,7 +236,18 @@ export default function EnterpriseBilling() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <BillingDashboard />
+      </main>
+      <Footer />
+    </ProtectedRoute>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

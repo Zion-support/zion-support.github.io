@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
@@ -45,22 +46,15 @@ import {TalentCardSkills} from "./TalentCardSkills";
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-<<<<<<< HEAD
-  skills: string[] | undefined
-
-import React, { useState } from "react";
-import {MapPin} from "lucide-react";
-import {TalentCardSkills} from "./TalentCardSkills";
-=======
-=======
   skills: string[] | undefined;
 }
 
@@ -72,9 +66,6 @@ export function TalentCardContent({
   timezone,
   skills,
 }: TalentCardContentProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isHovering, setIsHovering] = useState(false);
 
 
@@ -190,6 +181,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         onMouseLeave={() => setIsHovering(false)}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p className="text-zion-slate mb-4">
           {summary || bio}
 <<<<<<< HEAD
@@ -199,6 +191,10 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
       </div>
 =======
 
+=======
+        <p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
         <p className="text-zion-slate mb-4">{summary || bio}</p>

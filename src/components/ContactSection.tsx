@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -92,6 +93,8 @@ const ContactSection: React.FC = () => {
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -141,7 +144,6 @@ fetch("/api/contact", {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -232,20 +234,6 @@ fetch("/api/contact", {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
-<<<<<<< HEAD
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
-=======
                   <Textarea
                     id="message"
                     name="message"
@@ -438,10 +426,13 @@ export function ContactSection() {;
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     disabled={isSubmitting}
                   >;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -458,6 +449,7 @@ export function ContactSection() {;
                 />
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -493,6 +485,8 @@ export function ContactSection() {;
 export default ContactSection;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -508,4 +502,3 @@ export default ContactSection;
   );
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

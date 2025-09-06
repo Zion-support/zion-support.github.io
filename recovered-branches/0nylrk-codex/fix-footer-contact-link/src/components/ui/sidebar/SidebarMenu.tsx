@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,76 +16,25 @@ import { cn } from "@/lib/utils",
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
-  className?: string,
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
+
 export function SidebarMenu({
-  className
-  children
+  className,
+  children,
   ...props
 }: SidebarMenuProps) {
   return (
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {cn} from "@/lib/utils";
-interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  className?: string;
-  children?: React && React.ReactNode;
-}
-<<<<<<< HEAD
-
-import React from './react';
-import { cn  } from '@/lib / utils';
-interface SidebarMenuProps extends React.HTMLAttributes < HTMLUListElement> {
-  class_name?: string;
-  children?: React.ReactNode;
-}
-export /**
- * SidebarMenu - Function description
- */
-function SidebarMenu() {
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  return (
-    <ul className={cn ("space - y-1", class_name)} {...props}>;
+    <ul className={cn("space-y-1", className)} {...props}>
       {children}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function SidebarMenu(): any ({ className, children, ...props }: SidebarMenuProps) {;
-  return (
-    <ul
-      className={cn("space-y-1", className)} 
-      {...props}>;
-      {children}
-    </ul>;
+    </ul>
   );
-  return (
-
-    <ul 
-      className={cn("space-y-1", className)} 
-    <ul 
-      className={cn("space-y-1", className)} 
-
-  );
-
-
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

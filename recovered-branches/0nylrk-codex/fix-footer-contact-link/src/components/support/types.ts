@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from "react";
 =======
@@ -13,10 +14,14 @@ import { ReactNode  } from './react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { ReactNode } from "react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   last_updated: string;
@@ -36,6 +41,10 @@ export interface HelpArticle {;
 <<<<<<< HEAD
   lastUpdated: string,
   tags: string[]
+=======
+  lastUpdated: string;
+  tags: string[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export interface HelpCategory {;
@@ -62,6 +71,7 @@ export interface HelpCategory {;
   description: string;
   icon: ReactNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
   articles: HelpArticle[]
 }
 export interface SupportTicket {
@@ -72,8 +82,9 @@ export interface SupportTicket {;
 <<<<<<< HEAD
   articles: HelpArticle[]
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   articles: HelpArticle[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -90,6 +101,7 @@ export interface SupportTicket {;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,6 +158,8 @@ export interface SupportTicket {;
   message: string,;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   createdAt: string;
 <<<<<<< HEAD
   updatedAt: string;

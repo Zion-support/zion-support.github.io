@@ -1,9 +1,15 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Export endpoint' });
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
 
@@ -142,4 +148,8 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

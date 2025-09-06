@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -109,31 +110,35 @@ export interface SearchHighlight {;
 =======
   match: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface SearchSuggestion {
+  text: string;
+  type: "product" | "category" | "tag" | "skill" | "person" | "recent";
+  iconUrl?: string;
+}
+export interface SearchHighlight {
+  before: string;
+  match: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   after: string;
 }
 export interface FilterOptions {
   productTypes: {
-
+    label: string;
+    value: string;
   }[];
 <<<<<<< HEAD
   ratingOptions: number[];
 =======
   locations: {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    label: string,
+    label: string;
     value: string;
   }[];
-  availability_options: {
-    label: string,
+  availabilityOptions: {
+    label: string;
     value: string;
   }[];
-  rating_options: number[];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
+  ratingOptions: number[];
 }
 =======
 

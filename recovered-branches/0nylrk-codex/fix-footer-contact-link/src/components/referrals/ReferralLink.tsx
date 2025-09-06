@@ -77,9 +77,10 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
+  onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ReferralLink({
   referralLink
@@ -134,6 +135,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function ReferralLink({
   referralLink,
   onCopy,
@@ -146,10 +149,6 @@ export function ReferralLink({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card className="mt-6">
@@ -208,21 +207,13 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
               value={referralLink}
               readOnly
               className="font-mono text-sm"
-<<<<<<< HEAD
-
-=======
             />
             <Button variant="outline" size="icon" onClick={handleCopy}>
               <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -269,6 +260,7 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
     </Card>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
   )
@@ -400,6 +392,8 @@ interface ReferralLinkProps {
   on_copy: () => void;
   on_share: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export /**
  * ReferralLink - Function description
  */

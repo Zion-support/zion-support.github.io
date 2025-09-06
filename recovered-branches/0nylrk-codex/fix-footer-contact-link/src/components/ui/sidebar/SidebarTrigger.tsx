@@ -5,6 +5,7 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
 import {useSidebar} from "./sidebar-context";
@@ -36,8 +37,14 @@ import { cn } from "@/lib/utils",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { useSidebar } from "./sidebar-context";
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string
+  className?: string;
 }
 
 <<<<<<< HEAD
@@ -119,8 +126,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-      <span className="sr-only">Toggle Sidebar</span>;
-    </Button>;
+      <span className="sr-only">Toggle Sidebar</span>
+    </Button>
   );
 }
 <<<<<<< HEAD

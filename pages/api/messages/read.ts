@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -83,9 +84,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(200).json({ success: true })
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
-import { getConversationById, markAsRead } from '../../../utils/messaging/storage',;
+import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res),
@@ -96,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conv = getConversationById(conversationId),
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' }),
   markAsRead(conversationId, user.id),
+<<<<<<< HEAD
   res.status(200).json({ success: true });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -171,3 +175,7 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.status(200).json({ success: true })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

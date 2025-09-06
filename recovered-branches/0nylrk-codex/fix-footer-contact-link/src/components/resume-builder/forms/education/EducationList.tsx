@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -83,13 +84,14 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Education } from "@/types/resume";
 import { EducationItem } from "./EducationItem";
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
->>>>>>> main
 }
 
 export function EducationList({
@@ -98,8 +100,11 @@ export function EducationList({
   onDelete,
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return null;
   }
 
@@ -108,12 +113,11 @@ export function EducationList({
 
 
   return (
-<<<<<<< HEAD
-
-    <div className="space-y-4">;
-      <h3 className="text-md font-medium">Added Education</h3>;
-      {educationEntries && educationEntries.map((edu) => (;
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
         <EducationItem
+<<<<<<< HEAD
           key={edu && edu.id} 
           education={edu} 
           onEdit={onEdit} 
@@ -166,6 +170,16 @@ if ( {) {
           education={edu}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
+=======
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 

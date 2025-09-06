@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Export components from their respective files
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -11,6 +12,9 @@
 
 // Export components from their respective files;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Export components from their respective files
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export * from "./Sidebar.tsx";
 
 <<<<<<< HEAD

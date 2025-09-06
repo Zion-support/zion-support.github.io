@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -24,16 +25,21 @@ import { ArrowLeft } from "lucide-react",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -41,14 +47,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {error |"Something went wrong"}
-=======
         {error || "Something went wrong"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
       <Button asChild>
         <Link
@@ -60,6 +59,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -80,6 +80,9 @@ import {ArrowLeft} from "lucide-react";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileErrorStateProps {;
   error: string | null;
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;

@@ -281,6 +281,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CardFooter className='border-t bg-muted/50 p-4'>
         <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
           <p className='text-sm text-muted-foreground'>
@@ -431,3 +432,5 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     </Card>
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

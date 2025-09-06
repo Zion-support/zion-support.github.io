@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -39,6 +40,9 @@ export interface ReferralCode {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
+=======
+export type ReferralStatus = "pending" | "completed" | "expired";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface ReferralCode {
 
@@ -48,9 +52,9 @@ export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
-
-  created_at: string,
+  created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -63,6 +67,8 @@ export interface Referral {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface Referral {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -93,6 +99,7 @@ export interface Referral {
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
+<<<<<<< HEAD
 
   reward_issued: boolean,
   reward_issued_at: string | null;
@@ -107,6 +114,10 @@ export interface ReferralReward {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  reward_issued: boolean;
+  reward_issued_at: string | null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -138,8 +149,9 @@ export interface ReferralReward {
   id: string;
   user_id: string;
   referral_id: string;
-  reward_type: 'credit' | 'visibility';
+  reward_type: "credit" | "visibility";
   amount: number | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
   created_at: string
   expires_at: string | null
@@ -147,6 +159,11 @@ export interface ReferralReward {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+  created_at: string;
+  expires_at: string | null;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 
@@ -168,6 +185,7 @@ export interface ReferralStats {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   totalReferrals: number;
   pendingReferrals: number;
+<<<<<<< HEAD
   completedReferrals: number
 
   totalRewards: number
@@ -217,6 +235,10 @@ export interface ReferralReward {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   created_at: string,
   expires_at: string | null;
+=======
+  completedReferrals: number;
+  totalRewards: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 <<<<<<< HEAD

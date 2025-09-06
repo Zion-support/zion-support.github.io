@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Slider} from "@/components/ui/slider";
-import {PriceFilterProps} from "@/types/filters";
-<<<<<<< HEAD
-export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
-=======
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-=======
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
@@ -22,12 +8,10 @@ export function PriceFilter({
   toggleSection,
   isMobileFilterOpen,
 }: PriceFilterProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
   };
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Slider } from "@/components/ui/slider",
 import { PriceFilterProps } from "@/types/filters",
@@ -69,6 +53,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0], values[1]]);
   };
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -88,6 +74,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,8 +123,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      </button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+      {expanded && (
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>${priceRange[0]}/hr</span>
+            <span>${priceRange[1]}/hr</span>
+          </div>
           <Slider
+<<<<<<< HEAD
 =======
 
           <Slider 
@@ -154,6 +151,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -165,15 +164,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           />;
         </div>;
       )}
-
-    </div>;
-=======
-            className="mt-6";
-          />;
-        </div>;
-      )}
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
 

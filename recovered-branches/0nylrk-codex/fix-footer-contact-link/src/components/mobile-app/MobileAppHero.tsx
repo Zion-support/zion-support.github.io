@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -8,31 +9,14 @@
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, Phone} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
-import React from "react",
-import { Link } from "react-router-dom",
-import { ArrowRight, Phone } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, Phone} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {AppStoreButtons} from "./AppStoreButtons";
-import React from "react",
-import { Link } from "react-router-dom",
-import { ArrowRight, Phone } from "lucide-react",
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
@@ -45,17 +29,13 @@ import { AppStoreButtons } from "./AppStoreButtons",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -68,32 +48,14 @@ export const MobileAppHero: React.FC = () => {
               Find top AI talent or global IT jobs on the go. The power of
               Zion's AI matching, now available on your mobile device.
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="mb-8">
               <AppStoreButtons
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link to="/open-app">
               <Button
                 variant="outline"
@@ -112,6 +74,7 @@ export const MobileAppHero: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -131,6 +94,8 @@ export const MobileAppHero: React.FC = () => {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -255,6 +220,7 @@ export const MobileAppHero:React.FC = () => {;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,10 +290,12 @@ export const MobileAppHero: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 >>>>>>> main
-  );
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

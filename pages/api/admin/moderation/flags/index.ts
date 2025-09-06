@@ -1,37 +1,38 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
+import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-
+  if (req.method === 'GET') {
+    const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>,
+    const flags = await readAllFlags(),
     const filtered = flags.filter(f =>
 
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
-    );
-    return res.status(200).json({ flags: filtered });
+    ),
+    return res.status(200).json({ flags: filtered })
   }
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req)
-  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
-  if (req.method === 'GET') {
-    const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
-    const flags = await readAllFlags()
-    const filtered = flags.filter(f =>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -100,3 +101,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  res.setHeader('AllowGET,POST'),
+  return res.status(405).end('Method Not Allowed')
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

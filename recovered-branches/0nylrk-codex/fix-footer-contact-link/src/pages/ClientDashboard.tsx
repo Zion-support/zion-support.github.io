@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -54,12 +55,34 @@ import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+=======
+import { useState, useEffect } from "react";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { JobsList } from "@/components/jobs/JobsList";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
+import { JobStatus } from "@/types/jobs";
+import { SEO } from "@/components/SEO";
+import {
+  BriefcaseIcon,
+  UserIcon,
+  MessageSquare,
+  Star,
+  PlusCircle,
+  Kanban,
+  Video,
+} from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { useJobs } from "@/hooks/useJobs";
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
@@ -111,6 +134,7 @@ function ClientDashboardContent() {
 
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
+<<<<<<< HEAD
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
 
@@ -122,6 +146,10 @@ function ClientDashboardContent() {
   }, [jobs, selectedJobId]);
   }, [jobs, selectedJobId]),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle));
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
@@ -144,18 +172,28 @@ function ClientDashboardContent() {
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
-        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
+        <div
+          className={`flex flex-col ${!isMobile ? "md:flex-row md:justify-between md:items-center" : ""} mb-8 gap-4`}
+        >
           <div>
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
-            <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>
+            <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
+              My Jobs
+            </h1>
+            <p className="text-muted-foreground mt-1">
+              Manage your job postings and talent applications
+            </p>
           </div>
-          <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
-            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
+          <div className={`flex gap-2 ${isMobile ? "flex-col" : ""}`}>
+            <Button
+              variant="outline"
+              asChild
+              className={isMobile ? "w-full justify-center" : ""}
+            >
               <Link to="/hiring-tracker">
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
               </Link>
             </Button>
-            <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
+            <Button asChild className={isMobile ? "w-full justify-center" : ""}>
               <Link to="/post-job">
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
               </Link>
@@ -168,14 +206,39 @@ function ClientDashboardContent() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
+            <Tabs
+              defaultValue="all"
+              onValueChange={(value) =>
+                setActiveTab(value as JobStatus | "all")
+              }
+            >
+              <TabsList className={`mb-6 ${isMobile ? "w-full" : ""}`}>
+                <TabsTrigger value="all" className={isMobile ? "flex-1" : ""}>
+                  All
+                </TabsTrigger>
+                <TabsTrigger value="new" className={isMobile ? "flex-1" : ""}>
+                  New
+                </TabsTrigger>
+                <TabsTrigger
+                  value="in_progress"
+                  className={isMobile ? "flex-1" : ""}
+                >
+                  Active
+                </TabsTrigger>
+                <TabsTrigger
+                  value="filled"
+                  className={isMobile ? "flex-1" : ""}
+                >
+                  Filled
+                </TabsTrigger>
+                <TabsTrigger
+                  value="closed"
+                  className={isMobile ? "flex-1" : ""}
+                >
+                  Closed
+                </TabsTrigger>
               </TabsList>
+
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -193,6 +256,7 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
+
           <div>
             <div className="sticky top-4 space-y-6">
 <<<<<<< HEAD
@@ -410,10 +474,10 @@ function ClientDashboardContent() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Active Projects Card */}
-              <ActiveProjectsCard />;
+              <ActiveProjectsCard />
 
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />;
+              <UpcomingInterviewsCard />
 
 <<<<<<< HEAD
 =======
@@ -433,6 +497,7 @@ function ClientDashboardContent() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* AI Talent Suggestions */}
+<<<<<<< HEAD
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
@@ -477,11 +542,14 @@ function ClientDashboardContent() {;
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
               {/* AI Talent Suggestions */}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
+
                 {selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
@@ -499,6 +567,7 @@ function ClientDashboardContent() {;
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -654,22 +723,17 @@ export default function ClientDashboard() {;
     <ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 }
 
-<<<<<<< HEAD
-;
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    </>);
+export default function ClientDashboard() {
+  return (
+    <ProtectedRoute>
+      <ClientDashboardContent />
+    </ProtectedRoute>
+  );
 }
 export default /**
  * ClientDashboard - Function description

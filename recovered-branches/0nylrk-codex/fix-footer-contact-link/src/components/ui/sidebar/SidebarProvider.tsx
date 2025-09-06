@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,13 +29,15 @@ import React, { create_context, useContext, useState } from './react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { createContext, useContext, useState } from "react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SidebarContextType {
-  is_open: boolean;
+  isOpen: boolean;
   toggle: () => void;
   open: () => void;
-  close: () => void
-<<<<<<< HEAD
-<<<<<<< HEAD
+  close: () => void;
+}
 
 =======
 <<<<<<< HEAD
@@ -48,10 +51,8 @@ const SidebarContext = create_context < SidebarContextType>({
   open: () => {},
   close: () => {},
 });
-;
-export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
-;
-<<<<<<< HEAD
+
+export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -59,6 +60,7 @@ export const use_sidebar = (): SidebarContextType => useContext (SidebarContext)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SidebarProviderProps {
   children: React.ReactNode;
+<<<<<<< HEAD
   default_open?: boolean;
 }
 <<<<<<< HEAD
@@ -94,14 +96,17 @@ const SidebarContext = createContext<SidebarContextType>({
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 interface SidebarProviderProps {
   children: React.ReactNode;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   defaultOpen?: boolean;
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
 export function SidebarProvider({
-  children
-  defaultOpen = true
+  children,
+  defaultOpen = true,
 }: SidebarProviderProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -126,6 +131,9 @@ export function SidebarProvider({
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -140,6 +148,7 @@ export function SidebarProvider({
   return (
 <<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -250,10 +259,16 @@ export function SidebarProvider({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      <div
+        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
+      >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         {children}
       </div>
     </SidebarContext.Provider>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -268,6 +283,8 @@ export function SidebarProvider({;
       </div>;
     </SidebarContext && SidebarContext.Provider>;
   );
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 

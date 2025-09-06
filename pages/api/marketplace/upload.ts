@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -20,6 +21,9 @@ import type { NextApiRequest, NextApiResponse } from "next",;
 =======
 
 import type { NextApiRequest, NextApiResponse } from "next",;
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 
 =======
@@ -47,6 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { name, url } = req.body || {},
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -132,3 +137,7 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return res.status(201).json({ ok: true, file: { name, url: url || null } })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

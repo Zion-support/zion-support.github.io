@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 // Use the centralized icon wrapper to avoid missing icons
@@ -42,54 +43,18 @@ import { Badge } from '@/components/ui/badge',
 import { formatDistanceToNow } from 'date-fns',
 import { cn } from '@/lib/utils',
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { formatDistanceToNow } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from '@/components/ui/tooltip',;
-import { useRouter } from 'next/router',;
-import { Notification, NotificationType } from '@/context/notifications',;
-export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {;
-    case 'message':;
-      return <span className="text-blue-500">💬</span>,;
-    case 'quote_request':;
-      return <span className="text-purple-500">📝</span>,;
-    case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>,;
-    case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>,;
-    case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>,;
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    case 'project_update':;
-      return <span className="text-indigo-400">📌</span>,;
-    case 'milestone_complete':;
-      return <span className="text-green-500">🏁</span>,;
-    case 'order_status':;
-      return <span className="text-orange-500">📦</span>,;
-    default:;
-=======
   TooltipTrigger
 } from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
@@ -108,6 +73,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'project_update':
       return <span className="text-orange-500">📦</span>;
     default:
+<<<<<<< HEAD
 <<<<<<< HEAD
       return <span className="text-gray-500">📣</span>
 import React from 'react',;
@@ -148,6 +114,8 @@ export const getTypeIcon = (type: NotificationType) => {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       return <span className="text-gray-500">📣</span>;
   }
 },;
@@ -170,6 +138,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -275,6 +244,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   };
 
   const handleMarkAsRead = (e: React.MouseEvent) => {
@@ -362,13 +333,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 className="h-8 w-8 p-0 text-gray-400 hover:text-red-500"
               >
                 <Trash2 className="h-4 w-4" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </Button>
             </TooltipTrigger>
             <TooltipContent>
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </TooltipProvider>
 <<<<<<< HEAD
@@ -436,10 +407,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     </div>
   )
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         </div>
       </div>
     </TooltipProvider>
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

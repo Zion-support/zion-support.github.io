@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -18,6 +19,9 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type FraudSeverity = "safe" | "suspicious" | "dangerous";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface FraudFlag {
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
@@ -40,18 +44,19 @@ export interface FraudFlag {
   id: string;
   user_id: string;
   user_email?: string;
-  content_type: 'signup' | 'job' | 'message' | 'quote' | 'review';
+  content_type: "signup" | "job" | "message" | "quote" | "review";
   content_id: string;
   content_excerpt: string;
   severity: FraudSeverity;
   reason: string;
   timestamp: string;
   ip_address?: string;
-  status: 'pending' | 'reviewed' | 'ignored' | 'actioned';
+  status: "pending" | "reviewed" | "ignored" | "actioned";
   reviewed_by?: string;
   reviewed_at?: string;
-  action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
+  action_taken?: "none" | "warning" | "suspension" | "ban";
   gpt_classification?: string;
+<<<<<<< HEAD
 
   gpt_explanation?: string,
   is_false_positive?: boolean;
@@ -66,6 +71,10 @@ export interface FraudStats {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  gpt_explanation?: string;
+  is_false_positive?: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -98,6 +107,7 @@ export interface FraudStats {
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   actioned_count: number
@@ -157,3 +167,8 @@ export interface FraudStats {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  false_positives: number;
+  actioned_count: number;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

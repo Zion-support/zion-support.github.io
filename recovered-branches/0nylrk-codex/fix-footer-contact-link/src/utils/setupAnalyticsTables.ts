@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { supabase } from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
@@ -38,10 +39,14 @@ import {supabase} from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { supabase } from "@/integrations/supabase/client";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
+<<<<<<< HEAD
       .from('analytics_events')
 <<<<<<< HEAD
 
@@ -113,6 +118,19 @@ export async function ensureAnalyticsTablesExist() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      .from("analytics_events")
+      .select("id")
+      .limit(1);
+
+    if (error && error.code === "PGRST204") {
+      console.log("Creating analytics tables...");
+      await createAnalyticsTables();
+    }
+  } catch (error) {
+    console.warn("Error checking if analytics tables exist:", error);
+    // No need to create tables here, as this could be a connection error
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
 }
 
@@ -120,7 +138,7 @@ export async function ensureAnalyticsTablesExist() {;
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
-    await supabase && supabase.rpc('exec', {
+    await supabase.rpc("exec", {
       sql: `
 <<<<<<< HEAD
         CREATE TABLE IF NOT EXISTS public && public.analytics_events (
@@ -432,37 +450,11 @@ function createAnalyticsTables() {
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
-        ORDER BY c.date DESC,
-      `
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import { supabase } from '@/integrations/supabase/client',;
-;
-export async function ensureAnalyticsTablesExist() {;
-  try {;
-    // Check if analytics_events table exists;
-    const { error } = await supabase;
-      .from('analytics_events');
-      .select('id');
-      .limit(1),;
-      ;
-    if (error && error.code === 'PGRST204') {;
-      // // // console.log('Creating analytics tables...'),;
-      await createAnalyticsTables(),;
-    }
-  } catch (error) {;
-    console.warn('Error checking if analytics tables exist:', error),;
-    // No need to create tables here, as this could be a connection error;  }
-    if (error && error.code === 'PGRST204') {_await createAnalyticsTables();}
-  } catch (error) {_// No need to create tables here, _as this could be a connection error}
-}
+        ORDER BY c.date DESC;
+      `,
     });
-    console.log('Analytics tables created successfully')
-  } catch (error) {
-    console.error('Error creating analytics tables:', error);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Tables creation failed, but we can still continue
@@ -556,6 +548,11 @@ async function createAnalyticsTables() {;
     // // // console.log('Analytics tables created successfully')
   } catch (error) {
     console.error('Error creating analytics tables:', error),
+=======
+    console.log("Analytics tables created successfully");
+  } catch (error) {
+    console.error("Error creating analytics tables:", error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     // Tables creation failed, but we can still continue
 
 <<<<<<< HEAD

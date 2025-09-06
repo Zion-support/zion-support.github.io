@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -27,24 +28,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req),
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
-  const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version |''}</title></head><body>` +
-    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,"><h1>${i + 1}. ${escapeHtml(s.title |'')}</h1><pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content |'')}</pre></section>`).join('') +
-`</body></html>`
-  res.setHeader('Content-Typeapplication/octet-stream')
-  res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
+  const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version || ''}</title></head><body>` +
+    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,"><h1>${i + 1}. ${escapeHtml(s.title || '')}</h1><pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content || '')}</pre></section>`).join('') +
+    `</body></html>`,
+
+  res.setHeader('Content-Typeapplication/octet-stream'),
+  res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version || 'draft'}.html"`),
   res.status(200).send(html)
-<<<<<<< HEAD
-=======
+}
 
 }
 function escapeHtml(str: string) {
   return String(str)
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-.replace(/&/g, '&amp,')
+    .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
@@ -79,6 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     .replace(/'/g, '&#039,')
+<<<<<<< HEAD
 }
 
     .replace(/'/g, '&#039,');
@@ -112,3 +121,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

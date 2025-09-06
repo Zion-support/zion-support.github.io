@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -171,6 +172,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -180,7 +183,6 @@ interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
->>>>>>> main
 }
 
 export function CertificationsList({
@@ -223,9 +225,6 @@ export function CertificationsList({
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 </p>;
               </div>;
@@ -280,59 +279,9 @@ export function CertificationsList({
 <<<<<<< HEAD
 
             {cert.credential_url && (
-              <p className="text - xs mt - 2">;
-                <a;
-                  href={cert.credential_url}
-
-                  onClick={() => onDelete(cert && cert.id!)}
-                >;
-                  <Trash2 className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </div>;
-            {cert && cert.credential_url && (;
-              <p className="text-xs mt-2">;
-                <a
-                  href={cert && cert.credential_url} 
-                  target="_blank" 
-
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline">;
-                  View credential;
-                </a>;
-              </p>;
-            )}
-          </CardContent>;
-        </Card>;
-      ))}
-
-    </div>;
-  );
-}
-
-=======
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text - primary hover:underline";
-                >;
-                  View credential;
-                </a>;
-              </p>)}
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-            {cert.credential_url && (
               <p className="text-xs mt-2">
                 <a
                   href={cert.credential_url}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-            {cert.credential_url && (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -346,6 +295,7 @@ export function CertificationsList({
       ))}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -353,6 +303,9 @@ export function CertificationsList({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 

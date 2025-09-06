@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -44,29 +45,19 @@ import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import * as React from "react";
+import { Toaster, as, SonnerToaster } from "sonner";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function Toaster() {
   return (
-
-import {Toaster, as, SonnerToaster} from "sonner";
-export function Toaster() {;
-  return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import {Toaster, as, SonnerToaster} from "sonner";
-export function Toaster() {;
-  return (
-export function Toaster() {
-  return (
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <SonnerToaster
       position="top-right"
       toastOptions={{
-        className: "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10"
+        className:
+          "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
         style: {
+<<<<<<< HEAD
           background: '#0a1429'
           color: '#fff'
           border: '1px solid #1e3a6f'}
@@ -140,11 +131,17 @@ function Toaster() {
           background: '#0a1429',
           color: '#fff',
           border: '1px solid #1e3a6f'},
+=======
+          background: "#0a1429",
+          color: "#fff",
+          border: "1px solid #1e3a6f",
+        },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         duration: 4000,
-        descriptionClassName: "text - zion - slate - light"}}
-    />);
-<<<<<<< HEAD
-<<<<<<< HEAD
+        descriptionClassName: "text-zion-slate-light",
+      }}
+    />
+  );
 }
 
 =======

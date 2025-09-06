@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Slider} from "@/components/ui/slider";
-import {ExperienceFilterProps} from "@/types/filters";
-<<<<<<< HEAD
-export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
-=======
-export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
-=======
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
@@ -22,12 +8,10 @@ export function ExperienceFilter({
   toggleSection,
   isMobileFilterOpen,
 }: ExperienceFilterProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
   };
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Slider } from "@/components/ui/slider",
 import { ExperienceFilterProps } from "@/types/filters",
@@ -69,6 +53,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0], values[1]]);
   };
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -88,6 +74,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,8 +123,18 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      </button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+      {expanded && (
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
           <Slider
+<<<<<<< HEAD
 =======
 
           <Slider 
@@ -154,6 +151,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
@@ -165,15 +164,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           />;
         </div>;
       )}
-
-    </div>;
-=======
-            className="mt-6";
-          />;
-        </div>;
-      )}
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
 

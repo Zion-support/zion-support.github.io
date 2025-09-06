@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,6 +11,9 @@ export interface TalentProfile {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface TalentProfile {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
   user_id: string;
   full_name: string;
@@ -18,6 +22,7 @@ export interface TalentProfile {;
   bio?: string;
   summary?: string;
   location?: string;
+<<<<<<< HEAD
     title: string,
     description: string;
   }[];
@@ -88,6 +93,18 @@ export interface HireRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     title: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  skills?: string[];
+  hourly_rate?: number;
+  years_experience?: number;
+  availability_type?: string;
+  timezone?: string;
+  average_rating?: number;
+  rating_count?: number;
+  is_verified?: boolean;
+  key_projects?: {
+    title: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     description: string;
   }[];
 }
@@ -96,8 +113,9 @@ export interface TalentProfileFilters {
   skills?: string[];
   availabilities?: string[];
   regions?: string[];
-  price_range?: [number, number];
-  experience_range?: [number, number];
+  priceRange?: [number, number];
+  experienceRange?: [number, number];
+}
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -110,10 +128,9 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
-<<<<<<< HEAD
-
-    max: number,
+    max: number;
     currency: string;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,14 +176,16 @@ export interface HireRequest {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+=======
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   timeline: {
-    start_date: string;
-    end_date?: string,
-    estimated_duration?: string;
-  }
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
-  created_at: string;
-
+    startDate: string;
+    endDate?: string;
+    estimatedDuration?: string;
+  };
+  status: "pending" | "accepted" | "rejected" | "completed";
+  createdAt: string;
 }
 
 

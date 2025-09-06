@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -62,13 +63,30 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { 
+=======
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   Star,
-  MapPin, 
-  Clock, 
-  Link as LinkIcon, 
-  Github, 
-  Twitter, 
+  MapPin,
+  Clock,
+  Link,
+  as,
+  LinkIcon,
+  Github,
+  Twitter,
   Linkedin,
+<<<<<<< HEAD
   CheckCircle2
 } from "lucide-react",
 
@@ -80,6 +98,10 @@ export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState(true),
   const [isError, setIsError] = useState(false),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  CheckCircle2,
+} from "lucide-react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 
@@ -132,13 +154,23 @@ export default function ProfilePage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (error) {
-          throw error
+          throw error;
         }
-        setProfileData(data)
+
+=======
+      } finally {
+        setIsLoading (false);
+      }
+        if (error) {;
+          throw error;
+        }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        setProfileData(data);
       } catch (error) {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
+<<<<<<< HEAD
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
@@ -302,54 +334,19 @@ if ( {) {
         console.error ("Error fetching profile:", error);
         setIsError (true);
         toast ({
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
-
+          variant: "destructive",
+        });
       } finally {
-        setIsLoading (false);
-      }
-
-
-        if (error) {;
-          throw error;
-        }
-
-=======
-      } finally {
-        setIsLoading (false);
-      }
-        if (error) {;
-          throw error;
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        setProfileData(data);
-      } catch (error) {;
-        console && console.error("Error fetching profile:", error);
-        setIsError(true);
-<<<<<<< HEAD
-=======
-          .single(),;
-        if (error) {;
-          throw error;
-        }
-;
-        setProfileData(data);
-      } catch (error) {;
-        console.error("Error fetching profile:", error),;
-        setIsError(true),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        toast({;
-          title: "Error",;
-          description: "Failed to load profile. Please try again later.",;
-          variant: "destructive"});
-      } finally {;
         setIsLoading(false);
       }
 <<<<<<< HEAD
     };
 
-    if (profileId) {;
+    if (profileId) {
       fetchProfile();
     }
 <<<<<<< HEAD
@@ -366,9 +363,9 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
-      <div className="min-h-screen flex items-center justify-center">;
-        <span className="loading loading-ring loading-lg"></span>;
-      </div>;
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="loading loading-ring loading-lg"></span>
+      </div>
     );
   }
 <<<<<<< HEAD
@@ -414,7 +411,7 @@ if ( {) {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    )
+    );
   }
 
 
@@ -428,6 +425,7 @@ if ( {) {
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         description={profileData.bio || "View the profile of this talented individual."}
@@ -451,6 +449,11 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        description={
+          profileData.bio || "View the profile of this talented individual."
+        }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
@@ -572,16 +575,17 @@ if ( {) {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <div className="flex items-start">;
                 {/* Avatar */}
-                <div className="relative mr-4">;
-                  <Avatar className="w-24 h-24">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    {profileData && profileData.profile_picture_url ? (;
-                      <AvatarImage src={profileData && profileData.profile_picture_url} alt={profileData && profileData.full_name} />;
-                    ) : (;
-                      <AvatarFallback>{profileData && profileData.full_name?.charAt(0)}</AvatarFallback>;
+                <div className="relative mr-4">
+                  <Avatar className="w-24 h-24">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage
+                        src={profileData.profile_picture_url}
+                        alt={profileData.full_name}
+                      />
+                    ) : (
+                      <AvatarFallback>
+                        {profileData.full_name?.charAt(0)}
+                      </AvatarFallback>
                     )}
                   </Avatar>;
                   {profileData && profileData.is_verified && (;
@@ -589,10 +593,7 @@ if ( {) {
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                     </div>;
                   )}
-<<<<<<< HEAD
-
-                </div>;
-
+                </div>
 
 =======
                 </div>;
@@ -612,21 +613,18 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Main Info */}
-                <div className="flex-1">;
-                  <div className="flex justify-between items-start">;
-                    <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                      <h1 className="text-2xl font-bold text-white">{profileData && profileData.full_name}</h1>;
-                      <p className="text-zion-cyan font-medium">{profileData && profileData.professional_title}</p>;
-                    </div>;
+                <div className="flex-1">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h1 className="text-2xl font-bold text-white">
+                        {profileData.full_name}
+                      </h1>
+                      <p className="text-zion-cyan font-medium">
+                        {profileData.professional_title}
+                      </p>
+                    </div>
                     {/* Add Save/Unsave Button Here */}
-<<<<<<< HEAD
-
-                  </div>;
-
+                  </div>
 
 =======
                   </div>;
@@ -647,6 +645,7 @@ if ( {) {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -682,27 +681,32 @@ if ( {) {
               )}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </div>
                 </div>
               </div>
-                  </div>;
-                </div>;
-              </div>;
+
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {profileData.skills.map((skill, index) => (
-                      <Badge key={index} variant="secondary">{skill}</Badge>
+                      <Badge key={index} variant="secondary">
+                        {skill}
+                      </Badge>
                     ))}
-                  </div>
-                </div>
+<<<<<<< HEAD
+                  </div>;
+                </div>;
               )}
             </div>
+
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>
@@ -713,22 +717,14 @@ if ( {) {
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
 
 
+=======
+              <p className="text-zion-slate-light">
+                {profileData.bio || "No bio provided."}
+              </p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </div>;
-            {/* Bio Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
-              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
                       <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>;
@@ -788,17 +784,15 @@ if ( {) {
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
-                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
+                {profileData.portfolio_links &&
+                profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
-                  profileData && profileData.portfolio_links.map((link, index) => (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <a
                       key={index}
                       href={link}
@@ -820,27 +814,20 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
-                    </a>;
-                  ));
-<<<<<<< HEAD
-                ) : (;
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>;
-                )}
-=======
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
-                      <LinkIcon className="h-4 w-4 mr-2" />
-                      {link}
-                    </Link>
+                    </a>
                   ))
                 ) : (
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>
+                  <p className="text-zion-slate-light">
+                    No portfolio links provided.
+                  </p>
                 )}
               </div>
             </div>
+
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -850,42 +837,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+              <p className="text-zion-slate-light">
+                {profileData.experience || "No experience provided."}
+              </p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              </div>;
-            </div>;
-            {/* Experience Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
-              <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                ) :(;
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>;                )}
-              </div>;
-            </div>;
-            ;
-            {/* Experience Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>;
-            </div>;
-            ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -972,11 +930,9 @@ if ( {) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 )}
-
-              </div>;
-            </div>;
-          </div>;
-
+              </div>
+            </div>
+          </div>
 
 <<<<<<< HEAD
 =======
@@ -997,6 +953,7 @@ if ( {) {
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1219,14 +1176,21 @@ if ( {) {
                 hourly_rate: profileData?.hourly_rate |0
 
 
+=======
+                id: profileData?.id || "",
+                full_name: profileData?.full_name || "",
+                professional_title: profileData?.professional_title || "",
+                hourly_rate: profileData?.hourly_rate || 0,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               }}
-            />
+            />;
             {/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1306,6 +1270,9 @@ if ( {) {
 <<<<<<< HEAD
 
     </>);
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 <<<<<<< HEAD

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -137,6 +138,8 @@ export default function HelpCenter() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -169,10 +172,6 @@ export default function HelpCenter() {
     setSelectedArticle(null);
   };
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -184,16 +183,7 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support
             team.
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -203,29 +193,17 @@ export default function HelpCenter() {
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
@@ -437,22 +415,14 @@ export default function HelpCenter() {;
                   categories={HELP_CATEGORIES} 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   onCategorySelect={handleCategorySelect}
-
-
-              
-
-=======
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES} ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                  searchQuery={searchQuery}
+                />
+              )}
 
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
@@ -476,30 +446,7 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-              {selectedCategory && !selectedArticle && (;
-                <>;
-                  <Button
-                    variant="ghost"
-                    onClick={handleBackToCategories}
-                    className="mb-4">;
-                    ← All Categories;
-                  </Button>;
-
                   <HelpArticleList
-=======
-
-                  <HelpArticleList 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                  <HelpArticleList
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
@@ -509,14 +456,6 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-              
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedArticle && (
                 <>
 
@@ -546,6 +485,7 @@ export default function HelpCenter() {;
                 </>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -553,13 +493,9 @@ export default function HelpCenter() {;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            </TabsContent>
-<<<<<<< HEAD
-            <TabsContent value="faq">
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+            </TabsContent>
 
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -585,28 +521,12 @@ export default function HelpCenter() {;
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      or services. The process takes into account skills
-=======
                       or services. The process takes into account skills,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -618,16 +538,7 @@ export default function HelpCenter() {;
                       protects both parties throughout the engagement.
                     </p>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -639,16 +550,7 @@ export default function HelpCenter() {;
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -663,16 +565,7 @@ export default function HelpCenter() {;
                 </div>
               </div>
             </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -683,16 +576,7 @@ export default function HelpCenter() {;
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -715,18 +599,7 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
                       </a>
                     </div>
-=======
-                      </Link>
-                    </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                      </Link>
-                    </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -743,30 +616,12 @@ export default function HelpCenter() {;
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -775,16 +630,7 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -798,16 +644,7 @@ export default function HelpCenter() {;
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -819,6 +656,7 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -1043,6 +881,11 @@ export default function HelpCenter() {;
   )
 
 
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======

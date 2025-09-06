@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -21,66 +22,15 @@
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  present.  They purposefully model just enough surface - area used throughout;
-  the code - base.  If you have `@types / react` available in `node_modules`,
-
-<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `type_roots` are merged with normal type resolution.;
-*/;
+import 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-declare module "react" {
-  // Basic ReactElement stub (JSX trees ultimately compile into this).;
-  export interface ReactElement < P = any, T extends string | React.JSXElementConstructor < any> = any> {
-    type: T,
-    props: P,
-    key: React.Key | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-  the code-base.  If you have `@types/react` available in `node_modules`,;
-
-=======
-  present.  They purposefully model just enough surface - area used throughout;
-  the code - base.  If you have `@types / react` available in `node_modules`,
-  present.  They purposefully model just enough surface-area used throughout;
-  the code-base.  If you have `@types/react` available in `node_modules`,;
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `type_roots` are merged with normal type resolution.;
-*/;
-
-
-  the code-base.  If you have `@types/react` available in `node_modules`,;
-
-  These definitions are **not** a replacement for `@types/react` – they only;
-  exist so that isolated compilation of individual files (e.g., in CI or code;
-  review bots) will not fail when full React type declarations are not;
-  present.  They purposefully model just enough surface-area used throughout;
-  the code-base.  If you have `@types/react` available in `node_modules`;
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `typeRoots` are merged with normal type resolution.;
-*/;
-declare module "react" {// Basic ReactElement stub (JSX trees ultimately compile into this).;
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
-    type: T;
-    props: P;
-    key: React.Key | null;
+declare module 'react' {
+  interface CSSProperties {
+    [key: `--${string}`]: string | number;
   }
+<<<<<<< HEAD
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
   }
@@ -344,3 +294,6 @@ declare namespace React {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

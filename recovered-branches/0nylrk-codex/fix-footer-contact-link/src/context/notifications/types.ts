@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -6,19 +7,16 @@
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Notification, as, BaseNotification} from '@/types/notifications';
+=======
+import { Notification, as, BaseNotification } from "@/types/notifications";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type NotificationType =
-  | 'message'
-  | 'quote_request'
-  | 'booking_confirmation'
-  | 'hire_request'
-<<<<<<< HEAD
-<<<<<<< HEAD
-  | 'onboarding'
-  | 'system';
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  | "message"
+  | "quote_request"
+  | "booking_confirmation"
+  | "hire_request"
+  | "onboarding"
+  | "system";
 
 
 
@@ -42,10 +40,11 @@ export interface Notification extends BaseNotification {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   type: NotificationType;
-  action_url?: string
-  action_text?: string
+  action_url?: string;
+  action_text?: string;
 }
 export type FilterType =
+<<<<<<< HEAD
   | 'all'
   | 'unread'
   | 'messages'
@@ -60,6 +59,13 @@ export interface NotificationContextType {
 export interface NotificationContextType {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+  | "all"
+  | "unread"
+  | "messages"
+  | "onboarding"
+  | "system";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 import {Notification, as, BaseNotification} from '@/types / notifications';
 =======
@@ -94,6 +100,7 @@ export interface NotificationContextType {
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
+<<<<<<< HEAD
   setFilter: (filter: FilterType) => void
 
   fetchNotifications: () => Promise<void>
@@ -215,3 +222,8 @@ export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'syste
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  setFilter: (filter: FilterType) => void;
+  fetchNotifications: () => Promise<void>;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

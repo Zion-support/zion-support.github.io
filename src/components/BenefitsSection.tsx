@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
@@ -73,6 +74,8 @@ const BenefitsSection = () => {
 
 export default BenefitsSection;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const getBenefits = (t: any) => [
 
 
@@ -376,5 +379,8 @@ function Page() {
       "Transparent cost structure" ];
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

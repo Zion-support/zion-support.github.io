@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -15,6 +16,8 @@
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
 import { UserRole } from '../../../utils/messaging/types',;
@@ -26,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = generateUser(name, role),
   upsertUser(user),
   setUserCookie(res, user),
+<<<<<<< HEAD
   res.status(200).json({ user });
 };
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -82,3 +86,7 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.status(200).json({ user })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

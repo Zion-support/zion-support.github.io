@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -52,6 +53,8 @@ import { RegionFilterProps } from "@/types/filters",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
@@ -61,27 +64,8 @@ const REGION_OPTIONS = [
   { id: "Asia", label: "Asia" },
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  { id: "Africa", label: "Africa" }
-
-export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-
-  return (
-=======
-
-],
-<<<<<<< HEAD
-
-
-=======
-=======
   { id: "Africa", label: "Africa" },
 ];
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function RegionFilter({
   selectedRegions,
@@ -90,10 +74,6 @@ export function RegionFilter({
   toggleSection,
   isMobileFilterOpen,
 }: RegionFilterProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -107,16 +87,7 @@ export function RegionFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map((region) => (
@@ -217,6 +188,9 @@ export function RegionFilter({
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  );
+=======
+    </div>
   );
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';

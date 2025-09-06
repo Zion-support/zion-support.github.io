@@ -5,6 +5,7 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 <<<<<<< HEAD
 =======
@@ -26,6 +27,8 @@ import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -85,6 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -368,3 +372,7 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

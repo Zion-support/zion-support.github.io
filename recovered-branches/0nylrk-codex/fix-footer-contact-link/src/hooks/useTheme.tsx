@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -25,10 +26,14 @@ import React from 'react',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 // This is a simplified version of the theme hook for offline development
 
 export const useTheme = () => {
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -55,18 +60,11 @@ export const useTheme = () => {;
 // This is a simplified version of the theme hook for offline development;
 export const use_theme = () =>: any {
   return {
-    theme: "dark",
-    set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`);
-  }
-}
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-=======
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     theme: "dark",
-
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
+  };
 };
 
 import React from 'react',;

@@ -20,8 +20,7 @@ const mockSentry = {
   getClient: noopReturn,
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
-  finishTransaction: noop,
-  // Error boundary and React integration
+  finishTransaction: noop, // Error boundary and React integration
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -44,16 +43,22 @@ const mockSentry = {
 
         next(),
   },
-  
-  // Server-specific methods (Node && Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
-  // Next && Next.js specific
-  withSentryConfig: (config: any,) => config,
 
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    errorHandler:
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    tracingHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+  },
+
+  // Next.js specific
+  withSentryConfig: (config: any) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -144,8 +149,7 @@ const mockSentry = {;
   // Utils
 
   createTransport: noopReturn,
-  SDK_VERSION: '7 && 7.0.0-mock',
-
+  SDK_VERSION: "7.0.0-mock",
 
   // Constants
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -325,13 +329,13 @@ export { mockSentry as Sentry };
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
   Severity: {
-    Fatal: 'fatal',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info',
-    Debug: 'debug'
-  }
-}
+    Fatal: "fatal",
+    Error: "error",
+    Warning: "warning",
+    Info: "info",
+    Debug: "debug",
+  },
+};
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;

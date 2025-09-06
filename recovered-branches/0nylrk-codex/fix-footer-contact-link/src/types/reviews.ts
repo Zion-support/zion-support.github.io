@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -19,6 +20,9 @@ export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type ReviewStatus = "pending" | "approved" | "rejected";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface Review {
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
@@ -55,13 +59,9 @@ export interface Review {
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    display_name: string,
+    display_name: string;
     avatar_url?: string;
-
-  }
+  };
 }
 <<<<<<< HEAD
 export interface ReviewReport {
@@ -98,6 +98,7 @@ export interface ReviewReport {
   review_id: string;
   reporter_id: string;
   reason: string;
+<<<<<<< HEAD
   status: 'pending' | 'resolved' | 'dismissed';
 <<<<<<< HEAD
 
@@ -162,3 +163,9 @@ export interface ReviewReport {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  status: "pending" | "resolved" | "dismissed";
+  created_at: string;
+  resolved_at?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

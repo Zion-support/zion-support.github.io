@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 import { use_navigate  } from './react-router-dom';
@@ -66,19 +67,19 @@ import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProjectHeaderProps {
   title: string;
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -100,13 +101,15 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
 =======
   
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
-      <div className="flex items-center">;
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
+      <div className="flex items-center">
         <Button
-          variant="ghost" 
-          size="sm" 
+          variant="ghost"
+          size="sm"
           className="mr-2"
           onClick={() => navigate(-1)}
 }
@@ -178,11 +181,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   );
-}
-;
-
-<<<<<<< HEAD
-  )
 }
 ;
 

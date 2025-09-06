@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,28 +26,22 @@ const TalentRoutes = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "../components/ProtectedRoute";
+=======
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
 import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import TalentDirectory from "../pages/TalentDirectory",
-import TalentsPage from "../pages/TalentsPage",
-import TalentProfilePage from "../pages/TalentProfilePage",
-import SavedTalentsPage from "../pages/SavedTalentsPage",
-import CreateTalentProfile from "../pages/CreateTalentProfile";
-import ProfilePage from "../pages/ProfilePage";
-
-import CreateTalentProfile from "../pages/CreateTalentProfile",
-import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
+=======
+const TalentRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <Routes>
+    <Routes>;
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
       <Route path="/talents" element={<TalentsPage />} />
@@ -69,6 +64,7 @@ const TalentRoutes = () => {
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
+<<<<<<< HEAD
   )
 }
 export default TalentRoutes;
@@ -158,6 +154,8 @@ const TalentRoutes = () => {;
       <Route path="/profile/:id" element={<ProfilePage />} />;
     </Routes>;
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 },;
 

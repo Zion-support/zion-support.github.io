@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
+import { filterEventsByScope } from "../../../utils/sync/storage",;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const state = readState(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -97,6 +105,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -115,13 +124,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       instanceId: state.config.instanceId,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
+
         totalEvents: scopedEvents.length,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
+<<<<<<< HEAD
 proposals: scopedEvents.filter((e) => e.type === "proposal").length,
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -140,6 +153,8 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
@@ -150,6 +165,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -242,3 +258,7 @@ export default function handler(req, res) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return res.status(405).json({ error: "Method not allowed" })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

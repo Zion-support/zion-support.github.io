@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -73,20 +74,20 @@ export interface ForumPost {;
 
 export interface ForumCategoryInfo {;
 
+=======
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
+  adminOnly: boolean;
   icon: string;
-
-}
-export interface ForumPost {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 
@@ -116,6 +117,7 @@ export interface ForumPost {
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,6 +173,13 @@ export interface ForumReply {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean;
+  isFeatured?: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -199,6 +208,7 @@ export interface ForumReply {
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -251,6 +261,10 @@ export interface Badge {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface Badge {
+=======
+  downvotes: number;
+  isAnswer?: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -260,8 +274,9 @@ export interface Badge {;
   id: string;
   name: string;
   description: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  icon: string;
+  color: string;
+}
 
   icon: string,
   color: string;
@@ -307,8 +322,8 @@ export interface UserBadge {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userId: string;
-  badgeId: string
-  awardedAt: string
+  badgeId: string;
+  awardedAt: string;
 }
 <<<<<<< HEAD
 export interface CommunityUser {
@@ -349,6 +364,7 @@ export interface CommunityUser {
   post_count: number;
   reply_count: number;
   badges: Badge[];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   isModerator: boolean
@@ -455,3 +471,8 @@ export interface CommunityUser {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  isVerified: boolean;
+  isModerator: boolean;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

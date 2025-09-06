@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
 import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 =======
@@ -27,6 +31,8 @@ import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
@@ -495,6 +501,7 @@ export default async function handler(req, res) {
       })
   ),
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -609,3 +616,6 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

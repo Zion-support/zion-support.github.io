@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,10 +21,16 @@ export default function Login() {;
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { Header } from "@/components/Header",
+=======
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Header } from "@/components/Header";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Footer } from "@/components/Footer";
 import { LoginContent } from "@/components/auth/login";
 export default function Login() {
   const { isAuthenticated, user } = useAuth();
+<<<<<<< HEAD
 import { Footer } from "@/components/Footer",
 import { LoginContent } from "@/components/auth/login",
 export default function Login() {
@@ -37,15 +44,19 @@ export default function Login() {
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />;
   }
+
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
+<<<<<<< HEAD
     return <Navigate to="/onboarding" />
 <<<<<<< HEAD
 
@@ -87,6 +98,9 @@ export default function Login() {;
   // Redirect if user is already logged in and has completed profile;
   if (isAuthenticated && user?.profileComplete) {;
     return <Navigate to="/" />;
+=======
+    return <Navigate to="/onboarding" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
 <<<<<<< HEAD
 

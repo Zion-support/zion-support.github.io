@@ -13,8 +13,10 @@ const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
 <<<<<<< HEAD
 =======
 
-import { ensureAdmin } from '../../../utils/auth';
-
+function ensureLogFile() {
+  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true }),
+  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
+}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -64,14 +66,19 @@ function handler() {
   const now_iso = new Date ().toISOString (),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+  const nowIso = new Date().toISOString(),
   const event = {
     name,
     page,
     user_type,
     properties,
+    at: at && typeof at === 'string' ? at : nowIso,
+    ua: req.headers['user-agent'] || '',
+    ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string},
 
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -95,10 +102,13 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   } catch (e) {
     // ignore file errors in serverless;
   }
 
+<<<<<<< HEAD
 import { ensureAdmin } from '../../../utils/auth';
 
 <<<<<<< HEAD
@@ -145,3 +155,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.status(200).json({ ok: true })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

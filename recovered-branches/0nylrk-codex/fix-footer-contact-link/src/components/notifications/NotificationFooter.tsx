@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -38,10 +39,17 @@ import { useNavigate } from "react-router-dom";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface NotificationFooterProps {
   onClose: () => void;
 }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   onClose
@@ -78,11 +86,18 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
   const navigate = useNavigate();
 
   const handleViewAll = () => {;
+=======
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose,
+}) => {
+  const navigate = useNavigate();
+
+  const handleViewAll = () => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     onClose();
-    navigate('/notifications');
+    navigate("/notifications");
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
 =======
@@ -130,35 +145,13 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 <<<<<<< HEAD
 =======
         onClick={handleViewAll}
-
-=======
-        onClick={handleViewAll}
-<<<<<<< HEAD
       >
         View all notifications
       </Button>
     </div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  )
-
-=======
-=======
-        onClick={handleViewAll}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      >;
-
-        View all notifications;
-      </Button>;
-    </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======

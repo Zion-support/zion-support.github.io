@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -85,9 +86,14 @@ export default function handler(req, res) {
 }
 
 }
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { burnTokens, burnForFeature } from "../../../utils/token/service",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(400).json({ error: err.message })
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -98,3 +104,7 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

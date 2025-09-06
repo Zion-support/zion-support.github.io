@@ -18,6 +18,7 @@ import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
@@ -186,6 +187,8 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface ProfileRatingsProps {
   userId: string;
   averageRating?: number;
@@ -197,9 +200,6 @@ export function ProfileRatings({
   averageRating = 0,
   ratingCount = 0,
 }: ProfileRatingsProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<
     Record<number, number>
@@ -225,6 +225,7 @@ export function ProfileRatings({
       setRatingDistribution(distribution);
     }
   }, [reviews]);
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
@@ -268,11 +269,15 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId]),
   
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  // Fetch reviews when component mounts
+  useEffect(() => {
+    fetchUserReviews(userId);
+  }, [userId]);
+
   return (
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
@@ -298,31 +303,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          />;
-        </div>;
-
-        <div className="md:w-2/3">;
-          <Tabs defaultValue="all">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="all">All Reviews ({reviews && reviews.length})</TabsTrigger>;
-              <TabsTrigger value="positive">Positive</TabsTrigger>;
-              <TabsTrigger value="critical">Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value="all">;
-
-=======
           />
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -332,27 +315,21 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
+
             <TabsContent value="all">
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ReviewsList
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-<<<<<<< HEAD
+              />
+            </TabsContent>
 
-              />;
-            </TabsContent>;
-
-            <TabsContent value="positive">;
-
+            <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD
 
               />;
             </TabsContent>;
@@ -367,24 +344,14 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               />
             </TabsContent>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <TabsContent value="positive">
-              <ReviewsList
-                reviews={reviews.filter((r) => r.rating >= 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
             <TabsContent value="critical">
               <ReviewsList
-                reviews={reviews.filter((r) => r.rating < 4)}
+                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -396,6 +363,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -476,6 +444,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
     </div>);
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 

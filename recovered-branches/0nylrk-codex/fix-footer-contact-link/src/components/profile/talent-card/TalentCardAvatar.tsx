@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -16,12 +17,16 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
+<<<<<<< HEAD
 
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
@@ -35,13 +40,10 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
-=======
 export function TalentCardAvatar({
   profilePicture,
   fullName,
@@ -49,6 +51,7 @@ export function TalentCardAvatar({
   // Get initials for avatar fallback
   const getInitials = (name: string) => {
     return name
+<<<<<<< HEAD
 <<<<<<< HEAD
       .split(" ")
       .map((part) => part[0])
@@ -71,16 +74,15 @@ export function TalentCardAvatar({
       .join('')
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       .split(" ")
       .map((part) => part[0])
       .join("")
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .toUpperCase();
+<<<<<<< HEAD
+<<<<<<< HEAD
   };
-      .toUpperCase()
-  },
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
@@ -89,6 +91,7 @@ export function TalentCardAvatar({
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
+<<<<<<< HEAD
   )
 }
 import React from "react",;
@@ -142,6 +145,8 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
 =======

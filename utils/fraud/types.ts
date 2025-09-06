@@ -1,8 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 export interface FraudEvent {;
 =======
+=======
+// Fraud detection types
+export type AdminActionType =
+  | "ban_user"
+  | "suspend_user"
+  | "flag_content"
+  | "remove_content"
+  | "investigate"
+  | "dismiss"
+  | "escalate";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AdminAction {
 =======
 
@@ -17,6 +30,7 @@ export interface AdminAction {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+<<<<<<< HEAD
   userId: string | null;
   source: MonitoredSource;
   content: string | null;
@@ -89,6 +103,16 @@ export interface FraudDetectionResult {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  case_id: string;
+  type: AdminActionType;
+  adminId: string;
+  reason: string;
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: "pending" | "executed" | "failed";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -97,68 +121,43 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
-=======
-
-  isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  confidence: number;
-  reasons: string[];
-
-  suggested_actions: AdminActionType[],
-  metadata: Record < string, any>;
-
-}
-<<<<<<< HEAD
-export interface FraudDetectionConfig {
-=======
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
 }
 
 
 export interface FraudDetectionConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
 
-<<<<<<< HEAD
-
-=======
       threshold: number,
     }
     fake_profile: {
       enabled: boolean;
-      threshold: number,
-    }
-    payment_fraud: {
+      threshold: number;
+    };
+    fakeProfile: {
       enabled: boolean;
-      threshold: number,
-    }
+      threshold: number;
+    };
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number;
+    };
     spam: {
       enabled: boolean;
-      threshold: number,
-    }
-  }
-  auto_actions: {
+      threshold: number;
+    };
+  };
+  autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidence_threshold: number,
-  }
-}
-
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    confidenceThreshold: number,
+    confidenceThreshold: number;
   };
-=======
-
-<<<<<<< HEAD
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

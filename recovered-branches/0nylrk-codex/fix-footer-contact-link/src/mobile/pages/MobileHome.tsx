@@ -10,13 +10,14 @@ import { ClientDashboard } from "../components/dashboard/ClientDashboard",
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {ClientDashboard} from "../components/dashboard/ClientDashboard";
-import {TalentDashboard} from "../components/dashboard/TalentDashboard";
-import {useAuth} from "@/hooks/useAuth";
-export function MobileHome() {;
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
   const { user } = useAuth();
+<<<<<<< HEAD
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
 <<<<<<< HEAD
 =======
@@ -26,6 +27,9 @@ export function MobileHome() {;
   return (
 =======
 
+=======
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 
@@ -73,8 +77,8 @@ export function MobileHome() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
       <main className="py-4">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
@@ -114,11 +118,13 @@ export function MobileHome() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-      </main>;
+      </main>
 
-      <BottomNavigation />;
-    </div>;
+      <BottomNavigation />
+    </div>
   );
 }
 <<<<<<< HEAD

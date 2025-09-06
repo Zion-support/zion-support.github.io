@@ -225,6 +225,7 @@ const BreadcrumbEllipsis = ({;
 
 export {
 <<<<<<< HEAD
+<<<<<<< HEAD
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -284,3 +285,5 @@ export {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   BreadcrumbEllipsis}
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

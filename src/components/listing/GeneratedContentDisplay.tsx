@@ -11,9 +11,12 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 interface GeneratedContent {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   description: string,
   tags: string[],
   suggestedPrice: {

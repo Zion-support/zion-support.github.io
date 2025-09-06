@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -47,6 +48,15 @@ export type ProjectStatus =;
 
 export interface Project {;
 
+=======
+export type ProjectStatus =
+  | "offer_sent"
+  | "offer_accepted"
+  | "changes_requested"
+  | "in_progress"
+  | "completed"
+  | "canceled";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,28 +76,24 @@ export interface Project {
   job_id: string;
   start_date: string;
   scope_summary: string;
-  payment_terms: 'hourly' | 'fixed' | 'milestone';
+  payment_terms: "hourly" | "fixed" | "milestone";
   agreement_url?: string;
   status: ProjectStatus;
   created_at: string;
   updated_at: string;
   job?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    title: string,
+    title: string;
     description: string;
-  }
+  };
   talent_profile?: {
     full_name: string;
-    professional_title?: string,
+    professional_title?: string;
     profile_picture_url?: string;
-  }
+  };
   client_profile?: {
-    display_name: string,
+    display_name: string;
     avatar_url?: string;
-
-  }
+  };
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -132,6 +138,7 @@ export interface ProjectNote {
   content: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,3 +208,9 @@ export interface ProjectNote {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
+=======
+    display_name: string;
+    avatar_url?: string;
+  };
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

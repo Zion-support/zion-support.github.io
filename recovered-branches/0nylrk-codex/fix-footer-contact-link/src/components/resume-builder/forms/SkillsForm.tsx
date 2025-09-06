@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
@@ -47,12 +48,15 @@ import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
   return <SkillsFormComponent {...props} />;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { SkillsForm, as, SkillsFormComponent } from "./skills";
 import { SkillsFormProps } from "./skills/types";
 export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />;
 }
 ;
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types',;
@@ -96,6 +100,8 @@ export function SkillsForm(props: SkillsFormProps) {;
 
 }
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

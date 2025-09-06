@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export const metadata = { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Advanced Data Analytics & BI | Zion Tech Group',
   description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -16,19 +17,23 @@ export const metadata = {
 =======
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   title: 'Advanced Data Analytics & BI | Zion Tech Group',
   description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
-=======
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 
 export default function DataAnalyticsPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -36,63 +41,9 @@ export default function DataAnalyticsPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    <div className="animate-fade-in">
-<<<<<<< HEAD
-      <section className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Data Analytics Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Transform your data into actionable insights with our comprehensive analytics services. 
-          From business intelligence to predictive analytics, we help you make data-driven decisions that drive growth.
-        </p>
-      </section>
-
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Data Analytics Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <DataAnalyticsServiceCard
-            title="Business Intelligence Dashboards"
-            description="Interactive dashboards and reports for real-time business insights"
-            features={["Real-time dashboards", "KPI tracking", "Custom reports", "Data visualization", "Mobile access"]}
-            price="$8,000-30,000"
-            icon="📊"
-          />
-          <DataAnalyticsServiceCard
-            title="Predictive Analytics"
-            description="Machine learning models for forecasting and predictive insights"
-            features={["Demand forecasting", "Customer churn prediction", "Risk assessment", "Sales forecasting", "Anomaly detection"]}
-            price="$12,000-45,000"
-            icon="🔮"
-          />
-          <DataAnalyticsServiceCard
-            title="Data Warehousing & ETL"
-            description="Centralized data storage and processing pipelines for analytics"
-            features={["Data warehouse design", "ETL/ELT pipelines", "Data quality management", "Data governance", "Scalable architecture"]}
-            price="$15,000-60,000"
-            icon="🏗️"
-          />
-          <DataAnalyticsServiceCard
-            title="Customer Analytics"
-            description="Deep insights into customer behavior and segmentation"
-            features={["Customer segmentation", "Behavioral analysis", "Lifetime value prediction", "Churn analysis", "Personalization"]}
-            price="$10,000-35,000"
-            icon="👥"
-          />
-          <DataAnalyticsServiceCard
-            title="Marketing Analytics"
-            description="Comprehensive marketing performance measurement and optimization"
-            features={["Campaign analysis", "Attribution modeling", "ROI measurement", "A/B testing", "Marketing automation"]}
-            price="$8,000-25,000"
-            icon="📈"
-          />
-          <DataAnalyticsServiceCard
-            title="Real-time Analytics"
-            description="Streaming data processing and real-time decision making"
-            features={["Stream processing", "Real-time dashboards", "Event-driven analytics", "Alert systems", "Live monitoring"]}
-            price="$12,000-40,000"
 =======
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+    <div className="animate-fade-in">
             icon="⚡"
           />
           <DataServiceCard
@@ -224,35 +175,11 @@ export default function DataAnalyticsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Data Analytics Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <DataAnalyticsProcessStep
-            step="1"
-            title="Data Discovery"
-            description="Identify data sources, assess quality, and understand business requirements"
-          />
-          <DataAnalyticsProcessStep
-            step="2"
-            title="Data Preparation"
-            description="Clean, transform, and structure data for analysis and modeling"
-          />
-          <DataAnalyticsProcessStep
-            step="3"
-            title="Analysis & Modeling"
-            description="Apply statistical methods and machine learning to extract insights"
-          />
-          <DataAnalyticsProcessStep
-            step="4"
-            title="Visualization & Deployment"
-            description="Create dashboards and deploy solutions for ongoing insights"
-=======
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Technology Stack</h2>
@@ -358,6 +285,8 @@ export default function DataAnalyticsPage() {
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     </div>
   );
 }
@@ -490,60 +419,6 @@ function Plan({ name, price, duration, features }: {
       </a>
     </div>
   );
-<<<<<<< HEAD
-}
-
-function DataAnalyticsProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center p-6">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function DataAnalyticsTechStack({ title, technologies }: { 
-  title: string; 
-  technologies: string[]; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function IndustryAnalytics({ title, description, solutions, icon }: { 
-  title: string; 
-  description: string; 
-  solutions: string[]; 
-  icon: string; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-<<<<<<< HEAD
-      <ul className="text-gray-600 space-y-2">
-        {solutions.map((solution) => (
-          <li key={solution} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {solution}
-=======
       <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-2">
         {features.map((feature, index) => (
@@ -566,7 +441,6 @@ function Item({ title, details }: { title: string; details: string[] }) {
           <li key={index} className="flex items-start text-gray-600">
             <span className="text-blue-500 mr-2 mt-1">•</span>
             {detail}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
@@ -616,34 +490,14 @@ function Pricing() {
   );
 }
 
-<<<<<<< HEAD
-function Plan({ name, price, features, popular }: { 
-  name: string; 
-  price: string; 
-=======
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
   duration: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   features: string[]; 
   popular: boolean; 
 }) {
   return (
-<<<<<<< HEAD
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-        </div>
-      )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-3">✓</span> {feature}
-=======
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
@@ -653,21 +507,12 @@ function Plan({ name, price, duration, features }: {
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3">✓</span>
             {feature}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
-<<<<<<< HEAD
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-=======
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       >
         Get Started
       </a>
@@ -709,7 +554,6 @@ function CTASection() {
 =======
   );
 }
-=======
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -723,11 +567,6 @@ function CTASection() {
             Email Us
           </a>
         </div>
-<<<<<<< HEAD
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
-=======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
-=======
         <div className="mt-8 text-sm text-gray-500">
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
@@ -735,5 +574,8 @@ function CTASection() {
     </section>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

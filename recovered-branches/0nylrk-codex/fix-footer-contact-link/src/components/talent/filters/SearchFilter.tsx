@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -19,6 +20,11 @@ export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilter
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -78,6 +84,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           placeholder="Search talents..."
           value={searchTerm}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,11 +92,14 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           onChange={(e) => setSearchTerm(e && e.target.value)}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           onChange={(e) => setSearchTerm(e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -120,6 +130,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />;
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 }
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export function getRequestUserEmail(req: NextApiRequest): string | null {;
   const emailHeader = req.headers['x-user-email'];
@@ -14,6 +15,9 @@ export function isAdminEmail(email: string | null | undefined): boolean {;
 =======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 // Authentication utilities
@@ -36,136 +40,35 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export interface User {
   id: string;
   email: string;
-  role: string;
-  isAdmin: boolean;
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export interface User {;
-  id: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
-<<<<<<< HEAD
-=======
   // Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' };
+    return { id: "guest", email: "guest@example.com", role: "guest" };
   }
-  
+
   // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
+  if (authHeader.includes("admin")) {
+    return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return { id: "user-1", email: "user@zion.os", role: "user" };
 }
 
-  try {;
-    const user = parseUserFromRequest(req);
-
-
-    ensureAdmin(user);
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export function parseUserFromRequest (req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic;
-  const auth_header = req.headers.authorization;
-  // Check condition
-if ( {) {
-  $2
-}
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
-  }
-  // Simple mock for admin users;
-  if () {) {
-  $2
-}
-    return { id: 'admin - 1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { id: 'user - 1', email: 'user@zion.os', role: 'user' }
-}
-export function ensure_admin (user: User): void {
-  // Check condition
-if ( {) {
-  $2
-}
-    const error = new Error ('Forbidden');
-    (error as any).status_code = 403;
-    throw error;
-  }
-}
-<<<<<<< HEAD
-=======
-export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
-  try {
-    const user = parseUserFromRequest (req);
-    ensure_admin (user);
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export interface User {;
-  id: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-
-export function parseUserFromRequest(req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' };
-  }
-  
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
-  }
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-
-  try {;
-    const user = parseUserFromRequest(req);
-
-
-    ensureAdmin(user);
-
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' }
-}
 export function ensureAdmin(user: User): void {
-  if (user.role !== 'admin') {;
-    const error = new Error('Forbidden');
+  if (user.role !== "admin") {
+    const error = new Error("Forbidden");
     (error as any).statusCode = 403;
     throw error;
   }
 }
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-<<<<<<< HEAD
-    ensureAdmin(user);
 
-export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(
+  req: NextApiRequest,
+): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
@@ -200,29 +103,44 @@ export interface DemoUser {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
   email: string;
 }
 
 
-      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
-
-
+export function ensureDemoUsers(): void {
+  if (demoUsers.length === 0) {
+    demoUsers.push(
+      {
+        id: "admin-1",
+        name: "Admin User",
+        role: "admin",
+        email: "admin@zion.os",
+      },
+      {
+        id: "user-1",
+        name: "Regular User",
+        role: "user",
+        email: "user@zion.os",
+      },
     );
   }
 }
-export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
+
+export function generateUser(
+  name: string,
+  role: "admin" | "user" | "guest",
+): DemoUser {
   return {
     id: `user-${Date.now()}`,
     name,
     role,
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`;
+    email: `${name.toLowerCase().replace(/\s+/g, ".")}@zion.os`,
   };
 }
 
-export function upsertUser(user: DemoUser): void {;
-  const index = demoUsers.findIndex(u => u.id === user.id);
+export function upsertUser(user: DemoUser): void {
+  const index = demoUsers.findIndex((u) => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
   } else {
@@ -230,74 +148,22 @@ export function upsertUser(user: DemoUser): void {;
   }
 }
 
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
-  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+  res.setHeader("Set-Cookie", `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 }
 
-export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
-  const cookieHeader = req.headers.cookie || '';
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
+  const cookieHeader = req.headers.cookie || "";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-const demo_users: DemoUser[] = [];
-;
-export function ensureDemoUsers (): void {
-  // Check condition
-if ( {) {
-  $2
-}
-    demo_users.push (
-      { id: 'admin - 1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-    );
-  }
-}
-export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
-  return {
-    id: `user-${Date.now ()}`,
-    name,
-    role,
-    email: `${name.toLowerCase ().replace (/\s+/g, '.')}@zion.os`;
-  }
-}
-export function upsert_user (user: DemoUser): void {
-  const index = demo_users.find_index (u => u.id === user.id);
-  // Check condition
-if ( {) {
-  $2
-}
-    demo_users[index] = user;
-  } else {
-    demo_users.push (user);
-  }
-}
-export function setUserCookie (res: NextApiResponse, user: DemoUser): void {
-  res.set_header ('Set - Cookie', `user=${JSON.stringify (user)} Path=/; HttpOnly`);
-}
-export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
-  const cookie_header = req.headers.cookie || '';
-  const match = cookie_header.match (/user=([^;]+)/);
-  // Check condition
-if (return null) {
-  $2
-}
+
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
-<<<<<<< HEAD
-=======
-
-
-    user,
-    token,
-    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  };
 }
+<<<<<<< HEAD
 =======
 
   }
@@ -336,3 +202,5 @@ export function isModerator(session: AuthSession | null): boolean {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

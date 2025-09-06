@@ -1,7 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 =======

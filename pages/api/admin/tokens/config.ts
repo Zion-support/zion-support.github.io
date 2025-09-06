@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ const body = req.body || {};
     const updated = { ...current, ...body };
     tokenStore.setConfig(updated);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
@@ -19,12 +22,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(getConfig())
   }
   if (req.method === "POST") {
-const body = req.body || {},
+    const body = req.body || {},
     const current = tokenStore.getConfig(),
     const updated = { ...current, ...body },
     tokenStore.setConfig(updated),
     return res.status(200).json(updated)
   }
+<<<<<<< HEAD
   return res.status(405).json({ error: "Method not allowed" });
 };
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -115,3 +119,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return res.status(405).json({ error: "Method not allowed" })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

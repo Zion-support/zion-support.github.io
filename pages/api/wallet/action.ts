@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +95,10 @@ import { handleAction } from "../../../utils/token/service",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { handleAction } from "../../../utils/token/service",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, action, metadata } = req.body || {},
@@ -103,6 +108,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -180,3 +186,7 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

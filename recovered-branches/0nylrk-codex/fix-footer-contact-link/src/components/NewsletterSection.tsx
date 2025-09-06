@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
@@ -31,14 +32,10 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -55,6 +52,7 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -124,6 +122,9 @@ function NewsletterSection() {
 <<<<<<< HEAD
 
     </section>);
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 =======

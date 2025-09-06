@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -71,17 +72,13 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 #!/usr/bin/env node;
-=======
-
-
-=======
-
-=======
-
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -104,279 +101,26 @@ const { execSync } = require("child_process");
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
-      complexity: 0, maintainability: 0,
-      testCoverage: 0, performance: 0,
-      lastUpdated: new Date().toISOString(), ,
+      complexity: 0;
+      maintainability: 0;
+      testCoverage: 0;
+      performance: 0;
+      lastUpdated: new Date().toISOString();
+    ;
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
 };
 ;
   log(message) {;
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-  }
-  async runQualityChecks() {
-    this.log('Running code quality checks...');
-    const results = {
-      "timestamp": new Date().toISOString(),
-      "lint": { status: 'unknown', "issues": 0, "errors": 0, "warnings": 0 },
-      "typeCheck": { status: 'unknown', "errors": 0 },
-      "testCoverage": { status: 'unknown', "percentage": 0 },
-      "codeComplexity": { status: 'unknown', "score": 0 },
-      "qualityScore": 0};
-    // ESLint check
-    try {
-      execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
-      results.lint.status = 'pass';
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log('ESLint: PASS');
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-      this.log('"ESLint": PASS');
-    } catch (error) {
-      results.lint.status = 'fail';
-      const output = error.stdout || error.message;
-      results.lint.errors = (output.match(/error/gi) || []).length;
-      results.lint.warnings = (output.match(/warning/gi) || []).length;
-      results.lint.issues = results.lint.errors + results.lint.warnings;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN');
-    }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-      this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN');
-    }
-    // TypeScript check
-    try {
-      execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() });
-      results.typeCheck.status = 'pass';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log('TypeScript: PASS');
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-      this.log('"TypeScript": PASS');
-    } catch (error) {
-      results.typeCheck.status = 'fail';
-      const output = error.stdout || error.message;
-      results.typeCheck.errors = (output.match(/error TS/g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log(`TypeScript: ${results.typeCheck.errors} errors found`, 'WARN');
-    }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-      this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN');
-    }
-    // Test coverage (if tests exist)
-    try {
-      if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) {
-        const coverage = execSync('yarn test --coverage --silent', {
-          "stdio": 'pipe',
-          "encoding": 'utf8',
-          "cwd": process.cwd()});
-        // Parse coverage percentage (simplified)
-        const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/);
-        if (coverageMatch) {
-          results.testCoverage.percentage = parseFloat(coverageMatch[1]);
-          results.testCoverage.status = 'pass';
-        }
-      }
-    } catch (error) {
-      this.log('Test coverage check failed or no tests found', 'WARN');
-    }
-    // Calculate quality score
-    results.qualityScore = this.calculateQualityScore(results);
-    // Generate report
-    fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    this.log(`Code quality report generated: ${this.reportFile}`);
-    return results;
-  }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-    this.log(`Code quality report "generated": ${this.reportFile}`);
-    return results;
-  }
-  calculateQualityScore(results) {
-    let score = 100;
-    // ESLint penalties
-    if (results.lint.status === 'fail') {
-      score -= Math.min(results.lint.errors * 5, 30);
-      score -= Math.min(results.lint.warnings * 2, 20);
-    }
-    // TypeScript penalties
-    if (results.typeCheck.status === 'fail') {
-      score -= Math.min(results.typeCheck.errors * 3, 25);
-    }
-    // Test coverage bonus/penalty
-    if (results.testCoverage.percentage > 80) {
-      score += 5;
-    } else if (results.testCoverage.percentage < 50) {
-      score -= 10;
-    }
-    return Math.max(0, Math.min(100, score));
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return Math.max(0, Math.min(100, score));
-  }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-  async run() {
-    this.log('Starting Code Quality Monitor...');
-    try {
-      const results = await this.runQualityChecks();
-      this.log(
-        `Code quality check completed. Quality "score": ${results.qualityScore}/100`
-      );
-      if (results.qualityScore < 70) {
-        this.log('Code quality is below threshold. Review needed.', 'WARN');
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    } catch (error) {
-      this.log(`Error in code quality monitor: ${error.message}`, 'ERROR');
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-    } catch (error) {
-      this.log(`Error in code quality "monitor": ${error.message}`, 'ERROR');
-    }
-  }
-}
-// Main execution
-if (require.main === module) {
-  const monitor = new CodeQualityMonitor();
-  monitor.run().catch(console.error);
-}
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 ;
   async analyzeCodeQuality() {;
@@ -396,7 +140,6 @@ if (require.main === module) {
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
 };
-=======
 #!/usr/bin/env node,
 const fs = require("fs"),
 const path = require("path"),
@@ -413,6 +156,7 @@ class CodeQualityMonitor {,
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,11 +175,14 @@ class CodeQualityMonitor {,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -448,6 +195,10 @@ class CodeQualityMonitor {,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    fs.appendFileSync(this.logFile, logMessage),
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -461,6 +212,7 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -827,3 +579,10 @@ module.exports = CodeQualityMonitor;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      return this.metrics,
+    } catch (error) {,
+      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
+      return null,
+    };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

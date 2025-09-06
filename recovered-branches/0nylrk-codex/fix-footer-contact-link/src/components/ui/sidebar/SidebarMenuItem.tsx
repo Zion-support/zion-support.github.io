@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -50,29 +51,12 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
 import React from "react",
 import { cn } from "@/lib/utils",
 
-import React from "react";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
-
-  className?: string;
-  children?: React && React.ReactNode;
-
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+<<<<<<< HEAD
   className?: string,
   children?: React.ReactNode
 <<<<<<< HEAD
@@ -104,9 +88,19 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   children?: React && React.ReactNode;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+
+export function SidebarMenuItem({
+  className,
+  children,
+  ...props
+}: SidebarMenuItemProps) {
   return (
-    <li className={cn ("", class_name)} {...props}>;
+    <li className={cn("", className)} {...props}>
       {children}
 <<<<<<< HEAD
     </li>
@@ -140,8 +134,7 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </li>
-
-  )
+  );
 }
 ;
 

@@ -77,6 +77,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       <div
         className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -377,3 +378,5 @@ function formatMessageWithLinks (message: string): string {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

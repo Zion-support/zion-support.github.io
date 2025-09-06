@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
   toxicity: number, // 0-1;
@@ -40,25 +41,20 @@ export interface ModerationAction {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface ModerationResult {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
   reason?: string;
-  createdAt: string;
-<<<<<<< HEAD
+  moderatedBy?: string;
+  moderatedAt: Date;
+}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
-export interface ModerationAction {
+export interface ModerationRule {
   id: string;
+<<<<<<< HEAD
   type: 'approve' | 'remove' | 'warn' | 'ban';
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
@@ -167,3 +163,10 @@ export interface ModerationFlag {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -17,13 +18,15 @@ import fs from 'fs';
 import path from 'path';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -36,6 +39,8 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -46,7 +51,7 @@ function writeJson(p: string, data: any) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
@@ -111,6 +116,7 @@ if ( {) {
 res.set_header ('AllowPOST'),
     return res.status (405).end ('Method Not Allowed');
   }
+<<<<<<< HEAD
   const { user_id = 'demo - user', course_id, enable_boost } = req.body || {},
   if (return res.status (400).json ({ error: 'course_id required' }), ) {
   $2
@@ -368,3 +374,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

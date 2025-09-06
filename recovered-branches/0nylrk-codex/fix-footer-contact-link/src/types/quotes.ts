@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -15,6 +16,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
@@ -68,7 +71,7 @@ export interface ListingItem {;
 
   id: string;
   title: string;
-  category: string,
+  category: string;
   image?: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -84,10 +87,14 @@ export interface ContactInfo {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   name: string;
   email: string;
+  phone: string;
+  company: string;
+}
 
   phone: string,
   company: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -133,9 +140,12 @@ export interface Budget {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface Budget {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   amount: number;
-  maxAmount?: number
-  type: BudgetType
+  maxAmount?: number;
+  type: BudgetType;
 }
 <<<<<<< HEAD
 export interface QuoteFormData {
@@ -170,7 +180,11 @@ export interface QuoteFormData {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   timeline: TimelineType;
+  budget: Budget;
+  contactInfo: ContactInfo;
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   budget: Budget,
   contact_info: ContactInfo;
@@ -187,6 +201,15 @@ export interface QuoteRequest {
 =======
 =======
 ;
+=======
+export type QuoteStatus =
+  | "new"
+  | "in_review"
+  | "accepted"
+  | "responded"
+  | "closed"
+  | "archived";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface QuoteRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,6 +252,7 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -324,3 +348,8 @@ export interface QuoteRequest {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  created_at: string;
+  updated_at: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

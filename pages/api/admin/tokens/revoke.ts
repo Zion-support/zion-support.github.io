@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ function handler() {
   $2
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { revokeTokens } from "../../../../utils/token/service",;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,10 +35,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, amount, reason } = req.body || {},
   if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" }),
   try {
-    const tx = revoke_tokens (user_id, Math.floor (amount), reason || "admin_revoke"),
-    return res.status (200).json ({ tx });
+    const tx = revokeTokens(userId, Math.floor(amount), reason || "admin_revoke"),
+    return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
+<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -77,3 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

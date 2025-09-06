@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -45,3 +46,8 @@ export { AuthProvider } from './auth';
 export { MessagingProvider } from './MessagingContext';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { AuthProvider } from "./auth";
+export { MessagingProvider } from "./MessagingContext";
+export { NotificationProvider } from "./notifications/NotificationContext";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

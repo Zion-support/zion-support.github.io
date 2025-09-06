@@ -457,12 +457,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
           ))}
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>;
     </div>;
   );
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       </section>;
     </div>;
   );

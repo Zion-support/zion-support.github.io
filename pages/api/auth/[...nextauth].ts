@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
@@ -52,10 +53,13 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end()
-
+    res.status(405).end(),
     return
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -69,6 +73,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
+<<<<<<< HEAD
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -150,3 +155,6 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+} 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

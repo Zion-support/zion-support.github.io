@@ -2,55 +2,61 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-<<<<<<< HEAD
-=======
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
   };
 }
+
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
-      select: (columns: string = '*') => ({
+      select: (columns: string = "*") => ({
         eq: (column: string, value: any) => ({
-          single: () => Promise && Promise.resolve({ data: null, error: null }),
-          then: (callback: (result: any) => any) => callback({ data: [], error: null })
+          single: () => Promise.resolve({ data: null, error: null }),
+          then: (callback: (result: any) => any) =>
+            callback({ data: [], error: null }),
         }),
         insert: (data: any) => ({
-          select: (columns: string = '*') => ({
-            single: () => Promise && Promise.resolve({ data: data, error: null })
-          })
+          select: (columns: string = "*") => ({
+            single: () => Promise.resolve({ data: data, error: null }),
+          }),
         }),
         update: (data: any) => ({
           eq: (column: string, value: any) => ({
-            select: (columns: string = '*') => ({
-              single: () => Promise && Promise.resolve({ data: data, error: null })
-            })
-          })
+            select: (columns: string = "*") => ({
+              single: () => Promise.resolve({ data: data, error: null }),
+            }),
+          }),
         }),
         delete: () => ({
           eq: (column: string, value: any) => ({
-            then: (callback: (result: any) => any) => callback({ data: null, error: null })
-          })
-        })
-      })
+            then: (callback: (result: any) => any) =>
+              callback({ data: null, error: null }),
+          }),
+        }),
+      }),
     }),
     auth: {
-      getUser: () => Promise && Promise.resolve({ data: { user: null }, error: null }),
-      signIn: (credentials: any) => Promise && Promise.resolve({ data: { user: null }, error: null }),
-      signOut: () => Promise && Promise.resolve({ error: null })
-    }
+      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
+      signIn: (credentials: any) =>
+        Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null }),
+    },
   };
 }
+
 // Default configuration
 const supabaseConfig: SupabaseConfig = {
-  url: process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project && project.supabase.co',
-  anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
+  url:
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "https://your-project.supabase.co",
+  anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key",
 };
+
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -96,3 +102,5 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

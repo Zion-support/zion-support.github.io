@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -13,6 +14,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST'),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -34,6 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const payload = { talentId, action, at: new Date().toISOString() }
 
   return res.status(200).json({ ok: true, data: payload })
+<<<<<<< HEAD
   const payload = { talentId, action, at: new Date().toISOString() },
   return res.status(200).json({ ok: true, data: payload });
 };
@@ -111,3 +120,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

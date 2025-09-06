@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -56,31 +57,22 @@ export default function Profile() {;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import React, { useEffect } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+export default function Profile() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const { user, isLoading, logout } = useAuth();
-=======
+  const navigate = useNavigate();
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-  }, [user, isLoading, navigate]),
-
-
-
-  if (isLoading) {
-<<<<<<< HEAD
-=======
-=======
-  const { user, isLoading, logout } = useAuth();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  useEffect(() => {;
-    if (!isLoading && !user) {;
-      toast && toast.error("Please log in to view your profile");
+  useEffect(() => {
+    if (!isLoading && !user) {
+      toast.error("Please log in to view your profile");
       navigate("/login?redirect=/profile");
     }
   }, [user, isLoading, navigate]);
@@ -89,65 +81,30 @@ export default function Profile() {;
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-=======
-  if (isLoading) {;
-    return (
-
-import React, { useEffect } from 'react',;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { useNavigate } from "react-router-dom",;
-import { toast } from "sonner",;
-;
-export default function Profile() {;
-  const { user, isLoading, logout } = useAuth(),;
-  const navigate = useNavigate(),;
-;
-  useEffect(() => {;
-    if (!isLoading && !user) {;
-      toast.error("Please log in to view your profile"),;
-      navigate("/login?redirect=/profile"),;
-    }
-  }, [user, isLoading, navigate]),;
-;
-  if (isLoading) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
-          <div className="animate-pulse text-white">Loading profile...</div>;
-        </div>;
-        <Footer />;
-      </>;
-<<<<<<< HEAD
+      <>
+        <Header />
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="animate-pulse text-white">Loading profile...</div>
+        </div>
+        <Footer />
+      </>
     );
   }
 
 
   if (!user) {;
     return (
-=======
-  if (!user) {;
-    return (
-    ),;
-  }
-;
-  if (!user) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
-            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
-            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
-<<<<<<< HEAD
-
+      <>
+        <Header />
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
+            <p className="text-zion-slate mb-4">
+              You need to be logged in to view your profile.
+            </p>
             <Button
               onClick={() => navigate("/login?redirect=/profile")}
+<<<<<<< HEAD
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
 =======
             <Button ;
@@ -266,10 +223,19 @@ export default function Profile() {
         </div>;
         <Footer />;
       </>;
+=======
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
+            >
+              Go to Login
+            </Button>
+          </div>
+        </div>
+        <Footer />
+      </>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
   return (
-<<<<<<< HEAD
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue">
@@ -279,14 +245,22 @@ export default function Profile() {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
                 <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
-                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
+                  {user.displayName
+                    ? user.displayName
+                        .split(" ")
+                        .map((name) => name[0])
+                        .join("")
+                    : user.email?.charAt(0)}
                 </div>
               </div>
               <div className="md:w-2/3">
-                <h2 className="text-xl font-bold text-white">{user.displayName |"User"}</h2>
+                <h2 className="text-xl font-bold text-white">
+                  {user.displayName || "User"}
+                </h2>
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -303,6 +277,10 @@ export default function Profile() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     navigate("/")
+=======
+                    logout();
+                    navigate("/");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   }}
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -316,6 +294,7 @@ export default function Profile() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -347,6 +326,9 @@ function Profile() {
     // Check condition
 if ( {) {
   $2
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");

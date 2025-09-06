@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,24 +11,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
-;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import type { NextApiRequest, NextApiResponse } from 'next',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
-  const { prompt } = req.body |{}
-  if (!prompt) return res.status(400).json({ error: 'prompt required' })
+
+  const { prompt } = req.body || {},
+  if (!prompt) return res.status(400).json({ error: 'prompt required' }),
+
   try {
-    const apiKey = process.env.OPENAI_API_KEY
+    const apiKey = process.env.OPENAI_API_KEY,
     if (apiKey) {
-      const { OpenAI } = await import('openai')
-      const openai = new OpenAI({ apiKey })
+      const { OpenAI } = await import('openai'),
+      const openai = new OpenAI({ apiKey }),
       const resp = await openai.chat.completions.create({
-        model: 'gpt-4o-mini'
+        model: 'gpt-4o-mini',
         messages: [
+<<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
 <<<<<<< HEAD
 =======
@@ -41,6 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           { role: 'user', content: String(prompt) }
         ]
       })
@@ -95,6 +103,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const api_key = process.env.OPENAI_API_KEY,
@@ -121,10 +130,13 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Coach error' });
+    res.set_header ('AllowPOST'),
+    return res.status (405).end ('Method Not Allowed');
   }
+<<<<<<< HEAD
 
 }
 
@@ -206,3 +218,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

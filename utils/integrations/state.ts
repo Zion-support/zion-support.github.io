@@ -5,6 +5,7 @@ interface IntegrationState {
 }
 let state: IntegrationState = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   connections: []
   logs: []
   overrides: []
@@ -57,6 +58,20 @@ export function get_state (): IntegrationState {
   return { ...state }
 }
 
+=======
+  connections: [],
+  logs: [],
+  overrides: [],
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
+}
+
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   updater(state);
 
   return { ...state }
@@ -77,6 +92,7 @@ export function get_state (): IntegrationState {
 }
 export function reset_state (): void {
   state = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -121,3 +137,10 @@ export function reset_state (): void {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    connections: [],
+    logs: [],
+    overrides: [],
+  };
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

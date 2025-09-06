@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -63,10 +64,29 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
       <>
+        <SEO
+          title="Payment Milestones | Zion AI Marketplace"
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  );
+}
 
         <SEO
           title="Payment Milestones | Zion AI Marketplace"

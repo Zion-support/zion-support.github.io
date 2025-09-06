@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,19 +60,17 @@ import {Link, useNavigate, useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import {useToast} from "@/hooks/use-toast";
-import {ForumCategory} from "@/types/community";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState, useEffect } from "react",
-import { Link, useNavigate, useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import PostForm from "@/components/community/PostForm",
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
+<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
 <<<<<<< HEAD
@@ -82,13 +81,13 @@ import { ForumCategory } from "@/types/community",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface PostFormValues {
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
+  title: string;
+  content: string;
+  categoryId: ForumCategory;
+  tags: string;
 }
 <<<<<<< HEAD
 
@@ -161,6 +160,7 @@ export default function CreatePostPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   // Get category from URL query params if available;
   const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null;
 
@@ -222,65 +222,74 @@ export default function CreatePostPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null;
+
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory |"project-help"
-  }
-  const navigate = useNavigate(),
-  const { toast } = useToast(),
-  const [searchParams] = useSearchParams(),
-  
-  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null,
-  
-  const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"
-  },
+    categoryId: initialCategory || "project-help",
+  };
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
+
       // Parse tags into an array
+      const tagsArray = values.tags.split(",").map((tag) => tag.trim());
+
+      toast({
+        title: "Post created",
+        description: "Your post has been published successfully",
+      });
+
       // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`)
+      navigate(`/community/category/${values.categoryId}`);
     } catch (error) {
       toast({
-        title: "Error"
-        description: "There was a problem creating your post"
-        variant: "destructive"
-      })
+        title: "Error",
+        description: "There was a problem creating your post",
+        variant: "destructive",
+      });
+    }
+  }
+=======
+=======
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    }
+
+  },
+
 
   return (
-<<<<<<< HEAD
     <AppLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-=======
       />
+
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link
+            to="/community"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
             Forum
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Create Post</span>
         </div>
+
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
+
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>
     </AppLayout>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,6 +316,9 @@ interface PostFormValues {;
   content: string,;
   categoryId: ForumCategory,;
   tags: string;
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 export default function CreatePostPage() {;

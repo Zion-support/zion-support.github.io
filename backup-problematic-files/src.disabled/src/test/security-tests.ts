@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/test/security-tests.ts
 =======
 <<<<<<< HEAD
@@ -55,3 +56,73 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/test/security-tests.ts
+=======
+// Security test configuration
+export const securityTests = {
+  // Check for common security vulnerabilities
+  checkVulnerabilities: async () => {
+    const vulnerabilities = [];
+    // Check for XSS vulnerabilities
+    const xssPatterns = [
+      /innerHTMLs*=/,
+      /dangerouslySetInnerHTML/,
+      /evals*(/,
+      /Functions*(/,
+    ];
+    // Check for CSRF vulnerabilities
+    const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
+    return {
+      xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
+      csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
+    };
+  },
+};
+export const securityTests = {
+  checkVulnerabilities: async () => {
+    const vulnerabilities = [];
+    const xssPatterns = [
+      /innerHTMLs*=/,
+      /dangerouslySetInnerHTML/,
+      /evals*(/,
+      /Functions*(/,
+    ];
+    const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
+    return {
+      xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
+      csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
+    };
+  },
+};
+export const securityTests = {
+  checkVulnerabilities: async () => {
+    const vulnerabilities = [];
+    const xssPatterns = [
+      /innerHTMLs*=/,
+      /dangerouslySetInnerHTML/,
+      /evals*(/,
+      /Functions*(/,
+    ];
+    const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
+    return {
+      xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
+      csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
+    };
+  },
+};
+export const securityTests = {
+  checkVulnerabilities: async () => {
+    const vulnerabilities = [];
+    const xssPatterns = [
+      /innerHTMLs*=/,
+      /dangerouslySetInnerHTML/,
+      /evals*(/,
+      /Functions*(/,
+    ];
+    const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
+    return {
+      xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
+      csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
+    };
+  },
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

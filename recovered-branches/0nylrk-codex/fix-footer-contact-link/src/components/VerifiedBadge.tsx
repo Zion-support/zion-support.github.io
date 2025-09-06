@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,19 +10,26 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
-import { CheckCircle  } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import {CheckCircle} from 'lucide-react';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 interface VerifiedBadgeProps {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   verified: boolean,
   size?: 'sm' | 'md' | 'lg'
+=======
+  verified: boolean;
+  size?: "sm" | "md" | "lg";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
+export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
   if (!verified) return null;
 <<<<<<< HEAD
 =======
@@ -31,6 +39,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,19 +94,13 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const sizeClasses = {
-    sm: 'h-3.5 w-3.5'
-    md: 'h-4 w-4'
-    lg: 'h-5 w-5'
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },
-  
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  const sizeClasses = {
+    sm: "h-3.5 w-3.5",
+    md: "h-4 w-4",
+    lg: "h-5 w-5",
+  };
 
 <<<<<<< HEAD
 =======
@@ -122,19 +125,42 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-import {CheckCircle} from 'lucide-react';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-
-interface VerifiedBadgeProps {;
-  verified: boolean,;
-  size?: 'sm' | 'md' | 'lg';
 =======
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
+export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+  const sizeClasses = {;
+    sm: 'h-3 && 3.5 w-3 && 3.5',;
+    md: 'h-4 w-4',;
+    lg: 'h-5 w-5';
+  };
+
+  return (
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger asChild>;
+          <span className="inline-flex text-blue-500">;
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p>Verified talent</p>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 

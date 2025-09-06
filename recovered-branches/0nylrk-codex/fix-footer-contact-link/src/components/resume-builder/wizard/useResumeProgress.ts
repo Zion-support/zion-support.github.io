@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
@@ -31,42 +32,28 @@ import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const [progress, setProgress] = useState(0);
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const [progress, setProgress] = useState(0);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Calculate progress based on completed sections
     if (!resume) {
       setProgress(0);
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    let completed = 0;
-    // Basic info is always considered (1 point)
-    completed += 1;
-=======
 
     let completed = 0;
 
     // Basic info is always considered (1 point)
     completed += 1;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Work experience (1 point if at least one entry)
-
-import { useState, useEffect  } from './react';
-import { Resume  } from '@/types / resume';
-export const useResumeProgress = (resume: Resume | null) =>: any {
-  const [progress, set_progress] = useState (0);
-;
-  useEffect (() => {
-=======
     if (resume.work_experience && resume.work_experience.length > 0) {
+<<<<<<< HEAD
       completed += 1
 <<<<<<< HEAD
 =======
@@ -131,6 +118,9 @@ if ( {) {
 =======
       completed += 1;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      completed += 1;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -139,7 +129,10 @@ if ( {) {
       completed += 1;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Skills (1 point if at least one entry)
@@ -147,13 +140,18 @@ if ( {) {
       completed += 1;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     const progressPercentage = (completed / 5) * 100;
@@ -170,10 +168,15 @@ if ( {) {
 ;
   return progress;
 =======
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return progress
@@ -265,14 +268,9 @@ if ( {) {
     set_progress (progress_percentage);
   }, [resume]);
 ;
-  return progress;
-<<<<<<< HEAD
-}
-;
-
 =======
-
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  return progress;
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

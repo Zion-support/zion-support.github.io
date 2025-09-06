@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,10 @@ import { readState } from "../../../utils/sync/storage",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -153,6 +158,7 @@ export default async function handler(req, res) {
       opt_in: state.config.opt_in,
       paused: state.config.paused,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,30 +183,13 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       lastSyncedAt: state.lastSyncedAt})
   }
 
-}
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const state = readState()
-  if (req.method === "GET") {
-    return res.status(200).json({
-      route: "/multiverse/hub"
-      instanceId: state.config.instanceId
-      peers: state.config.peers
-      scope: state.config.scope
-      optIn: state.config.optIn
-      paused: state.config.paused
-lastSyncedAt: state.lastSyncedAt})
-
-  }
   return res.status(405).json({ error: "Method not allowed" })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -321,3 +310,6 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

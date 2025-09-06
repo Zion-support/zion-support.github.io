@@ -21,39 +21,22 @@ import {useState, useEffect} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import { useState, useEffect } from 'react';
-import {useState, useEffect} from 'react';
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 768 : false;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,
   );
   useEffect(() => {
 
     const handleResize = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      setIsMobile(window && window.innerWidth < 768)
+      setIsMobile(window.innerWidth < 768);
     };
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-    if (typeof window !== 'undefined') {
-      window && window.addEventListener('resize', handleResize);
-      return () => window && window.removeEventListener('resize', handleResize)
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
-    return undefined
+    return undefined;
   }, []);
 
+<<<<<<< HEAD
   return isMobile
 <<<<<<< HEAD
 }
@@ -73,6 +56,9 @@ function useIsMobile() {
     typeof window !== 'undefined' ? window.inner_width < 768 : false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+  return isMobile;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

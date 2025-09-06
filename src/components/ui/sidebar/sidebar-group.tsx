@@ -90,6 +90,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   }
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -123,3 +124,5 @@ export { SidebarGroup },
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

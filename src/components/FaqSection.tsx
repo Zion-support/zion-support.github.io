@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
@@ -80,6 +81,8 @@ const FaqSection = () => {
 
 export default FaqSection;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -422,7 +425,10 @@ export function FaqSection() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -3,13 +3,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',;
+import { readJson, writeJson } from '../../../utils/fsDb',
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { id } = req.body as { id: string },
   if (!id) return res.status(400).json({ error: 'id required' }),
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,13 +127,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id) return res.status(400).json({ error: 'id required' })
   const requests = readJson<any[]>('support/requests.json', [])
   const idx = requests.findIndex((r) => r.id === id)
+=======
+  const requests = readJson<any[]>('support/requests.json', []),
+  const idx = requests.findIndex((r) => r.id === id),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   if (idx >= 0) {
-    requests[idx].status = 'resolved'
-    requests[idx].resolvedAt = Date.now()
-
+    requests[idx].status = 'resolved',
+    requests[idx].resolvedAt = Date.now(),
     writeJson('support/requests.json', requests)
   }
   return res.status(200).json({ ok: true })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -221,3 +226,6 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

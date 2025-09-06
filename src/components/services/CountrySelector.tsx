@@ -20,6 +20,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   // Set top/popular countries
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,3 +236,5 @@ function CountrySelector() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -23,6 +24,17 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 import {supabase} from '@/integrations / supabase / client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 ;
+=======
+import { supabase } from "@/integrations/supabase/client";
+export type MilestoneStatus =
+  | "pending"
+  | "in_progress"
+  | "submitted"
+  | "completed"
+  | "rejected"
+  | "paid"
+  | "approved";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Milestone {
@@ -53,6 +65,7 @@ export interface Milestone {
   status: MilestoneStatus;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 
   created_by: string,
   deliverables?: any[];
@@ -67,6 +80,10 @@ export interface MilestoneActivity {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  created_by: string;
+  deliverables?: any[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -104,6 +121,7 @@ export interface MilestoneActivity {
   comment?: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -158,3 +176,9 @@ export interface MilestoneActivity {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
+=======
+    display_name: string;
+    avatar_url?: string;
+  };
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

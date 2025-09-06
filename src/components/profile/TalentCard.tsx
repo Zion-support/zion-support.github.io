@@ -17,6 +17,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 =======
@@ -361,3 +362,5 @@ export interface TalentCardProps {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

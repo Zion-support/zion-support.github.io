@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Resume } from "@/types/resume";
 import { Resume } from "@/types/resume",
@@ -18,11 +19,9 @@ import { Resume  } from '@/types / resume';
 <<<<<<< HEAD
 import {Resume} from "@/types/resume";
 =======
-import { Resume } from "@/types/resume";
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import { Resume } from "@/types/resume";
 export interface StepProps {
   id: string;
   label: string;
@@ -63,6 +62,7 @@ export interface NavigationButtonsProps {;
   onNext?: () => void;
   isNextDisabled?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean
@@ -101,6 +101,8 @@ export interface ResumeProgressProps {
   onBack?: () => void;
   onNext?: () => void;
   isNextDisabled?: boolean;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean;
@@ -109,13 +111,11 @@ export interface ResumeProgressProps {
 export interface ResumeProgressProps {
   resume: Resume | null;
   progress: number;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   onCancel: () => void,
@@ -181,6 +181,10 @@ export interface CreateResumeFormProps {
 export interface ResumeProgressProps {;
   resume: Resume | null,;
   progress: number;
+=======
+  onCancel: () => void;
+  isLoading: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 =======
@@ -259,8 +263,7 @@ export interface EmptyResumeProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export interface EmptyResumeProps {
-
-  onCreateClick: () => void
+  onCreateClick: () => void;
 }
 ;
 

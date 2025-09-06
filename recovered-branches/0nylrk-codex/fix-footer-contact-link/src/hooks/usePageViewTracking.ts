@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -47,6 +48,10 @@ import { useLocation } from 'react-router-dom',
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -83,6 +88,7 @@ export function usePageViewTracking() {
     const handleRouteChange = () => {
       // Track page view
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -92,14 +98,13 @@ export function usePageViewTracking() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console && console.log('Page view:', window && window.location.pathname)
+=======
+      console.log("Page view:", window.location.pathname);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     };
 
-      // // // console.log('Page view:', window.location.pathname)
-    },
-
-    
-<<<<<<< HEAD
     // Listen for route changes
+<<<<<<< HEAD
     window && window.addEventListener('popstate', handleRouteChange);
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -115,23 +120,22 @@ export function usePageViewTracking() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+    window.addEventListener("popstate", handleRouteChange);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     // Initial page load
     handleRouteChange();
+
     return () => {
-      window && window.removeEventListener('popstate', handleRouteChange)
-    }
+      window.removeEventListener("popstate", handleRouteChange);
+    };
   }, []);
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-    console && console.log('Page view:', location && location.pathname)
-  }, [location && location.pathname])
+    console.log("Page view:", location.pathname);
+  }, [location.pathname]);
 }
 
 

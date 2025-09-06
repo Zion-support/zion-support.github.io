@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -36,29 +37,18 @@ export interface Job {
 =======
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-export type JobCategory =
-  | 'development'
-  | 'design'
-  | 'marketing'
-  | 'content'
-  | 'data'
-  | 'business'
-  | 'other';
-export interface JobBudget {
-export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export type JobStatus = "new" | "in_progress" | "filled" | "closed";
 
-export type JobCategory = 
-  | 'development' 
-  | 'design' 
-  | 'marketing' 
-  | 'content' 
-  | 'data' 
-  | 'business' ;
-  | 'other';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+export type JobCategory =
+  | "development"
+  | "design"
+  | "marketing"
+  | "content"
+  | "data"
+  | "business"
+  | "other";
 
 export interface JobBudget {;
 <<<<<<< HEAD
@@ -70,8 +60,8 @@ export interface JobBudget {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   min: number;
-  max: number
-  currency: string
+  max: number;
+  currency: string;
 }
 <<<<<<< HEAD
 =======
@@ -110,6 +100,7 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 
   created_at: string,
   updated_at: string;
@@ -125,6 +116,10 @@ export interface JobFormData {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface JobFormData {
+=======
+  created_at: string;
+  updated_at: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -152,8 +147,10 @@ export interface JobFormData {
   description: string;
   category: JobCategory;
   skills: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
+  budgetMin: number;
+  budgetMax: number;
+  deadline: Date;
+}
 
   budget_min: number;
   budget_max: number,
@@ -177,7 +174,7 @@ export interface JobMatch {;
   talent_id: string;
   match_score: number;
   matched_skills: string[];
-  status?: 'new' | 'viewed' | 'applied' | 'declined';
+  status?: "new" | "viewed" | "applied" | "declined";
   created_at: string;
   viewed_at?: string;
   job?: Job;
@@ -193,13 +190,9 @@ export interface JobMatch {;
     key_projects: any[];
     skills: string[];
     location?: string;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    category?: string,
+    category?: string;
     company_name?: string;
-
-  }
+  };
 }
 <<<<<<< HEAD
 export interface ResumeAttachment {
@@ -234,15 +227,13 @@ export interface ResumeAttachment {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
-  type: 'ai_resume' | 'custom_upload';
+  type: "ai_resume" | "custom_upload";
   file_url?: string;
   resume_id?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  summary?: string,
+  summary?: string;
   skills?: string[];
 }
+<<<<<<< HEAD
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 <<<<<<< HEAD
 
@@ -251,6 +242,16 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 ;
+=======
+
+export type ApplicationStatus =
+  | "new"
+  | "viewed"
+  | "shortlisted"
+  | "interview"
+  | "hired"
+  | "rejected";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface JobApplication {
 =======
@@ -299,13 +300,9 @@ export interface JobApplication {
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    bio: string,
+    bio: string;
     skills: string[];
-
-  }
+  };
   resume?: ResumeAttachment;
   // New fields for resume scoring;
 =======
@@ -325,6 +322,7 @@ export interface JobApplication {
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   notes?: string,  // New field for client notes
@@ -471,26 +469,23 @@ export interface JobApplication {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      matching: string[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       missing: string[];
-    }
+    };
     experience_match?: {
-      score: number,
+      score: number;
       analysis: string;
-    }
+    };
     education_match?: {
-      score: number,
+      score: number;
       analysis: string;
-    }
-  }
+    };
+  };
   match_suggestion?: string;
   scored_at?: string;
-  notes?: string,  // New field for client notes;
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
+  notes?: string; // New field for client notes
 }
 ;
 <<<<<<< HEAD

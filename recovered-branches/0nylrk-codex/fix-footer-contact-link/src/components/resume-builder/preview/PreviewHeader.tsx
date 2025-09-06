@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -43,16 +44,14 @@ import {useIsMobile} from '@/hooks/use-mobile';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Link } from "lucide-react";
 import { PdfExportButton } from "../PdfExportButton";
 import { Resume } from "@/types/resume";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
@@ -103,6 +102,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
 
+<<<<<<< HEAD
     // Inject print-specific CSS only for the duration of printing;
     const style = document && document.createElement('style');
     style && style.innerHTML = `;
@@ -187,6 +187,11 @@ function PreviewHeader() {
     // Inject print - specific CSS only for the duration of printing;
     const style = document.create_element ("style");
     style.innerHTML = `;
+=======
+    // Inject print-specific CSS only for the duration of printing
+    const style = document.createElement("style");
+    style.innerHTML = `
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       @media print {
         body * {
           visibility: hidden;
@@ -205,6 +210,7 @@ function PreviewHeader() {
 <<<<<<< HEAD
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     `;
     document.head.appendChild(style);
@@ -257,6 +263,10 @@ function PreviewHeader() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+    `;
+    document.head.appendChild(style);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
     // Trigger print dialog
     window.print();
@@ -267,10 +277,6 @@ function PreviewHeader() {
       setIsPrinting(false);
     }, 1000);
   };
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div
@@ -292,6 +298,7 @@ function PreviewHeader() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -311,6 +318,8 @@ function PreviewHeader() {
 =======
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
@@ -319,80 +328,20 @@ function PreviewHeader() {
         <Button
           variant="outline"
           onClick={handleBrowserPrint}
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           disabled={isPrinting}
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    document && document.head.appendChild(style);
-
-    // Trigger print dialog;
-    window && window.print();
-
-    // Remove the temporary style element after printing;
-    setTimeout(() => {;
-      document && document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-
-  return (
-    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>;
-      <Button
-        variant="outline" 
-        onClick={onBack} 
-        className="gap-2 no-print">;
-        <ArrowLeft className="h-4 w-4" />;
-        Back;
-      </Button>;
-
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
-        <PdfExportButton resume={resume} />;
-
-        <Button
-          variant="outline" 
-          onClick={handleBrowserPrint} 
-          disabled={isPrinting}
-          className="gap-2">;
-          <FileText className="h-4 w-4" />;
-          Print;
-        </Button>;
-
-        <Button variant="outline" className="gap-2">;
-          <Link className="h-4 w-4" />;
-          Add to Profile;
-        </Button>;
-      </div>;
-    </div>;
   );
-=======
-
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

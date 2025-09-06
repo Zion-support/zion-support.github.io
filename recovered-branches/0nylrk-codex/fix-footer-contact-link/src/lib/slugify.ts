@@ -57,7 +57,7 @@ export function slugify(title: string, separator = "-"): string {
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
     .replace(new RegExp(`${escaped}{2}`, "g"), sep)
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "")
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
 }
 /**
  * Convert a slug back into a human readable title.
@@ -70,6 +70,7 @@ export function unslugify(slug: string, separator = "-"): string {
     .filter(Boolean)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
 <<<<<<< HEAD
@@ -80,6 +81,11 @@ export function unslugify(slug: string, separator = "-"): string {
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

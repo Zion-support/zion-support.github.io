@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -39,6 +40,8 @@ export function PortfolioBuilder() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -48,10 +51,6 @@ import { ProjectForm } from "./ProjectForm";
 import { PortfolioProject } from "@/types/resume";
 import { usePortfolio } from "@/hooks/usePortfolio";
 export function PortfolioBuilder() {
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
@@ -87,6 +86,7 @@ export function PortfolioBuilder() {
 
   };
 
+<<<<<<< HEAD
 =======
   };
 <<<<<<< HEAD
@@ -145,6 +145,8 @@ export function PortfolioBuilder() {;
 =======
   
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -152,13 +154,7 @@ export function PortfolioBuilder() {;
       </div>
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -177,21 +173,13 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
               {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
@@ -279,68 +267,19 @@ export function PortfolioBuilder() {;
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
-<<<<<<< HEAD
-            <ProjectForm 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <ProjectForm
               project={editingProject || undefined}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null)
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-            <ProjectForm
-              project={editingProject || undefined}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
-=======
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
 
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-                setEditingProject(null);
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                setEditingProject(null);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />;
           </CardContent>;
@@ -350,11 +289,6 @@ export function PortfolioBuilder() {;
 
 <<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -365,86 +299,6 @@ export function PortfolioBuilder() {;
               onEdit={() => setEditingProject(project)}
 <<<<<<< HEAD
 <<<<<<< HEAD
-              onDelete={handleDeleteProject}
-            />;
-          ))}
-
-        </div>;
-      ) : (;
-        !showAddProject && (;
-          <Card className="text-center py-12">;
-            <CardContent>;
-              <div className="flex flex-col items-center gap-4">;
-                <div className="bg-muted/50 p-6 rounded-full">;
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />;
-                </div>;
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>;
-                <p className="text-muted-foreground max-w-md mx-auto">;
-                  Add your best work to showcase your skills and experience to potential employers.;
-                </p>;
-                <Button
-                  onClick={() => setShowAddProject(true)} ;
-                  className="mt-2";
-=======
-import { useState, useEffect  } from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { FilePlus, Loader2  } from './lucide-react';
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types / resume';
-import { use_portfolio  } from '@/hooks / use_portfolio';
-export /**
- * PortfolioBuilder - Function description
- */
-function PortfolioBuilder() {
-  const { projects, fetch_projects, delete_project, is_loading } = use_portfolio ();
-  const [showAddProject, setShowAddProject] = useState (false);
-  const [editing_project, setEditingProject] = useState < PortfolioProject | null>(
-    null,
-  );
-;
-  useEffect (() => {
-    fetch_projects ();
-  }, [fetch_projects]);
-;
-  const handleAddSuccess = () =>: any {
-    setShowAddProject (false);
-    fetch_projects ();
-  }
-;
-  const handleEditSuccess = () =>: any {
-    setEditingProject (null);
-    fetch_projects ();
-  }
-;
-  const handleDeleteProject = async (project_id: string) => {
-    const success = await delete_project (project_id);
-    // Check condition
-if ( {) {
-  $2
-=======
-              {editingProject ? 'Edit Project' :'Add New Project'}
-            </h2>;
-            ;
-            <ProjectForm ;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess :handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false),;
-                setEditingProject(null),;
-              }}
-            />;
-          </CardContent>;
-        </Card>;      )}
-      ;
-      {/* Projects List */}
-      {projects.length > 0 ? (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects.map((project) => (;
-            <ProjectCard;
-              key={project.id}              project={project}
-              onEdit={_() => setEditingProject(project)}
               onDelete={handleDeleteProject}
             />;
           ))}
@@ -477,7 +331,6 @@ if ( {) {
       )}
     </div>
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
       fetch_projects ();
     }

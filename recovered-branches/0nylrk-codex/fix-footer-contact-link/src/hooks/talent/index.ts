@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -51,3 +52,11 @@ export { useHireRequest } from '../useHireRequest';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export { useAuthStatus } from "./useAuthStatus";
+export { useTalentData } from "./useTalentData";
+export { useFilterTalents } from "./useFilterTalents";
+export { useUIState } from "./useUIState";
+export { useSavedTalents } from "./useSavedTalents";
+export { useHireRequest } from "../useHireRequest";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

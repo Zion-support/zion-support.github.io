@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
@@ -87,6 +88,8 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 =======
   
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
 export const SkillCategory = ({
@@ -95,8 +98,9 @@ export const SkillCategory = ({
   onDelete,
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
->>>>>>> main
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
@@ -109,24 +113,11 @@ export const SkillCategory = ({
             onDelete={onDelete}
           />
         ))}
-<<<<<<< HEAD
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  )
-
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======

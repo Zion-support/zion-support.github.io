@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -19,6 +22,7 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -81,6 +85,8 @@ function load(): Record<string, KycProfile> {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   } catch {
     return {};
   }
@@ -92,36 +98,50 @@ function load(): Record<string, KycProfile> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 function save(db: Record<string, KycProfile>) {
-
-
+  fs.mkdirSync(DATA_DIR, { recursive: true }),
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const db = load()
   const db = load(),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (req.method === 'GET') {
+<<<<<<< HEAD
     const queue = Object.values(db).filter((p) =>
       p.status === 'submitted' || p.status === 'needs_more_info'
     );
     return res.status(200).json({ ok: true, queue });
+=======
+    const queue = Object.values(db).filter((p) => p.status === 'submitted' || p.status === 'needs_more_info'),
+    return res.status(200).json({ ok: true, queue })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
-  if (req.method === 'POST') {
 
+  if (req.method === 'POST') {
+<<<<<<< HEAD
+
+=======
+    const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string },
+    if (!userId || !action) return res.status(400).json({ error: 'Missing userId or action' }),
+    const profile = db[userId],
+    if (!profile) return res.status(404).json({ error: 'Profile not found' }),
+
+    const now = new Date().toISOString(),
+    if (action === 'approve') profile.status = 'approved',
+    if (action === 'reject') profile.status = 'rejected',
+    if (action === 'needs_more_info') profile.status = 'needs_more_info',
+    profile.lastUpdatedAt = now,
+    profile.auditTrail.push({ at: now, by: 'admin', action: `admin_${action}`, details: reason ? { reason } : undefined }),
+
+    db[userId] = profile,
+    save(db),
+    return res.status(200).json({ ok: true, profile })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
+
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 }
 
   try {
@@ -171,3 +191,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

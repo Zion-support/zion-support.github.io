@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,19 +11,15 @@
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function ServiceProcessSteps() {
   return (
     <div className="my-20">
-<<<<<<< HEAD
-      <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>
-=======
       <h2 className="text-2xl font-bold text-white text-center mb-12">
         How Our IT Onsite Service Works
       </h2>
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
@@ -33,6 +30,7 @@ export function ServiceProcessSteps() {
             Choose the country where you need onsite IT support services.
           </p>
         </div>
+
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             2
@@ -44,6 +42,7 @@ export function ServiceProcessSteps() {
             Complete the secure payment for your selected location.
           </p>
         </div>
+
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             3
@@ -54,6 +53,7 @@ export function ServiceProcessSteps() {
             team.
           </p>
         </div>
+
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             4
@@ -68,6 +68,7 @@ export function ServiceProcessSteps() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -136,6 +137,8 @@ export function ServiceProcessSteps() {;
         </div>;
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

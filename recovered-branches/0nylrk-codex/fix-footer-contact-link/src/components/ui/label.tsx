@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -6,6 +7,11 @@
 
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
+=======
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cva, type, VariantProps } from "class-variance-authority";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 
@@ -46,8 +52,9 @@ import { cn } from "@/lib/utils";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const labelVariants = cva(
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
 );
+
 const Label = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>
 
@@ -74,8 +81,8 @@ const label_variants = cva (
     className={cn(labelVariants(), className)}
     {...props}
   />
-))
-Label.displayName = LabelPrimitive.Root.displayName
+));
+Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Label };
 ;

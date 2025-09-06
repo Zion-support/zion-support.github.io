@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 const WINDOW_MS = 5 * 60 * 1000, // 5 minutes;
 const MAX_REQUESTS = 30, // per IP per endpoint per window;
@@ -16,14 +17,35 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {;
     res.status(429).json({ error: 'Rate limit exceeded. Please try again later.' });
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
+
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+  const ip =
+    (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
+    req.socket.remoteAddress ||
+    "unknown";
+
+  const now = Date.now();
+  const key = `rate_limit_${ip}`;
+  const current = rateLimitMap.get(key);
+
+  if (!current || now > current.resetTime) {
+    // Reset or initialize
+    rateLimitMap.set(key, {
+      count: 1,
+      resetTime: now + RATE_LIMIT_WINDOW,
+    });
+    return true;
+  }
+
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+    res.status(429).json({ error: "Too Many Requests" });
     return false;
   }
+
   current.count++;
   rateLimitMap.set (key, current);
   return true;

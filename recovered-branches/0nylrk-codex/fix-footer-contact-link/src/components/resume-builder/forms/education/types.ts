@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Education } from '@/types/resume';
 export interface EducationFormProps {
@@ -18,10 +19,14 @@ export interface EducationFormProps {;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
-  onBack: () => void
+  onBack: () => void;
 }
 <<<<<<< HEAD
 export interface EducationItemProps {
@@ -61,6 +66,7 @@ export interface EducationItemProps {;
 
   education: Education;
   onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
 }
 <<<<<<< HEAD
 =======

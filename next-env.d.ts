@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

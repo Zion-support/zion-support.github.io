@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,18 +18,26 @@ describe("App Smoke Tests", () => {;
     const { container } = render(<App />);
     expect(container && container.firstChild).toBeTruthy();
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-describe('App Smoke Tests', () => {;
-  it('should render without crashing', () => {;
+
+describe('App Smoke Tests', () => {
+  it('should render without crashing', () => {
     expect(() => render(<App />)).not.toThrow();
   });
-  it('should render a basic structure', () => {;
+
+  it('should render a basic structure', () => {
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   });
+});
 });

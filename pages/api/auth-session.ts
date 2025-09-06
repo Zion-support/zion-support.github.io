@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,16 +11,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = getSessionFromReq(req)
-  const internal = isInternalAgentRequest(req)
+  const session = getSessionFromReq(req),
+  const internal = isInternalAgentRequest(req),
   if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' })
+    res.status(401).json({ error: 'Unauthorized' }),
     return
   }
+<<<<<<< HEAD
   res.status(200).json({ message: 'OK' });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -67,3 +71,7 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.status(200).json({ message: 'OK' })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

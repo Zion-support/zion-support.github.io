@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // This file re - exports all fraud detection functionality;
 // to maintain backward compatibility;
@@ -35,18 +36,12 @@ export * from './signupCheck';
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 // This file re-exports all fraud detection functionality
 // to maintain backward compatibility
-export * from './analyzeContent';
-export * from './analyzeEmail';
-export * from './flagContent';
-export * from './messageCheck';
-export * from './monitorContent';
-export * from './signupCheck';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export * from './signupCheck';
 
+<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -77,3 +72,11 @@ export * from './signupCheck';
 export * from './signupCheck';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export * from "./analyzeContent";
+export * from "./analyzeEmail";
+export * from "./flagContent";
+export * from "./messageCheck";
+export * from "./monitorContent";
+export * from "./signupCheck";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

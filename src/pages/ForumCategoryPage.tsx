@@ -274,6 +274,7 @@ function CategoryContent({;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
       return;
     }
     if (isFollowed(categoryId)) {;
@@ -284,6 +285,8 @@ function CategoryContent({;
   },;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       return;
 
 
@@ -309,6 +312,7 @@ function CategoryContent({;
   );
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -431,3 +435,5 @@ export default function ForumCategoryPage() {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

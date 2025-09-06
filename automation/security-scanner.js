@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -1238,6 +1239,8 @@ if (vulnerabilities.critical > 0) {
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const scanner = new SecurityScanner(); scanner.run().catch(console.error)};
 ;
 export default SecurityScanner;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 };
 ;
@@ -1369,6 +1372,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 ;
 export default SecurityScanner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 ; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${vuln}`));
@@ -1407,6 +1411,8 @@ export default SecurityScanner;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     };
   };
 ,
@@ -1422,6 +1428,7 @@ export default SecurityScanner;
       this.log("Running security audit..."),
       const output = execSync("npm audit --json", { stdio: 'pipe' }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -1429,11 +1436,14 @@ export default SecurityScanner;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       const auditResult = JSON.parse(output.toString()),
 ,
       if (auditResult.vulnerabilities) {,
         const vulnCount = Object.keys(auditResult.vulnerabilities).length,
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1442,16 +1452,16 @@ export default SecurityScanner;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
+=======
+        this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       } else {,
-        this.log("✓ No vulnerabilities found")
-      }
-    } catch (error) {,;
-      this.log(`Security audit: failed: ${error.message}`, "ERROR");
-    }
-  },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        this.log("✓ No vulnerabilities found"),
+      };
+    } catch (error) {,
+      this.log(`Security audit failed: ${error.message}`, "ERROR"),
+    };
+  };
 ,
   async checkSecrets() {,
     try {,
@@ -1466,6 +1476,7 @@ export default SecurityScanner;
           /secret\s*[:=]\s*["'][^"']+["']/gi,
           /password\s*[:=]\s*["'][^"']+["']/gi,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1476,6 +1487,9 @@ export default SecurityScanner;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+          /token\s*[:=]\s*["'][^"']+["']/gi,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         ],
 ,
         secretPatterns.forEach(pattern => {,
@@ -1488,6 +1502,7 @@ export default SecurityScanner;
       if (secretCount > 0) {,
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1495,16 +1510,16 @@ export default SecurityScanner;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.log(`Found ${secretCount} potential secrets`, "WARN")
+=======
+        this.log(`Found ${secretCount} potential secrets`, "WARN"),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       } else {,
-        this.log("✓ No exposed secrets found")
-      }
-    } catch (error) {,;
-      this.log(`Secret check: failed: ${error.message}`, "ERROR");
-    }
-  },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        this.log("✓ No exposed secrets found"),
+      };
+    } catch (error) {,
+      this.log(`Secret check failed: ${error.message}`, "ERROR"),
+    };
+  };
 ,
   getSourceFiles() {,
     const files = [],
@@ -1519,6 +1534,7 @@ export default SecurityScanner;
 ,
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1526,14 +1542,14 @@ export default SecurityScanner;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             walkDir(fullPath)
+=======
+            walkDir(fullPath),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
-            files.push(fullPath)
-          }
-        })
-      },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            files.push(fullPath),
+          };
+        }),
+      };
 ,
       walkDir(srcDir)
     },
@@ -1543,6 +1559,7 @@ export default SecurityScanner;
 ,
   async generateReport() {,
     const report = {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1556,10 +1573,16 @@ export default SecurityScanner;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      timestamp: new Date().toISOString(),
+      vulnerabilities: this.vulnerabilities,
+      recommendations: [,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         "Run npm audit fix to address vulnerabilities",
         "Review and remove any hardcoded secrets",
         "Use environment variables for sensitive data",
         "Implement proper authentication and authorization",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1573,6 +1596,11 @@ export default SecurityScanner;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        "Regularly update dependencies",
+      ],
+    };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ,
     const reportFile = path.join(__dirname, "reports", "security-report.json"),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
@@ -1589,6 +1617,7 @@ export default SecurityScanner;
 ,
       this.log("=" * 50),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1598,14 +1627,16 @@ export default SecurityScanner;
       this.log(`🎯 Security Scanner completed. Issues: found: ${this.vulnerabilities.length}`),
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))
 
+=======
+      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
+      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),
+,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     } catch (error) {,
-      this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
-    }
-  }
-},
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR"),
+    };
+  };
+};
 ,
 // Main execution,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
@@ -1614,6 +1645,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 },
 ,
 export default SecurityScanner,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },;
@@ -2226,3 +2258,5 @@ export default SecurityScanner;
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -54,6 +54,7 @@ export default function OrdersPage() {;
         return status;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
@@ -305,3 +306,5 @@ function OrdersPage() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

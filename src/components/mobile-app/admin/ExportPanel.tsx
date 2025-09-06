@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
@@ -289,3 +290,5 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 },
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

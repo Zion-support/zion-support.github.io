@@ -101,6 +101,7 @@ export default function AITalentMatchingPage() {;
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 <<<<<<< HEAD
+<<<<<<< HEAD
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Find Your AI Talent";
@@ -109,6 +110,8 @@ export default function AITalentMatchingPage() {;
   );
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       benefits={benefits}
       features={features}
       stats={stats}

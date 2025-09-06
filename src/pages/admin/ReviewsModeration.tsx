@@ -94,9 +94,12 @@ function ReviewsModerationContent() {;
       toast({
         title: "Error",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)

@@ -37,30 +37,18 @@ export interface PartnerProfile {
     twitter?: string;
     instagram?: string;
     youtube?: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    linkedin?: string,
+    linkedin?: string;
     [key: string]: string | undefined;
-=======
-    linkedin?: string
-    [key: string]: string | undefined
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  }
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  };
   niche: string;
   audience_size: string;
   payout_method: string;
   bio: string;
-  status: 'pending' | 'approved' | 'rejected';
+  status: "pending" | "approved" | "rejected";
   created_at: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  updated_at: string,
+  updated_at: string;
   commission_rate?: number;
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -73,6 +61,8 @@ export interface PartnerSettings {
 =======
 export interface PartnerSettings {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -85,9 +75,9 @@ export interface PartnerSettings {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   commission_rate: number;
-
-  fraud_threshold: number,
+  fraud_threshold: number;
   is_payouts_enabled: boolean;
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -106,6 +96,8 @@ export interface PartnerReferralLink {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -142,11 +134,9 @@ export interface PartnerReferralLink {
   campaign?: string;
   source?: string;
   clicks: number;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  conversions: number,
+  conversions: number;
   created_at: string;
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -159,6 +149,8 @@ export interface PartnerPayout {
 =======
 export interface PartnerPayout {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -185,8 +177,9 @@ export interface PartnerPayout {
   id: string;
   partner_id: string;
   amount: number;
-  status: 'pending' | 'processing' | 'completed' | 'failed';
+  status: "pending" | "processing" | "completed" | "failed";
   method: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -267,3 +260,8 @@ export interface PartnerPayout {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  created_at: string;
+  completed_at?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,7 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+const CommunityRoutes = () => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Fragment} from "react";
@@ -56,7 +69,19 @@ const CommunityRoutes = () => {;
 <<<<<<< HEAD
     <Routes>;
       {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
+      <Route
+        path="/community/category/:categoryId"
+        element={<ForumCategoryPage />}
+      />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route
+        path="/community/profile/:userId"
+        element={<CommunityProfilePage />}
+      />
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -83,6 +108,8 @@ const CommunityRoutes = () => {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -99,8 +126,16 @@ const CommunityRoutes = () => {;
             <EditPostPage />
           </ProtectedRoute>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+        }
+      />
+    </Routes>
+  );
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 <<<<<<< HEAD

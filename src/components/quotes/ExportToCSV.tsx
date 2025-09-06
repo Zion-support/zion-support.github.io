@@ -42,6 +42,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     const csvContent = [
       headers.join()
 <<<<<<< HEAD
+<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
 
@@ -349,3 +350,5 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

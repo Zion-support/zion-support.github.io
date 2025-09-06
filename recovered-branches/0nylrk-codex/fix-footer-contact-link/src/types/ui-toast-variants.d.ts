@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Additional type declaration for toast variants
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -11,3 +12,7 @@ declare type ToastVariant = "default" | "destructive" | "success",
 // Additional type declaration for toast variants;
 declare type ToastVariant = "default" | "destructive" | "success",;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Additional type declaration for toast variants
+declare type ToastVariant = "default" | "destructive" | "success";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

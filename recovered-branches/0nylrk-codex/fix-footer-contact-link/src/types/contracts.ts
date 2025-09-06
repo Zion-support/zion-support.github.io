@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ContractTemplate {
 
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
@@ -22,10 +23,15 @@ export interface ContractTemplate {;
 export interface ContractTemplate {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -93,6 +99,10 @@ export interface ContractTemplate {;
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  created_at: string;
+  updated_at: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

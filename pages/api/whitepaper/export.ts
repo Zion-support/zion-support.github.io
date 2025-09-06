@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ function escapeHtml(str: string) {
     .replace(/>/g, '&gt,')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -157,16 +160,20 @@ function escape_html() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function escapeHtml(str: string) {
   return String(str)
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
+<<<<<<< HEAD
     .replace(/>/g, '&gt,');
 };
 =======
@@ -234,3 +241,7 @@ function escapeHtml(str: string) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    .replace(/>/g, '&gt,')
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

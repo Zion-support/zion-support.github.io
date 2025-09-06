@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,16 +31,19 @@ import { supabase } from "@/integrations/supabase/client",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState, useEffect } from "react";
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface OnboardingStatus {
-
-  profileCompleted: boolean
-  skillsAdded: boolean
-  availabilitySet: boolean
-  matchReceived: boolean
-  jobPosted: boolean
-  inviteSent: boolean
-
-  responseReceived: boolean
+  profileCompleted: boolean;
+  skillsAdded: boolean;
+  availabilitySet: boolean;
+  matchReceived: boolean;
+  jobPosted: boolean;
+  inviteSent: boolean;
+  responseReceived: boolean;
 }
 <<<<<<< HEAD
 =======
@@ -71,6 +75,7 @@ export function useOnboardingStatus() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [status, setStatus] = useState<OnboardingStatus>({
+<<<<<<< HEAD
 
     profileCompleted: false
     skillsAdded: false
@@ -95,14 +100,21 @@ export function useOnboardingStatus() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }),
   
+=======
+    profileCompleted: false,
+    skillsAdded: false,
+    availabilitySet: false,
+    matchReceived: false,
+    jobPosted: false,
+    inviteSent: false,
+    responseReceived: false,
+  });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
-
-      if (!user) return,
-      
-
+      if (!user) return;
 
 <<<<<<< HEAD
 =======
@@ -122,6 +134,7 @@ export function useOnboardingStatus() {
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
+<<<<<<< HEAD
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
@@ -205,9 +218,21 @@ export function useOnboardingStatus() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          .from("user_onboarding")
+          .select("*")
+          .eq("user_id", user.id)
+          .single();
+
+        if (error) {
+          console.error("Error fetching onboarding status:", error);
+          return;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         }
+
         if (data) {
           setStatus({
+<<<<<<< HEAD
             profileCompleted: data.profile_completed |false
             skillsAdded: data.skills_added |false
             availabilitySet: data.availability_set |false
@@ -302,13 +327,20 @@ export function useOnboardingStatus() {;
         if (error) {;
           console && console.error("Error fetching onboarding status:", error);
           return;
+=======
+            profileCompleted: data.profile_completed || false,
+            skillsAdded: data.skills_added || false,
+            availabilitySet: data.availability_set || false,
+            matchReceived: data.match_received || false,
+            jobPosted: data.job_posted || false,
+            inviteSent: data.talent_invited || false,
+            responseReceived: data.quote_received || false,
+          });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         }
 
 =======
       } catch (err) {
-        console.error("Error in onboarding status hook:", err)
-
-      } catch (err) {;
         console.error("Error in onboarding status hook:", err);
       }
 

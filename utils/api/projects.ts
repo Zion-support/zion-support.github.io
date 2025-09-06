@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -30,6 +31,17 @@ export function saveProject(updated: Project): void {;
   }
   writeDb(db);
 }
+=======
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+  deadline: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
 =======
@@ -90,10 +102,75 @@ export interface Project {
     authorId: string;
     createdAtIso: string;
   }>;
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   createdAt: string;
   updatedAt: string;
 }
 
+<<<<<<< HEAD
+export interface CreateProjectPayload {
+  title: string;
+  description: string;
+  budget: number;
+  deadline: string;
+  clientId: string;
+}
+
+export interface UpdateProjectPayload {
+  title?: string;
+  description?: string;
+  status?: Project['status'];
+  budget?: number;
+  deadline?: string;
+}
+
+export async function createProject(payload: CreateProjectPayload): Promise<Project> {
+  const res = await fetch('/api/projects', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const res = await fetch('/api/projects', {
+    method: 'GET',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateProject(projectId: string, payload: UpdateProjectPayload): Promise<Project> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function deleteProject(projectId: string): Promise<void> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+}
+=======
 
 =======
   isMilestoneStatus;
@@ -535,4 +612,8 @@ export function updateMilestone(;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

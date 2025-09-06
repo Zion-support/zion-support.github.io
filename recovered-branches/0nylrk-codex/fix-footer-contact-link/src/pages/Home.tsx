@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -50,6 +51,21 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -60,10 +76,15 @@ export default function Home() {
         canonical="https: //app.ziontechgroup.com/"
       />
       <Header />
+
       <HeroSection />
+
       <QuickAccess />
+
       <FeatureCTAs />
+
       <FeatureHighlights />
+
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
@@ -71,6 +92,7 @@ export default function Home() {
       <NewsletterSection />
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -256,6 +278,9 @@ export default function Home() {;
     </div>);
 <<<<<<< HEAD
 =======
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 ;

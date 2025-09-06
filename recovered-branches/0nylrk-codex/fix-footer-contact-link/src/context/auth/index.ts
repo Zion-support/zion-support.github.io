@@ -1,4 +1,8 @@
+export { AuthContext } from "./AuthContext";
+export { AuthProvider } from "./AuthProvider";
+
 // Re-export the context type for convenience
+<<<<<<< HEAD
 export type { AuthContextType } from '@/types/auth';
 
 ;
@@ -54,3 +58,6 @@ export type { AuthContextType } from '@/types/auth';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type { AuthContextType } from "@/types/auth";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

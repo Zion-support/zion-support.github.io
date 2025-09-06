@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -23,19 +24,13 @@ import { cn } from "@/lib/utils",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-interface QuickReplyButtonProps {
-  text: string;
-  onClick: () => void
-}
-<<<<<<< HEAD
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 =======
 import React from "react";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-interface QuickReplyButtonProps {;
-  text: string,;
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+interface QuickReplyButtonProps {
+  text: string;
   onClick: () => void;
 }
 
@@ -55,6 +50,7 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
 
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
+<<<<<<< HEAD
 
 =======
 =======
@@ -113,12 +109,9 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-        "transition-colors duration-200",
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         "transition-colors duration-200",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       onClick={onClick}>;
       {text}
@@ -166,8 +159,6 @@ function QuickReplyButton() {
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </Button>
 =======
     </Button>
   );

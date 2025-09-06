@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,6 +20,9 @@
 export interface FilterSidebarProps {
 export interface FilterSidebarProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface FilterSidebarProps {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedSkills: string[];
@@ -26,9 +30,9 @@ export interface FilterSidebarProps {;
   selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
   selectedRegions: string[];
-
-  toggleRegion: (region: string) => void
+  toggleRegion: (region: string) => void;
   priceRange: [number, number];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -44,6 +48,8 @@ export interface FilterSidebarProps {;
   toggle_region: (region: string) => void,
   price_range: [number, number];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -53,8 +59,15 @@ export interface FilterSidebarProps {;
     skills: boolean;
     availability: boolean;
     region: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
+    experience: boolean;
+    price: boolean;
+  };
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void;
+  isMobileFilterOpen?: boolean;
+}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -76,7 +89,7 @@ export interface FilterSidebarProps {;
 export interface FilterComponentProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   expanded: boolean;
-  toggle_section: () => void,
+  toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
 <<<<<<< HEAD
@@ -121,6 +134,7 @@ export interface SkillsFilterProps extends FilterComponentProps {
   toggleSkill: (skill: string) => void
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface SkillsFilterProps extends FilterComponentProps {
+<<<<<<< HEAD
   selected_skills: string[],
   toggle_skill: (skill: string) => void;
 }
@@ -196,18 +210,20 @@ export interface FilterComponentProps {;
 ;
 export interface SkillsFilterProps extends FilterComponentProps {;
   selectedSkills: string[],;
+=======
+  selectedSkills: string[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   toggleSkill: (skill: string) => void;
 }
-;
-export interface AvailabilityFilterProps extends FilterComponentProps {;
-  selectedAvailability: string[],;
+export interface AvailabilityFilterProps extends FilterComponentProps {
+  selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
 }
-;
-export interface RegionFilterProps extends FilterComponentProps {;
-  selectedRegions: string[],;
+export interface RegionFilterProps extends FilterComponentProps {
+  selectedRegions: string[];
   toggleRegion: (region: string) => void;
 }
+<<<<<<< HEAD
 ;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
@@ -228,20 +244,25 @@ export interface RegionFilterProps extends FilterComponentProps {
   selected_regions: string[],
   toggle_region: (region: string) => void;
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   experience_range: [number, number];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  experienceRange: [number, number];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   setExperienceRange: (range: [number, number]) => void;
 }
 export interface PriceFilterProps extends FilterComponentProps {
-  price_range: [number, number];
+  priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
+}
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -255,18 +276,20 @@ export interface FilterSidebarProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export interface SearchFilterProps {
-
-<<<<<<< HEAD
-=======
-}
-export interface SearchFilterProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  search_term: string,
+  searchTerm: string;
   setSearchTerm: (term: string) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+export interface SortFilterProps {
+  sortOption: string;
+  setSortOption: (option: string) => void;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -39,41 +40,27 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
-  children: React.ReactNode
-}
-export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
-
-export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const { theme } = useTheme();
-  return (
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
-import React from "react",
-import { useTheme } from "@/hooks/useTheme",
-  const { theme } = useTheme();
-  return (
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
-import React from "react",
-import { useTheme } from "@/hooks/useTheme",
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-interface MobileThemeProviderProps {
-  children: React.ReactNode
-import React from "react",;
-import { useTheme } from "@/hooks/useTheme",;
-interface MobileThemeProviderProps {;
   children: React.ReactNode;
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {useTheme} from "@/hooks/useTheme";
-interface MobileThemeProviderProps {;
-  children: React && React.ReactNode;
+
+
+
+
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+
+
+  const { theme } = useTheme();
+
+  return (
+    <div className={`mobile-app ${theme === "dark" ? "dark" : "light"}`}>
+      {children}
+    </div>
+  );
 }
 
 export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;

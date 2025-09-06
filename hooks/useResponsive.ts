@@ -1,4 +1,25 @@
 <<<<<<< HEAD
+import { useState, useEffect } from 'react';
+
+interface ResponsiveState {
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+  width: number;
+  height: number;
+}
+
+export const useResponsive = (): ResponsiveState => {
+  const [state, setState] = useState<ResponsiveState>({
+    isMobile: false,
+    isTablet: false,
+    isDesktop: false,
+    width: 0,
+    height: 0,
+  });
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from 'react';
 =======
@@ -134,10 +155,33 @@ const useResponsive = (): ResponsiveState => {
     "isMobile": false,
     "isTablet": false,
     "isDesktop": true});
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   useEffect(() => {
     const updateDimensions = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
+<<<<<<< HEAD
+      
+      setState({
+        width,
+        height,
+        isMobile: width < 768,
+        isTablet: width >= 768 && width < 1024,
+        isDesktop: width >= 1024,
+      });
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
+
+  return state;
+};
+
+export default useResponsive;
+=======
       setState({
         "screenWidth": width,
         "screenHeight": height,
@@ -206,4 +250,8 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,7 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export interface UserDetails {
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[];
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   permissions?: string[];
   company_id?: string;
@@ -59,8 +78,9 @@ export interface UserProfile {;
   avatar_url?: string;
   headline?: string;
   role?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
+  permissions?: string[];
+  companyId?: string;
+}
 
   permissions?: string[],
   company_id?: string;
@@ -177,23 +197,31 @@ export interface AuthContextType {;
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {
   user: UserDetails | null;
-  is_loading: boolean;
-  is_authenticated: boolean,
-  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
-  signup: (email: string, password: string, user_data?: any) => Promise<{ error?: any }>;
-  logout: () => Promise < void>,
-  reset_password: (email: string) => Promise<{ error?: any }>;
-  update_profile: (data: Partial < UserDetails>) => Promise<{ error?: any }>;
-  loginWithGoogle: () => Promise < void>;
-  loginWithFacebook: () => Promise < void>;
-  loginWithTwitter: () => Promise < void>;
-  loginWithWeb3: () => Promise < void>,
-  sign_in?: (email: string, password: string) => Promise<{ error: any }>;
-  sign_out?: () => Promise < void>;
-  sign_up?: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
+  isLoading: boolean;
+  isAuthenticated: boolean;
+  login: (
+    email: string,
+    password: string,
+  ) => Promise<{ data?: any; error?: any }>;
+  signup: (
+    email: string,
+    password: string,
+    userData?: any,
+  ) => Promise<{ error?: any }>;
+  logout: () => Promise<void>;
+  resetPassword: (email: string) => Promise<{ error?: any }>;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>;
+  signIn?: (email: string, password: string) => Promise<{ error: any }>;
+  signOut?: () => Promise<void>;
+  signUp?: (
+    email: string,
+    password: string,
+    userData?: Partial<UserDetails>,
+  ) => Promise<{ error: any }>;
 }
 =======
 

@@ -1,3 +1,4 @@
+export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
 
 <<<<<<< HEAD
@@ -17,9 +18,10 @@ export interface SmartContractInfo {;
   networkName?: BlockchainNetwork;
   blockNumber?: number;
   deployedAddress?: string;
-  contractType: 'escrow' | 'milestone' | 'simpleAgreement';
+  contractType: "escrow" | "milestone" | "simpleAgreement";
   metadataUrl?: string;
   createdAt: string;
+<<<<<<< HEAD
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 <<<<<<< HEAD
@@ -40,6 +42,10 @@ export interface EscrowContractDetails {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface EscrowContractDetails {
+=======
+  createdBy: string;
+  status: "draft" | "deployed" | "executed" | "cancelled";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -65,12 +71,18 @@ export interface EscrowContractDetails {;
   currency: string;
   deliverables: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   completionDeadline: string
   arbitrator?: string
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+  completionDeadline: string;
+  arbitrator?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 
@@ -92,6 +104,7 @@ export interface DeploymentOptions {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   network: BlockchainNetwork;
   walletAddress?: string;
+<<<<<<< HEAD
   useEscrow: boolean
 
   deployToChain: boolean
@@ -134,6 +147,10 @@ export interface EscrowContractDetails {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   arbitrator?: string;
+=======
+  useEscrow: boolean;
+  deployToChain: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 export interface DeploymentOptions {
   network: BlockchainNetwork;

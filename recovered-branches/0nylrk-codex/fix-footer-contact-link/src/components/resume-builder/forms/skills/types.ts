@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Skill } from '@/types/resume';
 export interface SkillsFormProps {
@@ -10,12 +11,15 @@ export interface SkillsFormProps {;
 
 import { Skill  } from '@/types / resume';
 
-export interface SkillsFormProps {
-  resume_id: string;
 =======
-
-import {Skill} from '@/types/resume';
-export interface SkillsFormProps {;
+import { Skill } from "@/types/resume";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+export interface SkillsFormProps {
+  resumeId: string;
+  skills: Skill[];
+  onComplete: () => void;
+  onBack: () => void;
+}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   resumeId: string;
@@ -60,10 +64,13 @@ export interface SkillsFormProps {;
 export interface SkillItemProps {
   skill: Skill;
   category: string;
+  onDelete: (id: string, category: string) => Promise<void>;
 }
 
-
-export interface SkillItemProps {;
+export interface SkillCategoryProps {
+  category: string;
+  skills: Skill[];
+  onDelete: (id: string, category: string) => Promise<void>;
 }
 
 
@@ -91,6 +98,7 @@ export interface AddSkillFormProps {;
 
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   onDelete: (id: string, category: string) => Promise<void>;
@@ -145,20 +153,18 @@ export interface AddSkillFormProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onAddSkill: (skill: Skill) => Promise<boolean>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   defaultCategory?: string;
 }
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface BulkAddSkillsProps {
   resumeId: string;
-
   onSuccess: () => Promise<void>;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -173,6 +179,8 @@ export interface BulkAddSkillsProps {
   on_delete: (id: string, category: string) => Promise < void>;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AddSkillFormProps {
   resume_id: string;
   onAddSkill: (skill: Skill) => Promise < boolean>;

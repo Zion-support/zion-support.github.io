@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -47,6 +48,8 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { Button } from "@/components/ui/button";
 interface NotificationHeaderProps {
@@ -54,15 +57,11 @@ interface NotificationHeaderProps {
   onMarkAllAsRead: () => Promise<void>;
 }
 
-}
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
   unreadCount,
   onMarkAllAsRead,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -71,6 +70,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           onClick={onMarkAllAsRead}
@@ -107,11 +107,14 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
           Mark all as read;
         </Button>;
       )}
+    </div>
   );
 };
 import React from './react';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
 =======
@@ -15,12 +16,16 @@ import {
 import React from 'react';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { 
   LightBulbIcon,
   CpuChipIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
   ChartBarIcon,
+<<<<<<< HEAD
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
 <<<<<<< HEAD
@@ -123,36 +128,22 @@ const features = [;
   GlobeAltIcon
   ShieldCheckIcon
   ChartBarIcon
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
-    name: 'AI - Powered Research',
-    description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon;
+    name: 'AI-Powered Research',
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon,
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     name: 'Quantum Computing',
     description: 'Next-generation quantum neural networks for solving complex computational problems.',
+<<<<<<< HEAD
     icon: CpuChipIcon},
   {
     name: 'Global Solutions',
@@ -219,13 +210,49 @@ export default function HomePage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Join the revolution that's reshaping industries worldwide.
+=======
+    icon: CpuChipIcon,
+  },
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Security First',
+    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Analytics & Insights',
+    description: 'Real-time data analysis and predictive modeling for informed decision making.',
+    icon: ChartBarIcon,
+  },
+  {
+    name: 'Team Collaboration',
+    description: 'Seamless integration tools for distributed teams and remote work environments.',
+    icon: UserGroupIcon,
+  },
+];
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Leading the future of AI, quantum computing, and autonomous business solutions
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/contact"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 Get Started
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -247,10 +274,17 @@ export default function HomePage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -320,18 +354,32 @@ export default function HomePage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Trusted by leading organizations worldwide
+=======
+
+      {/* Features Section */}
+      <div className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Core Technologies
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Our track record speaks for itself
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technology to deliver innovative solutions that transform businesses and drive growth.
             </p>
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
-                <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.name}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </dl>;
         </div>;
@@ -527,10 +575,22 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your business?
+=======
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
           </p>
+<<<<<<< HEAD
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/contact"
@@ -682,3 +742,13 @@ export default function HomePage() {
   )
 }
 ;
+=======
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Contact Us Today
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -96,6 +96,7 @@ export default function HiringTracker() {
   return (
     <ProtectedRoute>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -263,3 +264,5 @@ function HiringTracker() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -10,8 +10,11 @@
 =======
     "dev": "vite",
     "build": "vite build",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "build:netlify": "node scripts/build-with-error-handling.js",
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -311,7 +314,6 @@
 =======
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
-    "@sendgrid/mail": "^8.1.5",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -349,6 +351,7 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
@@ -479,5 +482,9 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const NotFound = () => {
@@ -17,13 +18,12 @@ const NotFound = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
+=======
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const NotFound = () => {
   const location = useLocation();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { useLocation } from "react-router-dom",
-import { useEffect } from "react",
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -65,6 +65,7 @@ const NotFound = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     console.error(
+<<<<<<< HEAD
       "404 Error: User attempted to access non-existent route:"
       location.pathname
     )
@@ -76,6 +77,12 @@ const NotFound = () => {
   }, [location.pathname]),
 
 
+=======
+      "404 Error: User attempted to access non-existent route:",
+      location.pathname,
+    );
+  }, [location.pathname]);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 =======
@@ -101,6 +108,7 @@ const NotFound = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -184,6 +192,8 @@ const NotFound = () => {;
         </a>;
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
 },;

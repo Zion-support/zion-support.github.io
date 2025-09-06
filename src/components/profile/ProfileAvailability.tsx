@@ -18,6 +18,7 @@ interface ProfileAvailabilityProps {
   availability: Availability
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -386,3 +387,5 @@ export function ProfileAvailability(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

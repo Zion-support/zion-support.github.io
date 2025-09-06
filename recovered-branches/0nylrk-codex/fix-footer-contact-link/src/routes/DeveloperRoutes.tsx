@@ -43,7 +43,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
-import {Navigate, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";
@@ -97,6 +97,7 @@ export default function DeveloperRoutes() {
       <Route path="/docs/samples" element={<ApiSampleCode />} />
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -172,10 +173,11 @@ export default function DeveloperRoutes() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  );
-
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -241,3 +243,5 @@ function DeveloperRoutes() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

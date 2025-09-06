@@ -1,7 +1,57 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
+=======
+export interface DeployConfig {
+  instanceName: string;
+  governanceMode: string;
+  tokenActivation: boolean;
+  modules: {
+    token: boolean;
+    [key: string]: boolean;
+  };
+}
+
+export interface DeployResult {
+  success: boolean;
+  instanceId: string;
+  configPath: string;
+  message?: string;
+}
+
+export function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export async function deployInstance(config: DeployConfig): Promise<DeployResult> {
+  try {
+    const instanceSlug = toSlug(config.instanceName);
+    const instanceId = `${instanceSlug}-${Date.now()}`;
+    
+    // Mock deployment logic
+    const result: DeployResult = {
+      success: true,
+      instanceId,
+      configPath: `/configs/${instanceId}.json`,
+      message: 'Instance deployed successfully'
+    };
+    
+    return result;
+  } catch (error) {
+    return {
+      success: false,
+      instanceId: '',
+      configPath: '',
+      message: error instanceof Error ? error.message : 'Deployment failed'
+    };
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
 
@@ -1263,4 +1313,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -1,13 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export interface Notification {
-export interface Notification {;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+export interface Notification {
   id: string;
   user_id: string;
   title: string;
@@ -15,21 +15,9 @@ export interface Notification {;
   type: string;
   related_id?: string;
   read: boolean;
-
-<<<<<<< HEAD
-  created_at: string
-
-  updated_at: string
-export interface Notification {;
-  id: string,;
-  user_id: string,;
-  title: string,;
-  message: string,;
-  type: string,;
-  related_id?: string,;
-  read: boolean,;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -59,3 +47,6 @@ export interface Notification {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

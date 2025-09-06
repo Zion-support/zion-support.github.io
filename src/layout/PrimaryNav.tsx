@@ -748,6 +748,7 @@ setLoginOpen (true)
 }{
   isMobile && <MobileBottomNav unreadCount= {
 <<<<<<< HEAD
+<<<<<<< HEAD
   unreadCount
 
   unreadCount 
@@ -906,3 +907,5 @@ setLoginOpen (true);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

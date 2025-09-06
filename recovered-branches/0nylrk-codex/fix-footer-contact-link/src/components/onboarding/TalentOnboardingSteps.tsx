@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -10,6 +11,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
@@ -40,6 +43,7 @@ import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -66,6 +70,8 @@ export function TalentOnboardingSteps() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -108,6 +114,7 @@ id: "match"
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
+<<<<<<< HEAD
       action: "View Matches"}],
   
   return <OnboardingTracker steps={steps} />
@@ -200,9 +207,13 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      action: "View Matches",
+    },
+  ];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return <OnboardingTracker steps={steps} />;
-
 }
 
   const { user } = useAuth();

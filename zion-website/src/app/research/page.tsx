@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 import {
 <<<<<<< HEAD
@@ -361,24 +362,61 @@ const Page: React.FC<PageProps> = ({ className }) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             and advancing the state of the art.
+=======
+import React from 'react';
+
+const researchAreas = [
+  {
+    title: 'Artificial Intelligence',
+    description: 'Advancing the frontiers of AI through cutting-edge research',
+    focus: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing']
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Pioneering quantum algorithms and quantum machine learning',
+    focus: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation']
+  },
+  {
+    title: 'Autonomous Systems',
+    description: 'Developing self-managing and adaptive systems',
+    focus: ['Autonomous Agents', 'Self-Healing Systems', 'Adaptive Learning', 'Distributed Intelligence']
+  },
+  {
+    title: 'Human-AI Collaboration',
+    description: 'Enhancing human capabilities through AI partnership',
+    focus: ['Augmented Intelligence', 'Human-AI Interfaces', 'Collaborative AI', 'Ethical AI']
+  }
+];
+
+export default function ResearchPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Research & Development
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pushing the boundaries of technology through innovative research and development initiatives.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {researchAreas.map((area) => (
-              <div key={area.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-3 mb-4">
-                  <area.icon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{area.name}</h3>
-                </div>
-                <p className="text-gray-300 mb-6">{area.description}</p>
-                <div className="space-y-2">
-                  {area.topics.map((topic) => (
-                    <div key={topic} className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>
-                      <span className="text-sm text-gray-400">{topic}</span>
-                    </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {researchAreas.map((area, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
+              <p className="text-gray-600 mb-6">{area.description}</p>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Focus:</h4>
+                <ul className="space-y-2">
+                  {area.focus.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center">
+                      <span className="text-blue-600 mr-3">•</span>
+                      {item}
+                    </li>
                   ))}
+<<<<<<< HEAD
                 </div>;
               </div>;
             ))}
@@ -880,6 +918,22 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>
             ))}
           </div>
+=======
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Join Our Research Team</h2>
+          <p className="text-lg text-gray-600 mb-6">
+            We're always looking for talented researchers and engineers to join our mission of advancing technology.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            View Open Positions
+          </button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         </div>
       </div>
     </div>

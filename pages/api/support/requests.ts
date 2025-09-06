@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -12,9 +13,14 @@ import { readJson, writeJson } from '../../../utils/fsDb',;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    const requests = readJson<any[]>('support/requests.json', [])
+    const requests = readJson<any[]>('support/requests.json', []),
     return res.status(200).json({ requests })
   }
   if (req.method === 'POST') {
@@ -78,6 +84,7 @@ export default async function handler(req, res) {
   }
 =======
   return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
 
 }
 
@@ -157,3 +164,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

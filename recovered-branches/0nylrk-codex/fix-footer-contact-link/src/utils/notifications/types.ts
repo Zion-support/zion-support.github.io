@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -6,6 +7,15 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
+=======
+export type NotificationType =
+  | "message"
+  | "quote_request"
+  | "booking_confirmation"
+  | "hire_request"
+  | "onboarding"
+  | "system";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export interface CreateNotificationParams {
 <<<<<<< HEAD
@@ -30,6 +40,7 @@ export interface CreateNotificationParams {;
   message: string;
   type: NotificationType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -42,6 +53,13 @@ export interface CreateNotificationParams {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null;
+  actionText?: string | null;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
 =======
@@ -77,8 +95,8 @@ export interface CreateNotificationResult {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   success: boolean;
-  notificationId?: string
-  error?: any
+  notificationId?: string;
+  error?: any;
 }
 <<<<<<< HEAD
 export interface HireRequestNotificationParams {
@@ -107,8 +125,8 @@ export interface HireRequestNotificationParams {;
   requesterName: string;
   requesterEmail: string;
   projectType?: string;
-  projectSummary?: string
-  hireRequestId: string
+  projectSummary?: string;
+  hireRequestId: string;
 }
 <<<<<<< HEAD
 export interface OnboardingNotificationParams {
@@ -166,8 +184,8 @@ export interface OnboardingNotificationParams {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userId: string;
-  missingMilestone: string
-  userRole: 'talent' | 'client'
+  missingMilestone: string;
+  userRole: "talent" | "client";
 }
 <<<<<<< HEAD
 export interface SystemNotificationParams {
@@ -186,6 +204,7 @@ export interface SystemNotificationParams {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   sendEmail?: boolean
@@ -268,3 +287,9 @@ export interface SystemNotificationParams {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  actionUrl?: string | null;
+  actionText?: string | null;
+  sendEmail?: boolean;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

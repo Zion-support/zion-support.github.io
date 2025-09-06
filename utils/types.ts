@@ -72,14 +72,14 @@ export interface Application {;
 
 
   id: string;
-
-  job_id: string;
-  talent_slug: string;
-  status: 'applied' | 'skipped' | 'pending';
+  jobId: string;
+  talentSlug: string;
+  status: "applied" | "skipped" | "pending";
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -130,3 +130,6 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type UserRole = "admin" | "user" | "guest";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

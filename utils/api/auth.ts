@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 export type CurrentUser = {;
   userId: string;
@@ -30,35 +31,43 @@ export function requireUser(;
 }
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export interface User {
+  id: string;
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
+export interface AuthContext {
+  user: User | null;
+  login: (email: string, password: string) => Promise<User | null>;
+  logout: () => void;
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+}
+
+export function validateUser(userId: string, role: string): User | null {
+  if (!userId || !role) return null;
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+  
+  return {
+    id: userId,
+    email: '',
+    role: role as User['role']
+  };
+}
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-
-
-
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
+  // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return null;
   }
   return user;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -79,3 +88,6 @@ export function getUserFromRequest (req: any): User | null {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

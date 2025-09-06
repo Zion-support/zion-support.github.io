@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -40,188 +41,70 @@ interface PerformanceData {
     limit: number
   } | null;
 }
+=======
+import React, { useEffect } from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void
-}
-interface Performance {
-  getEntriesByType (type: string): PerformanceEntry[];
-  now (): number;
-}
-interface PerformanceEntry {
-
-interface PerformanceData {;
-  domContentLoaded: number,;
-  loadComplete: number,;
-  totalLoadTime: number,;
-  firstPaint: number,;
-  firstContentfulPaint: number,;
-  resourceCount: number,;
-  memory: {;
-    used: number,;
-    total: number,;
-    limit: number,;
-  } | null;
+  onPerformanceData?: (data: any) => void;
 }
 
-interface PerformanceMonitorProps {;
-  onPerformanceData?: (data: PerformanceData) => void,;
-}
-
-// Extend the Window interface to include performance;
-declare global {;
-  interface Window {;
-
-    performance: Performance,;
-  }
-
-  interface Performance {;
-    getEntriesByType(type: string): PerformanceEntry[],;
-    memory?: {;
-      usedJSHeapSize: number, totalJSHeapSize: number,;
-      jsHeapSizeLimit: number,;
-    };
-  }
-
-  interface PerformanceEntry {;
-    name: string, startTime: number,;
-    duration: number,;
-  }
-
-  interface PerformanceNavigationTiming extends PerformanceEntry {;
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,;
-    loadEventStart: number, loadEventEnd: number,;
-    fetchStart: number,;
-  }
-
-// Define Performance types if not available;
-interface PerformanceEntry {;
-  name: string,;
-  entryType: string,;
-  startTime: number,;
-  duration: number,;
-}
-
-interface Performance {;
-  getEntriesByType(type: string): PerformanceEntry[],;
-}
-
-interface PerformanceNavigationTiming extends PerformanceEntry {;
-  loadEventEnd: number,;
-  loadEventStart: number,;
-  domContentLoadedEventEnd: number,;
-  domContentLoadedEventStart: number,;
-  responseEnd: number,;
-  responseStart: number,;
-  requestStart: number,;
-  navigationStart: number,;
-}
-
-// Define Performance types if not available;
-interface Performance {;
-  getEntriesByType(type: string): PerformanceEntry[];
-  now(): number;
-}
-
-interface PerformanceEntry {;
-  name: string;
-  entry_type: string;
-  start_time: number;
-  duration: number;
-}
-  readonly connectEnd: number;
-  readonly connectStart: number;
-  readonly domComplete: number;
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  readonly connect_end: number;
-  readonly connect_start: number;
-  readonly dom_complete: number;
-  readonly domContentLoadedEventEnd: number;
-  readonly domContentLoadedEventStart: number;
-  readonly dom_interactive: number;
-  readonly dom_loading: number;
-  readonly domainLookupEnd: number;
-  readonly domainLookupStart: number;
-  readonly fetch_start: number;
-  readonly loadEventEnd: number;
-  readonly loadEventStart: number;
-  readonly navigation_start: number;
-  readonly redirect_count: number;
-  readonly redirect_end: number;
-  readonly redirect_start: number;
-  readonly request_start: number;
-  readonly response_end: number;
-  readonly response_start: number;
-  readonly secureConnectionStart: number;
-  readonly transfer_size: number;
-  readonly type: string;
-  readonly unloadEventEnd: number;
-  readonly unloadEventStart: number;
-}
-      measurePerformance();
-    } else {;
-      window && window.addEventListener('load', measurePerformance);
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') {
+      return;
     }
-  }, [onPerformanceData]);
-  return null;
-}
-const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect (() => {
-// Only run on client side;
-    // Check condition
-if (return) {
-  $2
-}
-    const measure_performance = () =>: any {
-      const navigation_entries = window.performance.getEntriesByType ('navigation');
-      const navigation = navigation_entries[0] as PerformanceNavigationTiming;
-      const paint_entries = window.performance.getEntriesByType ('paint');
-      const performance_data = {
-        // Navigation timing;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const performanceData = {
+        // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        load_complete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetch_start,
-        // Paint timing;
-        first_paint: paint_entries.find (entry => entry.name === 'first - paint')?.start_time || 0,
-        firstContentfulPaint: paint_entries.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0,
-        // Resource timing;
-        resource_count: window.performance.getEntriesByType ('resource').length,
-// Memory usage (if available);
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit;
-      },
-      // Check condition
-if ( {) {
-  $2
-}
-        onPerformanceData (performance_data);
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        
+        // Paint timing
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        
+        // Resource timing
+        resourceCount: performance.getEntriesByType('resource').length,
+        
+        // Memory usage (if available)
+        memory: (performance as any).memory ? {
+          used: (performance as any).memory.usedJSHeapSize,
+          total: (performance as any).memory.totalJSHeapSize,
+          limit: (performance as any).memory.jsHeapSizeLimit
+        } : null
+      };
+
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
       }
-      // Log performance data in development;
-      // Check condition
-if ( {) {
-  $2
-}
-        // eslint - disable - next - line no - console;
-        console.log ('Performance Metrics:', performance_data);
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', performanceData);
       }
-    }
-;
-    // Measure performance after page load;
-    // Check condition
-if ( {) {
-  $2
-}
-      measure_performance ();
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
     } else {
-      window.addEventListener ('load', measure_performance);
+      window.addEventListener('load', measurePerformance);
     }
+
     return () => {
-      window.removeEventListener ('load', measure_performance);
-    }
+      window.removeEventListener('load', measurePerformance);
+    };
   }, [onPerformanceData]);
-;
+
   return null;
+<<<<<<< HEAD
 }
 ;
 export default PerformanceMonitor;
@@ -354,3 +237,8 @@ if (return 'Needs Improvement) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

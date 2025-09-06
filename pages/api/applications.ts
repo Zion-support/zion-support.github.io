@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -7,6 +8,8 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -51,12 +54,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-createdAtIso: now},
+      createdAtIso: now},
     apps.push(app),
     writeJsonFile<Application[]>(FILE, apps),
     res.status(201).json({ application: app }),
     return
   }
+<<<<<<< HEAD
 
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed');
@@ -217,3 +221,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.setHeader('AllowGET, POST')
+  res.status(405).end('Method Not Allowed')
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

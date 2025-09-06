@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -9,11 +10,14 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {useTheme} from "@/hooks/useTheme";
 import {Moon, Sun, Check} from "lucide-react";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
@@ -65,6 +69,11 @@ import {Card, CardContent} from "@/components/ui/card";
 interface Language {;
   code: string,;
   name: string,;
+=======
+interface Language {
+  code: string;
+  name: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   flag: string;
 }
 
@@ -98,7 +107,8 @@ export function LanguageThemeSelector() {;
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "zh", name: "中文", flag: "🇨🇳" }],
+  { code: "zh", name: "中文", flag: "🇨🇳" },
+];
 
 <<<<<<< HEAD
 =======
@@ -109,6 +119,7 @@ export function LanguageThemeSelector() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+<<<<<<< HEAD
 
 =======
 =======
@@ -136,10 +147,13 @@ export function LanguageThemeSelector() {
 
   return (
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     <div className="space-y-8 px-4">
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
+
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language) => (
             <Card
@@ -147,9 +161,6 @@ export function LanguageThemeSelector() {
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
@@ -165,11 +176,8 @@ export function LanguageThemeSelector() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-                  <Check className="h-4 w-4 text-primary" />
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -316,16 +324,18 @@ export function LanguageThemeSelector() {;
           ))}
         </div>
       </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
-        <p className="text-muted-foreground">Select your preferred appearance</p>
+        <p className="text-muted-foreground">
+          Select your preferred appearance
+        </p>
+
         <div className="flex gap-3 mt-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card
             className={`flex-1 cursor-pointer transition-all ${
-              theme === 'light'
+              theme === "light"
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
 <<<<<<< HEAD
@@ -349,6 +359,7 @@ export function LanguageThemeSelector() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
+<<<<<<< HEAD
             onClick={() => setTheme('light')}
           >;
             <CardContent className="p-3 flex flex-col items-center justify-center">;
@@ -386,16 +397,23 @@ export function LanguageThemeSelector() {;
 
             }`}
             onClick={() => setTheme('light')}
+=======
+            onClick={() => setTheme("light")}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
               <Sun className="h-8 w-8 mb-2" />
               <span>Light</span>
-              {theme === 'light' && (
+              {theme === "light" && (
                 <Check className="h-4 w-4 text-primary mt-2" />
               )}
             </CardContent>
           </Card>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
           <Card
+<<<<<<< HEAD
           <Card 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -403,8 +421,10 @@ export function LanguageThemeSelector() {;
           <Card
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
+              theme === "dark"
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
 <<<<<<< HEAD
@@ -423,14 +443,15 @@ export function LanguageThemeSelector() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
-            onClick={() => setTheme('dark')}
-          >;
-            <CardContent className="p-3 flex flex-col items-center justify-center">;
-              <Moon className="h-8 w-8 mb-2" />;
-              <span>Dark</span>;
-              {theme === 'dark' && (;
-                <Check className="h-4 w-4 text-primary mt-2" />;
+            onClick={() => setTheme("dark")}
+          >
+            <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Moon className="h-8 w-8 mb-2" />
+              <span>Dark</span>
+              {theme === "dark" && (
+                <Check className="h-4 w-4 text-primary mt-2" />
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -461,6 +482,14 @@ interface Language {
   code: string,
   name: string,
   flag: string;
+=======
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 const languages: Language[] = [;

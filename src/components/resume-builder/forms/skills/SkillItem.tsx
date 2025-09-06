@@ -101,6 +101,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
         <Trash2 className="h-3 w-3" />
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Badge>
   )
 },
@@ -172,3 +173,5 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
 } },
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

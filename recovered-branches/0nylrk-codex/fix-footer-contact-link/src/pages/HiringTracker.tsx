@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 function HiringTrackerContent() {;
+=======
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from "lucide-react";
+function HiringTrackerContent() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const { jobId } = useParams() as { jobId?: string };
 
   const [activeTab, setActiveTab] = useState<string>("kanban");
@@ -49,15 +63,6 @@ function HiringTrackerContent() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-=======
-
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
     <>
       <SEO
         title="Hiring Tracker | Zion AI Marketplace"
@@ -76,14 +81,21 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+
+        <Tabs
+          defaultValue="kanban"
+          onValueChange={setActiveTab}
+          className="mb-8"
+        >
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
+
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
+
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
@@ -91,6 +103,7 @@ function HiringTrackerContent() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,6 +318,9 @@ export default function HiringTracker() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export default function HiringTracker() {
@@ -312,7 +328,7 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-  )
+  );
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

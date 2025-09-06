@@ -35,14 +35,6 @@ export function BackToTopButton() {
 =======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-
-export function BackToTopButton() {
-  const [visible, setVisible] = useState(false);
-  
-  useEffect(() => {
-    const updateVisibility = () => {
-=======
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -75,6 +67,7 @@ export function BackToTopButton() {;
   useEffect(() => {;
     const updateVisibility = () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       setVisible(window.scrollY > 400);
     },;
     updateVisibility(),;
@@ -96,6 +89,8 @@ export function BackToTopButton() {;
       }`}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
@@ -114,16 +109,6 @@ export function BackToTopButton() {;
     <button
       aria-label="Back to top"
       onClick={scrollToTop}
-<<<<<<< HEAD
-      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-blue-600 text-white p-3 shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-110 ${
-        visible ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
-    >
-      <ArrowUp className="w-5 h-5" />
-    </button>
-  );
-}
-=======
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
@@ -138,5 +123,8 @@ export function BackToTopButton() {;
 ;
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

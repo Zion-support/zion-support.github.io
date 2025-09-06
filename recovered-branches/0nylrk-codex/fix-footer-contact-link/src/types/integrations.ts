@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -20,6 +21,8 @@ export type IntegrationStatus = "connected" | "warning" | "disconnected",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -35,6 +38,7 @@ export interface Integration {
   description: string;
   logo_url: string;
   status: IntegrationStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
@@ -91,15 +95,13 @@ export interface Integration {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   type: IntegrationType
   last_sync?: string,
-  type: IntegrationType;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-  last_sync?: string,
+  lastSync?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   type: IntegrationType;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+<<<<<<< HEAD
 
 
 
@@ -119,11 +121,14 @@ export interface SyncLog {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface SyncLog {
   id: string;
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
+<<<<<<< HEAD
 <<<<<<< HEAD
   timestamp: string
   id: string,
@@ -143,7 +148,12 @@ export interface SyncLog {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   details: string
+=======
+  timestamp: string;
+  details: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+
 export type CrmIntegrationEvents =
   | "contact_synced"
   | "deal_created"
@@ -151,15 +161,8 @@ export type CrmIntegrationEvents =
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-  timestamp: string,
-  details: string;
-}
-=======
-  | "note_added";
-  | "job_synced";
-  | "note_added"
-  | "job_synced";
 export type AtsIntegrationEvents =
+<<<<<<< HEAD
   | "job_synced",
 
 <<<<<<< HEAD
@@ -236,6 +239,8 @@ export type AtsIntegrationEvents =;
 
   | "note_added"
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   | "applicant_created"
   | "candidate_status_changed"
   | "interview_scheduled"

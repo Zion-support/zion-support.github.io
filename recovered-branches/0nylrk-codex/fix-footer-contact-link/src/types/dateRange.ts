@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface DateRange {
   from?: Date;
   to?: Date
@@ -10,8 +11,11 @@ export interface DateRange {
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface DateRange {
+  from?: Date;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   to?: Date;
-
 }
 =======
 

@@ -1,10 +1,63 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
     headers: { 'Content-Type': 'application/json' };
     credentials: 'include'});
   if (!res.ok) throw new Error('Failed to load milestones');
   return res.json();
+=======
+export interface Milestone {
+  id: string;
+  title: string;
+  description: string;
+  status: 'pending' | 'in-progress' | 'completed';
+  dueDate: string;
+  projectId: string;
+}
+
+export interface CreateMilestonePayload {
+  title: string;
+  description: string;
+  dueDate: string;
+}
+
+export interface UpdateMilestoneStatusPayload {
+  status: Milestone['status'];
+}
+
+export async function createMilestone(projectId: string, payload: CreateMilestonePayload): Promise<Milestone> {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateMilestoneStatus(
+  projectId: string, 
+  milestoneId: string, 
+  body: UpdateMilestoneStatusPayload
+): Promise<Milestone> {
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(body)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
 =======
@@ -165,4 +218,8 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

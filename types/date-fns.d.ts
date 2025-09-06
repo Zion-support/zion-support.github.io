@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "date-fns" {;
 =======
 <<<<<<< HEAD
@@ -65,3 +66,13 @@ declare module "date-fns" {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+declare module 'date-fns' {
+  export function format(date: Date | number, formatStr: string): string;
+  export function parseISO(dateString: string): Date;
+  export function isValid(date: any): boolean;
+  export function addDays(date: Date | number, amount: number): Date;
+  export function subDays(date: Date | number, amount: number): Date;
+  export function differenceInDays(dateLeft: Date | number, dateRight: Date | number): number;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

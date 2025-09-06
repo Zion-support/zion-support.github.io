@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { getFlagById } from '../../../../../utils/moderationDb',;
@@ -18,6 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
   const { id } = req.query,
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' }),
 =======
@@ -76,6 +80,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed');
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -90,6 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -134,3 +141,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.setHeader('AllowGET'),
+  return res.status(405).end('Method Not Allowed');
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

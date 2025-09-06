@@ -1,20 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-
-
 =======
-<<<<<<< HEAD
+import React from "react";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus();
 
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: OnboardingStep[] = [
     {
       id: "post-job",
@@ -31,6 +29,7 @@
       action: "Find Talent",
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -106,10 +105,13 @@ export function ClientOnboardingSteps() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
       link: "/client-dashboard",
+<<<<<<< HEAD
       action: "Check Dashboard"}],
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
@@ -148,6 +150,13 @@ export function ClientOnboardingSteps() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      action: "Check Dashboard",
+    },
+  ];
+
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 =======

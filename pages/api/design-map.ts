@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  try {
+    // Mock design map data
+    const designMap = {
+      route: '/design-system',
+      products: ['zion-os', 'zion-gpt', 'zion-marketplace'],
+      tokens: {
+        colors: {
+          primary: '#3B82F6',
+          secondary: '#8B5CF6',
+          accent: '#F59E0B'
+        },
+        typography: {
+          fontSizes: {
+            sm: '0.875rem',
+            base: '1rem',
+            lg: '1.125rem',
+            xl: '1.25rem'
+          }
+        }
+      }
+    };
+
+    res.status(200).json(designMap);
+    return;
+  } catch (e: unknown) {
+    res.status(500).json({
+      error: (e as Error)?.message || 'Failed to build design map'
+    });
+    return;
+  }
+}
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
@@ -233,4 +270,8 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

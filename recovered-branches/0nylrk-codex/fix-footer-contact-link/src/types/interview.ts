@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -55,10 +56,24 @@ export type InterviewStatus =
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export type InterviewStatus =
+  | "requested"
+  | "confirmed"
+  | "declined"
+  | "rescheduled"
+  | "completed"
+  | "cancelled";
 
-  | 'cancelled';
-export type InterviewType = 'video' | 'phone' | 'in-person';
-export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+export type InterviewType = "video" | "phone" | "in-person";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
+export type MeetingPlatform =
+  | "zoom"
+  | "google-meet"
+  | "teams"
+  | "other"
+  | "in-app";
 
 
 export interface Interview {;
@@ -98,6 +113,7 @@ export interface Interview {
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
+<<<<<<< HEAD
 
   client_avatar?: string,
   talent_avatar?: string;
@@ -117,6 +133,10 @@ export interface InterviewRequest {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  client_avatar?: string;
+  talent_avatar?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -147,6 +167,7 @@ export interface InterviewRequest {
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
+<<<<<<< HEAD
 
   interview_type: InterviewType,
   title?: string;
@@ -161,6 +182,10 @@ export interface InterviewResponse {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  interview_type: InterviewType;
+  title?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 
@@ -170,6 +195,7 @@ export interface InterviewResponse {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   interview_id: string;
   status: InterviewStatus;
+<<<<<<< HEAD
 
   alternative_date?: string,
   message?: string;
@@ -266,3 +292,8 @@ export interface InterviewResponse {
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  alternative_date?: string;
+  message?: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

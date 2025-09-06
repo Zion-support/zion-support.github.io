@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
@@ -45,10 +46,15 @@ const memoryStore: { q: string, ts: number }[] = [],
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+const memoryStore: { q: string, ts: number }[] = [],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { q } = req.body |{}
+    const { q } = req.body || {},
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
 <<<<<<< HEAD
@@ -126,8 +132,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
-<<<<<<< HEAD
-=======
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
 =======
 
@@ -135,6 +139,7 @@ if ( {) {
 
   }
   return res.status(405).end()
+<<<<<<< HEAD
 }
 
 
@@ -197,3 +202,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

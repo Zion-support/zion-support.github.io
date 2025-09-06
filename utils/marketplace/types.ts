@@ -67,7 +67,22 @@ export interface Offer {;
 <<<<<<< HEAD
   scopeSummary: string;
   paymentTerms: PaymentTerms;
+  agreementUrl?: string;
+  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
+  changeRequestNote?: string;
+  projectId?: string;
+}
 
+export interface PaymentTerms {
+  type: "hourly" | "fixed" | "milestone";
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
 
 
 
@@ -144,6 +159,7 @@ export interface Project {;
   talent_slug: string;
   startDateIso: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   status: ProjectStatus;
   timeline: Milestone[];
   documents: ProjectDocument[];
@@ -163,31 +179,23 @@ export type MarketplaceDb = {;
 
 =======
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
-export interface ProjectDocument {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export interface ProjectDocument {;
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-}
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-}
+
+export interface ProjectNote {
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -203,3 +211,5 @@ export interface ProjectDocument {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

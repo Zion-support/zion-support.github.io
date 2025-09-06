@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -21,6 +22,12 @@ export function NewsletterForm() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+export function NewsletterForm() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,6 +39,7 @@ export function NewsletterForm() {;
     setIsSubmitting(true);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -95,19 +103,14 @@ export function NewsletterForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   };
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -125,6 +128,7 @@ export function NewsletterForm() {
         >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -134,6 +138,8 @@ export function NewsletterForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           <Input
             type="email"
             placeholder="Enter your email"

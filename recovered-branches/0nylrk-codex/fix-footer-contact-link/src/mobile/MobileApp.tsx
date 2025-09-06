@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,34 +9,22 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
-import {Routes, Route, Navigate} from "react-router-dom";
-import {MobileThemeProvider} from "./theme/MobileThemeProvider";
-import {MobileOnboarding} from "./pages/MobileOnboarding";
-import {MobileHome} from "./pages/MobileHome";
-import {MobileBrowse} from "./pages/MobileBrowse";
-import {MobileProjects} from "./pages/MobileProjects";
-import {MobileMessages} from "./pages/MobileMessages";
-import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
-import {MobileJobPost} from "./pages/MobileJobPost";
-import {useAuth} from "@/hooks/useAuth";
-export function MobileApp() {;
-  const { isAuthenticated } = useAuth();
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
-import { Routes, Route, Navigate } from "react-router-dom",
-import { MobileThemeProvider } from "./theme/MobileThemeProvider",
-import { MobileOnboarding } from "./pages/MobileOnboarding",
-import { MobileHome } from "./pages/MobileHome",
-import { MobileBrowse } from "./pages/MobileBrowse",
-import { MobileProjects } from "./pages/MobileProjects",
-import { MobileMessages } from "./pages/MobileMessages",
-import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { MobileThemeProvider } from "./theme/MobileThemeProvider";
+import { MobileOnboarding } from "./pages/MobileOnboarding";
+import { MobileHome } from "./pages/MobileHome";
+import { MobileBrowse } from "./pages/MobileBrowse";
+import { MobileProjects } from "./pages/MobileProjects";
+import { MobileMessages } from "./pages/MobileMessages";
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
 import { MobileJobPost } from "./pages/MobileJobPost",
 import { useAuth } from "@/hooks/useAuth",
 export function MobileApp() {
@@ -47,6 +36,8 @@ export function MobileApp() {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 
@@ -71,6 +62,7 @@ export function MobileApp() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </MobileThemeProvider>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -213,6 +205,9 @@ export function MobileApp() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -6,7 +7,14 @@
 <<<<<<< HEAD
 
   description: string,
+=======
+export interface ListingCategory {
+  id: string;
+  name: string;
+  description: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   icon: string;
+}
 
 }
 =======
@@ -45,22 +53,26 @@ export interface ProductListing {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
-
-  category: string
-
-  subcategory?: string, // Adding optional subcategory field
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  category: string;
+  subcategory?: string; // Adding optional subcategory field
   price: number | null;
   currency: string;
   tags: string[];
   author: {
     name: string;
     id: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
+    avatarUrl?: string;
+    email?: string; // Added optional email property
+  };
+  images: string[];
+  createdAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  aiScore?: number; // Added aiScore as optional property
+  location?: string; // Adding location property to fix TypeScript errors
+  availability?: string; // Adding availability property to fix TypeScript errors
+}
 
     avatar_url?: string,
     email?: string, // Added optional email property;
@@ -101,6 +113,7 @@ export interface ListingItem {
   id: string;
   title: string;
   category: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -190,6 +203,9 @@ export interface ListingItem {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   image?: string,
+=======
+  image?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   description?: string;
 }
 
@@ -197,6 +213,7 @@ export interface ListingItem {;
 export interface ListingCategory {;
 
 
+<<<<<<< HEAD
 export type ListingView = 'grid' | 'list';
 <<<<<<< HEAD
 ;
@@ -251,3 +268,6 @@ export type ListingView = 'grid' | 'list';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type ListingView = "grid" | "list";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

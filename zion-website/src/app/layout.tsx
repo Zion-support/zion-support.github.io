@@ -1,52 +1,46 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-  viewport: 'width=device-width, initial-scale=1';
-  themeColor: '#000000'}
-export default function RootLayout({
-  children}: {
-  children: React.ReactNode
-}) {
-<<<<<<< HEAD
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
-import Navigation from '@/components / Navigation';
-import Footer from '@/components / Footer';
-const inter = Inter ({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting - edge technology.',
-  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'],
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   robots: 'index, follow',
-  open_graph: {
+  openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting - edge AI and technology solutions from Zion Tech Group.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     url: 'https://ziontechgroup.com',
-    site_name: 'Zion Tech Group',
-    images: [;
+    siteName: 'Zion Tech Group',
+    images: [
       {
-        url: '/og - image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group'}],
+        alt: 'Zion Tech Group',
+      },
+    ],
     locale: 'en_US',
-    type: 'website'},
+    type: 'website',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting - edge AI and technology solutions.',
-    images: ['/og - image.jpg']}
-  viewport: 'width = device - width, initial - scale = 1';
-  theme_color: '#000000'}
-export default /**
- * RootLayout - Function description
- */
-function RootLayout() {
-<<<<<<< HEAD
-<<<<<<< HEAD
+    description: 'Transform your business with cutting-edge AI and technology solutions.',
+    images: ['/og-image.jpg'],
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
+};
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -97,20 +91,27 @@ export const metadata: Metadata = {;
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function RootLayout({
-  children}: {
-  children: React.ReactNode
+  children,
+}: {
+  children: React.ReactNode;
 }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (;
     <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+    <html lang="en">
+      <body className={inter.className}>
         <Navigation />
+<<<<<<< HEAD
         <main className="min-h-screen">
 <<<<<<< HEAD
 =======
@@ -175,3 +176,11 @@ export default function RootLayout({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

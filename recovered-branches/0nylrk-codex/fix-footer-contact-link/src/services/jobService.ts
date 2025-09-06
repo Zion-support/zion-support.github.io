@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -47,10 +48,14 @@ import { toast } from "sonner",
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
-      .from('jobs')
+      .from("jobs")
       .insert([jobData])
 <<<<<<< HEAD
 
@@ -86,56 +91,29 @@ export async function createJob(jobData: any) {
 
 
       .select()
+      .single();
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    if (error) throw error;
+    return data;
+  } catch (error: any) {
+    console.error("Error creating job:", error);
+    throw new Error(error.message || "Failed to create job");
   }
 }
 export async function updateJob(jobId: string, jobData: any) {
   try {
     const { data, error } = await supabase
-      .from('jobs')
+      .from("jobs")
       .update(jobData)
-      .eq('id', jobId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    console && console.error("Error updating job:", error);
-    throw new Error(error && error.message || "Failed to update job")
-
-
-      .select()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    console && console.error("Error updating job:", error);
-    throw new Error(error && error.message || "Failed to update job")
-
-<<<<<<< HEAD
-=======
-
-      .select()
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
-;
-export async function createJob(jobData:any) {;
-      .select();
-      .single();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      .eq("id", jobId)
       .select()
       .single();
+
     if (error) throw error;
-    return data
+    return data;
   } catch (error: any) {
-<<<<<<< HEAD
     console.error("Error updating job:", error);
+<<<<<<< HEAD
     throw new Error(error.message |"Failed to update job")
       .single(),
       
@@ -152,22 +130,21 @@ export async function createJob(jobData:any) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    throw new Error(error.message || "Failed to update job");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
 }
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
-      .from('jobs')
-      .select('*')
-<<<<<<< HEAD
-<<<<<<< HEAD
+      .from("jobs")
+      .select("*")
+      .eq("id", jobId)
+      .single();
 
-=======
-      .eq('id', jobId);
-      .single();
-      .eq('id', jobId)
-      .single();
     if (error) throw error;
+<<<<<<< HEAD
       .single(),
       
     if (error) throw error,
@@ -267,10 +244,13 @@ export async function createJob(jobData: any) {;
 if (throw error) {
   $2
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return data;
   } catch (error: any) {
-    console.error ("Error creating job:", error);
-    throw new Error (error.message || "Failed to create job");
+    console.error("Error fetching job:", error);
+    toast.error("Failed to load job details");
+    return null;
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

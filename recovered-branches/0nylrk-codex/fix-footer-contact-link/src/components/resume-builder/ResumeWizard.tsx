@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,10 @@ function ResumeWizard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+import { ResumeWizard, as, WizardComponent } from "./wizard";
+export function ResumeWizard() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return <WizardComponent />;
 }
 =======

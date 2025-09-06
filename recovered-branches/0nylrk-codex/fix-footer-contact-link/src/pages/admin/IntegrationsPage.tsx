@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -54,6 +55,14 @@ export default function IntegrationsPage() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function IntegrationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -98,9 +107,12 @@ export default function IntegrationsPage() {
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       />
       <Header />
       <main className="min-h-screen bg-background">
@@ -108,6 +120,7 @@ export default function IntegrationsPage() {
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -161,40 +174,9 @@ export default function IntegrationsPage() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  );
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { IntegrationsHub } from '@/components / integrations / IntegrationsHub';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * IntegrationsPage - Function description
- */
-function IntegrationsPage() {
-  return (
-    <ProtectedRoute admin_only={true}>;
-      <SEO;
-        title="Integrations - Zion AI Marketplace";
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
-      />;
-      <Header />;
-      <main className="min - h-screen bg - background">;
-        <IntegrationsHub />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>);
-<<<<<<< HEAD
-
-
-
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
@@ -42,12 +43,19 @@ export default function Document() {
 
       </Head>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
   );
+<<<<<<< HEAD
 }
   );
   );
@@ -70,3 +78,6 @@ export default function Document() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

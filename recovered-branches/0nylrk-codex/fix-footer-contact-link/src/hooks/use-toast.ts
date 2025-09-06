@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 import React from "react";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const useToast = useToastHook;
@@ -20,11 +16,15 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useToast, as, useToastHook, Toast } from "@/components/ui/toast";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
   title?: string;
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "success"
 };
 
@@ -61,6 +61,9 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
   title?: string;
   variant?: "default" | "destructive" | "success"
+=======
+  variant?: "default" | "destructive" | "success";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -73,29 +76,33 @@ export const useToast = useToastHook;
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
-  toast(props)
+  toast(props);
 }
 // Convenience helpers mirroring common toast variants.
-baseToast && baseToast.title = (title: string) => {
-<<<<<<< HEAD
-  baseToast({ title })
-
-<<<<<<< HEAD
+baseToast.title = (title: string) => {
+  baseToast({ title });
 };
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
 
 baseToast && baseToast.description = (description: string) => {
   baseToast({ description })
+=======
+baseToast.description = (description: string) => {
+  baseToast({ description });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 
-baseToast && baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error })
+baseToast.error = (error: string) => {
+  baseToast({ variant: "destructive", title: "Error", description: error });
 };
 
-baseToast && baseToast.success = (message: string) => {
+baseToast.success = (message: string) => {
+  baseToast({ variant: "success", title: "Success", description: message });
+};
 
 =======
 
@@ -124,56 +131,9 @@ baseToast.success = (message: string) => {
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void;
   description: (description: string) => void;
-  error: (error: string) => void
-  success: (message: string) => void
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from './react';
-import { use_toast, as, useToastHook, Toast } from '@/components / ui / toast';
-;
-// Extend the Toast component props with common toast options;
-export type ToastOptions = React.ComponentPropsWithoutRef < typeof Toast> & {
-  description?: string;
-  title?: string;
-  variant?: "default" | "destructive" | "success";
-}
-;
-export const use_toast = useToastHook;
-;
-// Base toast function that delegates to the implementation from `useToastHook`.;
-/**
- * base_toast - Function description
- */
-function base_toast() {
-  const { toast } = useToastHook ();
-  toast (props);
-}
-// Convenience helpers mirroring common toast variants.;
-base_toast.title = (title: string) => {
-  base_toast ({ title });
-}
-;
-base_toast.description = (description: string) => {
-  base_toast ({ description });
-}
-;
-base_toast.error = (error: string) => {
-  base_toast ({ variant: "destructive", title: "Error", description: error });
-}
-;
-base_toast.success = (message: string) => {
-  base_toast ({ variant: "success", title: "Success", description: message });
-}
-;
-// Export the callable toast function.;
-export const toast = base_toast as typeof base_toast & {
-  title: (title: string) => void;
-  description: (description: string) => void;
-  error: (error: string) => void,
+  error: (error: string) => void;
   success: (message: string) => void;
+<<<<<<< HEAD
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -204,6 +164,8 @@ baseToast.success = (message: string) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

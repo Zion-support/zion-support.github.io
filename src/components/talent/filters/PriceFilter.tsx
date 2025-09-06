@@ -136,6 +136,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -173,3 +174,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

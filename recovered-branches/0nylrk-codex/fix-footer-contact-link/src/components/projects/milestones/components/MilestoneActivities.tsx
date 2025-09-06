@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 interface MilestoneActivitiesProps {
@@ -17,25 +18,11 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import React from "react";
-interface MilestoneActivitiesProps {
-  projectId: string;
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 interface MilestoneActivitiesProps {
   projectId: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
-
-export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
-  return <div>Activity will be shown here</div>;
-}
-
-import React from './react';
-interface MilestoneActivitiesProps {
-  project_id: string;
 }
 export /**
  * MilestoneActivities - Function description
@@ -49,6 +36,7 @@ function MilestoneActivities() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
   projectId: string
 
 =======
@@ -62,6 +50,10 @@ interface MilestoneActivitiesProps {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;

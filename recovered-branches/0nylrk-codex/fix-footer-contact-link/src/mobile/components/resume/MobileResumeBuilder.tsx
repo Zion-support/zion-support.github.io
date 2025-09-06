@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,22 @@ import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 
 <<<<<<< HEAD
@@ -195,6 +212,7 @@ type ResumeStep = "basics" | "experience" | "education" | "skills",
 
 
 export function MobileResumeBuilder() {
+<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
 
   
@@ -234,29 +252,27 @@ function MobileResumeBuilder() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "basics": return <BasicsStep />;
       case "experience":;
+=======
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "basics":
+        return <BasicsStep />;
+      case "experience":
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         return <ExperienceStep />;
       case "education":;
         return <EducationStep />;
       case "skills":;
         return <SkillsStep />;
-      default:;
+      default:
         return <BasicsStep />;
     }
 <<<<<<< HEAD
 
   };
 
-
-
-  },
-  
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -358,10 +374,14 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         >
           Skills
         </Button>
       </div>
+<<<<<<< HEAD
       {renderStepContent()}
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
@@ -391,6 +411,8 @@ export function MobileResumeBuilder() {;
         </Button>;
       </div>;
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
       ;
@@ -403,24 +425,23 @@ export function MobileResumeBuilder() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {renderStepContent()}
 
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
-<<<<<<< HEAD
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Button variant="default" className="w-full" size="lg">;
-        Save & Preview;
-      </Button>;
-    </div>;
-<<<<<<< HEAD
+      <Button variant="default" className="w-full" size="lg">
+        Save & Preview
+      </Button>
+    </div>
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 function BasicsStep() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     <Card>
       <CardContent className="p-4 space-y-4">
         <div className="space-y-2">
@@ -445,6 +466,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+<<<<<<< HEAD
 =======
 =======
   ),;
@@ -508,12 +530,21 @@ function BasicsStep() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             rows={4}
           />
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -525,45 +556,18 @@ function BasicsStep() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }])
+  const [experiences, setExperiences] = useState([{ id: "1" }]);
+
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
-    setExperiences([...experiences, { id: newId }])
-<<<<<<< HEAD
+    setExperiences([...experiences, { id: newId }]);
+  };
 
-  }
-;
-
-<<<<<<< HEAD
-=======
-
-function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }])
-  const addExperience = () => {
-    const newId = (experiences.length + 1).toString(),
-    setExperiences([...experiences, { id: newId }])
-  }
   const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },
-  
-  const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-  },
-  
-<<<<<<< HEAD
-
+    setExperiences(experiences.filter((exp) => exp.id !== id));
+  };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
@@ -670,122 +674,22 @@ function ExperienceStep() {
             <div className="flex justify - between items - center">;
               <h3 className="font - medium">Work Experience {index + 1}</h3>;
               {experiences.length > 1 && (
-                  size="icon"
-                  onClick={() => removeExperience(exp && exp.id)}
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
-<<<<<<< HEAD
-
-            </div>;
-
-            <div className="space-y-2">;
-              <Label htmlFor={`title-${exp && exp.id}`}>Job Title</Label>;
-              <Input id={`title-${exp && exp.id}`} placeholder="e && e.g. Frontend Developer" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`company-${exp && exp.id}`}>Company</Label>;
-              <Input id={`company-${exp && exp.id}`} placeholder="Company name" />;
-            </div>;
-            <div className="grid grid-cols-2 gap-3">;
-              <div className="space-y-2">;
-                <Label htmlFor={`startDate-${exp && exp.id}`}>Start Date</Label>;
-                <Input id={`startDate-${exp && exp.id}`} type="month" />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor={`endDate-${exp && exp.id}`}>End Date</Label>;
-                <Input id={`endDate-${exp && exp.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`description-${exp && exp.id}`}>Description</Label>;
-              <Textarea
-                id={`description-${exp && exp.id}`} 
-                placeholder="Describe your responsibilities and achievements" 
-
-=======
-=======
-          <Textarea ;
-            id="summary" ;
-            placeholder="Write a brief summary about yourself" ;
-            rows={4}
-          />;
-        </div>;
-      </CardContent>;
-function ExperienceStep() {;
-  const [experiences, setExperiences] = useState([{ id: '1' }]),;
-  const addExperience = () => {;
-    const newId = (experiences && experiences.length + 1).toString();
-    setExperiences([...experiences, { id: newId }]);
-  };
-  const removeExperience = (id: string) => {;
-    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
-  };
-  return (
-    <div className="space-y-4">;
-      {experiences && experiences.map((exp, index) => (;
-        <Card key={exp && exp.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Work Experience {index + 1}</h3>;
-              {experiences && experiences.length > 1 && (;
-                <Button
-                  variant="ghost" 
-                  size="icon"
-                  onClick={() => removeExperience(exp && exp.id)}
-    </Card>;
-  ),;
-}
-;
-function ExperienceStep() {;
-  const [experiences, setExperiences] = useState([{ id:'1' }]),;
-  ;
-  const addExperience = () => {;
-    const newId = (experiences.length + 1).toString(),;
-    setExperiences([...experiences, { id:newId }]),;
-  },;
-  ;
-  const removeExperience = (id:string) => {;
-    setExperiences(experiences.filter(exp => exp.id !== id));
-  },;
-  ;
-  return (;
-    <div className="space-y-4">;
-      {experiences.map((exp, index) => (;
-        <Card key={exp.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Work Experience {index + 1}</h3>;
-              {experiences.length > 1 && (;
-                <Button ;
-                  variant="ghost" ;
-                  size="icon";
-                  onClick={() => removeExperience(exp.id)}
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
-  return (
-    <div className="space-y-4">
-      {experiences.map((exp, index) => (
-        <Card key={exp.id}>
-          <CardContent className="p-4 space-y-4">
-            <div className="flex justify-between items-center">
-              <h3 className="font-medium">Work Experience {index + 1}</h3>
-              {experiences.length > 1 && (
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => removeExperience(exp.id)}
-                >
-                  <Trash2 className="h-5 w-5 text-destructive" />
-                </Button>
+                  onClick={() => removeExperience(exp && exp.id)}
+                >;
+                  <Trash2 className="h-5 w-5 text-destructive" />;
+                </Button>;
               )}
             </div>
+
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
-              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />
+              <Input
+                id={`title-${exp.id}`}
+                placeholder="e.g. Frontend Developer"
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`company-${exp.id}`}>Company</Label>
@@ -798,11 +702,16 @@ function ExperienceStep() {;
               </div>
               <div className="space-y-2">
                 <Label htmlFor={`endDate-${exp.id}`}>End Date</Label>
-                <Input id={`endDate-${exp.id}`} type="month" placeholder="Present" />
+                <Input
+                  id={`endDate-${exp.id}`}
+                  type="month"
+                  placeholder="Present"
+                />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor={`description-${exp.id}`}>Description</Label>
+<<<<<<< HEAD
 
                 rows={3}
               />
@@ -813,145 +722,22 @@ function ExperienceStep() {;
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
-                rows={3}
-              />
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-
-            </div>;
-            ;
-            <div className="space-y-2">;
-              <Label htmlFor={`title-${exp.id}`}>Job Title</Label>;
-              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`company-${exp.id}`}>Company</Label>;
-              <Input id={`company-${exp.id}`} placeholder="Company name" />;
-            </div>;
-            <div className="grid grid-cols-2 gap-3">;
-              <div className="space-y-2">;
-                <Label htmlFor={`startDate-${exp.id}`}>Start Date</Label>;
-                <Input id={`startDate-${exp.id}`} type="month" />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor={`endDate-${exp.id}`}>End Date</Label>;
-                <Input id={`endDate-${exp.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`description-${exp.id}`}>Description</Label>;
-              <Textarea ;
-                id={`description-${exp.id}`} ;
-                placeholder="Describe your responsibilities and achievements" ;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                rows={3}
-              />;
-            </div>;
-          </CardContent>;
-<<<<<<< HEAD
-        </Card>;
-      ))}
-      ;
-      <Button ;
-        variant="outline" ;
-        className="w-full gap-2" ;
-        onClick={addExperience}
-      >;
-        <Plus className="h-4 w-4" /> Add Another Experience;
-      </Button>;
-    </div>;
-  ),;
-}
-;
-function EducationStep() {;
-  const [educations, setEducations] = useState([{ id:'1' }]),;
-  ;
-  const addEducation = () => {;
-    const newId = (educations.length + 1).toString(),;
-    setEducations([...educations, { id:newId }]),;
-  },;
-  ;
-  const removeEducation = (id:string) => {;
-    setEducations(educations.filter(edu => edu.id !== id));
-  },;
-  ;
-  return (;
-    <div className="space-y-4">;
-      {educations.map((edu, index) => (;
-        <Card key={edu.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Education {index + 1}</h3>;
-              {educations.length > 1 && (;
-                <Button ;
-                  variant="ghost" ;
-                  size="icon";
-                  onClick={() => removeEducation(edu.id)}
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
-            </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  on_click={() => remove_experience (exp.id)}
-                >;
-                  <Trash2 className="h - 5 w - 5 text - destructive" />;
-                </Button>)}
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`title-${exp.id}`}>Job Title</Label>;
-              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`company-${exp.id}`}>Company</Label>;
-              <Input id={`company-${exp.id}`} placeholder="Company name" />;
-            </div>;
-            <div className="grid grid - cols - 2 gap - 3">;
-              <div className="space - y-2">;
-                <Label html_for={`start_date-${exp.id}`}>Start Date</Label>;
-                <Input id={`start_date-${exp.id}`} type="month" />;
-              </div>;
-              <div className="space - y-2">;
-                <Label html_for={`end_date-${exp.id}`}>End Date</Label>;
-                <Input id={`end_date-${exp.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`description-${exp.id}`}>Description</Label>;
-              <Textarea;
+              <Textarea
                 id={`description-${exp.id}`}
-                placeholder="Describe your responsibilities and achievements";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-              <Textarea 
-                id={`description-${exp.id}`} 
-                placeholder="Describe your responsibilities and achievements" 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                placeholder="Describe your responsibilities and achievements"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 rows={3}
-              />;
-            </div>;
-          </CardContent>;
-<<<<<<< HEAD
+              />
+            </div>
+          </CardContent>
+        </Card>
+      ))}
 
-
-=======
       <Button
         variant="outline"
         className="w-full gap-2"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       
       <Button 
@@ -967,25 +753,26 @@ function EducationStep() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
     </div>
-  )
+  );
 }
 function EducationStep() {
-  const [educations, setEducations] = useState([{ id: '1' }])
+  const [educations, setEducations] = useState([{ id: "1" }]);
+
   const addEducation = () => {
 <<<<<<< HEAD
     const newId = (educations.length + 1).toString();
-    setEducations([...educations, { id: newId }])
+    setEducations([...educations, { id: newId }]);
+  };
 
-=======
-    const newId = (educations.length + 1).toString(),
-    setEducations([...educations, { id: newId }])
-  }
   const removeEducation = (id: string) => {
+<<<<<<< HEAD
     setEducations(educations.filter(edu => edu.id !== id))
   }
   },
@@ -1031,6 +818,11 @@ function EducationStep() {
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    setEducations(educations.filter((edu) => edu.id !== id));
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
     <div className="space - y-4">;
       {educations.map ((edu, index) => (
@@ -1039,35 +831,8 @@ function EducationStep() {
             <div className="flex justify - between items - center">;
               <h3 className="font - medium">Education {index + 1}</h3>;
               {educations.length > 1 && (
-<<<<<<< HEAD
-      <Button
-        variant="outline" 
-        className="w-full gap-2" 
-        onClick={addExperience}>;
-        <Plus className="h-4 w-4" /> Add Another Experience;
-      </Button>;
-    </div>;
-  );
-}
-function EducationStep() {;
-  const [educations, setEducations] = useState([{ id: '1' }]),;
-  const addEducation = () => {;
-    const newId = (educations && educations.length + 1).toString();
-    setEducations([...educations, { id: newId }]);
-  };
-  const removeEducation = (id: string) => {;
-    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
-  };
-  return (
-    <div className="space-y-4">;
-      {educations && educations.map((edu, index) => (;
-        <Card key={edu && edu.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Education {index + 1}</h3>;
-              {educations && educations.length > 1 && (;
                 <Button
-                  variant="ghost" 
+                  variant="ghost"
                   size="icon"
                   onClick={() => removeEducation(edu.id)}
                 >
@@ -1075,17 +840,27 @@ function EducationStep() {;
                 </Button>
               )}
             </div>
+
             <div className="space-y-2">
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>
-              <Input id={`institution-${edu.id}`} placeholder="School or university name" />
+              <Input
+                id={`institution-${edu.id}`}
+                placeholder="School or university name"
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`degree-${edu.id}`}>Degree</Label>
-              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />
+              <Input
+                id={`degree-${edu.id}`}
+                placeholder="e.g. Bachelor of Science"
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>
-              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />
+              <Input
+                id={`fieldOfStudy-${edu.id}`}
+                placeholder="e.g. Computer Science"
+              />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-2">
@@ -1094,179 +869,43 @@ function EducationStep() {;
               </div>
               <div className="space-y-2">
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>
-                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />
+                <Input
+                  id={`eduEndDate-${edu.id}`}
+                  type="month"
+                  placeholder="Present"
+                />
               </div>
             </div>
           </CardContent>
         </Card>
       ))}
-      <Button
-        variant="outline"
-        className="w-full gap-2"
-        onClick={addEducation}
-      >
+
+      <Button variant="outline" className="w-full gap-2" onClick={addEducation}>
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
     </div>
-  )
-}
-function SkillsStep() {
-  const [skills, setSkills] = useState([
-    { id: '1', name: "", proficiency: "beginner" }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        </Card>))}
-      <Button;
-        variant="outline";
-        className="w - full gap - 2";
-        on_click={add_experience}
-      >;
-        <Plus className="h - 4 w - 4" /> Add Another Experience;
-      </Button>;
-    </div>);
-}
-/**
- * EducationStep - Function description
- */
-function EducationStep() {
-  const [educations, set_educations] = useState ([{ id: '1' }]),
-  const add_education = () =>: any {
-    const new_id = (educations.length + 1).to_string ();
-    set_educations ([...educations, { id: new_id }]);
-  }
-;
-  const remove_education = (id: string) =>: any {
-    set_educations (educations.filter (edu => edu.id !== id));
-  }
-;
-
-
-  },
-  
-  const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  },
-  
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return (
-    <div className="space - y-4">;
-      {educations.map ((edu, index) => (
-        <Card key={edu.id}>;
-          <CardContent className="p - 4 space - y-4">;
-            <div className="flex justify - between items - center">;
-              <h3 className="font - medium">Education {index + 1}</h3>;
-              {educations.length > 1 && (
-
-
-      <Button
-        variant="outline" 
-        className="w-full gap-2" 
-        onClick={addExperience}>;
-        <Plus className="h-4 w-4" /> Add Another Experience;
-      </Button>;
-    </div>;
   );
 }
 
-function EducationStep() {;
-  const [educations, setEducations] = useState([{ id: '1' }]),;
-
-  const addEducation = () => {;
-    const newId = (educations && educations.length + 1).toString();
-    setEducations([...educations, { id: newId }]);
-  };
-
-  const removeEducation = (id: string) => {;
-    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
-  };
-
-  return (
-    <div className="space-y-4">;
-      {educations && educations.map((edu, index) => (;
-        <Card key={edu && edu.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Education {index + 1}</h3>;
-              {educations && educations.length > 1 && (;
-                <Button
-                  variant="ghost" 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  size="icon"
-                  onClick={() => removeEducation(edu && edu.id)}
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
-<<<<<<< HEAD
-
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  on_click={() => remove_education (edu.id)}
-                >;
-                  <Trash2 className="h - 5 w - 5 text - destructive" />;
-                </Button>)}
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`institution-${edu.id}`}>Institution</Label>;
-              <Input id={`institution-${edu.id}`} placeholder="School or university name" />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`degree-${edu.id}`}>Degree</Label>;
-              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`fieldOfStudy-${edu.id}`}>Field of Study</Label>;
-              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />;
-            </div>;
-            <div className="grid grid - cols - 2 gap - 3">;
-              <div className="space - y-2">;
-                <Label html_for={`eduStartDate-${edu.id}`}>Start Date</Label>;
-                <Input id={`eduStartDate-${edu.id}`} type="month" />;
-              </div>;
-              <div className="space - y-2">;
-                <Label html_for={`eduEndDate-${edu.id}`}>End Date</Label>;
-                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>))}
-      <Button;
-        variant="outline";
-        className="w - full gap - 2";
-        on_click={add_education}
-      >;
-        <Plus className="h - 4 w - 4" /> Add Another Education;
-      </Button>;
-    </div>);
-}
-/**
- * SkillsStep - Function description
- */
-<<<<<<< HEAD
-
 function SkillsStep() {
-  const [skills, set_skills] = useState ([;
-    { id: '1', name: "", proficiency: "beginner" }
-
-
-=======
+  const [skills, setSkills] = useState([
+    { id: "1", name: "", proficiency: "beginner" },
   ]);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ]),
   
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const addSkill = () => {
-    const newId = (skills.length + 1).toString(),
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  const addSkill = () => {
+    const newId = (skills.length + 1).toString();
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+  };
+
+<<<<<<< HEAD
   },
   
   const removeSkill = (id: string) => {
@@ -1281,50 +920,23 @@ function SkillsStep() {
 
 =======
   }
-  const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-function SkillsStep() {
-  const [skills, set_skills] = useState ([;
-    { id: '1', name: "", proficiency: "beginner" }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  },
-  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-  },
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+    setSkills(skills.filter((skill) => skill.id !== id));
+  };
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateSkill = (id: string, field: string, value: string) => {
-    setSkills(skills.map(skill =>
-      skill.id === id ? { ...skill, [field]: value } : skill
-    ))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-function SkillsStep() {
-  const [skills, set_skills] = useState ([;
-    { id: '1', name: "", proficiency: "beginner" }
-  ]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            </div>;
-
-            <div className="space-y-2">;
-              <Label htmlFor={`institution-${edu && edu.id}`}>Institution</Label>;
-              <Input id={`institution-${edu && edu.id}`} placeholder="School or university name" />;
-
-  },
-  
+    setSkills(
+      skills.map((skill) =>
+        skill.id === id ? { ...skill, [field]: value } : skill,
+      ),
+    );
+  };
 
 <<<<<<< HEAD
 =======
@@ -1344,12 +956,16 @@ function SkillsStep() {
                 <Input
                   placeholder="Skill (e.g. JavaScript, Figma)"
                   value={skill.name}
-                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
+                  onChange={(e) =>
+                    updateSkill(skill.id, "name", e.target.value)
+                  }
                   className="flex-1"
                 />
                 <Select
                   value={skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+                  onValueChange={(value) =>
+                    updateSkill(skill.id, "proficiency", value)
+                  }
                 >
                   <SelectTrigger className="w-[130px]">
                     <SelectValue placeholder="Level" />
@@ -1595,6 +1211,7 @@ function SkillsStep() {;
             ))}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
             {skills.map((skill) => (;
@@ -1663,6 +1280,11 @@ function SkillsStep() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+            <Button
+              variant="outline"
+              className="w-full gap-2"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -1670,113 +1292,36 @@ function SkillsStep() {;
           </div>
         </CardContent>
       </Card>
+
       <Card>
         <CardContent className="p-4">
           <div className="space-y-2">
             <Label>Skill Categories</Label>
             <div className="grid grid-cols-2 gap-2">
-              <Button variant="outline" className="justify-start">Development</Button>
-              <Button variant="outline" className="justify-start">Design</Button>
-              <Button variant="outline" className="justify-start">Marketing</Button>
-              <Button variant="outline" className="justify-start">Business</Button>
-              <Button variant="outline" className="justify-start">Data Analysis</Button>
-              <Button variant="outline" className="justify-start">Languages</Button>
+              <Button variant="outline" className="justify-start">
+                Development
+              </Button>
+              <Button variant="outline" className="justify-start">
+                Design
+              </Button>
+              <Button variant="outline" className="justify-start">
+                Marketing
+              </Button>
+              <Button variant="outline" className="justify-start">
+                Business
+              </Button>
+              <Button variant="outline" className="justify-start">
+                Data Analysis
+              </Button>
+              <Button variant="outline" className="justify-start">
+                Languages
+              </Button>
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-  )
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-            <Button
-              variant="outline" 
-              className="w-full gap-2" 
-              onClick={addSkill}>;
-              <Plus className="h-4 w-4" /> Add Another Skill;
-=======
-                {skills.length > 1 && (
-                  <Button;
-                    variant="ghost";
-                    size="icon";
-                    on_click={() => remove_skill (skill.id)}
-                  >;
-                    <Trash2 className="h - 4 w - 4 text - destructive" />;
-                  </Button>)}
-              </div>))}
-            <Button;
-              variant="outline";
-              className="w - full gap - 2";
-              on_click={add_skill}
-            >;
-              <Plus className="h - 4 w - 4" /> Add Another Skill;
-
-=======
-                {skills.length > 1 && (;
-                  <Button;
-                    variant="ghost";
-                    size="icon";
-                    onClick={() => removeSkill(skill.id)}
-                  >;
-                    <Trash2 className="h-4 w-4 text-destructive" />;
-                  </Button>;                )}
-              </div>;
-            ))}
-            ;
-            <Button ;
-              variant="outline" ;
-              className="w-full gap-2" ;
-              onClick={addSkill}
-            >;
-              <Plus className="h-4 w-4" /> Add Another Skill;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </Button>;
-          </div>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <Card>;
-        <CardContent className="p - 4">;
-          <div className="space - y-2">;
-            <Label > Skill Categories</Label>;
-            <div className="grid grid - cols - 2 gap - 2">;
-              <Button variant="outline" className="justify - start">Development</Button>;
-              <Button variant="outline" className="justify - start">Design</Button>;
-              <Button variant="outline" className="justify - start">Marketing</Button>;
-              <Button variant="outline" className="justify - start">Business</Button>;
-              <Button variant="outline" className="justify - start">Data Analysis</Button>;
-              <Button variant="outline" className="justify - start">Languages</Button>;
-
-=======
-      ;
-      <Card>;
-        <CardContent className="p-4">;
-          <div className="space-y-2">;
-            <Label>Skill Categories</Label>;
-            <div className="grid grid-cols-2 gap-2">;
-              <Button variant="outline" className="justify-start">Development</Button>;
-              <Button variant="outline" className="justify-start">Design</Button>;
-              <Button variant="outline" className="justify-start">Marketing</Button>;
-              <Button variant="outline" className="justify-start">Business</Button>;
-              <Button variant="outline" className="justify-start">Data Analysis</Button>;
-              <Button variant="outline" className="justify-start">Languages</Button>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </div>;
-          </div>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </div>);
+  );
 }
 
 =======

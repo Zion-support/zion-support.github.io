@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
@@ -44,6 +45,8 @@ export function ServiceDetailsSection({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {
@@ -72,6 +75,7 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -176,10 +180,13 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -212,6 +219,8 @@ setSelectedCountry: (country: CountryPricing | null) => void
   )
 
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 <<<<<<< HEAD
 =======

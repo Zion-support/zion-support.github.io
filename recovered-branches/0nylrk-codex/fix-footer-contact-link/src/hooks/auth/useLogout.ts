@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -31,10 +32,16 @@ import type { UserProfile } from "@/types/auth",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { supabase } from "@/integrations/supabase/client";
+import { cleanupAuthState } from "@/utils/authUtils";
+import type { UserProfile } from "@/types/auth";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
       // Clean up existing auth state
+<<<<<<< HEAD
 <<<<<<< HEAD
       cleanupAuthState()
 =======
@@ -164,9 +171,17 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
       // Sign out;
       await supabase.auth.signOut({ scope: 'global' }),;
       // Update state;
+=======
+      (cleanupAuthState(),
+        // Sign out
+        await supabase.auth.signOut({ scope: "global" }));
+
+      // Update state
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       setUser(null);
-    } catch (error) {;
+    } catch (error) {
       console.error("Error during logout:", error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
@@ -177,16 +192,12 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
-
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return { logout }
-
+  return { logout };
 };
 
 <<<<<<< HEAD

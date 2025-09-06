@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -58,6 +59,8 @@ import { UserProfile } from "@/types/auth",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import {
   Dialog,
@@ -68,21 +71,11 @@ import {
 import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  userDetails?: UserProfile
-=======
   userDetails?: UserProfile;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 export function HireRequestModal({
@@ -92,6 +85,7 @@ export function HireRequestModal({
   userDetails,
 }: HireRequestModalProps) {
   const handleClose = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     onClose();
   }
@@ -243,6 +237,8 @@ interface HireRequestModalProps {;
 
 export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {;
   const handleClose = () => {;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     onClose();
   };
 
@@ -268,21 +264,23 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
+<<<<<<< HEAD
         <HireRequestForm 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <HireRequestForm
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
+        />
+      </DialogContent>
+    </Dialog>
   );
 }
 

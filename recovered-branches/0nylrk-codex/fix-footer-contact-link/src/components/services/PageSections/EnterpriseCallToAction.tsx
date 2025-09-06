@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -31,14 +32,10 @@ import { Button } from "@/components/ui/button",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -51,6 +48,7 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -95,6 +93,8 @@ export function EnterpriseCallToAction() {;
         Need volume pricing or custom SLAs? Contact our enterprise sales team.;
       </p>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

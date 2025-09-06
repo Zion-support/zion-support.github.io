@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -52,20 +53,18 @@ export const EmptyStateCard:React.FC<EmptyStateCardProps> = ({ type }) => {;
           )}
 import React from "react",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {MessageSquare, ArchiveIcon} from "lucide-react";
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card";
-import { MessageSquare, ArchiveIcon } from "lucide-react";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type EmptyStateCardProps = {
   type: "active" | "archived";
-}
+};
+
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === "active";
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { MessageSquare, ArchiveIcon } from "lucide-react",
 <<<<<<< HEAD
@@ -102,6 +101,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
 
   
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 =======
 =======
@@ -141,23 +142,22 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-<<<<<<< HEAD
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          }
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -215,6 +215,11 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 
 
+=======
+  );
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======

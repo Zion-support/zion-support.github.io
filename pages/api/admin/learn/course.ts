@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -19,10 +23,14 @@ import path from 'path';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
@@ -30,9 +38,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   }
-  try {
 
+<<<<<<< HEAD
     const body = req.body |{}
     const raw = fs.readFileSync(coursesPath, 'utf-8')
     const courses = JSON.parse(raw)
@@ -56,6 +66,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   try {
 <<<<<<< HEAD
     const body = req.body || {},
@@ -63,6 +75,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON.parse(raw),
 
     const existingIndex = courses.findIndex((c: any) => c.id === body.id),
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -94,6 +107,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     } else {
       courses.push (body);
+=======
+    if (existingIndex >= 0) {
+      courses[existingIndex] = { ...courses[existingIndex], ...body }
+    } else {
+      courses.push(body)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
 <<<<<<< HEAD
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
@@ -111,8 +130,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to save course' });
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' })
   };
+<<<<<<< HEAD
 };
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
     res.json({ success: true });
@@ -156,3 +176,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

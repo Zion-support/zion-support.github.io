@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -52,12 +53,18 @@ import { SkillCategory } from "./SkillCategory";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState, useEffect } from "react";
+import { Skill } from "@/types/resume";
+import { SkillCategory } from "./SkillCategory";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
@@ -80,20 +87,28 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
   >({});
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         const category = skill.category |"Other";
@@ -124,6 +139,8 @@ if ( {) {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         const category = skill.category || "Other";
         if (!acc[category]) {
           acc[category] = [];
@@ -139,11 +156,9 @@ if ( {) {
   }, [skills]);
 
   if (Object.keys(skillsByCategory).length === 0) {
-<<<<<<< HEAD
-    return null
-
     return null;
   }
+<<<<<<< HEAD
     return null
 <<<<<<< HEAD
 =======
@@ -195,18 +210,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -216,6 +226,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
@@ -280,23 +291,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  )
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======

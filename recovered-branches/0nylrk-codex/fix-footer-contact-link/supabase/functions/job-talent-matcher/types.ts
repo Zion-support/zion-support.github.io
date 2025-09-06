@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,12 +11,16 @@ export interface JobData {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface JobData {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     min: number
@@ -39,6 +44,14 @@ export interface TalentProfile {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   deadline: string
+=======
+    min: number;
+    max: number;
+  };
+  deadline: string;
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 
@@ -64,7 +77,9 @@ export interface TalentProfile {;
   bio?: string;
   skills: string[];
   years_experience: number;
-<<<<<<< HEAD
+  hourly_rate?: number;
+  availability_type?: string;
+}
 
 <<<<<<< HEAD
   hourly_rate?: number,
@@ -90,11 +105,15 @@ export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
-
-<<<<<<< HEAD
-  matched_skills: string[],
+  matched_skills: string[];
   created_at: string;
+}
 
+export interface MatchResult {
+  talentId: string;
+  score: number;
+  matchedSkills: string[];
+  reason?: string;
 }
 <<<<<<< HEAD
 =======

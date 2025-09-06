@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {createContext} from "react";
-
+import { createContext } from "react";
 import type { AuthContextType } from "@/types/auth";
 
 import { createContext } from "react",
@@ -90,6 +83,7 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 // default value so consumers still get some level of type safety.
+<<<<<<< HEAD
 
 
 // default value so consumers still get some level of type safety.;
@@ -124,3 +118,8 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export const AuthContext = createContext<AuthContextType | undefined>(
+  undefined,
+);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

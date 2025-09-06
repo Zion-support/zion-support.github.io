@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export * from './fraud';
@@ -43,3 +44,7 @@ export * from './fraud';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+// Re-export from the refactored modules to maintain backward compatibility
+export * from "./fraud";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

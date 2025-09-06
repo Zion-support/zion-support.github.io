@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ProjectHeader as OriginalProjectHeader  } from '../ProjectHeader';
@@ -14,6 +15,8 @@ import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 // Re-export the existing ProjectHeader component;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ProjectHeader, as, OriginalProjectHeader } from "../ProjectHeader";
 // Re-export the existing ProjectHeader component
 >>>>>>> main

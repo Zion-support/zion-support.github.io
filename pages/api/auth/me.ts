@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -8,11 +9,14 @@
 =======
 import { getUserFromRequest } from '../../../utils/auth';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { getUserFromRequest } from '../../../utils/auth',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = getUserFromRequest(req),
   if (!user) return res.status(200).json({ user: null }),
+<<<<<<< HEAD
   res.status(200).json({ user });
 };
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -91,3 +95,7 @@ export default function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  res.status(200).json({ user })
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

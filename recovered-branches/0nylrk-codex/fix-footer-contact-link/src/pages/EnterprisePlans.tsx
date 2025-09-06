@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,28 +10,19 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",
-import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",
-import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
-import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
-import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
 <<<<<<< HEAD
@@ -44,6 +36,8 @@ import { SEO } from "@/components/SEO",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function EnterprisePlans() {
   return (
     <>
@@ -62,6 +56,7 @@ export default function EnterprisePlans() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -92,6 +87,9 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 import React from "react";

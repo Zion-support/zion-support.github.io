@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -28,6 +29,13 @@ import { ShieldAlert } from "lucide-react",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function Unauthorized() {
   return (
     <>
@@ -41,7 +49,9 @@ export default function Unauthorized() {
           </div>
           <h1 className="text-3xl font-bold text-white mb-3">Access Denied</h1>
           <p className="text-zion-slate-light mb-6">
-            You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.
+            You don't have permission to access this page. This could be because
+            your account doesn't have the required permissions or you need to
+            complete your profile.
           </p>
           <div className="flex flex-col gap-3">
             <Link
@@ -61,6 +71,7 @@ export default function Unauthorized() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -204,6 +215,9 @@ function Unauthorized() {
     </>);
 <<<<<<< HEAD
 =======
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 ;

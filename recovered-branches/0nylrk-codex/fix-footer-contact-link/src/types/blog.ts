@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface BlogAuthor {
 export interface BlogAuthor {;
   name: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+export interface BlogAuthor {
+  name: string;
+  title: string;
+  avatarUrl: string;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   title: string,
   avatar_url: string;
@@ -40,11 +48,29 @@ export interface BlogPost {;
   read_time: string;
   category: string;
   tags: string[];
+  featuredImage: string;
+  isFeatured?: boolean;
+  isPublished?: boolean;
+  createdBy?: string;
+  updatedAt?: string;
+}
+
+  featured_image: string;
+  is_featured?: boolean;
+  is_published?: boolean;
+  created_by?: string,
+  updated_at?: string;
+}
+// Type for generated blog content;
+
+export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
-<<<<<<< HEAD
+  tweetSummary?: string;
+  imagePrompt?: string;
+}
 
   tweet_summary?: string,
   image_prompt?: string;
@@ -128,10 +154,15 @@ export interface GeneratedNewsletterContent {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   subject: string;
   previewText: string;
+<<<<<<< HEAD
 
   body: string
 
   cta: string
+=======
+  body: string;
+  cta: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

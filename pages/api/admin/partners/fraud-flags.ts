@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,37 +15,32 @@ import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getServerSupabase } from '../../../../utils/supabase/server',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const code = (req.query.code as string)?.toLowerCase(),
+  if (!code) return res.status(400).json({ error: 'Missing code' }),
 
-  const code = (req.query.code as string)?.toLowerCase()
-  if (!code) return res.status(400).json({ error: 'Missing code' })
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key') === 'placeholder-key'
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({
-        flags: [
-          {
-            type: 'suspicious_ip',
-            severity: 'low',
-            note: 'Multiple visits from same IP',
-          },
-        ],
-      });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      return res.status(200).json({ flags: [
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
     }
-    const supabase = getServerSupabase()
+
+    const supabase = getServerSupabase(),
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+      .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()),
+    if (error) return res.status(500).json({ error: error.message }),
 
 
+<<<<<<< HEAD
 =======
 .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
@@ -104,28 +100,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           count,
           note: 'High number of events from a single IP in 7 days',
         });
+=======
+    const flags: any[] = [],
+    counts.forEach((count, ip) => {
+      if (count > 30 && ip !== 'unknown') {
+        flags.push({ type: 'suspicious_ip', severity: 'medium', ip, count, note: 'High number of events from a single IP in 7 days' })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       }
-    })
+    }),
+
     return res.status(200).json({ flags })
-
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
-}
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(500).json({ error: e?.message })
+<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -168,3 +155,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

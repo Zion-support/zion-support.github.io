@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,32 +16,31 @@ import { cn } from "@/lib/utils",
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
+
 export function SidebarGroupLabel({
-  className
-  children
+  className,
+  children,
   ...props
 }: SidebarGroupLabelProps) {
   return (
-
+    <div
+      className={cn(
+        "px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider",
+        className,
+      )}
       {...props}
     >
       {children}
     </div>
+<<<<<<< HEAD
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -127,6 +127,9 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 
   );
 
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 ;

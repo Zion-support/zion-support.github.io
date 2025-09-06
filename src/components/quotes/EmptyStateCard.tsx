@@ -102,6 +102,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
         </p>;
       </CardContent>;
@@ -109,6 +110,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   );
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           }
         </p>
       </CardContent>;

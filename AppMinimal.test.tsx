@@ -1,31 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -39,17 +28,21 @@ describe('AppMinimal', () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   it('displays correct content', () => {
     render(<AppMinimal />);
+    // Add content tests here
   });
 
   it('handles user interactions', () => {
     render(<AppMinimal />);
+    // Add interaction tests here
   });
-<<<<<<< HEAD
 });
 =======
+<<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -90,6 +83,8 @@ describe('AppMinimal'
   it('displays correct content'
   it('handles user interactions'
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 });
 =======
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
@@ -117,4 +112,8 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

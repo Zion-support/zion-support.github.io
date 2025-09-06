@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -77,29 +78,38 @@ import { useAuth } from "@/hooks/useAuth",
 }
 ;
 =======
+=======
+import { Header } from "@/components/header";
+import { Footer } from "@/components/Footer";
+import { JobPostingForm } from "@/components/jobs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { isAuthenticated, isLoading } = useAuth();
-
   const isMobile = useIsMobile();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-import { Navigate } from "react-router-dom",
-import { useIsMobile } from "@/hooks/use-mobile",
-export default function PostJob() {
-  const { isAuthenticated, isLoading } = useAuth(),
-  const isMobile = useIsMobile(),
-  
   if (isLoading) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
-    )
+    );
   }
+<<<<<<< HEAD
+
   return (
     <>
       <SEO
@@ -107,12 +117,17 @@ export default function PostJob() {
         description="Post a job to find the perfect AI talent for your project."
       />
       <Header />
-      <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
+      <main
+        className={`container mx-auto px-${isMobile ? "2" : "4"} py-${isMobile ? "6" : "12"} max-w-4xl`}
+      >
         <Card className="border shadow-md">
           <CardHeader>
-            <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>
+            <CardTitle className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
+              Post a Job
+            </CardTitle>
             <CardDescription>
-              Fill out the form below to post your job and find the perfect talent.
+              Fill out the form below to post your job and find the perfect
+              talent.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -124,6 +139,7 @@ export default function PostJob() {
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
     </>
+<<<<<<< HEAD
   )
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
@@ -229,6 +245,9 @@ function PostJob() {
   // Check condition
 if ( {) {
   $2
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
     return (
       <div className="flex items - center justify - center min - h-screen">;

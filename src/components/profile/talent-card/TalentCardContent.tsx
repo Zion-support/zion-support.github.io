@@ -28,6 +28,7 @@ summary: string | undefined;
   timezone: string | undefined;
   skills: string[] | undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export function TalentCardContent(): any ({;
@@ -149,3 +150,5 @@ function TalentCardContent() {
     </div>);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

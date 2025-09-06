@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,6 +21,8 @@ export default function Sidebar() {
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -468,5 +471,8 @@ export default Sidebar;
 =======
 };
 export default Sidebar;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

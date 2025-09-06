@@ -36,6 +36,10 @@ export interface TokenTransaction {
   user_id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   amount: number;
+<<<<<<< HEAD
+=======
+  type: "issue" | "redeem" | "transfer";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   reason: string;
 <<<<<<< HEAD
   metadata?: Record<string, any>;
@@ -63,39 +67,35 @@ export interface TokenTransaction {
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
-  }
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+): TokenTransaction {
+  const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
-    type: 'issue',
+    type: "issue",
     reason,
-    timestamp: Date.now();
+    timestamp: Date.now(),
   };
-  
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   transactions.push(transaction);
   return transaction;
 }
-export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
+
+export function redeemTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -159,9 +159,13 @@ export function handleAction(userId: string, action: string, metadata?: Record<s
     type: 'redeem',
     reason,
     timestamp: Date.now();
+=======
+    type: "redeem",
+    reason,
+    timestamp: Date.now(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   };
-  
-<<<<<<< HEAD
+
   transactions.push(transaction);
   return transaction;
 =======
@@ -193,6 +197,7 @@ export interface TokenConfig {
   updatedAt: Date;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 ;
 export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {;
   const { burnRules } = tokenStore.getConfig();
@@ -296,6 +301,15 @@ export function set_config (
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
+=======
+
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>,
+): void {
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 <<<<<<< HEAD
 

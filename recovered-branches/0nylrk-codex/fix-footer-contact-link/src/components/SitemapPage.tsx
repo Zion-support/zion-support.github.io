@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
@@ -342,6 +343,8 @@ export const SitemapPage: React.FC = () => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -349,6 +352,7 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
 export const SitemapPage: React.FC = () => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <SEO
@@ -359,6 +363,7 @@ export const SitemapPage: React.FC = () => {
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -381,6 +386,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -409,6 +415,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -437,6 +444,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -465,6 +473,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -489,6 +498,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -508,12 +518,16 @@ export const SitemapPage: React.FC = () => {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </ul>
           </div>
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -571,10 +585,7 @@ export const SitemapPage: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 >>>>>>> main
-  );
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

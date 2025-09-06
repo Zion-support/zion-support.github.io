@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -85,3 +86,9 @@ export {}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+declare module 'node:*' {
+  const value: any;
+  export = value;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

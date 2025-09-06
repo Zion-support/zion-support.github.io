@@ -1463,6 +1463,7 @@ export const SearchResultsPage: React.FC = () => {;
                 {/* Load More Button */}
                 {hasMore && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
@@ -1750,3 +1751,5 @@ export default SearchResultsPage;
 export default SearchResultsPage,
 export default SearchResultsPage,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

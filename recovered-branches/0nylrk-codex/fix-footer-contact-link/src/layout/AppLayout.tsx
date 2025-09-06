@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -9,14 +10,12 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
-import {AppHeader} from "./AppHeader";
-import {Footer} from "@/components/Footer";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import React from "react";
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
 import { AppHeader } from "./AppHeader",
 import { Footer } from "@/components/Footer",
 <<<<<<< HEAD
@@ -30,27 +29,18 @@ import { Footer } from "@/components/Footer",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface AppLayoutProps {
-
-  children: React.ReactNode
-
-  hideFooter?: boolean
+  children: React.ReactNode;
+  hideFooter?: boolean;
 }
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react";
-import {AppHeader} from "./AppHeader";
-import {Footer} from "@/components/Footer";
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
+<<<<<<< HEAD
       <main className="flex-grow">
 <<<<<<< HEAD
         {children}
@@ -87,6 +77,12 @@ import { Footer } from "@/components/Footer",;
 interface AppLayoutProps {;
   children: React && React.ReactNode,;
   hideFooter?: boolean;
+=======
+      <main className="flex-grow">{children}</main>
+      {!hideFooter && <Footer />}
+    </div>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
   return (

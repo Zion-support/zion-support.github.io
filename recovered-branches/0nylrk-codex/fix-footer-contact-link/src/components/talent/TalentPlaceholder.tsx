@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,11 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Card } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -45,6 +51,7 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -94,6 +101,8 @@ export function TalentPlaceholder() {;
         Join as Talent;
       </Button>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

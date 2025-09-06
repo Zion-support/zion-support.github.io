@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,109 +30,31 @@ export interface Service {
   popular?: boolean}
 export interface ContactForm {
   "name": string;
+=======
+// Type definitions index
+
+export interface ContactInfo {
+  phone: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   email: string;
-  company?: string;
-  phone?: string;
-  service: string;
-  budget?: string;
-  message: string;
-  preferredContact:
-    | 'email'
-    | 'phone'
-    | 'both'}
-export interface TeamMember {
-  "id": string;
-  name: string;
-  position: string;
-  bio: string;
-  image: string;
-  skills: string[];
-  linkedin?: string;
-  github?: string;
-  twitter?: string}
-export interface Testimonial {
-  "id": string;
-  name: string;
-  company: string;
-  position: string;
-  content: string;
-  rating: number;
-  image?: string;
-  project?: string}
-export interface CaseStudy {
-  "id": string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  technologies: string[];
-  duration: string;
-  teamSize: number;
-  image: string;
-  featured?: boolean}
-export interface BlogPost {
-  "id": string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  updatedAt: string;
-  tags: string[];
-  category: string;
-  image: string;
-  featured?: boolean;
-  readTime: number}
-export interface PricingTier {
-  "id": string;
-  name: string;
-  price: number;
-  currency: string;
-  period:
-    | 'month'
-    | 'year'
-    | 'one-time';
-  features: string[];
-  limitations?: string[];
-  popular?: boolean;
-  cta: string;
-  description: string}
-export interface ApiResponse<T> {
-  "success": boolean;
-  data?: T;
-  error?: string;
-  message?: string}
-export interface PaginationParams {
-  "page": number;
-  limit: number;
-  sort?: string;
-  order?: 'asc' | 'desc'}
-export interface PaginatedResponse<T> {
-  "data": T[];
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    pages: number;
-    hasNext: boolean;
-    hasPrev: boolean}}
-export interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  url?: string;
-  type?: string;
-  noindex?: boolean}
-export interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
+  address: string;
+  site: string;
 }
+
+export interface AnimationState {
+  isLoaded: boolean;
+  hasError: boolean;
+}
+
+export interface ProjectBrief {
+  projectName: string;
+  goals: string;
+  timeline: string;
+  budget: string;
+  techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+}
+<<<<<<< HEAD
 export interface AccessibilitySettings {
   "highContrast": boolean;
   fontSize: number;
@@ -368,3 +291,5 @@ export interface Service { id: string; name: string; description: string; catego
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -75,6 +75,7 @@ export default define_config ({
   plugins: [react ()],
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': path.resolve (__dirname, './src');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -108,3 +109,9 @@ export default define_config ({
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

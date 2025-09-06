@@ -66,8 +66,11 @@ export function PointsBadge() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return (
     <TooltipProvider>;

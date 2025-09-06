@@ -12,6 +12,7 @@ import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
+<<<<<<< HEAD
 
 
 =======
@@ -21,6 +22,8 @@ const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -72,6 +75,7 @@ function handler() {
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20),
     res.status (200).json ({ leaderboard: top });
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -147,3 +151,8 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

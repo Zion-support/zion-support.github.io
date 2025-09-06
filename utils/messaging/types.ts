@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
   id: string;
@@ -79,3 +80,6 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type UserRole = "admin" | "user" | "guest";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

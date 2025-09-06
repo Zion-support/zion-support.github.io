@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
 // Common skills in AI and tech
 <<<<<<< HEAD
+<<<<<<< HEAD
 const POPULAR_SKILLS = [
 =======
 <<<<<<< HEAD
@@ -237,3 +238,5 @@ function SkillsFilter() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

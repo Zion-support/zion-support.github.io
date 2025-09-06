@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -22,14 +23,14 @@ interface NotificationListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Bell } from 'lucide-react';
@@ -128,6 +129,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -184,8 +187,6 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -332,11 +333,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -414,5 +410,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

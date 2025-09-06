@@ -42,6 +42,7 @@ const testimonials = [
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
     rating: 4,
 <<<<<<< HEAD
+<<<<<<< HEAD
     avatar: '/placeholder.svg',
   }, ];
 
@@ -323,3 +324,5 @@ export const AppTestimonials: React.FC = () => {";
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

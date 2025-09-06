@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Card
@@ -43,16 +44,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Award } from "lucide-react",
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
   Card,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 } from '@/components / ui / card';
@@ -80,16 +80,14 @@ interface LeaderboardEntry {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 } from "@/components/ui/card";
 import { Award } from "lucide-react";
 interface LeaderboardEntry {
   rank: number;
   name: string;
   referrals: number;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export /**
@@ -105,6 +103,7 @@ function ReferralLeaderboard() {
     { rank: 4, name: "Casey Brown", referrals: 12 },
     { rank: 5, name: "Jordan Lee", referrals: 10 },
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -132,6 +131,8 @@ function ReferralLeaderboard() {
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return (
     <Card>
@@ -156,6 +157,7 @@ import {Award} from "lucide-react";
                     entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
+<<<<<<< HEAD
 <<<<<<< HEAD
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
@@ -266,16 +268,21 @@ export function ReferralLeaderboard() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                         ? "bg-slate-200 text-slate-800"
                         : entry.rank === 3
                           ? "bg-amber-200 text-amber-800"
                           : "bg-muted text-muted-foreground"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   }`}
                 >;
                   {entry.rank}
@@ -364,7 +371,14 @@ export function ReferralLeaderboard() {;
             </div>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+        </div>
+      </CardContent>
+    </Card>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 

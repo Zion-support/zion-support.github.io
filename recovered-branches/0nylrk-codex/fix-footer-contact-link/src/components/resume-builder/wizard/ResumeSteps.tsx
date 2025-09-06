@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
@@ -54,6 +55,8 @@ import {StepProps} from "./types";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
 interface ResumeStepsProps {
@@ -67,10 +70,6 @@ export const ResumeSteps = ({
   activeTab,
   onChange,
 }: ResumeStepsProps) => {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (
@@ -116,10 +115,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
           {step && step.label}
         </TabsTrigger>;
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </TabsList>;
+    </TabsList>
   );
 };
 

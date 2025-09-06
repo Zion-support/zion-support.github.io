@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -63,22 +64,32 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
-
         <SEO
           title="Smart Contract Builder | Zion AI Marketplace"
           description="Create and deploy blockchain-backed smart contracts for your projects"
         />
         <AppHeader />
+
         <main className="container mx-auto py-10 px-4">
           <ContractBuilderContent />
         </main>
+
         <Footer />
       </>
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -118,8 +129,9 @@ function ContractBuilderPage() {;
         <Footer />;
       </>;
     </ProtectedRoute>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

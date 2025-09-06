@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+import fs from "fs";
+import path from "path";
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface TokenTransaction {
 
 
@@ -16,8 +24,8 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
-  user_id: string;
-  type: 'earn' | 'spend' | 'transfer';
+  userId: string;
+  type: "earn" | "spend" | "transfer";
   amount: number;
   description: string;
   timestamp: string;
@@ -44,16 +52,11 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-<<<<<<< HEAD
-=======
 
+const DATA_DIR = path.join(process.cwd(), "data");
+const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
+const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
-const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -62,37 +65,13 @@ function ensureDataDir() {
 function loadTransactions(): TokenTransaction[] {
   try {
     ensureDataDir();
-    if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
-    const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
-    return JSON && JSON.parse(raw);
-const DATA_DIR = path.join (process.cwd (), 'data');
-const TRANSACTIONS_FILE = path.join (DATA_DIR, 'token - transactions.json');
-const CONFIG_FILE = path.join (DATA_DIR, 'token - config.json');
-;
-/**
- * ensureDataDir - Function description
- */
-function ensureDataDir() {
-  if () {) {
-  $2
-}
-    fs.mkdir_sync (DATA_DIR, { recursive: true });
-  }
-}
-function load_transactions (): TokenTransaction[] {
-  try {
-    ensureDataDir ();
-    if () return []) {
-  $2
-}
-    const raw = fs.readFileSync (TRANSACTIONS_FILE, 'utf8');
-    return JSON.parse (raw);
+    if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
+    const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8");
+    return JSON.parse(raw);
   } catch {
     return [];
   }
 }
-<<<<<<< HEAD
-=======
 
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
@@ -106,10 +85,8 @@ function load_config (): TokenConfig {
 }
       return getDefaultConfig ();
     }
-    const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
-    return JSON.parse (raw);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    const raw = fs.readFileSync(CONFIG_FILE, "utf8");
+    return JSON.parse(raw);
   } catch {
     return getDefaultConfig ();
   }
@@ -118,16 +95,10 @@ function load_config (): TokenConfig {
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-=======
-
-function save_config (config: TokenConfig): void {
-  ensureDataDir ();
-  fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
-}
 function getDefaultConfig (): TokenConfig {
 
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
     name: 'ZION Token'
     symbol: 'ZION$'
@@ -144,21 +115,38 @@ export function getAllTransactions(): TokenTransaction[] {
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    name: "ZION Token",
+    symbol: "ZION$",
+    totalSupply: 1000000000,
+    circulatingSupply: 250000000,
+    exchangeRate: 0.05,
+    stakingEnabled: true,
+    stakingRewardRate: 12.5,
+  };
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-    name: 'ZION Token',
-    symbol: 'ZION$',
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function addTransaction(
+  transaction: Omit<TokenTransaction, "id" | "timestamp">,
+): TokenTransaction {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
 
     ...transaction,
-    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-    timestamp: new Date().toISOString()
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString(),
   };
-  
-  transactions && transactions.push(newTransaction);
 
+  transactions.push(newTransaction);
   saveTransactions(transactions);
   return newTransaction;
 }
@@ -187,7 +175,9 @@ export function setConfig(config: TokenConfig): void {;
 export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
   let balance = 0;
+
   for (const tx of transactions) {
+<<<<<<< HEAD
     if (tx && tx.userId === userId) {
       if (tx && tx.type === 'earn') {
         balance += tx && tx.amount;
@@ -301,13 +291,16 @@ if ( {) {
 if ( {) {
   $2
 }
+=======
+    if (tx.userId === userId) {
+      if (tx.type === "earn") {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         balance += tx.amount;
-      } else // Check condition
-if ( {) {
-  $2
-}
+      } else if (tx.type === "spend") {
         balance -= tx.amount;
       }
     }
   }
-  return Math.max (0, balance);
+
+  return Math.max(0, balance);
+}

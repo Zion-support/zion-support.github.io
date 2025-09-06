@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -44,6 +45,9 @@ export { useToast, toast };
 <<<<<<< HEAD
 
 
+=======
+import { useToast, toast } from "@/hooks/use-toast";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 export { useToast, toast };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

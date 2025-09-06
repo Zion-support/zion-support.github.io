@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:types/service-variants.ts
 =======
 <<<<<<< HEAD
@@ -283,34 +284,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type ServiceVariant =
+=======
+export type ServiceVariant = 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
   | 'neural'
-  | 'quantum-hologographic'
-  | 'quantum-advanced'
-  | 'holographic-advanced'
-  | 'neural-quantum'
-  | 'quantum-cyberpunk'
-  | 'holographic-neural'
-  | 'quantum-holographic-advanced'
-  | 'quantum-matrix'
-  | 'neural-cyberpunk'
-  | 'holographic-quantum'
-  | 'quantum-neural-advanced'
-  | 'cyberpunk-holographic'
-  | 'quantum-space'
-  | 'ai-futuristic'
-  | 'quantum-entanglement'
-  | 'holographic-matrix'
-  | 'neural-quantum-cyberpunk'
-  | 'quantum-iot'
-  | 'quantum-logistics'
-  | 'quantum-financial'
   | 'quantum-holographic'
-  | 'quantum-neural'
+  | 'quantum-advanced'
   | 'quantum-cyberpunk'
+<<<<<<< HEAD
   | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
@@ -636,3 +621,23 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  | 'neural-holographic'
+  | 'cyberpunk-neural'
+  | 'advanced'
+  | 'premium'
+  | 'enterprise'
+  | 'custom';
+
+export interface ServiceVariantConfig {
+  name: string;
+  description: string;
+  features: string[];
+  pricing: {
+    monthly: number;
+    yearly: number;
+  };
+  popular?: boolean;
+  recommended?: boolean;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

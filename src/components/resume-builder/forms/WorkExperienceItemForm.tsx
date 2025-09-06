@@ -416,6 +416,7 @@ export function WorkExperienceItemForm({;
                         <FormControl>;
                           <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                             variant={'outline'}
                             className={cn(
 
@@ -817,3 +818,5 @@ setIsEnhancementDialogOpen (false);
   )
 }
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
